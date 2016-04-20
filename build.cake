@@ -322,7 +322,7 @@ Task ("component-setup").Does (() =>
     }
 });
 
-Task ("component").IsDependentOn ("component-setup").IsDependentOn ("component-base");
+Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base");
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
 
