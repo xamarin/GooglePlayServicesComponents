@@ -259,25 +259,30 @@ Task ("component-docs").Does (() =>
 		gettingStartedTemplates.Add (key, val);
 	}
 
-	var componentDirs = GetDirectories ("./GooglePlayServices.*/");
+	var componentDirs = GetDirectories ("./*");
+
+	foreach (var compDir in componentDirs)
+		Information ("Found: {0}", compDir);
 
 	foreach (var compDir in componentDirs) {
 
-		if (!FileExists (compDir + "./component/GettingStarted.template.md"))
+		var f = compDir.CombineWithFilePath ("./component/GettingStarted.template.md");
+
+		if (!FileExists (f))
 			continue;
 
 		Information ("Transforming: {0}", compDir);
 
 		var apiLevel = compDir.FullPath.Contains (".Cast") ? "Android 4.2 (API Level 17)" : "Android 4.1 (API Level 16)";
 
-		var t = TransformTextFile (compDir + "./component/GettingStarted.template.md", "{", "}");
+		var t = TransformTextFile (f, "{", "}");
 
 		foreach (var kvp in gettingStartedTemplates) {
 			var v = TransformText (kvp.Value, "{", "}").WithToken ("APILEVEL", apiLevel).ToString ();
 			t = t.WithToken (kvp.Key, v);
 		}
 
-		System.IO.File.WriteAllText (MakeAbsolute (new FilePath (compDir + "component/GettingStarted.md")).FullPath, t.ToString ());
+		FileWriteText (compDir.CombineWithFilePath ("./component/GettingStarted.md"), t.ToString ());
 	}
 
 
@@ -288,22 +293,24 @@ Task ("component-docs").Does (() =>
 		var key = f.GetFilenameWithoutExtension ().FullPath.Replace ("Details.", "");
 		var val = TransformTextFile (f).ToString ();
 
-		gettingStartedTemplates.Add (key, val);
+		detailsTemplates.Add (key, val);
 	}
 
 	foreach (var compDir in componentDirs) {
 
-		if (!FileExists (compDir + "./component/Details.template.md"))
+		var f = compDir.CombineWithFilePath ("./component/Details.template.md");
+		
+		if (!FileExists (f))
 			continue;
 
 		Information ("Transforming: {0}", compDir);
 
-		var t = TransformTextFile (compDir + "./component/Details.template.md", "{", "}");
+		var t = TransformTextFile (f, "{", "}");
 
-		foreach (var kvp in gettingStartedTemplates)
+		foreach (var kvp in detailsTemplates)
 			t = t.WithToken (kvp.Key, kvp.Value);
 
-		System.IO.File.WriteAllText (MakeAbsolute (new FilePath (compDir + "component/Details.md")).FullPath, t.ToString ());
+		FileWriteText (compDir.CombineWithFilePath ("./component/Details.md"), t.ToString ());
 	}
 });
 
