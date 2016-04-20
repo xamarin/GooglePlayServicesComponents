@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Xamarin.GooglePlayServices</id>
+    <title>Xamarin Google Play Services - All - DEPRECATED</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>DEPRECATED: Use individual Xamarin Google Play Services packages instead!</description>
+    <copyright>Copyright 2013-2016</copyright>
+    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
+    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.png</iconUrl>
+    <dependencies>
+      <!-- 
+      <dependency id="Xamarin.Android.Support.v4"             version="23.1.1.0"/>
+      <dependency id="Xamarin.Android.Support.v7.MediaRouter" version="23.1.1.0"/>
+      <dependency id="Xamarin.Android.Support.v7.AppCompat"   version="23.1.1.0"/>
+
+      <dependency id="Xamarin.GooglePlayServices.Base"        version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Ads"         version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Analytics"   version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.AppIndexing" version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.AppInvite"   version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.AppState"    version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Cast"        version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Drive"       version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Fitness"     version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Games"       version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Gcm"         version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Identity"    version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Location"    version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Maps"        version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Nearby"      version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Panorama"    version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Plus"        version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.SafetyNet"   version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Vision"      version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Wallet"      version="[29.0.0]"/>
+      <dependency id="Xamarin.GooglePlayServices.Wearable"    version="[29.0.0]"/> 
+      -->
+    </dependencies>
+  </metadata>  
+  <files>
+    <file src="readme.txt" target="" />
+    <!-- <file src="./output/GooglePlayServicesLib.dll" target="lib\MonoAndroid41" /> -->
+  </files>
+</package>

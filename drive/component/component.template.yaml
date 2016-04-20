@@ -1,0 +1,34 @@
+version: $version$
+name: Google Play Services - Drive
+id: googleplayservices-drive
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: "Read, write, and sync files stored in Google Drive from your mobile and web apps."
+license: ../../component/License.md
+icons:
+  - icons/googleplayservices-drive_128x128.png
+  - icons/googleplayservices-drive_512x512.png
+libraries:
+  android:
+    - ../../output/Xamarin.GooglePlayServices.Base.dll
+    - ../../output/Xamarin.GooglePlayServices.Basement.dll
+    - ../../output/Xamarin.GooglePlayServices.Drive.dll
+is_shell: true
+packages:
+  android:
+    - Xamarin.GooglePlayServices.Drive, Version=$nuget-version$
+samples:
+  - name: "Drive Sample"
+    path: ../../drive/samples/DriveSample.sln
+    removeProjects:
+      - Xamarin.GooglePlayServices.Base
+      - Xamarin.GooglePlayServices.Basement
+      - Xamarin.GooglePlayServices.Drive
+    installNuGets:
+      - project: DriveSample
+        packages:
+          - Xamarin.GooglePlayServices.Base
+          - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Drive
+local-nuget-repo: ../../output/
+no_build: true

@@ -1,0 +1,36 @@
+version: $wear-version$
+name: Android Wear Support + Google Play Services
+id: androidwear
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: Extends the Android platform to a new generation of wearable devices.
+is_shell: true
+icons:
+  - icons/androidwear_128x128.png
+  - icons/androidwear_512x512.png
+libraries:
+  android:
+    - ../../output/Xamarin.Android.Wearable.dll
+packages:
+  android:
+    - Xamarin.Android.Wear, Version=$wear-nuget-version$
+    - Xamarin.GooglePlayServices.Wearable, Version=$nuget-version$
+samples:
+  - name: "Multi Page Sample"
+    path: ../samples/MultiPageSample.sln
+    removeProjects:
+      - Xamarin.Android.Wearable
+    installNuGets:
+      - project: MultiPageSample
+        packages:
+          - Xamarin.Android.Wear
+  - name: "Watch Face Sample"
+    path: ../samples/WatchFaceSample.sln
+    removeProjects:
+      - Xamarin.Android.Wearable
+    installNuGets:
+      - project: WatchFaceSample
+        packages:
+          - Xamarin.Android.Wear
+local-nuget-repo: ../../output/
+no_build: true

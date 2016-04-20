@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Google Ads SDK Sample</string>
+    <string name="ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="load_interstitial">Load Interstitial</string>
+    <string name="interstitial_not_ready">Interstitial Not Ready</string>
+    <string name="banner_in_xml">Banner in XML</string>
+    <string name="banner_in_code">Banner in Code</string>
+    <string name="interstitial">Interstitial</string>
+</resources>

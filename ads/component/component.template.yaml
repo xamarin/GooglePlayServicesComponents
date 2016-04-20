@@ -1,0 +1,31 @@
+version: $version$
+name: Google Play Services - Ads
+id: googleplayservices-ads
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: Make money and advertise across screens and platforms.
+license: ../../component/License.md
+icons:
+  - icons/googleplayservices-ads_128x128.png
+  - icons/googleplayservices-ads_512x512.png
+libraries:
+  android: 
+    - ../../output/Xamarin.GooglePlayServices.Ads.dll
+    - ../../output/Xamarin.GooglePlayServices.Basement.dll
+is_shell: true
+packages:
+  android:
+    - Xamarin.GooglePlayServices.Ads, Version=$nuget-version$
+samples:
+  - name: "AdMob Sample"
+    path: ../../ads/samples/AdMobSample.sln
+    removeProjects:
+      - Xamarin.GooglePlayServices.Basement
+      - Xamarin.GooglePlayServices.Ads
+    installNuGets:
+      - project: AdMobSample
+        packages:
+          - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Ads
+local-nuget-repo: ../../output/
+no_build: true

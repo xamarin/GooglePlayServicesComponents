@@ -1,0 +1,34 @@
+version: $version$
+name: Google Play Services - Plus
+id: googleplayservices-plus
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: "Access public Google+ social graph info, build Hangout apps, and more."
+license: ../../component/License.md
+icons:
+  - icons/googleplayservices-plus_128x128.png
+  - icons/googleplayservices-plus_512x512.png
+libraries:
+  android:
+    - ../../output/Xamarin.GooglePlayServices.Base.dll
+    - ../../output/Xamarin.GooglePlayServices.Basement.dll
+    - ../../output/Xamarin.GooglePlayServices.Plus.dll
+is_shell: true
+packages:
+  android:
+    - Xamarin.GooglePlayServices.Plus, Version=$nuget-version$
+samples:
+  - name: "Plus Sample"
+    path: ../../plus/samples/PlusSample.sln
+    removeProjects:
+      - Xamarin.GooglePlayServices.Base
+      - Xamarin.GooglePlayServices.Basement
+      - Xamarin.GooglePlayServices.Plus
+    installNuGets:
+      - project: PlusSample
+        packages:
+          - Xamarin.GooglePlayServices.Base
+          - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Plus
+local-nuget-repo: ../../output/
+no_build: true

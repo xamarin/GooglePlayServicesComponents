@@ -1,0 +1,41 @@
+﻿
+<metadata>
+
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.drive']" name="managedName">Android.Gms.Drive</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive.events']" name="managedName">Android.Gms.Drive.Events</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive.metadata']" name="managedName">Android.Gms.Drive.MetadataTypes</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive.query']" name="managedName">Android.Gms.Drive.Query</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive.widget']" name="managedName">Android.Gms.Drive.Widget</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='Drive']" name="managedName">DriveClass</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive.query']/class[@name='Query']" name="managedName">QueryClass</attr>
+
+	<!-- Fix API name to be uppercase to be consistent in avoiding naming conflicts with fields in C# bindings -->
+	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='Drive']/field[@name='API']" name="managedName">API</attr>
+
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.drive.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.drive.events.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.drive.query.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.drive.metadata.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.drive.realtime.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz') and @name != 'zzf' and @name != 'zzc']" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[@name='CREATOR' and contains(@type, 'zz')]" />
+
+	<!-- The ctor here takes an internal type as a parameter, so assuming the ctor isn't meant to be publicly used -->
+	<remove-node path="/api/package[@name='com.google.android.gms.drive']/class[@name='MetadataChangeSet']/constructor[@name='MetadataChangeSet']" />
+
+	<!-- Fix up inheritence from covariant types -->
+	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='MetadataBuffer']/method[@name='get']" name="visibility">public override</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='MetadataBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+
+
+</metadata>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- 
+    * 
+    * Xamarin GooglePlayServices Basement MSBuild Tasks
+    * 
+  -->
+
+  <!-- the pre-build checks -->
+  <Target Name="ProcessGoogleServicesJsonChecks" Condition=" '@(GoogleServicesJson)' == '' " BeforeTargets="BeforeBuild">
+    <Message Text="No GoogleServicesJson file specified." />
+  </Target>
+
+
+  <!-- make the 'GoogleServicesJson' build action available in the Visual Studio dropdown -->
+  <ItemGroup>
+    <AvailableItemName Include="GoogleServicesJson" />   
+  </ItemGroup>
+
+  <PropertyGroup>
+    <ProcessGoogleServicesJsonTaskFilename Condition=" '$(ProcessGoogleServicesJsonTaskFilename)' == '' ">$(MSBuildThisFileDirectory)Xamarin.GooglePlayServices.Tasks.dll</ProcessGoogleServicesJsonTaskFilename>
+  </PropertyGroup>
+
+  <!-- set some defaults -->
+  <PropertyGroup>
+    <ProcessGoogleServicesJsonDependsOn>
+       $(ProcessGoogleServicesJsonDependsOn);
+    </ProcessGoogleServicesJsonDependsOn>
+    <ProcessGoogleServicesJsonBeforeTargets>
+      _UpdateAndroidResgen;$(ProcessGoogleServicesJsonBeforeTargets);
+    </ProcessGoogleServicesJsonBeforeTargets>
+  </PropertyGroup>
+
+  <!-- include the task assembly -->
+  <UsingTask 
+      AssemblyFile="$(ProcessGoogleServicesJsonTaskFilename)" 
+      TaskName="Xamarin.GooglePlayServices.Tasks.ProcessGoogleServicesJson" />
+
+  <!-- the build tasks -->
+  <Target
+    Name="ProcessGoogleServicesJson" 
+    Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True' "
+    BeforeTargets="$(ProcessGoogleServicesJsonBeforeTargets)">
+
+    <ProcessGoogleServicesJson
+        IntermediateOutputPrefix="$(IntermediateOutputPrefix)"
+        GoogleServicesJsons="@(GoogleServicesJson)"
+        IntermediateOutputPath="$(IntermediateOutputPath)"
+        MonoAndroidResDirIntermediate="$(MonoAndroidResDirIntermediate)"
+        AndroidPackageName="$(_AndroidPackage)">
+    </ProcessGoogleServicesJson>
+  </Target>
+
+</Project>

@@ -1,0 +1,34 @@
+version: $version$
+name: Google Play Services - Panorama
+id: googleplayservices-panorama
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: "Open panorama standard and APIs"
+license: ../../component/License.md
+icons:
+  - icons/googleplayservices-panorama_128x128.png
+  - icons/googleplayservices-panorama_512x512.png
+libraries:
+  android:
+    - ../../output/Xamarin.GooglePlayServices.Base.dll
+    - ../../output/Xamarin.GooglePlayServices.Basement.dll
+    - ../../output/Xamarin.GooglePlayServices.Panorama.dll
+is_shell: true
+packages:
+  android:
+    - Xamarin.GooglePlayServices.Panorama, Version=$nuget-version$
+samples:
+  - name: "Panorama Sample"
+    path: ../../panorama/samples/PanoramaSample.sln
+    removeProjects:
+      - Xamarin.GooglePlayServices.Base
+      - Xamarin.GooglePlayServices.Basement
+      - Xamarin.GooglePlayServices.Panorama
+    installNuGets:
+      - project: PanoramaSample
+        packages:
+          - Xamarin.GooglePlayServices.Base
+          - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Panorama
+local-nuget-repo: ../../output/
+no_build: true

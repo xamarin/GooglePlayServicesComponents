@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.Drive</id>
+    <title>Xamarin Google Play Services - Drive</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - Drive</summary>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - Drive
+
+      With Drive now part of Android, integrating Drive services into your Android application has never been easier. With sync and offline support, we make it easier for you to focus on writing great apps. Simply read and write files and we’ll handle the details.
+    </description>
+    <copyright>Copyright 2013-2016</copyright>
+    <projectUrl>http://components.xamarin.com/view/googleplayservices-drive/</projectUrl>
+    <licenseUrl>http://components.xamarin.com/license/googleplayservices-drive/</licenseUrl>
+    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.Drive.png</iconUrl>
+    <dependencies>
+      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="./output/Xamarin.GooglePlayServices.Drive.dll" target="lib\MonoAndroid41" />
+  </files>
+</package>

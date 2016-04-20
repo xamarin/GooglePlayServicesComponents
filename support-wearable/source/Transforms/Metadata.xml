@@ -1,0 +1,51 @@
+﻿<metadata>
+
+	<!-- Fix namespaces -->
+	<attr path="/api/package[@name='android.support.wearable.view']" name="managedName">Android.Support.Wearable.Views</attr>
+	<attr path="/api/package[@name='com.google.android.wearable.compat']" name="managedName">Google.Android.Wearable.Compat</attr>
+
+	<!-- Make public -->
+	<attr path="/api/package[@name='android.support.wearable.activity']/class[@name='WearableActivity.AmbientCallback']" name="visibility">public</attr>
+
+	<!-- Rename bad events -->
+	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='WearableListView.OnScrollListener']/method[@name='onCentralPositionChanged']" name="argsType">ScrollCentralPositionChangedEventArgs</attr>
+	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='WearableListView.OnScrollListener']/method[@name='onCentralPositionChanged']" name="eventName">ScrollCentralPositionChanged</attr>
+
+<!--	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='DelayedConfirmationView.DelayedConfirmationListener']/method[@name='onTimerFinished']" name="eventName">TimerFinished</attr>
+	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='DelayedConfirmationView.DelayedConfirmationListener']/method[@name='onTimerSelected']" name="eventName">TimerSelected</attr>-->
+
+	<!-- We'll manually add these to return the correct types instead of Java.Lang.Object -->
+	<remove-node path="/api/package[@name='android.support.wearable.watchface']/class[@name='WatchFaceService']/method[@name='onCreateEngine' and count(parameter)=0]" />
+	<remove-node path="/api/package[@name='android.support.wearable.watchface']/class[@name='CanvasWatchFaceService']/method[@name='onCreateEngine' and count(parameter)=0]" />
+	<remove-node path="/api/package[@name='android.support.wearable.watchface']/class[@name='Gles2WatchFaceService']/method[@name='onCreateEngine' and count(parameter)=0]" />
+
+	<!-- WearableListView -->
+    <remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='WearableListView.Adapter']"/>
+    <remove-node path="/api/package[@name='android.support.wearable.view']/interface[@name='GridPagerAdapter.OnBackgroundChangeListener']"/>
+
+    <!-- Fix return type -->
+  	<attr path="/api/package[@name='android.support.wearable.view']/class[@name='GridPagerAdapter']/method[@name='instantiateItem' and count(parameter)=3 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int'] and parameter[3][@type='int']]" name="managedReturn">Android.App.Fragment</attr>
+
+
+  	<remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='CardFrame.EdgeFade']" />
+
+
+  	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='GridViewPager.OnAdapterChangeListener']/method[@name='onAdapterChanged']/parameter[1]" name="managedName">oldAdapter</attr>
+  	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='GridViewPager.OnAdapterChangeListener']/method[@name='onAdapterChanged']/parameter[2]" name="managedName">newAdapter</attr>
+
+  	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='GridViewPager.OnPageChangeListener']/method[@name='onPageScrolled']/parameter[1]" name="managedName">rowValue</attr>
+  	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='GridViewPager.OnPageChangeListener']/method[@name='onPageScrolled']/parameter[2]" name="managedName">column</attr>
+  	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='GridViewPager.OnPageChangeListener']/method[@name='onPageScrolled']/parameter[3]" name="managedName">rowOffset</attr>
+  	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='GridViewPager.OnPageChangeListener']/method[@name='onPageScrolled']/parameter[4]" name="managedName">colOffset</attr>
+  	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='GridViewPager.OnPageChangeListener']/method[@name='onPageScrolled']/parameter[5]" name="managedName">rowOffsetPx</attr>
+  	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='GridViewPager.OnPageChangeListener']/method[@name='onPageScrolled']/parameter[6]" name="managedName">colOffsetPx</attr>
+
+  	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='GridViewPager.OnPageChangeListener']/method[@name='onPageScrollStateChanged']/parameter[1]" name="managedName">state</attr>
+
+  	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='GridViewPager.OnPageChangeListener']/method[@name='onPageSelected']/parameter[1]" name="managedName">rowValue</attr>
+  	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='GridViewPager.OnPageChangeListener']/method[@name='onPageSelected']/parameter[2]" name="managedName">column</attr>
+
+  	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='ObservableScrollView.OnScrollListener']/method[@name='onScroll']/parameter[1]" name="managedName">deltaY</attr>
+
+
+</metadata>

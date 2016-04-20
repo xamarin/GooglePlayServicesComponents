@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.Basement</id>
+    <title>Xamarin Google Play Services - Basement</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - Basement - do not install directly</summary>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - Basement
+
+      Instead of installing this package directly, install the specific package(s) you need:
+        - Xamarin Google Play Services - Ads
+        - Xamarin Google Play Services - Analytics
+        - Xamarin Google Play Services - AppIndexing
+        - Xamarin Google Play Services - AppInvite
+        - Xamarin Google Play Services - Auth
+        - Xamarin Google Play Services - Cast
+        - Xamarin Google Play Services - Drive
+        - Xamarin Google Play Services - Fitness
+        - Xamarin Google Play Services - Games
+        - Xamarin Google Play Services - GCM
+        - Xamarin Google Play Services - Identity
+        - Xamarin Google Play Services - Location
+        - Xamarin Google Play Services - Maps
+        - Xamarin Google Play Services - Measurement
+        - Xamarin Google Play Services - Nearby
+        - Xamarin Google Play Services - Panorama
+        - Xamarin Google Play Services - Plus
+        - Xamarin Google Play Services - SafetyNet
+        - Xamarin Google Play Services - Vision
+        - Xamarin Google Play Services - Wallet
+        - Xamarin Google Play Services - Wearable
+
+      NOTE: Auth may be moved into its own package in the future!
+    </description>
+    <copyright>Copyright 2013-2016</copyright>
+    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
+    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.Basement.png</iconUrl>
+    <dependencies>
+      <dependency id="Xamarin.Android.Support.v4" version="23.1.1.1"/>
+    </dependencies>    
+  </metadata>
+  <files>
+    <file src="basement/buildtasks/bin/Release/Xamarin.GooglePlayServices.Basement.targets" target="build" />
+
+    <file src="output/Xamarin.GooglePlayServices.Basement.dll" target="lib\MonoAndroid41" />
+  </files>
+</package>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.Analytics</id>
+    <title>Xamarin Google Play Services - Analytics</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - Analytics</summary>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - Analytics
+
+      The Google Analytics SDK for Android makes it easy for developers to collect user engagement data form their apps.
+    </description>
+    <copyright>Copyright 2013-2016</copyright>
+    <projectUrl>http://components.xamarin.com/view/googleplayservices-analytics/</projectUrl>
+    <licenseUrl>http://components.xamarin.com/license/googleplayservices-analytics/</licenseUrl>
+    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.Analytics.png</iconUrl>
+    <dependencies>
+      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="./output/Xamarin.GooglePlayServices.Analytics.dll" target="lib\MonoAndroid41" />
+  </files>
+</package>

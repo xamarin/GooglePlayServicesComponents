@@ -1,0 +1,34 @@
+version: $version$
+name: Google Play Services - Safety Net
+id: googleplayservices-safetynet
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: "Services for analyzing the configuration of a particular device."
+license: ../../component/License.md
+icons:
+  - icons/googleplayservices-safetynet_128x128.png
+  - icons/googleplayservices-safetynet_512x512.png
+libraries:
+  android:
+    - ../../output/Xamarin.GooglePlayServices.SafetyNet.dll
+    - ../../output/Xamarin.GooglePlayServices.Base.dll
+    - ../../output/Xamarin.GooglePlayServices.Basement.dll
+is_shell: true
+packages:
+  android:
+    - Xamarin.GooglePlayServices.SafetyNet, Version=$nuget-version$
+samples:
+  - name: "SafetyNet Sample"
+    path: ../../safetynet/samples/SafetyNetSample.sln
+    removeProjects:
+      - Xamarin.GooglePlayServices.Base
+      - Xamarin.GooglePlayServices.Basement
+      - Xamarin.GooglePlayServices.SafetyNet
+    installNuGets:
+      - project: SafetyNetSample
+        packages:
+          - Xamarin.GooglePlayServices.Base
+          - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.SafetyNet
+local-nuget-repo: ../../output/
+no_build: true

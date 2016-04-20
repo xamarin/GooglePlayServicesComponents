@@ -1,0 +1,37 @@
+version: $version$
+name: Google Play Services - Cloud Messaging (GCM)
+id: googleplayservices-gcm
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: "Simple and reliable messaging to reach over a billion devices."
+license: ../../component/License.md
+icons:
+  - icons/googleplayservices-gcm_128x128.png
+  - icons/googleplayservices-gcm_512x512.png
+libraries:
+  android:
+    - ../../output/Xamarin.GooglePlayServices.Base.dll
+    - ../../output/Xamarin.GooglePlayServices.Basement.dll
+    - ../../output/Xamarin.GooglePlayServices.Gcm.dll
+    - ../../output/Xamarin.GooglePlayServices.Measurement.dll
+is_shell: true
+packages:
+  android:
+    - Xamarin.GooglePlayServices.Gcm, Version=$nuget-version$
+samples:
+  - name: "GCM Sample"
+    path: ../../gcm/samples/GCMSample.sln
+    removeProjects:
+      - Xamarin.GooglePlayServices.Base
+      - Xamarin.GooglePlayServices.Basement
+      - Xamarin.GooglePlayServices.Gcm
+      - Xamarin.GooglePlayServices.Measurement
+    installNuGets:
+      - project: GCMSample
+        packages:
+          - Xamarin.GooglePlayServices.Base
+          - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Gcm
+          - Xamarin.GooglePlayServices.Measurement
+local-nuget-repo: ../../output/
+no_build: true

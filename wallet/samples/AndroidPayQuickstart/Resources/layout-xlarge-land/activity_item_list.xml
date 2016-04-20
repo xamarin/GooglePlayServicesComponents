@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:weightSum="3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fragment
+        android:id="@+id/promo_fragment"
+        android:name="com.google.android.gms.samples.wallet.PromoAddressLookupFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <fragment
+        android:id="@+id/item_list"
+        android:name="com.google.android.gms.samples.wallet.ItemListFragment"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+    <include
+        android:layout_marginBottom="@dimen/element_space"
+        android:layout_marginTop="@dimen/element_space"
+        layout="@layout/vertical_divider" />
+    <fragment
+        android:id="@+id/item_details"
+        android:name="com.google.android.gms.samples.wallet.ItemDetailsFragment"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+</LinearLayout>

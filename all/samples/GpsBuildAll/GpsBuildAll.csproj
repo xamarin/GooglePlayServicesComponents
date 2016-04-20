@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9BE4750-6DFD-412E-B998-26B725911CF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GpsBuildAll</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>GpsBuildAll</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\..\..\packages\Xamarin.Android.Support.v4.23.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\..\..\packages\Xamarin.Android.Support.v7.AppCompat.23.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\cast\source\Cast.csproj">
+      <Project>{C1A9C587-B744-44D2-AD42-14386D424667}</Project>
+      <Name>Cast</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\drive\source\Drive.csproj">
+      <Project>{8BAFA1ED-B5D9-49ED-A553-E557D2A0357F}</Project>
+      <Name>Drive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\fitness\source\Fitness.csproj">
+      <Project>{8900C5EF-1182-4E8B-88FE-596EC2DB379D}</Project>
+      <Name>Fitness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\games\source\Games.csproj">
+      <Project>{5DF42846-151E-40CD-A349-C0A0C6216F7B}</Project>
+      <Name>Games</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\gcm\source\Gcm.csproj">
+      <Project>{1CE82D7E-9EA1-435F-AF8C-5E07AB917617}</Project>
+      <Name>Gcm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\identity\source\Identity.csproj">
+      <Project>{09362350-BB7F-4B4C-83B5-97F5C439B649}</Project>
+      <Name>Identity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\location\source\Location.csproj">
+      <Project>{F666DC89-9CE4-491C-8450-6FBC70298FA3}</Project>
+      <Name>Location</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\maps\source\Maps.csproj">
+      <Project>{7CB92D61-E2FF-472A-9FDF-7E42D15B3EE6}</Project>
+      <Name>Maps</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\measurement\source\Measurement.csproj">
+      <Project>{5C4C77A3-4523-4E2B-895B-6EFE4A6A1617}</Project>
+      <Name>Measurement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\nearby\source\Nearby.csproj">
+      <Project>{A7ADD277-FCAB-46D5-8F18-2E4BFFDA3AE7}</Project>
+      <Name>Nearby</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\panorama\source\Panorama.csproj">
+      <Project>{9E3CD219-C950-4AA9-88E5-818F42C12566}</Project>
+      <Name>Panorama</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\plus\source\Plus.csproj">
+      <Project>{A2B43C02-A237-4222-999E-3354CBB6DB8D}</Project>
+      <Name>Plus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\safetynet\source\SafetyNet.csproj">
+      <Project>{7A015585-036A-4BD1-8D46-A669EFA89743}</Project>
+      <Name>SafetyNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\support-wearable\source\SupportWearable.csproj">
+      <Project>{7DD8E926-9F75-4F25-95A3-920A5FF48EF8}</Project>
+      <Name>SupportWearable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\vision\source\Vision.csproj">
+      <Project>{72CC5E29-5EA5-40E3-98E4-87ED8AB75589}</Project>
+      <Name>Vision</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\wallet\source\Wallet.csproj">
+      <Project>{7AF74235-AEE2-4F3A-AEDB-7504ED93DDC0}</Project>
+      <Name>Wallet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\wearable\source\Wearable.csproj">
+      <Project>{92BDA198-6A78-4408-844C-CAAF4C04EAFD}</Project>
+      <Name>Wearable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\basement\source\Basement.csproj">
+      <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
+      <Name>Basement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\base\source\Base.csproj">
+      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
+      <Name>Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\auth\source\Auth.csproj">
+      <Project>{A0CDF507-32B7-4994-8248-94FAB8646E35}</Project>
+      <Name>Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\appstate\source\AppState.csproj">
+      <Project>{8B84EE13-119C-41EB-98E8-E42D3ECD0DFD}</Project>
+      <Name>AppState</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\appinvite\source\AppInvite.csproj">
+      <Project>{A069B942-EE12-4283-9C4C-F46549D3978A}</Project>
+      <Name>AppInvite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\appindexing\source\AppIndexing.csproj">
+      <Project>{A069B942-EE12-4283-8C4C-F46549D3978A}</Project>
+      <Name>AppIndexing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\analytics\source\Analytics.csproj">
+      <Project>{EA04524D-2A97-4ED0-AD74-21F8C30DF4A5}</Project>
+      <Name>Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ads\source\Ads.csproj">
+      <Project>{CC4E534D-4992-4FBB-9528-A071EDDEA7E7}</Project>
+      <Name>Ads</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,40 @@
+version: $version$
+name: Google Play Services - Fitness
+id: googleplayservices-fitness
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: "APIs to make building fitness apps and devices easier."
+license: ../../component/License.md
+icons:
+  - icons/googleplayservices-fitness_128x128.png
+  - icons/googleplayservices-fitness_512x512.png
+libraries:
+  android:
+    - ../../output/Xamarin.GooglePlayServices.Base.dll
+    - ../../output/Xamarin.GooglePlayServices.Basement.dll
+    - ../../output/Xamarin.GooglePlayServices.Fitness.dll
+    - ../../output/Xamarin.GooglePlayServices.Maps.dll
+    - ../../output/Xamarin.GooglePlayServices.Location.dll
+is_shell: true
+packages:
+  android:
+    - Xamarin.GooglePlayServices.Fitness, Version=$nuget-version$
+samples:
+  - name: "Basic Sensors API"
+    path: ../../fitness/samples/BasicSensorsApi.sln
+    removeProjects:
+      - Xamarin.GooglePlayServices.Base
+      - Xamarin.GooglePlayServices.Basement
+      - Xamarin.GooglePlayServices.Location
+      - Xamarin.GooglePlayServices.Maps
+      - Xamarin.GooglePlayServices.Fitness
+    installNuGets:
+      - project: BasicSensorsApi
+        packages:
+          - Xamarin.GooglePlayServices.Base
+          - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Location
+          - Xamarin.GooglePlayServices.Maps
+          - Xamarin.GooglePlayServices.Fitness
+local-nuget-repo: ../../output/
+no_build: true
