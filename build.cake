@@ -9,9 +9,9 @@
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
 var COMPONENT_VERSION = "29.0.0.2";
-var NUGET_VERSION = "29.0.0.2-beta2";
+var NUGET_VERSION = "29.0.0.2";
 var COMPONENT_WEAR_VERSION = "1.3.0.4";
-var NUGET_WEAR_VERSION = "1.3.0.4-beta2";
+var NUGET_WEAR_VERSION = "1.3.0.4";
 var AAR_VERSION = "8.4.0";
 var WEARABLE_SUPPORT_VERSION = "1.3.0";
 var WEARABLE_VERSION = "1.0.0";
