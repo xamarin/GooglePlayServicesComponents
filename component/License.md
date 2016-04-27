@@ -3,7 +3,7 @@
 
 This component depends on [Google Play Services Client Library](https://developers.google.com/android/guides/overview), which is subject to the terms of [Android Software Development Kit License Agreement](http://developer.android.com/sdk/terms.html)
 
-### Xamarin Component for Android Support Library
+### Xamarin Component for Google Play Services Client Library
 The MIT License (MIT)
 
 Copyright (c) .NET Foundation Contributors
