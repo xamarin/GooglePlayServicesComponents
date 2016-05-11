@@ -79,7 +79,6 @@ namespace Analytics
 
             public void OnTabReselected (Android.Support.V7.App.ActionBar.Tab tab, Android.Support.V4.App.FragmentTransaction ft)
             {
-                throw new NotImplementedException ();
             }
 
             public void OnTabSelected (Android.Support.V7.App.ActionBar.Tab tab, Android.Support.V4.App.FragmentTransaction ft)
