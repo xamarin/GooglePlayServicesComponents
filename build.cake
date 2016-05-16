@@ -3,7 +3,7 @@
 
 #addin nuget:?package=Cake.XCode&version=1.0.4.0
 #addin nuget:?package=Cake.Xamarin&version=1.3.0.1
-#addin nuget:?package=Cake.Xamarin.Build&version=1.0.11.0
+#addin nuget:?package=Cake.Xamarin.Build&version=1.0.16.0
 #addin nuget:?package=Cake.FileHelpers&version=1.0.3.2
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
