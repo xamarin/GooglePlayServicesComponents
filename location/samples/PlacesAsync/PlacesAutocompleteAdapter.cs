@@ -111,7 +111,7 @@ namespace PlacesAsync
                 }
 
                 // Copy the results into our own list, because we can't hold onto the buffer
-                var list = autocompletePredictions.Select (p => new PlaceInfo { PlaceId = p.PlaceId, Description = p.Description })
+                var list = autocompletePredictions.Select (p => new PlaceInfo { PlaceId = p.PlaceId, Description = p.GetPrimaryTextFormatted (null).ToString() })
                     .ToList ();
 
                 // Release the buffer now that all data has been copied.
