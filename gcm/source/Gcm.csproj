@@ -77,9 +77,13 @@
       <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
       <Name>Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\measurement\source\Measurement.csproj">
-      <Project>{5C4C77A3-4523-4E2B-895B-6EFE4A6A1617}</Project>
-      <Name>Measurement</Name>
+    <ProjectReference Include="..\..\iid\source\Iid.csproj">
+      <Project>{9F7F996D-AF44-4947-8392-07B3ED2ED00D}</Project>
+      <Name>Iid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\basement\source\Basement.csproj">
+      <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
+      <Name>Basement</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />

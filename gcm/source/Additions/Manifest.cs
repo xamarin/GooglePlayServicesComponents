@@ -1,16 +1,11 @@
-﻿// using System;
-// using Android.Runtime;
-// using Android.App;
-// using Android.Content;
+﻿using System;
+using Android.App;
 
-// [assembly: UsesPermission ("com.google.android.c2dm.permission.RECEIVE")]
+[assembly: UsesPermission ("com.google.android.c2dm.permission.RECEIVE")]
+[assembly: UsesPermission (Android.Manifest.Permission.Internet)]
 
 // [assembly: Permission (Name="@PACKAGE_NAME@.permission.C2D_MESSAGE")]
 // [assembly: UsesPermission ("@PACKAGE_NAME@.permission.C2D_MESSAGE")]
-
-// [assembly: UsesPermission (Android.Manifest.Permission.Internet)]
-// [assembly: UsesPermission (Android.Manifest.Permission.WakeLock)]
-
 
 // namespace Android.Gms.Gcm
 // {
