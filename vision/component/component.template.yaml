@@ -12,6 +12,8 @@ libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll
     - ../../output/Xamarin.GooglePlayServices.Basement.dll
+    - ../../output/Xamarin.GooglePlayServices.Tasks.dll
+    - ../../output/Xamarin.Firebase.Common.dll
     - ../../output/Xamarin.GooglePlayServices.Vision.dll
 is_shell: true
 packages:
@@ -21,14 +23,18 @@ samples:
   - name: "Vision Sample"
     path: ../../vision/samples/VisionSample.sln
     removeProjects:
-      - Xamarin.GooglePlayServices.Base
-      - Xamarin.GooglePlayServices.Basement
-      - Xamarin.GooglePlayServices.Vision
+      - Base
+      - Basement
+      - Tasks
+      - Firebase-Common
+      - Vision
     installNuGets:
       - project: VisionSample
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
+          - Xamarin.Firebase.Common
           - Xamarin.GooglePlayServices.Vision
 local-nuget-repo: ../../output/
 no_build: true
