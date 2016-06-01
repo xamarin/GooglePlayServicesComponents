@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Threading.Tasks;
 using Android.Gms.Common;
 using Android.Gms.Common.Apis;
@@ -24,16 +23,17 @@ namespace Android.Gms.Extensions
 
             return tcsConnected.Task;
         }
-    }
 
-    public class GoogleApiClientConnectionException : Exception
-    {
-        public GoogleApiClientConnectionException (ConnectionResult connectionResult)
-            : base (connectionResult.ErrorMessage)
+        public class GoogleApiClientConnectionException : Exception
         {
-            ConnectionResult = connectionResult;
-        }
+            public GoogleApiClientConnectionException (ConnectionResult connectionResult)
+                : base (connectionResult.ErrorMessage)
+            {
+                ConnectionResult = connectionResult;
+            }
 
-        public ConnectionResult ConnectionResult { get; private set; }
+            public ConnectionResult ConnectionResult { get; private set; }
+        }
     }
 }
+
