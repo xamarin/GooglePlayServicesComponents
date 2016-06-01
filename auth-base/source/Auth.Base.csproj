@@ -6,13 +6,13 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A0CDF507-32B7-4994-8248-94FAB8646E35}</ProjectGuid>
+    <ProjectGuid>{B04C50F7-B0CC-4170-8820-9D584E1C0ED3}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>GooglePlayServices.Auth</RootNamespace>
+    <RootNamespace>GooglePlayServices.Auth.Base</RootNamespace>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
-    <AssemblyName>Xamarin.GooglePlayServices.Auth</AssemblyName>
+    <AssemblyName>Xamarin.GooglePlayServices.Auth.Base</AssemblyName>
     <TargetFrameworkVersion>v4.1</TargetFrameworkVersion>
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
     <!-- <SignAssembly>true</SignAssembly>
@@ -53,8 +53,6 @@
     <Compile Include="..\..\GpsConsts.cs">
       <Link>Properties\GpsConsts.cs</Link>
     </Compile>
-    <Compile Include="Additions\IPendingResultExtensions.cs" />
-    <Compile Include="Additions\Manifest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />
@@ -68,11 +66,6 @@
     <TransformFile Include="Transforms\Metadata.generated.xml" />
   </ItemGroup>
   <ItemGroup>
-    <InputJar Include="..\..\externals\play-services-auth\classes.jar">
-      <Link>Jars\play-services-auth.jar</Link>
-    </InputJar>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\base\source\Base.csproj">
       <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
       <Name>Base</Name>
@@ -81,10 +74,11 @@
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\auth-base\source\Auth.Base.csproj">
-      <Project>{B04C50F7-B0CC-4170-8820-9D584E1C0ED3}</Project>
-      <Name>Auth.Base</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+  <ItemGroup>
+    <InputJar Include="..\..\externals\play-services-auth-base\classes.jar">
+      <Link>Jars\play-services-auth-base.jar</Link>
+    </InputJar>
+  </ItemGroup>
 </Project>
