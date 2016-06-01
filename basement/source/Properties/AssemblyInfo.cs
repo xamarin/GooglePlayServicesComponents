@@ -26,8 +26,6 @@ using Android.App;
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
 
-[assembly:MetaData ("com.google.android.gms.version", Value = "@integer/google_play_services_version")]
-
 [assembly: Java.Interop.JavaLibraryReference ("classes.jar",
     PackageName = __Consts.PackageName,
     SourceUrl = __GpsConsts.Url,
