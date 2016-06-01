@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maps", "..\..\maps\source\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basement", "..\..\basement\source\Basement.csproj", "{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "..\..\tasks\source\Tasks.csproj", "{53F87D88-8871-41A2-9F81-B79AB02FEC24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Common", "..\..\firebase-common\source\Firebase-Common.csproj", "{865652D3-8D1A-4779-92FC-4C54719286B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,5 +53,13 @@ Global
 		{F666DC89-9CE4-491C-8450-6FBC70298FA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F666DC89-9CE4-491C-8450-6FBC70298FA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F666DC89-9CE4-491C-8450-6FBC70298FA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
