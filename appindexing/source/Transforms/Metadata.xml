@@ -3,7 +3,9 @@
 	<attr path="/api/package[@name='com.google.android.gms.appindexing']" name="managedName">Android.Gms.AppIndexing</attr>
 	<attr path="/api/package[@name='com.google.android.gms.appdatasearch']" name="managedName">Android.Gms.AppDataSearch</attr>
 	<attr path="/api/package[@name='com.google.android.gms.search']" name="managedName">Android.Gms.Search</attr>
+	<attr path="/api/package[@name='com.google.firebase.appindexing.internal']" name="managedName">Firebase.AppIndexing.Internal</attr>
 
+	
 	<!-- Remove some internal namespaces -->
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
 
