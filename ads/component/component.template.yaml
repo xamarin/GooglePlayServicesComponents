@@ -10,8 +10,12 @@ icons:
   - icons/googleplayservices-ads_512x512.png
 libraries:
   android: 
-    - ../../output/Xamarin.GooglePlayServices.Ads.dll
+    - ../../output/Xamarin.GooglePlayServices.Base.dll
     - ../../output/Xamarin.GooglePlayServices.Basement.dll
+    - ../../output/Xamarin.GooglePlayServices.Tasks.dll
+    - ../../output/Xamarin.Firebase.Common.dll
+    - ../../output/Xamarin.GooglePlayServices.Ads.dll
+    - ../../output/Xamarin.GooglePlayServices.Ads.Lite.dll
 is_shell: true
 packages:
   android:
@@ -20,12 +24,20 @@ samples:
   - name: "AdMob Sample"
     path: ../../ads/samples/AdMobSample.sln
     removeProjects:
-      - Xamarin.GooglePlayServices.Basement
-      - Xamarin.GooglePlayServices.Ads
+      - Base
+      - Basement
+      - Tasks
+      - Firebase-Common
+      - Ads
+      - Ads.Lite
     installNuGets:
       - project: AdMobSample
         packages:
+          - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
+          - Xamarin.Firebase.Common
           - Xamarin.GooglePlayServices.Ads
+          - Xamarin.GooglePlayServices.Ads.Lite
 local-nuget-repo: ../../output/
 no_build: true
