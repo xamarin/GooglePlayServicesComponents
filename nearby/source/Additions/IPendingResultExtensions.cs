@@ -34,6 +34,7 @@ namespace Android.Gms.Nearby.Messages
 {
     public static partial class IMessagesExtensions
     {
+        [Obsolete]
         public static async Task<Statuses> GetPermissionStatusAsync (this IMessages api, GoogleApiClient client)
         {
             return (await api.GetPermissionStatus (client)).JavaCast<Statuses> ();
@@ -46,11 +47,6 @@ namespace Android.Gms.Nearby.Messages
         {
             return (await api.Publish (client, message, options)).JavaCast<Statuses> ();
         }
-        [Obsolete]
-        public static async Task<Statuses> PublishAsync (this IMessages api, GoogleApiClient client, Android.Gms.Nearby.Messages.Message message, Android.Gms.Nearby.Messages.Strategy strategy)
-        {
-            return (await api.Publish (client, message, strategy)).JavaCast<Statuses> ();
-        }
         public static async Task<Statuses> RegisterStatusCallbackAsync (this IMessages api, GoogleApiClient client, Android.Gms.Nearby.Messages.StatusCallback statusCallback)
         {
             return (await api.RegisterStatusCallback (client, statusCallback)).JavaCast<Statuses> ();
@@ -58,16 +54,6 @@ namespace Android.Gms.Nearby.Messages
         public static async Task<Statuses> SubscribeAsync (this IMessages api, GoogleApiClient client, Android.Gms.Nearby.Messages.MessageListener listener)
         {
             return (await api.Subscribe (client, listener)).JavaCast<Statuses> ();
-        }
-        [Obsolete]
-        public static async Task<Statuses> SubscribeAsync (this IMessages api, GoogleApiClient client, Android.Gms.Nearby.Messages.MessageListener listener, Android.Gms.Nearby.Messages.Strategy strategy)
-        {
-            return (await api.Subscribe (client, listener, strategy)).JavaCast<Statuses> ();
-        }
-        [Obsolete]
-        public static async Task<Statuses> SubscribeAsync (this IMessages api, GoogleApiClient client, Android.Gms.Nearby.Messages.MessageListener listener, Android.Gms.Nearby.Messages.Strategy strategy, Android.Gms.Nearby.Messages.MessageFilter filter)
-        {
-            return (await api.Subscribe (client, listener, strategy, filter)).JavaCast<Statuses> ();
         }
         public static async Task<Statuses> SubscribeAsync (this IMessages api, GoogleApiClient client, Android.Gms.Nearby.Messages.MessageListener listener, Android.Gms.Nearby.Messages.SubscribeOptions options)
         {
