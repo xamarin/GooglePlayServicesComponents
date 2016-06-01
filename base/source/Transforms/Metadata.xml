@@ -8,14 +8,16 @@
 	<attr path="/api/package[@name='com.google.android.gms.common.images']" name="managedName">Android.Gms.Common.Images</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.common.internal']" name="managedName">Android.Gms.Common.Internal</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.common.api.internal']" name="managedName">Android.Gms.Common.Api.Internal</attr>
-
+	<attr path="/api/package[@name='com.google.android.gms.auth.api.signin']" name="managedName">Android.Gms.Auth.Api.SignIn</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']" name="managedName">Android.Gms.Auth.Api.SignIn.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.api']" name="managedName">Android.Gms.Common.Apis</attr>
+	<attr path="/api/package[@name='com.google.android.gms.signin.internal']" name="managedName">Android.Gms.SignIn.Internal</attr>
 
 	<!-- Remove some internal namespaces -->
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
 
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
-	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'zzf' and @name != 'zzc']" />
-<!--	<remove-node path="/api/package/class[contains(@name, 'zz')]" />-->
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'zzf' and @name != 'zzc' and @name != 'zzd' and @name != 'zze']" />
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
@@ -34,6 +36,12 @@
 	<attr path="/api/package/class/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
 	<attr path="/api/package/class/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
 
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.common.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.playlog.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.signin.internal')]" />
+	
 	<!-- Fix params for some inherited parcelable types -->
 	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
 	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
