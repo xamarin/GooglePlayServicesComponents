@@ -272,10 +272,10 @@ namespace Android.Gms.Games.Snapshot
 {
     public static partial class ISnapshotsExtensions
     {
-        public static async Task<ISnapshotsCommitSnapshotResult> CommitAndCloseAsync (this ISnapshots api, GoogleApiClient apiClient, ISnapshot snapshot, SnapshotMetadataChange metadataChange)
-        {
-            return (await api.CommitAndClose (apiClient, snapshot, metadataChange)).JavaCast<ISnapshotsCommitSnapshotResult> ();
-        }
+        //public static async Task<ISnapshotsCommitSnapshotResult> CommitAndCloseAsync (this ISnapshots api, GoogleApiClient apiClient, ISnapshot snapshot, SnapshotMetadataChange metadataChange)
+        //{
+        //    return (await api.CommitAndClose (apiClient, snapshot, metadataChange)).JavaCast<ISnapshotsCommitSnapshotResult> ();
+        //}
         public static async Task<ISnapshotsDeleteSnapshotResult> DeleteAsync (this ISnapshots api, GoogleApiClient apiClient, ISnapshotMetadata metadata)
         {
             return (await api.Delete (apiClient, metadata)).JavaCast<ISnapshotsDeleteSnapshotResult> ();
@@ -304,10 +304,10 @@ namespace Android.Gms.Games.Snapshot
         {
             return (await api.ResolveConflict (apiClient, conflictId, snapshot)).JavaCast<ISnapshotsOpenSnapshotResult> ();
         }
-        public static async Task<ISnapshotsOpenSnapshotResult> ResolveConflictAsync (this ISnapshots api, GoogleApiClient apiClient, string conflictId, string snapshotId, SnapshotMetadataChange metadataChange, ISnapshotContents snapshotContents)
-        {
-            return (await api.ResolveConflict (apiClient, conflictId, snapshotId, metadataChange, snapshotContents)).JavaCast<ISnapshotsOpenSnapshotResult> ();
-        }
+        //public static async Task<ISnapshotsOpenSnapshotResult> ResolveConflictAsync (this ISnapshots api, GoogleApiClient apiClient, string conflictId, string snapshotId, SnapshotMetadataChange metadataChange, ISnapshotContents snapshotContents)
+        //{
+        //    return (await api.ResolveConflict (apiClient, conflictId, snapshotId, metadataChange, snapshotContents)).JavaCast<ISnapshotsOpenSnapshotResult> ();
+        //}
     }
 }
 
