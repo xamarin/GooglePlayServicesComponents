@@ -26,8 +26,9 @@
 
 	<!-- Allowing zza classes allows a bit too much, so remove these specifically -->
 <!--	<remove-node path="/api/package[@name='com.google.android.gms.location.copresence.internal']/class[@name='zza']" />-->
-<!--	<remove-node path="/api/package[@name='com.google.android.gms.location.places.personalized']/class[@name='zza']" />-->
+	<remove-node path="/api/package[@name='com.google.android.gms.location.places.personalized']/class[@name='zza']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.location']/class[@name='zza']" />
+
 
 	<attr path="/api/package[@name='com.google.android.gms.location']/interface[@name='LocationListener']/method[@name='onLocationChanged']/parameter[1]" name="managedName">location</attr>
 
