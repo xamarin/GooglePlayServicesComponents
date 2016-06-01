@@ -47,7 +47,6 @@
     <Compile Include="..\..\GpsConsts.cs">
       <Link>Properties\GpsConsts.cs</Link>
     </Compile>
-    <Compile Include="Additions\Manifest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />
@@ -69,6 +68,14 @@
     <ProjectReference Include="..\..\basement\source\Basement.csproj">
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\base\source\Base.csproj">
+      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
+      <Name>Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ads-lite\source\Ads.Lite.csproj">
+      <Project>{ECB1F68B-B588-4F3B-9A86-510CF4AAA784}</Project>
+      <Name>Ads.Lite</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
