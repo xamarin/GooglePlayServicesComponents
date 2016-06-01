@@ -12,6 +12,8 @@ libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll
     - ../../output/Xamarin.GooglePlayServices.Basement.dll
+    - ../../output/Xamarin.GooglePlayServices.Tasks.dll
+    - ../../output/Xamarin.Firebase.Common.dll
     - ../../output/Xamarin.GooglePlayServices.Drive.dll
 is_shell: true
 packages:
@@ -21,14 +23,18 @@ samples:
   - name: "Drive Sample"
     path: ../../drive/samples/DriveSample.sln
     removeProjects:
-      - Xamarin.GooglePlayServices.Base
-      - Xamarin.GooglePlayServices.Basement
-      - Xamarin.GooglePlayServices.Drive
+      - Base
+      - Basement
+      - Tasks
+      - Firebase-Common
+      - Drive
     installNuGets:
       - project: DriveSample
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
+          - Xamarin.Firebase.Common
           - Xamarin.GooglePlayServices.Drive
 local-nuget-repo: ../../output/
 no_build: true

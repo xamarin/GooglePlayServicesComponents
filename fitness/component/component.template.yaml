@@ -12,9 +12,11 @@ libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll
     - ../../output/Xamarin.GooglePlayServices.Basement.dll
-    - ../../output/Xamarin.GooglePlayServices.Fitness.dll
-    - ../../output/Xamarin.GooglePlayServices.Maps.dll
+    - ../../output/Xamarin.GooglePlayServices.Tasks.dll
+    - ../../output/Xamarin.Firebase.Common.dll
     - ../../output/Xamarin.GooglePlayServices.Location.dll
+    - ../../output/Xamarin.GooglePlayServices.Maps.dll
+    - ../../output/Xamarin.GooglePlayServices.Fitness.dll
 is_shell: true
 packages:
   android:
@@ -23,16 +25,20 @@ samples:
   - name: "Basic Sensors API"
     path: ../../fitness/samples/BasicSensorsApi.sln
     removeProjects:
-      - Xamarin.GooglePlayServices.Base
-      - Xamarin.GooglePlayServices.Basement
-      - Xamarin.GooglePlayServices.Location
-      - Xamarin.GooglePlayServices.Maps
-      - Xamarin.GooglePlayServices.Fitness
+      - Base
+      - Basement
+      - Tasks
+      - Firebase-Common
+      - Location
+      - Maps
+      - Fitness
     installNuGets:
       - project: BasicSensorsApi
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
+          - Xamarin.Firebase.Common
           - Xamarin.GooglePlayServices.Location
           - Xamarin.GooglePlayServices.Maps
           - Xamarin.GooglePlayServices.Fitness

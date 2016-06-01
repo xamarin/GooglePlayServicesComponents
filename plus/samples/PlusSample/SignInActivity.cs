@@ -173,8 +173,8 @@ namespace PlusSample
                 builder.AddApi (PlusClass.API)
                     .AddScope (PlusClass.ScopePlusProfile);
             } else {
-                builder.AddApi (PlusClass.API, new PlusClass.PlusOptions.Builder ()
-                    .AddActivityTypes (MomentUtil.ACTIONS).Build ())
+                //var options = new PlusClass.PlusOptions.Builder ().AddActivityTypes (MomentUtil.ACTIONS).Build ();
+                builder.AddApi (PlusClass.API) //, options)
                     .AddScope (PlusClass.ScopePlusLogin);
             }
 

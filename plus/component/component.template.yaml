@@ -12,6 +12,8 @@ libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll
     - ../../output/Xamarin.GooglePlayServices.Basement.dll
+    - ../../output/Xamarin.GooglePlayServices.Tasks.dll
+    - ../../output/Xamarin.Firebase.Common.dll
     - ../../output/Xamarin.GooglePlayServices.Plus.dll
 is_shell: true
 packages:
@@ -21,14 +23,18 @@ samples:
   - name: "Plus Sample"
     path: ../../plus/samples/PlusSample.sln
     removeProjects:
-      - Xamarin.GooglePlayServices.Base
-      - Xamarin.GooglePlayServices.Basement
-      - Xamarin.GooglePlayServices.Plus
+      - Base
+      - Basement
+      - Tasks
+      - Firebase-Common
+      - Plus
     installNuGets:
       - project: PlusSample
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
+          - Xamarin.Firebase.Common
           - Xamarin.GooglePlayServices.Plus
 local-nuget-repo: ../../output/
 no_build: true

@@ -38,13 +38,13 @@ namespace PlusSample
             base.OnCreate (savedInstanceState);
             SetContentView (Resource.Layout.person_list_activity);
 
-            var options = new PlusClass.PlusOptions.Builder ()
-                .AddActivityTypes (MomentUtil.ACTIONS).Build();
+            //var options = new PlusClass.PlusOptions.Builder ()
+            //    .AddActivityTypes (MomentUtil.ACTIONS).Build();
             
             mGoogleApiClient = new GoogleApiClient.Builder (this)
                 .AddConnectionCallbacks (this)
                 .AddOnConnectionFailedListener (this)
-                .AddApi (PlusClass.API, options)
+                .AddApi (PlusClass.API)//, options)
                 .AddScope (PlusClass.ScopePlusLogin)
                 .Build();
 

@@ -1,35 +1,107 @@
 #tool nuget:?package=ILRepack&version=2.0.10
-#tool nuget:?package=XamarinComponent&version=1.1.0.29
+#tool nuget:?package=XamarinComponent
+#tool nuget:?package=Cake.MonoApiTools
 
-#addin nuget:?package=Cake.XCode&version=1.0.4.0
-#addin nuget:?package=Cake.Xamarin&version=1.3.0.1
-#addin nuget:?package=Cake.Xamarin.Build&version=1.0.11.0
-#addin nuget:?package=Cake.FileHelpers&version=1.0.3.2
+#addin nuget:?package=Cake.XCode
+#addin nuget:?package=Cake.Xamarin
+#addin nuget:?package=Cake.Xamarin.Build
+#addin nuget:?package=Cake.FileHelpers
+#addin nuget:?package=Cake.MonoApiTools
+
+// To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip
+var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_9080000_r30.zip";
+var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_r27.zip";
+
+var PLAY_COMPONENT_VERSION = "30.0.1.0";
+var PLAY_NUGET_VERSION = "30.0.1-beta1";
+var PLAY_AAR_VERSION = "9.0.1";
+
+var WEAR_COMPONENT_VERSION = "1.4.0.0";
+var WEAR_NUGET_VERSION = "1.4.0.0-alpha1";
+var WEAR_AAR_VERSION = PLAY_AAR_VERSION;
+
+var WEARABLE_SUPPORT_VERSION = "1.4.0";
+var WEARABLE_VERSION = "1.0.0";
+
+var FIREBASE_COMPONENT_VERSION = PLAY_COMPONENT_VERSION;
+var FIREBASE_NUGET_VERSION = PLAY_NUGET_VERSION;
+var FIREBASE_AAR_VERSION = PLAY_AAR_VERSION;
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-var COMPONENT_VERSION = "29.0.0.2";
-var NUGET_VERSION = "29.0.0.2";
-var COMPONENT_WEAR_VERSION = "1.3.0.4";
-var NUGET_WEAR_VERSION = "1.3.0.4";
-var AAR_VERSION = "8.4.0";
-var WEARABLE_SUPPORT_VERSION = "1.3.0";
-var WEARABLE_VERSION = "1.0.0";
+var AAR_INFOS = new [] {
+	new AarInfo ("play-services-auth", "android/gms/play-services-auth", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-auth-base", "android/gms/play-services-auth-base", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-base", "android/gms/play-services-base", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-basement", "android/gms/play-services-basement", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-ads", "android/gms/play-services-ads", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-ads-lite", "android/gms/play-services-ads-lite", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-analytics", "android/gms/play-services-analytics", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-analytics-impl", "android/gms/play-services-analytics-impl", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-appindexing", "android/gms/play-services-appindexing", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-appinvite", "android/gms/play-services-appinvite", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-cast", "android/gms/play-services-cast", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-drive", "android/gms/play-services-drive", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-fitness", "android/gms/play-services-fitness", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-games", "android/gms/play-services-games", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-gcm", "android/gms/play-services-gcm", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-identity", "android/gms/play-services-identity", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-iid", "android/gms/play-services-iid", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-location", "android/gms/play-services-location", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-maps", "android/gms/play-services-maps", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-nearby", "android/gms/play-services-nearby", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-panorama", "android/gms/play-services-panorama", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-plus", "android/gms/play-services-plus", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-safetynet", "android/gms/play-services-safetynet", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-tasks", "android/gms/play-services-tasks", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-tagmanager", "android/gms/play-services-tagmanager", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-tagmanager-api", "android/gms/play-services-tagmanager-api", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-vision", "android/gms/play-services-vision", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-wallet", "android/gms/play-services-wallet", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-wearable", "android/gms/play-services-wearable", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 
-var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_r24.zip";
-// https://dl-ssl.google.com/android/repository/addon.xml to find url
-var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_8487000_r29.zip";
-
-var AAR_DIRS = new [] {
-	"play-services", "play-services-all-wear", "play-services-base", "play-services-basement", "play-services-ads", "play-services-analytics", "play-services-appindexing",
-	"play-services-appinvite", "play-services-appstate", "play-services-cast", "play-services-drive", "play-services-fitness", "play-services-games",
-	"play-services-gcm", "play-services-identity", "play-services-location", "play-services-maps", "play-services-measurement", "play-services-nearby", "play-services-panorama",
-	"play-services-plus", "play-services-safetynet", "play-services-vision", "play-services-wallet", "play-services-wearable", "play-services-auth"
+	new AarInfo ("firebase-ads", "firebase/firebase-ads", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-analytics", "firebase/firebase-analytics", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-analytics-impl", "firebase/firebase-analytics-impl", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-auth", "firebase/firebase-auth", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-auth-common", "firebase/firebase-auth-common", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-auth-module", "firebase/firebase-auth-module", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-common", "firebase/firebase-common", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-config", "firebase/firebase-config", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-core", "firebase/firebase-core", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-crash", "firebase/firebase-crash", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-database", "firebase/firebase-database", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-database-connection", "firebase/firebase-database-connection", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-iid", "firebase/firebase-iid", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-invites", "firebase/firebase-invites", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-messaging", "firebase/firebase-messaging", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-storage", "firebase/firebase-storage", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-storage-common", "firebase/firebase-storage-common", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 };
+
+class AarInfo
+{
+	public AarInfo (string name, string path, string aarVersion, string nugetVersion, string componentVersion)
+	{
+		Name = name;
+		Path = path;
+		AarVersion = aarVersion;
+		NuGetVersion = nugetVersion;
+		ComponentVersion = componentVersion;
+	}
+
+	public string Name { get; set; }
+	public string Path { get; set; }
+	public string AarVersion { get; set; }
+	public string NuGetVersion { get; set; }
+	public string ComponentVersion { get; set; }
+}
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/android-23/";
 if (IsRunningOnWindows ())
 	MONODROID_PATH = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.ProgramFilesX86)).Combine ("Reference Assemblies/Microsoft/Framework/MonoAndroid/v6.0/").FullPath;
+
+var MONO_PATH = "/Library/Frameworks/Mono.framework/Versions/Current";
 
 var buildsOnWinMac = BuildPlatforms.Windows | BuildPlatforms.Mac;
 
@@ -42,20 +114,22 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./base/source/bin/Release/Xamarin.GooglePlayServices.Base.dll" },
 				new OutputFileCopy { FromFile = "./basement/source/bin/Release/Xamarin.GooglePlayServices.Basement.dll" },
 				new OutputFileCopy { FromFile = "./ads/source/bin/Release/Xamarin.GooglePlayServices.Ads.dll" },
+				new OutputFileCopy { FromFile = "./ads-lite/source/bin/Release/Xamarin.GooglePlayServices.Ads.Lite.dll" },
 				new OutputFileCopy { FromFile = "./analytics/source/bin/Release/Xamarin.GooglePlayServices.Analytics.dll" },
+				new OutputFileCopy { FromFile = "./analytics-impl/source/bin/Release/Xamarin.GooglePlayServices.Analytics.Impl.dll" },
 				new OutputFileCopy { FromFile = "./appinvite/source/bin/Release/Xamarin.GooglePlayServices.AppInvite.dll" },
 				new OutputFileCopy { FromFile = "./appindexing/source/bin/Release/Xamarin.GooglePlayServices.AppIndexing.dll" },
-				new OutputFileCopy { FromFile = "./appstate/source/bin/Release/Xamarin.GooglePlayServices.AppState.dll" },
 				new OutputFileCopy { FromFile = "./auth/source/bin/Release/Xamarin.GooglePlayServices.Auth.dll" },
+				new OutputFileCopy { FromFile = "./auth-base/source/bin/Release/Xamarin.GooglePlayServices.Auth.Base.dll" },
 				new OutputFileCopy { FromFile = "./cast/source/bin/Release/Xamarin.GooglePlayServices.Cast.dll" },
 				new OutputFileCopy { FromFile = "./drive/source/bin/Release/Xamarin.GooglePlayServices.Drive.dll" },
 				new OutputFileCopy { FromFile = "./fitness/source/bin/Release/Xamarin.GooglePlayServices.Fitness.dll" },
 				new OutputFileCopy { FromFile = "./games/source/bin/Release/Xamarin.GooglePlayServices.Games.dll" },
 				new OutputFileCopy { FromFile = "./gcm/source/bin/Release/Xamarin.GooglePlayServices.Gcm.dll" },
 				new OutputFileCopy { FromFile = "./identity/source/bin/Release/Xamarin.GooglePlayServices.Identity.dll" },
+				new OutputFileCopy { FromFile = "./iid/source/bin/Release/Xamarin.GooglePlayServices.Iid.dll" },
 				new OutputFileCopy { FromFile = "./location/source/bin/Release/Xamarin.GooglePlayServices.Location.dll" },
 				new OutputFileCopy { FromFile = "./maps/source/bin/Release/Xamarin.GooglePlayServices.Maps.dll" },
-				new OutputFileCopy { FromFile = "./measurement/source/bin/Release/Xamarin.GooglePlayServices.Measurement.dll" },
 				new OutputFileCopy { FromFile = "./nearby/source/bin/Release/Xamarin.GooglePlayServices.Nearby.dll" },
 				new OutputFileCopy { FromFile = "./panorama/source/bin/Release/Xamarin.GooglePlayServices.Panorama.dll" },
 				new OutputFileCopy { FromFile = "./plus/source/bin/Release/Xamarin.GooglePlayServices.Plus.dll" },
@@ -64,6 +138,24 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./wallet/source/bin/Release/Xamarin.GooglePlayServices.Wallet.dll" },
 				new OutputFileCopy { FromFile = "./wearable/source/bin/Release/Xamarin.GooglePlayServices.Wearable.dll" },
 				new OutputFileCopy { FromFile = "./support-wearable/source/bin/Release/Xamarin.Android.Wearable.dll" },
+				new OutputFileCopy { FromFile = "./tagmanager/source/bin/Release/Xamarin.GooglePlayServices.TagManager.dll" },
+				new OutputFileCopy { FromFile = "./tagmanager-api/source/bin/Release/Xamarin.GooglePlayServices.TagManager.Api.dll" },
+				new OutputFileCopy { FromFile = "./tasks/source/bin/Release/Xamarin.GooglePlayServices.Tasks.dll" },
+
+				new OutputFileCopy { FromFile = "./firebase-analytics/source/bin/Release/Xamarin.Firebase.Analytics.dll" },
+				new OutputFileCopy { FromFile = "./firebase-analytics-impl/source/bin/Release/Xamarin.Firebase.Analytics.Impl.dll" },
+				new OutputFileCopy { FromFile = "./firebase-auth/source/bin/Release/Xamarin.Firebase.Auth.dll" },
+				new OutputFileCopy { FromFile = "./firebase-auth-common/source/bin/Release/Xamarin.Firebase.Auth.Common.dll" },
+				new OutputFileCopy { FromFile = "./firebase-auth-module/source/bin/Release/Xamarin.Firebase.Auth.Module.dll" },
+				new OutputFileCopy { FromFile = "./firebase-common/source/bin/Release/Xamarin.Firebase.Common.dll" },
+				new OutputFileCopy { FromFile = "./firebase-config/source/bin/Release/Xamarin.Firebase.Config.dll" },
+				new OutputFileCopy { FromFile = "./firebase-crash/source/bin/Release/Xamarin.Firebase.Crash.dll" },
+				new OutputFileCopy { FromFile = "./firebase-database/source/bin/Release/Xamarin.Firebase.Database.dll" },
+				new OutputFileCopy { FromFile = "./firebase-database-connection/source/bin/Release/Xamarin.Firebase.Database.Connection.dll" },
+				new OutputFileCopy { FromFile = "./firebase-iid/source/bin/Release/Xamarin.Firebase.Iid.dll" },
+				new OutputFileCopy { FromFile = "./firebase-messaging/source/bin/Release/Xamarin.Firebase.Messaging.dll" },
+				new OutputFileCopy { FromFile = "./firebase-storage/source/bin/Release/Xamarin.Firebase.Storage.dll" },
+				new OutputFileCopy { FromFile = "./firebase-storage-common/source/bin/Release/Xamarin.Firebase.Storage.Common.dll" },
 			}
 		},
 	},
@@ -92,31 +184,55 @@ var buildSpec = new BuildSpec {
 	},
 
 	NuGets = new [] {
-		new NuGetInfo { NuSpec = "./base/nuget/Xamarin.GooglePlayServices.Base.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./basement/nuget/Xamarin.GooglePlayServices.Basement.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./ads/nuget/Xamarin.GooglePlayServices.Ads.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./analytics/nuget/Xamarin.GooglePlayServices.Analytics.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./appindexing/nuget/Xamarin.GooglePlayServices.AppIndexing.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./appinvite/nuget/Xamarin.GooglePlayServices.AppInvite.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./appstate/nuget/Xamarin.GooglePlayServices.AppState.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./auth/nuget/Xamarin.GooglePlayServices.Auth.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./cast/nuget/Xamarin.GooglePlayServices.Cast.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./drive/nuget/Xamarin.GooglePlayServices.Drive.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./fitness/nuget/Xamarin.GooglePlayServices.Fitness.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./games/nuget/Xamarin.GooglePlayServices.Games.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./gcm/nuget/Xamarin.GooglePlayServices.Gcm.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./identity/nuget/Xamarin.GooglePlayServices.Identity.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./location/nuget/Xamarin.GooglePlayServices.Location.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./maps/nuget/Xamarin.GooglePlayServices.Maps.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./measurement/nuget/Xamarin.GooglePlayServices.Measurement.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./nearby/nuget/Xamarin.GooglePlayServices.Nearby.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./panorama/nuget/Xamarin.GooglePlayServices.Panorama.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./plus/nuget/Xamarin.GooglePlayServices.Plus.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./safetynet/nuget/Xamarin.GooglePlayServices.SafetyNet.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./vision/nuget/Xamarin.GooglePlayServices.Vision.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./wallet/nuget/Xamarin.GooglePlayServices.Wallet.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./wearable/nuget/Xamarin.GooglePlayServices.Wearable.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./support-wearable/nuget/Xamarin.Android.Wear.nuspec", Version = NUGET_WEAR_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./base/nuget/Xamarin.GooglePlayServices.Base.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./basement/nuget/Xamarin.GooglePlayServices.Basement.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./ads/nuget/Xamarin.GooglePlayServices.Ads.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./ads-lite/nuget/Xamarin.GooglePlayServices.Ads.Lite.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./analytics/nuget/Xamarin.GooglePlayServices.Analytics.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./analytics-impl/nuget/Xamarin.GooglePlayServices.Analytics.Impl.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./appindexing/nuget/Xamarin.GooglePlayServices.AppIndexing.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./appinvite/nuget/Xamarin.GooglePlayServices.AppInvite.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./auth/nuget/Xamarin.GooglePlayServices.Auth.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./auth-base/nuget/Xamarin.GooglePlayServices.Auth.Base.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./cast/nuget/Xamarin.GooglePlayServices.Cast.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./drive/nuget/Xamarin.GooglePlayServices.Drive.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./fitness/nuget/Xamarin.GooglePlayServices.Fitness.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./games/nuget/Xamarin.GooglePlayServices.Games.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./gcm/nuget/Xamarin.GooglePlayServices.Gcm.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./identity/nuget/Xamarin.GooglePlayServices.Identity.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./iid/nuget/Xamarin.GooglePlayServices.Iid.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./location/nuget/Xamarin.GooglePlayServices.Location.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./maps/nuget/Xamarin.GooglePlayServices.Maps.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./nearby/nuget/Xamarin.GooglePlayServices.Nearby.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./panorama/nuget/Xamarin.GooglePlayServices.Panorama.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./plus/nuget/Xamarin.GooglePlayServices.Plus.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./safetynet/nuget/Xamarin.GooglePlayServices.SafetyNet.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./vision/nuget/Xamarin.GooglePlayServices.Vision.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./wallet/nuget/Xamarin.GooglePlayServices.Wallet.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./wearable/nuget/Xamarin.GooglePlayServices.Wearable.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./support-wearable/nuget/Xamarin.Android.Wear.nuspec", Version = WEAR_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./tagmanager/nuget/Xamarin.GooglePlayServices.TagManager.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./tagmanager-api/nuget/Xamarin.GooglePlayServices.TagManager.Api.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./tasks/nuget/Xamarin.GooglePlayServices.Tasks.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+
+		new NuGetInfo { NuSpec = "./firebase-analytics/nuget/Xamarin.Firebase.Analytics.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-analytics-impl/nuget/Xamarin.Firebase.Analytics.Impl.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-auth/nuget/Xamarin.Firebase.Auth.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-auth-common/nuget/Xamarin.Firebase.Auth.Common.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-auth-module/nuget/Xamarin.Firebase.Auth.Module.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-common/nuget/Xamarin.Firebase.Common.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-config/nuget/Xamarin.Firebase.Config.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-crash/nuget/Xamarin.Firebase.Crash.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-database/nuget/Xamarin.Firebase.Database.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-database-connection/nuget/Xamarin.Firebase.Database.Connection.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-iid/nuget/Xamarin.Firebase.Iid.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-messaging/nuget/Xamarin.Firebase.Messaging.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-storage/nuget/Xamarin.Firebase.Storage.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-storage-common/nuget/Xamarin.Firebase.Storage.Common.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+
+		// These are empty packages that depend on others
+		new NuGetInfo { NuSpec = "./firebase-core/nuget/Xamarin.Firebase.Core.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-ads/nuget/Xamarin.Firebase.Ads.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 	},
 
 	Components = new [] {
@@ -158,11 +274,12 @@ Task ("externals")
 		Unzip (path + "m2repository.zip", path);
 
 	// Copy the .aar's to a better location
-	foreach (var aar in AAR_DIRS) {
+	foreach (var aar in AAR_INFOS) {
+
 		CopyFile (
-			string.Format (path + "m2repository/com/google/android/gms/{0}/{1}/{2}-{3}.aar", aar, AAR_VERSION, aar, AAR_VERSION),
-			string.Format (path + "{0}.aar", aar));
-		Unzip (path + aar + ".aar", path + aar);
+			string.Format (path + "m2repository/com/google/{0}/{1}/{2}-{3}.aar", aar.Path, aar.AarVersion, aar.Name, aar.AarVersion),
+			string.Format (path + "{0}.aar", aar.Name));
+		Unzip (path + aar.Name + ".aar", path + aar.Name);
 	}
 
 	// Get Wearable stuff
@@ -180,6 +297,37 @@ Task ("externals")
 	}
 });
 
+Task ("diff")
+	.WithCriteria (!IsRunningOnWindows ())
+	.Does (() =>
+{
+	var SEARCH_DIRS = new FilePath [] {
+		MONODROID_PATH,
+		"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xbuild-frameworks/MonoAndroid/v1.0/",
+		"./cast/source/bin/Release/",
+		"./wearable/source/bin/Release/"
+	};
+
+	MonoApiInfo ("./output/GooglePlayServices.Merged.dll", 
+		"./output/GooglePlayServices.api-info.xml", 
+		new MonoApiInfoToolSettings { SearchPaths = SEARCH_DIRS });
+
+	// Grab the latest published api info from S3
+	var latestReleasedApiInfoUrl = "http://xamarin-components-apiinfo.s3.amazonaws.com/GooglePlayServices.Android-Latest.xml";
+	DownloadFile (latestReleasedApiInfoUrl, "./output/GooglePlayServices.api-info.previous.xml");
+
+	// Now diff against current release'd api info
+	// eg: mono mono-api-diff.exe ./gps.r26.xml ./gps.r27.xml > gps.diff.xml
+	MonoApiDiff ("./output/GooglePlayServices.api-info.previous.xml", 
+		"./output/GooglePlayServices.api-info.xml",
+		"./output/GooglePlayServices.api-diff.xml");
+
+	// Now let's make a purty html file
+	// eg: mono mono-api-html.exe -c -x ./gps.previous.info.xml ./gps.current.info.xml > gps.diff.html
+	MonoApiHtml ("./output/GooglePlayServices.api-info.previous.xml", 
+		"./output/GooglePlayServices.api-info.xml",
+		"./output/GooglePlayServices.api-diff.html");
+});
 
 Task ("merge").IsDependentOn ("libs").Does (() =>
 {
@@ -188,7 +336,6 @@ Task ("merge").IsDependentOn ("libs").Does (() =>
 
 	var mergeDlls = GetFiles ("./output/*.dll");
 
-	// Wait for ILRepack support in cake-0.5.2
 	ILRepack ("./output/GooglePlayServices.Merged.dll", mergeDlls.First(), mergeDlls.Skip(1), new ILRepackSettings {
 		CopyAttrs = true,
 		AllowMultiple = true,
@@ -197,47 +344,6 @@ Task ("merge").IsDependentOn ("libs").Does (() =>
 			MONODROID_PATH
 		},
 	});
-
-	// Don't want to think about what the paths will do to this on windows right now
-	if (!IsRunningOnWindows ()) {
-		// Next run the mono-api-info.exe to generate xml api info we can later diff with
-		var monoApiInfoExe = GetFiles ("../../**/mono-api-info.exe").FirstOrDefault ();
-		var monoApiDiffExe = GetFiles ("../../**/mono-api-diff.exe").FirstOrDefault ();
-		var monoApiHtmlExe = GetFiles ("../../**/mono-api-html.exe").FirstOrDefault ();
-
-		//eg: mono mono-api-info.exe --search-directory=/Library/Frameworks/Xamarin.Android.framework/Libraries/mandroid/platforms/android-23 ./Xamarin.GooglePlayServices.r27.dll > gps.r27.xml
-		using(var process = StartAndReturnProcess (monoApiInfoExe, new ProcessSettings {
-			Arguments = "--search-directory=" + MONODROID_PATH + " ./output/GooglePlayServices.Merged.dll",
-			RedirectStandardOutput = true,
-		})) {
-		    process.WaitForExit();
-		    FileWriteLines ("./output/GooglePlayServices.api-info.xml", process.GetStandardOutput ().ToArray ());
-		}
-
-		// Grab the latest published api info from S3
-		var latestReleasedApiInfoUrl = "http://xamarin-components-apiinfo.s3.amazonaws.com/GooglePlayServices.Android-Latest.xml";
-		DownloadFile (latestReleasedApiInfoUrl, "./output/GooglePlayServices.api-info.previous.xml");
-
-		// Now diff against current release'd api info
-		// eg: mono mono-api-diff.exe ./gps.r26.xml ./gps.r27.xml > gps.diff.xml
-		using(var process = StartAndReturnProcess (monoApiDiffExe, new ProcessSettings {
-			Arguments = "./output/GooglePlayServices.api-info.previous.xml ./output/GooglePlayServices.api-info.xml",
-			RedirectStandardOutput = true,
-		})) {
-		    process.WaitForExit();
-		    FileWriteLines ("./output/GooglePlayServices.api-diff.xml", process.GetStandardOutput ().ToArray ());
-		}
-
-		// Now let's make a purty html file
-		// eg: mono mono-api-html.exe -c -x ./gps.previous.info.xml ./gps.current.info.xml > gps.diff.html
-		using(var process = StartAndReturnProcess (monoApiHtmlExe, new ProcessSettings {
-			Arguments = "-c -x ./output/GooglePlayServices.api-info.previous.xml ./output/GooglePlayServices.api-info.xml",
-			RedirectStandardOutput = true,
-		})) {
-			process.WaitForExit();
-			FileWriteLines ("./output/GooglePlayServices.api-diff.html", process.GetStandardOutput ().ToArray ());
-		}
-	}
 });
 
 
@@ -318,15 +424,26 @@ Task ("component-setup").Does (() =>
 {
 	var yamls = GetFiles ("./**/component/component.template.yaml");
 	foreach (var yaml in yamls) {
+		var NUGET_VERSION = PLAY_NUGET_VERSION;
+		var COMPONENT_VERSION = PLAY_COMPONENT_VERSION;
+
+		if (yaml.FullPath.Contains ("firebase-")) {
+			NUGET_VERSION = FIREBASE_NUGET_VERSION;
+			COMPONENT_VERSION = FIREBASE_COMPONENT_VERSION;
+		}
+
 		var manifestTxt = FileReadText (yaml)
 			.Replace ("$nuget-version$", NUGET_VERSION)
 			.Replace ("$version$", COMPONENT_VERSION)
-			.Replace ("$wear-version$", COMPONENT_WEAR_VERSION)
-			.Replace ("$wear-nuget-version$", NUGET_WEAR_VERSION);
+			.Replace ("$wear-version$", WEAR_COMPONENT_VERSION)
+			.Replace ("$wear-nuget-version$", WEAR_NUGET_VERSION);
 
 		var newYaml = yaml.GetDirectory ().CombineWithFilePath ("component.yaml");
 		FileWriteText (newYaml, manifestTxt);
-    }
+	}
+
+	if (DirectoryExists ("./output"))
+		DeleteFiles ("./output/*.xam");
 });
 
 Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base");

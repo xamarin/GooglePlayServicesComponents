@@ -19,6 +19,7 @@
   	<attr path="/api/package[@name='com.google.android.gms.ads.purchase']" name="managedName">Android.Gms.Ads.Purchase</attr>
   	<attr path="/api/package[@name='com.google.android.gms.ads.search']" name="managedName">Android.Gms.Ads.Search</attr>
   	<attr path="/api/package[@name='com.google.android.gms.internal']" name="managedName">Android.Gms.Internal</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.ads.dynamite']" name="managedName">Android.Gms.Dynamite.Descriptors.Ads.Dynamite</attr>
 
   	<attr path="/api/package[@name='com.google.android.gms.ads.doubleclick']/interface[@name='AppEventListener']/method[@name='onAppEvent']/parameter[1]" name="managedName">name</attr>
   	<attr path="/api/package[@name='com.google.android.gms.ads.doubleclick']/interface[@name='AppEventListener']/method[@name='onAppEvent']/parameter[2]" name="managedName">data</attr>

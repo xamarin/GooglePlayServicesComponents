@@ -2,6 +2,8 @@
 using Android.Runtime;
 using Android.App;
 
+[assembly: UsesPermission (Android.Manifest.Permission.Internet)]
+
 namespace Android.Gms.AppInvite
 {
     // PACKAGE: com.google.android.gms.appinvite
@@ -22,6 +24,5 @@ namespace Android.Gms.AppInvite
     [IntentFilter (new [] { "com.google.android.gms.appinvite.ACTION_PREVIEW" },
         Categories = new [] { global::Android.Content.Intent.CategoryDefault })]
     partial class PreviewActivity { }
-
 }
 

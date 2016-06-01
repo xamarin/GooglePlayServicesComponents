@@ -27,18 +27,15 @@ using Android.App;
 	PackageName = __WearableConsts.PackageName,
 	SourceUrl = __GpsConsts.Url,
 	EmbeddedArchive = __WearableConsts.AarPath,
-	Version     = __WearableConsts.Version)]
+    Version     = __GpsConsts.WearVersion)]
 // Wearable Support Resources
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
 	PackageName = __WearableConsts.PackageName,
 	SourceUrl   = __GpsConsts.Url,
 	EmbeddedArchive = __WearableConsts.AarPath,
-	Version     = __WearableConsts.Version)]
+    Version     = __GpsConsts.WearVersion)]
 
 static class __WearableConsts {    
-	public const string Version     = "1.3.0";
-    public const string PackageName = "Android Wear";
-    public const string AarPath = "m2repository/com/google/android/support/wearable/" + Version + "/wearable-" + Version + ".aar";
+	public const string PackageName = "Android Wear";
+    public const string AarPath = "m2repository/com/google/android/support/wearable/" + __GpsConsts.WearVersion + "/wearable-" + __GpsConsts.WearVersion + ".aar";
 }
-
-

@@ -81,6 +81,10 @@
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\auth-base\source\Auth.Base.csproj">
+      <Project>{B04C50F7-B0CC-4170-8820-9D584E1C0ED3}</Project>
+      <Name>Auth.Base</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
