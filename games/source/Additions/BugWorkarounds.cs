@@ -288,6 +288,56 @@ namespace Android.Gms.Games.Stats
         }
     }
 }
+//path="/api/package[@name='com.google.android.gms.games.social']/class[@name='SocialInviteBuffer']"
+namespace Android.Gms.Games.Social
+{
+    internal static class FreezeMethodImplementor
+    {
+        internal static Java.Lang.Object Freeze (ref IntPtr id_freeze, IntPtr class_ref, IntPtr Handle)
+        {
+            if (id_freeze == IntPtr.Zero)
+                id_freeze = JNIEnv.GetMethodID (class_ref, "freeze", "()Ljava/lang/Object;");
+            return (Java.Lang.Object)global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallObjectMethod (Handle, id_freeze), JniHandleOwnership.TransferLocalRef);
+        }
+    }
+
+    public sealed partial class SocialInviteBuffer
+    {
+        IntPtr id_get;
+
+        internal static IntPtr this_java_class_handle;
+        internal static IntPtr this_class_ref {
+            get {
+                return JNIEnv.FindClass ("com/google/android/gms/games/social/SocialInviteBuffer", ref this_java_class_handle);
+            }
+        }
+
+        public override Java.Lang.Object Get (int position)
+        {
+            if (id_get == IntPtr.Zero)
+                id_get = JNIEnv.GetMethodID (this_class_ref, "get", "(I)Ljava/lang/Object;");
+            return (Java.Lang.Object)global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallObjectMethod (Handle, id_get, new JValue (position)), JniHandleOwnership.TransferLocalRef);
+        }
+    }
+
+    public partial class SocialInviteEntity
+    {
+        IntPtr id_freeze;
+        public Java.Lang.Object Freeze ()
+        {
+            return FreezeMethodImplementor.Freeze (ref id_freeze, class_ref, Handle);
+        }
+    }
+
+    public partial class SocialInviteRef
+    {
+        IntPtr id_freeze;
+        public Java.Lang.Object Freeze ()
+        {
+            return FreezeMethodImplementor.Freeze (ref id_freeze, class_ref, Handle);
+        }
+    }
+}
 
 namespace Android.Gms.Games.Video
 {
@@ -318,6 +368,7 @@ namespace Android.Gms.Games.Video
             return FreezeMethodImplementor.Freeze (ref id_freeze, class_ref, Handle);
         }
     }
+
     public sealed partial class VideoBuffer
     {
         IntPtr id_get;
