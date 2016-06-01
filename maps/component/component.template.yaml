@@ -12,6 +12,8 @@ libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll
     - ../../output/Xamarin.GooglePlayServices.Basement.dll
+    - ../../output/Xamarin.GooglePlayServices.Tasks.dll
+    - ../../output/Xamarin.Firebase.Common.dll
     - ../../output/Xamarin.GooglePlayServices.Maps.dll
 is_shell: true
 packages:
@@ -21,14 +23,18 @@ samples:
   - name: "Maps Sample"
     path: ../../maps/samples/MapsSample.sln
     removeProjects:
-      - Xamarin.GooglePlayServices.Base
-      - Xamarin.GooglePlayServices.Basement
-      - Xamarin.GooglePlayServices.Maps
+      - Base
+      - Basement
+      - Tasks
+      - Firebase-Common
+      - Maps
     installNuGets:
       - project: MapsSample
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
+          - Xamarin.Firebase.Common
           - Xamarin.GooglePlayServices.Maps
 local-nuget-repo: ../../output/
 no_build: true
