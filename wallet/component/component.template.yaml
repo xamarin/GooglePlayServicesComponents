@@ -12,6 +12,8 @@ libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll
     - ../../output/Xamarin.GooglePlayServices.Basement.dll
+    - ../../output/Xamarin.GooglePlayServices.Tasks.dll
+    - ../../output/Xamarin.Firebase.Common.dll
     - ../../output/Xamarin.GooglePlayServices.Wallet.dll
     - ../../output/Xamarin.GooglePlayServices.Plus.dll
     - ../../output/Xamarin.GooglePlayServices.Identity.dll
@@ -23,16 +25,20 @@ samples:
   - name: "Android Pay Sample"
     path: ../../wallet/samples/AndroidPayQuickstart.sln
     removeProjects:
-      - Xamarin.GooglePlayServices.Base
-      - Xamarin.GooglePlayServices.Basement
-      - Xamarin.GooglePlayServices.Wallet
-      - Xamarin.GooglePlayServices.Plus
-      - Xamarin.GooglePlayServices.Identity
+      - Base
+      - Basement
+      - Tasks
+      - Firebase-Common
+      - Wallet
+      - Plus
+      - Identity
     installNuGets:
       - project: AndroidPayQuickstart
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
+          - Xamarin.Firebase.Common
           - Xamarin.GooglePlayServices.Wallet
           - Xamarin.GooglePlayServices.Plus
           - Xamarin.GooglePlayServices.Identity
