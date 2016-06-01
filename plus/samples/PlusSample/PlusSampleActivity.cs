@@ -25,8 +25,8 @@ namespace PlusSample
             SAMPLES_MAP.Add ("Sign in", typeof (SignInActivity));
             SAMPLES_MAP.Add ("+1", typeof (PlusOneActivity));
             SAMPLES_MAP.Add ("Send interactive post", typeof (ShareActivity));
-            SAMPLES_MAP.Add ("Write moments", typeof (MomentActivity));
-            SAMPLES_MAP.Add ("List & remove moments", typeof (ListMomentsActivity));
+            //SAMPLES_MAP.Add ("Write moments", typeof (MomentActivity));
+            //SAMPLES_MAP.Add ("List & remove moments", typeof (ListMomentsActivity));
             SAMPLES_MAP.Add ("List visible people (circled by you)", typeof (ListVisiblePeopleActivity));
             SAMPLES_MAP.Add ("List connected people", typeof (ListConnectedPeopleActivity));
             SAMPLES_MAP.Add ("License info", typeof (LicenseActivity));
