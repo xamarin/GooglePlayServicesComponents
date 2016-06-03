@@ -18,9 +18,9 @@
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
       <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
-    </dependencies>    
+    </dependencies>
   </metadata>
   <files>
-    <file src="./output/Xamarin.Firebase.Analytics.dll" target="lib\MonoAndroid41" />
+    <file src="output/Xamarin.Firebase.Analytics.dll" target="lib\MonoAndroid41" />
   </files>
 </package>

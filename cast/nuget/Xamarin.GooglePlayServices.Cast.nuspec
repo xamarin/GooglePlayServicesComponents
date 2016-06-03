@@ -26,6 +26,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="./output/Xamarin.GooglePlayServices.Cast.dll" target="lib\MonoAndroid42" />
+    <file src="output/Xamarin.GooglePlayServices.Cast.dll" target="lib\MonoAndroid42" />
   </files>
 </package>

@@ -18,10 +18,10 @@
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Ads" version="[$version$]" />
       <dependency id="Xamarin.Firebase.Analytics" version="[$version$]" />
-    </dependencies>    
+    </dependencies>
   </metadata>
   <files>
     <!-- No files, just a wrapper around other packages -->
-    <!-- <file src="./output/Xamarin.Firebase.Ads.dll" target="lib\MonoAndroid41" /> -->
+    <!-- <file src="output/Xamarin.Firebase.Ads.dll" target="lib\MonoAndroid41" /> -->
   </files>
 </package>
