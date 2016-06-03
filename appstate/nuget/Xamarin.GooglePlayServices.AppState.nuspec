@@ -12,14 +12,14 @@
     </description>
     <copyright>Copyright 2013-2016</copyright>
     <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
-    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>    
+    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.AppState.png</iconUrl>
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
-      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />      
+      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
     </dependencies>
   </metadata>
   <files>
-    <file src="./output/Xamarin.GooglePlayServices.AppState.dll" target="lib\MonoAndroid41" />
+    <file src="output/Xamarin.GooglePlayServices.AppState.dll" target="lib\MonoAndroid41" />
   </files>
 </package>

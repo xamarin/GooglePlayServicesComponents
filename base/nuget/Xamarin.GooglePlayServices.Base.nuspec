@@ -41,9 +41,9 @@
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
       <dependency id="Xamarin.Android.Support.v4" version="23.1.1.1"/>
-    </dependencies>    
+    </dependencies>
   </metadata>
   <files>
-    <file src="./output/Xamarin.GooglePlayServices.Base.dll" target="lib\MonoAndroid41" />
+    <file src="output/Xamarin.GooglePlayServices.Base.dll" target="lib\MonoAndroid41" />
   </files>
 </package>
