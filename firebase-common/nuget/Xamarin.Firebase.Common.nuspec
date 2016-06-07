@@ -17,8 +17,8 @@
     <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.Firebase.Common.png</iconUrl>
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
-      <dependency id="Xamarin.Android.Support.v4" version="23.1.1.1"/>
-    </dependencies>    
+      <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
+    </dependencies>
   </metadata>
   <files>
     <file src="output/Xamarin.Firebase.Common.dll" target="lib/MonoAndroid41" />

@@ -18,6 +18,8 @@
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-analytics/</licenseUrl>
     <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.Analytics.png</iconUrl>
     <dependencies>
+      <dependency id="Xamarin.GooglePlayServices.Analytics.Impl" version="[$version$]" />
+      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
     </dependencies>
   </metadata>
