@@ -47,6 +47,6 @@
   <files>
     <file src="basement/buildtasks/bin/Release/Xamarin.GooglePlayServices.Basement.targets" target="build" />
 
-    <file src="output/Xamarin.GooglePlayServices.Basement.dll" target="lib\MonoAndroid41" />
+    <file src="output/Xamarin.GooglePlayServices.Basement.dll" target="lib/MonoAndroid41" />
   </files>
 </package>

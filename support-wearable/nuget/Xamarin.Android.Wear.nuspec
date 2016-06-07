@@ -29,6 +29,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.Android.Wearable.dll" target="lib\MonoAndroid50" />
+    <file src="output/Xamarin.Android.Wearable.dll" target="lib/MonoAndroid50" />
   </files>
 </package>

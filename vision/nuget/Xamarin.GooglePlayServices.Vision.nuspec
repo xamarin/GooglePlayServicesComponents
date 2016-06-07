@@ -27,6 +27,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Vision.dll" target="lib\MonoAndroid41" />
+    <file src="output/Xamarin.GooglePlayServices.Vision.dll" target="lib/MonoAndroid41" />
   </files>
 </package>
