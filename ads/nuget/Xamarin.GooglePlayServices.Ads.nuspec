@@ -18,6 +18,8 @@
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-ads/</licenseUrl>
     <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.Ads.png</iconUrl>
     <dependencies>
+      <dependency id="Xamarin.GooglePlayServices.Ads.Lite" version="[$version$]" />
+      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
     </dependencies>
   </metadata>

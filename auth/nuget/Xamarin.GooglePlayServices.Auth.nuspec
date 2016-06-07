@@ -15,6 +15,7 @@
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.Auth.png</iconUrl>
     <dependencies>
+      <dependency id="Xamarin.GooglePlayServices.Auth.Base" version="[$version$]"/>
       <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
     </dependencies>

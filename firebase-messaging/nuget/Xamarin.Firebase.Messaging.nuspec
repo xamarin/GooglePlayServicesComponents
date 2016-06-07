@@ -17,9 +17,9 @@
     <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.Firebase.Messaging.png</iconUrl>
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
-      <dependency id="Xamarin.Firebase.Common" version="[$version$]"/>
       <dependency id="Xamarin.Firebase.Iid" version="[$version$]"/>
-    </dependencies>    
+      <dependency id="Xamarin.Firebase.Common" version="[$version$]"/>
+    </dependencies>
   </metadata>
   <files>
     <file src="output/Xamarin.Firebase.Messaging.dll" target="lib/MonoAndroid41" />
