@@ -18,10 +18,10 @@
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
-      <dependency id="Xamarin.Firebase.Common" version="[$version$]"/>
       <dependency id="Xamarin.Firebase.Iid" version="[$version$]"/>
+      <dependency id="Xamarin.Firebase.Common" version="[$version$]"/>
       <dependency id="Xamarin.Firebase.Analytics" version="[$version$]"/>
-    </dependencies>    
+    </dependencies>
   </metadata>
   <files>
     <file src="output/Xamarin.Firebase.Crash.dll" target="lib/MonoAndroid41" />

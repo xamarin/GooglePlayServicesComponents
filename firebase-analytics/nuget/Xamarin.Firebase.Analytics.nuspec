@@ -17,7 +17,8 @@
     <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.Firebase.Analytics.png</iconUrl>
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
-      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
+      <dependency id="Xamarin.Firebase.Common" version="[$version$]" />
+      <dependency id="Xamarin.Firebase.Analytics.Impl" version="[$version$]" />
     </dependencies>
   </metadata>
   <files>
