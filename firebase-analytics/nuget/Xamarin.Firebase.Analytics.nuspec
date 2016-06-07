@@ -21,6 +21,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.Firebase.Analytics.dll" target="lib\MonoAndroid41" />
+    <file src="output/Xamarin.Firebase.Analytics.dll" target="lib/MonoAndroid41" />
   </files>
 </package>

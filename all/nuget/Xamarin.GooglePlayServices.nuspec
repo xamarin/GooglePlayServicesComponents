@@ -44,6 +44,6 @@
   </metadata>  
   <files>
     <file src="readme.txt" target="" />
-    <!-- <file src="output/GooglePlayServicesLib.dll" target="lib\MonoAndroid41" /> -->
+    <!-- <file src="output/GooglePlayServicesLib.dll" target="lib/MonoAndroid41" /> -->
   </files>
 </package>
