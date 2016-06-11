@@ -57,6 +57,12 @@ if [ ! -f "$NUGET_EXE" ]; then
         echo "An error occured while downloading nuget.exe."
         exit 1
     fi
+    echo "Downloading patched System.IO.Compression.dll..."
+    curl -Lsfo "$TOOLS_DIR/System.IO.Compression.dll" https://www.dropbox.com/s/j3zuglw23059nx5/System.IO.Compression.dll?dl=0
+    if [ $? -ne 0 ]; then
+        echo "An error occured while downloading patched System.IO.Compression.dll."
+        exit 1
+    fi
 fi
 
 # Restore tools from NuGet.
