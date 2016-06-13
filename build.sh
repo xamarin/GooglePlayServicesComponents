@@ -10,10 +10,6 @@ TOOLS_DIR=$SCRIPT_DIR/tools
 export NUGET_EXE=$TOOLS_DIR/nuget.exe
 CAKE_EXE=$TOOLS_DIR/Cake/Cake.exe
 
-# BEGIN TEMP WORKAROUND
-SYSIOCOMP=$TOOLS_DIR/System.IO.Compression.dll
-# END TEMP WORKAROUND
-
 # Define default arguments.
 SCRIPT="build.cake"
 TARGET="Default"
@@ -61,18 +57,13 @@ if [ ! -f "$NUGET_EXE" ]; then
         echo "An error occured while downloading nuget.exe."
         exit 1
     fi
-    echo "Downloading patched System.IO.Compression.dll..."
-    curl -Lsfo "$TOOLS_DIR/System.IO.Compression.dll" https://www.dropbox.com/s/j3zuglw23059nx5/System.IO.Compression.dll?dl=0
-    if [ $? -ne 0 ]; then
-        echo "An error occured while downloading patched System.IO.Compression.dll."
-        exit 1
-    fi
 fi
 
 # BEGIN TEMP WORKAROUND
 # There is a bug in Mono's System.IO.Compression
 # This binary fixes the bug for now
 # Download System.IO.Compression if it does not exist.
+SYSIOCOMP=$TOOLS_DIR/System.IO.Compression.dll
 if [ ! -f "$SYSIOCOMP" ]; then
     echo "Downloading System.IO.Compression.dll ..."
     curl -Lsfo "$SYSIOCOMP" http://xamarin-components-binaries.s3.amazonaws.com/System.IO.Compression.dll
