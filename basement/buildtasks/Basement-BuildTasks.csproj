@@ -46,6 +46,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models.cs" />
     <Compile Include="ProcessGoogleServicesJson.cs" />
+    <Compile Include="GoogleServicesJsonProcessor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
