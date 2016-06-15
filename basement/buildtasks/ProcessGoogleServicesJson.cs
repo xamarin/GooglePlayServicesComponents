@@ -49,22 +49,19 @@ namespace Xamarin.GooglePlayServices.Tasks
 
             var gsPath = CleanPath (gsItem.ItemSpec);
 
-
             GoogleServices googleServices;
 
             try {
-                var serializer = new DataContractJsonSerializer (typeof (GoogleServices));
-                using (var sr = System.IO.File.OpenRead (gsPath)){
-                    googleServices = serializer.ReadObject (sr) as GoogleServices;
-                    if (googleServices == null)
-                        throw new NullReferenceException ();
+                using (var sr = File.OpenRead (gsPath)) {
+                    googleServices = GoogleServicesJsonProcessor.ProcessJson (AndroidPackageName, sr);
                 }
+                if (googleServices == null)
+                    throw new NullReferenceException ();
             } catch (Exception ex) {
                 Log.LogError ("Failed to Read or Deserialize GoogleServicesJson file: {0}{1}{2}", gsPath, Environment.NewLine, ex);
                 DeleteFiles (valuesPath, xmlPath);
                 return false;
             }
-
 
             if (string.IsNullOrEmpty (AndroidPackageName)) {
                 Log.LogError ("Android Package Name not specified for project");
@@ -76,9 +73,13 @@ namespace Xamarin.GooglePlayServices.Tasks
                 { "gcm_defaultSenderId", googleServices.GetDefaultGcmSenderId () },
                 { "google_app_id", googleServices.GetGoogleAppId (AndroidPackageName) },
                 { "test_banner_ad_unit_id", googleServices.GetTestBannerAdUnitId (AndroidPackageName) },
-                { "test_interstitial_ad_unit_id", googleServices.GetTestInterstitialAdUnitId (AndroidPackageName) }
+                { "test_interstitial_ad_unit_id", googleServices.GetTestInterstitialAdUnitId (AndroidPackageName) },
+                { "default_web_client_id", googleServices.GetDefaultWebClientId (AndroidPackageName) },
+                { "firebase_database_url", googleServices.GetFirebaseDatabaseUrl () },
+                { "google_api_key", googleServices.GetGoogleApiKey (AndroidPackageName) },
+                { "google_crash_reporting_api_key", googleServices.GetCrashReportingApiKey (AndroidPackageName) },
             };
-                
+
             // We only want to create the file if not all of these values are missing
             if (valuesItems.Any (kvp => !string.IsNullOrEmpty (kvp.Value))) {
                 Log.LogMessage ("Writing Resource File: {0}", valuesPath);
