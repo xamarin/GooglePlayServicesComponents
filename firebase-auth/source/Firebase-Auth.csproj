@@ -48,6 +48,7 @@
     <Compile Include="..\..\GpsConsts.cs">
       <Link>Properties\GpsConsts.cs</Link>
     </Compile>
+    <Compile Include="Additions\Additions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />
@@ -79,6 +80,10 @@
     <ProjectReference Include="..\..\tasks\source\Tasks.csproj">
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-auth-module\source\Firebase-Auth-Module.csproj">
+      <Project>{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}</Project>
+      <Name>Firebase-Auth-Module</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
