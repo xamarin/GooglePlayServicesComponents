@@ -10,14 +10,14 @@
 
 // To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_9080000_r30.zip";
-var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_r27.zip";
+var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_r28.zip";
 
-var PLAY_COMPONENT_VERSION = "30.0.1.0";
-var PLAY_NUGET_VERSION = "30.0.1-alpha5";
-var PLAY_AAR_VERSION = "9.0.1";
+var PLAY_COMPONENT_VERSION = "30.0.2.0";
+var PLAY_NUGET_VERSION = "30.0.2-alpha1";
+var PLAY_AAR_VERSION = "9.0.2";
 
 var WEAR_COMPONENT_VERSION = "1.4.0.0";
-var WEAR_NUGET_VERSION = "1.4.0.0-alpha5";
+var WEAR_NUGET_VERSION = "1.4.0.0-alpha6";
 var WEAR_AAR_VERSION = PLAY_AAR_VERSION;
 
 var WEARABLE_SUPPORT_VERSION = "1.4.0";
