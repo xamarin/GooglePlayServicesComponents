@@ -1,55 +1,89 @@
 ﻿using System;
 using Android.Runtime;
+using Android.Gms.Tasks;
+using System.Runtime.CompilerServices;
+using Android.Gms.Extensions;
 
-namespace Android.Gms.Tasks
+namespace Android.Gms.Extensions
 {
-    public abstract partial class Task<TResult> : Task where TResult : Java.Lang.Object
+    public static class TasksExtensions
     {
-        public TResult Result { get { return this.RawResult.JavaCast<TResult>(); } }
-
-        System.Threading.Tasks.TaskCompletionSource<TResult> tcs;
-        InternalTaskCompletionListener completeListener;
-
-        public Task () : base ()
+        
+        public static System.Threading.Tasks.Task<TResult> AsAsync<TResult> (this Task task) where TResult : class, IJavaObject
         {
-            init();
+            var c = new AwaitableTaskCompleteListener<TResult> ();
+
+            // The Java Task<T> returned from this call is the same task
+            // so we do not have to await it
+            task.AddOnCompleteListener (c);
+
+            return c.AwaitAsync ();
         }
 
-        protected Task (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) 
+        public static System.Threading.Tasks.Task AsAsync (this Task task)
         {
-            init();
+            var c = new AwaitableTaskCompleteListener<Java.Lang.Object> ();
+
+            task.AddOnCompleteListener (c);
+
+            return c.AwaitAsync ();
         }
 
-        void init ()
+        public static TaskAwaiter<TResult> GetAwaiter<TResult> (this Task task) where TResult : class, IJavaObject
         {
-            tcs = new System.Threading.Tasks.TaskCompletionSource<TResult> ();
+            var c = new AwaitableTaskCompleteListener<TResult> ();
 
-            completeListener = new InternalTaskCompletionListener
-            {
-                OnCompleteHandler = completedTask => {
-                    if (this.IsSuccessful)
-                        tcs.SetResult(this.Result);
-                    else
-                        tcs.SetException(this.Exception);
-                }
-            };
-            this.AddOnCompleteListener(completeListener);
+            task.AddOnCompleteListener (c);
+
+            return c.GetAwaiter ();
         }
 
-        public System.Runtime.CompilerServices.TaskAwaiter<TResult> GetAwaiter ()
+        public static TaskAwaiter<Java.Lang.Object> GetAwaiter (this Task task)
         {
-            return tcs.Task.GetAwaiter ();
+            var c = new AwaitableTaskCompleteListener<Java.Lang.Object> ();
+
+            task.AddOnCompleteListener (c);
+
+            return c.GetAwaiter ();
         }
     }
 
-    internal class InternalTaskCompletionListener : Java.Lang.Object, IOnCompleteListener
+    class AwaitableTaskCompleteListener<TResult> : Java.Lang.Object, IOnCompleteListener where TResult : class, IJavaObject
     {
-        public Action<Task> OnCompleteHandler { get; set; }
+        System.Threading.Tasks.TaskCompletionSource<TResult> taskCompletionSource;
+
+        public AwaitableTaskCompleteListener ()
+        {
+            taskCompletionSource = new System.Threading.Tasks.TaskCompletionSource<TResult> ();
+        }
 
         public void OnComplete (Task task)
         {
-            if (OnCompleteHandler != null)
-                OnCompleteHandler (task);
+            if (task.IsSuccessful) {
+                taskCompletionSource.SetResult (task?.Result?.JavaCast<TResult> ());
+            } else {
+                taskCompletionSource.SetException (task.Exception);
+            }
+        }
+
+        public System.Threading.Tasks.Task<TResult> AwaitAsync ()
+        {
+            return taskCompletionSource.Task;
+        }
+
+        public TaskAwaiter<TResult> GetAwaiter ()
+        {
+            return taskCompletionSource.Task.GetAwaiter ();
+        }
+    }
+}
+
+namespace Android.Gms.Tasks
+{
+    public partial class Task
+    {
+        public virtual Java.Lang.Object Result {
+            get { return RawResult; }
         }
     }
 }
