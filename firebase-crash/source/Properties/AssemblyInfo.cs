@@ -42,7 +42,7 @@ using Android.App;
 //      https://dl-ssl.google.com/android/repository/addon.xml
 
 static class __Consts {
-    public const string PackageName = "Firebase Config";
-    public const string AarPath = "m2repository/com/google/firebase/firebase-config/" + __FbConsts.Version + "/firebase-config-" + __FbConsts.Version + ".aar";
+    public const string PackageName = "Firebase Crash";
+    public const string AarPath = "m2repository/com/google/firebase/firebase-crash/" + __FbConsts.Version + "/firebase-crash-" + __FbConsts.Version + ".aar";
 }
     
