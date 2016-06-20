@@ -32,6 +32,8 @@ namespace Xamarin.GooglePlayServices.Tasks
         {
             Log.LogMessage ("Started ProcessGoogleServicesJson...");
 
+            Log.LogMessage ("Android Package Name: {0}", AndroidPackageName);
+
             // Paths to write resource files to
             var xmlPath = Path.Combine (MonoAndroidResDirIntermediate, "xml", RESFILE_XML);
             var valuesPath = Path.Combine (MonoAndroidResDirIntermediate, "values", RESFILE_VALUES);
@@ -66,6 +68,11 @@ namespace Xamarin.GooglePlayServices.Tasks
             if (string.IsNullOrEmpty (AndroidPackageName)) {
                 Log.LogError ("Android Package Name not specified for project");
                 return false;
+            }
+
+            var resolvedClientInfo = googleServices.GetClient (AndroidPackageName);
+            if (resolvedClientInfo == null) {
+                Log.LogWarning ("Failed to find client_info in google-services.json matching package name: {0}", AndroidPackageName);
             }
 
             var valuesItems = new Dictionary <string, string> {
