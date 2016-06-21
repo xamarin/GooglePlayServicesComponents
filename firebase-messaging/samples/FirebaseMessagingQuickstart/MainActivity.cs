@@ -19,6 +19,9 @@ namespace FirebaseMessagingQuickstart
 
             SetContentView (Resource.Layout.activity_main);
 
+            if (GetString (Resource.String.google_app_id) == "YOUR-APP-ID")
+                throw new System.Exception ("Invalid google-services.json file.  Make sure you've downloaded your own config file and added it to your app project with the 'GoogleServicesJson' build action.");
+
             // If a notification message is tapped, any data accompanying the notification
             // message is available in the intent extras. In this sample the launcher
             // intent is fired when the notification is tapped, so any accompanying data would

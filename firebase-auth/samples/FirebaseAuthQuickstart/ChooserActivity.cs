@@ -41,6 +41,9 @@ namespace FirebaseAuthQuickstart
 
             SetContentView (Resource.Layout.activity_chooser);
 
+            if (GetString (Resource.String.google_app_id) == "YOUR-APP-ID")
+                throw new Exception ("Invalid google-services.json file.  Make sure you've downloaded your own config file and added it to your app project with the 'GoogleServicesJson' build action.");
+
             // Set up ListView and Adapter
             var listView = FindViewById<ListView> (Resource.Id.list_view);
 

@@ -54,6 +54,9 @@ namespace FirebaseAnalyticsQuickstart
             
             SetContentView (Resource.Layout.activity_main);
 
+            if (GetString (Resource.String.google_app_id) == "YOUR-APP-ID")
+                throw new System.Exception ("Invalid google-services.json file.  Make sure you've downloaded your own config file and added it to your app project with the 'GoogleServicesJson' build action.");
+
             // [START shared_app_measurement]
             // Obtain the FirebaseAnalytics instance.
             firebaseAnalytics = FirebaseAnalytics.GetInstance (this);
