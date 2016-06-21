@@ -19,6 +19,9 @@ namespace FirebaseCrashReportingQuickstart
 
             SetContentView (Resource.Layout.activity_main);
 
+            if (GetString (Resource.String.google_app_id) == "YOUR-APP-ID")
+                throw new Exception ("Invalid google-services.json file.  Make sure you've downloaded your own config file and added it to your app project with the 'GoogleServicesJson' build action.");
+
             // Checkbox to indicate when to catch the thrown exception.
             var catchCrashCheckBox = FindViewById<CheckBox> (Resource.Id.catchCrashCheckBox);
 
