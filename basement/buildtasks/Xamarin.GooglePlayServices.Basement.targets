@@ -30,6 +30,9 @@
     <ProcessGoogleServicesJsonBeforeTargets>
       _UpdateAndroidResgen;$(ProcessGoogleServicesJsonBeforeTargets);
     </ProcessGoogleServicesJsonBeforeTargets>
+    <ProcessGoogleServicesJsonAfterTargets>
+      $(ProcessGoogleServicesJsonAfterTargets);
+    </ProcessGoogleServicesJsonAfterTargets>
   </PropertyGroup>
 
   <!-- include the task assembly -->
@@ -41,7 +44,8 @@
   <Target
     Name="ProcessGoogleServicesJson" 
     Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True' "
-    BeforeTargets="$(ProcessGoogleServicesJsonBeforeTargets)">
+    BeforeTargets="$(ProcessGoogleServicesJsonBeforeTargets)"
+    AfterTargets="$(ProcessGoogleServicesJsonAfterTargets)">
 
     <ProcessGoogleServicesJson
         IntermediateOutputPrefix="$(IntermediateOutputPrefix)"
@@ -49,6 +53,7 @@
         IntermediateOutputPath="$(IntermediateOutputPath)"
         MonoAndroidResDirIntermediate="$(MonoAndroidResDirIntermediate)"
         AndroidPackageName="$(_AndroidPackage)">
+			<Output ItemName="_AndroidResourceDest" TaskParameter="GoogleServicesGeneratedResources" />
     </ProcessGoogleServicesJson>
   </Target>
 

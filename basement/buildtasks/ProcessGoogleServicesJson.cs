@@ -16,6 +16,9 @@ namespace Xamarin.GooglePlayServices.Tasks
 
         public string IntermediateOutputPrefix { get; set; }
 
+        [Output]
+        public ITaskItem[] GoogleServicesGeneratedResources { get; set; }
+
         [Required]
         public string AndroidPackageName { get; set; }
 
@@ -37,6 +40,9 @@ namespace Xamarin.GooglePlayServices.Tasks
             // Paths to write resource files to
             var xmlPath = Path.Combine (MonoAndroidResDirIntermediate, "xml", RESFILE_XML);
             var valuesPath = Path.Combine (MonoAndroidResDirIntermediate, "values", RESFILE_VALUES);
+
+            var wroteXmlPath = false;
+            var wroteValuesPath = false;
 
             if (GoogleServicesJsons == null || !GoogleServicesJsons.Any ()) {
                 Log.LogMessage ("No GoogleServicesJson Build Action items specified, skipping task.");
@@ -91,6 +97,7 @@ namespace Xamarin.GooglePlayServices.Tasks
             if (valuesItems.Any (kvp => !string.IsNullOrEmpty (kvp.Value))) {
                 Log.LogMessage ("Writing Resource File: {0}", valuesPath);
                 WriteResourceDoc (valuesPath, valuesItems);
+                wroteValuesPath = true;
                 Log.LogMessage ("Wrote Resource File: {0}", valuesPath);
             } else {
                 if (File.Exists (valuesPath)) {
@@ -111,6 +118,7 @@ namespace Xamarin.GooglePlayServices.Tasks
             if (xmlItems.Any (kvp => !string.IsNullOrEmpty (kvp.Value))) {
                 Log.LogMessage ("Writing Resource File: {0}", xmlPath);
                 WriteResourceDoc (xmlPath, xmlItems);
+                wroteXmlPath = true;
                 Log.LogMessage ("Wrote Resource File: {0}", xmlPath);
             } else {
                 // If no 
@@ -124,6 +132,15 @@ namespace Xamarin.GooglePlayServices.Tasks
                 }
             }
 
+            var outputFiles = new List<ITaskItem> ();
+            if (wroteXmlPath)
+                outputFiles.Add (new TaskItem (xmlPath));
+            if (wroteValuesPath)
+                outputFiles.Add (new TaskItem (valuesPath));
+
+            if (outputFiles.Any ())
+                GoogleServicesGeneratedResources = outputFiles.ToArray ();
+            
             Log.LogMessage ("Finished ProcessGoogleServicesJson...");
             return true;
         }
