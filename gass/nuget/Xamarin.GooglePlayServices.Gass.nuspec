@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.Gass</id>
+    <title>Xamarin Google Play Services - Gass</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - Gass
+    </description>
+    <copyright>Copyright 2013-2016</copyright>
+    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
+    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.Gass.png</iconUrl>
+    <dependencies>
+      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.GooglePlayServices.Gass.dll" target="lib/MonoAndroid41" />
+  </files>
+</package>
