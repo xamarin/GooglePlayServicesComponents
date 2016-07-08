@@ -18,7 +18,6 @@
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-games/</licenseUrl>
     <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.Games.png</iconUrl>
     <dependencies>
-      <dependency id="Xamarin.GooglePlayServices.Auth.Base" version="[$version$]"/>
       <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
       <dependency id="Xamarin.GooglePlayServices.Drive" version="[$version$]"/>
