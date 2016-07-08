@@ -3,10 +3,10 @@
 	<attr path="/api/package[@name='com.google.android.gms.location']" name="managedName">Android.Gms.Location</attr>
 	<attr path="/api/package[@name='com.google.android.gms.location.internal']" name="managedName">Android.Gms.Location.Internal</attr>
 <!--	<attr path="/api/package[@name='com.google.android.gms.location.copresence.internal']" name="managedName">Android.Gms.Location.Copresence.Internal</attr>-->
-	<attr path="/api/package[@name='com.google.android.gms.location.places']" name="managedName">Android.Gms.Location.Places</attr>
+	<!--<attr path="/api/package[@name='com.google.android.gms.location.places']" name="managedName">Android.Gms.Location.Places</attr>
 	<attr path="/api/package[@name='com.google.android.gms.location.places.personalized']" name="managedName">Android.Gms.Location.Places.Personalized</attr>
 	<attr path="/api/package[@name='com.google.android.gms.location.places.ui']" name="managedName">Android.Gms.Location.Places.UI</attr>
-
+-->
 	<!-- Fix names the same as the namespace -->
 	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='Places']" name="managedName">PlacesClass</attr>
 	
