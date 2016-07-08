@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{A2B43C02-A237-4222-999E-3354CBB6DB8D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>GooglePlayServices.Plus</RootNamespace>
@@ -81,10 +81,6 @@
     <ProjectReference Include="..\..\basement\source\Basement.csproj">
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\auth-base\source\Auth.Base.csproj">
-      <Project>{B04C50F7-B0CC-4170-8820-9D584E1C0ED3}</Project>
-      <Name>Auth.Base</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
