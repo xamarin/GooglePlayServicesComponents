@@ -80,10 +80,6 @@
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-common\source\Firebase-Common.csproj">
-      <Project>{865652D3-8D1A-4779-92FC-4C54719286B7}</Project>
-      <Name>Firebase-Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\iid\source\Iid.csproj">
       <Project>{9F7F996D-AF44-4947-8392-07B3ED2ED00D}</Project>
       <Name>Iid</Name>
