@@ -90,10 +90,6 @@
       <Project>{F666DC89-9CE4-491C-8450-6FBC70298FA3}</Project>
       <Name>Location</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\maps\source\Maps.csproj">
-      <Project>{7CB92D61-E2FF-472A-9FDF-7E42D15B3EE6}</Project>
-      <Name>Maps</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\source\Fitness.csproj">
       <Project>{8900C5EF-1182-4E8B-88FE-596EC2DB379D}</Project>
       <Name>Fitness</Name>
@@ -101,10 +97,6 @@
     <ProjectReference Include="..\..\..\basement\source\Basement.csproj">
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-common\source\Firebase-Common.csproj">
-      <Project>{865652D3-8D1A-4779-92FC-4C54719286B7}</Project>
-      <Name>Firebase-Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\tasks\source\Tasks.csproj">
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
