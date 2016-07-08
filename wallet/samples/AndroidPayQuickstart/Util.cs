@@ -24,17 +24,17 @@ namespace AndroidPayQuickstart
      * @param address The {@link Address} to format.
      * @return The address in a format suitable for display to the user.
      */
-        public static string FormatAddress (Context context, Address address) 
-        {
-            // different locales may need different address formats, which would be handled in
-            // R.string.address_format
-            var address2 = string.IsNullOrEmpty (address.Address2) ? address.Address2 : address.Address2 + "\n";
-            var address3 = string.IsNullOrEmpty (address.Address3) ? address.Address3 : address.Address3 + "\n";
+        //public static string FormatAddress (Context context, Address address) 
+        //{
+        //    // different locales may need different address formats, which would be handled in
+        //    // R.string.address_format
+        //    var address2 = string.IsNullOrEmpty (address.Address2) ? address.Address2 : address.Address2 + "\n";
+        //    var address3 = string.IsNullOrEmpty (address.Address3) ? address.Address3 : address.Address3 + "\n";
 
 
-            return context.GetString (Resource.String.address_format, address.Name,
-                                    address.Address1, address2, address3, address.City, address.State, address.PostalCode);
-        }
+        //    return context.GetString (Resource.String.address_format, address.Name,
+        //                            address.Address1, address2, address3, address.City, address.State, address.PostalCode);
+        //}
 
         /**
      * Formats a price for display.
