@@ -54,7 +54,6 @@
     <Compile Include="Additions\BugWorkarounds.cs" />
     <Compile Include="Additions\Additions.cs" />
     <Compile Include="Additions\IPendingResultExtensions.cs" />
-    <Compile Include="Additions\DataBufferAdditions.cs" />
     <Compile Include="..\..\GpsConsts.cs">
       <Link>Properties\GpsConsts.cs</Link>
     </Compile>
