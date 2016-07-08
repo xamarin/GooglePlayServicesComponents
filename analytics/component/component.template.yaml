@@ -13,7 +13,6 @@ libraries:
     - ../../output/Xamarin.GooglePlayServices.Base.dll
     - ../../output/Xamarin.GooglePlayServices.Basement.dll
     - ../../output/Xamarin.GooglePlayServices.Tasks.dll
-    - ../../output/Xamarin.Firebase.Common.dll
     - ../../output/Xamarin.GooglePlayServices.Analytics.dll
     - ../../output/Xamarin.GooglePlayServices.Analytics.Impl.dll
 is_shell: true
@@ -27,7 +26,6 @@ samples:
       - Base
       - Basement
       - Tasks
-      - Firebase-Common
       - Analytics
       - Analytics.Impl
     installNuGets:
@@ -36,7 +34,6 @@ samples:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
           - Xamarin.GooglePlayServices.Tasks
-          - Xamarin.Firebase.Common
           - Xamarin.GooglePlayServices.Analytics
           - Xamarin.GooglePlayServices.Analytics.Impl
 local-nuget-repo: ../../output/
