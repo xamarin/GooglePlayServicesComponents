@@ -13,9 +13,7 @@ libraries:
     - ../../output/Xamarin.GooglePlayServices.Base.dll
     - ../../output/Xamarin.GooglePlayServices.Basement.dll
     - ../../output/Xamarin.GooglePlayServices.Tasks.dll
-    - ../../output/Xamarin.Firebase.Common.dll
     - ../../output/Xamarin.GooglePlayServices.Location.dll
-    - ../../output/Xamarin.GooglePlayServices.Maps.dll
 is_shell: true
 packages:
   android:
@@ -27,35 +25,13 @@ samples:
       - Base
       - Basement
       - Tasks
-      - Firebase-Common
       - Location
-      - Maps
     installNuGets:
       - project: LocationSample
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
           - Xamarin.GooglePlayServices.Tasks
-          - Xamarin.Firebase.Common
           - Xamarin.GooglePlayServices.Location
-          - Xamarin.GooglePlayServices.Maps
-  - name: "Places Async Sample"
-    path: ../../location/samples/PlacesAsync.sln
-    removeProjects:
-      - Base
-      - Basement
-      - Tasks
-      - Firebase-Common
-      - Location
-      - Maps
-    installNuGets:
-      - project: PlacesAsync
-        packages:
-          - Xamarin.GooglePlayServices.Base
-          - Xamarin.GooglePlayServices.Basement
-          - Xamarin.GooglePlayServices.Tasks
-          - Xamarin.Firebase.Common
-          - Xamarin.GooglePlayServices.Location
-          - Xamarin.GooglePlayServices.Maps
 local-nuget-repo: ../../output/
 no_build: true

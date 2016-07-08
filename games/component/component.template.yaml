@@ -12,12 +12,9 @@ libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll
     - ../../output/Xamarin.GooglePlayServices.Basement.dll
-    - ../../output/Xamarin.GooglePlayServices.Auth.Base.dll
     - ../../output/Xamarin.GooglePlayServices.Tasks.dll
-    - ../../output/Xamarin.Firebase.Common.dll
     - ../../output/Xamarin.GooglePlayServices.Games.dll
     - ../../output/Xamarin.GooglePlayServices.Drive.dll
-    - ../../output/Xamarin.GooglePlayServices.Plus.dll
 is_shell: true
 packages:
   android:
@@ -29,8 +26,6 @@ samples:
       - Base
       - Basement
       - Tasks
-      - Auth.Base
-      - Firebase-Common
       - Games
       - Drive
       - Plus
@@ -40,8 +35,6 @@ samples:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
           - Xamarin.GooglePlayServices.Tasks
-          - Xamarin.GooglePlayServices.Auth.Base
-          - Xamarin.Firebase.Common
           - Xamarin.GooglePlayServices.Games
           - Xamarin.GooglePlayServices.Drive
           - Xamarin.GooglePlayServices.Plus

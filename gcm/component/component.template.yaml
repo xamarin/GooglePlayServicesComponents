@@ -13,7 +13,6 @@ libraries:
     - ../../output/Xamarin.GooglePlayServices.Base.dll
     - ../../output/Xamarin.GooglePlayServices.Basement.dll
     - ../../output/Xamarin.GooglePlayServices.Tasks.dll
-    - ../../output/Xamarin.Firebase.Common.dll
     - ../../output/Xamarin.GooglePlayServices.Gcm.dll
     - ../../output/Xamarin.GooglePlayServices.Iid.dll
 is_shell: true
@@ -27,7 +26,6 @@ samples:
       - Base
       - Basement
       - Tasks
-      - Firebase-Common
       - Gcm
       - Iid
     installNuGets:
@@ -36,7 +34,6 @@ samples:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
           - Xamarin.GooglePlayServices.Tasks
-          - Xamarin.Firebase.Common
           - Xamarin.GooglePlayServices.Gcm
           - Xamarin.GooglePlayServices.Iid
 local-nuget-repo: ../../output/

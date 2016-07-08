@@ -9,11 +9,12 @@ icons:
   - icons/googleplayservices-ads_128x128.png
   - icons/googleplayservices-ads_512x512.png
 libraries:
-  android: 
+  android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll
     - ../../output/Xamarin.GooglePlayServices.Basement.dll
+    - ../../output/Xamarin.GooglePlayServices.Clearcut.dll
+    - ../../output/Xamarin.GooglePlayServices.Gass.dll
     - ../../output/Xamarin.GooglePlayServices.Tasks.dll
-    - ../../output/Xamarin.Firebase.Common.dll
     - ../../output/Xamarin.GooglePlayServices.Ads.dll
     - ../../output/Xamarin.GooglePlayServices.Ads.Lite.dll
 is_shell: true
@@ -26,8 +27,9 @@ samples:
     removeProjects:
       - Base
       - Basement
+      - Clearcut
+      - Gass
       - Tasks
-      - Firebase-Common
       - Ads
       - Ads.Lite
     installNuGets:
@@ -35,8 +37,9 @@ samples:
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Clearcut
+          - Xamarin.GooglePlayServices.Gass
           - Xamarin.GooglePlayServices.Tasks
-          - Xamarin.Firebase.Common
           - Xamarin.GooglePlayServices.Ads
           - Xamarin.GooglePlayServices.Ads.Lite
 local-nuget-repo: ../../output/
