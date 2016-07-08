@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Xamarin.Firebase.Analytics.Impl</RootNamespace>
@@ -67,10 +67,6 @@
     <ProjectReference Include="..\..\firebase-common\source\Firebase-Common.csproj">
       <Project>{865652D3-8D1A-4779-92FC-4C54719286B7}</Project>
       <Name>Firebase-Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\base\source\Base.csproj">
-      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
-      <Name>Base</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\firebase-iid\source\Firebase-Iid.csproj">
       <Project>{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}</Project>
