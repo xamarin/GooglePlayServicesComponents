@@ -70,4 +70,6 @@
 		<remove-node path="/api/package[@name='com.google.android.gms.maps.model']/class[@name='TileOverlay']/constructor[@name='TileOverlay']" />
 
 
+		<remove-node path="/api/package[@name='com.google.android.gms.maps.model']/class[@name='Polygon']/method[@name='setHoles']" />
+
 </metadata>
