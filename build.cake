@@ -351,6 +351,9 @@ Task ("diff")
 
 Task ("merge").IsDependentOn ("libs").Does (() =>
 {
+	if (FileExists ("./output/GooglePlayServices.Merged.dll"))
+		DeleteFile ("./output/GooglePlayServices.Merged.dll");
+
 	// Clean up any existing old merge files
 	DeleteFiles ("./output/GooglePlayServices.Merged.dll");
 
