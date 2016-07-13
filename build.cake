@@ -318,6 +318,7 @@ Task ("externals")
 });
 
 Task ("diff")
+	.IsDependentOn ("merge")
 	.WithCriteria (!IsRunningOnWindows ())
 	.Does (() =>
 {
