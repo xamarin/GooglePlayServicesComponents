@@ -102,4 +102,6 @@
 	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onDismissScreen']/parameter[1]" name="managedName">adapter</attr>
 	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onLeaveApplication']/parameter[1]" name="managedName">adapter</attr>
 
+	<attr path="/api/package[@name='com.google.ads.doubleclick']/interface[@name='OnCustomRenderedAdLoadedListener']/method[@name='onCustomRenderedAdLoaded']/parameter[1]" name="managedName">ad</attr>
+
 </metadata>
