@@ -18,6 +18,12 @@
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
 	<attr path="/api/package[@name='com.google.android.gms.auth.api']/class[@name='Auth']/field[@name='CREDENTIALS_API']" name="managedName">CREDENTIALS_API</attr>
 	<attr path="/api/package[@name='com.google.android.gms.auth.api']/class[@name='Auth']/field[@name='PROXY_API']" name="managedName">PROXY_API</attr>
 	<attr path="/api/package[@name='com.google.android.gms.auth.api']/class[@name='Auth']/field[@name='GOOGLE_SIGN_IN_API']" name="managedName">GOOGLE_SIGN_IN_API</attr>

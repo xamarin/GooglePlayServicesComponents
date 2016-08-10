@@ -22,6 +22,12 @@
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
 
 	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode']/field[@name='format']" name="managedName">_Format</attr>
 	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode']/field[@name='format']" name="visibility">internal</attr>
