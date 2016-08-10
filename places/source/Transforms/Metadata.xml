@@ -15,6 +15,13 @@
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[@name='CREATOR' and contains(@type, 'zz')]" />
 
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+
 	<!-- Allowing zza classes allows a bit too much, so remove these specifically -->
 	<remove-node path="/api/package[@name='com.google.android.gms.location.places.personalized']/class[@name='zza']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.location']/class[@name='zza']" />

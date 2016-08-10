@@ -9,6 +9,12 @@
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
 	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ValueEventListener']/method[@name='onCancelled']" name="argsType">ValueEventArgs</attr>
 	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onCancelled']" name="argsType">ChildEventArgs</attr>
 </metadata>

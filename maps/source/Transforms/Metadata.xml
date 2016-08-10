@@ -35,6 +35,12 @@
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 <!--	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />-->
 
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
 
 <!--	<attr path="/api/package[@name='com.google.android.gms.maps.model']/class[@name='Polygon']/method[@name='setHoles']/parameter[1]" name="managedType">global::System.Collections.Generic.IList&lt;global::Java.Lang.Object&gt;</attr>-->
 <!--	<remove-node path="/api/package[@name='com.google.android.gms.maps.model']/class[@name='Polygon']/method[@name='setHoles' and count(parameter)=1 and parameter[1][@type='java.util.List']]" />-->
