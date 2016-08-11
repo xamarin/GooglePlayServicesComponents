@@ -27,13 +27,15 @@ using Android.App;
 	PackageName = __WearableConsts.PackageName,
 	SourceUrl = __GpsConsts.Url,
 	EmbeddedArchive = __WearableConsts.AarPath,
-    Version     = __GpsConsts.WearVersion)]
+    Version     = __GpsConsts.WearVersion,
+    Sha1sum = __GpsConsts.Sha1sum)]
 // Wearable Support Resources
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
 	PackageName = __WearableConsts.PackageName,
 	SourceUrl   = __GpsConsts.Url,
 	EmbeddedArchive = __WearableConsts.AarPath,
-    Version     = __GpsConsts.WearVersion)]
+    Version     = __GpsConsts.WearVersion,
+    Sha1sum = __GpsConsts.Sha1sum)]
 
 static class __WearableConsts {    
 	public const string PackageName = "Android Wear";

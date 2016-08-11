@@ -30,13 +30,15 @@ using Android.App;
     PackageName = __Consts.PackageName,
     SourceUrl = __GpsConsts.Url,
     EmbeddedArchive = __Consts.AarPath,
-    Version = __GpsConsts.Version)]
+    Version = __GpsConsts.Version,
+    Sha1sum = __GpsConsts.Sha1sum)]
 // AppCompat-v7 resources
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
     PackageName = __Consts.PackageName,
     SourceUrl   = __GpsConsts.Url,
     EmbeddedArchive = __Consts.AarPath,
-    Version     = __GpsConsts.Version)]
+    Version     = __GpsConsts.Version,
+    Sha1sum = __GpsConsts.Sha1sum)]
 
 // Google Addon feed with GPS in it:
 //      https://dl-ssl.google.com/android/repository/addon.xml
