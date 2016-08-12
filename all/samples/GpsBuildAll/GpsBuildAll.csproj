@@ -19,6 +19,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -254,6 +255,26 @@
     <ProjectReference Include="..\..\..\wearable\source\Wearable.csproj">
       <Project>{92BDA198-6A78-4408-844C-CAAF4C04EAFD}</Project>
       <Name>Wearable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\cast-framework\source\Cast.Framework.csproj">
+      <Project>{159A8C21-0A5B-4D99-9E07-6466F8E98AF7}</Project>
+      <Name>Cast.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\clearcut\source\Clearcut.csproj">
+      <Project>{44CF1968-FCDA-4141-AE78-1EFD12DDF7D6}</Project>
+      <Name>Clearcut</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\contextmanager\source\ContextManager.csproj">
+      <Project>{541FC839-6065-4681-B6A4-C3BF358F78E9}</Project>
+      <Name>ContextManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\gass\source\Gass.csproj">
+      <Project>{D705BF83-81FD-4CD9-AF3B-09C50FF42C83}</Project>
+      <Name>Gass</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\places\source\Places.csproj">
+      <Project>{D42D621B-0370-44F6-A58E-0749629F9F4D}</Project>
+      <Name>Places</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
