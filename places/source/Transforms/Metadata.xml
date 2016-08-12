@@ -9,7 +9,7 @@
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.location.places.internal')]" />
 
-	<remove-node path="/api/package/class[contains(@name, 'zz') and not(@name = 'zzpr') and not(@name = 'zza') and not(@name = 'zza.zza')]" />
+	<remove-node path="/api/package/class[contains(@name, 'zz') and not(@name = 'zzpr')]" /> <!-- and not(@name = 'zza') and not(@name = 'zza.zza')]" / -->
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />

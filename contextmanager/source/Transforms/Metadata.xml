@@ -1,6 +1,6 @@
 ﻿<metadata>
 	<!-- Fix Namespaces -->
-	<attr path="/api/package[@name='com.google.android.gms.contextmanager.interest']" name="managedName">Android.Gms.ContextManager.Interest</attr>
+	<attr path="/api/package[@name='com.google.android.contextmanager.interest']" name="managedName">Android.ContextManager.Interest</attr>
 	<attr path="/api/package[@name='com.google.android.gms.awareness']" name="managedName">Android.Gms.Awareness</attr>
 	<attr path="/api/package[@name='com.google.android.gms.awareness.fence']" name="managedName">Android.Gms.Awareness.Fence</attr>
 	<attr path="/api/package[@name='com.google.android.gms.awareness.snapshot']" name="managedName">Android.Gms.Awareness.Snapshot</attr>

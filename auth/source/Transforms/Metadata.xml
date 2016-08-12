@@ -5,7 +5,6 @@
   	<attr path="/api/package[@name='com.google.android.gms.auth.api.consent']" name="managedName">Android.Gms.Auth.Api.Consent</attr>
   	<attr path="/api/package[@name='com.google.android.gms.auth.api.credentials']" name="managedName">Android.Gms.Auth.Api.Credentials</attr>
   	<attr path="/api/package[@name='com.google.android.gms.auth.api.credentials.internal']" name="managedName">Android.Gms.Auth.Api.Credentials.Internal</attr>
-  	<attr path="/api/package[@name='com.google.android.gms.auth.api.proxy']" name="managedName">Android.Gms.Auth.Api.Proxy</attr>
   	<attr path="/api/package[@name='com.google.android.gms.auth.api.signin']" name="managedName">Android.Gms.Auth.Api.SignIn</attr>
   	<attr path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']" name="managedName">Android.Gms.Auth.Api.SignIn.Internal</attr>
 

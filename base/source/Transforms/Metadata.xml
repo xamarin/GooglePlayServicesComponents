@@ -3,6 +3,7 @@
 	<!-- Rename Namespaces -->
   	<attr path="/api/package[@name='com.google.android.gms.actions']" name="managedName">Android.Gms.Actions</attr>
   	<attr path="/api/package[@name='com.google.android.gms.auth']" name="managedName">Android.Gms.Auth</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.auth.account']" name="managedName">Android.Gms.Auth.Account</attr>  
   	<attr path="/api/package[@name='com.google.android.gms.common']" name="managedName">Android.Gms.Common</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.common.data']" name="managedName">Android.Gms.Common.Data</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.common.images']" name="managedName">Android.Gms.Common.Images</attr>  

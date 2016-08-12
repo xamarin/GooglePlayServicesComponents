@@ -30,6 +30,8 @@
 
 	<attr path="/api/package[@name='com.google.android.gms.ads.identifier']" name="managedName">Android.Gms.Ads.Identifier</attr>
 
+	<attr path="/api/package[@name='com.google.android.gms.location.places']" name="managedName">Android.Gms.Location.Places</attr>
+	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
 
 
 	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Status']" name="managedName">Statuses</attr>
