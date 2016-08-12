@@ -68,6 +68,21 @@ You may want to consider passing `--verbosity diagnostic` (or `-Verbosity diagno
 Before the `.sln` files will compile in Visual Studio or Xamarin Studio, the external dependencies need to be downloaded.  This can be done by running the `build.sh` or `build.ps1` with the target `externals`.  After the externals are setup, the `.sln` files should compile in an IDE.
 
 
+### Versioning
+
+Historically, Component and later NuGet package versions were based on the revision number of the Google Play Services SDK from the SDK Manager.  Because of this, the versions of the components and NuGet packages do not match the version strings of Google Play Services releases from Google.  Here is a table which shows a translation of versions mapped to Google's version strings:
+
+
+| NuGet / Component Version | Google Play Services Version |
+|---------------------------|------------------------------|
+| 32.4.x                    | 9.4.x                        |
+| 29.x                      | 9.2.x                        |
+| 28.x                      | 9.0.2                        |
+| 27.x                      | 9.0.1                        |
+| 26.x                      | 9.0.0                        |
+| 25.x                      | 8.4.x                        |
+
+
 ## License
 
 The license for this repository is specified in 
