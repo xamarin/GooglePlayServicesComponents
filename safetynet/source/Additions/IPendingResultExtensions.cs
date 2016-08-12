@@ -16,5 +16,9 @@ namespace Android.Gms.SafetyNet
         {
             return (await api.LookupUri (googleApiClient, threatTypes, uri)).JavaCast<ISafetyNetApiSafeBrowsingResult> ();
         }
+        public static async Task<ISafetyNetApiSafeBrowsingResult> LookupUri (this ISafetyNetApi api, GoogleApiClient client, string uri, int [] threatTypes)
+        {
+            return (await api.LookupUri (client, uri, threatTypes)).JavaCast<ISafetyNetApiSafeBrowsingResult> ();
+        }
     }
 }

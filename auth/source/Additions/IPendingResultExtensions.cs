@@ -26,14 +26,3 @@ namespace Android.Gms.Auth.Api.Credentials
         }
     }
 }
-
-namespace Android.Gms.Auth.Api.Proxy
-{
-    public static partial class IProxyApiExtensions 
-    {
-        public static async Task<IProxyApiProxyResult> PerformProxyRequestAsync (this IProxyApi api, GoogleApiClient client, Android.Gms.Auth.Api.Proxy.ProxyRequest request) 
-        {
-            return (await api.PerformProxyRequest (client, request)).JavaCast<IProxyApiProxyResult> ();
-        }
-    }
-}
