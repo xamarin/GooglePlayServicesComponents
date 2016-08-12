@@ -36,10 +36,10 @@ namespace Android.Gms.Location.Places
             return (await api.GetCurrentPlace (client, filter)).JavaCast<PlaceLikelihoodBuffer> ();
         }
 
-        //public static async Task<Statuses> ReportDeviceAtPlaceAsync (this IPlaceDetectionApi api, GoogleApiClient client, PlaceReport report)
-        //{
-        //    return (await api.ReportDeviceAtPlace (client, report)).JavaCast<Statuses> ();
-        //}
+        public static async Task<Statuses> ReportDeviceAtPlaceAsync (this IPlaceDetectionApi api, GoogleApiClient client, PlaceReport report)
+        {
+            return (await api.ReportDeviceAtPlace (client, report)).JavaCast<Statuses> ();
+        }
     }
 
     public static partial class IPlacePhotoMetadataExtensions

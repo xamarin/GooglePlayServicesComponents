@@ -76,6 +76,18 @@ namespace Android.Gms.Fitness
         {
             return (await api.UpdateData (client, request)).JavaCast<Statuses> ();
         }
+        public static async Task<Result.DailyTotalResult> ReadDailyTotalFromLocalDeviceAsync (this IHistoryApi api, GoogleApiClient client, Data.DataType dataType)
+        {
+            return (await api.ReadDailyTotalFromLocalDevice (client, dataType)).JavaCast<Result.DailyTotalResult> ();
+        }
+        public static async Task<Statuses> RegisterDataUpdateListenerAsync (this IHistoryApi api, GoogleApiClient client, Request.DataUpdateListenerRegistrationRequest request)
+        {
+            return (await api.RegisterDataUpdateListener (client, request)).JavaCast<Statuses> ();
+        }
+        public static async Task<Statuses> UnregisterDataUpdateListenerAsync (this IHistoryApi api, GoogleApiClient client, Android.App.PendingIntent pendingIntent)
+        {
+            return (await api.UnregisterDataUpdateListener (client, pendingIntent)).JavaCast<Statuses> ();
+        }
     }
 
     public static partial class IRecordingApiExtensions

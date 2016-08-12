@@ -88,7 +88,7 @@ namespace Android.Gms.Games.Event
         {
             return (await api.Load (apiClient, forceReload)).JavaCast<IEventsLoadEventsResult> ();
         }
-        public static async Task<IEventsLoadEventsResult> LoadByIdsAsync (this IEvents api, GoogleApiClient apiClient, bool forceReload, params string[] eventIds)
+        public static async Task<IEventsLoadEventsResult> LoadByIdsAsync (this IEvents api, GoogleApiClient apiClient, bool forceReload, params string [] eventIds)
         {
             return (await api.LoadByIds (apiClient, forceReload, eventIds)).JavaCast<IEventsLoadEventsResult> ();
         }
@@ -174,11 +174,11 @@ namespace Android.Gms.Games.MultiPlayer.TurnBased
         {
             return (await api.FinishMatch (apiClient, matchId)).JavaCast<ITurnBasedMultiplayerUpdateMatchResult> ();
         }
-        public static async Task<ITurnBasedMultiplayerUpdateMatchResult> FinishMatchAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, string matchId, byte[] matchData, IList<ParticipantResult> results)
+        public static async Task<ITurnBasedMultiplayerUpdateMatchResult> FinishMatchAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, string matchId, byte [] matchData, IList<ParticipantResult> results)
         {
             return (await api.FinishMatch (apiClient, matchId, matchData, results)).JavaCast<ITurnBasedMultiplayerUpdateMatchResult> ();
         }
-        public static async Task<ITurnBasedMultiplayerUpdateMatchResult> FinishMatchAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, string matchId, byte[] matchData, params ParticipantResult[] results)
+        public static async Task<ITurnBasedMultiplayerUpdateMatchResult> FinishMatchAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, string matchId, byte [] matchData, params ParticipantResult [] results)
         {
             return (await api.FinishMatch (apiClient, matchId, matchData, results)).JavaCast<ITurnBasedMultiplayerUpdateMatchResult> ();
         }
@@ -194,11 +194,11 @@ namespace Android.Gms.Games.MultiPlayer.TurnBased
         {
             return (await api.LoadMatch (apiClient, matchId)).JavaCast<ITurnBasedMultiplayerLoadMatchResult> ();
         }
-        public static async Task<ITurnBasedMultiplayerLoadMatchesResult> LoadMatchesByStatusAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, int invitationSortOrder, int[] matchTurnStatuses)
+        public static async Task<ITurnBasedMultiplayerLoadMatchesResult> LoadMatchesByStatusAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, int invitationSortOrder, int [] matchTurnStatuses)
         {
             return (await api.LoadMatchesByStatus (apiClient, invitationSortOrder, matchTurnStatuses)).JavaCast<ITurnBasedMultiplayerLoadMatchesResult> ();
         }
-        public static async Task<ITurnBasedMultiplayerLoadMatchesResult> LoadMatchesByStatusAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, int[] matchTurnStatuses)
+        public static async Task<ITurnBasedMultiplayerLoadMatchesResult> LoadMatchesByStatusAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, int [] matchTurnStatuses)
         {
             return (await api.LoadMatchesByStatus (apiClient, matchTurnStatuses)).JavaCast<ITurnBasedMultiplayerLoadMatchesResult> ();
         }
@@ -206,15 +206,15 @@ namespace Android.Gms.Games.MultiPlayer.TurnBased
         {
             return (await api.Rematch (apiClient, matchId)).JavaCast<ITurnBasedMultiplayerInitiateMatchResult> ();
         }
-        public static async Task<ITurnBasedMultiplayerUpdateMatchResult> TakeTurnAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, string matchId, byte[] matchData, string pendingParticipantId)
+        public static async Task<ITurnBasedMultiplayerUpdateMatchResult> TakeTurnAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, string matchId, byte [] matchData, string pendingParticipantId)
         {
             return (await api.TakeTurn (apiClient, matchId, matchData, pendingParticipantId)).JavaCast<ITurnBasedMultiplayerUpdateMatchResult> ();
         }
-        public static async Task<ITurnBasedMultiplayerUpdateMatchResult> TakeTurnAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, string matchId, byte[] matchData, string pendingParticipantId, IList<ParticipantResult> results)
+        public static async Task<ITurnBasedMultiplayerUpdateMatchResult> TakeTurnAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, string matchId, byte [] matchData, string pendingParticipantId, IList<ParticipantResult> results)
         {
             return (await api.TakeTurn (apiClient, matchId, matchData, pendingParticipantId, results)).JavaCast<ITurnBasedMultiplayerUpdateMatchResult> ();
         }
-        public static async Task<ITurnBasedMultiplayerUpdateMatchResult> TakeTurnAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, string matchId, byte[] matchData, string pendingParticipantId, params ParticipantResult[] results)
+        public static async Task<ITurnBasedMultiplayerUpdateMatchResult> TakeTurnAsync (this ITurnBasedMultiplayer api, GoogleApiClient apiClient, string matchId, byte [] matchData, string pendingParticipantId, params ParticipantResult [] results)
         {
             return (await api.TakeTurn (apiClient, matchId, matchData, pendingParticipantId, results)).JavaCast<ITurnBasedMultiplayerUpdateMatchResult> ();
         }
@@ -232,11 +232,11 @@ namespace Android.Gms.Games.Quest
         {
             return (await api.Claim (apiClient, questId, milestoneId)).JavaCast<IQuestsClaimMilestoneResult> ();
         }
-        public static async Task<IQuestsLoadQuestsResult> LoadAsync (this IQuests api, GoogleApiClient apiClient, int[] questSelectors, int sortOrder, bool forceReload)
+        public static async Task<IQuestsLoadQuestsResult> LoadAsync (this IQuests api, GoogleApiClient apiClient, int [] questSelectors, int sortOrder, bool forceReload)
         {
             return (await api.Load (apiClient, questSelectors, sortOrder, forceReload)).JavaCast<IQuestsLoadQuestsResult> ();
         }
-        public static async Task<IQuestsLoadQuestsResult> LoadByIdsAsync (this IQuests api, GoogleApiClient apiClient, bool forceReload, params string[] questIds)
+        public static async Task<IQuestsLoadQuestsResult> LoadByIdsAsync (this IQuests api, GoogleApiClient apiClient, bool forceReload, params string [] questIds)
         {
             return (await api.LoadByIds (apiClient, forceReload, questIds)).JavaCast<IQuestsLoadQuestsResult> ();
         }
@@ -272,10 +272,10 @@ namespace Android.Gms.Games.Snapshot
 {
     public static partial class ISnapshotsExtensions
     {
-        //public static async Task<ISnapshotsCommitSnapshotResult> CommitAndCloseAsync (this ISnapshots api, GoogleApiClient apiClient, ISnapshot snapshot, SnapshotMetadataChange metadataChange)
-        //{
-        //    return (await api.CommitAndClose (apiClient, snapshot, metadataChange)).JavaCast<ISnapshotsCommitSnapshotResult> ();
-        //}
+        public static async Task<ISnapshotsCommitSnapshotResult> CommitAndCloseAsync (this ISnapshots api, GoogleApiClient apiClient, ISnapshot snapshot, ISnapshotMetadataChange metadataChange)
+        {
+            return (await api.CommitAndClose (apiClient, snapshot, metadataChange)).JavaCast<ISnapshotsCommitSnapshotResult> ();
+        }
         public static async Task<ISnapshotsDeleteSnapshotResult> DeleteAsync (this ISnapshots api, GoogleApiClient apiClient, ISnapshotMetadata metadata)
         {
             return (await api.Delete (apiClient, metadata)).JavaCast<ISnapshotsDeleteSnapshotResult> ();
@@ -304,10 +304,10 @@ namespace Android.Gms.Games.Snapshot
         {
             return (await api.ResolveConflict (apiClient, conflictId, snapshot)).JavaCast<ISnapshotsOpenSnapshotResult> ();
         }
-        //public static async Task<ISnapshotsOpenSnapshotResult> ResolveConflictAsync (this ISnapshots api, GoogleApiClient apiClient, string conflictId, string snapshotId, SnapshotMetadataChange metadataChange, ISnapshotContents snapshotContents)
-        //{
-        //    return (await api.ResolveConflict (apiClient, conflictId, snapshotId, metadataChange, snapshotContents)).JavaCast<ISnapshotsOpenSnapshotResult> ();
-        //}
+        public static async Task<ISnapshotsOpenSnapshotResult> ResolveConflictAsync (this ISnapshots api, GoogleApiClient apiClient, string conflictId, string snapshotId, ISnapshotMetadataChange metadataChange, ISnapshotContents snapshotContents)
+        {
+            return (await api.ResolveConflict (apiClient, conflictId, snapshotId, metadataChange, snapshotContents)).JavaCast<ISnapshotsOpenSnapshotResult> ();
+        }
     }
 }
 
@@ -318,6 +318,25 @@ namespace Android.Gms.Games.Stats
         public static async Task<IStatsLoadPlayerStatsResult> LoadPlayerStatsAsync (this IStats api, GoogleApiClient apiClient, bool forceReload)
         {
             return (await api.LoadPlayerStats (apiClient, forceReload)).JavaCast<Android.Gms.Games.Stats.IStatsLoadPlayerStatsResult> ();
+        }
+    }
+}
+
+namespace Android.Gms.Games.Video
+{
+    public static partial class IVideosExtensions
+    {
+        public static async Task<IVideosCaptureCapabilitiesResult> GetCaptureCapabilitiesAsync (this IVideos api, GoogleApiClient apiClient)
+        {
+            return (await api.GetCaptureCapabilities (apiClient)).JavaCast<IVideosCaptureCapabilitiesResult> ();
+        }
+        public static async Task<IVideosCaptureStateResult> GetCaptureStateAsync (this IVideos api, GoogleApiClient apiClient)
+        {
+            return (await api.GetCaptureState (apiClient)).JavaCast<IVideosCaptureStateResult> ();
+        }
+        public static async Task<IVideosCaptureAvailableResult> IsCaptureAvailableAsync (this IVideos api, GoogleApiClient apiClient, int p)
+        {
+            return (await api.IsCaptureAvailable (apiClient, p)).JavaCast<IVideosCaptureAvailableResult> ();
         }
     }
 }

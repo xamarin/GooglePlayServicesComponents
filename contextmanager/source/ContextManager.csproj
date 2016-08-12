@@ -53,6 +53,7 @@
     <Compile Include="..\..\GpsConsts.cs">
       <Link>Properties\GpsConsts.cs</Link>
     </Compile>
+    <Compile Include="Additions\PendingResultExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Additions\AboutAdditions.txt" />
