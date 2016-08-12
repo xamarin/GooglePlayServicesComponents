@@ -3,7 +3,9 @@
 	<attr path="/api/package[@name='com.google.android.gms.nearby.bootstrap']" name="managedName">Android.Gms.Nearby.Bootstrap</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.bootstrap.request']" name="managedName">Android.Gms.Nearby.Bootstrap.Request</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.connection']" name="managedName">Android.Gms.Nearby.Connection</attr>
+	<attr path="/api/package[@name='com.google.android.gms.nearby.connection.dev']" name="managedName">Android.Gms.Nearby.Connection.Dev</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.internal.connection']" name="managedName">Android.Gms.Nearby.Internal.Connection</attr>
+	<attr path="/api/package[@name='com.google.android.gms.nearby.internal.connection.dev']" name="managedName">Android.Gms.Nearby.Internal.Connection.Dev</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.messages']" name="managedName">Android.Gms.Nearby.Messages</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.messages.devices']" name="managedName">Android.Gms.Nearby.Messages.Devices</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.sharing']" name="managedName">Android.Gms.Nearby.Sharing</attr>

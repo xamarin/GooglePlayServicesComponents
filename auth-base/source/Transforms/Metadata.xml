@@ -1,6 +1,10 @@
 ﻿<metadata>
 	<!-- Fix Namespaces -->
 	<attr path="/api/package[@name='com.google.android.gms.auth']" name="managedName">Android.Gms.Auth</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth.account']" name="managedName">Android.Gms.Auth.Account</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth.api']" name="managedName">Android.Gms.Auth.Api</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth.api.proxy']" name="managedName">Android.Gms.Auth.Api.Proxy</attr>
+
 
 	<!-- Remove some internal namespaces -->
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
