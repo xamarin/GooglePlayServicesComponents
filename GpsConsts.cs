@@ -3,9 +3,9 @@
 //      https://dl-ssl.google.com/android/repository/addon.xml
 
 static class __GpsConsts {
-    public const string Url  = "https://dl-ssl.google.com/android/repository/google_m2repository_r29.zip";
-    public const string Version = "9.2.0";
+    public const string Url  = "https://dl-ssl.google.com/android/repository/google_m2repository_r32.zip";
     public const string Sha1sum = "ae24bde9c8f732f4d13b72e70802be8c97dcfddf";
+    public const string Version = "9.4.0";
     public const string WearVersion = "1.4.0";
 }
 
