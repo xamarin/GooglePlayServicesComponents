@@ -9,12 +9,12 @@
 #addin nuget:?package=Cake.MonoApiTools
 
 // To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip
-var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_9256000_r31.zip";
-var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_r29.zip";
+var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_945200_r32.zip";
+var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_r32.zip";
 
-var PLAY_COMPONENT_VERSION = "30.2.0.0";
-var PLAY_NUGET_VERSION = "30.2.0-alpha1";
-var PLAY_AAR_VERSION = "9.2.0";
+var PLAY_COMPONENT_VERSION = "30.4.0.0";
+var PLAY_NUGET_VERSION = "30.4.0-alpha1";
+var PLAY_AAR_VERSION = "9.4.0";
 
 var WEAR_COMPONENT_VERSION = "1.4.0.0";
 var WEAR_NUGET_VERSION = "1.4.0.0-alpha7";
