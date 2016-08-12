@@ -12,6 +12,14 @@ namespace Android.Gms.Games
     }
 }
 
+namespace Android.Gms.Games.MultiPlayer
+{
+    public partial interface IMultiplayer : Android.Runtime.IJavaObject
+    {
+
+    }
+}
+
 namespace Android.Gms.Games.AppContent
 {
     internal static class FreezeMethodImplementor
