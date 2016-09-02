@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.Vision</id>
+    <title>Xamarin Google Play Services - Vision</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - Vision $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - Vision
+
+      The Face API finds human faces in photos, videos, or live streams. It also finds and tracks positions of facial landmarks such as the eyes, nose, and mouth.
+
+      The API also provides information about the state of facial features -- are the subject's eyes open? Are they smiling? With these technologies, you can edit photos and video, enhance video feeds with effects and decorations, create hands-free controls for games and apps, or react when a person winks or smiles.
+
+      The Barcode Scanner API detects barcodes in real time in any orientation. You can also detect and parse several barcodes in different formats at the same time.
+    </description>
+    <copyright>Copyright 2013-2016</copyright>
+    <projectUrl>http://components.xamarin.com/view/googleplayservices-vision/</projectUrl>
+    <licenseUrl>http://components.xamarin.com/license/googleplayservices-vision/</licenseUrl>
+    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.Vision.png</iconUrl>
+    <dependencies>
+      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.GooglePlayServices.Vision.dll" target="lib/MonoAndroid41" />
+  </files>
+</package>
