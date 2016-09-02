@@ -277,6 +277,11 @@ var buildSpec = new BuildSpec {
 		new Component { ManifestDirectory = "./vision/component" },
 		new Component { ManifestDirectory = "./wallet/component" },
 		new Component { ManifestDirectory = "./support-wearable/component" },
+
+		new Component { ManifestDirectory = "./firebase-analytics/component" },
+		new Component { ManifestDirectory = "./firebase-auth/component" },
+		new Component { ManifestDirectory = "./firebase-crash/component" },
+		new Component { ManifestDirectory = "./firebase-messaging/component" },
 	}
 };
 
