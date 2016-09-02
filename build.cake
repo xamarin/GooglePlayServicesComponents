@@ -12,12 +12,13 @@
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_945200_r32.zip";
 var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_r32.zip";
 
-var PLAY_COMPONENT_VERSION = "32.4.0.0";
-var PLAY_NUGET_VERSION = "32.4.0-beta2";
+var PLAY_COMPONENT_VERSION = "32.940.0.0";
+var PLAY_NUGET_VERSION = "32.940.0-beta3";
 var PLAY_AAR_VERSION = "9.4.0";
+var VERSION_DESC = "9.4.0";
 
 var WEAR_COMPONENT_VERSION = "1.4.0.0";
-var WEAR_NUGET_VERSION = "1.4.0-beta2";
+var WEAR_NUGET_VERSION = "1.4.0-beta3";
 var WEAR_AAR_VERSION = PLAY_AAR_VERSION;
 
 var WEARABLE_SUPPORT_VERSION = "1.4.0";
