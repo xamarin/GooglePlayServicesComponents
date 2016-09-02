@@ -474,6 +474,21 @@ Task ("component-setup").Does (() =>
 
 Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base");
 
+Task ("nuget-setup").Does (() =>
+{
+	var nuspecs = GetFiles ("./**/nuget/*.template.nuspec");
+	foreach (var nuspec in nuspecs) {
+		var nuspecTxt = FileReadText (nuspec)
+			.Replace ("$aar-version$", VERSION_DESC);
+
+		var newNuspec = nuspec.FullPath.Replace (".template.nuspec", ".nuspec");
+		FileWriteText (newNuspec, nuspecTxt);
+	}
+});
+
+Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("libs").IsDependentOn ("nuget-base");
+
+
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
 
 RunTarget (TARGET);
