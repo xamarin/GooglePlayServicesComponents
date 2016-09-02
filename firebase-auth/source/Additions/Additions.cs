@@ -29,6 +29,16 @@ namespace Firebase.Auth
         {
             return SignInWithEmailAndPassword (email, password).AsAsync<IAuthResult> ();
         }
+
+        public System.Threading.Tasks.Task<IProviderQueryResult> FetchProvidersForEmailAsync (string email)
+        {
+            return FetchProvidersForEmail (email).AsAsync<IProviderQueryResult> ();
+        }
+
+        public System.Threading.Tasks.Task SendPasswordResetEmailAsync (string email)
+        {
+            return SendPasswordResetEmail (email).AsAsync ();
+        }
     }
 }
 
