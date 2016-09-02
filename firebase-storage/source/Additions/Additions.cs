@@ -59,10 +59,10 @@ namespace Firebase.Storage
             return Delete ().AsAsync ();
         }
 
-        public System.Threading.Tasks.Task<byte []> GetBytesAsync (long l)
-        {
-            return GetBytes (l).AsAsync<byte []> ();
-        }
+        // public System.Threading.Tasks.Task<byte []> GetBytesAsync (long l)
+        // {
+        //     return GetBytes (l).AsAsync<byte []> ();
+        // }
 
         public System.Threading.Tasks.Task<Android.Net.Uri> GetDownloadUrlAsync ()
         {
