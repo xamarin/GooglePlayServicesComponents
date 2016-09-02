@@ -44,11 +44,6 @@ namespace Firebase.Database
             return RemoveValue ().AsAsync ();
         }
 
-        public Task CancelAsync ()
-        {
-            return Cancel ().AsAsync ();
-        }
-
         public Task SetValueAsync (Java.Lang.Object obj)
         {
             return SetValue (obj).AsAsync ();
