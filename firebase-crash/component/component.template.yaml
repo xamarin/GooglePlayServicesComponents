@@ -1,0 +1,36 @@
+version: $version$
+name: Firebase - Crash Reporting
+id: firebase-crash
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: Comprehensive and actionable information to help diagnose and fix problems in your app.
+license: ../../component/License.md
+icons:
+  - icons/firebase-crash_128x128.png
+  - icons/firebase-crash_512x512.png
+is_shell: true
+packages:
+  android:
+    - Xamarin.Firebase.Crash, Version=$nuget-version$
+samples:
+  - name: "Firebase Crash Quickstart"
+    path: ../../firebase-crash/samples/FirebaseCrashReportingQuickstart.sln
+    removeProjects:
+      - Base
+      - Basement
+      - Basement-BuildTasks
+      - Tasks
+      - Firebase-Common
+      - Firebase-Iid
+      - Firebase-Crash
+    installNuGets:
+      - project: FirebaseCrashReportingQuickstart
+        packages:
+          - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Base
+          - Xamarin.GooglePlayServices.Tasks
+          - Xamarin.Firebase.Common
+          - Xamarin.Firebase.Iid
+          - Xamarin.Firebase.Crash
+local-nuget-repo: ../../output/
+no_build: true
