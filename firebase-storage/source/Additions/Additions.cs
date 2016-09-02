@@ -1,5 +1,6 @@
 ﻿using System;
 using Android.Runtime;
+using Android.Gms.Extensions;
 
 namespace Firebase.Storage
 {
@@ -48,6 +49,24 @@ namespace Firebase.Storage
                 } finally {
                 }
             }
+        }
+    }
+
+    public partial class StorageReference
+    {
+        public System.Threading.Tasks.Task DeleteAsync ()
+        {
+            return Delete ().AsAsync ();
+        }
+
+        public System.Threading.Tasks.Task<byte []> GetBytesAsync (long l)
+        {
+            return GetBytes (l).AsAsync<byte []> ();
+        }
+
+        public System.Threading.Tasks.Task<Android.Net.Uri> GetDownloadUrlAsync ()
+        {
+            return GetDownloadUrl ().AsAsync<Android.Net.Uri> ();
         }
     }
 }
