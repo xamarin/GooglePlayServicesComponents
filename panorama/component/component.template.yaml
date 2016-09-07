@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: "Open panorama standard and APIs"
 license: ../../component/License.md
 icons:
-  - icons/googleplayservices-panorama_128x128.png
-  - icons/googleplayservices-panorama_512x512.png
+  - ../../icons/play-services-panorama_128x128.png
+  - ../../icons/play-services-panorama_512x512.png
 libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll

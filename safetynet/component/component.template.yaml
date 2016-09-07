@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: "Services for analyzing the configuration of a particular device."
 license: ../../component/License.md
 icons:
-  - icons/googleplayservices-safetynet_128x128.png
-  - icons/googleplayservices-safetynet_512x512.png
+  - ../../icons/play-services-safetynet_128x128.png
+  - ../../icons/play-services-safetynet_512x512.png
 libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll

@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: "Simple and reliable messaging to reach over a billion devices."
 license: ../../component/License.md
 icons:
-  - icons/googleplayservices-gcm_128x128.png
-  - icons/googleplayservices-gcm_512x512.png
+  - ../../icons/play-services-gcm_128x128.png
+  - ../../icons/play-services-gcm_512x512.png
 libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll

@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: "Read, write, and sync files stored in Google Drive from your mobile and web apps."
 license: ../../component/License.md
 icons:
-  - icons/googleplayservices-drive_128x128.png
-  - icons/googleplayservices-drive_512x512.png
+  - ../../icons/play-services-drive_128x128.png
+  - ../../icons/play-services-drive_512x512.png
 libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll

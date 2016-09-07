@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: Collect data from your mobile apps.
 license: ../../component/License.md
 icons:
-  - icons/googleplayservices-analytics_128x128.png
-  - icons/googleplayservices-analytics_512x512.png
+  - ../../icons/play-services-analytics_128x128.png
+  - ../../icons/play-services-analytics_512x512.png
 libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll

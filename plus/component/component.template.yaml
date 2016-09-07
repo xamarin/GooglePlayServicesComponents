@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: "Access public Google+ social graph info, build Hangout apps, and more."
 license: ../../component/License.md
 icons:
-  - icons/googleplayservices-plus_128x128.png
-  - icons/googleplayservices-plus_512x512.png
+  - ../../icons/play-services-plus_128x128.png
+  - ../../icons/play-services-plus_512x512.png
 libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll

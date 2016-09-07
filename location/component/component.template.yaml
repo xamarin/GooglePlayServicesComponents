@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: "Add location awareness to your app with automated location tracking, geofencing, and activity recognition."
 license: ../../component/License.md
 icons:
-  - icons/googleplayservices-location_128x128.png
-  - icons/googleplayservices-location_512x512.png
+  - ../../icons/play-services-location_128x128.png
+  - ../../icons/play-services-location_512x512.png
 libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll

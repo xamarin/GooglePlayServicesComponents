@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: Get your app found in Google Search.
 license: ../../component/License.md
 icons:
-  - icons/googleplayservices-appindexing_128x128.png
-  - icons/googleplayservices-appindexing_512x512.png
+  - ../../icons/play-services-appindexing_128x128.png
+  - ../../icons/play-services-appindexing_512x512.png
 libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll

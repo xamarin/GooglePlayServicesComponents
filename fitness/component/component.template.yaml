@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: "APIs to make building fitness apps and devices easier."
 license: ../../component/License.md
 icons:
-  - icons/googleplayservices-fitness_128x128.png
-  - icons/googleplayservices-fitness_512x512.png
+  - ../../icons/play-services-fitness_128x128.png
+  - ../../icons/play-services-fitness_512x512.png
 libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll

@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: Easily support authentication in your app using passwords, or popular federated identity providers like Google, Facebook, and more.
 license: ../../component/License.md
 icons:
-  - icons/firebase-auth_128x128.png
-  - icons/firebase-auth_512x512.png
+  - ../../icons/firebase-auth_128x128.png
+  - ../../icons/firebase-auth_512x512.png
 is_shell: true
 packages:
   android:

@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: A free app measurement solution that provides insight on app usage and user engagement.
 license: ../../component/License.md
 icons:
-  - icons/firebase-analytics_128x128.png
-  - icons/firebase-analytics_512x512.png
+  - ../../icons/firebase-analytics_128x128.png
+  - ../../icons/firebase-analytics_512x512.png
 is_shell: true
 packages:
   android:

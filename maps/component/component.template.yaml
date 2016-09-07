@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: "Add custom markers, styled maps, 3D buildings, indoor floor plans, street view, satellite imagery, and more to your Android app."
 license: ../../component/License.md
 icons:
-  - icons/googleplayservices-maps_128x128.png
-  - icons/googleplayservices-maps_512x512.png
+  - ../../icons/play-services-maps_128x128.png
+  - ../../icons/play-services-maps_512x512.png
 libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll
