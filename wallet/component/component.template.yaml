@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: "Enable simple payments in your Android app."
 license: ../../component/License.md
 icons:
-  - icons/googleplayservices-wallet_128x128.png
-  - icons/googleplayservices-wallet_512x512.png
+  - ../../icons/play-services-wallet_128x128.png
+  - ../../icons/play-services-wallet_512x512.png
 libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll

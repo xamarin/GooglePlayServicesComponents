@@ -6,8 +6,8 @@ publisher-url: http://xamarin.com
 summary: "Build simple interactions between nearby devices and people."
 license: ../../component/License.md
 icons:
-  - icons/googleplayservices-nearby_128x128.png
-  - icons/googleplayservices-nearby_512x512.png
+  - ../../icons/play-services-nearby_128x128.png
+  - ../../icons/play-services-nearby_512x512.png
 libraries:
   android:
     - ../../output/Xamarin.GooglePlayServices.Base.dll
