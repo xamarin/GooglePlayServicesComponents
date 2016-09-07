@@ -22,7 +22,7 @@
     <copyright>Copyright 2013-2016</copyright>
     <projectUrl>http://components.xamarin.com/view/androidwear/</projectUrl>
     <licenseUrl>http://components.xamarin.com/license/androidwear/</licenseUrl>
-    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.Android.Wear.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-support-wearable_128x128.png</iconUrl>
     <dependencies>
       <dependency id="Xamarin.Android.Support.v4" version="23.1.1.1" />
       <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="23.1.1.1" />

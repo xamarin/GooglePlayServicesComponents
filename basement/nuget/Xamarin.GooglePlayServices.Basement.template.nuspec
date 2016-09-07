@@ -39,15 +39,15 @@
     <copyright>Copyright 2013-2016</copyright>
     <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
-    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.Basement.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-basement_128x128.png</iconUrl>
     <dependencies>
       <dependency id="Xamarin.Android.Support.v4" version="23.1.1.1"/>
-    </dependencies>    
+    </dependencies>
   </metadata>
   <files>
     <file src="basement/buildtasks/bin/Release/Xamarin.GooglePlayServices.Basement.targets" target="build" />
     <file src="basement/buildtasks/bin/Release/Xamarin.GooglePlayServices.Tasks.dll" target="build" />
-    
+
     <file src="output/Xamarin.GooglePlayServices.Basement.dll" target="lib/MonoAndroid41" />
   </files>
 </package>
