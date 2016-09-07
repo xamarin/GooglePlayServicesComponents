@@ -16,6 +16,7 @@
     <copyright>Copyright 2013-2016</copyright>
     <projectUrl>http://components.xamarin.com/view/googleplayservices-plus/</projectUrl>
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-plus/</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-plus_128x128.png</iconUrl>
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />

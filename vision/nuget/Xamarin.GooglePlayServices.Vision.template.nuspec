@@ -20,7 +20,7 @@
     <copyright>Copyright 2013-2016</copyright>
     <projectUrl>http://components.xamarin.com/view/googleplayservices-vision/</projectUrl>
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-vision/</licenseUrl>
-    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.Vision.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-vision_128x128.png</iconUrl>
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
