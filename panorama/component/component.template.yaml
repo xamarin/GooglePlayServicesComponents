@@ -4,7 +4,7 @@ id: googleplayservices-panorama
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: "Open panorama standard and APIs"
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/play-services-panorama_128x128.png
   - ../../icons/play-services-panorama_512x512.png

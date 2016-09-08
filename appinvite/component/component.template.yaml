@@ -4,7 +4,7 @@ id: googleplayservices-appinvite
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: Enable your users to share your app with people they know.
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/play-services-appinvite_128x128.png
   - ../../icons/play-services-appinvite_512x512.png

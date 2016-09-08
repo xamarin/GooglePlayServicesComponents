@@ -4,7 +4,7 @@ id: googleplayservices-safetynet
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: "Services for analyzing the configuration of a particular device."
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/play-services-safetynet_128x128.png
   - ../../icons/play-services-safetynet_512x512.png

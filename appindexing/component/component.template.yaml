@@ -4,7 +4,7 @@ id: googleplayservices-appindexing
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: Get your app found in Google Search.
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/play-services-appindexing_128x128.png
   - ../../icons/play-services-appindexing_512x512.png

@@ -4,7 +4,7 @@ id: googleplayservices-nearby
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: "Build simple interactions between nearby devices and people."
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/play-services-nearby_128x128.png
   - ../../icons/play-services-nearby_512x512.png

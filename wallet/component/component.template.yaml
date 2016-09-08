@@ -4,7 +4,7 @@ id: googleplayservices-wallet
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: "Enable simple payments in your Android app."
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/play-services-wallet_128x128.png
   - ../../icons/play-services-wallet_512x512.png

@@ -4,7 +4,7 @@ id: googleplayservices-location
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: "Add location awareness to your app with automated location tracking, geofencing, and activity recognition."
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/play-services-location_128x128.png
   - ../../icons/play-services-location_512x512.png

@@ -4,7 +4,7 @@ id: googleplayservices-fitness
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: "APIs to make building fitness apps and devices easier."
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/play-services-fitness_128x128.png
   - ../../icons/play-services-fitness_512x512.png
