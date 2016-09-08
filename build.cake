@@ -12,6 +12,9 @@
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_945200_r32.zip";
 var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_r32.zip";
 
+// We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
+var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/29.0.0.2/api-info.xml"
+
 var PLAY_COMPONENT_VERSION = "32.940.0.0";
 var PLAY_NUGET_VERSION = "32.940.0-beta3";
 var PLAY_AAR_VERSION = "9.4.0";
@@ -341,9 +344,8 @@ Task ("diff")
 		"./output/GooglePlayServices.api-info.xml", 
 		new MonoApiInfoToolSettings { SearchPaths = SEARCH_DIRS });
 
-	// Grab the latest published api info from S3
-	var latestReleasedApiInfoUrl = "http://xamarin-components-apiinfo.s3.amazonaws.com/GooglePlayServices.Android-Latest.xml";
-	DownloadFile (latestReleasedApiInfoUrl, "./output/GooglePlayServices.api-info.previous.xml");
+	// Grab the last public release's api-info.xml to use as a base to compare and make an API diff
+	DownloadFile (BASE_API_INFO_URL, "./output/GooglePlayServices.api-info.previous.xml");
 
 	// Now diff against current release'd api info
 	// eg: mono mono-api-diff.exe ./gps.r26.xml ./gps.r27.xml > gps.diff.xml
