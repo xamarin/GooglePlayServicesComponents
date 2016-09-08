@@ -1,3 +1,9 @@
+
+**Xamarin is not responsible for, nor does it grant any licenses to, third-party packages. Some packages may require or install dependencies which are governed by additional licenses.**
+
+This component depends on [Google Play Services Client Library](https://developers.google.com/android/guides/overview), which is subject to the terms of [Android Software Development Kit License Agreement](http://developer.android.com/sdk/terms.html)
+
+### Xamarin Component for Google Play Services Client Library
 The MIT License (MIT)
 
 Copyright (c) .NET Foundation Contributors
