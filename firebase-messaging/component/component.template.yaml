@@ -4,7 +4,7 @@ id: firebase-messaging
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: Cross-platform messaging solution that lets you reliably deliver messages at no cost.
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/firebase-messaging_128x128.png
   - ../../icons/firebase-messaging_512x512.png

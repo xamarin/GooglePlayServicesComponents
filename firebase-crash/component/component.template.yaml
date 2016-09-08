@@ -4,7 +4,7 @@ id: firebase-crash
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: Comprehensive and actionable information to help diagnose and fix problems in your app.
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/firebase-crash_128x128.png
   - ../../icons/firebase-crash_512x512.png

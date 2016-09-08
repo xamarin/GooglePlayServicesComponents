@@ -4,7 +4,7 @@ id: googleplayservices-games
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: "Enhance your games with Google technologies."
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/play-services-games_128x128.png
   - ../../icons/play-services-games_512x512.png

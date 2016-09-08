@@ -4,7 +4,7 @@ id: googleplayservices-ads
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: Make money and advertise across screens and platforms.
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/play-services-ads_128x128.png
   - ../../icons/play-services-ads_512x512.png

@@ -4,7 +4,7 @@ id: googleplayservices-gcm
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: "Simple and reliable messaging to reach over a billion devices."
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/play-services-gcm_128x128.png
   - ../../icons/play-services-gcm_512x512.png

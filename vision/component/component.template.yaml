@@ -4,7 +4,7 @@ id: googleplayservices-vision
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: "Find objects in photos and video, using real-time on-device vision technology."
-license: ../../component/License.md
+license: ../../License.md
 icons:
   - ../../icons/play-services-vision_128x128.png
   - ../../icons/play-services-vision_512x512.png
