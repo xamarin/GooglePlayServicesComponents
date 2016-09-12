@@ -4,6 +4,29 @@ Get Started with Firebase Cloud Messaging for Android
 {FIREBASE-CONFIGURE}
 
 
+## Editing your AndroidManifest.xml
+
+Currently, you will need to manually add the broadcast receiver declarations to your app's `AndroidManifest.xml` file.  You should add these declarations inside of your `<application ..></application>` element:
+
+```xml
+<!-- START Manual Firebase Additions -->
+<receiver
+  android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
+  android:exported="false" />
+
+<receiver
+  android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+  android:exported="true"
+  android:permission="com.google.android.c2dm.permission.SEND" >
+	<intent-filter>
+		<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+		<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+		<category android:name="${applicationId}" />
+	</intent-filter>
+</receiver>
+<!-- END Manual Firebase Additions -->
+```
+
 
 ## Create your Service
 
