@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Firebase - Core $aar-version$</summary>
     <description>
-      Xamarin.Android Bindings for Firebase - Core
+      Xamarin.Android Bindings for Firebase - Core $aar-version$
     </description>
     <copyright>Copyright 2013-2016</copyright>
     <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>

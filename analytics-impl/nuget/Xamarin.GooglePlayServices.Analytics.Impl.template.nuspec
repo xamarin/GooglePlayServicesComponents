@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Google Play Services - Analytics Impl $aar-version$</summary>
     <description>
-      Xamarin.Android Bindings for Google Play Services - Analytics Impl
+      Xamarin.Android Bindings for Google Play Services - Analytics Impl $aar-version$
 
       The Google Analytics SDK for Android makes it easy for developers to collect user engagement data form their apps.
     </description>

@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Google Play Services - Fitness $aar-version$</summary>
     <description>
-      Xamarin.Android Bindings for Google Play Services - Fitness
+      Xamarin.Android Bindings for Google Play Services - Fitness $aar-version$
 
       Google Fit is an open platform that lets users control their fitness data, developers build smarter apps, and manufacturers focus on creating amazing devices.
     </description>

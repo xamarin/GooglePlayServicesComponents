@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Google Play Services - GCM $aar-version$</summary>
     <description>
-      Xamarin.Android Bindings for Google Play Services - GCM
+      Xamarin.Android Bindings for Google Play Services - GCM $aar-version$
 
       Google Cloud Messaging (GCM) is a free service that enables developers to send messages between servers and client apps. This includes downstream messages from servers to client apps, and upstream messages from client apps to servers.
 

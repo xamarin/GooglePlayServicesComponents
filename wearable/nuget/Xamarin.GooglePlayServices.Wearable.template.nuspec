@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Google Play Services - Wearable $aar-version$</summary>
     <description>
-      Xamarin.Android Bindings for Google Play Services - Wearable
+      Xamarin.Android Bindings for Google Play Services - Wearable $aar-version$
 
       You may also want to install the Xamarin.Android.Wear package if you are installing this.
     </description>

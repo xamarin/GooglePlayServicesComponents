@@ -7,8 +7,9 @@
     <authors>Xamarin Inc.</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - Places $aar-version$</summary>
     <description>
-      Xamarin.Android Bindings for Google Play Services - Places
+      Xamarin.Android Bindings for Google Play Services - Places $aar-version$
     </description>
     <copyright>Copyright 2013-2016</copyright>
     <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>

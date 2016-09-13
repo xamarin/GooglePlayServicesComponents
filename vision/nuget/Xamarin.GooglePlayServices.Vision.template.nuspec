@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Google Play Services - Vision $aar-version$</summary>
     <description>
-      Xamarin.Android Bindings for Google Play Services - Vision
+      Xamarin.Android Bindings for Google Play Services - Vision $aar-version$
 
       The Face API finds human faces in photos, videos, or live streams. It also finds and tracks positions of facial landmarks such as the eyes, nose, and mouth.
 

@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Google Play Services - Games $aar-version$</summary>
     <description>
-      Xamarin.Android Bindings for Google Play Services - Games
+      Xamarin.Android Bindings for Google Play Services - Games $aar-version$
 
       The Play Games SDK provides cross-platform Google Play games services that lets you easily integrate popular gaming features such as achievements, leaderboards, Saved Games, and real-time multiplayer in your tablet and mobile games.
     </description>
