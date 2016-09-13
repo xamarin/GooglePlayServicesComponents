@@ -7,34 +7,11 @@
     <authors>Xamarin Inc.</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <summary>Xamarin.Android Bindings for Google Play Services - Basement - do not install directly $aar-version$</summary>
+    <summary>Xamarin.Android Bindings for Google Play Services - Basement $aar-version$ - do not install directly</summary>
     <description>
-      Xamarin.Android Bindings for Google Play Services - Basement
+      Xamarin.Android Bindings for Google Play Services - Basement $aar-version$
 
-      Instead of installing this package directly, install the specific package(s) you need:
-        - Xamarin Google Play Services - Ads
-        - Xamarin Google Play Services - Analytics
-        - Xamarin Google Play Services - AppIndexing
-        - Xamarin Google Play Services - AppInvite
-        - Xamarin Google Play Services - Auth
-        - Xamarin Google Play Services - Cast
-        - Xamarin Google Play Services - Drive
-        - Xamarin Google Play Services - Fitness
-        - Xamarin Google Play Services - Games
-        - Xamarin Google Play Services - GCM
-        - Xamarin Google Play Services - Identity
-        - Xamarin Google Play Services - Location
-        - Xamarin Google Play Services - Maps
-        - Xamarin Google Play Services - Measurement
-        - Xamarin Google Play Services - Nearby
-        - Xamarin Google Play Services - Panorama
-        - Xamarin Google Play Services - Plus
-        - Xamarin Google Play Services - SafetyNet
-        - Xamarin Google Play Services - Vision
-        - Xamarin Google Play Services - Wallet
-        - Xamarin Google Play Services - Wearable
-
-      NOTE: Auth may be moved into its own package in the future!
+      Instead of installing this package directly, install the specific package(s) you need.
     </description>
     <copyright>Copyright 2013-2016</copyright>
     <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>

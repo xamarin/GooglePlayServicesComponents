@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Google Play Services - SafetyNet $aar-version$</summary>
     <description>
-      Xamarin.Android Bindings for Google Play Services - SafetyNet
+      Xamarin.Android Bindings for Google Play Services - SafetyNet $aar-version$
 
       SafetyNet provides services for analyzing the configuration of a particular device, to make sure that apps function properly on a particular device and that users have a great experience.
     </description>

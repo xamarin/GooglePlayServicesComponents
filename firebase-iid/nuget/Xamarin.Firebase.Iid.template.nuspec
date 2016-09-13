@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Firebase - Iid $aar-version$</summary>
     <description>
-      Xamarin.Android Bindings for Firebase - Iid
+      Xamarin.Android Bindings for Firebase - Iid $aar-version$
     </description>
     <copyright>Copyright 2013-2016</copyright>
     <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>

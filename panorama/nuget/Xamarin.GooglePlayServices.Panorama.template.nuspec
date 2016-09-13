@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Google Play Services - Panorama $aar-version$</summary>
     <description>
-      Xamarin.Android Bindings for Google Play Services - Panorama
+      Xamarin.Android Bindings for Google Play Services - Panorama $aar-version$
 
       The Panorama API allows you to include a Panorama Viewer in your own applications.
     </description>
