@@ -13,7 +13,7 @@
 
       Android Pay enables simple and secure purchases of physical goods and services in Android apps, and eliminates the need to manually enter payment and shipping information. Integrate Android Pay to reach millions of signed-in Android users and drive higher conversions.
     </description>
-    <copyright>Copyright 2013-2016</copyright>
+    <copyright>Copyright © Microsoft Corporation</copyright>
     <projectUrl>http://components.xamarin.com/view/googleplayservices-wallet/</projectUrl>
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-wallet/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-wallet_128x128.png</iconUrl>

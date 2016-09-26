@@ -13,7 +13,7 @@
 
       SafetyNet provides services for analyzing the configuration of a particular device, to make sure that apps function properly on a particular device and that users have a great experience.
     </description>
-    <copyright>Copyright 2013-2016</copyright>
+    <copyright>Copyright © Microsoft Corporation</copyright>
     <projectUrl>http://components.xamarin.com/view/googleplayservices-safetynet/</projectUrl>
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-safetynet/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-safetynet_128x128.png</iconUrl>

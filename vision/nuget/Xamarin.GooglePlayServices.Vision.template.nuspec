@@ -17,7 +17,7 @@
 
       The Barcode Scanner API detects barcodes in real time in any orientation. You can also detect and parse several barcodes in different formats at the same time.
     </description>
-    <copyright>Copyright 2013-2016</copyright>
+    <copyright>Copyright © Microsoft Corporation</copyright>
     <projectUrl>http://components.xamarin.com/view/googleplayservices-vision/</projectUrl>
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-vision/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-vision_128x128.png</iconUrl>
