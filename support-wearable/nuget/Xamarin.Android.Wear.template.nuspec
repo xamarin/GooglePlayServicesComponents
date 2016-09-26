@@ -19,7 +19,7 @@
 
       You may also want to install the Xamarin.GooglePlayServices.Wearable package if you are installing this.
     </description>
-    <copyright>Copyright 2013-2016</copyright>
+    <copyright>Copyright © Microsoft Corporation</copyright>
     <projectUrl>http://components.xamarin.com/view/androidwear/</projectUrl>
     <licenseUrl>http://components.xamarin.com/license/androidwear/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-support-wearable_128x128.png</iconUrl>

@@ -15,7 +15,7 @@
 
       For example, a lightweight downstream message could inform a client app that there is new data to be fetched from the server, as in the case of a "new email" notification. For use cases such as instant messaging, a GCM message can transfer up to 4kb of payload to the client app. The GCM service handles all aspects of queueing of messages and delivery to and from the target client app.
     </description>
-    <copyright>Copyright 2013-2016</copyright>
+    <copyright>Copyright © Microsoft Corporation</copyright>
     <projectUrl>http://components.xamarin.com/view/googleplayservices-gcm/</projectUrl>
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-gcm/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-gcm_128x128.png</iconUrl>

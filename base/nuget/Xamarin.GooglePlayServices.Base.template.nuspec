@@ -13,7 +13,7 @@
 
       Instead of installing this package directly, install the specific package(s) you need.
     </description>
-    <copyright>Copyright 2013-2016</copyright>
+    <copyright>Copyright © Microsoft Corporation</copyright>
     <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-base_128x128.png</iconUrl>
