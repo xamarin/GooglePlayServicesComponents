@@ -27,14 +27,14 @@ using Android.App;
 //[assembly: AssemblyKeyFile("")]
 
 [assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-    PackageName = __Consts.PackageName,
+    PackageName = __GpsConsts.PackageName,
     SourceUrl = __GpsConsts.Url,
     EmbeddedArchive = __Consts.AarPath,
     Version = __GpsConsts.Version,
     Sha1sum = __GpsConsts.Sha1sum)]
 // AppCompat-v7 resources
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-    PackageName = __Consts.PackageName,
+    PackageName = __GpsConsts.PackageName,
     SourceUrl   = __GpsConsts.Url,
     EmbeddedArchive = __Consts.AarPath,
     Version     = __GpsConsts.Version,
@@ -44,6 +44,5 @@ using Android.App;
 //      https://dl-ssl.google.com/android/repository/addon.xml
 
 static class __Consts {
-    public const string PackageName = "GPS Ads";
     public const string AarPath = "m2repository/com/google/android/gms/play-services-ads/" + __GpsConsts.Version + "/play-services-ads-" + __GpsConsts.Version + ".aar";
 }

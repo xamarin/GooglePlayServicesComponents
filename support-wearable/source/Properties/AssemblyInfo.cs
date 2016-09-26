@@ -7,9 +7,9 @@ using Android.App;
 [assembly: AssemblyTitle ("Xamarin.Android.Wearable")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("")]
+[assembly: AssemblyCompany ("Microsoft Corporation")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("Xamarin Inc.")]
+[assembly: AssemblyCopyright ("Copyright © Microsoft Corporation")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
@@ -37,7 +37,7 @@ using Android.App;
     Version     = __GpsConsts.WearVersion,
     Sha1sum = __GpsConsts.Sha1sum)]
 
-static class __WearableConsts {    
-	public const string PackageName = "Android Wear";
+static class __WearableConsts {
+	public const string PackageName = "Xamarin.Android.Wear";
     public const string AarPath = "m2repository/com/google/android/support/wearable/" + __GpsConsts.WearVersion + "/wearable-" + __GpsConsts.WearVersion + ".aar";
 }

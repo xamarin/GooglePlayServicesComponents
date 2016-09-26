@@ -8,9 +8,9 @@ using Android.App;
 [assembly: AssemblyTitle ("Xamarin.Firebase.Storage")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("Xamarin")]
+[assembly: AssemblyCompany ("Microsoft Corporation")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("Xamarin")]
+[assembly: AssemblyCopyright ("Copyright © Microsoft Corporation")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 
@@ -27,14 +27,14 @@ using Android.App;
 //[assembly: AssemblyKeyFile("")]
 
 [assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-    PackageName = __Consts.PackageName,
+    PackageName = __FbConsts.PackageName,
     SourceUrl = __FbConsts.Url,
     EmbeddedArchive = __Consts.AarPath,
     Version = __FbConsts.Version,
     Sha1sum = __FbConsts.Sha1sum)]
 // AppCompat-v7 resources
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-    PackageName = __Consts.PackageName,
+    PackageName = __FbConsts.PackageName,
     SourceUrl   = __FbConsts.Url,
     EmbeddedArchive = __Consts.AarPath,
     Version     = __FbConsts.Version,
@@ -44,7 +44,5 @@ using Android.App;
 //      https://dl-ssl.google.com/android/repository/addon.xml
 
 static class __Consts {
-    public const string PackageName = "Firebase Storage";
     public const string AarPath = "m2repository/com/google/firebase/firebase-storage/" + __FbConsts.Version + "/firebase-storage-" + __FbConsts.Version + ".aar";
 }
-    
