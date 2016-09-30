@@ -1,0 +1,129 @@
+﻿using Android.App;
+using Android.Content;
+using Android.Widget;
+using Android.OS;
+using Android.Support.V7.App;
+using Firebase.RemoteConfig;
+using Android.Gms.Tasks;
+using System;
+
+namespace Config
+{
+	[Activity(Label = "Config", MainLauncher = true), IntentFilter(new[] { Intent.ActionView }, Categories = new[] { Intent.ActionMain, Intent.CategoryLauncher })]
+	public class MainActivity : AppCompatActivity, IOnCompleteListener
+	{
+		private static string TAG = "MainActivity";
+
+		// Remote Config keys
+		private static string PRICE_CONFIG_KEY = "price";
+		private static string LOADING_PHRASE_CONFIG_KEY = "loading_phrase";
+		private static string PRICE_PREFIX_CONFIG_KEY = "price_prefix";
+		private static string DISCOUNT_CONFIG_KEY = "discount";
+		private static string IS_PROMOTION_CONFIG_KEY = "is_promotion_on";
+
+		private FirebaseRemoteConfig mFirebaseRemoteConfig;
+		private TextView mPriceTextView;
+
+		protected override void OnCreate(Bundle savedInstanceState)
+		{
+			base.OnCreate(savedInstanceState);
+			SetContentView(Resource.Layout.activity_main);
+
+			mPriceTextView = (TextView)FindViewById(Resource.Id.priceView);
+
+			Button fetchButton = (Button)FindViewById(Resource.Id.fetchButton);
+			fetchButton.Click += delegate
+			{
+				FetchDiscount();
+			};
+
+
+			// Get Remote Config instance.
+			// [START get_remote_config_instance]
+			mFirebaseRemoteConfig = FirebaseRemoteConfig.Instance;
+			// [END get_remote_config_instance]
+
+			// Create Remote Config Setting to enable developer mode.
+			// Fetching configs from the server is normally limited to 5 requests per hour.
+			// Enabling developer mode allows many more requests to be made per hour, so developers
+			// can test different config values during development.
+			// [START enable_dev_mode]
+			FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder().SetDeveloperModeEnabled(BuildConfig.DEBUG).Build();
+			mFirebaseRemoteConfig.SetConfigSettings(configSettings);
+			// [END enable_dev_mode]
+
+			// Set default Remote Config values. In general you should have in app defaults for all
+			// values that you may configure using Remote Config later on. The idea is that you
+			// use the in app defaults and when you need to adjust those defaults, you set an updated
+			// value in the App Manager console. Then the next time you application fetches from the
+			// server, the updated value will be used. You can set defaults via an xml file like done
+			// here or you can set defaults inline by using one of the other setDefaults methods.S
+			// [START set_default_values]
+			mFirebaseRemoteConfig.SetDefaults(Resource.Xml.remote_config_defaults);
+			// [END set_default_values]
+
+
+			// Fetch discount config.
+			FetchDiscount();
+		}
+
+		/**
+     * Fetch discount from server.
+     */
+		private void FetchDiscount()
+		{
+			mPriceTextView.SetText(LOADING_PHRASE_CONFIG_KEY, null);
+
+			long cacheExpiration = 3600; // 1 hour in seconds.
+										 // If in developer mode cacheExpiration is set to 0 so each fetch will retrieve values from
+										 // the server.
+			if (mFirebaseRemoteConfig.Info.ConfigSettings.IsDeveloperModeEnabled)
+			{
+				cacheExpiration = 0;
+			}
+
+			// [START fetch_config_with_callback]
+			// cacheExpirationSeconds is set to cacheExpiration here, indicating that any previously
+			// fetched and cached config would be considered expired because it would have been fetched
+			// more than cacheExpiration seconds ago. Thus the next fetch would go to the server unless
+			// throttling is in progress. The default expiration duration is 43200 (12 hours).
+			mFirebaseRemoteConfig.Fetch(cacheExpiration).AddOnCompleteListener(this);
+		}
+
+		public void OnComplete(Task task)
+		{
+			if (task.IsSuccessful)
+			{
+				Toast.MakeText(this, "Fetch Succeeded", ToastLength.Short).Show();
+
+				// Once the config is successfully fetched it must be activated before newly fetched
+				// values are returned.
+				mFirebaseRemoteConfig.ActivateFetched();
+			}
+			else {
+				Toast.MakeText(this, "Fetch Failed", ToastLength.Short).Show();
+			}
+			DisplayPrice();
+		}
+		// [END fetch_config_with_callback]
+
+		/**
+	* Display price with discount applied if promotion is on. Otherwise display original price.
+	*/
+		// [START display_price]
+		private void DisplayPrice()
+		{
+			long initialPrice = mFirebaseRemoteConfig.GetLong(PRICE_CONFIG_KEY);
+			long finalPrice = initialPrice;
+			if (mFirebaseRemoteConfig.GetBoolean(IS_PROMOTION_CONFIG_KEY))
+			{
+				// [START get_config_values]
+				finalPrice = initialPrice - mFirebaseRemoteConfig.GetLong(DISCOUNT_CONFIG_KEY);
+				// [END get_config_values]
+			}
+			mPriceTextView.SetText(PRICE_PREFIX_CONFIG_KEY + finalPrice, null);
+		}
+		// [END display_price]
+	}
+}
+

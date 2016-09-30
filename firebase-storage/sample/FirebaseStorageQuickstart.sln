@@ -1,0 +1,71 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseStorageQuickstart", "FirebaseStorageQuickstart\FirebaseStorageQuickstart.csproj", "{661950EE-078E-4629-AF4F-C670AF19EC46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Auth", "..\..\firebase-auth\source\Firebase-Auth.csproj", "{62946D89-B6B1-4A38-A04D-C20912087EFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "..\..\tasks\source\Tasks.csproj", "{53F87D88-8871-41A2-9F81-B79AB02FEC24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Storage", "..\source\Firebase-Storage.csproj", "{423414D9-6CB8-4AFF-8317-66AD03B6056D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base", "..\..\base\source\Base.csproj", "{3F6BAE25-ADEB-468C-8384-AD655623C341}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basement", "..\..\basement\source\Basement.csproj", "{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Auth-Common", "..\..\firebase-auth-common\source\Firebase-Auth-Common.csproj", "{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Auth-Module", "..\..\firebase-auth-module\source\Firebase-Auth-Module.csproj", "{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Common", "..\..\firebase-common\source\Firebase-Common.csproj", "{865652D3-8D1A-4779-92FC-4C54719286B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Storage-Common", "..\..\firebase-storage-common\source\Firebase-Storage-Common.csproj", "{C360116C-0ED5-4E59-A974-E95F874B4398}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{661950EE-078E-4629-AF4F-C670AF19EC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{661950EE-078E-4629-AF4F-C670AF19EC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{661950EE-078E-4629-AF4F-C670AF19EC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{661950EE-078E-4629-AF4F-C670AF19EC46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62946D89-B6B1-4A38-A04D-C20912087EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62946D89-B6B1-4A38-A04D-C20912087EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62946D89-B6B1-4A38-A04D-C20912087EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62946D89-B6B1-4A38-A04D-C20912087EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{423414D9-6CB8-4AFF-8317-66AD03B6056D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{423414D9-6CB8-4AFF-8317-66AD03B6056D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{423414D9-6CB8-4AFF-8317-66AD03B6056D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{423414D9-6CB8-4AFF-8317-66AD03B6056D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F6BAE25-ADEB-468C-8384-AD655623C341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F6BAE25-ADEB-468C-8384-AD655623C341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F6BAE25-ADEB-468C-8384-AD655623C341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F6BAE25-ADEB-468C-8384-AD655623C341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C360116C-0ED5-4E59-A974-E95F874B4398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C360116C-0ED5-4E59-A974-E95F874B4398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C360116C-0ED5-4E59-A974-E95F874B4398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C360116C-0ED5-4E59-A974-E95F874B4398}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
