@@ -3,9 +3,9 @@
 //      https://dl-ssl.google.com/android/repository/addon.xml
 
 static class __GpsConsts {
-    public const string Url  = "https://dl-ssl.google.com/android/repository/google_m2repository_r32.zip";
-    public const string Sha1sum = "ae24bde9c8f732f4d13b72e70802be8c97dcfddf";
-    public const string Version = "9.4.0";
+    public const string Url  = "https://dl-ssl.google.com/android/repository/google_m2repository_r35.zip";
+    public const string Sha1sum = "209d1f3b4c5db966044436b793fb8fbd77a7eaf1";
+    public const string Version = "9.6.1";
     public const string WearVersion = "1.4.0";
     public const string PackageName = "Xamarin.GooglePlayServices";
 }
