@@ -11,11 +11,11 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>Xamarin.GooglePlayServices.Basement</AssemblyName>
-    <TargetFrameworkVersion>v4.1</TargetFrameworkVersion>
-    <JavaOptions>-XX:-UseSplitVerifier</JavaOptions>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <!-- <AndroidClassParser>class-parse</AndroidClassParser> -->
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
     <!-- <SignAssembly>true</SignAssembly>
-    <DelaySign>true</DelaySign>    
+    <DelaySign>true</DelaySign>
     <AssemblyOriginatorKeyFile>..\..\..\key-data\Xamarin-public.snk</AssemblyOriginatorKeyFile> -->
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>

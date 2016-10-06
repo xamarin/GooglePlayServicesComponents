@@ -12,7 +12,7 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>Xamarin.Android.Wearable</AssemblyName>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
-    <JavaOptions>-XX:-UseSplitVerifier</JavaOptions>
+    <AndroidClassParser>class-parse</AndroidClassParser>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
