@@ -20,11 +20,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <CustomCommands>
-      <CustomCommands>
-        <Command type="Execute" command="/Library/Frameworks/Mono.framework/Versions/4.2.3/lib/mono/xbuild/12.0/bin/xbuild.exe /t:Package LocationSample.csproj" workingdir="/Users/redth/xamarin/components/CI/AndroidGPS/location/samples/LocationSample/" />
-      </CustomCommands>
-    </CustomCommands>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
