@@ -9,19 +9,19 @@
 #addin nuget:?package=Cake.MonoApiTools
 
 // To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip
-var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_945200_r32.zip";
-var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_r32.zip";
+var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_9683000_r33.zip";
+var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_r36.zip";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/29.0.0.2/api-info.xml";
 
-var PLAY_COMPONENT_VERSION = "32.940.0.0";
-var PLAY_NUGET_VERSION = "32.940.0-beta3";
-var PLAY_AAR_VERSION = "9.4.0";
-var VERSION_DESC = "9.4.0";
+var PLAY_COMPONENT_VERSION = "32.961.0.0";
+var PLAY_NUGET_VERSION = "32.961.0-beta1";
+var PLAY_AAR_VERSION = "9.6.1";
+var VERSION_DESC = "9.6.1";
 
 var WEAR_COMPONENT_VERSION = "1.4.0.0";
-var WEAR_NUGET_VERSION = "1.4.0-beta3";
+var WEAR_NUGET_VERSION = "1.4.0-beta4";
 var WEAR_AAR_VERSION = PLAY_AAR_VERSION;
 
 var WEARABLE_SUPPORT_VERSION = "1.4.0";
@@ -36,6 +36,7 @@ var TARGET = Argument ("t", Argument ("target", "Default"));
 var AAR_INFOS = new [] {
 	new AarInfo ("play-services-auth", "android/gms/play-services-auth", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-auth-base", "android/gms/play-services-auth-base", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-awareness", "android/gms/play-services-awareness", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-base", "android/gms/play-services-base", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-basement", "android/gms/play-services-basement", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-ads", "android/gms/play-services-ads", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
@@ -47,7 +48,6 @@ var AAR_INFOS = new [] {
 	new AarInfo ("play-services-cast", "android/gms/play-services-cast", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-cast-framework", "android/gms/play-services-cast-framework", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-clearcut", "android/gms/play-services-clearcut", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-contextmanager", "android/gms/play-services-contextmanager", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-drive", "android/gms/play-services-drive", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-fitness", "android/gms/play-services-fitness", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-games", "android/gms/play-services-games", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
@@ -55,6 +55,7 @@ var AAR_INFOS = new [] {
 	new AarInfo ("play-services-gcm", "android/gms/play-services-gcm", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-identity", "android/gms/play-services-identity", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-iid", "android/gms/play-services-iid", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("play-services-instantapps", "android/gms/play-services-instantapps", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-location", "android/gms/play-services-location", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-maps", "android/gms/play-services-maps", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("play-services-nearby", "android/gms/play-services-nearby", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
@@ -130,10 +131,10 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./appindexing/source/bin/Release/Xamarin.GooglePlayServices.AppIndexing.dll" },
 				new OutputFileCopy { FromFile = "./auth/source/bin/Release/Xamarin.GooglePlayServices.Auth.dll" },
 				new OutputFileCopy { FromFile = "./auth-base/source/bin/Release/Xamarin.GooglePlayServices.Auth.Base.dll" },
+				new OutputFileCopy { FromFile = "./awareness/source/bin/Release/Xamarin.GooglePlayServices.Awareness.dll" },
 				new OutputFileCopy { FromFile = "./cast/source/bin/Release/Xamarin.GooglePlayServices.Cast.dll" },
 				new OutputFileCopy { FromFile = "./cast-framework/source/bin/Release/Xamarin.GooglePlayServices.Cast.Framework.dll" },
 				new OutputFileCopy { FromFile = "./clearcut/source/bin/Release/Xamarin.GooglePlayServices.Clearcut.dll" },
-				new OutputFileCopy { FromFile = "./contextmanager/source/bin/Release/Xamarin.GooglePlayServices.ContextManager.dll" },
 				new OutputFileCopy { FromFile = "./drive/source/bin/Release/Xamarin.GooglePlayServices.Drive.dll" },
 				new OutputFileCopy { FromFile = "./fitness/source/bin/Release/Xamarin.GooglePlayServices.Fitness.dll" },
 				new OutputFileCopy { FromFile = "./games/source/bin/Release/Xamarin.GooglePlayServices.Games.dll" },
@@ -141,6 +142,7 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./gcm/source/bin/Release/Xamarin.GooglePlayServices.Gcm.dll" },
 				new OutputFileCopy { FromFile = "./identity/source/bin/Release/Xamarin.GooglePlayServices.Identity.dll" },
 				new OutputFileCopy { FromFile = "./iid/source/bin/Release/Xamarin.GooglePlayServices.Iid.dll" },
+				new OutputFileCopy { FromFile = "./instantapps/source/bin/Release/Xamarin.GooglePlayServices.InstantApps.dll" },
 				new OutputFileCopy { FromFile = "./location/source/bin/Release/Xamarin.GooglePlayServices.Location.dll" },
 				new OutputFileCopy { FromFile = "./maps/source/bin/Release/Xamarin.GooglePlayServices.Maps.dll" },
 				new OutputFileCopy { FromFile = "./nearby/source/bin/Release/Xamarin.GooglePlayServices.Nearby.dll" },
@@ -213,10 +215,10 @@ var buildSpec = new BuildSpec {
 		new NuGetInfo { NuSpec = "./appinvite/nuget/Xamarin.GooglePlayServices.AppInvite.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./auth/nuget/Xamarin.GooglePlayServices.Auth.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./auth-base/nuget/Xamarin.GooglePlayServices.Auth.Base.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./awareness/nuget/Xamarin.GooglePlayServices.Awareness.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./cast/nuget/Xamarin.GooglePlayServices.Cast.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./cast-framework/nuget/Xamarin.GooglePlayServices.Cast.Framework.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./clearcut/nuget/Xamarin.GooglePlayServices.Clearcut.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./contextmanager/nuget/Xamarin.GooglePlayServices.ContextManager.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./drive/nuget/Xamarin.GooglePlayServices.Drive.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./fitness/nuget/Xamarin.GooglePlayServices.Fitness.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./games/nuget/Xamarin.GooglePlayServices.Games.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
@@ -224,6 +226,7 @@ var buildSpec = new BuildSpec {
 		new NuGetInfo { NuSpec = "./gcm/nuget/Xamarin.GooglePlayServices.Gcm.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./identity/nuget/Xamarin.GooglePlayServices.Identity.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./iid/nuget/Xamarin.GooglePlayServices.Iid.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./instantapps/nuget/Xamarin.GooglePlayServices.InstantApps.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./location/nuget/Xamarin.GooglePlayServices.Location.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./maps/nuget/Xamarin.GooglePlayServices.Maps.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./nearby/nuget/Xamarin.GooglePlayServices.Nearby.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
