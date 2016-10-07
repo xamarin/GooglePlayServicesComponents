@@ -8,12 +8,6 @@ license: ../../License.md
 icons:
   - ../../icons/play-services-plus_128x128.png
   - ../../icons/play-services-plus_512x512.png
-libraries:
-  android:
-    - ../../output/Xamarin.GooglePlayServices.Base.dll
-    - ../../output/Xamarin.GooglePlayServices.Basement.dll
-    - ../../output/Xamarin.GooglePlayServices.Tasks.dll
-    - ../../output/Xamarin.GooglePlayServices.Plus.dll
 is_shell: true
 packages:
   android:

@@ -8,9 +8,6 @@ is_shell: true
 icons:
   - ../../icons/play-services-support-wearable_128x128.png
   - ../../icons/play-services-support-wearable_512x512.png
-libraries:
-  android:
-    - ../../output/Xamarin.Android.Wearable.dll
 packages:
   android:
     - Xamarin.Android.Wear, Version=$wear-nuget-version$
