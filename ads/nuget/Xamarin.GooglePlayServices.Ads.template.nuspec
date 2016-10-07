@@ -21,12 +21,11 @@
       <dependency id="Xamarin.GooglePlayServices.Ads.Lite" version="[$version$]" />
       <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
-      <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
       <dependency id="Xamarin.GooglePlayServices.Clearcut" version="[$version$]" />
       <dependency id="Xamarin.GooglePlayServices.Gass" version="[$version$]" />
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Ads.dll" target="lib/MonoAndroid41" />
+    <file src="output/Xamarin.GooglePlayServices.Ads.dll" target="lib/MonoAndroid70" />
   </files>
 </package>

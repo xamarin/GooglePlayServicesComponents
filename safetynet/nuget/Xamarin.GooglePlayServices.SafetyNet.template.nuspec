@@ -23,6 +23,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.SafetyNet.dll" target="lib/MonoAndroid41" />
+    <file src="output/Xamarin.GooglePlayServices.SafetyNet.dll" target="lib/MonoAndroid70" />
   </files>
 </package>

@@ -20,10 +20,10 @@
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
-      <dependency id="Xamarin.Android.Support.v7.MediaRouter" version="23.1.1.1"/>
+      <dependency id="Xamarin.Android.Support.v7.MediaRouter" version="24.2.1-alpha1"/>
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Cast.dll" target="lib/MonoAndroid42" />
+    <file src="output/Xamarin.GooglePlayServices.Cast.dll" target="lib/MonoAndroid70" />
   </files>
 </package>

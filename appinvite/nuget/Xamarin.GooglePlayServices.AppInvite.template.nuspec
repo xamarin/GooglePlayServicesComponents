@@ -20,9 +20,10 @@
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+      <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.AppInvite.dll" target="lib/MonoAndroid41" />
+    <file src="output/Xamarin.GooglePlayServices.AppInvite.dll" target="lib/MonoAndroid70" />
   </files>
 </package>
