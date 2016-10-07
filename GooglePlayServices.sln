@@ -63,8 +63,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagManager", "tagmanager\so
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagManager.Api", "tagmanager-api\source\TagManager.Api.csproj", "{B94069F7-2BD5-4695-B7B7-EBAA1C496DD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpsBuildAll", "all\samples\GpsBuildAll\GpsBuildAll.csproj", "{A9BE4750-6DFD-412E-B998-26B725911CF3}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Firebase", "Firebase", "{1EC5651F-83A6-4862-AED2-6BE5103652D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Common", "firebase-common\source\Firebase-Common.csproj", "{865652D3-8D1A-4779-92FC-4C54719286B7}"
@@ -247,10 +245,6 @@ Global
 		{A7ADD277-FCAB-46D5-8F18-2E4BFFDA3AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7ADD277-FCAB-46D5-8F18-2E4BFFDA3AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7ADD277-FCAB-46D5-8F18-2E4BFFDA3AE7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A9BE4750-6DFD-412E-B998-26B725911CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9BE4750-6DFD-412E-B998-26B725911CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9BE4750-6DFD-412E-B998-26B725911CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9BE4750-6DFD-412E-B998-26B725911CF3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B02737A0-890C-4921-83A5-D77CFB8A6899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B02737A0-890C-4921-83A5-D77CFB8A6899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B02737A0-890C-4921-83A5-D77CFB8A6899}.Release|Any CPU.ActiveCfg = Release|Any CPU
