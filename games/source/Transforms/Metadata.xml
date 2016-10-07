@@ -26,6 +26,7 @@
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.GamesOptions']" name="managedName">GamesClass.GamesOptions</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.SignOutImpl']" name="managedName">GamesClass.SignOutImpl</attr>
 
+	<attr path="/api/package[@name='com.google.android.gms.games.appcontent']/interface[@name='AppContentUtils.AppContentRunner']" name="visibility">internal</attr>
 
 <!--	<attr path="/api/package[@name='com.google.android.gms.games']/interface[@name='']/method[@name='']/parameter[]" name="managedName"></attr>-->
 <attr path="/api/package[@name='com.google.android.gms.games.multiplayer']/interface[@name='OnInvitationReceivedListener']/method[@name='onInvitationReceived']/parameter[1]" name="managedName">invitation</attr>
