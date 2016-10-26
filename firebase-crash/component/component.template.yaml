@@ -32,5 +32,7 @@ samples:
           - Xamarin.Firebase.Common
           - Xamarin.Firebase.Iid
           - Xamarin.Firebase.Crash
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'Xamarin.GooglePlayServices.Basement.targets')]"
 local-nuget-repo: ../../output/
 no_build: true
