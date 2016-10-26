@@ -326,6 +326,15 @@ namespace Xamarin.GooglePlayServices.Tasks
             return null;
         }
 
+        public string GetStorageBucket (string packageName)
+        {
+            // google_storage_bucket:
+            // project_info/storage_bucket
+            if (ProjectInfo != null)
+                return ProjectInfo.StorageBucket;
+
+            return null;
+        }
     }
 }
 

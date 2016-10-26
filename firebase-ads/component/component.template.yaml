@@ -1,0 +1,40 @@
+version: $version$
+name: Firebase - Ads
+id: firebase-ads
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: AdMob by Google is an easy way to monetize mobile apps with targeted, in-app advertising.
+license: ../../License.md
+icons:
+  - ../../icons/firebase-ads_128x128.png
+  - ../../icons/firebase-ads_512x512.png
+is_shell: true
+packages:
+  android:
+    - Xamarin.Firebase.Ads, Version=$nuget-version$
+samples:
+  - name: "Firebase AdMob Quickstart"
+    path: ../../firebase-ads/samples/FirebaseAdmobQuickstart.sln
+    removeProjects:
+      - Base
+      - Basement
+      - Basement-BuildTasks
+      - Clearcut
+      - Gass
+      - Tasks
+      - Ads
+      - Ads.Lite
+    installNuGets:
+      - project: FirebaseAnalyticsQuickstart
+        packages:
+          - Xamarin.GooglePlayServices.Base
+          - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Clearcut
+          - Xamarin.GooglePlayServices.Gass
+          - Xamarin.GooglePlayServices.Tasks
+          - Xamarin.GooglePlayServices.Ads
+          - Xamarin.GooglePlayServices.Ads.Lite
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'Xamarin.GooglePlayServices.Basement.targets')]"
+local-nuget-repo: ../../output/
+no_build: true
