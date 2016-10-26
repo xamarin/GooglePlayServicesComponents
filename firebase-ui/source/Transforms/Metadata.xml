@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.firebase.ui.database']" name="managedName">Firebase.Ui.Database</attr>
+
+	<!-- Remove *-* obfuscated namespace. -->
+	<remove-node path="/api/package[@name='-']" />
+</metadata>
