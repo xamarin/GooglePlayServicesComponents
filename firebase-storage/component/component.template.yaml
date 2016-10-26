@@ -1,0 +1,44 @@
+version: $version$
+name: Firebase - Storage
+id: firebase-storage
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: Firebase Storage is built for app developers who need to store and serve user-generated content, such as photos or videos.
+license: ../../License.md
+icons:
+  - ../../icons/firebase-storage_128x128.png
+  - ../../icons/firebase-storage_512x512.png
+is_shell: true
+packages:
+  android:
+    - Xamarin.Firebase.Storage, Version=$nuget-version$
+samples:
+  - name: "Firebase Storage Quickstart"
+    path: ../../firebase-storage/samples/FirebaseStorageQuickstart.sln
+    removeProjects:
+      - Base
+      - Basement
+      - Basement-BuildTasks
+      - Tasks
+      - Firebase-Auth
+      - Firebase-Auth-Common
+      - Firebase-Auth-Module
+      - Firebase-Common
+      - Firebase-Storage
+      - Firebase-Storage-Common
+    installNuGets:
+      - project: FirebaseStorageQuickstart
+        packages:
+          - Xamarin.GooglePlayServices.Base
+          - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
+          - Xamarin.Firebase.Auth
+          - Xamarin.Firebase.Auth.Common
+          - Xamarin.Firebase.Auth.Module
+          - Xamarin.Firebase.Common
+          - Xamarin.Firebase.Storage
+          - Xamarin.Firebase.Storage.Common
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'Xamarin.GooglePlayServices.Basement.targets')]"
+local-nuget-repo: ../../output/
+no_build: true
