@@ -9,7 +9,7 @@
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.location.places.internal')]" />
 
-	<remove-node path="/api/package/class[contains(@name, 'zz') and not(@name = 'zzpr')]" /> <!-- and not(@name = 'zza') and not(@name = 'zza.zza')]" / -->
+	<remove-node path="/api/package/class[contains(@name, 'zz') and not(@name = 'zzpr') and not(@name = 'zza') and not(@name = 'zza.zza')]" />dd
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
@@ -25,6 +25,7 @@
 	<!-- Allowing zza classes allows a bit too much, so remove these specifically -->
 	<remove-node path="/api/package[@name='com.google.android.gms.location.places.personalized']/class[@name='zza']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.location']/class[@name='zza']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.location.places']/class[@name='zza']" />
 
 	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='AutocompletePredictionBuffer']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
 	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='PlaceBuffer']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
