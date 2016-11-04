@@ -37,7 +37,7 @@ Once you have created a `FirebaseAnalytics` instance, you can use it to log eith
 The following code logs a `SelectContent` Event when a user clicks on a specific element in your app.
 
 ```csharp
-var bundle = new Bundle`();
+var bundle = new Bundle();
 bundle.PutString (FirebaseAnalytics.Param.ItemId, id);
 bundle.PutString (FirebaseAnalytics.Param.ItemName, name);
 bundle.PutString (FirebaseAnalytics.Param.ContentType, "image");
