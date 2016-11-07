@@ -16,12 +16,12 @@ var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repos
 var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/29.0.0.2/api-info.xml";
 
 var PLAY_COMPONENT_VERSION = "32.961.0.0";
-var PLAY_NUGET_VERSION = "32.961.0-beta1";
+var PLAY_NUGET_VERSION = "32.961.0";
 var PLAY_AAR_VERSION = "9.6.1";
 var VERSION_DESC = "9.6.1";
 
 var WEAR_COMPONENT_VERSION = "1.4.0.0";
-var WEAR_NUGET_VERSION = "1.4.0-beta4";
+var WEAR_NUGET_VERSION = "1.4.0";
 var WEAR_AAR_VERSION = PLAY_AAR_VERSION;
 
 var WEARABLE_SUPPORT_VERSION = "1.4.0";
