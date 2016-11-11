@@ -3,4 +3,5 @@
 	<uses-sdk />
 	<application android:label="MultiPageSample" android:icon="@drawable/ic_logo">		
 	</application>
+	<uses-permission android:name="android.permission.INTERNET" />
 </manifest>
