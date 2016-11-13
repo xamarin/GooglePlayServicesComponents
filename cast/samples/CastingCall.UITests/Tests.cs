@@ -23,7 +23,7 @@ namespace CastingCall.UITests
                 .StartApp ();
         }
 
-        [Test]
+        //[Test]
         public void Repl ()
         {
             app.Repl ();
