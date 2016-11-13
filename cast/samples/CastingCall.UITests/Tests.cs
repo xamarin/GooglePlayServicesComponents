@@ -23,7 +23,7 @@ namespace CastingCall.UITests
                 .StartApp ();
         }
 
-        //[Test]
+        [Test]
         public void Repl ()
         {
             app.Repl ();
@@ -42,7 +42,7 @@ namespace CastingCall.UITests
 
             app.Tap (q => q.Id ("mediaRouteButton"));
 
-            app.WaitForElement (q => q.Id ("media_route_list"));
+            app.WaitForElement (q => q.Text("Cast to"));
 
             app.Screenshot ("Routes");
         }
