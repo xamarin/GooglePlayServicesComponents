@@ -329,6 +329,11 @@ Task ("externals")
 		CopyDirectory (path + "google-play-services/docs", path + "docs/");
 		DeleteDirectory (path + "google-play-services", true);
 	}
+
+	// Put the uitest.keystore in our artifacts for downstream jobs to use 
+	EnsureDirectoryExists ("./output");
+	if (FileExists ("./uitest.keystore"))
+		CopyFile ("./uitest.keystore", "./output/uitest.keystore");
 });
 
 Task ("diff")
