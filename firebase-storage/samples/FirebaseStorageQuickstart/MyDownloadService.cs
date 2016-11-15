@@ -95,25 +95,11 @@ namespace FirebaseStorageQuickstart
 		}
 	}
 
-	public class StreamProcessor : StreamDownloadTask.IStreamProcessor
+	public class StreamProcessor : Java.Lang.Object, StreamDownloadTask.IStreamProcessor
 	{
-		public IntPtr Handle
-		{
-			get
-			{
-				throw new NotImplementedException();
-			}
-		}
-
-		public void Dispose()
-		{
-			throw new NotImplementedException();
-		}
-
 		public void DoInBackground(StreamDownloadTask.TaskSnapshot state, Stream stream)
 		{
 			stream.Close();
-
 		}
 	}
 }
