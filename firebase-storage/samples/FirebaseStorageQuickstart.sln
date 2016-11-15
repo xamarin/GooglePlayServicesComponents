@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Storage-Common", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basement-BuildTasks", "..\..\basement\buildtasks\Basement-BuildTasks.csproj", "{21D99A15-AB98-4691-A45B-D236B2A91DEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseStorageQuickstart.UITests", "FirebaseStorageQuickstart.UITests\FirebaseStorageQuickstart.UITests.csproj", "{A2563445-8112-4278-B6B5-D00E94DB2BE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,5 +75,9 @@ Global
 		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2563445-8112-4278-B6B5-D00E94DB2BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2563445-8112-4278-B6B5-D00E94DB2BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2563445-8112-4278-B6B5-D00E94DB2BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2563445-8112-4278-B6B5-D00E94DB2BE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
