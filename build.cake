@@ -198,10 +198,14 @@ var buildSpec = new BuildSpec {
 		new DefaultSolutionBuilder { SolutionPath = "./support-wearable/samples/MultiPageSample.sln", BuildsOn = buildsOnWinMac },
 		new DefaultSolutionBuilder { SolutionPath = "./support-wearable/samples/WatchFaceSample.sln", BuildsOn = buildsOnWinMac },
 
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-ads/samples/FirebaseAdmobQuickstart.sln", BuildsOn = buildsOnWinMac },
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-analytics/samples/FirebaseAnalyticsQuickstart.sln", BuildsOn = buildsOnWinMac },
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-auth/samples/FirebaseAuthQuickstart.sln", BuildsOn = buildsOnWinMac },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-config/samples/FirebaseConfigQuickstart.sln", BuildsOn = buildsOnWinMac },
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-crash/samples/FirebaseCrashReportingQuickstart.sln", BuildsOn = buildsOnWinMac },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-invites/samples/FirebaseInvitesQuickstart.sln", BuildsOn = buildsOnWinMac },
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-messaging/samples/FirebaseMessagingQuickstart.sln", BuildsOn = buildsOnWinMac },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-storage/samples/FirebaseStorageQuickstart.sln", BuildsOn = buildsOnWinMac },
 	},
 
 	NuGets = new [] {
@@ -284,10 +288,14 @@ var buildSpec = new BuildSpec {
 		new Component { ManifestDirectory = "./wallet/component" },
 		new Component { ManifestDirectory = "./support-wearable/component" },
 
+		new Component { ManifestDirectory = "./firebase-ads/component" },
 		new Component { ManifestDirectory = "./firebase-analytics/component" },
 		new Component { ManifestDirectory = "./firebase-auth/component" },
+		new Component { ManifestDirectory = "./firebase-config/component" },
 		new Component { ManifestDirectory = "./firebase-crash/component" },
+		new Component { ManifestDirectory = "./firebase-invites/component" },
 		new Component { ManifestDirectory = "./firebase-messaging/component" },
+		new Component { ManifestDirectory = "./firebase-storage/component" },
 	}
 };
 
