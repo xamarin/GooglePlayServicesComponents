@@ -40,9 +40,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FirebaseInviteQuickstart\FirebaseInviteQuickstart.csproj">
+    <ProjectReference Include="..\FirebaseInvitesQuickstart\FirebaseInvitesQuickstart.csproj">
       <Project>{9DD2827E-7F79-49AC-A078-7CC2901A26EC}</Project>
-      <Name>FirebaseInviteQuickstart</Name>
+      <Name>FirebaseInvitesQuickstart</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
