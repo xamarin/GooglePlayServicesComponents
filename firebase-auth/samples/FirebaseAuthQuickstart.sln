@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth.Base", "..\..\auth-bas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth", "..\..\auth\source\Auth.csproj", "{A0CDF507-32B7-4994-8248-94FAB8646E35}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseAuthQuickstart.UITests", "FirebaseAuthQuickstart.UITests\FirebaseAuthQuickstart.UITests.csproj", "{AB8AA3E4-AE78-4976-841C-757827ABA3E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,5 +75,9 @@ Global
 		{A0CDF507-32B7-4994-8248-94FAB8646E35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0CDF507-32B7-4994-8248-94FAB8646E35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0CDF507-32B7-4994-8248-94FAB8646E35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8AA3E4-AE78-4976-841C-757827ABA3E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8AA3E4-AE78-4976-841C-757827ABA3E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8AA3E4-AE78-4976-841C-757827ABA3E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8AA3E4-AE78-4976-841C-757827ABA3E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

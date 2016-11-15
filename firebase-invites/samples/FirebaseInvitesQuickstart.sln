@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Analytics-Impl", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Analytics", "..\..\firebase-analytics\source\Firebase-Analytics.csproj", "{DC5BEB52-1715-4E53-88EF-2D4F1708E394}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseInvitesQuickstart.UITests", "FirebaseInvitesQuickstart.UITests\FirebaseInvitesQuickstart.UITests.csproj", "{325FAFCD-A286-4DB2-9D1B-BB3DC3674957}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,5 +51,9 @@ Global
 		{DC5BEB52-1715-4E53-88EF-2D4F1708E394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC5BEB52-1715-4E53-88EF-2D4F1708E394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC5BEB52-1715-4E53-88EF-2D4F1708E394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{325FAFCD-A286-4DB2-9D1B-BB3DC3674957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{325FAFCD-A286-4DB2-9D1B-BB3DC3674957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{325FAFCD-A286-4DB2-9D1B-BB3DC3674957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{325FAFCD-A286-4DB2-9D1B-BB3DC3674957}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

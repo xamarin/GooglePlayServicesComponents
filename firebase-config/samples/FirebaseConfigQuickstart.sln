@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseConfigQuickstart", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basement-BuildTasks", "..\..\basement\buildtasks\Basement-BuildTasks.csproj", "{21D99A15-AB98-4691-A45B-D236B2A91DEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseConfigQuickstart.UITests", "FirebaseConfigQuickstart.UITests\FirebaseConfigQuickstart.UITests.csproj", "{AC25FFCD-F756-4214-B921-E805DEB4D4C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,5 +57,9 @@ Global
 		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC25FFCD-F756-4214-B921-E805DEB4D4C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC25FFCD-F756-4214-B921-E805DEB4D4C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC25FFCD-F756-4214-B921-E805DEB4D4C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC25FFCD-F756-4214-B921-E805DEB4D4C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
