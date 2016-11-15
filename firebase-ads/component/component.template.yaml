@@ -25,7 +25,7 @@ samples:
       - Ads
       - Ads.Lite
     installNuGets:
-      - project: FirebaseAnalyticsQuickstart
+      - project: FirebaseAdmobQuickstart
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
