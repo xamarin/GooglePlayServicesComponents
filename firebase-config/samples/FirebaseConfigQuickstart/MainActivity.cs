@@ -11,7 +11,7 @@ using System.Collections.Generic;
 namespace Config
 {
 	[Activity(Label = "Config", MainLauncher = true), IntentFilter(new[] { Intent.ActionView }, Categories = new[] { Intent.ActionMain, Intent.CategoryLauncher })]
-	public class MainActivity : AppCompatActivity, IOnCompleteListener
+	public class MainActivity : AppCompatActivity
 	{
 		private static string TAG = "MainActivity";
 
@@ -25,7 +25,7 @@ namespace Config
 		private FirebaseRemoteConfig mFirebaseRemoteConfig;
 		private TextView mPriceTextView;
 
-		protected override void OnCreate(Bundle savedInstanceState)
+		protected override async void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.activity_main);
@@ -33,9 +33,9 @@ namespace Config
 			mPriceTextView = (TextView)FindViewById(Resource.Id.priceView);
 
 			Button fetchButton = (Button)FindViewById(Resource.Id.fetchButton);
-			fetchButton.Click += delegate
+			fetchButton.Click += async delegate
 			{
-				FetchDiscount();
+				await FetchDiscount();
 			};
 
 
@@ -64,13 +64,13 @@ namespace Config
 			// [END set_default_values]
 
 			// Fetch discount config.
-			FetchDiscount();
+			await FetchDiscount();
 		}
 
 		/**
      * Fetch discount from server.
      */
-		private void FetchDiscount()
+		private async System.Threading.Tasks.Task FetchDiscount()
 		{
 			mPriceTextView.SetText(LOADING_PHRASE_CONFIG_KEY, null);
 
@@ -82,30 +82,24 @@ namespace Config
 				cacheExpiration = 0;
 			}
 
-			// [START fetch_config_with_callback]
-			// cacheExpirationSeconds is set to cacheExpiration here, indicating that any previously
-			// fetched and cached config would be considered expired because it would have been fetched
-			// more than cacheExpiration seconds ago. Thus the next fetch would go to the server unless
-			// throttling is in progress. The default expiration duration is 43200 (12 hours).
-			mFirebaseRemoteConfig.Fetch(cacheExpiration).AddOnCompleteListener(this);
-		}
 
-		public void OnComplete(Task task)
-		{
-			if (task.IsSuccessful)
+			try
 			{
-				Toast.MakeText(this, "Fetch Succeeded", ToastLength.Short).Show();
+				await mFirebaseRemoteConfig.FetchAsync(cacheExpiration);
+
+				Toast.MakeText(this, "Fetch Succeeded", ToastLength.Long).Show();
 
 				// Once the config is successfully fetched it must be activated before newly fetched
 				// values are returned.
 				mFirebaseRemoteConfig.ActivateFetched();
 			}
-			else {
-				Toast.MakeText(this, "Fetch Failed", ToastLength.Short).Show();
+			catch
+			{
+				Toast.MakeText(this, "Fetch Failed", ToastLength.Long).Show();
 			}
+
 			DisplayPrice();
 		}
-		// [END fetch_config_with_callback]
 
 		/**
 	* Display price with discount applied if promotion is on. Otherwise display original price.
