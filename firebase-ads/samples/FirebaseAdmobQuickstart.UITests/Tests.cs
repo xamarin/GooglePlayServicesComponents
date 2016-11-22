@@ -52,7 +52,7 @@ namespace FirebaseAdmobQuickstart.UITests
 
             app.Tap(q => q.Id("load_interstitial_button"));
 
-            app.WaitForElement(q => q.Text("Interstitial close button"));
+            app.WaitForElement(q => q.Marked("Interstitial close button"));
 
             app.Screenshot("Interstitial Ad");
         }

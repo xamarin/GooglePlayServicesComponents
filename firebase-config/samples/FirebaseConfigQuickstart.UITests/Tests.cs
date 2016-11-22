@@ -42,6 +42,8 @@ namespace FirebaseConfigQuickstart.UITests
         {
             app.WaitForElement(q => q.Id("fetchButton"));
 
+            app.Screenshot("Launch");
+
             app.Tap(q => q.Id("fetchButton"));
 
             app.Screenshot("Fetching");

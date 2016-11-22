@@ -35,6 +35,7 @@ namespace FirebaseAnalyticsQuickstart.UITests
             app.Screenshot("Launch");
         }
 
+        [Test]
         public void ChooseItem()
         {
             app.Screenshot("Launch");
