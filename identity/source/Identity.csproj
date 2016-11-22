@@ -12,6 +12,7 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>Xamarin.GooglePlayServices.Identity</AssemblyName>
     <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <AndroidClassParser>jar2xml</AndroidClassParser>
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
     <!-- <SignAssembly>true</SignAssembly>
     <DelaySign>true</DelaySign>

@@ -12,7 +12,7 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>Xamarin.Firebase.Database</AssemblyName>
     <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
-    <!--<AndroidClassParser>class-parse</AndroidClassParser>-->
+    <AndroidClassParser>jar2xml</AndroidClassParser>
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>

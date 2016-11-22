@@ -13,6 +13,7 @@
     <AssemblyName>Xamarin.GooglePlayServices.Basement</AssemblyName>
     <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <!-- <AndroidClassParser>class-parse</AndroidClassParser> -->
+    <AndroidClassParser>jar2xml</AndroidClassParser>
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
     <!-- <SignAssembly>true</SignAssembly>
     <DelaySign>true</DelaySign>
