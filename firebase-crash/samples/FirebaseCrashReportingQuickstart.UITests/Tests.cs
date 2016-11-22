@@ -32,7 +32,27 @@ namespace FirebaseCrashReportingQuickstart.UITests
         [Test]
         public void AppLaunches()
         {
+            app.WaitForElement(q => q.Id("crashButton"));
+
             app.Screenshot("Launch");
+        }
+
+        [Test]
+        public void CatchCrash()
+        {
+            app.WaitForElement(q => q.Id("crashButton"));
+
+            app.Screenshot("Launch");
+
+            app.Tap(q => q.Id("catchCrashCheckBox"));
+
+            app.Screenshot("Catch Crash");
+
+            app.Tap(q => q.Id("crashButton"));
+
+            app.WaitForElement(q => q.Id("crashButton"));
+
+            app.Screenshot("Caught Crash");
         }
     }
 }

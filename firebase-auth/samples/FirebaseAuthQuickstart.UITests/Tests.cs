@@ -32,7 +32,29 @@ namespace FirebaseAuthQuickstart.UITests
         [Test]
         public void AppLaunches()
         {
+            app.WaitForElement(q => q.Text("AnonymousAuthActivity"));
+
             app.Screenshot("Launch");
+        }
+
+        [Test]
+        public void AnonymousAuth()
+        {
+            app.WaitForElement(q => q.Text("AnonymousAuthActivity"));
+
+            app.Screenshot("Launch");
+
+            app.Tap(q => q.Text("AnonymousAuthActivity"));
+
+            app.WaitForElement(q => q.Text("Anonymous Sign In"));
+
+            app.Tap(q => q.Id("button_anonymous_sign_in"));
+
+            System.Threading.Thread.Sleep(500);
+
+            app.WaitForNoElement(q => q.Id("progress"));
+
+            app.Screenshot("Signed In");
         }
     }
 }

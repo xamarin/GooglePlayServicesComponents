@@ -32,7 +32,23 @@ namespace FirebaseInvitesQuickstart.UITests
         [Test]
         public void AppLaunches()
         {
+            app.WaitForElement(q => q.Id("invite_button"));
+
             app.Screenshot("Launch");
+        }
+
+        [Test]
+        public void InviteFriends()
+        {
+            app.WaitForElement(q => q.Id("invite_button"));
+
+            app.Screenshot("Launch");
+
+            app.Tap(q => q.Id("invite_button"));
+
+            System.Threading.Thread.Sleep(3000);
+
+            app.Screenshot("Invite Screen");
         }
     }
 }

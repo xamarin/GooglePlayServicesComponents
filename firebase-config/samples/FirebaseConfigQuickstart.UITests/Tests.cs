@@ -32,7 +32,23 @@ namespace FirebaseConfigQuickstart.UITests
         [Test]
         public void AppLaunches()
         {
+            app.WaitForElement(q => q.Id("priceView"));
+
             app.Screenshot("Launch");
+        }
+
+        [Test]
+        public void FetchPrice()
+        {
+            app.WaitForElement(q => q.Id("fetchButton"));
+
+            app.Tap(q => q.Id("fetchButton"));
+
+            app.Screenshot("Fetching");
+
+            app.WaitForElement(q => q.Text("Fetch Succeeded"));
+
+            app.Screenshot("Fetched");
         }
     }
 }

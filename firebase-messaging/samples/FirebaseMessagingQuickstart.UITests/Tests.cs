@@ -32,7 +32,21 @@ namespace FirebaseMessagingQuickstart.UITests
         [Test]
         public void AppLaunches()
         {
+            app.WaitForElement(q => q.Id("logTokenButton"));
+
             app.Screenshot("Launch");
+        }
+
+        [Test]
+        public void FetchToken()
+        {
+            app.WaitForElement(q => q.Id("logTokenButton"));
+
+            app.Screenshot("Launch");
+
+            app.Tap(q => q.Id("logTokenButton"));
+
+            app.Screenshot("Logged Token");
         }
     }
 }
