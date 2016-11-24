@@ -5,7 +5,7 @@ using Android.App;
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle ("Xamarin.GooglePlayServices.ContextManager")]
+[assembly: AssemblyTitle ("Xamarin.GooglePlayServices.Awareness")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("Microsoft Corporation")]
@@ -44,5 +44,5 @@ using Android.App;
 //      https://dl-ssl.google.com/android/repository/addon.xml
 
 static class __Consts {
-    public const string AarPath = "m2repository/com/google/android/gms/play-services-contextmanager/" + __GpsConsts.Version + "/play-services-contextmanager-" + __GpsConsts.Version + ".aar";
+    public const string AarPath = "m2repository/com/google/android/gms/play-services-awareness/" + __GpsConsts.Version + "/play-services-awareness-" + __GpsConsts.Version + ".aar";
 }
