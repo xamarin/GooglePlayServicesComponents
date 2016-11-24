@@ -49,4 +49,8 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
+	<!-- Fix types in method calls -->
+	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='GoogleApiClient.Builder']/method[@name='addApi']/parameter[2]" name="managedType">Android.Gms.Common.Apis.Api.IApiOptionsHasOptions</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='GoogleApiClient.Builder']/method[@name='addApiIfAvailable' and count(parameter)=3]/parameter[2]" name="managedType">Android.Gms.Common.Apis.Api.IApiOptionsHasOptions</attr>
+
 </metadata>
