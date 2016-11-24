@@ -3,4 +3,5 @@
 	<uses-sdk android:minSdkVersion="21" />
 	<application android:label="Panorama Sample">
 	</application>
+	<uses-permission android:name="android.permission.INTERNET" />
 </manifest>

@@ -4,15 +4,10 @@ id: googleplayservices-appinvite
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: Enable your users to share your app with people they know.
-license: ../../component/License.md
+license: ../../License.md
 icons:
-  - icons/googleplayservices-appinvite_128x128.png
-  - icons/googleplayservices-appinvite_512x512.png
-libraries:
-  android:
-    - ../../output/Xamarin.GooglePlayServices.AppInvite.dll
-    - ../../output/Xamarin.GooglePlayServices.Base.dll
-    - ../../output/Xamarin.GooglePlayServices.Basement.dll
+  - ../../icons/play-services-appinvite_128x128.png
+  - ../../icons/play-services-appinvite_512x512.png
 is_shell: true
 packages:
   android:
@@ -21,14 +16,16 @@ samples:
   - name: "AppInvite Sample"
     path: ../../appinvite/samples/AppInviteSample.sln
     removeProjects:
-      - Xamarin.GooglePlayServices.Base
-      - Xamarin.GooglePlayServices.Basement
-      - Xamarin.GooglePlayServices.AppInvite
+      - Base
+      - Basement
+      - Tasks
+      - AppInvite
     installNuGets:
       - project: AppInviteSample
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
           - Xamarin.GooglePlayServices.AppInvite
 local-nuget-repo: ../../output/
 no_build: true

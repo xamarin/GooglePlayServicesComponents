@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.Plus</id>
+    <title>Xamarin Google Play Services - Plus</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - Plus $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - Plus $aar-version$
+
+      Create a more engaging experience and connect with more users by integrating social into your Android app.
+    </description>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <projectUrl>http://components.xamarin.com/view/googleplayservices-plus/</projectUrl>
+    <licenseUrl>http://components.xamarin.com/license/googleplayservices-plus/</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-plus_128x128.png</iconUrl>
+    <dependencies>
+      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.GooglePlayServices.Plus.dll" target="lib/MonoAndroid70" />
+  </files>
+</package>

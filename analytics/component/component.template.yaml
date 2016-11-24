@@ -4,14 +4,10 @@ id: googleplayservices-analytics
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: Collect data from your mobile apps.
-license: ../../component/License.md
+license: ../../License.md
 icons:
-  - icons/googleplayservices-analytics_128x128.png
-  - icons/googleplayservices-analytics_512x512.png
-libraries:
-  android:
-    - ../../output/Xamarin.GooglePlayServices.Analytics.dll
-    - ../../output/Xamarin.GooglePlayServices.Basement.dll
+  - ../../icons/play-services-analytics_128x128.png
+  - ../../icons/play-services-analytics_512x512.png
 is_shell: true
 packages:
   android:
@@ -20,12 +16,18 @@ samples:
   - name: "Analytics Sample"
     path: ../../analytics/samples/AnalyticsSample.sln
     removeProjects:
-      - Xamarin.GooglePlayServices.Basement
-      - Xamarin.GooglePlayServices.Analytics
+      - Base
+      - Basement
+      - Tasks
+      - Analytics
+      - Analytics.Impl
     installNuGets:
       - project: AnalyticsSample
         packages:
+          - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
           - Xamarin.GooglePlayServices.Analytics
+          - Xamarin.GooglePlayServices.Analytics.Impl
 local-nuget-repo: ../../output/
 no_build: true

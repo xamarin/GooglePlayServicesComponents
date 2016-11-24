@@ -16,6 +16,9 @@ namespace Xamarin.GooglePlayServices.Tasks
 
         public string IntermediateOutputPrefix { get; set; }
 
+        [Output]
+        public ITaskItem[] GoogleServicesGeneratedResources { get; set; }
+
         [Required]
         public string AndroidPackageName { get; set; }
 
@@ -32,9 +35,14 @@ namespace Xamarin.GooglePlayServices.Tasks
         {
             Log.LogMessage ("Started ProcessGoogleServicesJson...");
 
+            Log.LogMessage ("Android Package Name: {0}", AndroidPackageName);
+
             // Paths to write resource files to
             var xmlPath = Path.Combine (MonoAndroidResDirIntermediate, "xml", RESFILE_XML);
             var valuesPath = Path.Combine (MonoAndroidResDirIntermediate, "values", RESFILE_VALUES);
+
+            var wroteXmlPath = false;
+            var wroteValuesPath = false;
 
             if (GoogleServicesJsons == null || !GoogleServicesJsons.Any ()) {
                 Log.LogMessage ("No GoogleServicesJson Build Action items specified, skipping task.");
@@ -49,26 +57,28 @@ namespace Xamarin.GooglePlayServices.Tasks
 
             var gsPath = CleanPath (gsItem.ItemSpec);
 
-
             GoogleServices googleServices;
 
             try {
-                var serializer = new DataContractJsonSerializer (typeof (GoogleServices));
-                using (var sr = System.IO.File.OpenRead (gsPath)){
-                    googleServices = serializer.ReadObject (sr) as GoogleServices;
-                    if (googleServices == null)
-                        throw new NullReferenceException ();
+                using (var sr = File.OpenRead (gsPath)) {
+                    googleServices = GoogleServicesJsonProcessor.ProcessJson (AndroidPackageName, sr);
                 }
+                if (googleServices == null)
+                    throw new NullReferenceException ();
             } catch (Exception ex) {
                 Log.LogError ("Failed to Read or Deserialize GoogleServicesJson file: {0}{1}{2}", gsPath, Environment.NewLine, ex);
                 DeleteFiles (valuesPath, xmlPath);
                 return false;
             }
 
-
             if (string.IsNullOrEmpty (AndroidPackageName)) {
                 Log.LogError ("Android Package Name not specified for project");
                 return false;
+            }
+
+            var resolvedClientInfo = googleServices.GetClient (AndroidPackageName);
+            if (resolvedClientInfo == null) {
+                Log.LogWarning ("Failed to find client_info in google-services.json matching package name: {0}", AndroidPackageName);
             }
 
             var valuesItems = new Dictionary <string, string> {
@@ -76,13 +86,19 @@ namespace Xamarin.GooglePlayServices.Tasks
                 { "gcm_defaultSenderId", googleServices.GetDefaultGcmSenderId () },
                 { "google_app_id", googleServices.GetGoogleAppId (AndroidPackageName) },
                 { "test_banner_ad_unit_id", googleServices.GetTestBannerAdUnitId (AndroidPackageName) },
-                { "test_interstitial_ad_unit_id", googleServices.GetTestInterstitialAdUnitId (AndroidPackageName) }
+                { "test_interstitial_ad_unit_id", googleServices.GetTestInterstitialAdUnitId (AndroidPackageName) },
+                { "default_web_client_id", googleServices.GetDefaultWebClientId (AndroidPackageName) },
+                { "firebase_database_url", googleServices.GetFirebaseDatabaseUrl () },
+                { "google_api_key", googleServices.GetGoogleApiKey (AndroidPackageName) },
+                { "google_crash_reporting_api_key", googleServices.GetCrashReportingApiKey (AndroidPackageName) },
+                { "google_storage_bucket", googleServices.GetStorageBucket (AndroidPackageName) },
             };
-                
+
             // We only want to create the file if not all of these values are missing
             if (valuesItems.Any (kvp => !string.IsNullOrEmpty (kvp.Value))) {
                 Log.LogMessage ("Writing Resource File: {0}", valuesPath);
                 WriteResourceDoc (valuesPath, valuesItems);
+                wroteValuesPath = true;
                 Log.LogMessage ("Wrote Resource File: {0}", valuesPath);
             } else {
                 if (File.Exists (valuesPath)) {
@@ -103,6 +119,7 @@ namespace Xamarin.GooglePlayServices.Tasks
             if (xmlItems.Any (kvp => !string.IsNullOrEmpty (kvp.Value))) {
                 Log.LogMessage ("Writing Resource File: {0}", xmlPath);
                 WriteResourceDoc (xmlPath, xmlItems);
+                wroteXmlPath = true;
                 Log.LogMessage ("Wrote Resource File: {0}", xmlPath);
             } else {
                 // If no 
@@ -116,6 +133,15 @@ namespace Xamarin.GooglePlayServices.Tasks
                 }
             }
 
+            var outputFiles = new List<ITaskItem> ();
+            if (wroteXmlPath)
+                outputFiles.Add (new TaskItem (xmlPath));
+            if (wroteValuesPath)
+                outputFiles.Add (new TaskItem (valuesPath));
+
+            if (outputFiles.Any ())
+                GoogleServicesGeneratedResources = outputFiles.ToArray ();
+            
             Log.LogMessage ("Finished ProcessGoogleServicesJson...");
             return true;
         }

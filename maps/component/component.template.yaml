@@ -4,15 +4,10 @@ id: googleplayservices-maps
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: "Add custom markers, styled maps, 3D buildings, indoor floor plans, street view, satellite imagery, and more to your Android app."
-license: ../../component/License.md
+license: ../../License.md
 icons:
-  - icons/googleplayservices-maps_128x128.png
-  - icons/googleplayservices-maps_512x512.png
-libraries:
-  android:
-    - ../../output/Xamarin.GooglePlayServices.Base.dll
-    - ../../output/Xamarin.GooglePlayServices.Basement.dll
-    - ../../output/Xamarin.GooglePlayServices.Maps.dll
+  - ../../icons/play-services-maps_128x128.png
+  - ../../icons/play-services-maps_512x512.png
 is_shell: true
 packages:
   android:
@@ -21,14 +16,16 @@ samples:
   - name: "Maps Sample"
     path: ../../maps/samples/MapsSample.sln
     removeProjects:
-      - Xamarin.GooglePlayServices.Base
-      - Xamarin.GooglePlayServices.Basement
-      - Xamarin.GooglePlayServices.Maps
+      - Base
+      - Basement
+      - Tasks
+      - Maps
     installNuGets:
       - project: MapsSample
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
           - Xamarin.GooglePlayServices.Maps
 local-nuget-repo: ../../output/
 no_build: true

@@ -8,9 +8,9 @@ using Android.App;
 [assembly: AssemblyTitle ("GooglePlayServices.Wearable")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("")]
+[assembly: AssemblyCompany ("Microsoft Corporation")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("redth")]
+[assembly: AssemblyCopyright ("Copyright © Microsoft Corporation")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 
@@ -28,21 +28,22 @@ using Android.App;
 
 
 [assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-    PackageName = __Consts.PackageName,
+    PackageName = __GpsConsts.PackageName,
     SourceUrl = __GpsConsts.Url,
     EmbeddedArchive = __Consts.AarPath,
-    Version = __GpsConsts.Version)]
+    Version = __GpsConsts.Version,
+    Sha1sum = __GpsConsts.Sha1sum)]
 // AppCompat-v7 resources
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-    PackageName = __Consts.PackageName,
+    PackageName = __GpsConsts.PackageName,
     SourceUrl   = __GpsConsts.Url,
     EmbeddedArchive = __Consts.AarPath,
-    Version     = __GpsConsts.Version)]
+    Version     = __GpsConsts.Version,
+    Sha1sum = __GpsConsts.Sha1sum)]
 
 // Google Addon feed with GPS in it:
 //      https://dl-ssl.google.com/android/repository/addon.xml
 
 static class __Consts {
-    public const string PackageName = "GPS Wearable";
     public const string AarPath = "m2repository/com/google/android/gms/play-services-wearable/" + __GpsConsts.Version + "/play-services-wearable-" + __GpsConsts.Version + ".aar";
 }

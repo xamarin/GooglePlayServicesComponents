@@ -4,15 +4,10 @@ id: googleplayservices-vision
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: "Find objects in photos and video, using real-time on-device vision technology."
-license: ../../component/License.md
+license: ../../License.md
 icons:
-  - icons/googleplayservices-vision_128x128.png
-  - icons/googleplayservices-vision_512x512.png
-libraries:
-  android:
-    - ../../output/Xamarin.GooglePlayServices.Base.dll
-    - ../../output/Xamarin.GooglePlayServices.Basement.dll
-    - ../../output/Xamarin.GooglePlayServices.Vision.dll
+  - ../../icons/play-services-vision_128x128.png
+  - ../../icons/play-services-vision_512x512.png
 is_shell: true
 packages:
   android:
@@ -21,14 +16,16 @@ samples:
   - name: "Vision Sample"
     path: ../../vision/samples/VisionSample.sln
     removeProjects:
-      - Xamarin.GooglePlayServices.Base
-      - Xamarin.GooglePlayServices.Basement
-      - Xamarin.GooglePlayServices.Vision
+      - Base
+      - Basement
+      - Tasks
+      - Vision
     installNuGets:
       - project: VisionSample
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
           - Xamarin.GooglePlayServices.Vision
 local-nuget-repo: ../../output/
 no_build: true

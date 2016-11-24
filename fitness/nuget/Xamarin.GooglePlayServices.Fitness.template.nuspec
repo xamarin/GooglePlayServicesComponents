@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.Fitness</id>
+    <title>Xamarin Google Play Services - Fitness</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - Fitness $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - Fitness $aar-version$
+
+      Google Fit is an open platform that lets users control their fitness data, developers build smarter apps, and manufacturers focus on creating amazing devices.
+    </description>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <projectUrl>http://components.xamarin.com/view/googleplayservices-fitness/</projectUrl>
+    <licenseUrl>http://components.xamarin.com/license/googleplayservices-fitness/</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-fitness_128x128.png</iconUrl>
+    <dependencies>
+      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+      <dependency id="Xamarin.GooglePlayServices.Location" version="[$version$]"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.GooglePlayServices.Fitness.dll" target="lib/MonoAndroid70" />
+  </files>
+</package>

@@ -3,10 +3,10 @@
 	<attr path="/api/package[@name='com.google.android.gms.location']" name="managedName">Android.Gms.Location</attr>
 	<attr path="/api/package[@name='com.google.android.gms.location.internal']" name="managedName">Android.Gms.Location.Internal</attr>
 <!--	<attr path="/api/package[@name='com.google.android.gms.location.copresence.internal']" name="managedName">Android.Gms.Location.Copresence.Internal</attr>-->
-	<attr path="/api/package[@name='com.google.android.gms.location.places']" name="managedName">Android.Gms.Location.Places</attr>
+	<!--<attr path="/api/package[@name='com.google.android.gms.location.places']" name="managedName">Android.Gms.Location.Places</attr>
 	<attr path="/api/package[@name='com.google.android.gms.location.places.personalized']" name="managedName">Android.Gms.Location.Places.Personalized</attr>
 	<attr path="/api/package[@name='com.google.android.gms.location.places.ui']" name="managedName">Android.Gms.Location.Places.UI</attr>
-
+-->
 	<!-- Fix names the same as the namespace -->
 	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='Places']" name="managedName">PlacesClass</attr>
 	
@@ -24,10 +24,17 @@
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[@name='CREATOR' and contains(@type, 'zz')]" />
 
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
 	<!-- Allowing zza classes allows a bit too much, so remove these specifically -->
 <!--	<remove-node path="/api/package[@name='com.google.android.gms.location.copresence.internal']/class[@name='zza']" />-->
-<!--	<remove-node path="/api/package[@name='com.google.android.gms.location.places.personalized']/class[@name='zza']" />-->
+	<remove-node path="/api/package[@name='com.google.android.gms.location.places.personalized']/class[@name='zza']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.location']/class[@name='zza']" />
+
 
 	<attr path="/api/package[@name='com.google.android.gms.location']/interface[@name='LocationListener']/method[@name='onLocationChanged']/parameter[1]" name="managedName">location</attr>
 

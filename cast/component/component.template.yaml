@@ -4,15 +4,10 @@ id: googleplayservices-cast
 publisher: Xamarin Inc.
 publisher-url: http://xamarin.com
 summary: Extend your app to the big screen with Google Cast
-license: ../../component/License.md
+license: ../../License.md
 icons:
-  - icons/googleplayservices-cast_128x128.png
-  - icons/googleplayservices-cast_512x512.png
-libraries:
-  android:
-    - ../../output/Xamarin.GooglePlayServices.Base.dll
-    - ../../output/Xamarin.GooglePlayServices.Basement.dll
-    - ../../output/Xamarin.GooglePlayServices.Cast.dll
+  - ../../icons/play-services-cast_128x128.png
+  - ../../icons/play-services-cast_512x512.png
 is_shell: true
 packages:
   android:
@@ -21,14 +16,16 @@ samples:
   - name: "Casting Call"
     path: ../../cast/samples/CastingCall.sln
     removeProjects:
-      - Xamarin.GooglePlayServices.Base
-      - Xamarin.GooglePlayServices.Basement
-      - Xamarin.GooglePlayServices.Cast
+      - Base
+      - Basement
+      - Tasks
+      - Cast
     installNuGets:
       - project: CastingCall
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
           - Xamarin.GooglePlayServices.Cast
 local-nuget-repo: ../../output/
 no_build: true

@@ -1,0 +1,59 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseMessagingQuickstart", "FirebaseMessagingQuickstart\FirebaseMessagingQuickstart.csproj", "{8DA9B5D6-9B2C-4432-B9DE-8EBDECEB3E53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basement-BuildTasks", "..\..\basement\buildtasks\Basement-BuildTasks.csproj", "{21D99A15-AB98-4691-A45B-D236B2A91DEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basement", "..\..\basement\source\Basement.csproj", "{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "..\..\tasks\source\Tasks.csproj", "{53F87D88-8871-41A2-9F81-B79AB02FEC24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Common", "..\..\firebase-common\source\Firebase-Common.csproj", "{865652D3-8D1A-4779-92FC-4C54719286B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Iid", "..\..\firebase-iid\source\Firebase-Iid.csproj", "{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Messaging", "..\source\Firebase-Messaging.csproj", "{2E333450-68BD-48C5-9540-CFA7A053DCA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseMessagingQuickstart.UITests", "FirebaseMessagingQuickstart.UITests\FirebaseMessagingQuickstart.UITests.csproj", "{EE524EE4-64BB-42C4-877B-FBCEAA29D3A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DA9B5D6-9B2C-4432-B9DE-8EBDECEB3E53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA9B5D6-9B2C-4432-B9DE-8EBDECEB3E53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA9B5D6-9B2C-4432-B9DE-8EBDECEB3E53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA9B5D6-9B2C-4432-B9DE-8EBDECEB3E53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E333450-68BD-48C5-9540-CFA7A053DCA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E333450-68BD-48C5-9540-CFA7A053DCA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E333450-68BD-48C5-9540-CFA7A053DCA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E333450-68BD-48C5-9540-CFA7A053DCA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE524EE4-64BB-42C4-877B-FBCEAA29D3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE524EE4-64BB-42C4-877B-FBCEAA29D3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE524EE4-64BB-42C4-877B-FBCEAA29D3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE524EE4-64BB-42C4-877B-FBCEAA29D3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
