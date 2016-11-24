@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.AppIndexing</id>
+    <title>Xamarin Google Play Services - App Indexing</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - AppIndexing $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - AppIndexing $aar-version$
+
+      App Indexing helps you get your app found in Google Search. Once your app is indexed, mobile users who search for content related to your app can see an install button to your Android app in Search results. This helps you increase your install base.
+    </description>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <projectUrl>http://components.xamarin.com/view/googleplayservices-appindexing/</projectUrl>
+    <licenseUrl>http://components.xamarin.com/license/googleplayservices-appindexing/</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-appindexing_128x128.png</iconUrl>
+    <dependencies>
+      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
+      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+      <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
+      <dependency id="Xamarin.Firebase.Common" version="[$version$]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.GooglePlayServices.AppIndexing.dll" target="lib/MonoAndroid70" />
+  </files>
+</package>

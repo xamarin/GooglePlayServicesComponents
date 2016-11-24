@@ -8,9 +8,9 @@ using Android.App;
 [assembly: AssemblyTitle ("Xamarin.GooglePlayServices.Basement")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("Xamarin")]
+[assembly: AssemblyCompany ("Microsoft Corporation")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("Xamarin")]
+[assembly: AssemblyCopyright ("Copyright © Microsoft Corporation")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 
@@ -26,25 +26,23 @@ using Android.App;
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
 
-[assembly:MetaData ("com.google.android.gms.version", Value = "@integer/google_play_services_version")]
-
 [assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-    PackageName = __Consts.PackageName,
+    PackageName = __GpsConsts.PackageName,
     SourceUrl = __GpsConsts.Url,
     EmbeddedArchive = __Consts.AarPath,
-    Version = __GpsConsts.Version)]
+    Version = __GpsConsts.Version,
+    Sha1sum = __GpsConsts.Sha1sum)]
 // AppCompat-v7 resources
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-    PackageName = __Consts.PackageName,
+    PackageName = __GpsConsts.PackageName,
     SourceUrl   = __GpsConsts.Url,
     EmbeddedArchive = __Consts.AarPath,
-    Version     = __GpsConsts.Version)]
+    Version     = __GpsConsts.Version,
+    Sha1sum = __GpsConsts.Sha1sum)]
 
 // Google Addon feed with GPS in it:
 //      https://dl-ssl.google.com/android/repository/addon.xml
 
 static class __Consts {
-    public const string PackageName = "GPS Basement";
     public const string AarPath = "m2repository/com/google/android/gms/play-services-basement/" + __GpsConsts.Version + "/play-services-basement-" + __GpsConsts.Version + ".aar";
 }
-    

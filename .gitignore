@@ -15,6 +15,9 @@ output/
 *.xcuserstate
 *.xcuserstate
 
+*.nuspec
+!*.template.nuspec
+
 Resource.designer.cs
 component.yaml
 GettingStarted.md

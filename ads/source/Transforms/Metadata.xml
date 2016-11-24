@@ -19,6 +19,7 @@
   	<attr path="/api/package[@name='com.google.android.gms.ads.purchase']" name="managedName">Android.Gms.Ads.Purchase</attr>
   	<attr path="/api/package[@name='com.google.android.gms.ads.search']" name="managedName">Android.Gms.Ads.Search</attr>
   	<attr path="/api/package[@name='com.google.android.gms.internal']" name="managedName">Android.Gms.Internal</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.ads.dynamite']" name="managedName">Android.Gms.Dynamite.Descriptors.Ads.Dynamite</attr>
 
   	<attr path="/api/package[@name='com.google.android.gms.ads.doubleclick']/interface[@name='AppEventListener']/method[@name='onAppEvent']/parameter[1]" name="managedName">name</attr>
   	<attr path="/api/package[@name='com.google.android.gms.ads.doubleclick']/interface[@name='AppEventListener']/method[@name='onAppEvent']/parameter[2]" name="managedName">data</attr>
@@ -38,6 +39,12 @@
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 <!--	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />-->
 
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
 	<!-- Some classes are private that need to be public to subclass -->
 	<attr path="/api/package[@name='com.google.android.gms.ads']/class[@name='BaseAdView']" name="visibility">public</attr>

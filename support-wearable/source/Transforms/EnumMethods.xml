@@ -15,4 +15,8 @@
   - To change the type of the return value, use "return" as the parameter name.
   - The parameter names will be p0, p1, ... unless you provide JavaDoc file in the project.
   -->
+	<!--path="/api/package[@name='android.support.wearable.view']/class[@name='WearableFrameLayout']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]"-->
+	<mapping jni-class="android/support/wearable/view/WearableFrameLayout">
+		<method jni-name="setVisibility" parameter="visibility" clr-enum-type="Android.Views.ViewState" />
+	</mapping>
 </enum-method-mappings>

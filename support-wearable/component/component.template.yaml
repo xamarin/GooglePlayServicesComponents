@@ -6,11 +6,8 @@ publisher-url: http://xamarin.com
 summary: Extends the Android platform to a new generation of wearable devices.
 is_shell: true
 icons:
-  - icons/androidwear_128x128.png
-  - icons/androidwear_512x512.png
-libraries:
-  android:
-    - ../../output/Xamarin.Android.Wearable.dll
+  - ../../icons/play-services-support-wearable_128x128.png
+  - ../../icons/play-services-support-wearable_512x512.png
 packages:
   android:
     - Xamarin.Android.Wear, Version=$wear-nuget-version$

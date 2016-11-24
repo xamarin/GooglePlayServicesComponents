@@ -1,0 +1,6 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.instantapps']" name="managedName">Android.Gms.InstantApp</attr>
+	<attr path="/api/package[@name='com.google.android.gms.internal']" name="managedName">Android.Gms.Internal</attr>
+</metadata>

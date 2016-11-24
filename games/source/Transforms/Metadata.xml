@@ -10,7 +10,8 @@
 	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.turnbased']" name="managedName">Android.Gms.Games.MultiPlayer.TurnBased</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.games.quest']" name="managedName">Android.Gms.Games.Quest</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.games.request']" name="managedName">Android.Gms.Games.Request</attr>  
-	<attr path="/api/package[@name='com.google.android.gms.games.snapshot']" name="managedName">Android.Gms.Games.Snapshot</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.snapshot']" name="managedName">Android.Gms.Games.Snapshot</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.social']" name="managedName">Android.Gms.Games.Social</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games.stats']" name="managedName">Android.Gms.Games.Stats</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.games.video']" name="managedName">Android.Gms.Games.Video</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games.internal']" name="managedName">Android.Gms.Games.Internal</attr>  
@@ -25,6 +26,7 @@
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.GamesOptions']" name="managedName">GamesClass.GamesOptions</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.SignOutImpl']" name="managedName">GamesClass.SignOutImpl</attr>
 
+	<attr path="/api/package[@name='com.google.android.gms.games.appcontent']/interface[@name='AppContentUtils.AppContentRunner']" name="visibility">internal</attr>
 
 <!--	<attr path="/api/package[@name='com.google.android.gms.games']/interface[@name='']/method[@name='']/parameter[]" name="managedName"></attr>-->
 <attr path="/api/package[@name='com.google.android.gms.games.multiplayer']/interface[@name='OnInvitationReceivedListener']/method[@name='onInvitationReceived']/parameter[1]" name="managedName">invitation</attr>
@@ -87,6 +89,13 @@
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+
 
 	<!-- Fix up inheritence from covariant types -->
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='GameBuffer']/method[@name='get']" name="visibility">public override</attr>
@@ -112,6 +121,8 @@
 	<attr path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotMetadataBuffer']/method[@name='get']" name="visibility">public override</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotMetadataBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
 
+	<attr path="/api/package[@name='com.google.android.gms.games.social']/class[@name='SocialInviteBuffer']/method[@name='get']" name="visibility">public override</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.social']/class[@name='SocialInviteBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
 
 
 
@@ -139,6 +150,7 @@
 	<remove-node path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotMetadataChangeCreator']/implements[@name='android.os.Parcelable.Creator']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotMetadataEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.social']/class[@name='SocialInviteEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.games.stats']/class[@name='PlayerStatsEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.games.video']/class[@name='VideoEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.games.video']/class[@name='VideoConfigurationCreator']/implements[@name='android.os.Parcelable.Creator']" />
@@ -181,8 +193,6 @@
 	<attr path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementRef']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
 
-
-	,
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.BaseGamesApiMethodImpl']" name="extends">Java.Lang.Object</attr>
 
 
@@ -195,4 +205,11 @@
 
 
 	<remove-node path="/api/package[@name='com.google.android.gms.games']/interface[@name='OnNearbyPlayerDetectedListener']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.social']/interface[@name='OnSocialInviteUpdateReceivedListener']" />
+
+	<remove-node path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='PA']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='PB']" />
+	<remote-node path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='PC']" />
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='PC']" name="visibility">private</attr>
+	<remove-node path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='Pz']" />
 </metadata>

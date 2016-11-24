@@ -7,9 +7,9 @@
   	<attr path="/api/package[@name='com.google.android.gms.auth.api.credentials']" name="managedName">Android.Gms.Auth.Api.Credentials</attr>
 <!--  	<attr path="/api/package[@name='com.google.android.gms.auth.api.credentials.internal']" name="managedName">Android.Gms.Auth.Api.Credentials.Internal</attr>-->
 <!--  	<attr path="/api/package[@name='com.google.android.gms.auth.api.proxy']" name="managedName">Android.Gms.Auth.Api.Proxy</attr>-->
-  	<attr path="/api/package[@name='com.google.android.gms.auth.api.signin']" name="managedName">Android.Gms.Auth.Api.SignIn</attr>
   	<attr path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']" name="managedName">Android.Gms.Auth.Api.SignIn.Internal</attr>
   	<attr path="/api/package[@name='com.google.android.gms.auth.firstparty.shared']" name="managedName">Android.Gms.Auth.FirstParty.Shared</attr>
+	<attr path="/api/package[@name='com.google.android.gms.actions']" name="managedName">Android.Gms.Actions</attr>
   	<attr path="/api/package[@name='com.google.android.gms.common']" name="managedName">Android.Gms.Common</attr>  
   	<attr path="/api/package[@name='com.google.android.gms.clearcut']" name="managedName">Android.Gms.Clearcut</attr>  
     <attr path="/api/package[@name='com.google.android.gms.common.annotation']" name="managedName">Android.Gms.Common.Annotations</attr>
@@ -21,13 +21,17 @@
 	<attr path="/api/package[@name='com.google.android.gms.common.server.converter']" name="managedName">Android.Gms.Common.Server.Converter</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common.server.response']" name="managedName">Android.Gms.Common.Server.Response</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common.stats']" name="managedName">Android.Gms.Common.Stats</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.util']" name="managedName">Android.Gms.Common.Util</attr>
 	<attr path="/api/package[@name='com.google.android.gms.dynamic']" name="managedName">Android.Gms.Dynamic</attr>
 	<attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.flags']" name="managedName">Android.Gms.Dynamite.Descriptors.Flags</attr>
+	<attr path="/api/package[@name='com.google.android.gms.iid']" name="managedName">Android.Gms.Iid</attr>
 	<attr path="/api/package[@name='com.google.android.gms.security']" name="managedName">Android.Gms.Security</attr>
     
 
 	<attr path="/api/package[@name='com.google.android.gms.ads.identifier']" name="managedName">Android.Gms.Ads.Identifier</attr>
 
+	<attr path="/api/package[@name='com.google.android.gms.location.places']" name="managedName">Android.Gms.Location.Places</attr>
+	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
 
 
 	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Status']" name="managedName">Statuses</attr>
@@ -47,6 +51,13 @@
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
 
 
 	<!-- Allowing zzc classes allows a bit too much, so remove these specifically -->
@@ -101,4 +112,6 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
+	<remove-node path="/api/package[@name='com.google.android.gms.phenotype']/class[@name='Configuration']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.phenotype']/class[@name='Flag']" />
 </metadata>

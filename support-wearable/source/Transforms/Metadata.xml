@@ -47,5 +47,8 @@
 
   	<attr path="/api/package[@name='android.support.wearable.view']/interface[@name='ObservableScrollView.OnScrollListener']/method[@name='onScroll']/parameter[1]" name="managedName">deltaY</attr>
 
-
+	<remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='ActionPage']/method[@name='setEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+	<remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='ActionPage']/method[@name='setStateListAnimator' and count(parameter)=1 and parameter[1][@type='android.animation.StateListAnimator']]" />
+	<remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='RecyclerViewMergeAdapter']/method[@name='setHasStableIds' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+	<remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='WearableListView.SetScrollVerticallyProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.wearable.view.WearableListView']]" />
 </metadata>

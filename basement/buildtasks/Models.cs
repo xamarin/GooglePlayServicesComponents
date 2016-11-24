@@ -15,6 +15,10 @@ namespace Xamarin.GooglePlayServices.Tasks
         public string ProjectNumber { get; set; }
         [DataMember (Name="name")]
         public string Name { get; set; }
+        [DataMember (Name="firebase_url")]
+        public string FirebaseUrl { get; set; }
+        [DataMember (Name="storage_bucket")]
+        public string StorageBucket { get; set; }
     }
 
     [DataContract]
@@ -168,9 +172,17 @@ namespace Xamarin.GooglePlayServices.Tasks
         [DataMember (Name="oauth_client")]
         public List<OauthClient> OauthClient { get; set; }
         [DataMember (Name="api_key")]
-        public List<object> ApiKey { get; set; }
+        public List<ApiKey> ApiKey { get; set; }
         [DataMember (Name="services")]
         public Services Services { get; set; }
+    }
+
+    [DataContract]
+    [Serializable]
+    public class ApiKey
+    {
+        [DataMember (Name = "current_key")]
+        public string CurrentKey { get; set; }
     }
 
     [DataContract]
@@ -251,6 +263,75 @@ namespace Xamarin.GooglePlayServices.Tasks
 
             if (client.Services != null && client.Services.AdsService != null)
                 return client.Services.AdsService.TestInterstitialAdUnitId;
+
+            return null;
+        }
+
+        public string GetDefaultWebClientId (string packageName)
+        {
+            // default_web_client_id:
+            // {YOUR_CLIENT}/oauth_client/client_id(client_type == 3)
+
+            var client = GetClient (packageName);
+            if (client == null)
+                return null;
+
+            if (client.OauthClient != null && client.OauthClient.Any ()) {
+                var oauthClient = client.OauthClient.FirstOrDefault (c => c.ClientType == 3);
+                if (oauthClient != null)
+                    return oauthClient.ClientId;
+            }
+
+            return null;
+        }
+
+        public string GetGoogleApiKey (string packageName)
+        {
+            // google_api_key:
+            // {YOUR_CLIENT}/api_key/current_key
+
+            var client = GetClient (packageName);
+            if (client == null)
+                return null;
+
+            if (client.ApiKey != null && client.ApiKey.Any ())
+                return client.ApiKey.FirstOrDefault ().CurrentKey;
+
+            return null;
+        }
+
+        public string GetFirebaseDatabaseUrl ()
+        {
+            // firebase_database_url:
+            // project_info/firebase_url
+
+            if (ProjectInfo != null)
+                return ProjectInfo.FirebaseUrl;
+
+            return null;
+        }
+
+        public string GetCrashReportingApiKey (string packageName)
+        {
+            // google_crash_reporting_api_key:
+            // {YOUR_CLIENT}/api_key/current_key
+
+            var client = GetClient (packageName);
+            if (client == null)
+                return null;
+
+            if (client.ApiKey != null && client.ApiKey.Any ())
+                return client.ApiKey.FirstOrDefault ().CurrentKey;
+
+            return null;
+        }
+
+        public string GetStorageBucket (string packageName)
+        {
+            // google_storage_bucket:
+            // project_info/storage_bucket
+            if (ProjectInfo != null)
+                return ProjectInfo.StorageBucket;
 
             return null;
         }

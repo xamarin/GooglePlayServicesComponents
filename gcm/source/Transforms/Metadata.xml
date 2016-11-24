@@ -9,6 +9,12 @@
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
 	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='OneoffTask.Builder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Android.Gms.Gcm.Task</attr>
 	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='OneoffTask.Builder']/method[@name='setExtras' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
 	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='OneoffTask.Builder']/method[@name='setPersisted' and count(parameter)=1 and parameter[1][@type='boolean']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>

@@ -64,9 +64,9 @@ namespace MapsSample.UITests
             pause ();
             app.Screenshot ("Scroll Down");
 
-            app.Tap (q => q.Id ("scroll_right"));
-            pause ();
-            app.Screenshot ("Scroll Right");
+            // app.Tap (q => q.Id ("scroll_right"));
+            // pause ();
+            // app.Screenshot ("Scroll Right");
 
             app.Tap (q => q.Id ("tilt_more"));
             pause ();
@@ -127,7 +127,7 @@ namespace MapsSample.UITests
             app.WaitForElement (q => q.Id ("map"));
             app.Screenshot ("Map");
 
-            //app.Device.SetLocation (37.7842, -122.4016);
+            app.Device.SetLocation (37.7842, -122.4016);
 
             app.Tap (q => q.Id ("my_location"));           
             app.WaitForElement (q => q.Class ("ImageView").Marked ("My Location"));
