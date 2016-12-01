@@ -84,5 +84,9 @@
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\tagmanager-v4-impl\source\TagManager.V4.Impl.csproj">
+      <Project>{ED50788D-0553-48A2-A47A-6AD1C9DF41BE}</Project>
+      <Name>TagManager.V4.Impl</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

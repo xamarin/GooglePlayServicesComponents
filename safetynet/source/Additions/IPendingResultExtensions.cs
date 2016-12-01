@@ -8,17 +8,21 @@ namespace Android.Gms.SafetyNet
 {
     public static partial class ISafetyNetApiExtensions
     {
-        public static async Task<ISafetyNetApiAttestationResult> AttestAsync (this ISafetyNetApi api, GoogleApiClient googleApiClient, byte[] nonce)
+        public static async Task<ISafetyNetApiAttestationResult> AttestAsync(this ISafetyNetApi api, GoogleApiClient googleApiClient, byte[] nonce)
         {
-            return (await api.Attest (googleApiClient, nonce)).JavaCast<ISafetyNetApiAttestationResult> ();
+            return (await api.Attest(googleApiClient, nonce)).JavaCast<ISafetyNetApiAttestationResult>();
         }
-        public static async Task<ISafetyNetApiSafeBrowsingResult> LookupUriAsync (this ISafetyNetApi api, GoogleApiClient googleApiClient, IList<Java.Lang.Integer> threatTypes, string uri)
+        public static async Task<ISafetyNetApiSafeBrowsingResult> LookupUriAsync(this ISafetyNetApi api, GoogleApiClient googleApiClient, IList<Java.Lang.Integer> threatTypes, string uri)
         {
-            return (await api.LookupUri (googleApiClient, threatTypes, uri)).JavaCast<ISafetyNetApiSafeBrowsingResult> ();
+            return (await api.LookupUri(googleApiClient, threatTypes, uri)).JavaCast<ISafetyNetApiSafeBrowsingResult>();
         }
-        public static async Task<ISafetyNetApiSafeBrowsingResult> LookupUri (this ISafetyNetApi api, GoogleApiClient client, string uri, int [] threatTypes)
+        public static async Task<ISafetyNetApiSafeBrowsingResult> LookupUriAsync(this ISafetyNetApi api, GoogleApiClient client, string uri, int[] threatTypes)
         {
-            return (await api.LookupUri (client, uri, threatTypes)).JavaCast<ISafetyNetApiSafeBrowsingResult> ();
+            return (await api.LookupUri(client, uri, threatTypes)).JavaCast<ISafetyNetApiSafeBrowsingResult>();
+        }
+        public static async Task<IResult> VerifyWithRecaptchaAsync(this ISafetyNetApi api, GoogleApiClient client, string recaptcha)
+        {
+            return (await api.VerifyWithRecaptcha(client, recaptcha)).JavaCast<IResult>();
         }
     }
 }

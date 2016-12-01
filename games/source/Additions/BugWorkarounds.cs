@@ -447,8 +447,28 @@ namespace Android.Gms.Games.Video
 //    }
 //}
 //
-//namespace Android.Gms.Games.MultiPlayer
-//{
+namespace Android.Gms.Games.MultiPlayer
+{
+    //public sealed partial class ParticipantBuffer
+    //{
+    //    IntPtr id_get;
+
+    //    internal static IntPtr this_java_class_handle;
+    //    internal static IntPtr this_class_ref
+    //    {
+    //        get
+    //        {
+    //            return JNIEnv.FindClass("com/google/android/gms/games/multiplayer/ParticipantBuffer", ref this_java_class_handle);
+    //        }
+    //    }
+
+    //    public override Java.Lang.Object Get(int position)
+    //    {
+    //        if (id_get == IntPtr.Zero)
+    //            id_get = JNIEnv.GetMethodID(this_class_ref, "get", "(I)Ljava/lang/Object;");
+    //        return (Java.Lang.Object)global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(JNIEnv.CallObjectMethod(Handle, id_get, new JValue(position)), JniHandleOwnership.TransferLocalRef);
+    //    }
+    //}
 //    public partial class InvitationEntity
 //    {
 //        static IntPtr id_describeContents;
@@ -494,7 +514,7 @@ namespace Android.Gms.Games.Video
 //            JNIEnv.CallVoidMethod  (Handle, id_writeToParcel_Landroid_os_Parcel_I, new JValue (p0), new JValue ((int) p1));
 //        }
 //    }
-//}
+}
 //
 //namespace Android.Gms.Games.MultiPlayer.RealTime
 //{

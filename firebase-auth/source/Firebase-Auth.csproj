@@ -12,7 +12,7 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>Xamarin.Firebase.Auth</AssemblyName>
     <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
-    <AndroidClassParser>class-parse</AndroidClassParser>
+    <AndroidClassParser>jar2xml</AndroidClassParser>
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
@@ -92,17 +92,9 @@
       <Project>{865652D3-8D1A-4779-92FC-4C54719286B7}</Project>
       <Name>Firebase-Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\firebase-auth-common\source\Firebase-Auth-Common.csproj">
-      <Project>{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}</Project>
-      <Name>Firebase-Auth-Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\tasks\source\Tasks.csproj">
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\firebase-auth-module\source\Firebase-Auth-Module.csproj">
-      <Project>{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}</Project>
-      <Name>Firebase-Auth-Module</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />

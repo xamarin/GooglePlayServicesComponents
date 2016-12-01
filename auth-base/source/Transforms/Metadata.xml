@@ -21,4 +21,5 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
+	<attr path="/api/package[@name='com.google.android.gms.auth']/class[@name='zze']" name="obfuscated">falsed</attr>
 </metadata>

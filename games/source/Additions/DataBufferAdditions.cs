@@ -49,18 +49,18 @@ namespace Android.Gms.Games.Achievement
 
 namespace Android.Gms.Games.AppContent
 {
-    //public partial class AppContentSectionBuffer : IEnumerable<IAppContentSection>
-    //{
-    //    public IEnumerator<IAppContentSection> GetEnumerator()
-    //    {
-    //        return this.ToEnumerable<IAppContentSection> ().GetEnumerator();
-    //    }
+    public partial class AppContentSectionBuffer : IEnumerable<IAppContentSection>
+    {
+        public IEnumerator<IAppContentSection> GetEnumerator()
+        {
+            return this.ToEnumerable<IAppContentSection> ().GetEnumerator();
+        }
 
-    //    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-    //    {
-    //        return this.GetEnumerator();
-    //    }
-    //}
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+    }
 }
 
 namespace Android.Gms.Games.Event
@@ -81,18 +81,18 @@ namespace Android.Gms.Games.Event
 
 namespace Android.Gms.Games.LeaderBoard
 {
-    //public partial class LeaderboardBuffer : IEnumerable<ILeaderboard>
-    //{
-    //    public IEnumerator<ILeaderboard> GetEnumerator()
-    //    {
-    //        return this.ToEnumerable<ILeaderboard> ().GetEnumerator();
-    //    }
+    public partial class LeaderboardBuffer : IEnumerable<ILeaderboard>
+    {
+        public IEnumerator<ILeaderboard> GetEnumerator()
+        {
+            return this.ToEnumerable<ILeaderboard> ().GetEnumerator();
+        }
 
-    //    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-    //    {
-    //        return this.GetEnumerator();
-    //    }
-    //}
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+    }
 
     public partial class LeaderboardScoreBuffer : IEnumerable<ILeaderboardScore>
     {
@@ -123,50 +123,50 @@ namespace Android.Gms.Games.MultiPlayer
         }
     }
 
-    //public partial class InvitationBuffer : IEnumerable<IInvitation>
-    //{
-    //    public IEnumerator<IInvitation> GetEnumerator()
-    //    {
-    //        return this.ToEnumerable<IInvitation> ().GetEnumerator();
-    //    }
+    public partial class InvitationBuffer : IEnumerable<IInvitation>
+    {
+        public IEnumerator<IInvitation> GetEnumerator()
+        {
+            return this.ToEnumerable<IInvitation> ().GetEnumerator();
+        }
 
-    //    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-    //    {
-    //        return this.GetEnumerator();
-    //    }
-    //}
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+    }
 }
 
 namespace Android.Gms.Games.MultiPlayer.RealTime
 {
-    //public partial class RoomBuffer : IEnumerable<IRoom>
-    //{
-    //    public IEnumerator<IRoom> GetEnumerator()
-    //    {
-    //        return this.ToEnumerable<IRoom> ().GetEnumerator();
-    //    }
+    public partial class RoomBuffer : IEnumerable<IRoom>
+    {
+        public IEnumerator<IRoom> GetEnumerator()
+        {
+            return this.ToEnumerable<IRoom> ().GetEnumerator();
+        }
 
-    //    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-    //    {
-    //        return this.GetEnumerator();
-    //    }
-    //}
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+    }
 }
 
 namespace Android.Gms.Games.MultiPlayer.TurnBased
 {
-    //public partial class TurnBasedMatchBuffer : IEnumerable<ITurnBasedMatch>
-    //{
-    //    public IEnumerator<ITurnBasedMatch> GetEnumerator()
-    //    {
-    //        return this.ToEnumerable<ITurnBasedMatch> ().GetEnumerator();
-    //    }
+    public partial class TurnBasedMatchBuffer : IEnumerable<ITurnBasedMatch>
+    {
+        public IEnumerator<ITurnBasedMatch> GetEnumerator()
+        {
+            return this.ToEnumerable<ITurnBasedMatch> ().GetEnumerator();
+        }
 
-    //    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-    //    {
-    //        return this.GetEnumerator();
-    //    }
-    //}
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+    }
 }
 
 namespace Android.Gms.Games.Request
@@ -184,18 +184,18 @@ namespace Android.Gms.Games.Request
         }
     }
 
-    //public partial class GameRequestBuffer : IEnumerable<IGameRequest>
-    //{
-    //    public IEnumerator<IGameRequest> GetEnumerator()
-    //    {
-    //        return this.ToEnumerable<IGameRequest> ().GetEnumerator();
-    //    }
+    public partial class GameRequestBuffer : IEnumerable<IGameRequest>
+    {
+        public IEnumerator<IGameRequest> GetEnumerator()
+        {
+            return this.ToEnumerable<IGameRequest> ().GetEnumerator();
+        }
 
-    //    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-    //    {
-    //        return this.GetEnumerator();
-    //    }
-    //}
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+    }
 }
 
 namespace Android.Gms.Games.Snapshot
@@ -245,18 +245,18 @@ namespace Android.Gms.Games.Quest
         }
     }
 
-    //public partial class QuestBuffer : IEnumerable<IQuest>
-    //{
-    //    public IEnumerator<IQuest> GetEnumerator()
-    //    {
-    //        return this.ToEnumerable<IQuest> ().GetEnumerator();
-    //    }
+    public partial class QuestBuffer : IEnumerable<IQuest>
+    {
+        public IEnumerator<IQuest> GetEnumerator()
+        {
+            return this.ToEnumerable<IQuest> ().GetEnumerator();
+        }
 
-    //    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-    //    {
-    //        return this.GetEnumerator();
-    //    }
-    //}
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+    }
 }
 
 namespace Android.Gms.Games.Video

@@ -98,6 +98,10 @@
       <Project>{7CB92D61-E2FF-472A-9FDF-7E42D15B3EE6}</Project>
       <Name>Maps</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\tasks\source\Tasks.csproj">
+      <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
+      <Name>Tasks</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <ItemGroup>

@@ -39,6 +39,26 @@ namespace Firebase.Auth
         {
             return SendPasswordResetEmail (email).AsAsync ();
         }
+
+        public System.Threading.Tasks.Task ApplyActionCodeAsync(string code)
+        {
+            return ApplyActionCode(code).AsAsync();
+        }
+
+        public System.Threading.Tasks.Task CheckActionCodeAsync(string code)
+        {
+            return CheckActionCode(code).AsAsync();
+        }
+
+        public System.Threading.Tasks.Task ConfirmPasswordResetAsync(string code, string newPassword)
+        {
+            return ConfirmPasswordReset(code, newPassword).AsAsync();
+        }
+
+        public System.Threading.Tasks.Task VerifyPasswordResetCodeAsync(string code)
+        {
+            return VerifyPasswordResetCode(code).AsAsync();
+        }
     }
 }
 

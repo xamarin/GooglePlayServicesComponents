@@ -173,5 +173,13 @@ namespace Android.Gms.Fitness
             return (await api.UnregisterForSessions (client, intent)).JavaCast<Statuses> ();
         }
     }
+
+    public static partial class IGoalsApiExtensions
+    {
+        public static async Task<Result.GoalsResult> ReadCurrentGoals(this IGoalsApi api, Android.Gms.Common.Apis.GoogleApiClient client, Request.GoalsReadRequest request)
+        {
+            return (await api.ReadCurrentGoals(client, request)).JavaCast<Result.GoalsResult> ();
+        }
+    }
 }
 

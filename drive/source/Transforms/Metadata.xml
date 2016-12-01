@@ -25,7 +25,7 @@
 
 	<!-- Remove *zz* obfuscated items -->
 	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
-	<remove-node path="/api/package/interface[contains(@name, 'zz') and @name != 'zzf' and @name != 'zzc']" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz') and @name != 'zzf' and @name != 'zzc' and @name != 'zzh']" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[@name='CREATOR' and contains(@type, 'zz')]" />
@@ -43,5 +43,5 @@
 	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='MetadataBuffer']/method[@name='get']" name="visibility">public override</attr>
 	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='MetadataBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
 
-
+	<attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='zzh']" name="obfuscated">false</attr>
 </metadata>
