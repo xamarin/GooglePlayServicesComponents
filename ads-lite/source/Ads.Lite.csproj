@@ -16,6 +16,7 @@
     <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AndroidClassParser>class-parse</AndroidClassParser>
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
+    <AndroidTlsProvider></AndroidTlsProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
