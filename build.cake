@@ -8,17 +8,18 @@
 #addin nuget:?package=Cake.FileHelpers
 #addin nuget:?package=Cake.MonoApiTools
 
-// To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip
-var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_9683000_r33.zip";
-var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_r36.zip";
+// To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip\
+// FROM: https://dl.google.com/android/repository/addon2-1.xml
+var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_v8_rc41.zip";
+var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/29.0.0.2/api-info.xml";
+var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/32.961.0/api-info.xml";
 
-var PLAY_COMPONENT_VERSION = "32.961.0.0";
-var PLAY_NUGET_VERSION = "32.961.0";
-var PLAY_AAR_VERSION = "9.6.1";
-var VERSION_DESC = "9.6.1";
+var PLAY_COMPONENT_VERSION = "41.1000.0.0";
+var PLAY_NUGET_VERSION = "41.1000.0-beta1";
+var PLAY_AAR_VERSION = "10.0.0";
+var VERSION_DESC = "10.0.0";
 
 var WEAR_COMPONENT_VERSION = "1.4.0.0";
 var WEAR_NUGET_VERSION = "1.4.0";
