@@ -388,12 +388,17 @@ Task ("merge").IsDependentOn ("libs").Does (() =>
 	});
 });
 
-
 Task ("clean").IsDependentOn ("clean-base").Does (() =>
 {
+	if (FileExists ("./generated.targets"))
+		DeleteFile ("./generated.targets");
+
 	if (DirectoryExists ("./externals"))
 		DeleteDirectory ("./externals", true);
+
+	CleanDirectories ("./**/packages");
 });
+
 
 Task ("component-docs").Does (() =>
 {
