@@ -20,6 +20,7 @@
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+      <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
     </dependencies>
   </metadata>
   <files>
