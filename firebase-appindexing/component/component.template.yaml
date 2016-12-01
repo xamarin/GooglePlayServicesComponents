@@ -1,0 +1,33 @@
+version: $version$
+name: Firebase - App Indexing
+id: googleplayservices-appindexing
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: Get your app found in Google Search.
+license: ../../License.md
+icons:
+  - ../../icons/play-services-appindexing_128x128.png
+  - ../../icons/play-services-appindexing_512x512.png
+is_shell: true
+packages:
+  android:
+    - Xamarin.Firebase.AppIndexing, Version=$nuget-version$
+samples:
+  - name: "AppIndexing Sample"
+    path: ../../firebase-appindexing/samples/AppIndexingSample.sln
+    removeProjects:
+      - Base
+      - Basement
+      - Tasks
+      - Firebase-Common
+      - Firebase-AppIndexing
+    installNuGets:
+      - project: AppIndexingSample
+        packages:
+          - Xamarin.GooglePlayServices.Base
+          - Xamarin.GooglePlayServices.Basement
+          - Xamarin.GooglePlayServices.Tasks
+          - Xamarin.Firebase.Common
+          - Xamarin.Firebase.AppIndexing
+local-nuget-repo: ../../output/
+no_build: true
