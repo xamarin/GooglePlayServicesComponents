@@ -18,6 +18,11 @@
 	<attr path="/api/package[@name='com.google.android.gms.location.places']" name="managedName">Android.Gms.Location.Places</attr>
 	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
 
+	<!-- TODO: Consider removing these when Cycle 9 is released -->
+	<attr path="/api/package[@name='com.google.android.gms.flags.impl']" name="managedName">Android.Gms.Flags.Impl</attr>
+	<attr path="/api/package[@name='com.google.android.gms.internal']" name="managedName">Android.Gms.Internal</attr>
+	<!-- End TODO -->
+
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
 	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'zzf' and @name != 'zzc' and @name != 'zzd' and @name != 'zze' and @name != 'zza']" />
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
@@ -49,5 +54,9 @@
 	<!-- Remove some undesirable bits -->
 	<remove-node path="/api/package[@name='com.google.android.gms.common.internal']/class[@name!='DowngradeableSafeParcel']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.common.api']/class[@name='ResolvingResultCallbacks']/method[@name='onSuccess' and count(parameter)=1 and parameter[1][@type='R']]" />
+
+	<!-- TODO: Consider removing when Cycle 9 is released -->
+	<remove-node path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='zzf']/implements[@name='android.os.Parcelable.Creator']" />
+	<!-- End TODO -->
 
 </metadata>
