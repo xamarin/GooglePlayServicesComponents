@@ -21,6 +21,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.TagManager.Api.V4.Impl.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.GooglePlayServices.TagManager.V4.Impl.dll" target="lib/MonoAndroid70" />
   </files>
 </package>
