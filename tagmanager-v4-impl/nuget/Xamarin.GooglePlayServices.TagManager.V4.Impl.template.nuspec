@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>Xamarin.GooglePlayServices.TagManager.Api.V4.Impl</id>
+    <id>Xamarin.GooglePlayServices.TagManager.V4.Impl</id>
     <title>Xamarin Google Play Services - TagManager API V4 Impl</title>
     <version>$version$</version>
     <authors>Xamarin Inc.</authors>
