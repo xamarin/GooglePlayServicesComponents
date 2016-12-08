@@ -36,6 +36,10 @@
 	<!-- Fix visibility -->
 	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']" name="visibility">public</attr>
 
+
+	<attr path="/api/package[@name='com.google.android.gms.internal']/class[@name='zztc']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.internal']/interface[@name='zztc.zza']" name="obfuscated">false</attr>
+	
 	<!-- Fix return type of HitBuilder builder methods -->
 	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='addImpression']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
 	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='addProduct']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>

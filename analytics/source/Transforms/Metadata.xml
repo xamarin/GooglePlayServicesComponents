@@ -24,5 +24,6 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
 
+	<remove-node path="/api/package[@name='com.google.android.gms.analytics']/class[@name='AnalyticsService']/implements[@name='com.google.android.gms.internal.zztc.zza']" />
 
 </metadata>

@@ -1,0 +1,1740 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <XamarinBuildResourceMergeThrowOnMissingAssembly>false</XamarinBuildResourceMergeThrowOnMissingAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesads>playservices-10.0.0/playservicesads</_XbdKey_playservicesads>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesads>m2repository\com\google\android\gms\play-services-ads\play-services-ads\10.0.0\play-services-ads-10.0.0.aar</_XbdAarFile_playservicesads>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesads>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesads)\play-services-ads-10.0.0.aar</_XbdAarFileFullPath_playservicesads>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesads>Xamarin.GooglePlayServices.Ads</_XbdAssemblyName_playservicesads>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesads" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesads">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesads)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesads)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesads" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesads)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesads)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-ads-10.0.0.aar</ToFile>
+        <RangeStart>82978510</RangeStart>
+        <RangeEnd>83846853</RangeEnd>
+        <Md5>F60F422D36EA7C92BE74C8B9AA6449E0</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesads)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesads)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesadslite>playservices-10.0.0/playservicesadslite</_XbdKey_playservicesadslite>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesadslite>m2repository\com\google\android\gms\play-services-ads-lite\play-services-ads-lite\10.0.0\play-services-ads-lite-10.0.0.aar</_XbdAarFile_playservicesadslite>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesadslite>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesadslite)\play-services-ads-lite-10.0.0.aar</_XbdAarFileFullPath_playservicesadslite>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesadslite>Xamarin.GooglePlayServices.Ads.Lite</_XbdAssemblyName_playservicesadslite>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesadslite" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesadslite">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesadslite)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesadslite)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesadslite" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesadslite)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesadslite)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-ads-lite-10.0.0.aar</ToFile>
+        <RangeStart>117558266</RangeStart>
+        <RangeEnd>117850428</RangeEnd>
+        <Md5>0325C7533477EE6047B908450328C620</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesadslite)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesadslite)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesanalytics>playservices-10.0.0/playservicesanalytics</_XbdKey_playservicesanalytics>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesanalytics>m2repository\com\google\android\gms\play-services-analytics\play-services-analytics\10.0.0\play-services-analytics-10.0.0.aar</_XbdAarFile_playservicesanalytics>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesanalytics>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesanalytics)\play-services-analytics-10.0.0.aar</_XbdAarFileFullPath_playservicesanalytics>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesanalytics>Xamarin.GooglePlayServices.Analytics</_XbdAssemblyName_playservicesanalytics>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesanalytics" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesanalytics">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesanalytics)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesanalytics)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesanalytics" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesanalytics)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesanalytics)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-analytics-10.0.0.aar</ToFile>
+        <RangeStart>125414175</RangeStart>
+        <RangeEnd>125417271</RangeEnd>
+        <Md5>5445C86EF421475C79CCFCA06A0B0A8F</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesanalytics)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesanalytics)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesanalyticsimpl>playservices-10.0.0/playservicesanalyticsimpl</_XbdKey_playservicesanalyticsimpl>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesanalyticsimpl>m2repository\com\google\android\gms\play-services-analytics-impl\play-services-analytics-impl\10.0.0\play-services-analytics-impl-10.0.0.aar</_XbdAarFile_playservicesanalyticsimpl>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesanalyticsimpl>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesanalyticsimpl)\play-services-analytics-impl-10.0.0.aar</_XbdAarFileFullPath_playservicesanalyticsimpl>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesanalyticsimpl>Xamarin.GooglePlayServices.Analytics.Impl</_XbdAssemblyName_playservicesanalyticsimpl>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesanalyticsimpl" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesanalyticsimpl">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesanalyticsimpl)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesanalyticsimpl)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesanalyticsimpl" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesanalyticsimpl)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesanalyticsimpl)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-analytics-impl-10.0.0.aar</ToFile>
+        <RangeStart>66351452</RangeStart>
+        <RangeEnd>66500658</RangeEnd>
+        <Md5>6AA27253AE3F17F3B98430DF857EBBAA</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesanalyticsimpl)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesanalyticsimpl)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesauth>playservices-10.0.0/playservicesauth</_XbdKey_playservicesauth>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesauth>m2repository\com\google\android\gms\play-services-auth\play-services-auth\10.0.0\play-services-auth-10.0.0.aar</_XbdAarFile_playservicesauth>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesauth>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesauth)\play-services-auth-10.0.0.aar</_XbdAarFileFullPath_playservicesauth>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesauth>Xamarin.GooglePlayServices.Auth</_XbdAssemblyName_playservicesauth>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesauth" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesauth">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesauth)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesauth)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesauth" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesauth)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesauth)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-auth-10.0.0.aar</ToFile>
+        <RangeStart>69420764</RangeStart>
+        <RangeEnd>69495585</RangeEnd>
+        <Md5>BA7096F8A570CADBB27D4DB7DB88DD5D</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesauth)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesauth)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesauthbase>playservices-10.0.0/playservicesauthbase</_XbdKey_playservicesauthbase>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesauthbase>m2repository\com\google\android\gms\play-services-auth-base\play-services-auth-base\10.0.0\play-services-auth-base-10.0.0.aar</_XbdAarFile_playservicesauthbase>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesauthbase>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesauthbase)\play-services-auth-base-10.0.0.aar</_XbdAarFileFullPath_playservicesauthbase>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesauthbase>Xamarin.GooglePlayServices.Auth.Base</_XbdAssemblyName_playservicesauthbase>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesauthbase" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesauthbase">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesauthbase)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesauthbase)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesauthbase" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesauthbase)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesauthbase)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-auth-base-10.0.0.aar</ToFile>
+        <RangeStart>33499933</RangeStart>
+        <RangeEnd>33557261</RangeEnd>
+        <Md5>60BE1CD9CD5035248F0AF853D9975F47</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesauthbase)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesauthbase)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesawareness>playservices-10.0.0/playservicesawareness</_XbdKey_playservicesawareness>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesawareness>m2repository\com\google\android\gms\play-services-awareness\play-services-awareness\10.0.0\play-services-awareness-10.0.0.aar</_XbdAarFile_playservicesawareness>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesawareness>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesawareness)\play-services-awareness-10.0.0.aar</_XbdAarFileFullPath_playservicesawareness>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesawareness>Xamarin.GooglePlayServices.Awareness</_XbdAssemblyName_playservicesawareness>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesawareness" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesawareness">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesawareness)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesawareness)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesawareness" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesawareness)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesawareness)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-awareness-10.0.0.aar</ToFile>
+        <RangeStart>29258136</RangeStart>
+        <RangeEnd>29420907</RangeEnd>
+        <Md5>06E7D3AA39F9BF1DE69DB1C8C8949217</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesawareness)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesawareness)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesbase>playservices-10.0.0/playservicesbase</_XbdKey_playservicesbase>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesbase>m2repository\com\google\android\gms\play-services-base\play-services-base\10.0.0\play-services-base-10.0.0.aar</_XbdAarFile_playservicesbase>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesbase>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesbase)\play-services-base-10.0.0.aar</_XbdAarFileFullPath_playservicesbase>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesbase>Xamarin.GooglePlayServices.Base</_XbdAssemblyName_playservicesbase>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesbase" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesbase">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesbase)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesbase)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesbase" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesbase)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesbase)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-base-10.0.0.aar</ToFile>
+        <RangeStart>21037909</RangeStart>
+        <RangeEnd>21472561</RangeEnd>
+        <Md5>3E66FE07AD14EB878AAB6D7DA7A43F2D</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesbase)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesbase)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesbasement>playservices-10.0.0/playservicesbasement</_XbdKey_playservicesbasement>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesbasement>m2repository\com\google\android\gms\play-services-basement\play-services-basement\10.0.0\play-services-basement-10.0.0.aar</_XbdAarFile_playservicesbasement>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesbasement>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesbasement)\play-services-basement-10.0.0.aar</_XbdAarFileFullPath_playservicesbasement>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesbasement>Xamarin.GooglePlayServices.Basement</_XbdAssemblyName_playservicesbasement>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesbasement" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesbasement">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesbasement)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesbasement)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesbasement" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesbasement)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesbasement)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-basement-10.0.0.aar</ToFile>
+        <RangeStart>102757497</RangeStart>
+        <RangeEnd>103082967</RangeEnd>
+        <Md5>3F8C096D1C341619F597589C748D6E18</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesbasement)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesbasement)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesappinvite>playservices-10.0.0/playservicesappinvite</_XbdKey_playservicesappinvite>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesappinvite>m2repository\com\google\android\gms\play-services-appinvite\play-services-appinvite\10.0.0\play-services-appinvite-10.0.0.aar</_XbdAarFile_playservicesappinvite>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesappinvite>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesappinvite)\play-services-appinvite-10.0.0.aar</_XbdAarFileFullPath_playservicesappinvite>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesappinvite>Xamarin.GooglePlayServices.AppInvite</_XbdAssemblyName_playservicesappinvite>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesappinvite" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesappinvite">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesappinvite)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesappinvite)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesappinvite" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesappinvite)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesappinvite)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-appinvite-10.0.0.aar</ToFile>
+        <RangeStart>120130289</RangeStart>
+        <RangeEnd>120153493</RangeEnd>
+        <Md5>0EFB52118BA86B9433981F15B217A816</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesappinvite)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesappinvite)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicescast>playservices-10.0.0/playservicescast</_XbdKey_playservicescast>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicescast>m2repository\com\google\android\gms\play-services-cast\play-services-cast\10.0.0\play-services-cast-10.0.0.aar</_XbdAarFile_playservicescast>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicescast>$(XamarinBuildDownloadDir)$(_XbdKey_playservicescast)\play-services-cast-10.0.0.aar</_XbdAarFileFullPath_playservicescast>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicescast>Xamarin.GooglePlayServices.Cast</_XbdAssemblyName_playservicescast>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicescast" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicescast">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicescast)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicescast)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicescast" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicescast)" Condition="!Exists('$(_XbdAarFileFullPath_playservicescast)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-cast-10.0.0.aar</ToFile>
+        <RangeStart>63163098</RangeStart>
+        <RangeEnd>63402877</RangeEnd>
+        <Md5>9EE15021C2F6EBB0A38A5C8FCB4EF362</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicescast)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicescast)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicescastframework>playservices-10.0.0/playservicescastframework</_XbdKey_playservicescastframework>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicescastframework>m2repository\com\google\android\gms\play-services-cast-framework\play-services-cast-framework\10.0.0\play-services-cast-framework-10.0.0.aar</_XbdAarFile_playservicescastframework>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicescastframework>$(XamarinBuildDownloadDir)$(_XbdKey_playservicescastframework)\play-services-cast-framework-10.0.0.aar</_XbdAarFileFullPath_playservicescastframework>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicescastframework>Xamarin.GooglePlayServices.Cast.Framework</_XbdAssemblyName_playservicescastframework>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicescastframework" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicescastframework">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicescastframework)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicescastframework)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicescastframework" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicescastframework)" Condition="!Exists('$(_XbdAarFileFullPath_playservicescastframework)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-cast-framework-10.0.0.aar</ToFile>
+        <RangeStart>108433033</RangeStart>
+        <RangeEnd>108982107</RangeEnd>
+        <Md5>6A8922DB6040581DB397308F358EB86C</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicescastframework)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicescastframework)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesclearcut>playservices-10.0.0/playservicesclearcut</_XbdKey_playservicesclearcut>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesclearcut>m2repository\com\google\android\gms\play-services-clearcut\play-services-clearcut\10.0.0\play-services-clearcut-10.0.0.aar</_XbdAarFile_playservicesclearcut>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesclearcut>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesclearcut)\play-services-clearcut-10.0.0.aar</_XbdAarFileFullPath_playservicesclearcut>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesclearcut>Xamarin.GooglePlayServices.Clearcut</_XbdAssemblyName_playservicesclearcut>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesclearcut" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesclearcut">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesclearcut)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesclearcut)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesclearcut" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesclearcut)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesclearcut)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-clearcut-10.0.0.aar</ToFile>
+        <RangeStart>35857298</RangeStart>
+        <RangeEnd>35891682</RangeEnd>
+        <Md5>6BE5E2ACD3E6C90A04304D6919405D64</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesclearcut)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesclearcut)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesdrive>playservices-10.0.0/playservicesdrive</_XbdKey_playservicesdrive>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesdrive>m2repository\com\google\android\gms\play-services-drive\play-services-drive\10.0.0\play-services-drive-10.0.0.aar</_XbdAarFile_playservicesdrive>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesdrive>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesdrive)\play-services-drive-10.0.0.aar</_XbdAarFileFullPath_playservicesdrive>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesdrive>Xamarin.GooglePlayServices.Drive</_XbdAssemblyName_playservicesdrive>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesdrive" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesdrive">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesdrive)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesdrive)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesdrive" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesdrive)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesdrive)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-drive-10.0.0.aar</ToFile>
+        <RangeStart>2297013</RangeStart>
+        <RangeEnd>2659771</RangeEnd>
+        <Md5>9E2BDB41E8657F88312CFA761C517D10</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesdrive)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesdrive)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesfitness>playservices-10.0.0/playservicesfitness</_XbdKey_playservicesfitness>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesfitness>m2repository\com\google\android\gms\play-services-fitness\play-services-fitness\10.0.0\play-services-fitness-10.0.0.aar</_XbdAarFile_playservicesfitness>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesfitness>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesfitness)\play-services-fitness-10.0.0.aar</_XbdAarFileFullPath_playservicesfitness>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesfitness>Xamarin.GooglePlayServices.Fitness</_XbdAssemblyName_playservicesfitness>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesfitness" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesfitness">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesfitness)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesfitness)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesfitness" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesfitness)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesfitness)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-fitness-10.0.0.aar</ToFile>
+        <RangeStart>112848260</RangeStart>
+        <RangeEnd>113219993</RangeEnd>
+        <Md5>8AF5A2FC02CBE1C35A969A4CDCD405C6</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesfitness)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesfitness)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesgames>playservices-10.0.0/playservicesgames</_XbdKey_playservicesgames>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesgames>m2repository\com\google\android\gms\play-services-games\play-services-games\10.0.0\play-services-games-10.0.0.aar</_XbdAarFile_playservicesgames>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesgames>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesgames)\play-services-games-10.0.0.aar</_XbdAarFileFullPath_playservicesgames>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesgames>Xamarin.GooglePlayServices.Games</_XbdAssemblyName_playservicesgames>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesgames" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesgames">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesgames)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesgames)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesgames" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesgames)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesgames)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-games-10.0.0.aar</ToFile>
+        <RangeStart>9927010</RangeStart>
+        <RangeEnd>10484896</RangeEnd>
+        <Md5>1B4E7AAB69C1526B029F272F6D232588</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesgames)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesgames)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesgass>playservices-10.0.0/playservicesgass</_XbdKey_playservicesgass>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesgass>m2repository\com\google\android\gms\play-services-gass\play-services-gass\10.0.0\play-services-gass-10.0.0.aar</_XbdAarFile_playservicesgass>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesgass>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesgass)\play-services-gass-10.0.0.aar</_XbdAarFileFullPath_playservicesgass>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesgass>Xamarin.GooglePlayServices.Gass</_XbdAssemblyName_playservicesgass>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesgass" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesgass">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesgass)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesgass)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesgass" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesgass)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesgass)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-gass-10.0.0.aar</ToFile>
+        <RangeStart>119935272</RangeStart>
+        <RangeEnd>119944390</RangeEnd>
+        <Md5>080B102AB1314BD3F5A9DBC1D9E29A01</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesgass)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesgass)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesgcm>playservices-10.0.0/playservicesgcm</_XbdKey_playservicesgcm>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesgcm>m2repository\com\google\android\gms\play-services-gcm\play-services-gcm\10.0.0\play-services-gcm-10.0.0.aar</_XbdAarFile_playservicesgcm>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesgcm>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesgcm)\play-services-gcm-10.0.0.aar</_XbdAarFileFullPath_playservicesgcm>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesgcm>Xamarin.GooglePlayServices.Gcm</_XbdAssemblyName_playservicesgcm>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesgcm" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesgcm">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesgcm)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesgcm)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesgcm" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesgcm)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesgcm)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-gcm-10.0.0.aar</ToFile>
+        <RangeStart>127502330</RangeStart>
+        <RangeEnd>127538674</RangeEnd>
+        <Md5>C2F2C1C82054A3081FB4C817C693DE7C</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesgcm)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesgcm)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesidentity>playservices-10.0.0/playservicesidentity</_XbdKey_playservicesidentity>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesidentity>m2repository\com\google\android\gms\play-services-identity\play-services-identity\10.0.0\play-services-identity-10.0.0.aar</_XbdAarFile_playservicesidentity>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesidentity>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesidentity)\play-services-identity-10.0.0.aar</_XbdAarFileFullPath_playservicesidentity>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesidentity>Xamarin.GooglePlayServices.Identity</_XbdAssemblyName_playservicesidentity>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesidentity" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesidentity">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesidentity)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesidentity)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesidentity" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesidentity)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesidentity)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-identity-10.0.0.aar</ToFile>
+        <RangeStart>74867568</RangeStart>
+        <RangeEnd>74887101</RangeEnd>
+        <Md5>7FA09826A61C105F0BE47E19A5A6935C</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesidentity)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesidentity)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesiid>playservices-10.0.0/playservicesiid</_XbdKey_playservicesiid>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesiid>m2repository\com\google\android\gms\play-services-iid\play-services-iid\10.0.0\play-services-iid-10.0.0.aar</_XbdAarFile_playservicesiid>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesiid>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesiid)\play-services-iid-10.0.0.aar</_XbdAarFileFullPath_playservicesiid>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesiid>Xamarin.GooglePlayServices.Iid</_XbdAssemblyName_playservicesiid>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesiid" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesiid">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesiid)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesiid)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesiid" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesiid)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesiid)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-iid-10.0.0.aar</ToFile>
+        <RangeStart>107179267</RangeStart>
+        <RangeEnd>107197561</RangeEnd>
+        <Md5>DBEEEB663F621B7D2B3A579058E331B0</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesiid)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesiid)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesinstantapps>playservices-10.0.0/playservicesinstantapps</_XbdKey_playservicesinstantapps>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesinstantapps>m2repository\com\google\android\gms\play-services-instantapps\play-services-instantapps\10.0.0\play-services-instantapps-10.0.0.aar</_XbdAarFile_playservicesinstantapps>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesinstantapps>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesinstantapps)\play-services-instantapps-10.0.0.aar</_XbdAarFileFullPath_playservicesinstantapps>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesinstantapps>Xamarin.GooglePlayServices.InstantApps</_XbdAssemblyName_playservicesinstantapps>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesinstantapps" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesinstantapps">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesinstantapps)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesinstantapps)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesinstantapps" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesinstantapps)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesinstantapps)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-instantapps-10.0.0.aar</ToFile>
+        <RangeStart>74465236</RangeStart>
+        <RangeEnd>74509971</RangeEnd>
+        <Md5>2107DFFED428756446B0536272A83658</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesinstantapps)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesinstantapps)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playserviceslocation>playservices-10.0.0/playserviceslocation</_XbdKey_playserviceslocation>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playserviceslocation>m2repository\com\google\android\gms\play-services-location\play-services-location\10.0.0\play-services-location-10.0.0.aar</_XbdAarFile_playserviceslocation>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playserviceslocation>$(XamarinBuildDownloadDir)$(_XbdKey_playserviceslocation)\play-services-location-10.0.0.aar</_XbdAarFileFullPath_playserviceslocation>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playserviceslocation>Xamarin.GooglePlayServices.Location</_XbdAssemblyName_playserviceslocation>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playserviceslocation" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playserviceslocation">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playserviceslocation)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playserviceslocation)')">
+      <Output PropertyName="_XbdAarFileFullPath_playserviceslocation" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playserviceslocation)" Condition="!Exists('$(_XbdAarFileFullPath_playserviceslocation)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-location-10.0.0.aar</ToFile>
+        <RangeStart>30833861</RangeStart>
+        <RangeEnd>30935714</RangeEnd>
+        <Md5>3D9747C414171EE7FA3EE68E6585D756</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playserviceslocation)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playserviceslocation)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesmaps>playservices-10.0.0/playservicesmaps</_XbdKey_playservicesmaps>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesmaps>m2repository\com\google\android\gms\play-services-maps\play-services-maps\10.0.0\play-services-maps-10.0.0.aar</_XbdAarFile_playservicesmaps>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesmaps>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesmaps)\play-services-maps-10.0.0.aar</_XbdAarFileFullPath_playservicesmaps>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesmaps>Xamarin.GooglePlayServices.Maps</_XbdAssemblyName_playservicesmaps>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesmaps" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesmaps">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesmaps)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesmaps)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesmaps" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesmaps)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesmaps)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-maps-10.0.0.aar</ToFile>
+        <RangeStart>129357116</RangeStart>
+        <RangeEnd>129605841</RangeEnd>
+        <Md5>8443E319D8A880F0689837DFC5315BFE</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesmaps)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesmaps)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesnearby>playservices-10.0.0/playservicesnearby</_XbdKey_playservicesnearby>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesnearby>m2repository\com\google\android\gms\play-services-nearby\play-services-nearby\10.0.0\play-services-nearby-10.0.0.aar</_XbdAarFile_playservicesnearby>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesnearby>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesnearby)\play-services-nearby-10.0.0.aar</_XbdAarFileFullPath_playservicesnearby>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesnearby>Xamarin.GooglePlayServices.Nearby</_XbdAssemblyName_playservicesnearby>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesnearby" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesnearby">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesnearby)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesnearby)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesnearby" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesnearby)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesnearby)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-nearby-10.0.0.aar</ToFile>
+        <RangeStart>76289115</RangeStart>
+        <RangeEnd>76448733</RangeEnd>
+        <Md5>D5F7D911D3DAEC06D6C2ACE3611C016A</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesnearby)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesnearby)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicespanorama>playservices-10.0.0/playservicespanorama</_XbdKey_playservicespanorama>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicespanorama>m2repository\com\google\android\gms\play-services-panorama\play-services-panorama\10.0.0\play-services-panorama-10.0.0.aar</_XbdAarFile_playservicespanorama>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicespanorama>$(XamarinBuildDownloadDir)$(_XbdKey_playservicespanorama)\play-services-panorama-10.0.0.aar</_XbdAarFileFullPath_playservicespanorama>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicespanorama>Xamarin.GooglePlayServices.Panorama</_XbdAssemblyName_playservicespanorama>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicespanorama" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicespanorama">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicespanorama)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicespanorama)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicespanorama" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicespanorama)" Condition="!Exists('$(_XbdAarFileFullPath_playservicespanorama)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-panorama-10.0.0.aar</ToFile>
+        <RangeStart>71491934</RangeStart>
+        <RangeEnd>71504377</RangeEnd>
+        <Md5>67F893149F501C1B3E548885A3D656F6</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicespanorama)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicespanorama)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesplaces>playservices-10.0.0/playservicesplaces</_XbdKey_playservicesplaces>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesplaces>m2repository\com\google\android\gms\play-services-places\play-services-places\10.0.0\play-services-places-10.0.0.aar</_XbdAarFile_playservicesplaces>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesplaces>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesplaces)\play-services-places-10.0.0.aar</_XbdAarFileFullPath_playservicesplaces>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesplaces>Xamarin.GooglePlayServices.Places</_XbdAssemblyName_playservicesplaces>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesplaces" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesplaces">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesplaces)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesplaces)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesplaces" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesplaces)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesplaces)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-places-10.0.0.aar</ToFile>
+        <RangeStart>120716905</RangeStart>
+        <RangeEnd>120903380</RangeEnd>
+        <Md5>114919E0B714F44F48CCB74D4AE5BA83</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesplaces)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesplaces)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesplus>playservices-10.0.0/playservicesplus</_XbdKey_playservicesplus>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesplus>m2repository\com\google\android\gms\play-services-plus\play-services-plus\10.0.0\play-services-plus-10.0.0.aar</_XbdAarFile_playservicesplus>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesplus>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesplus)\play-services-plus-10.0.0.aar</_XbdAarFileFullPath_playservicesplus>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesplus>Xamarin.GooglePlayServices.Plus</_XbdAssemblyName_playservicesplus>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesplus" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesplus">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesplus)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesplus)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesplus" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesplus)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesplus)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-plus-10.0.0.aar</ToFile>
+        <RangeStart>60623657</RangeStart>
+        <RangeEnd>60720375</RangeEnd>
+        <Md5>63CE4D2CC771D4AB09DAE1BBF1044EE3</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesplus)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesplus)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicessafetynet>playservices-10.0.0/playservicessafetynet</_XbdKey_playservicessafetynet>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicessafetynet>m2repository\com\google\android\gms\play-services-safetynet\play-services-safetynet\10.0.0\play-services-safetynet-10.0.0.aar</_XbdAarFile_playservicessafetynet>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicessafetynet>$(XamarinBuildDownloadDir)$(_XbdKey_playservicessafetynet)\play-services-safetynet-10.0.0.aar</_XbdAarFileFullPath_playservicessafetynet>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicessafetynet>Xamarin.GooglePlayServices.SafetyNet</_XbdAssemblyName_playservicessafetynet>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicessafetynet" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicessafetynet">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicessafetynet)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicessafetynet)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicessafetynet" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicessafetynet)" Condition="!Exists('$(_XbdAarFileFullPath_playservicessafetynet)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-safetynet-10.0.0.aar</ToFile>
+        <RangeStart>33075612</RangeStart>
+        <RangeEnd>33122714</RangeEnd>
+        <Md5>02E6745E1765598CE4598F82423A06E5</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicessafetynet)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicessafetynet)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicestasks>playservices-10.0.0/playservicestasks</_XbdKey_playservicestasks>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicestasks>m2repository\com\google\android\gms\play-services-tasks\play-services-tasks\10.0.0\play-services-tasks-10.0.0.aar</_XbdAarFile_playservicestasks>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicestasks>$(XamarinBuildDownloadDir)$(_XbdKey_playservicestasks)\play-services-tasks-10.0.0.aar</_XbdAarFileFullPath_playservicestasks>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicestasks>Xamarin.GooglePlayServices.Tasks</_XbdAssemblyName_playservicestasks>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicestasks" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicestasks">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicestasks)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicestasks)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicestasks" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicestasks)" Condition="!Exists('$(_XbdAarFileFullPath_playservicestasks)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-tasks-10.0.0.aar</ToFile>
+        <RangeStart>119762490</RangeStart>
+        <RangeEnd>119783084</RangeEnd>
+        <Md5>DF96D73A75477530D45210F429AFBDDB</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicestasks)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicestasks)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicestagmanager>playservices-10.0.0/playservicestagmanager</_XbdKey_playservicestagmanager>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicestagmanager>m2repository\com\google\android\gms\play-services-tagmanager\play-services-tagmanager\10.0.0\play-services-tagmanager-10.0.0.aar</_XbdAarFile_playservicestagmanager>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicestagmanager>$(XamarinBuildDownloadDir)$(_XbdKey_playservicestagmanager)\play-services-tagmanager-10.0.0.aar</_XbdAarFileFullPath_playservicestagmanager>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicestagmanager>Xamarin.GooglePlayServices.TagManager</_XbdAssemblyName_playservicestagmanager>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicestagmanager" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicestagmanager">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicestagmanager)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicestagmanager)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicestagmanager" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicestagmanager)" Condition="!Exists('$(_XbdAarFileFullPath_playservicestagmanager)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-tagmanager-10.0.0.aar</ToFile>
+        <RangeStart>122601652</RangeStart>
+        <RangeEnd>122833140</RangeEnd>
+        <Md5>8678D05F1EFC229969A51A413485380D</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicestagmanager)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicestagmanager)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicestagmanagerapi>playservices-10.0.0/playservicestagmanagerapi</_XbdKey_playservicestagmanagerapi>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicestagmanagerapi>m2repository\com\google\android\gms\play-services-tagmanager-api\play-services-tagmanager-api\10.0.0\play-services-tagmanager-api-10.0.0.aar</_XbdAarFile_playservicestagmanagerapi>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicestagmanagerapi>$(XamarinBuildDownloadDir)$(_XbdKey_playservicestagmanagerapi)\play-services-tagmanager-api-10.0.0.aar</_XbdAarFileFullPath_playservicestagmanagerapi>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicestagmanagerapi>Xamarin.GooglePlayServices.TagManager.Api</_XbdAssemblyName_playservicestagmanagerapi>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicestagmanagerapi" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicestagmanagerapi">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicestagmanagerapi)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicestagmanagerapi)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicestagmanagerapi" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicestagmanagerapi)" Condition="!Exists('$(_XbdAarFileFullPath_playservicestagmanagerapi)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-tagmanager-api-10.0.0.aar</ToFile>
+        <RangeStart>121732330</RangeStart>
+        <RangeEnd>121757512</RangeEnd>
+        <Md5>E428F5F96CCF42C6009D467252D07F3E</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicestagmanagerapi)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicestagmanagerapi)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicestagmanagerv4impl>playservices-10.0.0/playservicestagmanagerv4impl</_XbdKey_playservicestagmanagerv4impl>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicestagmanagerv4impl>m2repository\com\google\android\gms\play-services-tagmanager-v4-impl\play-services-tagmanager-v4-impl\10.0.0\play-services-tagmanager-v4-impl-10.0.0.aar</_XbdAarFile_playservicestagmanagerv4impl>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicestagmanagerv4impl>$(XamarinBuildDownloadDir)$(_XbdKey_playservicestagmanagerv4impl)\play-services-tagmanager-v4-impl-10.0.0.aar</_XbdAarFileFullPath_playservicestagmanagerv4impl>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicestagmanagerv4impl>Xamarin.GooglePlayServices.TagManager.V4.Impl</_XbdAssemblyName_playservicestagmanagerv4impl>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicestagmanagerv4impl" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicestagmanagerv4impl">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicestagmanagerv4impl)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicestagmanagerv4impl)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicestagmanagerv4impl" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicestagmanagerv4impl)" Condition="!Exists('$(_XbdAarFileFullPath_playservicestagmanagerv4impl)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-tagmanager-v4-impl-10.0.0.aar</ToFile>
+        <RangeStart>74544540</RangeStart>
+        <RangeEnd>74731468</RangeEnd>
+        <Md5>84422BEEE5607DBCB95DA27CD6ED11E3</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicestagmanagerv4impl)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicestagmanagerv4impl)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playservicesvision>playservices-10.0.0/playservicesvision</_XbdKey_playservicesvision>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playservicesvision>m2repository\com\google\android\gms\play-services-vision\play-services-vision\10.0.0\play-services-vision-10.0.0.aar</_XbdAarFile_playservicesvision>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playservicesvision>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesvision)\play-services-vision-10.0.0.aar</_XbdAarFileFullPath_playservicesvision>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playservicesvision>Xamarin.GooglePlayServices.Vision</_XbdAssemblyName_playservicesvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesvision" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playservicesvision">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesvision)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesvision)')">
+      <Output PropertyName="_XbdAarFileFullPath_playservicesvision" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playservicesvision)" Condition="!Exists('$(_XbdAarFileFullPath_playservicesvision)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-vision-10.0.0.aar</ToFile>
+        <RangeStart>70590897</RangeStart>
+        <RangeEnd>70693014</RangeEnd>
+        <Md5>834CF421CBD5CA704E6EE16A8BD2B4BA</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesvision)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playservicesvision)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playserviceswallet>playservices-10.0.0/playserviceswallet</_XbdKey_playserviceswallet>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playserviceswallet>m2repository\com\google\android\gms\play-services-wallet\play-services-wallet\10.0.0\play-services-wallet-10.0.0.aar</_XbdAarFile_playserviceswallet>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playserviceswallet>$(XamarinBuildDownloadDir)$(_XbdKey_playserviceswallet)\play-services-wallet-10.0.0.aar</_XbdAarFileFullPath_playserviceswallet>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playserviceswallet>Xamarin.GooglePlayServices.Wallet</_XbdAssemblyName_playserviceswallet>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playserviceswallet" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playserviceswallet">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playserviceswallet)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playserviceswallet)')">
+      <Output PropertyName="_XbdAarFileFullPath_playserviceswallet" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playserviceswallet)" Condition="!Exists('$(_XbdAarFileFullPath_playserviceswallet)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-wallet-10.0.0.aar</ToFile>
+        <RangeStart>72622337</RangeStart>
+        <RangeEnd>72787502</RangeEnd>
+        <Md5>307BEAF7039C1A611E985CCE73134F96</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playserviceswallet)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playserviceswallet)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_playserviceswearable>playservices-10.0.0/playserviceswearable</_XbdKey_playserviceswearable>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_playserviceswearable>m2repository\com\google\android\gms\play-services-wearable\play-services-wearable\10.0.0\play-services-wearable-10.0.0.aar</_XbdAarFile_playserviceswearable>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_playserviceswearable>$(XamarinBuildDownloadDir)$(_XbdKey_playserviceswearable)\play-services-wearable-10.0.0.aar</_XbdAarFileFullPath_playserviceswearable>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_playserviceswearable>Xamarin.GooglePlayServices.Wearable</_XbdAssemblyName_playserviceswearable>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_playserviceswearable" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_playserviceswearable">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playserviceswearable)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playserviceswearable)')">
+      <Output PropertyName="_XbdAarFileFullPath_playserviceswearable" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_playserviceswearable)" Condition="!Exists('$(_XbdAarFileFullPath_playserviceswearable)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>play-services-wearable-10.0.0.aar</ToFile>
+        <RangeStart>93929324</RangeStart>
+        <RangeEnd>94138635</RangeEnd>
+        <Md5>4DCAFBFFF4A5B343DEC69AE2A8B2F415</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playserviceswearable)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_playserviceswearable)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebaseads>firebase-10.0.0/firebaseads</_XbdKey_firebaseads>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebaseads>m2repository\com\google\firebase\firebase-ads\firebase-ads\10.0.0\firebase-ads-10.0.0.aar</_XbdAarFile_firebaseads>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebaseads>$(XamarinBuildDownloadDir)$(_XbdKey_firebaseads)\firebase-ads-10.0.0.aar</_XbdAarFileFullPath_firebaseads>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebaseads>Xamarin.Firebase.Ads</_XbdAssemblyName_firebaseads>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebaseads" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebaseads">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseads)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseads)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebaseads" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebaseads)" Condition="!Exists('$(_XbdAarFileFullPath_firebaseads)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-ads-10.0.0.aar</ToFile>
+        <RangeStart>135799207</RangeStart>
+        <RangeEnd>135799485</RangeEnd>
+        <Md5>CDC3BBA6E969701F7D062B0C5F6656BB</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebaseads)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebaseads)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebaseanalytics>firebase-10.0.0/firebaseanalytics</_XbdKey_firebaseanalytics>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebaseanalytics>m2repository\com\google\firebase\firebase-analytics\firebase-analytics\10.0.0\firebase-analytics-10.0.0.aar</_XbdAarFile_firebaseanalytics>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebaseanalytics>$(XamarinBuildDownloadDir)$(_XbdKey_firebaseanalytics)\firebase-analytics-10.0.0.aar</_XbdAarFileFullPath_firebaseanalytics>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebaseanalytics>Xamarin.Firebase.Analytics</_XbdAssemblyName_firebaseanalytics>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebaseanalytics" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebaseanalytics">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseanalytics)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseanalytics)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebaseanalytics" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebaseanalytics)" Condition="!Exists('$(_XbdAarFileFullPath_firebaseanalytics)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-analytics-10.0.0.aar</ToFile>
+        <RangeStart>136437990</RangeStart>
+        <RangeEnd>136442680</RangeEnd>
+        <Md5>94FB0331E06EF3BF520E611FBA93A719</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebaseanalytics)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebaseanalytics)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebaseanalyticsimpl>firebase-10.0.0/firebaseanalyticsimpl</_XbdKey_firebaseanalyticsimpl>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebaseanalyticsimpl>m2repository\com\google\firebase\firebase-analytics-impl\firebase-analytics-impl\10.0.0\firebase-analytics-impl-10.0.0.aar</_XbdAarFile_firebaseanalyticsimpl>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebaseanalyticsimpl>$(XamarinBuildDownloadDir)$(_XbdKey_firebaseanalyticsimpl)\firebase-analytics-impl-10.0.0.aar</_XbdAarFileFullPath_firebaseanalyticsimpl>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebaseanalyticsimpl>Xamarin.Firebase.Analytics.Impl</_XbdAssemblyName_firebaseanalyticsimpl>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebaseanalyticsimpl" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebaseanalyticsimpl">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseanalyticsimpl)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseanalyticsimpl)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebaseanalyticsimpl" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebaseanalyticsimpl)" Condition="!Exists('$(_XbdAarFileFullPath_firebaseanalyticsimpl)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-analytics-impl-10.0.0.aar</ToFile>
+        <RangeStart>142958067</RangeStart>
+        <RangeEnd>143169836</RangeEnd>
+        <Md5>6CC2CEF5F5C48E5D031E56255C10ECFE</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebaseanalyticsimpl)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebaseanalyticsimpl)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebaseappindexing>firebase-10.0.0/firebaseappindexing</_XbdKey_firebaseappindexing>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebaseappindexing>m2repository\com\google\firebase\firebase-appindexing\firebase-appindexing\10.0.0\firebase-appindexing-10.0.0.aar</_XbdAarFile_firebaseappindexing>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebaseappindexing>$(XamarinBuildDownloadDir)$(_XbdKey_firebaseappindexing)\firebase-appindexing-10.0.0.aar</_XbdAarFileFullPath_firebaseappindexing>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebaseappindexing>Xamarin.Firebase.AppIndexing</_XbdAssemblyName_firebaseappindexing>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebaseappindexing" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebaseappindexing">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseappindexing)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseappindexing)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebaseappindexing" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebaseappindexing)" Condition="!Exists('$(_XbdAarFileFullPath_firebaseappindexing)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-appindexing-10.0.0.aar</ToFile>
+        <RangeStart>140194553</RangeStart>
+        <RangeEnd>140306932</RangeEnd>
+        <Md5>DEE55B8E22A39517833F4C0FA0D66D78</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebaseappindexing)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebaseappindexing)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebaseauth>firebase-10.0.0/firebaseauth</_XbdKey_firebaseauth>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebaseauth>m2repository\com\google\firebase\firebase-auth\firebase-auth\10.0.0\firebase-auth-10.0.0.aar</_XbdAarFile_firebaseauth>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebaseauth>$(XamarinBuildDownloadDir)$(_XbdKey_firebaseauth)\firebase-auth-10.0.0.aar</_XbdAarFileFullPath_firebaseauth>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebaseauth>Xamarin.Firebase.Auth</_XbdAssemblyName_firebaseauth>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebaseauth" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebaseauth">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseauth)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseauth)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebaseauth" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebaseauth)" Condition="!Exists('$(_XbdAarFileFullPath_firebaseauth)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-auth-10.0.0.aar</ToFile>
+        <RangeStart>139474604</RangeStart>
+        <RangeEnd>139677861</RangeEnd>
+        <Md5>F1D13DE58110453BB6A30A6C7D0487EE</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebaseauth)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebaseauth)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebasecommon>firebase-10.0.0/firebasecommon</_XbdKey_firebasecommon>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebasecommon>m2repository\com\google\firebase\firebase-common\firebase-common\10.0.0\firebase-common-10.0.0.aar</_XbdAarFile_firebasecommon>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebasecommon>$(XamarinBuildDownloadDir)$(_XbdKey_firebasecommon)\firebase-common-10.0.0.aar</_XbdAarFileFullPath_firebasecommon>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebasecommon>Xamarin.Firebase.Common</_XbdAssemblyName_firebasecommon>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebasecommon" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebasecommon">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasecommon)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasecommon)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebasecommon" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebasecommon)" Condition="!Exists('$(_XbdAarFileFullPath_firebasecommon)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-common-10.0.0.aar</ToFile>
+        <RangeStart>144226561</RangeStart>
+        <RangeEnd>144242167</RangeEnd>
+        <Md5>C0BEDB60BE680D96CF9AA9B976E5ABAB</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebasecommon)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebasecommon)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebaseconfig>firebase-10.0.0/firebaseconfig</_XbdKey_firebaseconfig>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebaseconfig>m2repository\com\google\firebase\firebase-config\firebase-config\10.0.0\firebase-config-10.0.0.aar</_XbdAarFile_firebaseconfig>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebaseconfig>$(XamarinBuildDownloadDir)$(_XbdKey_firebaseconfig)\firebase-config-10.0.0.aar</_XbdAarFileFullPath_firebaseconfig>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebaseconfig>Xamarin.Firebase.Config</_XbdAssemblyName_firebaseconfig>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebaseconfig" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebaseconfig">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseconfig)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseconfig)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebaseconfig" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebaseconfig)" Condition="!Exists('$(_XbdAarFileFullPath_firebaseconfig)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-config-10.0.0.aar</ToFile>
+        <RangeStart>136062297</RangeStart>
+        <RangeEnd>136114557</RangeEnd>
+        <Md5>974286DDB7284E1A84359F975D2B7B80</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebaseconfig)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebaseconfig)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebasecore>firebase-10.0.0/firebasecore</_XbdKey_firebasecore>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebasecore>m2repository\com\google\firebase\firebase-core\firebase-core\10.0.0\firebase-core-10.0.0.aar</_XbdAarFile_firebasecore>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebasecore>$(XamarinBuildDownloadDir)$(_XbdKey_firebasecore)\firebase-core-10.0.0.aar</_XbdAarFileFullPath_firebasecore>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebasecore>Xamarin.Firebase.Core</_XbdAssemblyName_firebasecore>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebasecore" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebasecore">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasecore)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasecore)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebasecore" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebasecore)" Condition="!Exists('$(_XbdAarFileFullPath_firebasecore)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-core-10.0.0.aar</ToFile>
+        <RangeStart>140804678</RangeStart>
+        <RangeEnd>140804957</RangeEnd>
+        <Md5>572220DADFA39A4E69928D6F3A2D566E</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebasecore)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebasecore)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebasecrash>firebase-10.0.0/firebasecrash</_XbdKey_firebasecrash>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebasecrash>m2repository\com\google\firebase\firebase-crash\firebase-crash\10.0.0\firebase-crash-10.0.0.aar</_XbdAarFile_firebasecrash>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebasecrash>$(XamarinBuildDownloadDir)$(_XbdKey_firebasecrash)\firebase-crash-10.0.0.aar</_XbdAarFileFullPath_firebasecrash>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebasecrash>Xamarin.Firebase.Crash</_XbdAssemblyName_firebasecrash>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebasecrash" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebasecrash">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasecrash)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasecrash)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebasecrash" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebasecrash)" Condition="!Exists('$(_XbdAarFileFullPath_firebasecrash)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-crash-10.0.0.aar</ToFile>
+        <RangeStart>135644221</RangeStart>
+        <RangeEnd>135658174</RangeEnd>
+        <Md5>05BE6705EACDD940832060551EC3041B</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebasecrash)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebasecrash)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebasedatabase>firebase-10.0.0/firebasedatabase</_XbdKey_firebasedatabase>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebasedatabase>m2repository\com\google\firebase\firebase-database\firebase-database\10.0.0\firebase-database-10.0.0.aar</_XbdAarFile_firebasedatabase>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebasedatabase>$(XamarinBuildDownloadDir)$(_XbdKey_firebasedatabase)\firebase-database-10.0.0.aar</_XbdAarFileFullPath_firebasedatabase>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebasedatabase>Xamarin.Firebase.Database</_XbdAssemblyName_firebasedatabase>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebasedatabase" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebasedatabase">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasedatabase)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasedatabase)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebasedatabase" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebasedatabase)" Condition="!Exists('$(_XbdAarFileFullPath_firebasedatabase)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-database-10.0.0.aar</ToFile>
+        <RangeStart>137294571</RangeStart>
+        <RangeEnd>137566453</RangeEnd>
+        <Md5>0021E915722C28784709F557C23BC31F</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebasedatabase)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebasedatabase)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebasedatabaseconnection>firebase-10.0.0/firebasedatabaseconnection</_XbdKey_firebasedatabaseconnection>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebasedatabaseconnection>m2repository\com\google\firebase\firebase-database-connection\firebase-database-connection\10.0.0\firebase-database-connection-10.0.0.aar</_XbdAarFile_firebasedatabaseconnection>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebasedatabaseconnection>$(XamarinBuildDownloadDir)$(_XbdKey_firebasedatabaseconnection)\firebase-database-connection-10.0.0.aar</_XbdAarFileFullPath_firebasedatabaseconnection>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebasedatabaseconnection>Xamarin.Firebase.Database.Connection</_XbdAssemblyName_firebasedatabaseconnection>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebasedatabaseconnection" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebasedatabaseconnection">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasedatabaseconnection)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasedatabaseconnection)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebasedatabaseconnection" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebasedatabaseconnection)" Condition="!Exists('$(_XbdAarFileFullPath_firebasedatabaseconnection)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-database-connection-10.0.0.aar</ToFile>
+        <RangeStart>141736285</RangeStart>
+        <RangeEnd>141832246</RangeEnd>
+        <Md5>F323F8EA5B8243ABCD41450A1C181C97</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebasedatabaseconnection)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebasedatabaseconnection)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebaseiid>firebase-10.0.0/firebaseiid</_XbdKey_firebaseiid>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebaseiid>m2repository\com\google\firebase\firebase-iid\firebase-iid\10.0.0\firebase-iid-10.0.0.aar</_XbdAarFile_firebaseiid>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebaseiid>$(XamarinBuildDownloadDir)$(_XbdKey_firebaseiid)\firebase-iid-10.0.0.aar</_XbdAarFileFullPath_firebaseiid>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebaseiid>Xamarin.Firebase.Iid</_XbdAssemblyName_firebaseiid>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebaseiid" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebaseiid">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseiid)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseiid)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebaseiid" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebaseiid)" Condition="!Exists('$(_XbdAarFileFullPath_firebaseiid)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-iid-10.0.0.aar</ToFile>
+        <RangeStart>140397905</RangeStart>
+        <RangeEnd>140428561</RangeEnd>
+        <Md5>D5DB1C1D05A9D874BEC09277AE7EC9FE</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebaseiid)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebaseiid)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebaseinvites>firebase-10.0.0/firebaseinvites</_XbdKey_firebaseinvites>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebaseinvites>m2repository\com\google\firebase\firebase-invites\firebase-invites\10.0.0\firebase-invites-10.0.0.aar</_XbdAarFile_firebaseinvites>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebaseinvites>$(XamarinBuildDownloadDir)$(_XbdKey_firebaseinvites)\firebase-invites-10.0.0.aar</_XbdAarFileFullPath_firebaseinvites>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebaseinvites>Xamarin.Firebase.Invites</_XbdAssemblyName_firebaseinvites>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebaseinvites" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebaseinvites">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseinvites)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseinvites)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebaseinvites" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebaseinvites)" Condition="!Exists('$(_XbdAarFileFullPath_firebaseinvites)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-invites-10.0.0.aar</ToFile>
+        <RangeStart>135785211</RangeStart>
+        <RangeEnd>135785491</RangeEnd>
+        <Md5>DCCE60FB63AB380EB81C164693EC4903</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebaseinvites)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebaseinvites)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebasemessaging>firebase-10.0.0/firebasemessaging</_XbdKey_firebasemessaging>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebasemessaging>m2repository\com\google\firebase\firebase-messaging\firebase-messaging\10.0.0\firebase-messaging-10.0.0.aar</_XbdAarFile_firebasemessaging>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebasemessaging>$(XamarinBuildDownloadDir)$(_XbdKey_firebasemessaging)\firebase-messaging-10.0.0.aar</_XbdAarFileFullPath_firebasemessaging>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebasemessaging>Xamarin.Firebase.Messaging</_XbdAssemblyName_firebasemessaging>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebasemessaging" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebasemessaging">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasemessaging)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasemessaging)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebasemessaging" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebasemessaging)" Condition="!Exists('$(_XbdAarFileFullPath_firebasemessaging)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-messaging-10.0.0.aar</ToFile>
+        <RangeStart>140664578</RangeStart>
+        <RangeEnd>140683464</RangeEnd>
+        <Md5>2DDA6D31EECF87BC11DD76B4FB9E8AC7</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebasemessaging)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebasemessaging)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebasestorage>firebase-10.0.0/firebasestorage</_XbdKey_firebasestorage>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebasestorage>m2repository\com\google\firebase\firebase-storage\firebase-storage\10.0.0\firebase-storage-10.0.0.aar</_XbdAarFile_firebasestorage>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebasestorage>$(XamarinBuildDownloadDir)$(_XbdKey_firebasestorage)\firebase-storage-10.0.0.aar</_XbdAarFileFullPath_firebasestorage>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebasestorage>Xamarin.Firebase.Storage</_XbdAssemblyName_firebasestorage>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebasestorage" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebasestorage">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasestorage)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasestorage)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebasestorage" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebasestorage)" Condition="!Exists('$(_XbdAarFileFullPath_firebasestorage)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-storage-10.0.0.aar</ToFile>
+        <RangeStart>141000556</RangeStart>
+        <RangeEnd>141066221</RangeEnd>
+        <Md5>D349A1905D01BEF8296693D38BD2B52A</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebasestorage)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebasestorage)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <!-- Unique key for cached download -->
+    <_XbdKey_firebasestoragecommon>firebase-10.0.0/firebasestoragecommon</_XbdKey_firebasestoragecommon>
+    <!-- Path to .aar file within the extracted contents of the cached download -->
+    <_XbdAarFile_firebasestoragecommon>m2repository\com\google\firebase\firebase-storage-common\firebase-storage-common\10.0.0\firebase-storage-common-10.0.0.aar</_XbdAarFile_firebasestoragecommon>
+    <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+    <_XbdAarFileFullPath_firebasestoragecommon>$(XamarinBuildDownloadDir)$(_XbdKey_firebasestoragecommon)\firebase-storage-common-10.0.0.aar</_XbdAarFileFullPath_firebasestoragecommon>
+    <!-- Assembly name to embed .aar in -->
+    <_XbdAssemblyName_firebasestoragecommon>Xamarin.Firebase.Storage.Common</_XbdAssemblyName_firebasestoragecommon>
+  </PropertyGroup>
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebasestoragecommon" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_firebasestoragecommon">
+    <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+    <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasestoragecommon)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasestoragecommon)')">
+      <Output PropertyName="_XbdAarFileFullPath_firebasestoragecommon" TaskParameter="Value" />
+    </CreateProperty>
+    <ItemGroup>
+      <XamarinBuildDownloadPartialZip Include="$(_XbdKey_firebasestoragecommon)" Condition="!Exists('$(_XbdAarFileFullPath_firebasestoragecommon)')">
+        <Url>https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc41_wear_2a3.zip</Url>
+        <ToFile>firebase-storage-common-10.0.0.aar</ToFile>
+        <RangeStart>135836702</RangeStart>
+        <RangeEnd>135845037</RangeEnd>
+        <Md5>14A339338652C707F8941EC558A81D56</Md5>
+      </XamarinBuildDownloadPartialZip>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebasestoragecommon)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>$(_XbdAssemblyName_firebasestoragecommon)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+</Project>
