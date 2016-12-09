@@ -311,7 +311,9 @@ var buildSpec = new BuildSpec {
 	}
 };
 
-
+var NUGET_SOURCES = EnvironmentVariable ("NUGET_SOURCES") ?? string.Empty;
+if (!string.IsNullOrEmpty (NUGET_SOURCES))
+	buildSpec.NuGetSources = NUGET_SOURCES.Split (';',',').Select (ns => new NuGetSource { Url = ns }).ToArray ();
 
 Task ("externals")
 	.WithCriteria (() => !FileExists ("./externals/play-services-base.aar")).Does (() =>
