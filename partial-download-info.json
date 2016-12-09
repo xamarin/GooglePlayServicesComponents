@@ -4,7 +4,7 @@
     "RangeStart": 2297013,
     "LocalPath": "m2repository/com/google/android/gms/play-services-drive/10.0.0/play-services-drive-10.0.0.aar",
     "CompressedSize": 362758,
-    "Md5": "9E2BDB41E8657F88312CFA761C517D10",
+    "Md5": "9e2bdb41e8657f88312cfa761c517d10",
     "RangeEnd": 2659771
   },
   {
@@ -12,7 +12,7 @@
     "RangeStart": 9927010,
     "LocalPath": "m2repository/com/google/android/gms/play-services-games/10.0.0/play-services-games-10.0.0.aar",
     "CompressedSize": 557886,
-    "Md5": "1B4E7AAB69C1526B029F272F6D232588",
+    "Md5": "1b4e7aab69c1526b029f272f6d232588",
     "RangeEnd": 10484896
   },
   {
@@ -20,7 +20,7 @@
     "RangeStart": 21037909,
     "LocalPath": "m2repository/com/google/android/gms/play-services-base/10.0.0/play-services-base-10.0.0.aar",
     "CompressedSize": 434652,
-    "Md5": "3E66FE07AD14EB878AAB6D7DA7A43F2D",
+    "Md5": "3e66fe07ad14eb878aab6d7da7a43f2d",
     "RangeEnd": 21472561
   },
   {
@@ -28,7 +28,7 @@
     "RangeStart": 29258136,
     "LocalPath": "m2repository/com/google/android/gms/play-services-awareness/10.0.0/play-services-awareness-10.0.0.aar",
     "CompressedSize": 162771,
-    "Md5": "06E7D3AA39F9BF1DE69DB1C8C8949217",
+    "Md5": "06e7d3aa39f9bf1de69db1c8c8949217",
     "RangeEnd": 29420907
   },
   {
@@ -36,7 +36,7 @@
     "RangeStart": 30833861,
     "LocalPath": "m2repository/com/google/android/gms/play-services-location/10.0.0/play-services-location-10.0.0.aar",
     "CompressedSize": 101853,
-    "Md5": "3D9747C414171EE7FA3EE68E6585D756",
+    "Md5": "3d9747c414171ee7fa3ee68e6585d756",
     "RangeEnd": 30935714
   },
   {
@@ -44,7 +44,7 @@
     "RangeStart": 33075612,
     "LocalPath": "m2repository/com/google/android/gms/play-services-safetynet/10.0.0/play-services-safetynet-10.0.0.aar",
     "CompressedSize": 47102,
-    "Md5": "02E6745E1765598CE4598F82423A06E5",
+    "Md5": "02e6745e1765598ce4598f82423a06e5",
     "RangeEnd": 33122714
   },
   {
@@ -52,7 +52,7 @@
     "RangeStart": 33499933,
     "LocalPath": "m2repository/com/google/android/gms/play-services-auth-base/10.0.0/play-services-auth-base-10.0.0.aar",
     "CompressedSize": 57328,
-    "Md5": "60BE1CD9CD5035248F0AF853D9975F47",
+    "Md5": "60be1cd9cd5035248f0af853d9975f47",
     "RangeEnd": 33557261
   },
   {
@@ -60,7 +60,7 @@
     "RangeStart": 33819254,
     "LocalPath": "m2repository/com/google/android/gms/play-services-all-wear/10.0.0/play-services-all-wear-10.0.0.aar",
     "CompressedSize": 287,
-    "Md5": "381598A63D4912EBF290E25DAC5B3663",
+    "Md5": "381598a63d4912ebf290e25dac5b3663",
     "RangeEnd": 33819541
   },
   {
@@ -68,7 +68,7 @@
     "RangeStart": 35857298,
     "LocalPath": "m2repository/com/google/android/gms/play-services-clearcut/10.0.0/play-services-clearcut-10.0.0.aar",
     "CompressedSize": 34384,
-    "Md5": "6BE5E2ACD3E6C90A04304D6919405D64",
+    "Md5": "6be5e2acd3e6c90a04304d6919405d64",
     "RangeEnd": 35891682
   },
   {
@@ -76,7 +76,7 @@
     "RangeStart": 40819511,
     "LocalPath": "m2repository/com/google/android/gms/play-services/10.0.0/play-services-10.0.0.aar",
     "CompressedSize": 281,
-    "Md5": "27825D6EBD08FBBD27C7FDA8ED20AF7D",
+    "Md5": "27825d6ebd08fbbd27c7fda8ed20af7d",
     "RangeEnd": 40819792
   },
   {
@@ -84,7 +84,7 @@
     "RangeStart": 60623657,
     "LocalPath": "m2repository/com/google/android/gms/play-services-plus/10.0.0/play-services-plus-10.0.0.aar",
     "CompressedSize": 96718,
-    "Md5": "63CE4D2CC771D4AB09DAE1BBF1044EE3",
+    "Md5": "63ce4d2cc771d4ab09dae1bbf1044ee3",
     "RangeEnd": 60720375
   },
   {
@@ -92,7 +92,7 @@
     "RangeStart": 63163098,
     "LocalPath": "m2repository/com/google/android/gms/play-services-cast/10.0.0/play-services-cast-10.0.0.aar",
     "CompressedSize": 239779,
-    "Md5": "9EE15021C2F6EBB0A38A5C8FCB4EF362",
+    "Md5": "9ee15021c2f6ebb0a38a5c8fcb4ef362",
     "RangeEnd": 63402877
   },
   {
@@ -100,7 +100,7 @@
     "RangeStart": 66351452,
     "LocalPath": "m2repository/com/google/android/gms/play-services-analytics-impl/10.0.0/play-services-analytics-impl-10.0.0.aar",
     "CompressedSize": 149206,
-    "Md5": "6AA27253AE3F17F3B98430DF857EBBAA",
+    "Md5": "6aa27253ae3f17f3b98430df857ebbaa",
     "RangeEnd": 66500658
   },
   {
@@ -108,7 +108,7 @@
     "RangeStart": 69420764,
     "LocalPath": "m2repository/com/google/android/gms/play-services-auth/10.0.0/play-services-auth-10.0.0.aar",
     "CompressedSize": 74821,
-    "Md5": "BA7096F8A570CADBB27D4DB7DB88DD5D",
+    "Md5": "ba7096f8a570cadbb27d4db7db88dd5d",
     "RangeEnd": 69495585
   },
   {
@@ -116,7 +116,7 @@
     "RangeStart": 70590897,
     "LocalPath": "m2repository/com/google/android/gms/play-services-vision/10.0.0/play-services-vision-10.0.0.aar",
     "CompressedSize": 102117,
-    "Md5": "834CF421CBD5CA704E6EE16A8BD2B4BA",
+    "Md5": "834cf421cbd5ca704e6ee16a8bd2b4ba",
     "RangeEnd": 70693014
   },
   {
@@ -124,7 +124,7 @@
     "RangeStart": 71491934,
     "LocalPath": "m2repository/com/google/android/gms/play-services-panorama/10.0.0/play-services-panorama-10.0.0.aar",
     "CompressedSize": 12443,
-    "Md5": "67F893149F501C1B3E548885A3D656F6",
+    "Md5": "67f893149f501c1b3e548885a3d656f6",
     "RangeEnd": 71504377
   },
   {
@@ -132,7 +132,7 @@
     "RangeStart": 72622337,
     "LocalPath": "m2repository/com/google/android/gms/play-services-wallet/10.0.0/play-services-wallet-10.0.0.aar",
     "CompressedSize": 165165,
-    "Md5": "307BEAF7039C1A611E985CCE73134F96",
+    "Md5": "307beaf7039c1a611e985cce73134f96",
     "RangeEnd": 72787502
   },
   {
@@ -140,7 +140,7 @@
     "RangeStart": 74465236,
     "LocalPath": "m2repository/com/google/android/gms/play-services-instantapps/10.0.0/play-services-instantapps-10.0.0.aar",
     "CompressedSize": 44735,
-    "Md5": "2107DFFED428756446B0536272A83658",
+    "Md5": "2107dffed428756446b0536272a83658",
     "RangeEnd": 74509971
   },
   {
@@ -148,7 +148,7 @@
     "RangeStart": 74544540,
     "LocalPath": "m2repository/com/google/android/gms/play-services-tagmanager-v4-impl/10.0.0/play-services-tagmanager-v4-impl-10.0.0.aar",
     "CompressedSize": 186928,
-    "Md5": "84422BEEE5607DBCB95DA27CD6ED11E3",
+    "Md5": "84422beee5607dbcb95da27cd6ed11e3",
     "RangeEnd": 74731468
   },
   {
@@ -156,7 +156,7 @@
     "RangeStart": 74867568,
     "LocalPath": "m2repository/com/google/android/gms/play-services-identity/10.0.0/play-services-identity-10.0.0.aar",
     "CompressedSize": 19533,
-    "Md5": "7FA09826A61C105F0BE47E19A5A6935C",
+    "Md5": "7fa09826a61c105f0be47e19a5a6935c",
     "RangeEnd": 74887101
   },
   {
@@ -164,7 +164,7 @@
     "RangeStart": 76289115,
     "LocalPath": "m2repository/com/google/android/gms/play-services-nearby/10.0.0/play-services-nearby-10.0.0.aar",
     "CompressedSize": 159618,
-    "Md5": "D5F7D911D3DAEC06D6C2ACE3611C016A",
+    "Md5": "d5f7d911d3daec06d6c2ace3611c016a",
     "RangeEnd": 76448733
   },
   {
@@ -172,7 +172,7 @@
     "RangeStart": 82978510,
     "LocalPath": "m2repository/com/google/android/gms/play-services-ads/10.0.0/play-services-ads-10.0.0.aar",
     "CompressedSize": 868343,
-    "Md5": "F60F422D36EA7C92BE74C8B9AA6449E0",
+    "Md5": "f60f422d36ea7c92be74c8b9aa6449e0",
     "RangeEnd": 83846853
   },
   {
@@ -180,7 +180,7 @@
     "RangeStart": 93929324,
     "LocalPath": "m2repository/com/google/android/gms/play-services-wearable/10.0.0/play-services-wearable-10.0.0.aar",
     "CompressedSize": 209311,
-    "Md5": "4DCAFBFFF4A5B343DEC69AE2A8B2F415",
+    "Md5": "4dcafbfff4a5b343dec69ae2a8b2f415",
     "RangeEnd": 94138635
   },
   {
@@ -188,7 +188,7 @@
     "RangeStart": 102757497,
     "LocalPath": "m2repository/com/google/android/gms/play-services-basement/10.0.0/play-services-basement-10.0.0.aar",
     "CompressedSize": 325470,
-    "Md5": "3F8C096D1C341619F597589C748D6E18",
+    "Md5": "3f8c096d1c341619f597589c748d6e18",
     "RangeEnd": 103082967
   },
   {
@@ -196,7 +196,7 @@
     "RangeStart": 107179267,
     "LocalPath": "m2repository/com/google/android/gms/play-services-iid/10.0.0/play-services-iid-10.0.0.aar",
     "CompressedSize": 18294,
-    "Md5": "DBEEEB663F621B7D2B3A579058E331B0",
+    "Md5": "dbeeeb663f621b7d2b3a579058e331b0",
     "RangeEnd": 107197561
   },
   {
@@ -204,7 +204,7 @@
     "RangeStart": 108433033,
     "LocalPath": "m2repository/com/google/android/gms/play-services-cast-framework/10.0.0/play-services-cast-framework-10.0.0.aar",
     "CompressedSize": 549074,
-    "Md5": "6A8922DB6040581DB397308F358EB86C",
+    "Md5": "6a8922db6040581db397308f358eb86c",
     "RangeEnd": 108982107
   },
   {
@@ -212,7 +212,7 @@
     "RangeStart": 112848260,
     "LocalPath": "m2repository/com/google/android/gms/play-services-fitness/10.0.0/play-services-fitness-10.0.0.aar",
     "CompressedSize": 371733,
-    "Md5": "8AF5A2FC02CBE1C35A969A4CDCD405C6",
+    "Md5": "8af5a2fc02cbe1c35a969a4cdcd405c6",
     "RangeEnd": 113219993
   },
   {
@@ -220,7 +220,7 @@
     "RangeStart": 117558266,
     "LocalPath": "m2repository/com/google/android/gms/play-services-ads-lite/10.0.0/play-services-ads-lite-10.0.0.aar",
     "CompressedSize": 292162,
-    "Md5": "0325C7533477EE6047B908450328C620",
+    "Md5": "0325c7533477ee6047b908450328c620",
     "RangeEnd": 117850428
   },
   {
@@ -228,7 +228,7 @@
     "RangeStart": 119762490,
     "LocalPath": "m2repository/com/google/android/gms/play-services-tasks/10.0.0/play-services-tasks-10.0.0.aar",
     "CompressedSize": 20594,
-    "Md5": "DF96D73A75477530D45210F429AFBDDB",
+    "Md5": "df96d73a75477530d45210f429afbddb",
     "RangeEnd": 119783084
   },
   {
@@ -236,7 +236,7 @@
     "RangeStart": 119935272,
     "LocalPath": "m2repository/com/google/android/gms/play-services-gass/10.0.0/play-services-gass-10.0.0.aar",
     "CompressedSize": 9118,
-    "Md5": "080B102AB1314BD3F5A9DBC1D9E29A01",
+    "Md5": "080b102ab1314bd3f5a9dbc1d9e29a01",
     "RangeEnd": 119944390
   },
   {
@@ -244,7 +244,7 @@
     "RangeStart": 120130289,
     "LocalPath": "m2repository/com/google/android/gms/play-services-appinvite/10.0.0/play-services-appinvite-10.0.0.aar",
     "CompressedSize": 23204,
-    "Md5": "0EFB52118BA86B9433981F15B217A816",
+    "Md5": "0efb52118ba86b9433981f15b217a816",
     "RangeEnd": 120153493
   },
   {
@@ -252,7 +252,7 @@
     "RangeStart": 120716905,
     "LocalPath": "m2repository/com/google/android/gms/play-services-places/10.0.0/play-services-places-10.0.0.aar",
     "CompressedSize": 186475,
-    "Md5": "114919E0B714F44F48CCB74D4AE5BA83",
+    "Md5": "114919e0b714f44f48ccb74d4ae5ba83",
     "RangeEnd": 120903380
   },
   {
@@ -260,7 +260,7 @@
     "RangeStart": 121732330,
     "LocalPath": "m2repository/com/google/android/gms/play-services-tagmanager-api/10.0.0/play-services-tagmanager-api-10.0.0.aar",
     "CompressedSize": 25182,
-    "Md5": "E428F5F96CCF42C6009D467252D07F3E",
+    "Md5": "e428f5f96ccf42c6009d467252d07f3e",
     "RangeEnd": 121757512
   },
   {
@@ -268,7 +268,7 @@
     "RangeStart": 122601652,
     "LocalPath": "m2repository/com/google/android/gms/play-services-tagmanager/10.0.0/play-services-tagmanager-10.0.0.aar",
     "CompressedSize": 231488,
-    "Md5": "8678D05F1EFC229969A51A413485380D",
+    "Md5": "8678d05f1efc229969a51a413485380d",
     "RangeEnd": 122833140
   },
   {
@@ -276,7 +276,7 @@
     "RangeStart": 125414175,
     "LocalPath": "m2repository/com/google/android/gms/play-services-analytics/10.0.0/play-services-analytics-10.0.0.aar",
     "CompressedSize": 3096,
-    "Md5": "5445C86EF421475C79CCFCA06A0B0A8F",
+    "Md5": "5445c86ef421475c79ccfca06a0b0a8f",
     "RangeEnd": 125417271
   },
   {
@@ -284,7 +284,7 @@
     "RangeStart": 127502330,
     "LocalPath": "m2repository/com/google/android/gms/play-services-gcm/10.0.0/play-services-gcm-10.0.0.aar",
     "CompressedSize": 36344,
-    "Md5": "C2F2C1C82054A3081FB4C817C693DE7C",
+    "Md5": "c2f2c1c82054a3081fb4c817c693de7c",
     "RangeEnd": 127538674
   },
   {
@@ -292,7 +292,7 @@
     "RangeStart": 129357116,
     "LocalPath": "m2repository/com/google/android/gms/play-services-maps/10.0.0/play-services-maps-10.0.0.aar",
     "CompressedSize": 248725,
-    "Md5": "8443E319D8A880F0689837DFC5315BFE",
+    "Md5": "8443e319d8a880f0689837dfc5315bfe",
     "RangeEnd": 129605841
   },
   {
@@ -300,7 +300,7 @@
     "RangeStart": 135644221,
     "LocalPath": "m2repository/com/google/firebase/firebase-crash/10.0.0/firebase-crash-10.0.0.aar",
     "CompressedSize": 13953,
-    "Md5": "05BE6705EACDD940832060551EC3041B",
+    "Md5": "05be6705eacdd940832060551ec3041b",
     "RangeEnd": 135658174
   },
   {
@@ -308,7 +308,7 @@
     "RangeStart": 135785211,
     "LocalPath": "m2repository/com/google/firebase/firebase-invites/10.0.0/firebase-invites-10.0.0.aar",
     "CompressedSize": 280,
-    "Md5": "DCCE60FB63AB380EB81C164693EC4903",
+    "Md5": "dcce60fb63ab380eb81c164693ec4903",
     "RangeEnd": 135785491
   },
   {
@@ -316,7 +316,7 @@
     "RangeStart": 135799207,
     "LocalPath": "m2repository/com/google/firebase/firebase-ads/10.0.0/firebase-ads-10.0.0.aar",
     "CompressedSize": 278,
-    "Md5": "CDC3BBA6E969701F7D062B0C5F6656BB",
+    "Md5": "cdc3bba6e969701f7d062b0c5f6656bb",
     "RangeEnd": 135799485
   },
   {
@@ -324,7 +324,7 @@
     "RangeStart": 135836702,
     "LocalPath": "m2repository/com/google/firebase/firebase-storage-common/10.0.0/firebase-storage-common-10.0.0.aar",
     "CompressedSize": 8335,
-    "Md5": "14A339338652C707F8941EC558A81D56",
+    "Md5": "14a339338652c707f8941ec558a81d56",
     "RangeEnd": 135845037
   },
   {
@@ -332,7 +332,7 @@
     "RangeStart": 136062297,
     "LocalPath": "m2repository/com/google/firebase/firebase-config/10.0.0/firebase-config-10.0.0.aar",
     "CompressedSize": 52260,
-    "Md5": "974286DDB7284E1A84359F975D2B7B80",
+    "Md5": "974286ddb7284e1a84359f975d2b7b80",
     "RangeEnd": 136114557
   },
   {
@@ -340,7 +340,7 @@
     "RangeStart": 136437990,
     "LocalPath": "m2repository/com/google/firebase/firebase-analytics/10.0.0/firebase-analytics-10.0.0.aar",
     "CompressedSize": 4690,
-    "Md5": "94FB0331E06EF3BF520E611FBA93A719",
+    "Md5": "94fb0331e06ef3bf520e611fba93a719",
     "RangeEnd": 136442680
   },
   {
@@ -348,7 +348,7 @@
     "RangeStart": 137294571,
     "LocalPath": "m2repository/com/google/firebase/firebase-database/10.0.0/firebase-database-10.0.0.aar",
     "CompressedSize": 271882,
-    "Md5": "0021E915722C28784709F557C23BC31F",
+    "Md5": "0021e915722c28784709f557c23bc31f",
     "RangeEnd": 137566453
   },
   {
@@ -356,7 +356,7 @@
     "RangeStart": 139474604,
     "LocalPath": "m2repository/com/google/firebase/firebase-auth/10.0.0/firebase-auth-10.0.0.aar",
     "CompressedSize": 203257,
-    "Md5": "F1D13DE58110453BB6A30A6C7D0487EE",
+    "Md5": "f1d13de58110453bb6a30a6c7d0487ee",
     "RangeEnd": 139677861
   },
   {
@@ -364,7 +364,7 @@
     "RangeStart": 140194553,
     "LocalPath": "m2repository/com/google/firebase/firebase-appindexing/10.0.0/firebase-appindexing-10.0.0.aar",
     "CompressedSize": 112379,
-    "Md5": "DEE55B8E22A39517833F4C0FA0D66D78",
+    "Md5": "dee55b8e22a39517833f4c0fa0d66d78",
     "RangeEnd": 140306932
   },
   {
@@ -372,7 +372,7 @@
     "RangeStart": 140397905,
     "LocalPath": "m2repository/com/google/firebase/firebase-iid/10.0.0/firebase-iid-10.0.0.aar",
     "CompressedSize": 30656,
-    "Md5": "D5DB1C1D05A9D874BEC09277AE7EC9FE",
+    "Md5": "d5db1c1d05a9d874bec09277ae7ec9fe",
     "RangeEnd": 140428561
   },
   {
@@ -380,7 +380,7 @@
     "RangeStart": 140664578,
     "LocalPath": "m2repository/com/google/firebase/firebase-messaging/10.0.0/firebase-messaging-10.0.0.aar",
     "CompressedSize": 18886,
-    "Md5": "2DDA6D31EECF87BC11DD76B4FB9E8AC7",
+    "Md5": "2dda6d31eecf87bc11dd76b4fb9e8ac7",
     "RangeEnd": 140683464
   },
   {
@@ -388,7 +388,7 @@
     "RangeStart": 140804678,
     "LocalPath": "m2repository/com/google/firebase/firebase-core/10.0.0/firebase-core-10.0.0.aar",
     "CompressedSize": 279,
-    "Md5": "572220DADFA39A4E69928D6F3A2D566E",
+    "Md5": "572220dadfa39a4e69928d6f3a2d566e",
     "RangeEnd": 140804957
   },
   {
@@ -396,7 +396,7 @@
     "RangeStart": 141000556,
     "LocalPath": "m2repository/com/google/firebase/firebase-storage/10.0.0/firebase-storage-10.0.0.aar",
     "CompressedSize": 65665,
-    "Md5": "D349A1905D01BEF8296693D38BD2B52A",
+    "Md5": "d349a1905d01bef8296693d38bd2b52a",
     "RangeEnd": 141066221
   },
   {
@@ -404,7 +404,7 @@
     "RangeStart": 141736285,
     "LocalPath": "m2repository/com/google/firebase/firebase-database-connection/10.0.0/firebase-database-connection-10.0.0.aar",
     "CompressedSize": 95961,
-    "Md5": "F323F8EA5B8243ABCD41450A1C181C97",
+    "Md5": "f323f8ea5b8243abcd41450a1c181c97",
     "RangeEnd": 141832246
   },
   {
@@ -412,7 +412,7 @@
     "RangeStart": 142958067,
     "LocalPath": "m2repository/com/google/firebase/firebase-analytics-impl/10.0.0/firebase-analytics-impl-10.0.0.aar",
     "CompressedSize": 211769,
-    "Md5": "6CC2CEF5F5C48E5D031E56255C10ECFE",
+    "Md5": "6cc2cef5f5c48e5d031e56255c10ecfe",
     "RangeEnd": 143169836
   },
   {
@@ -420,7 +420,7 @@
     "RangeStart": 144226561,
     "LocalPath": "m2repository/com/google/firebase/firebase-common/10.0.0/firebase-common-10.0.0.aar",
     "CompressedSize": 15606,
-    "Md5": "C0BEDB60BE680D96CF9AA9B976E5ABAB",
+    "Md5": "c0bedb60be680d96cf9aa9b976e5abab",
     "RangeEnd": 144242167
   }
 ]
