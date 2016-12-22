@@ -11,10 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "..\..\tasks\source
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Common", "..\..\firebase-common\source\Firebase-Common.csproj", "{865652D3-8D1A-4779-92FC-4C54719286B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Auth-Module", "..\..\firebase-auth-module\source\Firebase-Auth-Module.csproj", "{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Auth-Common", "..\..\firebase-auth-common\source\Firebase-Auth-Common.csproj", "{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Auth", "..\source\Firebase-Auth.csproj", "{62946D89-B6B1-4A38-A04D-C20912087EFD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basement-BuildTasks", "..\..\basement\buildtasks\Basement-BuildTasks.csproj", "{21D99A15-AB98-4691-A45B-D236B2A91DEB}"
@@ -51,14 +47,6 @@ Global
 		{865652D3-8D1A-4779-92FC-4C54719286B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{865652D3-8D1A-4779-92FC-4C54719286B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{865652D3-8D1A-4779-92FC-4C54719286B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{62946D89-B6B1-4A38-A04D-C20912087EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{62946D89-B6B1-4A38-A04D-C20912087EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62946D89-B6B1-4A38-A04D-C20912087EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU

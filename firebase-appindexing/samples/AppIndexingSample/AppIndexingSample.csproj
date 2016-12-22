@@ -106,6 +106,10 @@
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\source\Firebase-AppIndexing.csproj">
+      <Project>{8D01CC30-64F5-4AD3-B9C8-0970B0F1D562}</Project>
+      <Name>Firebase-AppIndexing</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\..\..\generated.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.0\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.0\build\Xamarin.Build.Download.targets')" />
