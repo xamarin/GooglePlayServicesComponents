@@ -518,7 +518,7 @@ Task ("component-setup").Does (() =>
 
 Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base");
 
-Task ("nuget-setup").Does (() => {
+Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 
 	var templateText = FileReadText ("./template.targets");
 
@@ -571,8 +571,30 @@ Task ("nuget-setup").Does (() => {
 		foreach (var kvp in items)
 			targetsText = targetsText.Replace (kvp.Key, kvp.Value);
 
-		var targetsFile = string.Format ("{0}/nuget/{1}.targets", aar.BindingDir, aar.NugetId);
+		var targetsFile = new FilePath (string.Format ("{0}/nuget/{1}.targets", aar.BindingDir, aar.NugetId));
 		FileWriteText (targetsFile, targetsText);
+
+		// Check for an existing .targets file in this nuget package
+		// we need to merge the generated one with it if it exists
+		// nuget only allows one automatic .targets file in the build/ folder
+		// of the nuget package, which must be named {nuget-package-id}.targets
+		// so we need to merge them all into one
+		var mergeFile = new FilePath (aar.BindingDir + "/nuget/merge.targets");
+
+		if (FileExists (mergeFile)) {
+			Information ("merge.targets found, merging into generated file...");
+
+			// Load the doc to append to, and the doc to append
+			var xOrig = System.Xml.Linq.XDocument.Load (MakeAbsolute(targetsFile).FullPath);
+			System.Xml.Linq.XNamespace nsOrig = xOrig.Root.Name.Namespace;
+			var xMerge = System.Xml.Linq.XDocument.Load (MakeAbsolute(mergeFile).FullPath);
+			System.Xml.Linq.XNamespace nsMerge = xMerge.Root.Name.Namespace;
+			// Add all the elements under <Project> into the existing file's <Project> node
+			foreach (var xItemToAdd in xMerge.Element (nsMerge + "Project").Elements ())
+				xOrig.Element (nsOrig + "Project").Add (xItemToAdd);
+
+			xOrig.Save (MakeAbsolute (targetsFile).FullPath);
+		}
 
 		// Merge each generated targets file into one main one
 		// this makes one file to import into our actual binding projects
@@ -583,7 +605,7 @@ Task ("nuget-setup").Does (() => {
 		// Load the doc to append to, and the doc to append
 		var xFileRoot = System.Xml.Linq.XDocument.Load ("./generated.targets");
 		System.Xml.Linq.XNamespace nsRoot = xFileRoot.Root.Name.Namespace;
-		var xFileChild = System.Xml.Linq.XDocument.Load (targetsFile);
+		var xFileChild = System.Xml.Linq.XDocument.Load (MakeAbsolute (targetsFile).FullPath);
 		System.Xml.Linq.XNamespace nsChild = xFileRoot.Root.Name.Namespace;
 
 		// Add all the elements under <Project> into the existing file's <Project> node
@@ -604,6 +626,18 @@ Task ("nuget-setup").Does (() => {
 });
 
 Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
+
+Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("libs-base");
+
+Task ("buildtasks").Does (() => 
+{
+	NuGetRestore ("./basement/buildtasks/Basement-BuildTasks.csproj");
+
+	DotNetBuild ("./basement/buildtasks/Basement-BuildTasks.csproj", c => c.Configuration = "Release");
+
+	CopyFile ("./basement/buildtasks/bin/Release/Xamarin.GooglePlayServices.Basement.targets", "./basement/nuget/merge.targets");
+});
+
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
 
