@@ -72,6 +72,8 @@ var AAR_INFOS = new [] {
 	new AarInfo ("wallet", "play-services-wallet", "android/gms/play-services-wallet", "Xamarin.GooglePlayServices.Wallet", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("wearable", "play-services-wearable", "android/gms/play-services-wearable", "Xamarin.GooglePlayServices.Wearable", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 
+	new AarInfo ("support-wearable", "wearable", "android/support/wearable", "Xamarin.Android.Wear", WEAR_AAR_VERSION, WEAR_NUGET_VERSION, WEAR_COMPONENT_VERSION),
+
 	new AarInfo ("firebase-ads", "firebase-ads", "firebase/firebase-ads", "Xamarin.Firebase.Ads", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-analytics", "firebase-analytics", "firebase/firebase-analytics", "Xamarin.Firebase.Analytics", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-analytics-impl", "firebase-analytics-impl", "firebase/firebase-analytics-impl", "Xamarin.Firebase.Analytics.Impl", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
