@@ -4,7 +4,7 @@ using Android.App;
 
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
-[assembly: AssemblyTitle ("Xamarin.Android.Wearable")]
+[assembly: AssemblyTitle ("Xamarin.Android.Wear")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("Microsoft Corporation")]
@@ -20,24 +20,3 @@ using Android.App;
 // if desired. See the Mono documentation for more information about signing.
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
-
-
-// Wearable Support lib
-[assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-	PackageName = __WearableConsts.PackageName,
-	SourceUrl = __GpsConsts.Url,
-	EmbeddedArchive = __WearableConsts.AarPath,
-    Version     = __GpsConsts.WearVersion,
-    Sha1sum = __GpsConsts.Sha1sum)]
-// Wearable Support Resources
-[assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-	PackageName = __WearableConsts.PackageName,
-	SourceUrl   = __GpsConsts.Url,
-	EmbeddedArchive = __WearableConsts.AarPath,
-    Version     = __GpsConsts.WearVersion,
-    Sha1sum = __GpsConsts.Sha1sum)]
-
-static class __WearableConsts {
-	public const string PackageName = "Xamarin.Android.Wear";
-    public const string AarPath = "m2repository/com/google/android/support/wearable/" + __GpsConsts.WearVersion + "/wearable-" + __GpsConsts.WearVersion + ".aar";
-}

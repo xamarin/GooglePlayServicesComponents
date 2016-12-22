@@ -422,5 +422,13 @@
     "CompressedSize": 231482,
     "Md5": "d7fd4e651180080b318afc8073ad8fd6",
     "RangeEnd": 146601597
+  },
+  {
+    "Url": "https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc42_wear_2a3.zip",
+    "RangeStart": 150486044,
+    "LocalPath": "m2repository/com/google/android/support/wearable/1.4.0/wearable-1.4.0.aar",
+    "CompressedSize": 263999,
+    "Md5": "3771f05036dcc9213036909c039d2b60",
+    "RangeEnd": 150750043
   }
 ]

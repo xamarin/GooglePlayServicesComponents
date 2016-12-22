@@ -10,7 +10,7 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
-    <AssemblyName>Xamarin.Android.Wearable</AssemblyName>
+    <AssemblyName>Xamarin.Android.Wear</AssemblyName>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <AndroidClassParser>class-parse</AndroidClassParser>
     <ProductVersion>8.0.30703</ProductVersion>
