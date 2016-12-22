@@ -25,5 +25,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.Firebase.Config.dll" target="lib/MonoAndroid70" />
+
+    <file src="firebase-config/nuget/Xamarin.Firebase.Config.targets" target="build" />
   </files>
 </package>

@@ -27,5 +27,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Gcm.dll" target="lib/MonoAndroid70" />
+
+    <file src="gcm/nuget/Xamarin.GooglePlayServices.Gcm.targets" target="build" />
   </files>
 </package>

@@ -22,5 +22,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Auth.Base.dll" target="lib/MonoAndroid70" />
+
+    <file src="auth-base/nuget/Xamarin.GooglePlayServices.Auth.Base.targets" target="build" />
   </files>
 </package>

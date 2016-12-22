@@ -23,5 +23,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.TagManager.dll" target="lib/MonoAndroid70" />
+
+    <file src="tagmanager/nuget/Xamarin.GooglePlayServices.TagManager.targets" target="build" />
   </files>
 </package>

@@ -23,5 +23,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Ads.Lite.dll" target="lib/MonoAndroid70" />
+
+    <file src="ads-lite/nuget/Xamarin.GooglePlayServices.Ads.Lite.targets" target="build" />
   </files>
 </package>

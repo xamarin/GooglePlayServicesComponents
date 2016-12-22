@@ -24,5 +24,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Awareness.dll" target="lib/MonoAndroid70" />
+
+    <file src="awareness/nuget/Xamarin.GooglePlayServices.Awareness.targets" target="build" />
   </files>
 </package>

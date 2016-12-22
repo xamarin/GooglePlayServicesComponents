@@ -23,5 +23,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.Firebase.Analytics.Impl.dll" target="lib/MonoAndroid70" />
+
+    <file src="firebase-analytics-impl/nuget/Xamarin.Firebase.Analytics.Impl.targets" target="build" />
   </files>
 </package>

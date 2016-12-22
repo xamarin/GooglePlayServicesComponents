@@ -21,5 +21,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.Firebase.Storage.Common.dll" target="lib/MonoAndroid70" />
+
+    <file src="firebase-storage-common/nuget/Xamarin.Firebase.Storage.Common.targets" target="build" />
   </files>
 </package>

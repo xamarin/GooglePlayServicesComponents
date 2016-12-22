@@ -24,5 +24,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Places.dll" target="lib/MonoAndroid70" />
+
+    <file src="places/nuget/Xamarin.GooglePlayServices.Places.targets" target="build" />
   </files>
 </package>

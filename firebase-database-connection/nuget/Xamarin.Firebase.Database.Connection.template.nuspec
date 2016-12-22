@@ -22,5 +22,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.Firebase.Database.Connection.dll" target="lib/MonoAndroid70" />
+
+    <file src="firebase-database-connection/nuget/Xamarin.Firebase.Database.Connection.targets" target="build" />
   </files>
 </package>

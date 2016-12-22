@@ -23,5 +23,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Cast.Framework.dll" target="lib/MonoAndroid70" />
+
+    <file src="cast-framework/nuget/Xamarin.GooglePlayServices.Cast.Framework.targets" target="build" />
   </files>
 </package>

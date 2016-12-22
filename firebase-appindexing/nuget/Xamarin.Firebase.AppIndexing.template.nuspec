@@ -22,5 +22,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.Firebase.AppIndexing.dll" target="lib/MonoAndroid70" />
+
+    <file src="firebase-appindexing/nuget/Xamarin.Firebase.AppIndexing.targets" target="build" />
   </files>
 </package>

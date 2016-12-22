@@ -25,5 +25,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Location.dll" target="lib/MonoAndroid70" />
+
+    <file src="location/nuget/Xamarin.GooglePlayServices.Location.targets" target="build" />
   </files>
 </package>

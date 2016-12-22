@@ -22,5 +22,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.InstantApps.dll" target="lib/MonoAndroid70" />
+
+    <file src="instantapps/nuget/Xamarin.GooglePlayServices.InstantApps.targets" target="build" />
   </files>
 </package>

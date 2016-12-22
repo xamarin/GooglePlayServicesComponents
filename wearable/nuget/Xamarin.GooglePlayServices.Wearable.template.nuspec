@@ -20,11 +20,13 @@
     <dependencies>
       <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
       <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
-      <dependency id="Xamarin.Android.Support.v4" version="24.2.1"/>
-      <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="24.2.1"/>
+      <dependency id="Xamarin.Android.Support.v4" version="24.2.1.1"/>
+      <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="24.2.1.1"/>
     </dependencies>
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Wearable.dll" target="lib/MonoAndroid70" />
+
+    <file src="wearable/nuget/Xamarin.GooglePlayServices.Wearable.targets" target="build" />
   </files>
 </package>

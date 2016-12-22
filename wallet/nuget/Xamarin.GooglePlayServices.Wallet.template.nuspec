@@ -26,5 +26,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Wallet.dll" target="lib/MonoAndroid70" />
+
+    <file src="wallet/nuget/Xamarin.GooglePlayServices.Wallet.targets" target="build" />
   </files>
 </package>

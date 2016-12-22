@@ -22,5 +22,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Clearcut.dll" target="lib/MonoAndroid70" />
+
+    <file src="clearcut/nuget/Xamarin.GooglePlayServices.Clearcut.targets" target="build" />
   </files>
 </package>

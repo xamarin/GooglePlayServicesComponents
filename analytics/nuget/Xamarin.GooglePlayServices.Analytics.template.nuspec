@@ -26,5 +26,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Analytics.dll" target="lib/MonoAndroid70" />
+
+    <file src="analytics/nuget/Xamarin.GooglePlayServices.Analytics.targets" target="build" />
   </files>
 </package>
