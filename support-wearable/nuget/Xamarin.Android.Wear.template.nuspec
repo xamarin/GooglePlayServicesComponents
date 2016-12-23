@@ -29,7 +29,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.Android.Wearable.dll" target="lib/MonoAndroid50" />
+    <file src="output/Xamarin.Android.Wear.dll" target="lib/MonoAndroid50" />
 
     <file src="support-wearable/nuget/Xamarin.Android.Wear.targets" target="build" />
   </files>
