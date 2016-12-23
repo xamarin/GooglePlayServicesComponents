@@ -229,17 +229,9 @@
       <Project>{B04C50F7-B0CC-4170-8820-9D584E1C0ED3}</Project>
       <Name>Auth.Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-auth-common\source\Firebase-Auth-Common.csproj">
-      <Project>{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}</Project>
-      <Name>Firebase-Auth-Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\firebase-auth\source\Firebase-Auth.csproj">
       <Project>{62946D89-B6B1-4A38-A04D-C20912087EFD}</Project>
       <Name>Firebase-Auth</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-auth-module\source\Firebase-Auth-Module.csproj">
-      <Project>{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}</Project>
-      <Name>Firebase-Auth-Module</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\firebase-config\source\Firebase-Config.csproj">
       <Project>{00F7A18F-D2C4-4014-8E4C-552A0A0B0967}</Project>
