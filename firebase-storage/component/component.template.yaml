@@ -21,8 +21,6 @@ samples:
       - Basement-BuildTasks
       - Tasks
       - Firebase-Auth
-      - Firebase-Auth-Common
-      - Firebase-Auth-Module
       - Firebase-Common
       - Firebase-Storage
       - Firebase-Storage-Common
@@ -33,8 +31,6 @@ samples:
           - Xamarin.GooglePlayServices.Basement
           - Xamarin.GooglePlayServices.Tasks
           - Xamarin.Firebase.Auth
-          - Xamarin.Firebase.Auth.Common
-          - Xamarin.Firebase.Auth.Module
           - Xamarin.Firebase.Common
           - Xamarin.Firebase.Storage
           - Xamarin.Firebase.Storage.Common
