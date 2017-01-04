@@ -5,7 +5,7 @@
 #addin nuget:?package=Cake.Json
 #addin nuget:?package=Cake.XCode
 #addin nuget:?package=Cake.Xamarin
-#addin nuget:?package=Cake.Xamarin.Build
+#addin nuget:?package=Cake.Xamarin.Build&version=1.0.25
 #addin nuget:?package=Cake.FileHelpers
 #addin nuget:?package=Cake.MonoApiTools
 
@@ -34,6 +34,8 @@ var FIREBASE_NUGET_VERSION = PLAY_NUGET_VERSION;
 var FIREBASE_AAR_VERSION = PLAY_AAR_VERSION;
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
+
+var CPU_COUNT = System.Environment.ProcessorCount;
 
 var AAR_INFOS = new [] {
 	new AarInfo ("ads", "play-services-ads", "android/gms/play-services-ads", "Xamarin.GooglePlayServices.Ads", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
@@ -135,6 +137,7 @@ var buildSpec = new BuildSpec {
 		new DefaultSolutionBuilder {
 			SolutionPath = "./GooglePlayServices.sln",
 			BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac,
+			MaxCpuCount = CPU_COUNT,
 			OutputFiles = new [] {
 				new OutputFileCopy { FromFile = "./base/source/bin/Release/Xamarin.GooglePlayServices.Base.dll" },
 				new OutputFileCopy { FromFile = "./basement/source/bin/Release/Xamarin.GooglePlayServices.Basement.dll" },
@@ -191,35 +194,35 @@ var buildSpec = new BuildSpec {
 	},
 
 	Samples = new [] {
-		new DefaultSolutionBuilder { SolutionPath = "./ads/samples/AdMobSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./analytics/samples/AnalyticsSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./appinvite/samples/AppInviteSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./cast/samples/CastingCall.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./drive/samples/DriveSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./fitness/samples/BasicSensorsApi.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./games/samples/BeGenerous.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./gcm/samples/GCMSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./location/samples/LocationSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./maps/samples/MapsSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./nearby/samples/NearbySample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./panorama/samples/PanoramaSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./places/samples/PlacesAsync.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./plus/samples/PlusSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./safetynet/samples/SafetyNetSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./vision/samples/VisionSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./wallet/samples/AndroidPayQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./support-wearable/samples/MultiPageSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./support-wearable/samples/WatchFaceSample.sln", BuildsOn = buildsOnWinMac },
+		new DefaultSolutionBuilder { SolutionPath = "./ads/samples/AdMobSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./analytics/samples/AnalyticsSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./appinvite/samples/AppInviteSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./cast/samples/CastingCall.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./drive/samples/DriveSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./fitness/samples/BasicSensorsApi.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./games/samples/BeGenerous.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./gcm/samples/GCMSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./location/samples/LocationSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./maps/samples/MapsSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./nearby/samples/NearbySample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./panorama/samples/PanoramaSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./places/samples/PlacesAsync.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./plus/samples/PlusSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./safetynet/samples/SafetyNetSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./vision/samples/VisionSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./wallet/samples/AndroidPayQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./support-wearable/samples/MultiPageSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./support-wearable/samples/WatchFaceSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
 
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-ads/samples/FirebaseAdmobQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-analytics/samples/FirebaseAnalyticsQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-appindexing/samples/AppIndexingSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-auth/samples/FirebaseAuthQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-config/samples/FirebaseConfigQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-crash/samples/FirebaseCrashReportingQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-invites/samples/FirebaseInvitesQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-messaging/samples/FirebaseMessagingQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-storage/samples/FirebaseStorageQuickstart.sln", BuildsOn = buildsOnWinMac },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-ads/samples/FirebaseAdmobQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-analytics/samples/FirebaseAnalyticsQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-appindexing/samples/AppIndexingSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-auth/samples/FirebaseAuthQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-config/samples/FirebaseConfigQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-crash/samples/FirebaseCrashReportingQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-invites/samples/FirebaseInvitesQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-messaging/samples/FirebaseMessagingQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-storage/samples/FirebaseStorageQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT },
 	},
 
 	NuGets = new [] {
@@ -357,7 +360,7 @@ Task ("externals")
 		DeleteDirectory (path + "google-play-services", true);
 	}
 
-	// Put the uitest.keystore in our artifacts for downstream jobs to use 
+	// Put the uitest.keystore in our artifacts for downstream jobs to use
 	EnsureDirectoryExists ("./output");
 	if (FileExists ("./uitest.keystore"))
 		CopyFile ("./uitest.keystore", "./output/uitest.keystore");
@@ -375,8 +378,8 @@ Task ("diff")
 		"./wearable/source/bin/Release/"
 	};
 
-	MonoApiInfo ("./output/GooglePlayServices.Merged.dll", 
-		"./output/GooglePlayServices.api-info.xml", 
+	MonoApiInfo ("./output/GooglePlayServices.Merged.dll",
+		"./output/GooglePlayServices.api-info.xml",
 		new MonoApiInfoToolSettings { SearchPaths = SEARCH_DIRS });
 
 	// Grab the last public release's api-info.xml to use as a base to compare and make an API diff
@@ -384,13 +387,13 @@ Task ("diff")
 
 	// Now diff against current release'd api info
 	// eg: mono mono-api-diff.exe ./gps.r26.xml ./gps.r27.xml > gps.diff.xml
-	MonoApiDiff ("./output/GooglePlayServices.api-info.previous.xml", 
+	MonoApiDiff ("./output/GooglePlayServices.api-info.previous.xml",
 		"./output/GooglePlayServices.api-info.xml",
 		"./output/GooglePlayServices.api-diff.xml");
 
 	// Now let's make a purty html file
 	// eg: mono mono-api-html.exe -c -x ./gps.previous.info.xml ./gps.current.info.xml > gps.diff.html
-	MonoApiHtml ("./output/GooglePlayServices.api-info.previous.xml", 
+	MonoApiHtml ("./output/GooglePlayServices.api-info.previous.xml",
 		"./output/GooglePlayServices.api-info.xml",
 		"./output/GooglePlayServices.api-diff.html");
 });
@@ -416,6 +419,17 @@ Task ("merge").IsDependentOn ("libs").Does (() =>
 });
 
 Task ("clean").IsDependentOn ("clean-base").Does (() =>
+{
+	if (FileExists ("./generated.targets"))
+		DeleteFile ("./generated.targets");
+
+	if (DirectoryExists ("./externals"))
+		DeleteDirectory ("./externals", true);
+
+	CleanDirectories ("./**/packages");
+});
+
+Task ("cleanwin").Does (() =>
 {
 	if (FileExists ("./generated.targets"))
 		DeleteFile ("./generated.targets");
@@ -550,7 +564,7 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 		var xbdKey = "playservices-" + PLAY_AAR_VERSION + "/" + msName;
 		if (aar.Dir.StartsWith ("firebase-"))
 			xbdKey = "firebase-" + FIREBASE_AAR_VERSION + "/" + msName;
-		
+
 		var items = new Dictionary<string, string> {
 			{ "_XbdUrl_", "_XbdUrl_" + msName },
 			{ "_XbdKey_", "_XbdKey_" + msName },
@@ -599,7 +613,7 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 		// ones each project needs to reference for development purposes
 		if (!xFileRoot.Descendants (nsRoot + "XamarinBuildResourceMergeThrowOnMissingAssembly").Any ()) {
 			xFileRoot.Element (nsRoot + "Project")
-				.AddFirst (new System.Xml.Linq.XElement (nsRoot + "PropertyGroup", 
+				.AddFirst (new System.Xml.Linq.XElement (nsRoot + "PropertyGroup",
 					new System.Xml.Linq.XElement (nsRoot + "XamarinBuildResourceMergeThrowOnMissingAssembly", false)));
 		}
 
@@ -633,7 +647,7 @@ Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDepe
 
 Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("libs-base");
 
-Task ("buildtasks").Does (() => 
+Task ("buildtasks").Does (() =>
 {
 	NuGetRestore ("./basement/buildtasks/Basement-BuildTasks.csproj");
 
