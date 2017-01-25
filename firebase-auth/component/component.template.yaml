@@ -36,5 +36,6 @@ samples:
           - Xamarin.Firebase.Auth
     removeNodes:
       - "//xNS:Import[contains (@Project, 'Xamarin.GooglePlayServices.Basement.targets')]"
+      - "//xNS:Import[contains (@Project, 'generated.targets')]"
 local-nuget-repo: ../../output/
 no_build: true

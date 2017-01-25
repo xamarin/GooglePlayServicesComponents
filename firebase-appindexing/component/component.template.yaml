@@ -29,5 +29,7 @@ samples:
           - Xamarin.GooglePlayServices.Tasks
           - Xamarin.Firebase.Common
           - Xamarin.Firebase.AppIndexing
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'generated.targets')]"
 local-nuget-repo: ../../output/
 no_build: true

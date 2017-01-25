@@ -31,5 +31,7 @@ samples:
           - Xamarin.GooglePlayServices.Analytics
           - Xamarin.GooglePlayServices.Analytics.Impl
           - Xamarin.GooglePlayServices.TagManager.V4.Impl
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'generated.targets')]"
 local-nuget-repo: ../../output/
 no_build: true

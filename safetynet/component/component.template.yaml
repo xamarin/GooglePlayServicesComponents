@@ -27,5 +27,8 @@ samples:
           - Xamarin.GooglePlayServices.Basement
           - Xamarin.GooglePlayServices.Tasks
           - Xamarin.GooglePlayServices.SafetyNet
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'Xamarin.GooglePlayServices.Basement.targets')]"
+      - "//xNS:Import[contains (@Project, 'generated.targets')]"
 local-nuget-repo: ../../output/
 no_build: true
