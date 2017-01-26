@@ -22,6 +22,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.Tasks.dll" target="lib/MonoAndroid70" />
 
-    <file src="tasks/nuget/Xamarin.GooglePlayServices.Tasks.targets" target="build" />
+    <file src="tasks/nuget/Xamarin.GooglePlayServices.Tasks.targets" target="build/MonoAndroid70" />
   </files>
 </package>

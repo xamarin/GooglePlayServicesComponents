@@ -26,6 +26,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.SafetyNet.dll" target="lib/MonoAndroid70" />
 
-    <file src="safetynet/nuget/Xamarin.GooglePlayServices.SafetyNet.targets" target="build" />
+    <file src="safetynet/nuget/Xamarin.GooglePlayServices.SafetyNet.targets" target="build/MonoAndroid70" />
   </files>
 </package>

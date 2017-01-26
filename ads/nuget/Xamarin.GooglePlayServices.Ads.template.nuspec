@@ -28,6 +28,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.Ads.dll" target="lib/MonoAndroid70" />
 
-    <file src="ads/nuget/Xamarin.GooglePlayServices.Ads.targets" target="build" />
+    <file src="ads/nuget/Xamarin.GooglePlayServices.Ads.targets" target="build/MonoAndroid70" />
   </files>
 </package>

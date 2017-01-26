@@ -26,6 +26,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.Games.dll" target="lib/MonoAndroid70" />
 
-    <file src="games/nuget/Xamarin.GooglePlayServices.Games.targets" target="build" />
+    <file src="games/nuget/Xamarin.GooglePlayServices.Games.targets" target="build/MonoAndroid70" />
   </files>
 </package>

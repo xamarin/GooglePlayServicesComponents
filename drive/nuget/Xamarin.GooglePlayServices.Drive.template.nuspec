@@ -25,6 +25,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.Drive.dll" target="lib/MonoAndroid70" />
 
-    <file src="drive/nuget/Xamarin.GooglePlayServices.Drive.targets" target="build" />
+    <file src="drive/nuget/Xamarin.GooglePlayServices.Drive.targets" target="build/MonoAndroid70" />
   </files>
 </package>

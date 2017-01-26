@@ -24,6 +24,6 @@
   <files>
     <file src="output/Xamarin.Firebase.Messaging.dll" target="lib/MonoAndroid70" />
 
-    <file src="firebase-messaging/nuget/Xamarin.Firebase.Messaging.targets" target="build" />
+    <file src="firebase-messaging/nuget/Xamarin.Firebase.Messaging.targets" target="build/MonoAndroid70" />
   </files>
 </package>

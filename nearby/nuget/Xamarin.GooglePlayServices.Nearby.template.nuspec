@@ -25,6 +25,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.Nearby.dll" target="lib/MonoAndroid70" />
 
-    <file src="nearby/nuget/Xamarin.GooglePlayServices.Nearby.targets" target="build" />
+    <file src="nearby/nuget/Xamarin.GooglePlayServices.Nearby.targets" target="build/MonoAndroid70" />
   </files>
 </package>

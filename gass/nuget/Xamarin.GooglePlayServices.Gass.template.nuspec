@@ -22,6 +22,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.Gass.dll" target="lib/MonoAndroid70" />
 
-    <file src="gass/nuget/Xamarin.GooglePlayServices.Gass.targets" target="build" />
+    <file src="gass/nuget/Xamarin.GooglePlayServices.Gass.targets" target="build/MonoAndroid70" />
   </files>
 </package>

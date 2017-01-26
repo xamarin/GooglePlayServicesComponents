@@ -31,6 +31,6 @@
   <files>
     <file src="output/Xamarin.Android.Wear.dll" target="lib/MonoAndroid50" />
 
-    <file src="support-wearable/nuget/Xamarin.Android.Wear.targets" target="build" />
+    <file src="support-wearable/nuget/Xamarin.Android.Wear.targets" target="build/MonoAndroid70" />
   </files>
 </package>

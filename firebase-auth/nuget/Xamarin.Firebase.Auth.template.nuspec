@@ -25,6 +25,6 @@
   <files>
     <file src="output/Xamarin.Firebase.Auth.dll" target="lib/MonoAndroid70" />
 
-    <file src="firebase-auth/nuget/Xamarin.Firebase.Auth.targets" target="build" />
+    <file src="firebase-auth/nuget/Xamarin.Firebase.Auth.targets" target="build/MonoAndroid70" />
   </files>
 </package>

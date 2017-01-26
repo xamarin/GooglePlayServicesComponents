@@ -23,6 +23,6 @@
   <files>
     <file src="output/Xamarin.Firebase.Iid.dll" target="lib/MonoAndroid70" />
 
-    <file src="firebase-iid/nuget/Xamarin.Firebase.Iid.targets" target="build" />
+    <file src="firebase-iid/nuget/Xamarin.Firebase.Iid.targets" target="build/MonoAndroid70" />
   </files>
 </package>

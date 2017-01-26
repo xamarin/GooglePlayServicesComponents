@@ -27,6 +27,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.Analytics.dll" target="lib/MonoAndroid70" />
 
-    <file src="analytics/nuget/Xamarin.GooglePlayServices.Analytics.targets" target="build" />
+    <file src="analytics/nuget/Xamarin.GooglePlayServices.Analytics.targets" target="build/MonoAndroid70" />
   </files>
 </package>

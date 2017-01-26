@@ -23,8 +23,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="basement/nuget/Xamarin.GooglePlayServices.Basement.targets" target="build" />
-    <file src="basement/buildtasks/bin/Release/Xamarin.GooglePlayServices.Tasks.dll" target="build" />
+    <file src="basement/nuget/Xamarin.GooglePlayServices.Basement.targets" target="build/MonoAndroid70" />
+    <file src="basement/buildtasks/bin/Release/Xamarin.GooglePlayServices.Tasks.dll" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.GooglePlayServices.Basement.dll" target="lib/MonoAndroid70" />
   </files>

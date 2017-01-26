@@ -23,6 +23,6 @@
   <files>
     <file src="output/Xamarin.Firebase.Common.dll" target="lib/MonoAndroid70" />
 
-    <file src="firebase-common/nuget/Xamarin.Firebase.Common.targets" target="build" />
+    <file src="firebase-common/nuget/Xamarin.Firebase.Common.targets" target="build/MonoAndroid70" />
   </files>
 </package>

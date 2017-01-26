@@ -25,6 +25,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.Panorama.dll" target="lib/MonoAndroid70" />
 
-    <file src="panorama/nuget/Xamarin.GooglePlayServices.Panorama.targets" target="build" />
+    <file src="panorama/nuget/Xamarin.GooglePlayServices.Panorama.targets" target="build/MonoAndroid70" />
   </files>
 </package>

@@ -25,6 +25,6 @@
   <files>
     <file src="output/Xamarin.Firebase.Crash.dll" target="lib/MonoAndroid70" />
 
-    <file src="firebase-crash/nuget/Xamarin.Firebase.Crash.targets" target="build" />
+    <file src="firebase-crash/nuget/Xamarin.Firebase.Crash.targets" target="build/MonoAndroid70" />
   </files>
 </package>

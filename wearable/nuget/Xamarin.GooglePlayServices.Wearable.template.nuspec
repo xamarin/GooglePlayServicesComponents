@@ -27,6 +27,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.Wearable.dll" target="lib/MonoAndroid70" />
 
-    <file src="wearable/nuget/Xamarin.GooglePlayServices.Wearable.targets" target="build" />
+    <file src="wearable/nuget/Xamarin.GooglePlayServices.Wearable.targets" target="build/MonoAndroid70" />
   </files>
 </package>

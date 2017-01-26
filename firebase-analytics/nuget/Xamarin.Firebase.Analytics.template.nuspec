@@ -24,6 +24,6 @@
   <files>
     <file src="output/Xamarin.Firebase.Analytics.dll" target="lib/MonoAndroid70" />
 
-    <file src="firebase-analytics/nuget/Xamarin.Firebase.Analytics.targets" target="build" />
+    <file src="firebase-analytics/nuget/Xamarin.Firebase.Analytics.targets" target="build/MonoAndroid70" />
   </files>
 </package>

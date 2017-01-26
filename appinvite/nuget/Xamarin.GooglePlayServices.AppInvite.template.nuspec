@@ -26,6 +26,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.AppInvite.dll" target="lib/MonoAndroid70" />
 
-    <file src="appinvite/nuget/Xamarin.GooglePlayServices.AppInvite.targets" target="build" />
+    <file src="appinvite/nuget/Xamarin.GooglePlayServices.AppInvite.targets" target="build/MonoAndroid70" />
   </files>
 </package>

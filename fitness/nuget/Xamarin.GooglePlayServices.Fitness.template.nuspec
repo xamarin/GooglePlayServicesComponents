@@ -26,6 +26,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.Fitness.dll" target="lib/MonoAndroid70" />
 
-    <file src="fitness/nuget/Xamarin.GooglePlayServices.Fitness.targets" target="build" />
+    <file src="fitness/nuget/Xamarin.GooglePlayServices.Fitness.targets" target="build/MonoAndroid70" />
   </files>
 </package>

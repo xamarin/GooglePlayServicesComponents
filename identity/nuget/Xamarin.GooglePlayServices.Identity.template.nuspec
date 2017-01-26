@@ -23,6 +23,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.Identity.dll" target="lib/MonoAndroid70" />
 
-    <file src="identity/nuget/Xamarin.GooglePlayServices.Identity.targets" target="build" />
+    <file src="identity/nuget/Xamarin.GooglePlayServices.Identity.targets" target="build/MonoAndroid70" />
   </files>
 </package>

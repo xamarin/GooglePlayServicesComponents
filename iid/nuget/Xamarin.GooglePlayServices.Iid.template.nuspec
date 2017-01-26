@@ -23,6 +23,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.Iid.dll" target="lib/MonoAndroid70" />
 
-    <file src="iid/nuget/Xamarin.GooglePlayServices.Iid.targets" target="build" />
+    <file src="iid/nuget/Xamarin.GooglePlayServices.Iid.targets" target="build/MonoAndroid70" />
   </files>
 </package>

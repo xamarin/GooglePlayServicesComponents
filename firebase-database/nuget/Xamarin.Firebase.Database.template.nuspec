@@ -25,6 +25,6 @@
   <files>
     <file src="output/Xamarin.Firebase.Database.dll" target="lib/MonoAndroid70" />
 
-    <file src="firebase-database/nuget/Xamarin.Firebase.Database.targets" target="build" />
+    <file src="firebase-database/nuget/Xamarin.Firebase.Database.targets" target="build/MonoAndroid70" />
   </files>
 </package>

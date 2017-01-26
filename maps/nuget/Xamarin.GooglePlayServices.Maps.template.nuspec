@@ -25,6 +25,6 @@
   <files>
     <file src="output/Xamarin.GooglePlayServices.Maps.dll" target="lib/MonoAndroid70" />
 
-    <file src="maps/nuget/Xamarin.GooglePlayServices.Maps.targets" target="build" />
+    <file src="maps/nuget/Xamarin.GooglePlayServices.Maps.targets" target="build/MonoAndroid70" />
   </files>
 </package>
