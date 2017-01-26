@@ -18,9 +18,11 @@
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-cast/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-cast_128x128.png</iconUrl>
     <dependencies>
-      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
-      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
-      <dependency id="Xamarin.Android.Support.v7.MediaRouter" version="24.2.1.1"/>
+      <group targetFramework="MonoAndroid70">
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+        <dependency id="Xamarin.Android.Support.v7.MediaRouter" version="24.2.1.1"/>
+      </group>
     </dependencies>
   </metadata>
   <files>

@@ -20,9 +20,11 @@
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-gcm/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-gcm_128x128.png</iconUrl>
     <dependencies>
-      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
-      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
-      <dependency id="Xamarin.GooglePlayServices.Iid" version="[$version$]" />
+      <group targetFramework="MonoAndroid70">
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Iid" version="[$version$]" />
+      </group>
     </dependencies>
   </metadata>
   <files>

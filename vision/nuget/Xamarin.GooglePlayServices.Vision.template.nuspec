@@ -22,8 +22,10 @@
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-vision/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-vision_128x128.png</iconUrl>
     <dependencies>
-      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
-      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+      <group targetFramework="MonoAndroid70">
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+      </group>
     </dependencies>
   </metadata>
   <files>

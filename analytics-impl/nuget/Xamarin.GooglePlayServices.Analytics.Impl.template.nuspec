@@ -18,8 +18,10 @@
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-analytics-impl_128x128.png</iconUrl>
     <dependencies>
-      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
-      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+      <group targetFramework="MonoAndroid70">
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+      </group>
     </dependencies>
   </metadata>
   <files>
