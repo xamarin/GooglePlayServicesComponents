@@ -5,7 +5,7 @@
         <_XbdKey_>$XbdKey$</_XbdKey_>
         
         <!-- Path to .aar file within the extracted contents of the cached download -->
-        <_XbdAarFile_>m2repository\com\google\$AarInnerPath$\$AarKey$\$AarVersion$\$AarKey$-$AarVersion$.aar</_XbdAarFile_>
+        <_XbdAarFile_>m2repository\com\google\$AarInnerPath$\$AarVersion$\$AarKey$-$AarVersion$.aar</_XbdAarFile_>
         
         <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
         <_XbdAarFileFullPath_>$(XamarinBuildDownloadDir)$(_XbdKey_)\$AarKey$-$AarVersion$.aar</_XbdAarFileFullPath_>
