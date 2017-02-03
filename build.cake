@@ -15,7 +15,7 @@ var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_service
 var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc42_wear_2a3.zip";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/32.961.0/api-info.xml";
+var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/42.1001.0/api-info.xml";
 
 var PLAY_COMPONENT_VERSION = "42.1001.0.0";
 var PLAY_NUGET_VERSION = "42.1001.0";
