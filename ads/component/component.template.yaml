@@ -33,5 +33,7 @@ samples:
           - Xamarin.GooglePlayServices.Tasks
           - Xamarin.GooglePlayServices.Ads
           - Xamarin.GooglePlayServices.Ads.Lite
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'generated.targets')]"
 local-nuget-repo: ../../output/
 no_build: true

@@ -31,5 +31,8 @@ samples:
           - Xamarin.GooglePlayServices.Games
           - Xamarin.GooglePlayServices.Drive
           - Xamarin.GooglePlayServices.Plus
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'Xamarin.GooglePlayServices.Basement.targets')]"
+      - "//xNS:Import[contains (@Project, 'generated.targets')]"
 local-nuget-repo: ../../output/
 no_build: true

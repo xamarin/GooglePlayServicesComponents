@@ -18,11 +18,16 @@
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-location/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-location_128x128.png</iconUrl>
     <dependencies>
-      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
-      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+      <group targetFramework="MonoAndroid70">
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
+      </group>
     </dependencies>
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Location.dll" target="lib/MonoAndroid70" />
+
+    <file src="location/nuget/Xamarin.GooglePlayServices.Location.targets" target="build/MonoAndroid70" />
   </files>
 </package>

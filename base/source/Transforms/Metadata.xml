@@ -1,21 +1,14 @@
 ﻿<metadata>
 	
 	<!-- Rename Namespaces -->
-  	<attr path="/api/package[@name='com.google.android.gms.actions']" name="managedName">Android.Gms.Actions</attr>
-  	<attr path="/api/package[@name='com.google.android.gms.auth']" name="managedName">Android.Gms.Auth</attr>  
-	<attr path="/api/package[@name='com.google.android.gms.auth.account']" name="managedName">Android.Gms.Auth.Account</attr>  
   	<attr path="/api/package[@name='com.google.android.gms.common']" name="managedName">Android.Gms.Common</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.common.data']" name="managedName">Android.Gms.Common.Data</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.common.images']" name="managedName">Android.Gms.Common.Images</attr>  
-	<attr path="/api/package[@name='com.google.android.gms.common.internal']" name="managedName">Android.Gms.Common.Internal</attr>  
-	<attr path="/api/package[@name='com.google.android.gms.common.api.internal']" name="managedName">Android.Gms.Common.Api.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.internal']" name="managedName">Android.Gms.Common.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.server']" name="managedName">Android.Gms.Common.Server</attr>
 	<attr path="/api/package[@name='com.google.android.gms.auth.api.signin']" name="managedName">Android.Gms.Auth.Api.SignIn</attr>
 	<attr path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']" name="managedName">Android.Gms.Auth.Api.SignIn.Internal</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common.api']" name="managedName">Android.Gms.Common.Apis</attr>
-	<attr path="/api/package[@name='com.google.android.gms.signin.internal']" name="managedName">Android.Gms.SignIn.Internal</attr>
-
-	<!-- Remove some internal namespaces -->
-	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
 
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
 	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'Api.zzf' and @name != 'zzf' and @name != 'zzc' and @name != 'zzd' and @name != 'zze']" />
@@ -23,29 +16,17 @@
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 
-<!--	<attr path="/api/package[@name='com.google.android.gms.auth.api']/class[@name='Auth']/field[@name='CREDENTIALS_API']" name="managedName">CREDENTIALS_API</attr>-->
-
 	<!-- Allowing zzc classes allows a bit too much, so remove these specifically -->
 	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[contains(@name, 'zz') and @name != 'zzc' and @name != 'zzf']" />
-
-	<remove-node path="/api/package[@name='com.google.android.gms.common.api']/class[@name='AbstractPendingResult']/method[@name='setCancelToken']" />
 
 	<!-- These CREATOR fields are of some zz* types, so let's remove them -->
 	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[@name='DataHolder']/field[@name='CREATOR']" />
 
-
-	<attr path="/api/package/class/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
-	<attr path="/api/package/class/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
-
 	<!-- Remove some internal namespaces -->
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.common.internal')]" />
-	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.playlog.internal')]" />
-	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.signin.internal')]" />
-	
+
 	<!-- Fix params for some inherited parcelable types -->
-	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
-	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
@@ -53,4 +34,7 @@
 	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='GoogleApiClient.Builder']/method[@name='addApi']/parameter[2]" name="managedType">Android.Gms.Common.Apis.Api.IApiOptionsHasOptions</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='GoogleApiClient.Builder']/method[@name='addApiIfAvailable' and count(parameter)=3]/parameter[2]" name="managedType">Android.Gms.Common.Apis.Api.IApiOptionsHasOptions</attr>
 
+
+	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzc']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzf']" name="obfuscated">false</attr>
 </metadata>

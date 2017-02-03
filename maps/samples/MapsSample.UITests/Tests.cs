@@ -85,39 +85,39 @@ namespace MapsSample.UITests
             app.Screenshot ("Go to Bondi");
         }
 
-        [Test]
-        public void IndoorDemo ()
-        {
-            app.Screenshot ("Launch");
-            app.ScrollDownAndTap (q => q.Text ("Indoor"));
-            app.WaitForElement (q => q.Id ("map"));
-            app.Screenshot ("Map");
+        // [Test]
+        // public void IndoorDemo ()
+        // {
+        //     app.Screenshot ("Launch");
+        //     app.ScrollDownAndTap (q => q.Text ("Indoor"));
+        //     app.WaitForElement (q => q.Id ("map"));
+        //     app.Screenshot ("Map");
 
-            app.Tap (q => q.Id ("focused_bulding_info_button"));
-            app.WaitForElement (q => q.Text ("3 2 1 "));
-            app.Screenshot ("Focused Building");
+        //     app.Tap (q => q.Id ("focused_bulding_info_button"));
+        //     app.WaitForElement (q => q.Text ("3 2 1 "));
+        //     app.Screenshot ("Focused Building");
 
-            app.Tap (q => q.Id ("focused_level_info_button"));
-            app.WaitForElement (q => q.Text ("2"));
-            app.Screenshot ("Focused Level");
+        //     app.Tap (q => q.Id ("focused_level_info_button"));
+        //     app.WaitForElement (q => q.Text ("2"));
+        //     app.Screenshot ("Focused Level");
 
-            // Tap level 1
-            app.Tap (q => q.Text ("1"));
-            app.Tap (q => q.Id ("focused_level_info_button"));
-            app.WaitForElement (q => q.Text ("1"));
-            app.Screenshot ("Level 1");
+        //     // Tap level 1
+        //     app.Tap (q => q.Text ("1"));
+        //     app.Tap (q => q.Id ("focused_level_info_button"));
+        //     app.WaitForElement (q => q.Text ("1"));
+        //     app.Screenshot ("Level 1");
 
-            app.Tap (q => q.Id ("toggle_level_picker_button"));
-            app.WaitForNoElement (q => q.Text ("3"));
-            app.Screenshot ("Toggle Level Picker");
-            app.Tap (q => q.Id ("toggle_level_picker_button"));
-            app.WaitForElement (q => q.Text ("3"));
-            app.Screenshot ("Toggle Level Picker");
+        //     app.Tap (q => q.Id ("toggle_level_picker_button"));
+        //     app.WaitForNoElement (q => q.Text ("3"));
+        //     app.Screenshot ("Toggle Level Picker");
+        //     app.Tap (q => q.Id ("toggle_level_picker_button"));
+        //     app.WaitForElement (q => q.Text ("3"));
+        //     app.Screenshot ("Toggle Level Picker");
 
-            app.Tap (q => q.Id ("higher_level_button"));
-            app.WaitForElement (q => q.Text ("Activating level 2"));
-            app.Screenshot ("Activate Higher Level");
-        }
+        //     app.Tap (q => q.Id ("higher_level_button"));
+        //     app.WaitForElement (q => q.Text ("Activating level 2"));
+        //     app.Screenshot ("Activate Higher Level");
+        // }
 
         [Test]
         public void LayersDemo ()

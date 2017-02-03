@@ -21,6 +21,9 @@ samples:
       - project: MultiPageSample
         packages:
           - Xamarin.Android.Wear
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'Xamarin.GooglePlayServices.Basement.targets')]"
+      - "//xNS:Import[contains (@Project, 'generated.targets')]"
   - name: "Watch Face Sample"
     path: ../samples/WatchFaceSample.sln
     removeProjects:
@@ -29,5 +32,8 @@ samples:
       - project: WatchFaceSample
         packages:
           - Xamarin.Android.Wear
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'Xamarin.GooglePlayServices.Basement.targets')]"
+      - "//xNS:Import[contains (@Project, 'generated.targets')]"
 local-nuget-repo: ../../output/
 no_build: true

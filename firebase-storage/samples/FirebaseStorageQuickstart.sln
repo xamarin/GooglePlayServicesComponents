@@ -13,10 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base", "..\..\base\source\B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basement", "..\..\basement\source\Basement.csproj", "{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Auth-Common", "..\..\firebase-auth-common\source\Firebase-Auth-Common.csproj", "{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Auth-Module", "..\..\firebase-auth-module\source\Firebase-Auth-Module.csproj", "{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Common", "..\..\firebase-common\source\Firebase-Common.csproj", "{865652D3-8D1A-4779-92FC-4C54719286B7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Storage-Common", "..\..\firebase-storage-common\source\Firebase-Storage-Common.csproj", "{C360116C-0ED5-4E59-A974-E95F874B4398}"
@@ -55,14 +51,6 @@ Global
 		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F53B34FB-4BBC-4314-8D8A-1F0CD959E83F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7DA24DFC-EF53-4C06-AB7A-FF6BEF513A1B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{865652D3-8D1A-4779-92FC-4C54719286B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{865652D3-8D1A-4779-92FC-4C54719286B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{865652D3-8D1A-4779-92FC-4C54719286B7}.Release|Any CPU.ActiveCfg = Release|Any CPU

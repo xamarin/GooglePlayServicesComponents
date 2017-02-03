@@ -21,6 +21,7 @@ samples:
       - Tasks
       - Analytics
       - Analytics.Impl
+      - TagManager.V4.Impl
     installNuGets:
       - project: AnalyticsSample
         packages:
@@ -29,5 +30,8 @@ samples:
           - Xamarin.GooglePlayServices.Tasks
           - Xamarin.GooglePlayServices.Analytics
           - Xamarin.GooglePlayServices.Analytics.Impl
+          - Xamarin.GooglePlayServices.TagManager.V4.Impl
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'generated.targets')]"
 local-nuget-repo: ../../output/
 no_build: true

@@ -14,7 +14,8 @@ using Android.Gms.Ads;
 
 namespace Admob
 {
-	[Activity(Label = "Admob", MainLauncher = true), IntentFilter(new[] { Intent.ActionView }, Categories = new[] { Intent.ActionMain, Intent.CategoryLauncher })]
+	[Activity(Label = "Admob", MainLauncher = true, Theme="@style/Theme.AppCompat")]
+	[IntentFilter(new[] { Intent.ActionView }, Categories = new[] { Intent.ActionMain, Intent.CategoryLauncher })]
 	[MetaData("android.support.PARENT_ACTIVITY", Value = ".MainActivity")]
 	public class MainActivity : AppCompatActivity //FragmentActivity, IAppCompatCallback, Android.Support.V4.App.TaskStackBuilder.ISupportParentable, Android.Support.V7.App.ActionBarDrawerToggle.IDelegateProvider
 	{

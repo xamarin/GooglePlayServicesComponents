@@ -5,7 +5,6 @@
   	<attr path="/api/package[@name='com.google.ads.mediation']" name="managedName">Google.Ads.Mediation</attr>
   	<attr path="/api/package[@name='com.google.ads.mediation.admob']" name="managedName">Google.Ads.Mediation.Admob</attr>
   	<attr path="/api/package[@name='com.google.ads.mediation.customevent']" name="managedName">Google.Ads.Mediation.CustomEvent</attr>
-  	<attr path="/api/package[@name='com.google.ads.afma.nano']" name="managedName">Google.Ads.Afma.Nano</attr>
 
   	<attr path="/api/package[@name='com.google.android.gms.ads']" name="managedName">Android.Gms.Ads</attr>
   	<attr path="/api/package[@name='com.google.android.gms.ads.formats']" name="managedName">Android.Gms.Ads.Formats</attr>
@@ -37,12 +36,6 @@
 <!--	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />-->
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 <!--	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />-->
-
-	<!-- Fix params for some inherited parcelable types -->
-	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
-	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
-	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
-	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
 
 	<!-- Some classes are private that need to be public to subclass -->
@@ -102,6 +95,6 @@
 	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onDismissScreen']/parameter[1]" name="managedName">adapter</attr>
 	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onLeaveApplication']/parameter[1]" name="managedName">adapter</attr>
 
-	<attr path="/api/package[@name='com.google.ads.doubleclick']/interface[@name='OnCustomRenderedAdLoadedListener']/method[@name='onCustomRenderedAdLoaded']/parameter[1]" name="managedName">ad</attr>
+<!--	<attr path="/api/package[@name='com.google.ads.doubleclick']/interface[@name='OnCustomRenderedAdLoadedListener']/method[@name='onCustomRenderedAdLoaded']/parameter[1]" name="managedName">ad</attr>-->
 
 </metadata>

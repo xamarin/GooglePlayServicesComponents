@@ -25,24 +25,3 @@ using Android.App;
 
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
-
-[assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-    PackageName = __GpsConsts.PackageName,
-    SourceUrl = __GpsConsts.Url,
-    EmbeddedArchive = __Consts.AarPath,
-    Version = __GpsConsts.Version,
-    Sha1sum = __GpsConsts.Sha1sum)]
-// AppCompat-v7 resources
-[assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-    PackageName = __GpsConsts.PackageName,
-    SourceUrl   = __GpsConsts.Url,
-    EmbeddedArchive = __Consts.AarPath,
-    Version     = __GpsConsts.Version,
-    Sha1sum = __GpsConsts.Sha1sum)]
-
-// Google Addon feed with GPS in it:
-//      https://dl-ssl.google.com/android/repository/addon.xml
-
-static class __Consts {
-    public const string AarPath = "m2repository/com/google/android/gms/play-services-games/" + __GpsConsts.Version + "/play-services-games-" + __GpsConsts.Version + ".aar";
-}

@@ -18,12 +18,16 @@
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-fitness/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-fitness_128x128.png</iconUrl>
     <dependencies>
-      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
-      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
-      <dependency id="Xamarin.GooglePlayServices.Location" version="[$version$]"/>
+      <group targetFramework="MonoAndroid70">
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Location" version="[$version$]"/>
+      </group>
     </dependencies>
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Fitness.dll" target="lib/MonoAndroid70" />
+
+    <file src="fitness/nuget/Xamarin.GooglePlayServices.Fitness.targets" target="build/MonoAndroid70" />
   </files>
 </package>

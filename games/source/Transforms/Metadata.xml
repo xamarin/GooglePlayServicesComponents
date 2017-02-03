@@ -20,7 +20,11 @@
 	<attr path="/api/package[@name='com.google.android.gms.games.internal.game']" name="managedName">Android.Gms.Games.Internal.Game</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.games.internal.notification']" name="managedName">Android.Gms.Games.Internal.Notification</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.games.internal.player']" name="managedName">Android.Gms.Games.Internal.Player</attr>  
-
+	<attr path="/api/package[@name='com.google.android.gms.games.internal.api']" name="managedName">Android.Gms.Games.Internal.Api</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.internal.data']" name="managedName">Android.Gms.Games.Internal.Data</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.internal.events']" name="managedName">Android.Gms.Games.Internal.Events</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.internal.request']" name="managedName">Android.Gms.Games.Internal.Request</attr>
+	
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']" name="managedName">GamesClass</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.BaseGamesApiMethodImpl']" name="managedName">GamesClass.BaseGamesApiMethodImpl</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.GamesOptions']" name="managedName">GamesClass.GamesOptions</attr>
@@ -68,7 +72,7 @@
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='API']" name="managedName">API</attr>
 
 	<!-- Remove some internal namespaces -->
-	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.games.internal')]/class[@name!='GamesDowngradeableSafeParcel']" />
+	<!--<remove-node path="/api/package[contains(@name, 'com.google.android.gms.games.internal')]/class[@name!='GamesDowngradeableSafeParcel']" />-->
 
 	<remove-node path="/api/package[@name='com.google.android.gms.games.internal']/interface[contains(@name, 'GamesContract')]" />
 
@@ -212,4 +216,32 @@
 	<remote-node path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='PC']" />
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='PC']" name="visibility">private</attr>
 	<remove-node path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='Pz']" />
+
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='ConnectionInfoCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.experience']/class[@name='ExperienceEventBuffer']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.experience']/class[@name='ExperienceEventEntity']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.experience']/class[@name='ExperienceEventEntityCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.experience']/class[@name='ExperienceEventRef']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='GameBadgeBuffer']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='GameBadgeEntity']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='GameBadgeEntityCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='GameBadgeRef']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='GameInstanceBuffer']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='GameSearchSuggestionBuffer']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='ScreenshotEntity']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='ScreenshotEntityCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.notification']/class[@name='GameNotificationBuffer']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='MostRecentGameInfoEntity']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='MostRecentGameInfoEntityCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='MostRecentGameInfoRef']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='ProfileSettingsEntityCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='StockProfileImageBuffer']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='StockProfileImageEntity']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='StockProfileImageEntityCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='StockProfileImageRef']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='PopupLocationInfoParcelableCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.multiplayer']/class[@name='InvitationClusterCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.multiplayer']/class[@name='ZInvitationCluster']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.request']/class[@name='GameRequestCluster']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.request']/class[@name='GameRequestClusterCreator']" />
 </metadata>

@@ -16,11 +16,15 @@
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-auth-base_128x128.png</iconUrl>
     <dependencies>
-      <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
-      <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+      <group targetFramework="MonoAndroid70">
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+      </group>
     </dependencies>
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Auth.Base.dll" target="lib/MonoAndroid70" />
+
+    <file src="auth-base/nuget/Xamarin.GooglePlayServices.Auth.Base.targets" target="build/MonoAndroid70" />
   </files>
 </package>

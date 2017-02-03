@@ -25,24 +25,3 @@ using Android.App;
 
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
-
-[assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-    PackageName = __FbConsts.PackageName,
-    SourceUrl = __FbConsts.Url,
-    EmbeddedArchive = __Consts.AarPath,
-    Version = __FbConsts.Version,
-    Sha1sum = __FbConsts.Sha1sum)]
-// AppCompat-v7 resources
-[assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-    PackageName = __FbConsts.PackageName,
-    SourceUrl   = __FbConsts.Url,
-    EmbeddedArchive = __Consts.AarPath,
-    Version     = __FbConsts.Version,
-    Sha1sum = __FbConsts.Sha1sum)]
-
-// Google Addon feed with GPS in it:
-//      https://dl-ssl.google.com/android/repository/addon.xml
-
-static class __Consts {
-    public const string AarPath = "m2repository/com/google/firebase/firebase-database-connection/" + __FbConsts.Version + "/firebase-database-connection-" + __FbConsts.Version + ".aar";
-}

@@ -2,27 +2,29 @@
 #tool nuget:?package=XamarinComponent
 #tool nuget:?package=Cake.MonoApiTools
 
+#addin nuget:?package=Cake.Json
 #addin nuget:?package=Cake.XCode
 #addin nuget:?package=Cake.Xamarin
-#addin nuget:?package=Cake.Xamarin.Build
+#addin nuget:?package=Cake.Xamarin.Build&version=1.1.11
 #addin nuget:?package=Cake.FileHelpers
 #addin nuget:?package=Cake.MonoApiTools
 
-// To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip
-var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_9683000_r33.zip";
-var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_r36.zip";
+// To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip\
+// FROM: https://dl.google.com/android/repository/addon2-1.xml
+var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_v8_rc41.zip";
+var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc42_wear_2a3.zip";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/29.0.0.2/api-info.xml";
+var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/32.961.0/api-info.xml";
 
-var PLAY_COMPONENT_VERSION = "32.961.0.0";
-var PLAY_NUGET_VERSION = "32.961.0";
-var PLAY_AAR_VERSION = "9.6.1";
-var VERSION_DESC = "9.6.1";
+var PLAY_COMPONENT_VERSION = "42.1001.0.0";
+var PLAY_NUGET_VERSION = "42.1001.0";
+var PLAY_AAR_VERSION = "10.0.1";
+var VERSION_DESC = "10.0.1";
 
 var WEAR_COMPONENT_VERSION = "1.4.0.0";
 var WEAR_NUGET_VERSION = "1.4.0";
-var WEAR_AAR_VERSION = PLAY_AAR_VERSION;
+var WEAR_AAR_VERSION = "1.4.0";
 
 var WEARABLE_SUPPORT_VERSION = "1.4.0";
 var WEARABLE_VERSION = "1.0.0";
@@ -33,75 +35,91 @@ var FIREBASE_AAR_VERSION = PLAY_AAR_VERSION;
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-var AAR_INFOS = new [] {
-	new AarInfo ("play-services-auth", "android/gms/play-services-auth", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-auth-base", "android/gms/play-services-auth-base", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-awareness", "android/gms/play-services-awareness", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-base", "android/gms/play-services-base", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-basement", "android/gms/play-services-basement", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-ads", "android/gms/play-services-ads", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-ads-lite", "android/gms/play-services-ads-lite", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-analytics", "android/gms/play-services-analytics", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-analytics-impl", "android/gms/play-services-analytics-impl", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-appindexing", "android/gms/play-services-appindexing", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-appinvite", "android/gms/play-services-appinvite", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-cast", "android/gms/play-services-cast", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-cast-framework", "android/gms/play-services-cast-framework", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-clearcut", "android/gms/play-services-clearcut", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-drive", "android/gms/play-services-drive", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-fitness", "android/gms/play-services-fitness", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-games", "android/gms/play-services-games", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-gass", "android/gms/play-services-gass", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-gcm", "android/gms/play-services-gcm", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-identity", "android/gms/play-services-identity", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-iid", "android/gms/play-services-iid", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-instantapps", "android/gms/play-services-instantapps", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-location", "android/gms/play-services-location", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-maps", "android/gms/play-services-maps", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-nearby", "android/gms/play-services-nearby", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-panorama", "android/gms/play-services-panorama", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-places", "android/gms/play-services-places", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-plus", "android/gms/play-services-plus", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-safetynet", "android/gms/play-services-safetynet", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-tasks", "android/gms/play-services-tasks", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-tagmanager", "android/gms/play-services-tagmanager", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-tagmanager-api", "android/gms/play-services-tagmanager-api", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-vision", "android/gms/play-services-vision", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-wallet", "android/gms/play-services-wallet", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("play-services-wearable", "android/gms/play-services-wearable", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+var CPU_COUNT = System.Environment.ProcessorCount;
+var ALWAYS_MSBUILD = false;
 
-	new AarInfo ("firebase-ads", "firebase/firebase-ads", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-analytics", "firebase/firebase-analytics", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-analytics-impl", "firebase/firebase-analytics-impl", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-auth", "firebase/firebase-auth", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-auth-common", "firebase/firebase-auth-common", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-auth-module", "firebase/firebase-auth-module", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-common", "firebase/firebase-common", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-config", "firebase/firebase-config", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-core", "firebase/firebase-core", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-crash", "firebase/firebase-crash", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-database", "firebase/firebase-database", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-database-connection", "firebase/firebase-database-connection", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-iid", "firebase/firebase-iid", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-invites", "firebase/firebase-invites", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-messaging", "firebase/firebase-messaging", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-storage", "firebase/firebase-storage", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-storage-common", "firebase/firebase-storage-common", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+var AAR_INFOS = new [] {
+	new AarInfo ("ads", "play-services-ads", "android/gms/play-services-ads", "Xamarin.GooglePlayServices.Ads", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("ads-lite", "play-services-ads-lite", "android/gms/play-services-ads-lite", "Xamarin.GooglePlayServices.Ads.Lite", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("analytics", "play-services-analytics", "android/gms/play-services-analytics", "Xamarin.GooglePlayServices.Analytics", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("analytics-impl", "play-services-analytics-impl", "android/gms/play-services-analytics-impl", "Xamarin.GooglePlayServices.Analytics.Impl", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("auth", "play-services-auth", "android/gms/play-services-auth", "Xamarin.GooglePlayServices.Auth", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("auth-base", "play-services-auth-base", "android/gms/play-services-auth-base", "Xamarin.GooglePlayServices.Auth.Base", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("awareness", "play-services-awareness", "android/gms/play-services-awareness", "Xamarin.GooglePlayServices.Awareness", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("base", "play-services-base", "android/gms/play-services-base", "Xamarin.GooglePlayServices.Base", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("basement", "play-services-basement", "android/gms/play-services-basement", "Xamarin.GooglePlayServices.Basement", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("appinvite", "play-services-appinvite", "android/gms/play-services-appinvite", "Xamarin.GooglePlayServices.AppInvite", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("cast", "play-services-cast", "android/gms/play-services-cast", "Xamarin.GooglePlayServices.Cast", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("cast-framework", "play-services-cast-framework", "android/gms/play-services-cast-framework", "Xamarin.GooglePlayServices.Cast.Framework", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("clearcut", "play-services-clearcut", "android/gms/play-services-clearcut", "Xamarin.GooglePlayServices.Clearcut", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("drive", "play-services-drive", "android/gms/play-services-drive", "Xamarin.GooglePlayServices.Drive", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("fitness", "play-services-fitness", "android/gms/play-services-fitness", "Xamarin.GooglePlayServices.Fitness", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("games", "play-services-games", "android/gms/play-services-games", "Xamarin.GooglePlayServices.Games", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("gass", "play-services-gass", "android/gms/play-services-gass", "Xamarin.GooglePlayServices.Gass", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("gcm", "play-services-gcm", "android/gms/play-services-gcm", "Xamarin.GooglePlayServices.Gcm", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("identity", "play-services-identity", "android/gms/play-services-identity", "Xamarin.GooglePlayServices.Identity", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("iid", "play-services-iid", "android/gms/play-services-iid", "Xamarin.GooglePlayServices.Iid", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("instantapps", "play-services-instantapps", "android/gms/play-services-instantapps", "Xamarin.GooglePlayServices.InstantApps", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("location", "play-services-location", "android/gms/play-services-location", "Xamarin.GooglePlayServices.Location", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("maps", "play-services-maps", "android/gms/play-services-maps", "Xamarin.GooglePlayServices.Maps", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("nearby", "play-services-nearby", "android/gms/play-services-nearby", "Xamarin.GooglePlayServices.Nearby", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("panorama", "play-services-panorama", "android/gms/play-services-panorama", "Xamarin.GooglePlayServices.Panorama", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("places", "play-services-places", "android/gms/play-services-places", "Xamarin.GooglePlayServices.Places", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("plus", "play-services-plus", "android/gms/play-services-plus", "Xamarin.GooglePlayServices.Plus", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("safetynet", "play-services-safetynet", "android/gms/play-services-safetynet", "Xamarin.GooglePlayServices.SafetyNet", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("tasks", "play-services-tasks", "android/gms/play-services-tasks", "Xamarin.GooglePlayServices.Tasks", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("tagmanager", "play-services-tagmanager", "android/gms/play-services-tagmanager", "Xamarin.GooglePlayServices.TagManager", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("tagmanager-api", "play-services-tagmanager-api", "android/gms/play-services-tagmanager-api", "Xamarin.GooglePlayServices.TagManager.Api", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("tagmanager-v4-impl", "play-services-tagmanager-v4-impl", "android/gms/play-services-tagmanager-v4-impl", "Xamarin.GooglePlayServices.TagManager.V4.Impl", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("vision", "play-services-vision", "android/gms/play-services-vision", "Xamarin.GooglePlayServices.Vision", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("wallet", "play-services-wallet", "android/gms/play-services-wallet", "Xamarin.GooglePlayServices.Wallet", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("wearable", "play-services-wearable", "android/gms/play-services-wearable", "Xamarin.GooglePlayServices.Wearable", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+
+	new AarInfo ("support-wearable", "wearable", "android/support/wearable", "Xamarin.Android.Wear", WEAR_AAR_VERSION, WEAR_NUGET_VERSION, WEAR_COMPONENT_VERSION),
+
+	new AarInfo ("firebase-ads", "firebase-ads", "firebase/firebase-ads", "Xamarin.Firebase.Ads", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-analytics", "firebase-analytics", "firebase/firebase-analytics", "Xamarin.Firebase.Analytics", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-analytics-impl", "firebase-analytics-impl", "firebase/firebase-analytics-impl", "Xamarin.Firebase.Analytics.Impl", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-appindexing", "firebase-appindexing", "firebase/firebase-appindexing", "Xamarin.Firebase.AppIndexing", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-auth", "firebase-auth", "firebase/firebase-auth", "Xamarin.Firebase.Auth", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-common", "firebase-common", "firebase/firebase-common", "Xamarin.Firebase.Common", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-config", "firebase-config", "firebase/firebase-config", "Xamarin.Firebase.Config", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-core", "firebase-core", "firebase/firebase-core", "Xamarin.Firebase.Core", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-crash", "firebase-crash", "firebase/firebase-crash", "Xamarin.Firebase.Crash", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-database", "firebase-database", "firebase/firebase-database", "Xamarin.Firebase.Database", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-database-connection", "firebase-database-connection", "firebase/firebase-database-connection", "Xamarin.Firebase.Database.Connection", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-iid", "firebase-iid", "firebase/firebase-iid", "Xamarin.Firebase.Iid", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-invites", "firebase-invites", "firebase/firebase-invites", "Xamarin.Firebase.Invites", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-messaging", "firebase-messaging", "firebase/firebase-messaging", "Xamarin.Firebase.Messaging", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-storage", "firebase-storage", "firebase/firebase-storage", "Xamarin.Firebase.Storage", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-storage-common", "firebase-storage-common", "firebase/firebase-storage-common", "Xamarin.Firebase.Storage.Common", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 };
+
+class PartialZipInfo {
+	public string Url { get;set; }
+	public string LocalPath { get;set; }
+	public string Md5 { get;set; }
+	public long RangeStart { get;set; }
+	public long RangeEnd { get;set; }
+}
 
 class AarInfo
 {
-	public AarInfo (string name, string path, string aarVersion, string nugetVersion, string componentVersion)
+	public AarInfo (string bindingDir, string dir, string path, string nugetId, string aarVersion, string nugetVersion, string componentVersion)
 	{
-		Name = name;
+		BindingDir = bindingDir;
+		Dir = dir;
 		Path = path;
+		NugetId = nugetId;
 		AarVersion = aarVersion;
 		NuGetVersion = nugetVersion;
 		ComponentVersion = componentVersion;
 	}
 
-	public string Name { get; set; }
+	public string BindingDir { get;set; }
+	public string Dir { get; set; }
 	public string Path { get; set; }
+	public string NugetId { get;set; }
 	public string AarVersion { get; set; }
 	public string NuGetVersion { get; set; }
 	public string ComponentVersion { get; set; }
@@ -120,6 +138,8 @@ var buildSpec = new BuildSpec {
 		new DefaultSolutionBuilder {
 			SolutionPath = "./GooglePlayServices.sln",
 			BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac,
+			MaxCpuCount = CPU_COUNT,
+			AlwaysUseMSBuild = ALWAYS_MSBUILD,
 			OutputFiles = new [] {
 				new OutputFileCopy { FromFile = "./base/source/bin/Release/Xamarin.GooglePlayServices.Base.dll" },
 				new OutputFileCopy { FromFile = "./basement/source/bin/Release/Xamarin.GooglePlayServices.Basement.dll" },
@@ -128,7 +148,6 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./analytics/source/bin/Release/Xamarin.GooglePlayServices.Analytics.dll" },
 				new OutputFileCopy { FromFile = "./analytics-impl/source/bin/Release/Xamarin.GooglePlayServices.Analytics.Impl.dll" },
 				new OutputFileCopy { FromFile = "./appinvite/source/bin/Release/Xamarin.GooglePlayServices.AppInvite.dll" },
-				new OutputFileCopy { FromFile = "./appindexing/source/bin/Release/Xamarin.GooglePlayServices.AppIndexing.dll" },
 				new OutputFileCopy { FromFile = "./auth/source/bin/Release/Xamarin.GooglePlayServices.Auth.dll" },
 				new OutputFileCopy { FromFile = "./auth-base/source/bin/Release/Xamarin.GooglePlayServices.Auth.Base.dll" },
 				new OutputFileCopy { FromFile = "./awareness/source/bin/Release/Xamarin.GooglePlayServices.Awareness.dll" },
@@ -153,16 +172,16 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./vision/source/bin/Release/Xamarin.GooglePlayServices.Vision.dll" },
 				new OutputFileCopy { FromFile = "./wallet/source/bin/Release/Xamarin.GooglePlayServices.Wallet.dll" },
 				new OutputFileCopy { FromFile = "./wearable/source/bin/Release/Xamarin.GooglePlayServices.Wearable.dll" },
-				new OutputFileCopy { FromFile = "./support-wearable/source/bin/Release/Xamarin.Android.Wearable.dll" },
+				new OutputFileCopy { FromFile = "./support-wearable/source/bin/Release/Xamarin.Android.Wear.dll" },
 				new OutputFileCopy { FromFile = "./tagmanager/source/bin/Release/Xamarin.GooglePlayServices.TagManager.dll" },
 				new OutputFileCopy { FromFile = "./tagmanager-api/source/bin/Release/Xamarin.GooglePlayServices.TagManager.Api.dll" },
+				new OutputFileCopy { FromFile = "./tagmanager-v4-impl/source/bin/Release/Xamarin.GooglePlayServices.TagManager.V4.Impl.dll" },
 				new OutputFileCopy { FromFile = "./tasks/source/bin/Release/Xamarin.GooglePlayServices.Tasks.dll" },
 
 				new OutputFileCopy { FromFile = "./firebase-analytics/source/bin/Release/Xamarin.Firebase.Analytics.dll" },
 				new OutputFileCopy { FromFile = "./firebase-analytics-impl/source/bin/Release/Xamarin.Firebase.Analytics.Impl.dll" },
+				new OutputFileCopy { FromFile = "./firebase-appindexing/source/bin/Release/Xamarin.Firebase.AppIndexing.dll" },
 				new OutputFileCopy { FromFile = "./firebase-auth/source/bin/Release/Xamarin.Firebase.Auth.dll" },
-				new OutputFileCopy { FromFile = "./firebase-auth-common/source/bin/Release/Xamarin.Firebase.Auth.Common.dll" },
-				new OutputFileCopy { FromFile = "./firebase-auth-module/source/bin/Release/Xamarin.Firebase.Auth.Module.dll" },
 				new OutputFileCopy { FromFile = "./firebase-common/source/bin/Release/Xamarin.Firebase.Common.dll" },
 				new OutputFileCopy { FromFile = "./firebase-config/source/bin/Release/Xamarin.Firebase.Config.dll" },
 				new OutputFileCopy { FromFile = "./firebase-crash/source/bin/Release/Xamarin.Firebase.Crash.dll" },
@@ -177,35 +196,35 @@ var buildSpec = new BuildSpec {
 	},
 
 	Samples = new [] {
-		new DefaultSolutionBuilder { SolutionPath = "./ads/samples/AdMobSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./analytics/samples/AnalyticsSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./appinvite/samples/AppInviteSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./appindexing/samples/AppIndexingSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./cast/samples/CastingCall.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./drive/samples/DriveSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./fitness/samples/BasicSensorsApi.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./games/samples/BeGenerous.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./gcm/samples/GCMSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./location/samples/LocationSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./maps/samples/MapsSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./nearby/samples/NearbySample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./panorama/samples/PanoramaSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./places/samples/PlacesAsync.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./plus/samples/PlusSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./safetynet/samples/SafetyNetSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./vision/samples/VisionSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./wallet/samples/AndroidPayQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./support-wearable/samples/MultiPageSample.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./support-wearable/samples/WatchFaceSample.sln", BuildsOn = buildsOnWinMac },
+		new DefaultSolutionBuilder { SolutionPath = "./ads/samples/AdMobSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./analytics/samples/AnalyticsSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./appinvite/samples/AppInviteSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./cast/samples/CastingCall.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./drive/samples/DriveSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./fitness/samples/BasicSensorsApi.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./games/samples/BeGenerous.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./gcm/samples/GCMSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./location/samples/LocationSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./maps/samples/MapsSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./nearby/samples/NearbySample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./panorama/samples/PanoramaSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./places/samples/PlacesAsync.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./plus/samples/PlusSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./safetynet/samples/SafetyNetSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./vision/samples/VisionSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./wallet/samples/AndroidPayQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./support-wearable/samples/MultiPageSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./support-wearable/samples/WatchFaceSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-ads/samples/FirebaseAdmobQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-analytics/samples/FirebaseAnalyticsQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-auth/samples/FirebaseAuthQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-config/samples/FirebaseConfigQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-crash/samples/FirebaseCrashReportingQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-invites/samples/FirebaseInvitesQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-messaging/samples/FirebaseMessagingQuickstart.sln", BuildsOn = buildsOnWinMac },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-storage/samples/FirebaseStorageQuickstart.sln", BuildsOn = buildsOnWinMac },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-ads/samples/FirebaseAdmobQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-analytics/samples/FirebaseAnalyticsQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-appindexing/samples/AppIndexingSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-auth/samples/FirebaseAuthQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-config/samples/FirebaseConfigQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-crash/samples/FirebaseCrashReportingQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-invites/samples/FirebaseInvitesQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-messaging/samples/FirebaseMessagingQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		new DefaultSolutionBuilder { SolutionPath = "./firebase-storage/samples/FirebaseStorageQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 	},
 
 	NuGets = new [] {
@@ -215,7 +234,6 @@ var buildSpec = new BuildSpec {
 		new NuGetInfo { NuSpec = "./ads-lite/nuget/Xamarin.GooglePlayServices.Ads.Lite.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./analytics/nuget/Xamarin.GooglePlayServices.Analytics.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./analytics-impl/nuget/Xamarin.GooglePlayServices.Analytics.Impl.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./appindexing/nuget/Xamarin.GooglePlayServices.AppIndexing.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./appinvite/nuget/Xamarin.GooglePlayServices.AppInvite.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./auth/nuget/Xamarin.GooglePlayServices.Auth.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./auth-base/nuget/Xamarin.GooglePlayServices.Auth.Base.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
@@ -244,14 +262,14 @@ var buildSpec = new BuildSpec {
 		new NuGetInfo { NuSpec = "./support-wearable/nuget/Xamarin.Android.Wear.nuspec", Version = WEAR_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./tagmanager/nuget/Xamarin.GooglePlayServices.TagManager.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./tagmanager-api/nuget/Xamarin.GooglePlayServices.TagManager.Api.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./tagmanager-v4-impl/nuget/Xamarin.GooglePlayServices.TagManager.V4.Impl.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./tasks/nuget/Xamarin.GooglePlayServices.Tasks.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 
 		new NuGetInfo { NuSpec = "./firebase-ads/nuget/Xamarin.Firebase.Ads.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./firebase-analytics/nuget/Xamarin.Firebase.Analytics.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./firebase-analytics-impl/nuget/Xamarin.Firebase.Analytics.Impl.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-appindexing/nuget/Xamarin.Firebase.AppIndexing.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./firebase-auth/nuget/Xamarin.Firebase.Auth.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-auth-common/nuget/Xamarin.Firebase.Auth.Common.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-auth-module/nuget/Xamarin.Firebase.Auth.Module.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./firebase-common/nuget/Xamarin.Firebase.Common.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./firebase-config/nuget/Xamarin.Firebase.Config.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./firebase-crash/nuget/Xamarin.Firebase.Crash.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
@@ -271,7 +289,6 @@ var buildSpec = new BuildSpec {
 	Components = new [] {
 		new Component { ManifestDirectory = "./ads/component" },
 		new Component { ManifestDirectory = "./analytics/component" },
-		new Component { ManifestDirectory = "./appindexing/component" },
 		new Component { ManifestDirectory = "./appinvite/component" },
 		new Component { ManifestDirectory = "./cast/component" },
 		new Component { ManifestDirectory = "./drive/component" },
@@ -290,6 +307,7 @@ var buildSpec = new BuildSpec {
 
 		new Component { ManifestDirectory = "./firebase-ads/component" },
 		new Component { ManifestDirectory = "./firebase-analytics/component" },
+		new Component { ManifestDirectory = "./firebase-appindexing/component" },
 		new Component { ManifestDirectory = "./firebase-auth/component" },
 		new Component { ManifestDirectory = "./firebase-config/component" },
 		new Component { ManifestDirectory = "./firebase-crash/component" },
@@ -299,7 +317,13 @@ var buildSpec = new BuildSpec {
 	}
 };
 
-
+var NUGET_SOURCES = EnvironmentVariable ("NUGET_SOURCES") ?? Argument ("nugetsources", string.Empty);;
+if (!string.IsNullOrEmpty (NUGET_SOURCES)) {
+	buildSpec.NuGetSources = NUGET_SOURCES.Split (';',',').Select (ns => new NuGetSource { Url = ns }).ToArray ();
+	Information ("Using Nuget Sources:");
+	foreach (var nsrc in buildSpec.NuGetSources)
+		Information ("  {0}", nsrc.Url);
+}
 
 Task ("externals")
 	.WithCriteria (() => !FileExists ("./externals/play-services-base.aar")).Does (() =>
@@ -319,9 +343,9 @@ Task ("externals")
 	foreach (var aar in AAR_INFOS) {
 
 		CopyFile (
-			string.Format (path + "m2repository/com/google/{0}/{1}/{2}-{3}.aar", aar.Path, aar.AarVersion, aar.Name, aar.AarVersion),
-			string.Format (path + "{0}.aar", aar.Name));
-		Unzip (path + aar.Name + ".aar", path + aar.Name);
+			string.Format (path + "m2repository/com/google/{0}/{1}/{2}-{3}.aar", aar.Path, aar.AarVersion, aar.Dir, aar.AarVersion),
+			string.Format (path + "{0}.aar", aar.Dir));
+		Unzip (path + aar.Dir + ".aar", path + aar.Dir);
 	}
 
 	// Get Wearable stuff
@@ -338,7 +362,7 @@ Task ("externals")
 		DeleteDirectory (path + "google-play-services", true);
 	}
 
-	// Put the uitest.keystore in our artifacts for downstream jobs to use 
+	// Put the uitest.keystore in our artifacts for downstream jobs to use
 	EnsureDirectoryExists ("./output");
 	if (FileExists ("./uitest.keystore"))
 		CopyFile ("./uitest.keystore", "./output/uitest.keystore");
@@ -356,8 +380,8 @@ Task ("diff")
 		"./wearable/source/bin/Release/"
 	};
 
-	MonoApiInfo ("./output/GooglePlayServices.Merged.dll", 
-		"./output/GooglePlayServices.api-info.xml", 
+	MonoApiInfo ("./output/GooglePlayServices.Merged.dll",
+		"./output/GooglePlayServices.api-info.xml",
 		new MonoApiInfoToolSettings { SearchPaths = SEARCH_DIRS });
 
 	// Grab the last public release's api-info.xml to use as a base to compare and make an API diff
@@ -365,13 +389,13 @@ Task ("diff")
 
 	// Now diff against current release'd api info
 	// eg: mono mono-api-diff.exe ./gps.r26.xml ./gps.r27.xml > gps.diff.xml
-	MonoApiDiff ("./output/GooglePlayServices.api-info.previous.xml", 
+	MonoApiDiff ("./output/GooglePlayServices.api-info.previous.xml",
 		"./output/GooglePlayServices.api-info.xml",
 		"./output/GooglePlayServices.api-diff.xml");
 
 	// Now let's make a purty html file
 	// eg: mono mono-api-html.exe -c -x ./gps.previous.info.xml ./gps.current.info.xml > gps.diff.html
-	MonoApiHtml ("./output/GooglePlayServices.api-info.previous.xml", 
+	MonoApiHtml ("./output/GooglePlayServices.api-info.previous.xml",
 		"./output/GooglePlayServices.api-info.xml",
 		"./output/GooglePlayServices.api-diff.html");
 });
@@ -396,12 +420,28 @@ Task ("merge").IsDependentOn ("libs").Does (() =>
 	});
 });
 
-
 Task ("clean").IsDependentOn ("clean-base").Does (() =>
 {
+	if (FileExists ("./generated.targets"))
+		DeleteFile ("./generated.targets");
+
 	if (DirectoryExists ("./externals"))
 		DeleteDirectory ("./externals", true);
+
+	CleanDirectories ("./**/packages");
 });
+
+Task ("cleanwin").Does (() =>
+{
+	if (FileExists ("./generated.targets"))
+		DeleteFile ("./generated.targets");
+
+	if (DirectoryExists ("./externals"))
+		DeleteDirectory ("./externals", true);
+
+	CleanDirectories ("./**/packages");
+});
+
 
 Task ("component-docs").Does (() =>
 {
@@ -498,19 +538,125 @@ Task ("component-setup").Does (() =>
 
 Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base");
 
-Task ("nuget-setup").Does (() =>
-{
-	var nuspecs = GetFiles ("./**/nuget/*.template.nuspec");
-	foreach (var nuspec in nuspecs) {
-		var nuspecTxt = FileReadText (nuspec)
-			.Replace ("$aar-version$", VERSION_DESC);
+Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 
+	var templateText = FileReadText ("./template.targets");
+
+	if (FileExists ("./generated.targets"))
+		DeleteFile ("./generated.targets");
+
+	var downloadParts = DeserializeJsonFromFile<List<PartialZipInfo>> ("./partial-download-info.json");
+
+	foreach (var aar in AAR_INFOS) {
+
+		// Write out the nuspec from template
+		var nuspec = new FilePath ("./" + aar.BindingDir + "/nuget/" + aar.NugetId + ".template.nuspec");
+		var nuspecTxt = FileReadText (nuspec).Replace ("$aar-version$", VERSION_DESC);
 		var newNuspec = nuspec.FullPath.Replace (".template.nuspec", ".nuspec");
 		FileWriteText (newNuspec, nuspecTxt);
+
+		// Write out the .targets
+		var part = downloadParts.FirstOrDefault (p => p.LocalPath.EndsWith ("/" + aar.Dir + "-" + aar.AarVersion + ".aar"));
+
+		if (part == null)
+			throw new Exception ("No matching part found for '" + aar.Dir + "-" + aar.AarVersion + "' in partial-download-info.json ");
+
+		var msName = aar.Dir.Replace("-", "");
+
+		var xbdKey = "playservices-" + PLAY_AAR_VERSION + "/" + msName;
+		if (aar.Dir.StartsWith ("firebase-"))
+			xbdKey = "firebase-" + FIREBASE_AAR_VERSION + "/" + msName;
+
+		var items = new Dictionary<string, string> {
+			{ "_XbdUrl_", "_XbdUrl_" + msName },
+			{ "_XbdKey_", "_XbdKey_" + msName },
+			{ "_XbdAarFile_", "_XbdAarFile_" + msName },
+			{ "_XbdAarFileInSdk_", "_XbdAarFileInSdk_" + msName },
+			{ "_XbdAssemblyName_", "_XbdAssemblyName_" + msName },
+			{ "_XbdAarFileFullPath_", "_XbdAarFileFullPath_" + msName },
+			{ "_XbdRestoreItems_", "_XbdRestoreItems_" + msName },
+			{ "$XbdUrl$", M2_REPOSITORY },
+			{ "$XbdMd5$", part.Md5 },
+			{ "$XbdKey$", xbdKey },
+			{ "$XbdAssemblyName$", aar.NugetId },
+			{ "$XbdRangeStart$", part.RangeStart.ToString() },
+			{ "$XbdRangeEnd$", part.RangeEnd.ToString() },
+			{ "$AarKey$", aar.Dir },
+			{ "$AarVersion$", aar.AarVersion },
+			{ "$AarInnerPath$", aar.Path.Replace ("/", "\\") },
+		};
+
+		var targetsText = templateText;
+
+		foreach (var kvp in items)
+			targetsText = targetsText.Replace (kvp.Key, kvp.Value);
+
+		var targetsFile = new FilePath (string.Format ("{0}/nuget/{1}.targets", aar.BindingDir, aar.NugetId));
+		FileWriteText (targetsFile, targetsText);
+
+		// Merge each generated targets file into one main one
+		// this makes one file to import into our actual binding projects
+		// which is much easier/less maintenance
+		if (!FileExists ("./generated.targets"))
+			FileWriteText ("./generated.targets", "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<Project ToolsVersion=\"4.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">\n</Project>");
+
+		// Load the doc to append to, and the doc to append
+		var xFileRoot = System.Xml.Linq.XDocument.Load ("./generated.targets");
+		System.Xml.Linq.XNamespace nsRoot = xFileRoot.Root.Name.Namespace;
+		var xFileChild = System.Xml.Linq.XDocument.Load (MakeAbsolute (targetsFile).FullPath);
+		System.Xml.Linq.XNamespace nsChild = xFileRoot.Root.Name.Namespace;
+
+		// Add all the elements under <Project> into the existing file's <Project> node
+		foreach (var xItemToAdd in xFileChild.Element (nsChild + "Project").Elements ())
+			xFileRoot.Element (nsRoot + "Project").Add (xItemToAdd);
+
+		// Inject a property to prevent errors from missing assemblies in .targets
+		// this allows us to use one big .targets file in all the projects and not have to figure out which specific
+		// ones each project needs to reference for development purposes
+		if (!xFileRoot.Descendants (nsRoot + "XamarinBuildResourceMergeThrowOnMissingAssembly").Any ()) {
+			xFileRoot.Element (nsRoot + "Project")
+				.AddFirst (new System.Xml.Linq.XElement (nsRoot + "PropertyGroup",
+					new System.Xml.Linq.XElement (nsRoot + "XamarinBuildResourceMergeThrowOnMissingAssembly", false)));
+		}
+
+		xFileRoot.Save ("./generated.targets");
+
+		// Check for an existing .targets file in this nuget package
+		// we need to merge the generated one with it if it exists
+		// nuget only allows one automatic .targets file in the build/ folder
+		// of the nuget package, which must be named {nuget-package-id}.targets
+		// so we need to merge them all into one
+		var mergeFile = new FilePath (aar.BindingDir + "/nuget/merge.targets");
+
+		if (FileExists (mergeFile)) {
+			Information ("merge.targets found, merging into generated file...");
+
+			// Load the doc to append to, and the doc to append
+			var xOrig = System.Xml.Linq.XDocument.Load (MakeAbsolute(targetsFile).FullPath);
+			System.Xml.Linq.XNamespace nsOrig = xOrig.Root.Name.Namespace;
+			var xMerge = System.Xml.Linq.XDocument.Load (MakeAbsolute(mergeFile).FullPath);
+			System.Xml.Linq.XNamespace nsMerge = xMerge.Root.Name.Namespace;
+			// Add all the elements under <Project> into the existing file's <Project> node
+			foreach (var xItemToAdd in xMerge.Element (nsMerge + "Project").Elements ())
+				xOrig.Element (nsOrig + "Project").Add (xItemToAdd);
+
+			xOrig.Save (MakeAbsolute (targetsFile).FullPath);
+		}
 	}
 });
 
-Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("libs").IsDependentOn ("nuget-base");
+Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
+
+Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("libs-base");
+
+Task ("buildtasks").Does (() =>
+{
+	NuGetRestore ("./basement/buildtasks/Basement-BuildTasks.csproj");
+
+	DotNetBuild ("./basement/buildtasks/Basement-BuildTasks.csproj", c => c.Configuration = "Release");
+
+	CopyFile ("./basement/buildtasks/bin/Release/Xamarin.GooglePlayServices.Basement.targets", "./basement/nuget/merge.targets");
+});
 
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);

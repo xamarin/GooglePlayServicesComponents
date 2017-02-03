@@ -24,8 +24,6 @@ samples:
       - Tasks
       - Firebase-Common
       - Firebase-Auth
-      - Firebase-Auth-Common
-      - Firebase-Auth-Module
     installNuGets:
       - project: FirebaseAuthQuickstart
         packages:
@@ -36,9 +34,8 @@ samples:
           - Xamarin.GooglePlayServices.Tasks
           - Xamarin.Firebase.Common
           - Xamarin.Firebase.Auth
-          - Xamarin.Firebase.Auth.Common
-          - Xamarin.Firebase.Auth.Module
     removeNodes:
       - "//xNS:Import[contains (@Project, 'Xamarin.GooglePlayServices.Basement.targets')]"
+      - "//xNS:Import[contains (@Project, 'generated.targets')]"
 local-nuget-repo: ../../output/
 no_build: true
