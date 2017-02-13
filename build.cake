@@ -5,14 +5,14 @@
 #addin nuget:?package=Cake.Json
 #addin nuget:?package=Cake.XCode
 #addin nuget:?package=Cake.Xamarin
-#addin nuget:?package=Cake.Xamarin.Build&version=1.1.11
+#addin nuget:?package=Cake.Xamarin.Build&version=1.1.13
 #addin nuget:?package=Cake.FileHelpers
 #addin nuget:?package=Cake.MonoApiTools
 
 // To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip\
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_v8_rc41.zip";
-var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc42_wear_2a3.zip";
+var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc42_wear_2_0_rc6.zip";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/42.1001.0/api-info.xml";
@@ -22,12 +22,10 @@ var PLAY_NUGET_VERSION = "42.1001.0";
 var PLAY_AAR_VERSION = "10.0.1";
 var VERSION_DESC = "10.0.1";
 
-var WEAR_COMPONENT_VERSION = "1.4.0.0";
-var WEAR_NUGET_VERSION = "1.4.0";
-var WEAR_AAR_VERSION = "1.4.0";
-
-var WEARABLE_SUPPORT_VERSION = "1.4.0";
-var WEARABLE_VERSION = "1.0.0";
+var WEAR_COMPONENT_VERSION = "2.0.0.0";
+var WEAR_NUGET_VERSION = "2.0.0";
+var WEAR_AAR_VERSION = "2.0.0";
+var WEARABLE_SUPPORT_VERSION = "2.0.0";
 
 var FIREBASE_COMPONENT_VERSION = PLAY_COMPONENT_VERSION;
 var FIREBASE_NUGET_VERSION = PLAY_NUGET_VERSION;
@@ -37,6 +35,8 @@ var TARGET = Argument ("t", Argument ("target", "Default"));
 
 var CPU_COUNT = System.Environment.ProcessorCount;
 var ALWAYS_MSBUILD = false;
+
+LogSystemInfo ();
 
 var AAR_INFOS = new [] {
 	new AarInfo ("ads", "play-services-ads", "android/gms/play-services-ads", "Xamarin.GooglePlayServices.Ads", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
@@ -350,7 +350,7 @@ Task ("externals")
 
 	// Get Wearable stuff
 	Unzip (path + "m2repository/com/google/android/support/wearable/" + WEARABLE_SUPPORT_VERSION + "/wearable-" + WEARABLE_SUPPORT_VERSION + ".aar", path + "wearable-support");
-	CopyFile (path + "m2repository/com/google/android/wearable/wearable/" + WEARABLE_VERSION + "/wearable-" + WEARABLE_VERSION + ".jar", path + "wearable.jar");
+	CopyFile (path + "m2repository/com/google/android/wearable/wearable/" + WEAR_AAR_VERSION + "/wearable-" + WEAR_AAR_VERSION + ".jar", path + "wearable.jar");
 
 	// Get the GPS Docs
 	if (!FileExists (path + "docs.zip"))
@@ -545,7 +545,17 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 	if (FileExists ("./generated.targets"))
 		DeleteFile ("./generated.targets");
 
-	var downloadParts = DeserializeJsonFromFile<List<PartialZipInfo>> ("./partial-download-info.json");
+	// Get the zip file offsets for the relevant aar's
+	var downloadParts = FindZipEntries ("./externals/m2repository.zip")
+		.Where (e => (e.EntryName.Contains (PLAY_AAR_VERSION) || e.EntryName.Contains (WEAR_AAR_VERSION))
+			&& (e.EntryName.Contains (".aar") || e.EntryName.Contains (".jar")))
+		.Select (e => new PartialZipInfo {
+			RangeStart = e.RangeStart,
+			RangeEnd = e.RangeEnd,
+			Url = M2_REPOSITORY,
+			LocalPath = e.EntryName,
+			Md5 = ReadZipEntryText ("./externals/m2repository.zip", e.EntryName + ".md5", readBinaryAsHex: true)
+		}).ToList ();
 
 	foreach (var aar in AAR_INFOS) {
 
