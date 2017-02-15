@@ -51,4 +51,10 @@
 	<remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='ActionPage']/method[@name='setStateListAnimator' and count(parameter)=1 and parameter[1][@type='android.animation.StateListAnimator']]" />
 	<remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='RecyclerViewMergeAdapter']/method[@name='setHasStableIds' and count(parameter)=1 and parameter[1][@type='boolean']]" />
 	<remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='WearableListView.SetScrollVerticallyProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.wearable.view.WearableListView']]" />
+
+	<attr path="/api/package[@name='android.support.wearable.view.drawer']/interface[@name='WearableDrawerView.DrawerState']" name="managedName">DrawerStates</attr>
+	<remove-node path="/api/package[@name='android.support.wearable.view.drawer']/class[@name='WearableActionDrawer.ActionListAdapter']" />
+	<attr path="/api/package[@name='android.support.wearable.view.drawer']/class[@name='WearableDrawerLayout.DrawerDraggerCallback']" name="visibility">internal</attr>
+	<remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='ProgressSpinner']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]" />
+	<remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='DefaultOffsettingHelper']" />
 </metadata>

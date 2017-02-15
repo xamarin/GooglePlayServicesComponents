@@ -91,48 +91,48 @@ namespace Android.Support.Wearable.Views
         }
     }
 
-    public partial class RecyclerViewMergeAdapter
-    {
-        public new bool HasStableIds {
-            get { return base.HasStableIds; }
-            set { SetHasStableIds (value); }
-        }
+//    public partial class RecyclerViewMergeAdapter
+//    {
+//        public new bool HasStableIds {
+//            get { return base.HasStableIds; }
+//            set { SetHasStableIds (value); }
+//        }
 
-        static Delegate cb_setHasStableIds_Z;
-#pragma warning disable 0169
-        static Delegate GetSetHasStableIds_ZHandler ()
-        {
-            if (cb_setHasStableIds_Z == null)
-                cb_setHasStableIds_Z = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, bool>) n_SetHasStableIds_Z);
-            return cb_setHasStableIds_Z;
-        }
+//        static Delegate cb_setHasStableIds_Z;
+//#pragma warning disable 0169
+//        static Delegate GetSetHasStableIds_ZHandler ()
+//        {
+//            if (cb_setHasStableIds_Z == null)
+//                cb_setHasStableIds_Z = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, bool>) n_SetHasStableIds_Z);
+//            return cb_setHasStableIds_Z;
+//        }
 
-        static void n_SetHasStableIds_Z (IntPtr jnienv, IntPtr native__this, bool hasStableIds)
-        {
-            global::Android.Support.Wearable.Views.RecyclerViewMergeAdapter __this = global::Java.Lang.Object.GetObject<global::Android.Support.Wearable.Views.RecyclerViewMergeAdapter> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
-            __this.SetHasStableIds (hasStableIds);
-        }
-#pragma warning restore 0169
+//        static void n_SetHasStableIds_Z (IntPtr jnienv, IntPtr native__this, bool hasStableIds)
+//        {
+//            global::Android.Support.Wearable.Views.RecyclerViewMergeAdapter __this = global::Java.Lang.Object.GetObject<global::Android.Support.Wearable.Views.RecyclerViewMergeAdapter> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+//            __this.SetHasStableIds (hasStableIds);
+//        }
+//#pragma warning restore 0169
 
-        static IntPtr id_setHasStableIds_Z;
-        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.wearable.view']/class[@name='RecyclerViewMergeAdapter']/method[@name='setHasStableIds' and count(parameter)=1 and parameter[1][@type='boolean']]"
-        [Register ("setHasStableIds", "(Z)V", "GetSetHasStableIds_ZHandler")]
-        public unsafe void SetHasStableIds (bool hasStableIds)
-        {
-            if (id_setHasStableIds_Z == IntPtr.Zero)
-                id_setHasStableIds_Z = JNIEnv.GetMethodID (class_ref, "setHasStableIds", "(Z)V");
-            try {
-                JValue* __args = stackalloc JValue [1];
-                __args [0] = new JValue (hasStableIds);
+//        static IntPtr id_setHasStableIds_Z;
+//        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.wearable.view']/class[@name='RecyclerViewMergeAdapter']/method[@name='setHasStableIds' and count(parameter)=1 and parameter[1][@type='boolean']]"
+//        [Register ("setHasStableIds", "(Z)V", "GetSetHasStableIds_ZHandler")]
+//        public unsafe void SetHasStableIds (bool hasStableIds)
+//        {
+//            if (id_setHasStableIds_Z == IntPtr.Zero)
+//                id_setHasStableIds_Z = JNIEnv.GetMethodID (class_ref, "setHasStableIds", "(Z)V");
+//            try {
+//                JValue* __args = stackalloc JValue [1];
+//                __args [0] = new JValue (hasStableIds);
 
-                if (GetType () == ThresholdType)
-                    JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setHasStableIds_Z, __args);
-                else
-                    JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setHasStableIds", "(Z)V"), __args);
-            } finally {
-            }
-        }
-    }
+//                if (GetType () == ThresholdType)
+//                    JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setHasStableIds_Z, __args);
+//                else
+//                    JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setHasStableIds", "(Z)V"), __args);
+//            } finally {
+//            }
+//        }
+//    }
 
     /*
     * TODO: Consider removing when Cycle 9 is released

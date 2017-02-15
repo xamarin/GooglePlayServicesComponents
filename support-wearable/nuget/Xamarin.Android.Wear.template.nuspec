@@ -25,14 +25,15 @@
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-support-wearable_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid50">
-        <dependency id="Xamarin.Android.Support.v4" version="23.1.1.1" />
-        <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="23.1.1.1" />
+        <dependency id="Xamarin.Android.Support.v4" version="25.1.0" />
+        <dependency id="Xamarin.Android.Support.Percent" version="25.1.0" />
+        <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="25.1.0" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.Android.Wear.dll" target="lib/MonoAndroid50" />
+    <file src="output/Xamarin.Android.Wear.dll" target="lib/MonoAndroid70" />
 
-    <file src="support-wearable/nuget/Xamarin.Android.Wear.targets" target="build/MonoAndroid50" />
+    <file src="support-wearable/nuget/Xamarin.Android.Wear.targets" target="build/MonoAndroid70" />
   </files>
 </package>
