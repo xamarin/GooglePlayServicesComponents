@@ -554,7 +554,7 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 			RangeEnd = e.RangeEnd,
 			Url = M2_REPOSITORY,
 			LocalPath = e.EntryName,
-			Md5 = ReadZipEntryText ("./externals/m2repository.zip", e.EntryName + ".md5", readBinaryAsHex: true)
+			Md5 = ReadZipEntryText ("./externals/m2repository.zip", e.EntryName + ".md5", readBinaryAsHex: !e.EntryName.Contains ("wearable-" + WEAR_AAR_VERSION + ".aar"))
 		}).ToList ();
 
 	foreach (var aar in AAR_INFOS) {
