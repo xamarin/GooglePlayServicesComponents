@@ -137,53 +137,53 @@ namespace Android.Support.Wearable.Views
     /*
     * TODO: Consider removing when Cycle 9 is released
     */
-//     public partial class WearableListView
-//     {
-//         private partial class SetScrollVerticallyProperty
-//         {
-//             static Delegate cb_get_Landroid_support_wearable_view_WearableListView_;
-// #pragma warning disable 0169
-//             static Delegate GetGet_Landroid_support_wearable_view_WearableListView_Handler()
-//             {
-//                 if (cb_get_Landroid_support_wearable_view_WearableListView_ == null)
-//                     cb_get_Landroid_support_wearable_view_WearableListView_ = JNINativeWrapper.CreateDelegate((Func<IntPtr, IntPtr, IntPtr, IntPtr>)n_Get_Landroid_support_wearable_view_WearableListView_);
-//                 return cb_get_Landroid_support_wearable_view_WearableListView_;
-//             }
+    public partial class WearableListView
+    {
+        private partial class SetScrollVerticallyProperty
+        {
+            static Delegate cb_get_Landroid_support_wearable_view_WearableListView_;
+#pragma warning disable 0169
+            static Delegate GetGet_Landroid_support_wearable_view_WearableListView_Handler()
+            {
+                if (cb_get_Landroid_support_wearable_view_WearableListView_ == null)
+                    cb_get_Landroid_support_wearable_view_WearableListView_ = JNINativeWrapper.CreateDelegate((Func<IntPtr, IntPtr, IntPtr, IntPtr>)n_Get_Landroid_support_wearable_view_WearableListView_);
+                return cb_get_Landroid_support_wearable_view_WearableListView_;
+            }
 
-//             static IntPtr n_Get_Landroid_support_wearable_view_WearableListView_(IntPtr jnienv, IntPtr native__this, IntPtr native_wearableListView)
-//             {
-//                 global::Android.Support.Wearable.Views.WearableListView.SetScrollVerticallyProperty __this = global::Java.Lang.Object.GetObject<global::Android.Support.Wearable.Views.WearableListView.SetScrollVerticallyProperty>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
-//                 global::Android.Support.Wearable.Views.WearableListView wearableListView = global::Java.Lang.Object.GetObject<global::Android.Support.Wearable.Views.WearableListView>(native_wearableListView, JniHandleOwnership.DoNotTransfer);
-//                 IntPtr __ret = JNIEnv.ToLocalJniHandle(__this.Get(wearableListView));
-//                 return __ret;
-//             }
-// #pragma warning restore 0169
+            static IntPtr n_Get_Landroid_support_wearable_view_WearableListView_(IntPtr jnienv, IntPtr native__this, IntPtr native_wearableListView)
+            {
+                global::Android.Support.Wearable.Views.WearableListView.SetScrollVerticallyProperty __this = global::Java.Lang.Object.GetObject<global::Android.Support.Wearable.Views.WearableListView.SetScrollVerticallyProperty>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+                global::Android.Support.Wearable.Views.WearableListView wearableListView = global::Java.Lang.Object.GetObject<global::Android.Support.Wearable.Views.WearableListView>(native_wearableListView, JniHandleOwnership.DoNotTransfer);
+                IntPtr __ret = JNIEnv.ToLocalJniHandle(__this.Get(wearableListView));
+                return __ret;
+            }
+#pragma warning restore 0169
 
-//             static IntPtr id_get_Landroid_support_wearable_view_WearableListView_;
-//             // Metadata.xml XPath method reference: path="/api/package[@name='android.support.wearable.view']/class[@name='WearableListView.SetScrollVerticallyProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.wearable.view.WearableListView']]"
-//             [Register("get", "(Landroid/support/wearable/view/WearableListView;)Ljava/lang/Integer;", "GetGet_Landroid_support_wearable_view_WearableListView_Handler")]
-//             public override unsafe global::Java.Lang.Object Get(Java.Lang.Object wearableListView)
-//             {
-//                 if (id_get_Landroid_support_wearable_view_WearableListView_ == IntPtr.Zero)
-//                     id_get_Landroid_support_wearable_view_WearableListView_ = JNIEnv.GetMethodID(class_ref, "get", "(Landroid/support/wearable/view/WearableListView;)Ljava/lang/Integer;");
-//                 try
-//                 {
-//                     JValue* __args = stackalloc JValue[1];
-//                     __args[0] = new JValue(wearableListView);
+            static IntPtr id_get_Landroid_support_wearable_view_WearableListView_;
+            // Metadata.xml XPath method reference: path="/api/package[@name='android.support.wearable.view']/class[@name='WearableListView.SetScrollVerticallyProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.wearable.view.WearableListView']]"
+            [Register("get", "(Landroid/support/wearable/view/WearableListView;)Ljava/lang/Integer;", "GetGet_Landroid_support_wearable_view_WearableListView_Handler")]
+            public unsafe global::Java.Lang.Object Get(Java.Lang.Object wearableListView)
+            {
+                if (id_get_Landroid_support_wearable_view_WearableListView_ == IntPtr.Zero)
+                    id_get_Landroid_support_wearable_view_WearableListView_ = JNIEnv.GetMethodID(class_ref, "get", "(Landroid/support/wearable/view/WearableListView;)Ljava/lang/Integer;");
+                try
+                {
+                    JValue* __args = stackalloc JValue[1];
+                    __args[0] = new JValue(wearableListView);
 
-//                     global::Java.Lang.Integer __ret;
-//                     if (GetType() == ThresholdType)
-//                         __ret = global::Java.Lang.Object.GetObject<global::Java.Lang.Integer>(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_get_Landroid_support_wearable_view_WearableListView_, __args), JniHandleOwnership.TransferLocalRef);
-//                     else
-//                         __ret = global::Java.Lang.Object.GetObject<global::Java.Lang.Integer>(JNIEnv.CallNonvirtualObjectMethod(((global::Java.Lang.Object)this).Handle, ThresholdClass, JNIEnv.GetMethodID(ThresholdClass, "get", "(Landroid/support/wearable/view/WearableListView;)Ljava/lang/Integer;"), __args), JniHandleOwnership.TransferLocalRef);
-//                     return __ret;
-//                 }
-//                 finally
-//                 {
-//                 }
-//             }
-//         }
-//     }
+                    global::Java.Lang.Integer __ret;
+                    if (GetType() == ThresholdType)
+                        __ret = global::Java.Lang.Object.GetObject<global::Java.Lang.Integer>(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_get_Landroid_support_wearable_view_WearableListView_, __args), JniHandleOwnership.TransferLocalRef);
+                    else
+                        __ret = global::Java.Lang.Object.GetObject<global::Java.Lang.Integer>(JNIEnv.CallNonvirtualObjectMethod(((global::Java.Lang.Object)this).Handle, ThresholdClass, JNIEnv.GetMethodID(ThresholdClass, "get", "(Landroid/support/wearable/view/WearableListView;)Ljava/lang/Integer;"), __args), JniHandleOwnership.TransferLocalRef);
+                    return __ret;
+                }
+                finally
+                {
+                }
+            }
+        }
+    }
     /*
     * End TODO
     */
