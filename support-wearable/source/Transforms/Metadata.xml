@@ -3,6 +3,12 @@
 	<!-- Fix namespaces -->
 	<attr path="/api/package[@name='android.support.wearable.view']" name="managedName">Android.Support.Wearable.Views</attr>
 	<attr path="/api/package[@name='com.google.android.wearable.compat']" name="managedName">Google.Android.Wearable.Compat</attr>
+	
+	<attr path="/api/package[@name='com.google.android.wearable']" name="managedName">Google.Android.Wearable</attr>
+	<attr path="/api/package[@name='com.google.android.wearable']" name="managedName">Google.Android.Wearable</attr>
+	<attr path="/api/package[@name='com.google.android.wearable.input']" name="managedName">Google.Android.Wearable.Input</attr>
+	<attr path="/api/package[@name='com.google.android.wearable.intent']" name="managedName">Google.Android.Wearable.Intent</attr>
+	<attr path="/api/package[@name='com.google.android.wearable.playstore']" name="managedName">Google.Android.Wearable.Playstore</attr>
 
 	<!-- Make public -->
 	<attr path="/api/package[@name='android.support.wearable.activity']/class[@name='WearableActivity.AmbientCallback']" name="visibility">public</attr>
