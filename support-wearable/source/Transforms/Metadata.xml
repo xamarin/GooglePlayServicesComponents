@@ -57,4 +57,5 @@
 	<attr path="/api/package[@name='android.support.wearable.view.drawer']/class[@name='WearableDrawerLayout.DrawerDraggerCallback']" name="visibility">internal</attr>
 	<remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='ProgressSpinner']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]" />
 	<remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='DefaultOffsettingHelper']" />
+	<remove-node path="/api/package[@name='android.support.wearable.view']/class[@name='WearableListView.SetScrollVerticallyProperty']" />
 </metadata>
