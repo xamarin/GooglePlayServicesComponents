@@ -23,7 +23,7 @@ var PLAY_AAR_VERSION = "10.0.1";
 var VERSION_DESC = "10.0.1";
 
 var WEAR_COMPONENT_VERSION = "2.0.0.0";
-var WEAR_NUGET_VERSION = "2.0.0";
+var WEAR_NUGET_VERSION = "2.0.0-rc1";
 var WEAR_AAR_VERSION = "2.0.0";
 var WEARABLE_SUPPORT_VERSION = "2.0.0";
 
@@ -114,6 +114,7 @@ class AarInfo
 		AarVersion = aarVersion;
 		NuGetVersion = nugetVersion;
 		ComponentVersion = componentVersion;
+		Extension = ".aar";
 	}
 
 	public string BindingDir { get;set; }
@@ -123,6 +124,7 @@ class AarInfo
 	public string AarVersion { get; set; }
 	public string NuGetVersion { get; set; }
 	public string ComponentVersion { get; set; }
+	public string Extension { get;set; }
 }
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/android-23/";
