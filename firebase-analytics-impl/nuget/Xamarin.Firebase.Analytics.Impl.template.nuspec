@@ -18,6 +18,7 @@
     <dependencies>
       <group targetFramework="MonoAndroid70">
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
         <dependency id="Xamarin.Firebase.Iid" version="[$version$]" />
         <dependency id="Xamarin.Firebase.Common" version="[$version$]" />
       </group>
