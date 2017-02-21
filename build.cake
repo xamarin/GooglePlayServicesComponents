@@ -114,6 +114,7 @@ class AarInfo
 		AarVersion = aarVersion;
 		NuGetVersion = nugetVersion;
 		ComponentVersion = componentVersion;
+		Extension = ".aar";
 	}
 
 	public string BindingDir { get;set; }
@@ -123,6 +124,7 @@ class AarInfo
 	public string AarVersion { get; set; }
 	public string NuGetVersion { get; set; }
 	public string ComponentVersion { get; set; }
+	public string Extension { get;set; }
 }
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/android-23/";
@@ -554,7 +556,7 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 			RangeEnd = e.RangeEnd,
 			Url = M2_REPOSITORY,
 			LocalPath = e.EntryName,
-			Md5 = ReadZipEntryText ("./externals/m2repository.zip", e.EntryName + ".md5", readBinaryAsHex: true)
+			Md5 = ReadZipEntryText ("./externals/m2repository.zip", e.EntryName + ".md5", readBinaryAsHex: !e.EntryName.Contains ("wearable-" + WEAR_AAR_VERSION + ".aar"))
 		}).ToList ();
 
 	foreach (var aar in AAR_INFOS) {
