@@ -19,11 +19,11 @@ namespace Android.Gms.Nearby.Connection
         {
             return (await api.SendConnectionRequest (apiClient, name, remoteEndpointId, payload, connectionResponseCallback, messageListener)).JavaCast<Statuses> ();
         }
-        public static async Task<IConnectionsStartAdvertisingResult> StartAdvertisingAsync (this IConnections api, GoogleApiClient apiClient, string name, Android.Gms.Nearby.Connection.AppMetadata appMetadata, long durationMillis, IConnectionsConnectionRequestListener connectionRequestListener)
+        public static async Task<IConnectionsStartAdvertisingResult> StartAdvertisingAsync (this IConnections api, GoogleApiClient apiClient, string name, Android.Gms.Nearby.Connection.AppMetadata appMetadata, long durationMillis, ConnectionsConnectionRequestListener connectionRequestListener)
         {
             return (await api.StartAdvertising (apiClient, name, appMetadata, durationMillis, connectionRequestListener)).JavaCast<IConnectionsStartAdvertisingResult> ();
         }
-        public static async Task<Statuses> StartDiscoveryAsync (this IConnections api, GoogleApiClient apiClient, string serviceId, long durationMillis, IConnectionsEndpointDiscoveryListener listener)
+        public static async Task<Statuses> StartDiscoveryAsync (this IConnections api, GoogleApiClient apiClient, string serviceId, long durationMillis, ConnectionsEndpointDiscoveryListener listener)
         {
             return (await api.StartDiscovery (apiClient, serviceId, durationMillis, listener)).JavaCast<Statuses> ();
         }
