@@ -19,9 +19,7 @@ namespace NearbySample
     public class MainActivity : Activity,
         GoogleApiClient.IConnectionCallbacks,
         GoogleApiClient.IOnConnectionFailedListener,
-        IConnectionsMessageListener,
-        IConnectionsConnectionRequestListener,
-        IConnectionsEndpointDiscoveryListener
+        IConnectionsMessageListener
     {        
 
         class ConnectionResponseCallback : Java.Lang.Object, IConnectionsConnectionResponseCallback
@@ -160,7 +158,10 @@ namespace NearbySample
             // will construct a default name based on device model such as 'LGE Nexus 5'.
             string name = null;
             var result = await NearbyClass.Connections.StartAdvertisingAsync (
-                mGoogleApiClient, name, appMetadata, TIMEOUT_ADVERTISE, this);
+				mGoogleApiClient, name, appMetadata, TIMEOUT_ADVERTISE, new MyConnectionRequestListener
+				{
+					ConnectionRequestHandler = OnConnectionRequest
+				});
             
             Log ("startAdvertising:onResult:" + result);
 
@@ -196,7 +197,7 @@ namespace NearbySample
                 return;
             }
 
-            var status = await NearbyClass.Connections.StartDiscoveryAsync (mGoogleApiClient, serviceId, TIMEOUT_DISCOVER, this);
+			var status = await NearbyClass.Connections.StartDiscoveryAsync (mGoogleApiClient, serviceId, TIMEOUT_DISCOVER, new MyEndpointDiscoveryListener { EndpointLostHandler = OnEndpointLost, EndpointFoundHandler = OnEndpointFound });
 
             if (status.IsSuccess) {
                 Log("startDiscovery:onResult: SUCCESS");
@@ -268,7 +269,7 @@ namespace NearbySample
             Log ("connectTo: " + status.IsSuccess);
         }
 
-        public void OnConnectionRequest (string endpointId, string deviceId, string endpointName, byte[] payload) 
+        public void OnConnectionRequest (string endpointId, string endpointName, byte[] payload) 
         {
             Log("onConnectionRequest:" + endpointId + ":" + endpointName);
 
@@ -314,7 +315,7 @@ namespace NearbySample
             UpdateViewVisibility (NearbyConnectionState.Ready);
         }
             
-        public void OnEndpointFound (string endpointId, string deviceId, string serviceId, string endpointName) 
+        public void OnEndpointFound (string endpointId, string serviceId, string endpointName) 
         {
             Log ("onEndpointFound:" + endpointId + ":" + endpointName);
 
@@ -420,6 +421,31 @@ namespace NearbySample
         Discovering = 1026,
         Connected = 1027
     }
+
+	public class MyConnectionRequestListener : ConnectionsConnectionRequestListener
+	{
+		public Action<string, string, byte[]> ConnectionRequestHandler { get; set; }
+
+		public override void OnConnectionRequest(string remoteEndpointId, string remoteEndpointName, byte[] handshakeData)
+		{
+			ConnectionRequestHandler?.Invoke(remoteEndpointId, remoteEndpointName, handshakeData);
+		}
+	}
+
+	public class MyEndpointDiscoveryListener : ConnectionsEndpointDiscoveryListener
+	{
+		public Action<string, string, string> EndpointFoundHandler { get; set; }
+		public override void OnEndpointFound(string endpointId, string serviceId, string name)
+		{
+			EndpointFoundHandler?.Invoke(endpointId, serviceId, name);
+		}
+
+		public Action<string> EndpointLostHandler { get; set; }
+		public override void OnEndpointLost(string endpointId)
+		{
+			EndpointLostHandler?.Invoke(endpointId);
+		}
+	}
 }
 
 
