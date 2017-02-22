@@ -51,7 +51,9 @@
 
 	<!-- Allowing zzc classes allows a bit too much, so remove these specifically -->
 	<remove-node path="/api/package[@name='com.google.android.gms.common.api']/class[contains(@name, 'zz')]" />
-
+	<remove-node path="/api/package[@name='com.google.android.gms.common']/class[@name='zzd']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='zzd']" />
+	
 	<!-- Remove some undesirable bits -->
 	<remove-node path="/api/package[@name='com.google.android.gms.common.internal']/class[@name!='DowngradeableSafeParcel']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.common.api']/class[@name='ResolvingResultCallbacks']/method[@name='onSuccess' and count(parameter)=1 and parameter[1][@type='R']]" />
