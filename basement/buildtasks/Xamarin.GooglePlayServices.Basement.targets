@@ -37,24 +37,30 @@
 
   <!-- include the task assembly -->
   <UsingTask 
-      AssemblyFile="$(ProcessGoogleServicesJsonTaskFilename)" 
+      AssemblyFile="Xamarin.GooglePlayServices.Tasks.dll" 
       TaskName="Xamarin.GooglePlayServices.Tasks.ProcessGoogleServicesJson" />
 
+	
   <!-- the build tasks -->
   <Target
     Name="ProcessGoogleServicesJson" 
     Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True' "
     BeforeTargets="$(ProcessGoogleServicesJsonBeforeTargets)"
-    AfterTargets="$(ProcessGoogleServicesJsonAfterTargets)">
+    AfterTargets="$(ProcessGoogleServicesJsonAfterTargets)"
+    Inputs="@(GoogleServicesJson)"
+    Outputs="$(IntermediateOutputPath)\ProcessGoogleServicesJson.stamp">
 
     <ProcessGoogleServicesJson
-        IntermediateOutputPrefix="$(IntermediateOutputPrefix)"
         GoogleServicesJsons="@(GoogleServicesJson)"
         IntermediateOutputPath="$(IntermediateOutputPath)"
         MonoAndroidResDirIntermediate="$(MonoAndroidResDirIntermediate)"
         AndroidPackageName="$(_AndroidPackage)">
-			<Output ItemName="_AndroidResourceDest" TaskParameter="GoogleServicesGeneratedResources" />
+            <Output ItemName="_AndroidResourceDest" TaskParameter="GoogleServicesGeneratedResources" />
+            <Output ItemName="FileWrites" TaskParameter="GoogleServicesGeneratedResources" />
     </ProcessGoogleServicesJson>
-  </Target>
 
+    <ItemGroup>
+        <FileWrites Include="$(IntermediateOutputPath)\ProcessGoogleServicesJson.stamp" />
+    </ItemGroup>
+  </Target>
 </Project>
