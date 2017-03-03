@@ -31,20 +31,30 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <HintPath>..\..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="Helpers\MSBuildExtensions.cs" />
+    <Compile Include="Helpers\MSBuildTestLogger.cs" />
+    <Compile Include="Helpers\TestsBase.cs" />
+    <Compile Include="BuildTaskTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\buildtasks\Basement-BuildTasks.csproj">
       <Project>{21D99A15-AB98-4691-A45B-D236B2A91DEB}</Project>
       <Name>Basement-BuildTasks</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
