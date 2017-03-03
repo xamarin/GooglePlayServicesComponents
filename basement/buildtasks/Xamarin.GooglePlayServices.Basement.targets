@@ -44,7 +44,7 @@
   <!-- the build tasks -->
   <Target
     Name="ProcessGoogleServicesJson" 
-    Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True' "
+    Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True' AND '$(DesignTimeBuild)' != 'True'"
     BeforeTargets="$(ProcessGoogleServicesJsonBeforeTargets)"
     AfterTargets="$(ProcessGoogleServicesJsonAfterTargets)"
     Inputs="@(GoogleServicesJson)"
