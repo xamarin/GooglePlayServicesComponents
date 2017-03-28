@@ -21,6 +21,7 @@
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Location" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Places" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
