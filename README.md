@@ -87,6 +87,8 @@ Historically, Component and later NuGet package versions were based on the revis
 |                           | 30                           | (never published)            |
 |                           | 31                           | 9.2.1                        |
 | 32.4.0-beta2              | 32                           | 9.4.0                        |
+| 32.961.0                  | 32                           | 9.6.1                        |
+| 42.1001.0                 | 42                           | 10.0.1                       |
 
 
 ## License
