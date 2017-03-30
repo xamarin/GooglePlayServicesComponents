@@ -18,7 +18,7 @@ var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repos
 var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/42.1001.0/api-info.xml";
 
 var PLAY_COMPONENT_VERSION = "42.1021.0.0";
-var PLAY_NUGET_VERSION = "42.1021.0";
+var PLAY_NUGET_VERSION = "42.1021.0-beta1";
 var PLAY_AAR_VERSION = "10.2.1";
 var VERSION_DESC = "10.2.1";
 
