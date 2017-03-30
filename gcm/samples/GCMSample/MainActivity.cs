@@ -118,7 +118,7 @@ namespace GCMSample
     [IntentFilter (new [] { InstanceID.IntentFilterAction })]
     public class MyInstanceIDListenerService : InstanceIDListenerService
     {
-        public override async void OnTokenRefresh ()
+        public override void OnTokenRefresh ()
         {
             MyRegistrationService.Register (this);
         }
