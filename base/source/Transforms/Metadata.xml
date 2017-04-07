@@ -18,6 +18,7 @@
 
 	<!-- Allowing zzc classes allows a bit too much, so remove these specifically -->
 	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[contains(@name, 'zz') and @name != 'zzc' and @name != 'zzf']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']/class[@name='zzf']" />
 
 	<!-- These CREATOR fields are of some zz* types, so let's remove them -->
 	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[@name='DataHolder']/field[@name='CREATOR']" />
