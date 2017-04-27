@@ -17,13 +17,18 @@ var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repos
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/42.1001.0/api-info.xml";
 
+// The common suffix for nuget version
+// Sometimes might be "-beta1" for a prerelease, or ".1" if we have a point release for the same actual aar's
+// will be blank for a stable release that has no point release fixes
+var COMMON_NUGET_VERSION = "";
+
 var PLAY_COMPONENT_VERSION = "42.1021.0.0";
-var PLAY_NUGET_VERSION = "42.1021.0-beta1";
+var PLAY_NUGET_VERSION = "42.1021.0" + COMMON_NUGET_VERSION;
 var PLAY_AAR_VERSION = "10.2.1";
 var VERSION_DESC = "10.2.1";
 
 var WEAR_COMPONENT_VERSION = "2.0.1.0";
-var WEAR_NUGET_VERSION = "2.0.1-beta1";
+var WEAR_NUGET_VERSION = "2.0.1" + COMMON_NUGET_VERSION;
 var WEAR_AAR_VERSION = "2.0.1";
 var WEARABLE_SUPPORT_VERSION = "2.0.1";
 
