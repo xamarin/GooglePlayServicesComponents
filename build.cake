@@ -1,6 +1,7 @@
 #tool nuget:?package=ILRepack&version=2.0.10
 #tool nuget:?package=XamarinComponent
 #tool nuget:?package=Cake.MonoApiTools
+#tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 
 #addin nuget:?package=Cake.Json
 #addin nuget:?package=Cake.XCode
@@ -37,6 +38,7 @@ var FIREBASE_NUGET_VERSION = PLAY_NUGET_VERSION;
 var FIREBASE_AAR_VERSION = PLAY_AAR_VERSION;
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
+var BUILD_CONFIG = Argument ("config", "Release");
 
 var CPU_COUNT = System.Environment.ProcessorCount;
 // MSBuild in < Mono 5.0 has some issues with multi cpu count being specified causing errors
@@ -140,6 +142,17 @@ if (IsRunningOnWindows ())
 	MONODROID_PATH = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.ProgramFilesX86)).Combine ("Reference Assemblies/Microsoft/Framework/MonoAndroid/v6.0/").FullPath;
 
 var MONO_PATH = "/Library/Frameworks/Mono.framework/Versions/Current";
+
+var MSCORLIB_PATH = "/Library/Frameworks/Xamarin.Android.framework/Libraries/mono/2.1/";
+if (IsRunningOnWindows ()) {
+
+	var DOTNETDIR = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.Windows)).Combine ("Microsoft.NET/");
+
+	if (DirectoryExists (DOTNETDIR.Combine ("Framework64")))
+		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework64/v4.0.30319/")).FullPath;
+	else
+		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
+}
 
 var buildsOnWinMac = BuildPlatforms.Windows | BuildPlatforms.Mac;
 
@@ -667,7 +680,42 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 
 Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
 
-Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("libs-base");
+Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("genapi").IsDependentOn ("libs-base");
+
+Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (() => {
+
+	var GenApiToolPath = GetFiles ("./tools/**/GenAPI.exe").FirstOrDefault ();
+
+	// For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
+	// GenAPI.exe -libPath:$(MONOANDROID) -out:Some.generated.cs -w:TypeForwards ./relative/path/to/Assembly.dll
+	var libDirPrefix = IsRunningOnWindows () ? "output/" : "";
+
+	var libs = new FilePath [] {
+		"./" + libDirPrefix + "Xamarin.Firebase.AppIndexing.dll",
+	};
+
+	foreach (var lib in libs) {
+		var genName = lib.GetFilename () + ".generated.cs";
+
+		var libPath = IsRunningOnWindows () ? MakeAbsolute (lib).FullPath : lib.FullPath;
+		var monoDroidPath = IsRunningOnWindows () ? "\"" + MONODROID_PATH + "\"" : MONODROID_PATH;
+
+		Information ("GenAPI: {0}", lib.FullPath);
+
+		StartProcess (GenApiToolPath, new ProcessSettings {
+			Arguments = string.Format("-libPath:{0} -out:{1}{2} -w:TypeForwards {3}",
+							monoDroidPath + "," + MSCORLIB_PATH,
+							IsRunningOnWindows () ? "" : "./",
+							genName,
+							libPath),
+			WorkingDirectory = "./output/",
+		});
+	}
+
+	DotNetBuild ("./GooglePlayServices.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
+
+	CopyFile ("./appindexing/source/bin/" + BUILD_CONFIG + "/Xamarin.GooglePlayServices.AppIndexing.dll", "./output/Xamarin.GooglePlayServices.AppIndexing.dll");
+});
 
 Task ("buildtasks").Does (() =>
 {
