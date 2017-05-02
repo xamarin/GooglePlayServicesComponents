@@ -679,6 +679,16 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 			xOrig.Save (MakeAbsolute (targetsFile).FullPath);
 		}
 	}
+
+	var extraNuspecTemplates = new [] {
+		new FilePath ("./appindexing/nuget/Xamarin.GooglePlayServices.AppIndexing.template.nuspec"),
+	};
+
+	foreach (var nuspec in extraNuspecTemplates) {
+		var nuspecTxt = FileReadText (nuspec).Replace ("$aar-version$", VERSION_DESC);
+		var newNuspec = nuspec.FullPath.Replace (".template.nuspec", ".nuspec");
+		FileWriteText (newNuspec, nuspecTxt);
+	}
 });
 
 Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
