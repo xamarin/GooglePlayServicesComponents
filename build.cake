@@ -1,6 +1,7 @@
 #tool nuget:?package=ILRepack&version=2.0.10
 #tool nuget:?package=XamarinComponent
 #tool nuget:?package=Cake.MonoApiTools
+#tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 
 #addin nuget:?package=Cake.Json
 #addin nuget:?package=Cake.XCode
@@ -11,30 +12,39 @@
 
 // To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip\
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
-var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_v8_rc41.zip";
-var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_gms_v8_rc42_wear_2_0_rc6.zip";
+var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_v9_rc41.zip";
+var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_gms_v9_1_rc07_wear_2_0_1_rc3.zip";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/42.1001.0/api-info.xml";
 
-var PLAY_COMPONENT_VERSION = "42.1001.0.0";
-var PLAY_NUGET_VERSION = "42.1001.0";
-var PLAY_AAR_VERSION = "10.0.1";
-var VERSION_DESC = "10.0.1";
+// The common suffix for nuget version
+// Sometimes might be "-beta1" for a prerelease, or ".1" if we have a point release for the same actual aar's
+// will be blank for a stable release that has no point release fixes
+var COMMON_NUGET_VERSION = "";
 
-var WEAR_COMPONENT_VERSION = "2.0.0.0";
-var WEAR_NUGET_VERSION = "2.0.0";
-var WEAR_AAR_VERSION = "2.0.0";
-var WEARABLE_SUPPORT_VERSION = "2.0.0";
+var PLAY_COMPONENT_VERSION = "42.1021.0.0";
+var PLAY_NUGET_VERSION = "42.1021.0" + COMMON_NUGET_VERSION;
+var PLAY_AAR_VERSION = "10.2.1";
+var VERSION_DESC = "10.2.1";
+
+var WEAR_COMPONENT_VERSION = "2.0.1.0";
+var WEAR_NUGET_VERSION = "2.0.1" + COMMON_NUGET_VERSION;
+var WEAR_AAR_VERSION = "2.0.1";
+var WEARABLE_SUPPORT_VERSION = "2.0.1";
 
 var FIREBASE_COMPONENT_VERSION = PLAY_COMPONENT_VERSION;
 var FIREBASE_NUGET_VERSION = PLAY_NUGET_VERSION;
 var FIREBASE_AAR_VERSION = PLAY_AAR_VERSION;
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
+var BUILD_CONFIG = Argument ("config", "Release");
 
 var CPU_COUNT = System.Environment.ProcessorCount;
-var ALWAYS_MSBUILD = false;
+// MSBuild in < Mono 5.0 has some issues with multi cpu count being specified causing errors
+if (!IsRunningOnWindows())
+	CPU_COUNT = 1;
+var ALWAYS_MSBUILD = true;
 
 LogSystemInfo ();
 
@@ -132,6 +142,17 @@ if (IsRunningOnWindows ())
 	MONODROID_PATH = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.ProgramFilesX86)).Combine ("Reference Assemblies/Microsoft/Framework/MonoAndroid/v6.0/").FullPath;
 
 var MONO_PATH = "/Library/Frameworks/Mono.framework/Versions/Current";
+
+var MSCORLIB_PATH = "/Library/Frameworks/Xamarin.Android.framework/Libraries/mono/2.1/";
+if (IsRunningOnWindows ()) {
+
+	var DOTNETDIR = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.Windows)).Combine ("Microsoft.NET/");
+
+	if (DirectoryExists (DOTNETDIR.Combine ("Framework64")))
+		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework64/v4.0.30319/")).FullPath;
+	else
+		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
+}
 
 var buildsOnWinMac = BuildPlatforms.Windows | BuildPlatforms.Mac;
 
@@ -286,6 +307,9 @@ var buildSpec = new BuildSpec {
 		// These are empty packages that depend on others
 		new NuGetInfo { NuSpec = "./firebase-core/nuget/Xamarin.Firebase.Core.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./firebase-ads/nuget/Xamarin.Firebase.Ads.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+
+		// Type forwarder packages for backwards compatibility
+		new NuGetInfo { NuSpec = "./appindexing/nuget/Xamarin.GooglePlayServices.AppIndexing.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 	},
 
 	Components = new [] {
@@ -655,11 +679,56 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 			xOrig.Save (MakeAbsolute (targetsFile).FullPath);
 		}
 	}
+
+	var extraNuspecTemplates = new [] {
+		new FilePath ("./appindexing/nuget/Xamarin.GooglePlayServices.AppIndexing.template.nuspec"),
+	};
+
+	foreach (var nuspec in extraNuspecTemplates) {
+		var nuspecTxt = FileReadText (nuspec).Replace ("$aar-version$", VERSION_DESC);
+		var newNuspec = nuspec.FullPath.Replace (".template.nuspec", ".nuspec");
+		FileWriteText (newNuspec, nuspecTxt);
+	}
 });
 
 Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
 
-Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("libs-base");
+Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("genapi").IsDependentOn ("libs-base");
+
+Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (() => {
+
+	var GenApiToolPath = GetFiles ("./tools/**/GenAPI.exe").FirstOrDefault ();
+
+	// For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
+	// GenAPI.exe -libPath:$(MONOANDROID) -out:Some.generated.cs -w:TypeForwards ./relative/path/to/Assembly.dll
+	var libDirPrefix = IsRunningOnWindows () ? "output/" : "";
+
+	var libs = new FilePath [] {
+		"./" + libDirPrefix + "Xamarin.Firebase.AppIndexing.dll",
+	};
+
+	foreach (var lib in libs) {
+		var genName = lib.GetFilename () + ".generated.cs";
+
+		var libPath = IsRunningOnWindows () ? MakeAbsolute (lib).FullPath : lib.FullPath;
+		var monoDroidPath = IsRunningOnWindows () ? "\"" + MONODROID_PATH + "\"" : MONODROID_PATH;
+
+		Information ("GenAPI: {0}", lib.FullPath);
+
+		StartProcess (GenApiToolPath, new ProcessSettings {
+			Arguments = string.Format("-libPath:{0} -out:{1}{2} -w:TypeForwards {3}",
+							monoDroidPath + "," + MSCORLIB_PATH,
+							IsRunningOnWindows () ? "" : "./",
+							genName,
+							libPath),
+			WorkingDirectory = "./output/",
+		});
+	}
+
+	DotNetBuild ("./GooglePlayServices.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
+
+	CopyFile ("./appindexing/source/bin/" + BUILD_CONFIG + "/Xamarin.GooglePlayServices.AppIndexing.dll", "./output/Xamarin.GooglePlayServices.AppIndexing.dll");
+});
 
 Task ("buildtasks").Does (() =>
 {

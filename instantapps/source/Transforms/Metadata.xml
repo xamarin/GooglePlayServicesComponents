@@ -22,5 +22,20 @@
 	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzare']/implements[@name='android.os.Parcelable.Creator']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzarb']/implements[@name='android.os.Parcelable.Creator']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzarg']/implements[@name='android.os.Parcelable.Creator']" />
+
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/interface[@name='zzaqy']/method[@name='zza' and count(parameter)=2 and parameter[1][@type='com.google.android.gms.common.api.Status'] and parameter[2][@type='android.content.pm.PackageInfo']]" />
 	<!-- End TODO -->
+
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqy.zza']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqz.zza']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqz.zza.zza']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqy.zza.zza']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqx']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqs']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqu']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzart']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzari']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaro']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzarm']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzarr']" />
 </metadata>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.AppIndexing</id>
+    <title>Xamarin Google Play Services - AppIndexing</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - AppIndexing $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - AppIndexing $aar-version$
+
+      NOTE: This is package only contains type forwarders to the types which now exist in Xamarin.Firebase.AppIndexing and is only available for backwards compatibility purposes.
+    </description>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <projectUrl>http://components.xamarin.com/view/googleplayservices-appindexing/</projectUrl>
+    <licenseUrl>http://components.xamarin.com/license/googleplayservices-appindexing/</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-appindexing_128x128.png</iconUrl>
+    <dependencies>
+      <group targetFramework="MonoAndroid70">
+        <dependency id="Xamarin.Firebase.AppIndexing" version="[$version$]"/>
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.GooglePlayServices.AppIndexing.dll" target="lib/MonoAndroid70" />
+  </files>
+</package>

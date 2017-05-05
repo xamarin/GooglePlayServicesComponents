@@ -72,6 +72,10 @@
       <Project>{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}</Project>
       <Name>Firebase-Analytics-Impl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\tasks\source\Tasks.csproj">
+      <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
+      <Name>Tasks</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />

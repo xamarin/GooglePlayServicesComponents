@@ -14,8 +14,6 @@ namespace Xamarin.GooglePlayServices.Tasks
         const string RESFILE_VALUES = "goog_svcs_json.xml";
         const string RESFILE_XML = "global_tracker.xml";
 
-        public string IntermediateOutputPrefix { get; set; }
-
         [Output]
         public ITaskItem[] GoogleServicesGeneratedResources { get; set; }
 
@@ -141,8 +139,18 @@ namespace Xamarin.GooglePlayServices.Tasks
 
             if (outputFiles.Any ())
                 GoogleServicesGeneratedResources = outputFiles.ToArray ();
-            
-            Log.LogMessage ("Finished ProcessGoogleServicesJson...");
+
+			Log.LogMessage("Writing stamp file...");
+
+			var stampText = string.Empty;
+			if (wroteXmlPath)
+				stampText += xmlPath + Environment.NewLine;
+			if (wroteValuesPath)
+				stampText += valuesPath + Environment.NewLine;
+			
+			File.WriteAllText(Path.Combine(IntermediateOutputPath ?? MonoAndroidResDirIntermediate, "ProcessGoogleServicesJson.stamp"), stampText.Trim());
+
+			Log.LogMessage ("Finished ProcessGoogleServicesJson...");
             return true;
         }
 
