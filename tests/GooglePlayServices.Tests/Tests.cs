@@ -10,31 +10,61 @@ namespace GooglePlayServices.Tests
 	public class Tests
 	{
 		[Fact]
-		public void GooglePlayServicesUtil_Exists ()
+		public void Common_GooglePlayServicesUtil_Exists()
 		{
 			var versionCode = Android.Gms.Common.GooglePlayServicesUtil.GooglePlayServicesVersionCode;
 
-			Console.WriteLine("Google Play Services Version: {0}", versionCode);
+			Console.WriteLine("Common.GooglePlayServicesUtil.GooglePlayServicesVersionCode: {0}", versionCode);
 
 			Assert.True(versionCode > 0);
 		}
 
 		[Fact]
-		public void GoogleApiAvailability_Exists()
+		public void Common_GoogleApiAvailability_Exists()
 		{
 			var versionCode = Android.Gms.Common.GoogleApiAvailability.GooglePlayServicesVersionCode;
 
-			Console.WriteLine("Google Play Services Version: {0}", versionCode);
+			Console.WriteLine("Common.GoogleApiAvailability.GooglePlayServicesVersionCode:: {0}", versionCode);
 
 			Assert.True(versionCode > 0);
 		}
 
 		[Fact]
-		public void GoogleAuthUtil_Exists()
+		public void Auth_GoogleAuthUtil_Exists()
 		{
-            var gauth = Android.Gms.Auth.GoogleAuthUtil;
+			var googleAccountType = Android.Gms.Auth.GoogleAuthUtil.GoogleAccountType;
 
-			Assert.True(guath != null);
+			Console.WriteLine("Auth.GoogleAuthUtil.GoogleAccountType: {0}", googleAccountType);
+
+			Assert.True(googleAccountType != null);
+		}
+
+		[Fact]
+		public void Location_Places_UI_PlacePicker_Exists()
+		{
+			var resErr = Android.Gms.Location.Places.UI.PlacePicker.ResultError;
+
+			Console.WriteLine("Location.Places.UI.PlacePicker.ResultError: {0}", resErr);
+
+			Assert.True(resErr == 2);
+		}
+
+		[Fact]
+		public void Location_Places_UI_PlaceAutocomplete_Exists()
+		{
+			var resErr = Android.Gms.Location.Places.UI.PlaceAutocomplete.ResultError;
+
+			Console.WriteLine("Location.Places.UI.PlaceAutocomplete.ResultError: {0}", resErr);
+
+			Assert.True(resErr == 2);
+		}
+
+		[Fact]
+		public void Cast_Framework_Media_Widget_ExpandedControllerActivity_Exists()
+		{
+			var a = Android.Gms.Cast.Framework.Media.Widget.ExpandedControllerActivity.ActivityService;
+
+			Assert.True(a != null);
 		}
 	}
 }

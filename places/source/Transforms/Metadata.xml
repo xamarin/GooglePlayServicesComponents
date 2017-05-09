@@ -28,9 +28,9 @@
 
 
 	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='zza']" name="obfuscated">false</attr>
-	<attr path="/api/package[@name='com.google.android.gms.location.places.ui ']/class[@name='zza']" name="obfuscated">false</attr>
-	<attr path="/api/package[@name='com.google.android.gms.location.places.ui ']/class[@name='PlacePicker']" name="extends">Java.Lang.Object</attr>
-	<attr path="/api/package[@name='com.google.android.gms.location.places.ui ']/class[@name='PlaceAutocomplete']" name="extends">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.places.ui']/class[@name='zza']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.places.ui']/class[@name='PlacePicker']" name="extends">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.places.ui']/class[@name='PlaceAutocomplete']" name="extends">Java.Lang.Object</attr>
 	
 	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='AutocompletePredictionBuffer']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
 	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='PlaceBuffer']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
