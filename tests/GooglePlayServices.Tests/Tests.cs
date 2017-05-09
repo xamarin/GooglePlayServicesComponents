@@ -4,7 +4,6 @@ using Android.App;
 using Android.OS;
 using Android.Support.V4.App;
 using Xunit;
-using Xunit.Extensions;
 
 namespace GooglePlayServices.Tests
 {
@@ -28,6 +27,14 @@ namespace GooglePlayServices.Tests
 			Console.WriteLine("Google Play Services Version: {0}", versionCode);
 
 			Assert.True(versionCode > 0);
+		}
+
+		[Fact]
+		public void GoogleAuthUtil_Exists()
+		{
+            var gauth = Android.Gms.Auth.GoogleAuthUtil;
+
+			Assert.True(guath != null);
 		}
 	}
 }
