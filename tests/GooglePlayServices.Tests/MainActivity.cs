@@ -4,7 +4,6 @@ using Android.OS;
 using System.Collections.Generic;
 using System.Reflection;
 using Xunit;
-using Xunit.Abstractions;
 using System;
 using Xunit.Runners;
 using System.Threading.Tasks;
