@@ -53,4 +53,10 @@
 
 <!--	<remove-node path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='AppIdentifierCreator']/implements[@name='android.os.Parcelable.Creator']" />-->
 <!--	<remove-node path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='AppMetadataCreator']/implements[@name='android.os.Parcelable.Creator']" />-->
+
+	<!-- We don't want to subclass this type, it will change the base type on a bunch of things from past versions -->
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends-generic-aware">java.lang.Object</attr>
+	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.ReflectedParcelable']" />
+
 </metadata>

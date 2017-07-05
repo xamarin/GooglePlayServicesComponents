@@ -64,7 +64,9 @@
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
-    <TransformFile Include="Transforms\Metadata.generated.xml" />
+    <TransformFile Include="..\..\Metadata.Common.xml">
+      <Link>Transforms\Metadata.Common.xml</Link>
+    </TransformFile>
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\play-services-nearby\classes.jar">
