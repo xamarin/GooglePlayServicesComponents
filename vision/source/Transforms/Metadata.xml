@@ -42,4 +42,8 @@
 	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode.Phone']" name="managedName">PhoneValue</attr>
 	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode.Sms']" name="managedName">SmsValue</attr>
 
+	<!-- We don't want to subclass this type -->
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends-generic-aware">java.lang.Object</attr>
+
 </metadata>

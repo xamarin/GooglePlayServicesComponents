@@ -244,4 +244,10 @@
 	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.multiplayer']/class[@name='ZInvitationCluster']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.request']/class[@name='GameRequestCluster']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.request']/class[@name='GameRequestClusterCreator']" />
+
+	<remove-node path="/api/package[@name='com.google.android.gms.games']/interface[@name='Game']/implements[@name='android.os.Parcelable']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer']/interface[@name='Participant']/implements[@name='android.os.Parcelable']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer']/interface[@name='Invitation']/implements[@name='android.os.Parcelable']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='Room']/implements[@name='android.os.Parcelable']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games']/interface[@name='Player']/implements[@name='android.os.Parcelable']" />
 </metadata>

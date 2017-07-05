@@ -30,10 +30,6 @@
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 
-	<!-- Fix up some possible covariant return type errors -->
-	<attr path="/api/package/class/method[@name='createFromParcel']" name="managedReturn">Java.Lang.Object</attr>
-	<attr path="/api/package/class/method[@name='newArray']" name="managedReturn">Java.Lang.Object[]</attr>
-
 	<!-- Fix params for some inherited parcelable types -->
 	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
 	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
@@ -59,10 +55,14 @@
 	
 	<!-- Remove some undesirable bits -->
 	<remove-node path="/api/package[@name='com.google.android.gms.common.internal']/class[@name!='DowngradeableSafeParcel']" />
+<!--	<remove-node path="/api/package[@name='com.google.android.gms.common.internal.safeparcel']/class[@name!='SafeParcel']" />-->
 	<remove-node path="/api/package[@name='com.google.android.gms.common.api']/class[@name='ResolvingResultCallbacks']/method[@name='onSuccess' and count(parameter)=1 and parameter[1][@type='R']]" />
 
 	<!-- TODO: Consider removing when Cycle 9 is released -->
 	<remove-node path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='zzf']/implements[@name='android.os.Parcelable.Creator']" />
 	<!-- End TODO -->
+
+	<!-- Keep some base class names the same -->
+	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zze']" name="managedName">Zzc</attr>
 
 </metadata>

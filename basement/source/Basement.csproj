@@ -72,6 +72,7 @@
     <Compile Include="Additions\ResultCallbackImpl.cs" />
     <Compile Include="Additions\IPendingResultExtensions.cs" />
     <Compile Include="Additions\DataBufferAdditions.cs" />
+    <Compile Include="Additions\Additions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
