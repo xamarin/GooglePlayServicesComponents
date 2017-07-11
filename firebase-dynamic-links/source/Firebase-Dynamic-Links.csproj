@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.props" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GooglePlayServices.Dynamic.Links</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>Xamarin.Firebase.Dynamic.Links</AssemblyName>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <AndroidClassParser>class-parse</AndroidClassParser>
+    <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
+    <!-- <SignAssembly>true</SignAssembly>
+    <DelaySign>true</DelaySign>
+    <AssemblyOriginatorKeyFile>..\..\..\key-data\Xamarin-public.snk</AssemblyOriginatorKeyFile> -->
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <AndroidTlsProvider></AndroidTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.Support.Compat">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Compat.25.1.0\lib\MonoAndroid70\Xamarin.Android.Support.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.UI">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Core.UI.25.1.0\lib\MonoAndroid70\Xamarin.Android.Support.Core.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.Utils">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Core.Utils.25.1.0\lib\MonoAndroid70\Xamarin.Android.Support.Core.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Media.Compat">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Media.Compat.25.1.0\lib\MonoAndroid70\Xamarin.Android.Support.Media.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Fragment">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Fragment.25.1.0\lib\MonoAndroid70\Xamarin.Android.Support.Fragment.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v4.25.1.0\lib\MonoAndroid70\Xamarin.Android.Support.v4.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TransformFile Include="Transforms\EnumFields.xml" />
+    <TransformFile Include="Transforms\EnumMethods.xml" />
+    <TransformFile Include="Transforms\Metadata.xml" />
+    <TransformFile Include="..\..\Metadata.Common.xml">
+      <Link>Transforms\Metadata.Common.xml</Link>
+    </TransformFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\basement\source\Basement.csproj">
+      <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
+      <Name>Basement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\base\source\Base.csproj">
+      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
+      <Name>Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\tasks\source\Tasks.csproj">
+      <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
+      <Name>Tasks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-common\source\Firebase-Common.csproj">
+      <Project>{865652D3-8D1A-4779-92FC-4C54719286B7}</Project>
+      <Name>Firebase-Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+  <Import Project="..\..\generated.targets" />
+  <ItemGroup>
+    <InputJar Include="..\..\externals\firebase-dynamic-links\classes.jar">
+      <Link>Jars\firebase-dynamic-links.jar</Link>
+    </InputJar>
+  </ItemGroup>
+  <Import Project="..\..\packages\Xamarin.Android.Support.Compat.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Compat.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Core.UI.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Core.UI.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Core.UI.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Core.UI.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Core.Utils.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Core.Utils.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Core.Utils.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Core.Utils.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Media.Compat.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Media.Compat.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Media.Compat.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Media.Compat.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Fragment.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Fragment.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Fragment.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Fragment.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.v4.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.v4.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.v4.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.v4.targets')" />
+  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.targets')" />
+</Project>

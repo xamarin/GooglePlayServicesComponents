@@ -9,11 +9,11 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{B797EA6B-9566-4980-9665-F808C953B24D}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>GooglePlayServices.Auth.Phone.Api</RootNamespace>
+    <RootNamespace>GooglePlayServices.Auth.Api.Phone</RootNamespace>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
-    <AssemblyName>Xamarin.GooglePlayServices.Auth.Phone.Api</AssemblyName>
+    <AssemblyName>Xamarin.GooglePlayServices.Auth.Api.Phone</AssemblyName>
     <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AndroidClassParser>class-parse</AndroidClassParser>
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
@@ -70,12 +70,20 @@
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\base\source\Base.csproj">
+      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
+      <Name>Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\tasks\source\Tasks.csproj">
+      <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
+      <Name>Tasks</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />
   <ItemGroup>
-    <InputJar Include="..\..\externals\play-services-auth-phone-api\classes.jar">
-      <Link>Jars\play-services-auth-phone-api.jar</Link>
+    <InputJar Include="..\..\externals\play-services-auth-api-phone\classes.jar">
+      <Link>Jars\play-services-auth-api-phone.jar</Link>
     </InputJar>
   </ItemGroup>
   <ItemGroup>

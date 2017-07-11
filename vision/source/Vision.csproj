@@ -84,6 +84,10 @@
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\vision-common\source\Vision-Common.csproj">
+      <Project>{148E13D5-9D81-4937-801D-A8DF043B2A4F}</Project>
+      <Name>Vision-Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.targets')" />
 </Project>

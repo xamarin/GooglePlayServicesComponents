@@ -1,30 +1,32 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>Xamarin.GooglePlayServices.Vision.Common</id>
-    <title>Xamarin Google Play Services - Vision Common</title>
+    <id>Xamarin.Firebase.Dynamic.Links</id>
+    <title>Xamarin Firebase - Dynamic Links</title>
     <version>$version$</version>
     <authors>Xamarin Inc.</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <summary>Xamarin.Android Bindings for Google Play Services - Vision Common $aar-version$</summary>
+    <summary>Xamarin.Android Bindings for Firebase - Dynamic Links $aar-version$</summary>
     <description>
-      Xamarin.Android Bindings for Google Play Services - Vision Common $aar-version$
+      Xamarin.Android Bindings for Firebase - Dynamic Links $aar-version$
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
     <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
-    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-vision-common_128x128.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/firebase-dynamic-links_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid70">
         <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
+        <dependency id="Xamarin.Firebase.Common" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Vision.Common.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.Firebase.Dynamic.Links.dll" target="lib/MonoAndroid70" />
 
-    <file src="vision-common/nuget/Xamarin.GooglePlayServices.Vision.Common.targets" target="build/MonoAndroid70" />
+    <file src="firebase-dynamic-links/nuget/Xamarin.Firebase.Dynamic.Links.targets" target="build/MonoAndroid70" />
   </files>
 </package>
