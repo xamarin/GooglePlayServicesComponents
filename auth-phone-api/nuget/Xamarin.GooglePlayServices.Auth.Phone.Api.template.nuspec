@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.Auth.Phone.Api</id>
+    <title>Xamarin Google Play Services - Auth Phone API</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - Auth Phone API $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - Auth Phone API $aar-version$
+    </description>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
+    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-auth-phone-api_128x128.png</iconUrl>
+    <dependencies>
+      <group targetFramework="MonoAndroid70">
+        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.GooglePlayServices.Auth.Phone.Api.dll" target="lib/MonoAndroid70" />
+
+    <file src="auth-phone-api/nuget/Xamarin.GooglePlayServices.Auth.Phone.Api.targets" target="build/MonoAndroid70" />
+  </files>
+</package>
