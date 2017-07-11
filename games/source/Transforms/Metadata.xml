@@ -250,4 +250,13 @@
 	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer']/interface[@name='Invitation']/implements[@name='android.os.Parcelable']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='Room']/implements[@name='android.os.Parcelable']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.games']/interface[@name='Player']/implements[@name='android.os.Parcelable']" />
+
+	<!-- We don't want to subclass this type, it will change the base type on a bunch of things from past versions -->
+	<add-node path="/api/package/*[@extends='com.google.android.gms.common.internal.GamesAbstractSafeParcelable']">
+		<implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+	</add-node>
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.GamesAbstractSafeParcelable']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.GamesAbstractSafeParcelable']" name="extends-generic-aware">java.lang.Object</attr>
+
+
 </metadata>

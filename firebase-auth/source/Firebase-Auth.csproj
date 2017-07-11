@@ -78,6 +78,7 @@
     <TransformFile Include="..\..\Metadata.Common.xml">
       <Link>Transforms\Metadata.Common.xml</Link>
     </TransformFile>
+    <TransformFile Include="Transforms\Metadata.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\basement\source\Basement.csproj">

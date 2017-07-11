@@ -397,6 +397,59 @@ namespace Android.Gms.Games.Video
     }
 }
 
+namespace Android.Gms.Games.Internal
+{
+	public partial class GamesAbstractSafeParcelable
+	{
+		static IntPtr id_describeContents;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.google.android.gms.games']/class[@name='GameEntity']/method[@name='describeContents' and count(parameter)=0]"
+		[Register ("describeContents", "()I", "")]
+		public int DescribeContents ()
+		{
+			if (id_describeContents == IntPtr.Zero)
+				id_describeContents = JNIEnv.GetMethodID (class_ref, "describeContents", "()I");
+			return JNIEnv.CallIntMethod  (Handle, id_describeContents);
+		}
+
+		static IntPtr id_writeToParcel_Landroid_os_Parcel_I;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.google.android.gms.games']/class[@name='GameEntity']/method[@name='writeToParcel' and count(parameter)=2 and parameter[1][@type='android.os.Parcel'] and parameter[2][@type='int']]"
+		[Register ("writeToParcel", "(Landroid/os/Parcel;I)V", "")]
+		public void WriteToParcel (global::Android.OS.Parcel p0, [global::Android.Runtime.GeneratedEnum] global::Android.OS.ParcelableWriteFlags p1)
+		{
+			if (id_writeToParcel_Landroid_os_Parcel_I == IntPtr.Zero)
+				id_writeToParcel_Landroid_os_Parcel_I = JNIEnv.GetMethodID (class_ref, "writeToParcel", "(Landroid/os/Parcel;I)V");
+			JNIEnv.CallVoidMethod  (Handle, id_writeToParcel_Landroid_os_Parcel_I, new JValue (p0), new JValue ((int) p1));
+		}
+	}
+}
+
+
+namespace Android.Gms.Games.Video
+{
+	public partial class VideoEntity
+	{
+		static IntPtr id_describeContents;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.google.android.gms.games']/class[@name='GameEntity']/method[@name='describeContents' and count(parameter)=0]"
+		[Register("describeContents", "()I", "")]
+		public int DescribeContents()
+		{
+			if (id_describeContents == IntPtr.Zero)
+				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
+			return JNIEnv.CallIntMethod(Handle, id_describeContents);
+		}
+
+		//static IntPtr id_writeToParcel_Landroid_os_Parcel_I;
+		//// Metadata.xml XPath method reference: path="/api/package[@name='com.google.android.gms.games']/class[@name='GameEntity']/method[@name='writeToParcel' and count(parameter)=2 and parameter[1][@type='android.os.Parcel'] and parameter[2][@type='int']]"
+		//[Register("writeToParcel", "(Landroid/os/Parcel;I)V", "")]
+		//public void WriteToParcel(global::Android.OS.Parcel p0, [global::Android.Runtime.GeneratedEnum] global::Android.OS.ParcelableWriteFlags p1)
+		//{
+		//	if (id_writeToParcel_Landroid_os_Parcel_I == IntPtr.Zero)
+		//		id_writeToParcel_Landroid_os_Parcel_I = JNIEnv.GetMethodID(class_ref, "writeToParcel", "(Landroid/os/Parcel;I)V");
+		//	JNIEnv.CallVoidMethod(Handle, id_writeToParcel_Landroid_os_Parcel_I, new JValue(p0), new JValue((int)p1));
+		//}
+	}
+}
+
 
 //namespace Android.Gms.Games
 //{

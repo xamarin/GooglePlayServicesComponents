@@ -16,9 +16,7 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
-<!--	<remove-node path="/api/package[@name='com.google.firebase.auth']/class[@name='FirebaseAuth']/implements[@name='com.google.android.gms.internal.zzbql']" />-->
-	<!--<implements
-        name="com.google.android.gms.internal.zzanb"
-        name-generic-aware="com.google.android.gms.internal.zzanb"
-        jni-type="Lcom/google/android/gms/internal/zzanb;" />-->
+	<!-- Remove the implementation of this nonsense obfuscated interface which has no useful methods in it anyway -->
+	<remove-node path="/api/package[@name='com.google.firebase.auth']/class[@name='FirebaseAuth']/implements[@name='com.google.android.gms.internal.zzbti']" />
+	
 </metadata>

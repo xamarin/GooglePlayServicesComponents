@@ -45,7 +45,6 @@
 	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzc']" name="obfuscated">false</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zze']" name="obfuscated">false</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzg']" name="obfuscated">false</attr>
-	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzg']" name="obfuscated">false</attr>
 	<attr path="/api/package[@name='com.google.firebase.iid']/class[@name='zzb']" name="obfuscated">false</attr>
 
 	<!-- Allowing zzc classes allows a bit too much, so remove these specifically -->
@@ -64,5 +63,6 @@
 
 	<!-- Keep some base class names the same -->
 	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zze']" name="managedName">Zzc</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzg']" name="managedName">Zze</attr>
 
 </metadata>

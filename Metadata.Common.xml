@@ -7,6 +7,11 @@
     <!-- We don't want to subclass this type, it will change the base type on a bunch of things from past versions -->
 	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends">java.lang.Object</attr>
 	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends-generic-aware">java.lang.Object</attr>
+	<add-node path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']">
+		<implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+	</add-node>
+
+	
 	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.ReflectedParcelable']" />
 	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.DowngradeableSafeParcel']" />
 </metadata>
