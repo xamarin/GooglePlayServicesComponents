@@ -7,6 +7,7 @@
 	<attr path="/api/package[@name='com.google.android.gms.nearby.internal.connection']" name="managedName">Android.Gms.Nearby.Internal.Connection</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.internal.connection.dev']" name="managedName">Android.Gms.Nearby.Internal.Connection.Dev</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.messages']" name="managedName">Android.Gms.Nearby.Messages</attr>
+	<attr path="/api/package[@name='com.google.android.gms.nearby.messages.audio']" name="managedName">Android.Gms.Nearby.Messages.Audio</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.messages.devices']" name="managedName">Android.Gms.Nearby.Messages.Devices</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.sharing']" name="managedName">Android.Gms.Nearby.Sharing</attr>
 
@@ -59,4 +60,6 @@
 	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends-generic-aware">java.lang.Object</attr>
 	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.ReflectedParcelable']" />
 
+	<attr path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='Payload']/method[@name='getType' and count(parameter)=0]" name="propertyName">PayloadType</attr>
+	<attr path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='PayloadTransferUpdate']/method[@name='getStatus' and count(parameter)=0]" name="propertyName">TransferStatus</attr>
 </metadata>

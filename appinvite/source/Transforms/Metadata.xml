@@ -1,6 +1,8 @@
 ﻿<metadata>
 	<!-- Fix Namespaces -->
 	<attr path="/api/package[@name='com.google.android.gms.appinvite']" name="managedName">Android.Gms.AppInvite</attr>
+	<attr path="/api/package[@name='com.google.android.gms.people.protomodel']" name="managedName">Android.Gms.People.ProtoModel</attr>
+	<attr path="/api/package[@name='com.google.android.gms.internal']" name="managedName">Android.Gms.Internal</attr>
 
 	<!-- Remove some internal namespaces -->
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />

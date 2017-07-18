@@ -74,6 +74,7 @@
     <Compile Include="Additions\DataBufferAdditions.cs" />
     <Compile Include="Additions\GoogleApiAvailability.cs" />
     <Compile Include="Additions\Extensions.cs" />
+    <Compile Include="Additions\Additions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />

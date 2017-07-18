@@ -75,10 +75,6 @@
     </InputJar>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\base\source\Base.csproj">
-      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
-      <Name>Base</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\drive\source\Drive.csproj">
       <Project>{8BAFA1ED-B5D9-49ED-A553-E557D2A0357F}</Project>
       <Name>Drive</Name>
@@ -90,6 +86,10 @@
     <ProjectReference Include="..\..\tasks\source\Tasks.csproj">
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\base\source\Base.csproj">
+      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
+      <Name>Base</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />

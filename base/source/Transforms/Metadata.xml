@@ -11,13 +11,13 @@
 	<attr path="/api/package[@name='com.google.android.gms.common.api']" name="managedName">Android.Gms.Common.Apis</attr>
 
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
-	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'Api.zzf' and @name != 'zzf' and @name != 'zzc' and @name != 'zzd' and @name != 'zze']" />
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'Api.zzf' and @name != 'zzf' and @name != 'zzc' and @name != 'zzd' and @name != 'zze' and @name != 'zzg']" />
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 
 	<!-- Allowing zzc classes allows a bit too much, so remove these specifically -->
-	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[contains(@name, 'zz') and @name != 'zzc' and @name != 'zzf']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[contains(@name, 'zz') and @name != 'zzc' and @name != 'zzf' and @name != 'zzg']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']/class[@name='zzf']" />
 
 	<!-- These CREATOR fields are of some zz* types, so let's remove them -->
@@ -38,4 +38,16 @@
 
 	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzc']" name="obfuscated">false</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzf']" name="obfuscated">false</attr>
+
+	<!-- This one for some reason is sitting between some *Buffer implementations and AbstractDataBuffer, so let's name it explicitly and make sure it stays around -->
+	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzg']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzg']" name="managedName">InternalAbstractDataBuffer</attr>
+	
+	<!-- Finalize is marked override, which C# does not like, so manually implement without override -->
+	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[@name='DataHolder']/method[@name='finalize' and count(parameter)=0]" />
+
+	<!-- Generator adds unnecessary override here -->
+	<remove-node path="/api/package[@name='com.google.android.gms.common']/class[@name='SignInButton']/method[@name='setEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+	
+	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzf']" />
 </metadata>

@@ -47,21 +47,21 @@ namespace Android.Gms.Games.Achievement
     }
 }
 
-namespace Android.Gms.Games.AppContent
-{
-    public partial class AppContentSectionBuffer : IEnumerable<IAppContentSection>
-    {
-        public IEnumerator<IAppContentSection> GetEnumerator()
-        {
-            return this.ToEnumerable<IAppContentSection> ().GetEnumerator();
-        }
+//namespace Android.Gms.Games.AppContent
+//{
+//    public partial class AppContentSectionBuffer : IEnumerable<IAppContentSection>
+//    {
+//        public IEnumerator<IAppContentSection> GetEnumerator()
+//        {
+//            return this.ToEnumerable<IAppContentSection> ().GetEnumerator();
+//        }
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-    }
-}
+//        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+//        {
+//            return this.GetEnumerator();
+//        }
+//    }
+//}
 
 namespace Android.Gms.Games.Event
 {
@@ -137,22 +137,6 @@ namespace Android.Gms.Games.MultiPlayer
     }
 }
 
-namespace Android.Gms.Games.MultiPlayer.RealTime
-{
-    public partial class RoomBuffer : IEnumerable<IRoom>
-    {
-        public IEnumerator<IRoom> GetEnumerator()
-        {
-            return this.ToEnumerable<IRoom> ().GetEnumerator();
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-    }
-}
-
 namespace Android.Gms.Games.MultiPlayer.TurnBased
 {
     public partial class TurnBasedMatchBuffer : IEnumerable<ITurnBasedMatch>
@@ -171,18 +155,18 @@ namespace Android.Gms.Games.MultiPlayer.TurnBased
 
 namespace Android.Gms.Games.Request
 {
-    public partial class GameRequestSummaryBuffer : IEnumerable<IGameRequestSummary>
-    {
-        public IEnumerator<IGameRequestSummary> GetEnumerator()
-        {
-            return this.ToEnumerable<IGameRequestSummary> ().GetEnumerator();
-        }
+    //public partial class GameRequestSummaryBuffer : IEnumerable<IGameRequestSummary>
+    //{
+    //    public IEnumerator<IGameRequestSummary> GetEnumerator()
+    //    {
+    //        return this.ToEnumerable<IGameRequestSummary> ().GetEnumerator();
+    //    }
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-    }
+    //    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+    //    {
+    //        return this.GetEnumerator();
+    //    }
+    //}
 
     public partial class GameRequestBuffer : IEnumerable<IGameRequest>
     {
@@ -259,18 +243,18 @@ namespace Android.Gms.Games.Quest
     }
 }
 
-namespace Android.Gms.Games.Video
-{
-    public partial class VideoBuffer : IEnumerable<IVideo>
-    {
-        public IEnumerator<IVideo> GetEnumerator()
-        {
-            return this.ToEnumerable<IVideo> ().GetEnumerator();
-        }
+//namespace Android.Gms.Games.Video
+//{
+//    public partial class VideoBuffer : IEnumerable<IVideo>
+//    {
+//        public IEnumerator<IVideo> GetEnumerator()
+//        {
+//            return this.ToEnumerable<IVideo> ().GetEnumerator();
+//        }
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-    }
-}
+//        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+//        {
+//            return this.GetEnumerator();
+//        }
+//    }
+//}
