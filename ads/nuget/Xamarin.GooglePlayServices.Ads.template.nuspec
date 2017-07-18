@@ -24,6 +24,7 @@
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Clearcut" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Gass" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.SafetyNet" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>

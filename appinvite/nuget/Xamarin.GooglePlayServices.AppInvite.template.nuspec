@@ -22,6 +22,7 @@
         <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
+        <dependency id="Xamarin.Firebase.Dynamic.Links" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>

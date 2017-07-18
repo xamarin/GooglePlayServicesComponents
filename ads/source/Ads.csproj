@@ -88,6 +88,10 @@
       <Project>{D705BF83-81FD-4CD9-AF3B-09C50FF42C83}</Project>
       <Name>Gass</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\safetynet\source\SafetyNet.csproj">
+      <Project>{7A015585-036A-4BD1-8D46-A669EFA89743}</Project>
+      <Name>SafetyNet</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Additions\" />
