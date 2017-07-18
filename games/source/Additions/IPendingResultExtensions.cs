@@ -24,14 +24,17 @@ namespace Android.Gms.Games
 
     public static partial class IPlayersExtensions
     {
+        [Obsolete]
         public static async Task<IPlayersLoadPlayersResult> LoadConnectedPlayersAsync (this IPlayers api, GoogleApiClient apiClient, bool forceReload)
         {
             return (await api.LoadConnectedPlayers (apiClient, forceReload)).JavaCast<IPlayersLoadPlayersResult> ();
         }
+        [Obsolete]
         public static async Task<IPlayersLoadPlayersResult> LoadInvitablePlayersAsync (this IPlayers api, GoogleApiClient apiClient, int pageSize, bool forceReload)
         {
             return (await api.LoadInvitablePlayers (apiClient, pageSize, forceReload)).JavaCast<IPlayersLoadPlayersResult> ();
         }
+        [Obsolete]
         public static async Task<IPlayersLoadPlayersResult> LoadMoreInvitablePlayersAsync (this IPlayers api, GoogleApiClient apiClient, int pageSize)
         {
             return (await api.LoadMoreInvitablePlayers (apiClient, pageSize)).JavaCast<IPlayersLoadPlayersResult> ();
@@ -144,10 +147,12 @@ namespace Android.Gms.Games.MultiPlayer
 {
     public static partial class IInvitationsExtensions
     {
+        [Obsolete]
         public static async Task<IInvitationsLoadInvitationsResult> LoadInvitationsAsync (this IInvitations api, GoogleApiClient apiClient)
         {
             return (await api.LoadInvitations (apiClient)).JavaCast<IInvitationsLoadInvitationsResult> ();
         }
+        [Obsolete]
         public static async Task<IInvitationsLoadInvitationsResult> LoadInvitationsAsync (this IInvitations api, GoogleApiClient apiClient, int sortOrder)
         {
             return (await api.LoadInvitations (apiClient, sortOrder)).JavaCast<IInvitationsLoadInvitationsResult> ();
