@@ -76,15 +76,25 @@ namespace Firebase.Auth
             return Delete ().AsAsync ();
         }
 
-        public System.Threading.Tasks.Task<GetTokenResult> GetTokenAsync (bool flag)
+        public System.Threading.Tasks.Task<GetTokenResult> GetTokenAsync (bool forceRefresh)
         {
-            return GetToken (flag).AsAsync<GetTokenResult> ();
+            return GetToken (forceRefresh).AsAsync<GetTokenResult> ();
         }
+
+		public System.Threading.Tasks.Task<GetTokenResult> GetIdTokenAsync(bool forceRefresh)
+		{
+			return GetIdToken(forceRefresh).AsAsync<GetTokenResult>();
+		}
 
         public System.Threading.Tasks.Task ReauthenticateAsync (AuthCredential credential)
         {
             return Reauthenticate (credential).AsAsync ();
         }
+
+		public System.Threading.Tasks.Task<IAuthResult> ReauthenticateAndRetrieveDataAsync(AuthCredential credential)
+		{
+			return ReauthenticateAndRetrieveData(credential).AsAsync<IAuthResult>();
+		}
 
         public System.Threading.Tasks.Task ReloadAsync ()
         {
@@ -100,6 +110,11 @@ namespace Firebase.Auth
         {
             return UpdateEmail (email).AsAsync ();
         }
+
+		public System.Threading.Tasks.Task UpdatePhoneNumberAsync(PhoneAuthCredential phoneAuthCredential)
+		{
+			return UpdatePhoneNumber(phoneAuthCredential).AsAsync();
+		}
 
         public System.Threading.Tasks.Task UpdatePasswordAsync (string password)
         {

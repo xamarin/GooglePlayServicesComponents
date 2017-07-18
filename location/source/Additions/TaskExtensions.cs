@@ -1,10 +1,80 @@
 ﻿using System;
-namespace GooglePlayServices.Location
+using System.Threading.Tasks;
+using Android.Gms.Extensions;
+
+namespace Android.Gms.Location
 {
-	public class TaskExtensions
+	public partial class FusedLocationProviderClient
 	{
-		public TaskExtensions()
+		public Task<Android.Locations.Location> GetLastLocationAsync ()
 		{
+			return LastLocation.AsAsync<Android.Locations.Location>();
+		}
+
+		public Task<Android.Gms.Location.LocationAvailability> GetLocationAvailabilityAsync()
+		{
+			return LocationAvailability.AsAsync<Android.Gms.Location.LocationAvailability>();
+		}
+
+		public Task FlushLocationsAsync ()
+		{
+			return FlushLocations().AsAsync();
+		}
+
+		public Task RemoveLocationUpdatesAsync (LocationCallback callback)
+		{
+			return RemoveLocationUpdates(callback).AsAsync();
+		}
+
+		public Task RemoveLocationUpdatesAsync(Android.App.PendingIntent pendingIntent)
+		{
+			return RemoveLocationUpdates(pendingIntent).AsAsync();
+		}
+
+		public Task RequestLocationUpdatesAsync (LocationRequest locationRequest, LocationCallback callback, Android.OS.Looper looper = null)
+		{
+			return RequestLocationUpdates(locationRequest, callback, looper).AsAsync(); ;
+		}
+
+		public Task RequestLocationUpdatesAsync(LocationRequest locationRequest, Android.App.PendingIntent pendingIntent)
+		{
+			return RequestLocationUpdates(locationRequest, pendingIntent).AsAsync(); ;
+		}
+
+		public Task SetMockLocationAsync (Android.Locations.Location location)
+		{
+			return SetMockLocation(location).AsAsync();
+		}
+
+		public Task SetMockModeAsync(bool mock)
+		{
+			return SetMockMode(mock).AsAsync();
+		}
+	}
+
+	public partial class GeofencingClient
+	{
+		public Task AddGeofencesAsync (GeofencingRequest geofenceRequest, Android.App.PendingIntent pendingIntent)
+		{
+			return AddGeofences(geofenceRequest, pendingIntent).AsAsync();
+		}
+
+		public Task RemoveGeofencesAsync(Android.App.PendingIntent pendingIntent)
+		{
+			return RemoveGeofences(pendingIntent).AsAsync();
+		}
+
+		public Task RemoveGeofencesAsync(System.Collections.Generic.IList<string> geofenceRequestIds)
+		{
+			return RemoveGeofences(geofenceRequestIds).AsAsync();
+		}
+	}
+
+	public partial class SettingsClient
+	{
+		public Task<LocationSettingsResponse> CheckLocationSettingsAsync (LocationSettingsRequest locationSettings)
+		{
+			return CheckLocationSettings(locationSettings).AsAsync<LocationSettingsResponse>();
 		}
 	}
 }
