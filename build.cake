@@ -6,7 +6,7 @@
 #addin nuget:?package=Cake.Json
 #addin nuget:?package=Cake.XCode
 #addin nuget:?package=Cake.Xamarin
-#addin nuget:?package=Cake.Xamarin.Build&version=1.1.13
+#addin nuget:?package=Cake.Xamarin.Build&version=2.0.18
 #addin nuget:?package=Cake.FileHelpers
 #addin nuget:?package=Cake.MonoApiTools
 
@@ -168,7 +168,7 @@ var buildSpec = new BuildSpec {
 			SolutionPath = "./GooglePlayServices.sln",
 			BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac,
 			MaxCpuCount = CPU_COUNT,
-			AlwaysUseMSBuild = ALWAYS_MSBUILD,
+			//AlwaysUseMSBuild = ALWAYS_MSBUILD,
 			OutputFiles = new [] {
 				new OutputFileCopy { FromFile = "./base/source/bin/Release/Xamarin.GooglePlayServices.Base.dll" },
 				new OutputFileCopy { FromFile = "./basement/source/bin/Release/Xamarin.GooglePlayServices.Basement.dll" },
@@ -356,6 +356,8 @@ if (!string.IsNullOrEmpty (NUGET_SOURCES)) {
 	foreach (var nsrc in buildSpec.NuGetSources)
 		Information ("  {0}", nsrc.Url);
 }
+
+Task ("sysinfo");
 
 Task ("externals")
 	.WithCriteria (() => !FileExists ("./externals/play-services-base.aar")).Does (() =>
@@ -731,7 +733,7 @@ Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (()
 		});
 	}
 
-	DotNetBuild ("./GooglePlayServices.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
+	MSBuild ("./GooglePlayServices.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
 
 	CopyFile ("./appindexing/source/bin/" + BUILD_CONFIG + "/Xamarin.GooglePlayServices.AppIndexing.dll", "./output/Xamarin.GooglePlayServices.AppIndexing.dll");
 });
@@ -740,7 +742,7 @@ Task ("buildtasks").Does (() =>
 {
 	NuGetRestore ("./basement/buildtasks/Basement-BuildTasks.csproj");
 
-	DotNetBuild ("./basement/buildtasks/Basement-BuildTasks.csproj", c => c.Configuration = "Release");
+	MSBuild ("./basement/buildtasks/Basement-BuildTasks.csproj", c => c.Configuration = "Release");
 
 	CopyFile ("./basement/buildtasks/bin/Release/Xamarin.GooglePlayServices.Basement.targets", "./basement/nuget/merge.targets");
 });
