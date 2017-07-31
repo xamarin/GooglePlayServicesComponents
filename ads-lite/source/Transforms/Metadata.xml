@@ -68,6 +68,8 @@
   	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onAdLoaded']" name="argsType">MediationBannerAdLoadedEventArgs</attr>
   	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onAdOpened']" name="argsType">MediationBannerAdOpenedEventArgs</attr>
 
+	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='zza']" name="obfuscated">false</attr>
+
   	<!-- Fix parameter names to be consistent with previous releases -->
   	<attr path="/api/package[@name='com.google.android.gms.ads.formats']/class[@name='NativeAdView']/method[@name='setNativeAd' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.ads.formats.NativeAd']]/parameter[1]" name="managedName">ad</attr>
 	<attr path="/api/package[@name='com.google.android.gms.ads.formats']/interface[@name='NativeAppInstallAd.OnAppInstallAdLoadedListener']/method[@name='onAppInstallAdLoaded' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.ads.formats.NativeAppInstallAd']]/parameter[1]" name="managedName">ad</attr>
@@ -97,4 +99,29 @@
 
 <!--	<attr path="/api/package[@name='com.google.ads.doubleclick']/interface[@name='OnCustomRenderedAdLoadedListener']/method[@name='onCustomRenderedAdLoaded']/parameter[1]" name="managedName">ad</attr>-->
 
+
+
+	<add-node path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationBannerListener']">
+		<method abstract="true" deprecated="not deprecated" final="false" name="zza" native="false" return="void" static="false" synchronized="false" visibility="public">
+			<parameter name="adapter" type="com.google.android.gms.ads.mediation.MediationBannerAdapter"></parameter>
+			<parameter name="str1" type="java.lang.String"></parameter>
+			<parameter name="str2" type="java.lang.String"></parameter>
+		</method>
+	</add-node>
+
+	<add-node path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']">
+		<method abstract="true" deprecated="not deprecated" final="false" name="zza" native="false" return="void" static="false" synchronized="false" visibility="public">
+			<parameter name="adapter" type="com.google.android.gms.ads.mediation.MediationNativeAdapter"></parameter>
+			<parameter name="customTemplateAd" type="com.android.gms.ads.formats.NativeCustomTemplateAd"></parameter>
+			<parameter name="str" type="java.lang.String"></parameter>
+		</method>
+	</add-node>
+
+	<add-node path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']">
+		<method abstract="true" deprecated="not deprecated" final="false" name="zza" native="false" return="void" static="false" synchronized="false" visibility="public">
+			<parameter name="adapter" type="com.google.android.gms.ads.mediation.MediationNativeAdapter"></parameter>
+			<parameter name="customTemplateAd" type="com.android.gms.ads.formats.NativeCustomTemplateAd"></parameter>
+		</method>
+	</add-node>
+  
 </metadata>

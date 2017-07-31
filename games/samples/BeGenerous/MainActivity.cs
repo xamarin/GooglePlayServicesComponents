@@ -161,7 +161,7 @@ namespace BeGenerous
 
             var giftCount = 0;
             for (int i = 0; i < buf.Count; i++) {
-                var gr = buf.Get (i).JavaCast<GameRequestRef> ();
+                var gr = buf.Get (i).JavaCast<GameRequestEntity> ();
 
                 var currentTimeMillis = DateTime.UtcNow - new DateTime (1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
                 if (gr.ExpirationTimestamp > (long)currentTimeMillis.TotalMilliseconds)
