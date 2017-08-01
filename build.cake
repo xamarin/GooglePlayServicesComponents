@@ -12,8 +12,8 @@
 
 // To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip\
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
-var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_v11.2_rc08.zip";
-var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_gms_v11_2_rc08_wear_2_0_3_rc1.zip";
+var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_v11_3_rc05.zip";
+var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_gms_v11_3_rc05_wear_2_0_4.zip"; //57
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/42.1021.0/api-info.xml";
@@ -24,10 +24,10 @@ var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents
 var COMMON_NUGET_VERSION = "";
 var WEAR_COMMON_NUGET_VERSION = "";
 
-var PLAY_COMPONENT_VERSION = "55.1102.0.0";
-var PLAY_NUGET_VERSION = "55.1102.0" + COMMON_NUGET_VERSION;
-var PLAY_AAR_VERSION = "11.0.2";
-var VERSION_DESC = "11.0.2";
+var PLAY_COMPONENT_VERSION = "55.1104.0.0";
+var PLAY_NUGET_VERSION = "57.1104.0" + COMMON_NUGET_VERSION;
+var PLAY_AAR_VERSION = "11.0.4";
+var VERSION_DESC = "11.0.4";
 
 var WEAR_COMPONENT_VERSION = "2.0.3.0";
 var WEAR_NUGET_VERSION = "2.0.3" + WEAR_COMMON_NUGET_VERSION;
