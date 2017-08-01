@@ -86,7 +86,7 @@ namespace MapsSample
         protected override void OnSaveInstanceState (Bundle outState) 
         {
             base.OnSaveInstanceState(outState);
-            outState.PutParcelable (MARKER_POSITION_KEY, mMarker.Position);
+            outState.PutParcelable (MARKER_POSITION_KEY, mMarker.Position.JavaCast<IParcelable>());
         }
     }
 }
