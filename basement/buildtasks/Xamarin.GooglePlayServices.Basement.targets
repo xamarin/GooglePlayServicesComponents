@@ -28,10 +28,10 @@
        $(ProcessGoogleServicesJsonDependsOn);
     </ProcessGoogleServicesJsonDependsOn>
     <ProcessGoogleServicesJsonBeforeTargets>
-      _UpdateAndroidResgen;$(ProcessGoogleServicesJsonBeforeTargets);
+      $(ProcessGoogleServicesJsonBeforeTargets);
     </ProcessGoogleServicesJsonBeforeTargets>
     <ProcessGoogleServicesJsonAfterTargets>
-      $(ProcessGoogleServicesJsonAfterTargets);
+      _GenerateAndroidResourceDir;$(ProcessGoogleServicesJsonAfterTargets);
     </ProcessGoogleServicesJsonAfterTargets>
   </PropertyGroup>
 
@@ -44,10 +44,10 @@
   <!-- the build tasks -->
   <Target
     Name="ProcessGoogleServicesJson" 
-    Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True' AND '$(DesignTimeBuild)' != 'True'"
+    Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True'"
     BeforeTargets="$(ProcessGoogleServicesJsonBeforeTargets)"
     AfterTargets="$(ProcessGoogleServicesJsonAfterTargets)"
-    Inputs="@(GoogleServicesJson)"
+    Inputs="@(GoogleServicesJson);@(AndroidResource);$(MSBuildProjectFullPath);$(MSBuildAllProjects);"
     Outputs="$(IntermediateOutputPath)\ProcessGoogleServicesJson.stamp">
 
     <ProcessGoogleServicesJson
