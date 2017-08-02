@@ -229,7 +229,7 @@ namespace AndroidPayQuickstart
                     } else if (data.HasExtra(WalletConstants.ExtraMaskedWallet)) {
                         // re-launch the activity with new masked wallet information
                         mMaskedWallet = data.GetParcelableExtra (WalletConstants.ExtraMaskedWallet).JavaCast<MaskedWallet> ();
-                        mActivityLaunchIntent.PutExtra (Constants.EXTRA_MASKED_WALLET, mMaskedWallet);
+                        mActivityLaunchIntent.PutExtra (Constants.EXTRA_MASKED_WALLET, mMaskedWallet.JavaCast<IParcelable>());
 
                         StartActivity(mActivityLaunchIntent);
                     }
@@ -351,7 +351,7 @@ namespace AndroidPayQuickstart
 
             Intent intent = new Intent(Activity, typeof (OrderCompleteActivity));
             intent.SetFlags (ActivityFlags.ClearTask | ActivityFlags.NewTask);
-            intent.PutExtra (Constants.EXTRA_FULL_WALLET, fullWallet);
+            intent.PutExtra (Constants.EXTRA_FULL_WALLET, fullWallet.JavaCast<IParcelable>());
 
             StartActivity(intent);
         }
