@@ -16,7 +16,8 @@ namespace VisionSample
         int mPreviewHeight;
         float mHeightScaleFactor = 1.0f;
         CameraFacing mFacing = CameraFacing.Back;
-        List<Graphic> mGraphics = new List<Graphic>();
+        HashSet<Graphic> mGraphics = new HashSet<Graphic>();
+
 
         /**
      * Base class for a custom graphics object to be rendered within the graphic overlay.  Subclass
