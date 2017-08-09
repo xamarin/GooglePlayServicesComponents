@@ -13,4 +13,6 @@
 
 	<attr path="/api/package[@name='com.google.firebase.iid']/class[@name='zzb']" name="obfuscated">false</attr>
 
+	<remove-node path="/api/package[@name='com.google.firebase.iid']/class[@name='zzb']/method[contains(@name, 'zz')]" />
+	
 </metadata>

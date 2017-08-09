@@ -51,6 +51,9 @@
 	<remove-node path="/api/package[@name='com.google.android.gms.nearby.sharing']/class[@name='SharedContent']/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/package[@name='com.google.android.gms.nearby.sharing']/class[@name='ViewableItem']/method[contains(@name, 'zz')]" />
 
+	<remove-node path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='Payload.File']/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='Payload.Stream']/method[contains(@name, 'zz')]" />
+
 
 <!--	<remove-node path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='AppIdentifierCreator']/implements[@name='android.os.Parcelable.Creator']" />-->
 <!--	<remove-node path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='AppMetadataCreator']/implements[@name='android.os.Parcelable.Creator']" />-->
@@ -62,4 +65,6 @@
 
 	<attr path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='Payload']/method[@name='getType' and count(parameter)=0]" name="propertyName">PayloadType</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='PayloadTransferUpdate']/method[@name='getStatus' and count(parameter)=0]" name="propertyName">TransferStatus</attr>
+
+
 </metadata>

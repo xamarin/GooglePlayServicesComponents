@@ -201,13 +201,6 @@
 
 
 
-<!--	f<remove-node path="/api/package[@name='com.google.android.gms.games']/class[@name='GameEntity']" />-->
-<!--	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@neame='InvitationEntity']" />-->
-<!--	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='ParticipantEntity']" />-->
-<!--	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/class[@name='RoomEntity']" />-->
-<!--	<remove-node path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerEntity']" />-->
-
-
 	<remove-node path="/api/package[@name='com.google.android.gms.games']/interface[@name='OnNearbyPlayerDetectedListener']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.games.social']/interface[@name='OnSocialInviteUpdateReceivedListener']" />
 
@@ -258,15 +251,11 @@
 	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.GamesAbstractSafeParcelable']" name="extends">java.lang.Object</attr>
 	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.GamesAbstractSafeParcelable']" name="extends-generic-aware">java.lang.Object</attr>
 
+	
 	<attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zzc']" name="obfuscated">false</attr>
+<!--	<attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zzc']" name="managedName">InternalGamesParcelable</attr>-->
 
-
-	<!--<add-node path="/api/package[@name='com.google.android.gms.quest']">
-		<class abstract="false" deprecated="not deprecated" extends="com.google.android.gms.common.data.AbstractDataBuffer" extends-generic-aware="com.google.android.gms.common.data.AbstractDataBuffer&lt;com.google.android.gms.games.quest.Quest&gt;" final="true" name="QuestBuffer" static="false" visibility="public">
-			<method abstract="false" deprecated="not deprecated" final="true" name="get" native="false" return="com.google.android.gms.games.quest.Quest" static="false" synchronized="false" visibility="public">
-				<parameter name="position" type="int">
-				</parameter>
-			</method>
-		</class>
-	</add-node>-->
+<!--	<attr path="/api/package/*[@extends='com.google.android.gms.games.internal.zzc']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.games.internal.zzc']" name="extends-generic-aware">java.lang.Object</attr>
+-->
 </metadata>
