@@ -7,6 +7,7 @@
 #addin nuget:?package=Cake.XCode
 #addin nuget:?package=Cake.Xamarin
 #addin nuget:?package=Cake.Xamarin.Build&version=2.0.18
+#addin nuget:?package=Cake.Xamarin.Binding.Util&version=1.0.2
 #addin nuget:?package=Cake.FileHelpers
 #addin nuget:?package=Cake.MonoApiTools
 
@@ -432,6 +433,23 @@ Task ("diff")
 	MonoApiHtml ("./output/GooglePlayServices.api-info.previous.xml",
 		"./output/GooglePlayServices.api-info.xml",
 		"./output/GooglePlayServices.api-diff.html");
+
+	// Find obfuscated types/members and log them to a file
+	var obfuscations = FindObfuscations ("./output/GooglePlayServices.Merged.dll", false, false, false, null);
+
+	var obfLog = "Obfuscated Types:" + System.Environment.NewLine;
+	foreach (var t in obfuscations.Types)
+		obfLog += t.NetType.FullName + " -> " + t.JavaType + System.Environment.NewLine;
+	obfLog += System.Environment.NewLine + "Obfuscated Members:" + System.Environment.NewLine;
+	foreach (var t in obfuscations.Members)
+		obfLog += t.NetMember.FullName + " -> " + t.JavaMember + System.Environment.NewLine;
+	FileWriteText ("./output/obfuscations.txt", obfLog);
+
+	var missingMetadata = FindMissingMetadata ("./output/GooglePlayServices.Merged.dll");
+	var metaLog = string.Empty;
+	foreach (var t in missingMetadata)
+		metaLog += t.NetMember.FullName + System.Environment.NewLine;
+	FileWriteText ("./output/missing-metadata.txt", metaLog);
 });
 
 Task ("merge").IsDependentOn ("libs").Does (() =>
