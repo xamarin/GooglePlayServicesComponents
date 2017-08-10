@@ -65,9 +65,8 @@
 	<!-- End TODO -->
 
 	<!-- Keep some base class names the same -->
+	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzc']" name="managedName">Zzcold</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zze']" name="managedName">Zzc</attr>
-	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzg']" name="managedName">Zzgold</attr>
-
-	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzo']" name="managedName">Zzg</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzo']" name="managedName">Zze</attr>
 
 </metadata>

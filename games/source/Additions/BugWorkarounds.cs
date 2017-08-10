@@ -37,6 +37,17 @@ namespace Android.Gms.Games.Achievement
 			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
 		}
 	}
+
+	public partial class AchievementEntity
+	{
+		IntPtr id_describeContents;
+		public unsafe global::System.Int32 DescribeContents()
+		{
+			if (id_describeContents == IntPtr.Zero)
+				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
+			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
+		}
+	}
 }
 
 
@@ -58,6 +69,17 @@ namespace Android.Gms.Games.Event
 		public Java.Lang.Object Freeze()
 		{
 			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
+		}
+	}
+
+	public partial class EventEntity
+	{
+		IntPtr id_describeContents;
+		public unsafe global::System.Int32 DescribeContents()
+		{
+			if (id_describeContents == IntPtr.Zero)
+				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
+			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
 		}
 	}
 }
@@ -124,6 +146,20 @@ namespace Android.Gms.Games.MultiPlayer
 		public Java.Lang.Object Freeze()
 		{
 			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
+		}
+	}
+}
+
+namespace Android.Gms.Games.MultiPlayer.TurnBased
+{
+	public partial class TurnBasedMatchEntity
+	{
+		IntPtr id_describeContents;
+		public unsafe global::System.Int32 DescribeContents()
+		{
+			if (id_describeContents == IntPtr.Zero)
+				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
+			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
 		}
 	}
 }
@@ -350,6 +386,28 @@ namespace Android.Gms.Games.Quest
 			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
 		}
 	}
+
+	public partial class QuestEntity
+	{
+		IntPtr id_describeContents;
+		public unsafe global::System.Int32 DescribeContents()
+		{
+			if (id_describeContents == IntPtr.Zero)
+				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
+			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
+		}
+	}
+
+	public partial class MilestoneEntity
+	{
+		IntPtr id_describeContents;
+		public unsafe global::System.Int32 DescribeContents()
+		{
+			if (id_describeContents == IntPtr.Zero)
+				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
+			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
+		}
+	}
 }
 
 
@@ -371,6 +429,28 @@ namespace Android.Gms.Games.Snapshot
 		public Java.Lang.Object Freeze()
 		{
 			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
+		}
+	}
+
+	public partial class SnapshotMetadataEntity
+	{
+		IntPtr id_describeContents;
+		public unsafe global::System.Int32 DescribeContents()
+		{
+			if (id_describeContents == IntPtr.Zero)
+				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
+			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
+		}
+	}
+
+	public partial class SnapshotEntity
+	{
+		IntPtr id_describeContents;
+		public unsafe global::System.Int32 DescribeContents()
+		{
+			if (id_describeContents == IntPtr.Zero)
+				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
+			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
 		}
 	}
 }
@@ -407,27 +487,38 @@ namespace Android.Gms.Games.Stats
     //}
 }
 
-//namespace Android.Gms.Games.Request
-//{
-//    public sealed partial class GameRequestSummaryBuffer
-//    {
-//        IntPtr id_get;
+namespace Android.Gms.Games.Request
+{
+	//    public sealed partial class GameRequestSummaryBuffer
+	//    {
+	//        IntPtr id_get;
 
-//        internal static IntPtr this_java_class_handle;
-//        internal static IntPtr this_class_ref {
-//            get {
-//                return JNIEnv.FindClass ("com/google/android/gms/games/request/GameRequestSummaryBuffer", ref this_java_class_handle);
-//            }
-//        }
+	//        internal static IntPtr this_java_class_handle;
+	//        internal static IntPtr this_class_ref {
+	//            get {
+	//                return JNIEnv.FindClass ("com/google/android/gms/games/request/GameRequestSummaryBuffer", ref this_java_class_handle);
+	//            }
+	//        }
 
-//        public override Java.Lang.Object Get (int position)
-//        {
-//            if (id_get == IntPtr.Zero)
-//                id_get = JNIEnv.GetMethodID (this_class_ref, "get", "(I)Ljava/lang/Object;");
-//            return (Java.Lang.Object) global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallObjectMethod  (Handle, id_get, new JValue (position)), JniHandleOwnership.TransferLocalRef);
-//        }
-//    }
-//}
+	//        public override Java.Lang.Object Get (int position)
+	//        {
+	//            if (id_get == IntPtr.Zero)
+	//                id_get = JNIEnv.GetMethodID (this_class_ref, "get", "(I)Ljava/lang/Object;");
+	//            return (Java.Lang.Object) global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallObjectMethod  (Handle, id_get, new JValue (position)), JniHandleOwnership.TransferLocalRef);
+	//        }
+	//    }
+
+	public partial class GameRequestEntity
+	{
+		IntPtr id_describeContents;
+		public unsafe global::System.Int32 DescribeContents()
+		{
+			if (id_describeContents == IntPtr.Zero)
+				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
+			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
+		}
+	}
+}
 
 namespace Android.Gms.Games.Stats
 {
