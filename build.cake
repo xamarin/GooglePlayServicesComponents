@@ -22,8 +22,8 @@ var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents
 // The common suffix for nuget version
 // Sometimes might be "-beta1" for a prerelease, or ".1" if we have a point release for the same actual aar's
 // will be blank for a stable release that has no point release fixes
-var COMMON_NUGET_VERSION = "";
-var WEAR_COMMON_NUGET_VERSION = "";
+var COMMON_NUGET_VERSION = "-beta1";
+var WEAR_COMMON_NUGET_VERSION = "-beta1";
 
 var PLAY_COMPONENT_VERSION = "55.1104.0.0";
 var PLAY_NUGET_VERSION = "57.1104.0" + COMMON_NUGET_VERSION;
