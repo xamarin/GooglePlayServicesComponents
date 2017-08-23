@@ -77,4 +77,6 @@
 	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends-generic-aware">java.lang.Object</attr>
 	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.ReflectedParcelable']" />
 
+	<!-- We are renaming this class so we can create our own subclass which will be used instead of this class and adds some extra functionality -->
+	<attr path="/api/package[@name='com.google.android.gms.location']/class[@name='LocationCallback']" name="managedName">LocationCallbackBase</attr>
 </metadata>
