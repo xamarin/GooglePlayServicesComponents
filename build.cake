@@ -30,10 +30,6 @@ var PLAY_NUGET_VERSION = "57.1104.0" + COMMON_NUGET_VERSION;
 var PLAY_AAR_VERSION = "11.0.4";
 var VERSION_DESC = "11.0.4";
 
-var WEAR_COMPONENT_VERSION = "2.0.3.0";
-var WEAR_NUGET_VERSION = "2.0.3" + WEAR_COMMON_NUGET_VERSION;
-var WEAR_AAR_VERSION = "2.0.3";
-var WEARABLE_SUPPORT_VERSION = "2.0.3";
 
 var FIREBASE_COMPONENT_VERSION = PLAY_COMPONENT_VERSION;
 var FIREBASE_NUGET_VERSION = PLAY_NUGET_VERSION;
@@ -89,8 +85,6 @@ var AAR_INFOS = new [] {
 	new AarInfo ("vision-common", "play-services-vision-common", "android/gms/play-services-vision-common", "Xamarin.GooglePlayServices.Vision.Common", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("wallet", "play-services-wallet", "android/gms/play-services-wallet", "Xamarin.GooglePlayServices.Wallet", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("wearable", "play-services-wearable", "android/gms/play-services-wearable", "Xamarin.GooglePlayServices.Wearable", PLAY_AAR_VERSION, PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-
-	new AarInfo ("support-wearable", "wearable", "android/support/wearable", "Xamarin.Android.Wear", WEAR_AAR_VERSION, WEAR_NUGET_VERSION, WEAR_COMPONENT_VERSION),
 
 	new AarInfo ("firebase-ads", "firebase-ads", "firebase/firebase-ads", "Xamarin.Firebase.Ads", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-analytics", "firebase-analytics", "firebase/firebase-analytics", "Xamarin.Firebase.Analytics", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
@@ -202,7 +196,6 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./vision/source/bin/Release/Xamarin.GooglePlayServices.Vision.dll" },
 				new OutputFileCopy { FromFile = "./wallet/source/bin/Release/Xamarin.GooglePlayServices.Wallet.dll" },
 				new OutputFileCopy { FromFile = "./wearable/source/bin/Release/Xamarin.GooglePlayServices.Wearable.dll" },
-				new OutputFileCopy { FromFile = "./support-wearable/source/bin/Release/Xamarin.Android.Wear.dll" },
 				new OutputFileCopy { FromFile = "./tagmanager/source/bin/Release/Xamarin.GooglePlayServices.TagManager.dll" },
 				new OutputFileCopy { FromFile = "./tagmanager-api/source/bin/Release/Xamarin.GooglePlayServices.TagManager.Api.dll" },
 				new OutputFileCopy { FromFile = "./tagmanager-v4-impl/source/bin/Release/Xamarin.GooglePlayServices.TagManager.V4.Impl.dll" },
@@ -243,9 +236,7 @@ var buildSpec = new BuildSpec {
 		new DefaultSolutionBuilder { SolutionPath = "./safetynet/samples/SafetyNetSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 		new DefaultSolutionBuilder { SolutionPath = "./vision/samples/VisionSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 		new DefaultSolutionBuilder { SolutionPath = "./wallet/samples/AndroidPayQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
-		new DefaultSolutionBuilder { SolutionPath = "./support-wearable/samples/MultiPageSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
-		new DefaultSolutionBuilder { SolutionPath = "./support-wearable/samples/WatchFaceSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
-
+		
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-ads/samples/FirebaseAdmobQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-analytics/samples/FirebaseAnalyticsQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-appindexing/samples/AppIndexingSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
@@ -289,7 +280,6 @@ var buildSpec = new BuildSpec {
 		new NuGetInfo { NuSpec = "./vision/nuget/Xamarin.GooglePlayServices.Vision.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./wallet/nuget/Xamarin.GooglePlayServices.Wallet.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./wearable/nuget/Xamarin.GooglePlayServices.Wearable.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./support-wearable/nuget/Xamarin.Android.Wear.nuspec", Version = WEAR_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./tagmanager/nuget/Xamarin.GooglePlayServices.TagManager.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./tagmanager-api/nuget/Xamarin.GooglePlayServices.TagManager.Api.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./tagmanager-v4-impl/nuget/Xamarin.GooglePlayServices.TagManager.V4.Impl.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
@@ -336,7 +326,6 @@ var buildSpec = new BuildSpec {
 		new Component { ManifestDirectory = "./safetynet/component" },
 		new Component { ManifestDirectory = "./vision/component" },
 		new Component { ManifestDirectory = "./wallet/component" },
-		new Component { ManifestDirectory = "./support-wearable/component" },
 
 		new Component { ManifestDirectory = "./firebase-ads/component" },
 		new Component { ManifestDirectory = "./firebase-analytics/component" },
