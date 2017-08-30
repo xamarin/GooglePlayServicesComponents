@@ -7,13 +7,14 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.Threading.Tasks;
-using Android.Support.V7.App;
 using Android.Gms.Location;
+using Android.Gms.Tasks;
+using Java.Lang;
 
 namespace LocationSample
 {
 	[Activity(Label = "Fused Location Client")]
-	public class FusedLocationClientActivity : AppCompatActivity
+	public class FusedLocationClientActivity : Activity
 	{
 		TextView textLastLocation;
 		TextView textLocationUpdates;
@@ -55,23 +56,27 @@ namespace LocationSample
 			// Get the last known location so we can show the user something immediately
 			var lastLocation = await fusedClient.GetLastLocationAsync();
 			if (lastLocation != null)
-				DescribeLocation(lastLocation);
+				textLastLocation.Text = DescribeLocation(lastLocation);
 		}
 
-		protected override async void OnStop()
+		protected override async void OnPause()
 		{
-			// Remove ourselves from getting location updates
-			await fusedClient.RemoveLocationUpdatesAsync(locationCallback);
-
 			// Unsubscribe from the event
 			locationCallback.LocationResult -= LocationCallback_LocationResult;
 
-			base.OnStop();
+			// TODO: We should await this call but there appears to be a bug
+			// in Google Play Services where the first time removeLocationUpdates is called,
+			// the returned Android.Gms.Tasks.Task never actually completes, even though
+			// location updates do seem to be removed and stop happening.
+			// For now we'll just fire and forget as a workaround.
+			fusedClient.RemoveLocationUpdatesAsync(locationCallback);
+
+			base.OnPause();
 		}
 
 		void LocationCallback_LocationResult(object sender, LocationCallbackResultEventArgs e)
 		{
-			DescribeLocation(e.Result.LastLocation);
+			textLocationUpdates.Text = DescribeLocation(e.Result.LastLocation);
 		}
 
 		string DescribeLocation(Android.Locations.Location location)
