@@ -25,15 +25,12 @@
         </CreateProperty>
 
         <ItemGroup>
-            <XamarinBuildDownloadPartialZip Include="$(_XbdKey_)" Condition="!Exists('$(_XbdAarFileFullPath_)')">
+            <XamarinBuildDownload Include="$(_XbdKey_)">
                 <Url>$XbdUrl$</Url>
                 <ToFile>$AarKey$-$AarVersion$.aar</ToFile>
-                <RangeStart>$XbdRangeStart$</RangeStart>
-                <RangeEnd>$XbdRangeEnd$</RangeEnd>
+                <Kind>Uncompressed</Kind>
                 <Md5>$XbdMd5$</Md5>
-                <CustomErrorMessage>Please open the Android SDK Manager and install the latest version of 'Google Repository' from the 'Extras' section, and then reload your solution.</CustomErrorMessage>
-                <CustomErrorCode>XBD404</CustomErrorCode>
-            </XamarinBuildDownloadPartialZip>
+            </XamarinBuildDownload>
         </ItemGroup>
 
         <ItemGroup>

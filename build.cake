@@ -11,10 +11,17 @@
 #addin nuget:?package=Cake.FileHelpers
 #addin nuget:?package=Cake.MonoApiTools
 
+// Lists all the artifacts and their versions for com.google.android.gms.*
+// https://dl.google.com/dl/android/maven2/com/google/android/gms/group-index.xml
+// Lists all the artifacts and their versions for com.google.firebase.*
+// https://dl.google.com/dl/android/maven2/com/google/firebase/group-index.xml
+
+// Master list of all the packages in the repo:
+// https://dl.google.com/dl/android/maven2/master-index.xml
+
 // To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip\
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_v11_3_rc05.zip";
-var M2_REPOSITORY = "https://dl-ssl.google.com/android/repository/google_m2repository_gms_v11_3_rc05_wear_2_0_4.zip"; //57
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/42.1021.0/api-info.xml";
@@ -23,13 +30,13 @@ var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents
 // Sometimes might be "-beta1" for a prerelease, or ".1" if we have a point release for the same actual aar's
 // will be blank for a stable release that has no point release fixes
 var COMMON_NUGET_VERSION = "-beta1";
-var WEAR_COMMON_NUGET_VERSION = "-beta1";
 
-var PLAY_COMPONENT_VERSION = "55.1104.0.0";
-var PLAY_NUGET_VERSION = "57.1104.0" + COMMON_NUGET_VERSION;
-var PLAY_AAR_VERSION = "11.0.4";
-var VERSION_DESC = "11.0.4";
+var PLAY_COMPONENT_VERSION = "60.1120.0.0";
+var PLAY_NUGET_VERSION = "60.1120.0" + COMMON_NUGET_VERSION;
+var PLAY_AAR_VERSION = "11.2.0";
+var VERSION_DESC = "11.2.0";
 
+var MAVEN_REPO_BASE_URL = "https://dl.google.com/dl/android/maven2/com/google/";
 
 var FIREBASE_COMPONENT_VERSION = PLAY_COMPONENT_VERSION;
 var FIREBASE_NUGET_VERSION = PLAY_NUGET_VERSION;
@@ -105,14 +112,6 @@ var AAR_INFOS = new [] {
 	new AarInfo ("firebase-storage", "firebase-storage", "firebase/firebase-storage", "Xamarin.Firebase.Storage", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-storage-common", "firebase-storage-common", "firebase/firebase-storage-common", "Xamarin.Firebase.Storage.Common", FIREBASE_AAR_VERSION, FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 };
-
-class PartialZipInfo {
-	public string Url { get;set; }
-	public string LocalPath { get;set; }
-	public string Md5 { get;set; }
-	public long RangeStart { get;set; }
-	public long RangeEnd { get;set; }
-}
 
 class AarInfo
 {
@@ -354,27 +353,25 @@ Task ("externals")
 {
 	var path = "./externals/";
 
-	if (!DirectoryExists (path))
-		CreateDirectory (path);
-
-	// Get the actual GPS .aar files and extract
-	if (!FileExists (path + "m2repository.zip"))
-		DownloadFile (M2_REPOSITORY, path + "m2repository.zip");
-	if (!FileExists (path + "m2repository/source.properties"))
-		Unzip (path + "m2repository.zip", path);
-
+	EnsureDirectoryExists (path);
+	
 	// Copy the .aar's to a better location
 	foreach (var aar in AAR_INFOS) {
+		var aarUrl = MAVEN_REPO_BASE_URL + aar.Path + "/" + aar.AarVersion + "/" + aar.Dir + "-" + aar.AarVersion + ".aar";
+		var aarFile = path + aar.Dir + ".aar";
 
-		CopyFile (
-			string.Format (path + "m2repository/com/google/{0}/{1}/{2}-{3}.aar", aar.Path, aar.AarVersion, aar.Dir, aar.AarVersion),
-			string.Format (path + "{0}.aar", aar.Dir));
-		Unzip (path + aar.Dir + ".aar", path + aar.Dir);
+		// Download the .aar
+		if (!FileExists (aarFile))
+			DownloadFile (aarUrl, aarFile);
+
+		// Download the .md5 for the .aar
+		if (!FileExists (aarFile + ".md5"))
+			DownloadFile (aarUrl + ".md5", aarFile + ".md5");
+		
+		// Unzip the .aar
+		if (!DirectoryExists (path + aar.Dir))
+			Unzip (aarFile, path + aar.Dir);
 	}
-
-	// Get Wearable stuff
-	Unzip (path + "m2repository/com/google/android/support/wearable/" + WEARABLE_SUPPORT_VERSION + "/wearable-" + WEARABLE_SUPPORT_VERSION + ".aar", path + "wearable-support");
-	CopyFile (path + "m2repository/com/google/android/wearable/wearable/" + WEAR_AAR_VERSION + "/wearable-" + WEAR_AAR_VERSION + ".jar", path + "wearable.jar");
 
 	// Get the GPS Docs
 	if (!FileExists (path + "docs.zip"))
@@ -565,9 +562,7 @@ Task ("component-setup").Does (() =>
 
 		var manifestTxt = FileReadText (yaml)
 			.Replace ("$nuget-version$", NUGET_VERSION)
-			.Replace ("$version$", COMPONENT_VERSION)
-			.Replace ("$wear-version$", WEAR_COMPONENT_VERSION)
-			.Replace ("$wear-nuget-version$", WEAR_NUGET_VERSION);
+			.Replace ("$version$", COMPONENT_VERSION);
 
 		var newYaml = yaml.GetDirectory ().CombineWithFilePath ("component.yaml");
 		FileWriteText (newYaml, manifestTxt);
@@ -586,18 +581,6 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 	if (FileExists ("./generated.targets"))
 		DeleteFile ("./generated.targets");
 
-	// Get the zip file offsets for the relevant aar's
-	var downloadParts = FindZipEntries ("./externals/m2repository.zip")
-		.Where (e => (e.EntryName.Contains (PLAY_AAR_VERSION) || e.EntryName.Contains (WEAR_AAR_VERSION))
-			&& (e.EntryName.Contains (".aar") || e.EntryName.Contains (".jar")))
-		.Select (e => new PartialZipInfo {
-			RangeStart = e.RangeStart,
-			RangeEnd = e.RangeEnd,
-			Url = M2_REPOSITORY,
-			LocalPath = e.EntryName,
-			Md5 = ReadZipEntryText ("./externals/m2repository.zip", e.EntryName + ".md5", readBinaryAsHex: !e.EntryName.Contains ("wearable-" + WEAR_AAR_VERSION + ".aar"))
-		}).ToList ();
-
 	foreach (var aar in AAR_INFOS) {
 
 		// Write out the nuspec from template
@@ -606,18 +589,12 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 		var newNuspec = nuspec.FullPath.Replace (".template.nuspec", ".nuspec");
 		FileWriteText (newNuspec, nuspecTxt);
 
-		// Write out the .targets
-		var part = downloadParts.FirstOrDefault (p => p.LocalPath.EndsWith ("/" + aar.Dir + "-" + aar.AarVersion + ".aar"));
-
-		if (part == null)
-			throw new Exception ("No matching part found for '" + aar.Dir + "-" + aar.AarVersion + "' in partial-download-info.json ");
-
 		var msName = aar.Dir.Replace("-", "");
-
 		var xbdKey = "playservices-" + PLAY_AAR_VERSION + "/" + msName;
+		
 		if (aar.Dir.StartsWith ("firebase-"))
 			xbdKey = "firebase-" + FIREBASE_AAR_VERSION + "/" + msName;
-
+		
 		var items = new Dictionary<string, string> {
 			{ "_XbdUrl_", "_XbdUrl_" + msName },
 			{ "_XbdKey_", "_XbdKey_" + msName },
@@ -626,12 +603,12 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 			{ "_XbdAssemblyName_", "_XbdAssemblyName_" + msName },
 			{ "_XbdAarFileFullPath_", "_XbdAarFileFullPath_" + msName },
 			{ "_XbdRestoreItems_", "_XbdRestoreItems_" + msName },
-			{ "$XbdUrl$", M2_REPOSITORY },
-			{ "$XbdMd5$", part.Md5 },
+			{ "$XbdUrl$", MAVEN_REPO_BASE_URL + aar.Path + "/" + aar.AarVersion + "/" + aar.Dir + "-" + aar.AarVersion + ".aar" },
+			// { "$XbdMd5$", part.Md5 },
 			{ "$XbdKey$", xbdKey },
 			{ "$XbdAssemblyName$", aar.NugetId },
-			{ "$XbdRangeStart$", part.RangeStart.ToString() },
-			{ "$XbdRangeEnd$", part.RangeEnd.ToString() },
+			// { "$XbdRangeStart$", part.RangeStart.ToString() },
+			// { "$XbdRangeEnd$", part.RangeEnd.ToString() },
 			{ "$AarKey$", aar.Dir },
 			{ "$AarVersion$", aar.AarVersion },
 			{ "$AarInnerPath$", aar.Path.Replace ("/", "\\") },
