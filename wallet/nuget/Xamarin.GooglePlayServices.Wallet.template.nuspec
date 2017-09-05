@@ -23,6 +23,7 @@
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Identity" version="[$version$]"/>
         <dependency id="Xamarin.GooglePlayServices.Maps" version="[$version$]"/>
+        <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]"/>
       </group>
     </dependencies>
   </metadata>

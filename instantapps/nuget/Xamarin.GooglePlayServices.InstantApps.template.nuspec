@@ -19,6 +19,7 @@
       <group targetFramework="MonoAndroid70">
         <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>

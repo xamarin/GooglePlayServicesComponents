@@ -107,6 +107,10 @@
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\auth-api-phone\source\Auth-Api-Phone.csproj">
+      <Project>{B797EA6B-9566-4980-9665-F808C953B24D}</Project>
+      <Name>Auth-Api-Phone</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />

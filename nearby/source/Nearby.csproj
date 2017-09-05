@@ -100,10 +100,6 @@
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\oss-licenses\source\Oss-Licenses.csproj">
-      <Project>{DCCFBAD3-A366-4C61-B56F-DBD46D68980F}</Project>
-      <Name>Oss-Licenses</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />
