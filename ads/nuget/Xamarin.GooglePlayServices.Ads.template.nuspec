@@ -20,10 +20,8 @@
     <dependencies>
       <group targetFramework="MonoAndroid70">
         <dependency id="Xamarin.GooglePlayServices.Ads.Lite" version="[$version$]" />
-        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Gass" version="[$version$]" />
-        <dependency id="Xamarin.GooglePlayServices.SafetyNet" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>

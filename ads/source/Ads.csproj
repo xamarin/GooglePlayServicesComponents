@@ -72,10 +72,6 @@
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\base\source\Base.csproj">
-      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
-      <Name>Base</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\ads-lite\source\Ads.Lite.csproj">
       <Project>{ECB1F68B-B588-4F3B-9A86-510CF4AAA784}</Project>
       <Name>Ads.Lite</Name>
@@ -83,10 +79,6 @@
     <ProjectReference Include="..\..\gass\source\Gass.csproj">
       <Project>{D705BF83-81FD-4CD9-AF3B-09C50FF42C83}</Project>
       <Name>Gass</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\safetynet\source\SafetyNet.csproj">
-      <Project>{7A015585-036A-4BD1-8D46-A669EFA89743}</Project>
-      <Name>SafetyNet</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
