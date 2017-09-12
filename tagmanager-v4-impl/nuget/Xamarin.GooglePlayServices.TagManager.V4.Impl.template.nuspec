@@ -16,15 +16,15 @@
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-tagmanager-api_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]"/>
         <dependency id="Xamarin.Firebase.Analytics" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.TagManager.V4.Impl.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.GooglePlayServices.TagManager.V4.Impl.dll" target="lib/MonoAndroid80" />
 
-    <file src="tagmanager-v4-impl/nuget/Xamarin.GooglePlayServices.TagManager.V4.Impl.targets" target="build/MonoAndroid70" />
+    <file src="tagmanager-v4-impl/nuget/Xamarin.GooglePlayServices.TagManager.V4.Impl.targets" target="build/MonoAndroid80" />
   </files>
 </package>

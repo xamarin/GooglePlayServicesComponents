@@ -18,7 +18,7 @@
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-games/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-games_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Drive" version="[$version$]"/>
@@ -27,8 +27,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Games.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.GooglePlayServices.Games.dll" target="lib/MonoAndroid80" />
 
-    <file src="games/nuget/Xamarin.GooglePlayServices.Games.targets" target="build/MonoAndroid70" />
+    <file src="games/nuget/Xamarin.GooglePlayServices.Games.targets" target="build/MonoAndroid80" />
   </files>
 </package>

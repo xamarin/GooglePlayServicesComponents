@@ -16,7 +16,7 @@
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/firebase-messaging_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.Firebase.Iid" version="[$version$]"/>
         <dependency id="Xamarin.Firebase.Common" version="[$version$]"/>
@@ -24,8 +24,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.Firebase.Messaging.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.Firebase.Messaging.dll" target="lib/MonoAndroid80" />
 
-    <file src="firebase-messaging/nuget/Xamarin.Firebase.Messaging.targets" target="build/MonoAndroid70" />
+    <file src="firebase-messaging/nuget/Xamarin.Firebase.Messaging.targets" target="build/MonoAndroid80" />
   </files>
 </package>

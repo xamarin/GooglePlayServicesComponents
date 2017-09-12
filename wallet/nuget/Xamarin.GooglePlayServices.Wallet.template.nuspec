@@ -18,7 +18,7 @@
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-wallet/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-wallet_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Identity" version="[$version$]"/>
@@ -28,8 +28,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Wallet.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.GooglePlayServices.Wallet.dll" target="lib/MonoAndroid80" />
 
-    <file src="wallet/nuget/Xamarin.GooglePlayServices.Wallet.targets" target="build/MonoAndroid70" />
+    <file src="wallet/nuget/Xamarin.GooglePlayServices.Wallet.targets" target="build/MonoAndroid80" />
   </files>
 </package>

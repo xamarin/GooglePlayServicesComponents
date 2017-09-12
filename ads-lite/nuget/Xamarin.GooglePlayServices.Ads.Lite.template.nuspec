@@ -18,14 +18,14 @@
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-ads-lite_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Ads.Lite.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.GooglePlayServices.Ads.Lite.dll" target="lib/MonoAndroid80" />
 
-    <file src="ads-lite/nuget/Xamarin.GooglePlayServices.Ads.Lite.targets" target="build/MonoAndroid70" />
+    <file src="ads-lite/nuget/Xamarin.GooglePlayServices.Ads.Lite.targets" target="build/MonoAndroid80" />
   </files>
 </package>

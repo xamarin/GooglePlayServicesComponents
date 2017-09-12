@@ -18,7 +18,7 @@
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
 <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-wearable_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.Android.Support.Compat" version="$support-version$" />
@@ -31,8 +31,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Wearable.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.GooglePlayServices.Wearable.dll" target="lib/MonoAndroid80" />
 
-    <file src="wearable/nuget/Xamarin.GooglePlayServices.Wearable.targets" target="build/MonoAndroid70" />
+    <file src="wearable/nuget/Xamarin.GooglePlayServices.Wearable.targets" target="build/MonoAndroid80" />
   </files>
 </package>

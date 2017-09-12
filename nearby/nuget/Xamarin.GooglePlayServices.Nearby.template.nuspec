@@ -18,15 +18,15 @@
     <licenseUrl>http://components.xamarin.com/license/googleplayservices-nearby/</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-nearby_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Nearby.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.GooglePlayServices.Nearby.dll" target="lib/MonoAndroid80" />
 
-    <file src="nearby/nuget/Xamarin.GooglePlayServices.Nearby.targets" target="build/MonoAndroid70" />
+    <file src="nearby/nuget/Xamarin.GooglePlayServices.Nearby.targets" target="build/MonoAndroid80" />
   </files>
 </package>
