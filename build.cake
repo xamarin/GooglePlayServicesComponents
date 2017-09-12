@@ -35,6 +35,7 @@ var PLAY_COMPONENT_VERSION = "60.1120.0.0";
 var PLAY_NUGET_VERSION = "60.1120.0" + COMMON_NUGET_VERSION;
 var PLAY_AAR_VERSION = "11.2.0";
 var VERSION_DESC = "11.2.0";
+var SUPPORT_VERSION = "26.0.2-beta1";
 
 var MAVEN_REPO_BASE_URL = "https://dl.google.com/dl/android/maven2/com/google/";
 
@@ -674,7 +675,9 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 	};
 
 	foreach (var nuspec in extraNuspecTemplates) {
-		var nuspecTxt = FileReadText (nuspec).Replace ("$aar-version$", VERSION_DESC);
+		var nuspecTxt = FileReadText (nuspec)
+							.Replace ("$aar-version$", VERSION_DESC)
+							.Replace ("$support-version$", SUPPORT_VERSION);
 		var newNuspec = nuspec.FullPath.Replace (".template.nuspec", ".nuspec");
 		FileWriteText (newNuspec, nuspecTxt);
 	}

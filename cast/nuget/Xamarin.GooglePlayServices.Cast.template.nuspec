@@ -22,7 +22,7 @@
         <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
-        <dependency id="Xamarin.Android.Support.v7.MediaRouter" version="25.4.0.1"/>
+        <dependency id="Xamarin.Android.Support.v7.MediaRouter" version="$support-version$"/>
       </group>
     </dependencies>
   </metadata>
