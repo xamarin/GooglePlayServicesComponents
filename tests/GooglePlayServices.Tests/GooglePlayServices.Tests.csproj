@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>GooglePlayServices.Tests</RootNamespace>
     <AssemblyName>AndroidSupport.Tests</AssemblyName>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
