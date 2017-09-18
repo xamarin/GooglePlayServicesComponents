@@ -21,7 +21,7 @@
 
 // To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip\
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
-var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_v11_3_rc05.zip";
+var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_v12_1_rc11.zip";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/42.1021.0/api-info.xml";
