@@ -4,6 +4,7 @@
 	<attr path="/api/package[@name='com.google.android.gms.auth.account']" name="managedName">Android.Gms.Auth.Account</attr>
 	<attr path="/api/package[@name='com.google.android.gms.auth.api']" name="managedName">Android.Gms.Auth.Api</attr>
 	<attr path="/api/package[@name='com.google.android.gms.auth.api.proxy']" name="managedName">Android.Gms.Auth.Api.Proxy</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth.api.accounttransfer']" name="managedName">Android.Gms.Auth.Api.AccountTransfer</attr>
 
 
 	<!-- Remove some internal namespaces -->

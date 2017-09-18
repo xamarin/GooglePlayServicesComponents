@@ -38,6 +38,7 @@
 
 	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzc']" name="obfuscated">false</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzf']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zze']" name="obfuscated">false</attr>
 
 	<!-- This one for some reason is sitting between some *Buffer implementations and AbstractDataBuffer, so let's name it explicitly and make sure it stays around -->
 	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzg']" name="obfuscated">false</attr>

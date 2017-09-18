@@ -5,6 +5,7 @@
 	<attr path="/api/package[@name='com.google.android.gms.common']" name="managedName">Android.Gms.Common</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.common.annotation']" name="managedName">Android.Gms.Common.Annotations</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common.api']" name="managedName">Android.Gms.Common.Apis</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.api.internal']" name="managedName">Android.Gms.Common.Apis.Internal</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common.internal']" name="managedName">Android.Gms.Common.Internal</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.common.internal.safeparcel']" name="managedName">Android.Gms.Common.Internal.SafeParcel</attr>  
 	<attr path="/api/package[@name='com.google.android.gms.common.stats']" name="managedName">Android.Gms.Common.Stats</attr>
