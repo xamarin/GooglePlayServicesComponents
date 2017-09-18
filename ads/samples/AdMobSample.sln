@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ads.Lite", "..\..\ads-lite\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gass", "..\..\gass\source\Gass.csproj", "{D705BF83-81FD-4CD9-AF3B-09C50FF42C83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clearcut", "..\..\clearcut\source\Clearcut.csproj", "{44CF1968-FCDA-4141-AE78-1EFD12DDF7D6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,9 +55,5 @@ Global
 		{D705BF83-81FD-4CD9-AF3B-09C50FF42C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D705BF83-81FD-4CD9-AF3B-09C50FF42C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D705BF83-81FD-4CD9-AF3B-09C50FF42C83}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44CF1968-FCDA-4141-AE78-1EFD12DDF7D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44CF1968-FCDA-4141-AE78-1EFD12DDF7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44CF1968-FCDA-4141-AE78-1EFD12DDF7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44CF1968-FCDA-4141-AE78-1EFD12DDF7D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
