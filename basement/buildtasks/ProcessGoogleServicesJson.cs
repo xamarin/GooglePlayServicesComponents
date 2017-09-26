@@ -9,13 +9,21 @@ using System.Xml;
 
 namespace Xamarin.GooglePlayServices.Tasks
 {
-    public class ProcessGoogleServicesJson : Task
-    {
-        const string RESFILE_VALUES = "goog_svcs_json.xml";
-        const string RESFILE_XML = "global_tracker.xml";
+	public class ProcessGoogleServicesJson : Task
+	{
+		const string RESFILE_VALUES = "goog_svcs_json.xml";
+		const string RESFILE_XML = "global_tracker.xml";
+		const string INTERMEDIATE_FOLDER = "procgoogsvcsjson";
 
-        [Output]
-        public ITaskItem[] GoogleServicesGeneratedResources { get; set; }
+		[Output]
+		public ITaskItem[] GoogleServicesGeneratedResourcesSource { get; set; }
+
+		[Output]
+		public ITaskItem[] GoogleServicesGeneratedResourcesDest { get; set; }
+
+		[Output]
+		public ITaskItem[] AllGoogleServicesGeneratedResources { get; set; }
+
 
         [Required]
         public string AndroidPackageName { get; set; }
@@ -24,10 +32,10 @@ namespace Xamarin.GooglePlayServices.Tasks
         public ITaskItem[] GoogleServicesJsons { get; set; }
 
         [Required]
-        public string IntermediateOutputPath { get; set; }
+        public ITaskItem IntermediateOutputPath { get; set; }
 
         [Required]
-        public string MonoAndroidResDirIntermediate { get;set; }
+		public ITaskItem MonoAndroidResDirIntermediate { get;set; }
 
         public override bool Execute ()
         {
@@ -36,15 +44,18 @@ namespace Xamarin.GooglePlayServices.Tasks
             Log.LogMessage ("Android Package Name: {0}", AndroidPackageName);
 
             // Paths to write resource files to
-            var xmlPath = Path.Combine (MonoAndroidResDirIntermediate, "xml", RESFILE_XML);
-            var valuesPath = Path.Combine (MonoAndroidResDirIntermediate, "values", RESFILE_VALUES);
+            var xmlPathSrc = Path.Combine (IntermediateOutputPath.GetMetadata("FullPath"), INTERMEDIATE_FOLDER, RESFILE_XML);
+			var valuesPathSrc = Path.Combine (IntermediateOutputPath.GetMetadata("FullPath"), INTERMEDIATE_FOLDER, RESFILE_VALUES);
+            // Destination for the resource files to be copied to by the android res gen copy task
+			var xmlPathDest = Path.Combine(MonoAndroidResDirIntermediate.GetMetadata("FullPath"), "xml", RESFILE_XML);
+			var valuesPathDest = Path.Combine(MonoAndroidResDirIntermediate.GetMetadata("FullPath"), "values", RESFILE_VALUES);
 
             var wroteXmlPath = false;
             var wroteValuesPath = false;
 
             if (GoogleServicesJsons == null || !GoogleServicesJsons.Any ()) {
                 Log.LogMessage ("No GoogleServicesJson Build Action items specified, skipping task.");
-                DeleteFiles (valuesPath, xmlPath);
+                DeleteFiles (valuesPathSrc, xmlPathSrc);
                 return true;
             }
 
@@ -65,7 +76,7 @@ namespace Xamarin.GooglePlayServices.Tasks
                     throw new NullReferenceException ();
             } catch (Exception ex) {
                 Log.LogError ("Failed to Read or Deserialize GoogleServicesJson file: {0}{1}{2}", gsPath, Environment.NewLine, ex);
-                DeleteFiles (valuesPath, xmlPath);
+                DeleteFiles (valuesPathSrc, xmlPathSrc);
                 return false;
             }
 
@@ -94,17 +105,17 @@ namespace Xamarin.GooglePlayServices.Tasks
 
             // We only want to create the file if not all of these values are missing
             if (valuesItems.Any (kvp => !string.IsNullOrEmpty (kvp.Value))) {
-                Log.LogMessage ("Writing Resource File: {0}", valuesPath);
-                WriteResourceDoc (valuesPath, valuesItems);
+                Log.LogMessage ("Writing Resource File: {0}", valuesPathSrc);
+                WriteResourceDoc (valuesPathSrc, valuesItems);
                 wroteValuesPath = true;
-                Log.LogMessage ("Wrote Resource File: {0}", valuesPath);
+                Log.LogMessage ("Wrote Resource File: {0}", valuesPathSrc);
             } else {
-                if (File.Exists (valuesPath)) {
-                    Log.LogMessage ("Deleting Resource File: {0}", valuesPath);
+                if (File.Exists (valuesPathSrc)) {
+                    Log.LogMessage ("Deleting Resource File: {0}", valuesPathSrc);
                     try {
-                        File.Delete (valuesPath);
+                        File.Delete (valuesPathSrc);
                     } catch (Exception ex) {
-                        Log.LogWarning ("Failed to delete Resource File: {0}{1}{2}", valuesPath, Environment.NewLine, ex);
+                        Log.LogWarning ("Failed to delete Resource File: {0}{1}{2}", valuesPathSrc, Environment.NewLine, ex);
                     }
                 }
             }
@@ -115,42 +126,50 @@ namespace Xamarin.GooglePlayServices.Tasks
 
             // We only want to create the file if not all of these values are missing
             if (xmlItems.Any (kvp => !string.IsNullOrEmpty (kvp.Value))) {
-                Log.LogMessage ("Writing Resource File: {0}", xmlPath);
-                WriteResourceDoc (xmlPath, xmlItems);
+                Log.LogMessage ("Writing Resource File: {0}", xmlPathSrc);
+                WriteResourceDoc (xmlPathSrc, xmlItems);
                 wroteXmlPath = true;
-                Log.LogMessage ("Wrote Resource File: {0}", xmlPath);
+                Log.LogMessage ("Wrote Resource File: {0}", xmlPathSrc);
             } else {
                 // If no 
-                if (File.Exists (xmlPath)) {
-                    Log.LogMessage ("Deleting Resource File: {0}", xmlPath);
+                if (File.Exists (xmlPathSrc)) {
+                    Log.LogMessage ("Deleting Resource File: {0}", xmlPathSrc);
                     try {
-                        File.Delete (xmlPath);
+                        File.Delete (xmlPathSrc);
                     } catch (Exception ex) {
-                        Log.LogWarning ("Failed to delete Resource File: {0}{1}{2}", xmlPath, Environment.NewLine, ex);
+                        Log.LogWarning ("Failed to delete Resource File: {0}{1}{2}", xmlPathSrc, Environment.NewLine, ex);
                     }
                 }
             }
 
-            var outputFiles = new List<ITaskItem> ();
+
+            var outputFilesSrc = new List<ITaskItem> ();
+            var outputFilesDest = new List<ITaskItem>();
+            if (wroteXmlPath) {
+                outputFilesSrc.Add(new TaskItem(xmlPathSrc));
+                outputFilesDest.Add(new TaskItem(xmlPathDest));
+            }
+            if (wroteValuesPath) {
+                outputFilesSrc.Add(new TaskItem(valuesPathSrc));
+                outputFilesDest.Add(new TaskItem(valuesPathDest));
+            }
+
+            if (outputFilesSrc.Any ())
+                GoogleServicesGeneratedResourcesSource = outputFilesSrc.ToArray ();
+            if (outputFilesDest.Any())
+                GoogleServicesGeneratedResourcesDest = outputFilesDest.ToArray();
+
+            Log.LogMessage("Writing stamp file...");
+
+            var stampText = string.Empty;
             if (wroteXmlPath)
-                outputFiles.Add (new TaskItem (xmlPath));
+                stampText += xmlPathSrc + Environment.NewLine + xmlPathDest + Environment.NewLine;
             if (wroteValuesPath)
-                outputFiles.Add (new TaskItem (valuesPath));
+                stampText += valuesPathSrc + Environment.NewLine + valuesPathDest + Environment.NewLine;
 
-            if (outputFiles.Any ())
-                GoogleServicesGeneratedResources = outputFiles.ToArray ();
+			File.WriteAllText(Path.Combine(IntermediateOutputPath.GetMetadata("FullPath"), "ProcessGoogleServicesJson.stamp"), stampText.Trim());
 
-			Log.LogMessage("Writing stamp file...");
-
-			var stampText = string.Empty;
-			if (wroteXmlPath)
-				stampText += xmlPath + Environment.NewLine;
-			if (wroteValuesPath)
-				stampText += valuesPath + Environment.NewLine;
-			
-			File.WriteAllText(Path.Combine(IntermediateOutputPath ?? MonoAndroidResDirIntermediate, "ProcessGoogleServicesJson.stamp"), stampText.Trim());
-
-			Log.LogMessage ("Finished ProcessGoogleServicesJson...");
+            Log.LogMessage ("Finished ProcessGoogleServicesJson...");
             return true;
         }
 

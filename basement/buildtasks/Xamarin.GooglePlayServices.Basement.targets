@@ -28,11 +28,18 @@
        $(ProcessGoogleServicesJsonDependsOn);
     </ProcessGoogleServicesJsonDependsOn>
     <ProcessGoogleServicesJsonBeforeTargets>
-      $(ProcessGoogleServicesJsonBeforeTargets);
+      _GenerateAndroidResourceDir;$(ProcessGoogleServicesJsonBeforeTargets);
     </ProcessGoogleServicesJsonBeforeTargets>
     <ProcessGoogleServicesJsonAfterTargets>
-      _GenerateAndroidResourceDir;$(ProcessGoogleServicesJsonAfterTargets);
+      $(ProcessGoogleServicesJsonAfterTargets);
     </ProcessGoogleServicesJsonAfterTargets>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CleanDependsOn>
+      $(CleanDependsOn);
+      _CleanProcessGoogleServicesJson;
+    </CleanDependsOn>
   </PropertyGroup>
 
   <!-- include the task assembly -->
@@ -40,7 +47,6 @@
       AssemblyFile="Xamarin.GooglePlayServices.Tasks.dll" 
       TaskName="Xamarin.GooglePlayServices.Tasks.ProcessGoogleServicesJson" />
 
-	
   <!-- the build tasks -->
   <Target
     Name="ProcessGoogleServicesJson" 
@@ -48,19 +54,40 @@
     BeforeTargets="$(ProcessGoogleServicesJsonBeforeTargets)"
     AfterTargets="$(ProcessGoogleServicesJsonAfterTargets)"
     Inputs="@(GoogleServicesJson);@(AndroidResource);$(MSBuildProjectFullPath);$(MSBuildAllProjects);"
-    Outputs="$(IntermediateOutputPath)\ProcessGoogleServicesJson.stamp">
+    Outputs="$(IntermediateOutputPath)ProcessGoogleServicesJson.stamp">
 
     <ProcessGoogleServicesJson
         GoogleServicesJsons="@(GoogleServicesJson)"
         IntermediateOutputPath="$(IntermediateOutputPath)"
         MonoAndroidResDirIntermediate="$(MonoAndroidResDirIntermediate)"
         AndroidPackageName="$(_AndroidPackage)">
-            <Output ItemName="_AndroidResourceDest" TaskParameter="GoogleServicesGeneratedResources" />
-            <Output ItemName="FileWrites" TaskParameter="GoogleServicesGeneratedResources" />
+            <!-- Source of generated resource file, to be copied into obj/Debug/res/   eg: Resources\values\goog_svcs_json.xml -->
+            <Output ItemName="AndroidResource" TaskParameter="GoogleServicesGeneratedResourcesSource" />
+            <!-- Destination of resource file, where it should go inside obj/Debug/res/  eg: obj\Debug\res\values\goog_svcs_json.xml - should use full path -->
+            <Output ItemName="_AndroidResourceDest" TaskParameter="GoogleServicesGeneratedResourcesDest" />
     </ProcessGoogleServicesJson>
 
     <ItemGroup>
-        <FileWrites Include="$(IntermediateOutputPath)\ProcessGoogleServicesJson.stamp" />
+        <FileWrites Include="$(IntermediateOutputPath)ProcessGoogleServicesJson.stamp" />
     </ItemGroup>
   </Target>
+
+  <Target Name="_CleanProcessGoogleServicesJson">
+    <RemoveDir Directories="$(IntermediateOutputPath)procgoogsvcsjson" Condition="Exists ('$(IntermediateOutputPath)procgoogsvcsjson' )" />
+    <Delete Files="$(IntermediateOutputPath)ProcessGoogleServicesJson.stamp" Condition="Exists ('$(IntermediateOutputPath)ProcessGoogleServicesJson.stamp' )" />
+  </Target>
+
+  <!-- 
+  IncrementalClean in msbuild will try and remove files from obj/$(Configuration)/res/* that we added if they aren't in the `_CleanCurrentFileWrites` item group
+  This target just ensures the files we might generate actually end up in the that item group so they aren't removed on build
+   -->
+  <Target Name="_RegisterGoogleServicesJsonResourcesWithFileWrites" BeforeTargets="IncrementalClean">  
+		<CreateItem Include="$(IntermediateOutputPath)res\values\goog_svcs_json.xml;$(IntermediateOutputPath)res\xml\global_tracker.xml">  
+			<Output TaskParameter="Include" ItemName="_FilesToRegister" />  
+		</CreateItem>  
+		<CreateItem Include="$([System.IO.Path]::GetFullPath('%(_FilesToRegister.Identity)'))"
+				Condition="Exists('%(_FilesToRegister.Identity)')">  
+			<Output TaskParameter="Include" ItemName="_CleanCurrentFileWrites" />  
+		</CreateItem>
+	</Target>
 </Project>
