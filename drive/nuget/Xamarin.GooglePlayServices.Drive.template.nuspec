@@ -14,8 +14,8 @@
       With Drive now part of Android, integrating Drive services into your Android application has never been easier. With sync and offline support, we make it easier for you to focus on writing great apps. Simply read and write files and we’ll handle the details.
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>http://components.xamarin.com/view/googleplayservices-drive/</projectUrl>
-    <licenseUrl>http://components.xamarin.com/license/googleplayservices-drive/</licenseUrl>
+    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
+    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-drive_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">

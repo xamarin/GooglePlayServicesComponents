@@ -14,8 +14,8 @@
       Create a more engaging experience and connect with more users by integrating social into your Android app.
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>http://components.xamarin.com/view/googleplayservices-plus/</projectUrl>
-    <licenseUrl>http://components.xamarin.com/license/googleplayservices-plus/</licenseUrl>
+    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
+    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-plus_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">

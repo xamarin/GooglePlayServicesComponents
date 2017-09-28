@@ -14,8 +14,8 @@
       Instead of installing this package directly, install the specific package(s) you need.
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
-    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
+    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-base_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">

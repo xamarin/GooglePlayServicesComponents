@@ -14,8 +14,8 @@
       You may also want to install the Xamarin.Android.Wear package if you are installing this.
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
-    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
+    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</projectUrl>
 <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-wearable_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
