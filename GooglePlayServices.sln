@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cast", "cast\source\Cast.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drive", "drive\source\Drive.csproj", "{8BAFA1ED-B5D9-49ED-A553-E557D2A0357F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fitness", "fitness\source\Fitness.csproj", "{8900C5EF-1182-4E8B-88FE-596EC2DB379D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fido", "fido\source\Fido.csproj", "{8900C5EF-1182-4E8B-88FE-596EC2DB379D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Location", "location\source\Location.csproj", "{F666DC89-9CE4-491C-8450-6FBC70298FA3}"
 EndProject
