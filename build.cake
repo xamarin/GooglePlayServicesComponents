@@ -1,15 +1,4 @@
-#tool nuget:?package=ILRepack&version=2.0.10
-#tool nuget:?package=XamarinComponent
-#tool nuget:?package=Cake.MonoApiTools
-#tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
-
-#addin nuget:?package=Cake.Json
-#addin nuget:?package=Cake.XCode
-#addin nuget:?package=Cake.Xamarin
-#addin nuget:?package=Cake.Xamarin.Build&version=2.0.18
-#addin nuget:?package=Cake.Xamarin.Binding.Util&version=1.0.2
-#addin nuget:?package=Cake.FileHelpers
-#addin nuget:?package=Cake.MonoApiTools
+#load "./tools/addins.cake"
 
 // Lists all the artifacts and their versions for com.google.android.gms.*
 // https://dl.google.com/dl/android/maven2/com/google/android/gms/group-index.xml
@@ -366,8 +355,8 @@ Task ("externals")
 			DownloadFile (aarUrl, aarFile);
 
 		// Download the .md5 for the .aar
-		if (!FileExists (aarFile + ".md5"))
-			DownloadFile (aarUrl + ".md5", aarFile + ".md5");
+		//if (!FileExists (aarFile + ".md5"))
+		//	DownloadFile (aarUrl + ".md5", aarFile + ".md5");
 		
 		// Unzip the .aar
 		if (!DirectoryExists (path + aar.Dir))
@@ -453,7 +442,7 @@ Task ("merge").IsDependentOn ("libs").Does (() =>
 		CopyAttrs = true,
 		AllowMultiple = true,
 		//TargetKind = ILRepack.TargetKind.Dll,
-		Libs = new List<FilePath> {
+		Libs = new List<DirectoryPath> {
 			MONODROID_PATH
 		},
 	});
