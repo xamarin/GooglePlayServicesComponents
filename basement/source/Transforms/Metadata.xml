@@ -26,13 +26,21 @@
 	<!-- End TODO -->
 
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
-	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'zzf' and @name != 'zzc' and @name != 'zzd' and @name != 'zze' and @name != 'zza' and @name != 'zzg' and @name != 'zzb' and @name != 'zzo']" />
-	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'zzf' and @name != 'zzc' and @name != 'zzd' and @name != 'zze' and @name != 'zza' and @name != 'zzg' and @name != 'zzb' and @name != 'zzo' and @name != 'zzbck']" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz') and @name != 'zzbco']" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 
-	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/*[@name != 'zzbck' and @name != 'zzbco']" />
 
+	<attr path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzbck']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzbck']" name="managedName">InternalObfuscatedBase1</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.internal']/interface[@name='zzbco']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.internal']/interface[@name='zzbco']" name="managedName">InternalObfuscatedBase2</attr>
+
+	
+	
 	<!-- Fix params for some inherited parcelable types -->
 	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
 	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
@@ -42,6 +50,8 @@
 
 	<!-- Fix plural name - legacy compatibility -->
 	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Status']" name="managedName">Statuses</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Status']" name="extends">Java.Lang.Object</attr>
+
 
 	<!-- This type needs to exist as some critical types go missing if this one is skipped -->
 	<attr path="/api/package[@name='com.google.android.gms.common.internal.safeparcel']/class[@name='zza']" name="obfuscated">false</attr>
@@ -50,6 +60,9 @@
 	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzg']" name="obfuscated">false</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzo']" name="obfuscated">false</attr>
 	<attr path="/api/package[@name='com.google.firebase.iid']/class[@name='zzb']" name="obfuscated">false</attr>
+
+
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/implements[@name='com.google.android.gms.internal.zzbco']" />
 
 	<!-- Allowing zzc classes allows a bit too much, so remove these specifically -->
 	<remove-node path="/api/package[@name='com.google.android.gms.common.api']/class[contains(@name, 'zz')]" />
@@ -69,5 +82,15 @@
 	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzc']" name="managedName">Zzcold</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zze']" name="managedName">Zzc</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzo']" name="managedName">Zze</attr>
+
+
+	<!-- several classes extend the same internal obfuscated base class -->
+	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='ConnectionResult']" name="extends">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Scope']" name="extends">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.internal']/class[@name='DowngradeableSafeParcel']" name="extends">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='StatsEvent']" name="extends">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='WakeLockEvent']" name="extends">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='PlaceReport']" name="extends">Java.Lang.Object</attr>
+
 
 </metadata>

@@ -24,4 +24,6 @@
 	<attr path="/api/package[@name='com.google.android.gms.appinvite']/class[@name='AppInvite']" name="managedName">AppInviteClass</attr>
 	<!-- Fix API name to be uppercase to be consistent in avoiding naming conflicts with fields in C# bindings -->
 	<attr path="/api/package[@name='com.google.android.gms.appinvite']/class[@name='AppInvite']/field[@name='API']" name="managedName">API</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.people.protomodel']/class[@name='FetchBackUpDeviceContactInfoResponseEntity']" name="extends">Java.Lang.Object</attr>
 </metadata>

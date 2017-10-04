@@ -14,4 +14,7 @@
 	
 	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.ReflectedParcelable']" />
 	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.DowngradeableSafeParcel']" />
+
+	<attr path="/api/package/*[@extends='com.google.android.gms.internal.zzbck']" name="extends">java.lang.Object</attr>
+	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.internal.zzbco']" />
 </metadata>

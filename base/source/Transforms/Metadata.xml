@@ -51,4 +51,7 @@
 	<remove-node path="/api/package[@name='com.google.android.gms.common']/class[@name='SignInButton']/method[@name='setEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]" />
 	
 	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzf']" />
+
+	<!-- Some classes extend internal obfuscated types, so just set them to objects -->
+	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='DataHolder']" name="extends">Java.Lang.Object</attr>
 </metadata>

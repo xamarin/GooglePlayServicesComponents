@@ -1,3 +1,10 @@
 ﻿<metadata>
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.fido']" name="managedName">Android.Gms.Fido</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fido.common']" name="managedName">Android.Gms.Fido.Common</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fido.u2f']" name="managedName">Android.Gms.Fido.U2F</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fido.u2f.api.common']" name="managedName">Android.Gms.Fido.U2F.Api.Common</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fido.u2f.api.messagebased']" name="managedName">Android.Gms.Fido.U2F.MessageBased</attr>
 
+	
 </metadata>

@@ -79,4 +79,8 @@
 
 	<!-- We are renaming this class so we can create our own subclass which will be used instead of this class and adds some extra functionality -->
 	<attr path="/api/package[@name='com.google.android.gms.location']/class[@name='LocationCallback']" name="managedName">LocationCallbackBase</attr>
+
+	<!-- -->
+	<attr path="/api/package[@name='com.google.android.gms.location']/class[@name='LocationRequest']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location']/class[@name='LocationRequest']" name="extends-generic-aware">java.lang.Object</attr>
 </metadata>
