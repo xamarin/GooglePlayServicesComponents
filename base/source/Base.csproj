@@ -56,6 +56,7 @@
     <Compile Include="Additions\GoogleApiAvailability.cs" />
     <Compile Include="Additions\Extensions.cs" />
     <Compile Include="Additions\Additions.cs" />
+    <Compile Include="Additions\TaskExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />

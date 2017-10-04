@@ -8,11 +8,11 @@ namespace Android.Gms.Drive
 {
     public static partial class IDriveApiExtensions
     {
-        [Obsolete]
-        public static async Task<Statuses> CancelPendingActionsAsync (this IDriveApi api, GoogleApiClient apiClient, IList<string> trackingTags)
-        {
-            return (await api.CancelPendingActions (apiClient, trackingTags)).JavaCast<Statuses> ();
-        }
+        //[Obsolete]
+        //public static async Task<Statuses> CancelPendingActionsAsync (this IDriveApi api, GoogleApiClient apiClient, IList<string> trackingTags)
+        //{
+        //    return (await api.CancelPendingActions (apiClient, trackingTags)).JavaCast<Statuses> ();
+        //}
         public static async Task<IDriveApiDriveIdResult> FetchDriveIdAsync (this IDriveApi api, GoogleApiClient apiClient, string resourceId)
         {
             return (await api.FetchDriveId (apiClient, resourceId)).JavaCast<IDriveApiDriveIdResult> ();

@@ -26,7 +26,7 @@ namespace Android.Gms.Location
             return (await api.RemoveLocationUpdates (client, callbackIntent)).JavaCast<Statuses> ();
         }
 
-        public static async Task<Statuses> RemoveLocationUpdatesAsync (this IFusedLocationProviderApi api, GoogleApiClient client, LocationCallback callback)
+        public static async Task<Statuses> RemoveLocationUpdatesAsync (this IFusedLocationProviderApi api, GoogleApiClient client, LocationCallbackBase callback)
         {
             return (await api.RemoveLocationUpdates (client, callback)).JavaCast<Statuses> ();
         }
@@ -41,7 +41,7 @@ namespace Android.Gms.Location
             return (await api.RequestLocationUpdates (client, request, callbackIntent)).JavaCast<Statuses> ();
         }
 
-        public static async Task<Statuses> RequestLocationUpdatesAsync (this IFusedLocationProviderApi api, GoogleApiClient client, LocationRequest request, LocationCallback callback, Android.OS.Looper looper)
+        public static async Task<Statuses> RequestLocationUpdatesAsync (this IFusedLocationProviderApi api, GoogleApiClient client, LocationRequest request, LocationCallbackBase callback, Android.OS.Looper looper)
         {
             return (await api.RequestLocationUpdates (client, request, callback, looper)).JavaCast<Statuses> ();
         }

@@ -77,4 +77,17 @@ namespace Android.Gms.Location
 			return CheckLocationSettings(locationSettings).AsAsync<LocationSettingsResponse>();
 		}
 	}
+
+	public partial class ActivityRecognitionClient
+	{
+		public Task RemoveActivityUpdatesAsync(Android.App.PendingIntent callbackIntent)
+		{
+			return RemoveActivityUpdates(callbackIntent).AsAsync();
+		}
+
+		public Task RequestActivityUpdatesAsync(long detectionIntervalMillis, Android.App.PendingIntent callbackIntent)
+		{
+			return RequestActivityUpdates(detectionIntervalMillis, callbackIntent).AsAsync();
+		}
+	}
 }

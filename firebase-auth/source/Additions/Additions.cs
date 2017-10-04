@@ -40,6 +40,11 @@ namespace Firebase.Auth
             return SendPasswordResetEmail (email).AsAsync ();
         }
 
+		public System.Threading.Tasks.Task SendPasswordResetEmailAsync (string email, ActionCodeSettings settings)
+		{
+			return SendPasswordResetEmail(email, settings).AsAsync();
+		}
+
         public System.Threading.Tasks.Task ApplyActionCodeAsync(string code)
         {
             return ApplyActionCode(code).AsAsync();
@@ -76,6 +81,7 @@ namespace Firebase.Auth
             return Delete ().AsAsync ();
         }
 
+		[Obsolete]
         public System.Threading.Tasks.Task<GetTokenResult> GetTokenAsync (bool forceRefresh)
         {
             return GetToken (forceRefresh).AsAsync<GetTokenResult> ();
@@ -125,6 +131,11 @@ namespace Firebase.Auth
         {
             return UpdateProfile (userProfileChangeRequest).AsAsync ();
         }
+
+		public System.Threading.Tasks.Task SendEmailVerificationAsync(ActionCodeSettings settings)
+		{
+			return SendEmailVerification(settings).AsAsync();
+		}
     }
 }
 
