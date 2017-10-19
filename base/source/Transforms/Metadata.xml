@@ -11,7 +11,7 @@
 	<attr path="/api/package[@name='com.google.android.gms.common.api']" name="managedName">Android.Gms.Common.Apis</attr>
 
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
-	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'Api.zzf' and @name != 'zzf' and @name != 'zzc' and @name != 'zzd' and @name != 'zze' and @name != 'zzg']" />
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'Api.zzf' and @name != 'zzf' and @name != 'zzb' and @name != 'zzc' and @name != 'zzd' and @name != 'zze' and @name != 'zzg']" />
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
@@ -36,6 +36,7 @@
 	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='GoogleApiClient.Builder']/method[@name='addApiIfAvailable' and count(parameter)=3]/parameter[2]" name="managedType">Android.Gms.Common.Apis.Api.IApiOptionsHasOptions</attr>
 
 
+	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzb']" name="obfuscated">false</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzc']" name="obfuscated">false</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzf']" name="obfuscated">false</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zze']" name="obfuscated">false</attr>
