@@ -45,7 +45,7 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="26.0.2-beta1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="26.0.2" />
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.7" />
   </ItemGroup>
   <ItemGroup>

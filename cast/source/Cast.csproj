@@ -84,14 +84,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.0.2-beta1" />
-    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="26.0.2-beta1" />
-    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="26.0.2-beta1" />
-    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.0.2-beta1" />
-    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.0.2-beta1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="26.0.2-beta1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="26.0.2-beta1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.Palette" Version="26.0.2-beta1" />
+    <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="26.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="26.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="26.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="26.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.Palette" Version="26.0.2" />
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.7" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
