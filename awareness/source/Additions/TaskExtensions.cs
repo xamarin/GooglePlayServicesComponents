@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Android.Gms.Awareness.Fence;
+using Android.Gms.Awareness.Snapshot;
+using Android.Gms.Extensions;
 
 namespace Android.Gms.Awareness
 {
@@ -11,7 +13,7 @@ namespace Android.Gms.Awareness
 			return QueryFences(fenceQueryRequest).AsAsync<FenceQueryResponse>();
 		}
 
-		public Task UpdateFencesAsync(FenceUpdateRequest fenceUpdateRequest)
+		public Task UpdateFencesAsync(IFenceUpdateRequest fenceUpdateRequest)
 		{
 			return UpdateFences(fenceUpdateRequest).AsAsync();
 		}
@@ -41,7 +43,7 @@ namespace Android.Gms.Awareness
 
 		public Task<WeatherResponse> GetWeatherAsync()
 		{
-			return Weather.AsAsync<DetectedActivityResponse>();
+			return Weather.AsAsync<WeatherResponse>();
 		}
 
 		public Task<BeaconStateResponse> GetBeaconStateAsync(State.BeaconStateTypeFilter[] filter)
