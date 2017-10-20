@@ -10,7 +10,7 @@
 
 // To find new URL: https://dl-ssl.google.com/android/repository/addon.xml and search for google_play_services_*.zip\
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
-var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_v12_1_rc11.zip";
+var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_v13_2_rc09.zip";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/42.1021.0/api-info.xml";
@@ -20,10 +20,10 @@ var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents
 // will be blank for a stable release that has no point release fixes
 var COMMON_NUGET_VERSION = "-beta1";
 
-var PLAY_COMPONENT_VERSION = "62.1140.0.0";
-var PLAY_NUGET_VERSION = "62.1140.0" + COMMON_NUGET_VERSION;
-var PLAY_AAR_VERSION = "11.4.0";
-var VERSION_DESC = "11.4.0";
+var PLAY_COMPONENT_VERSION = "60.1142.0.0";
+var PLAY_NUGET_VERSION = "60.1142.0" + COMMON_NUGET_VERSION;
+var PLAY_AAR_VERSION = "11.4.2";
+var VERSION_DESC = "11.4.2";
 var SUPPORT_VERSION = "26.0.2";
 
 var MAVEN_REPO_BASE_URL = "https://dl.google.com/dl/android/maven2/com/google/";
@@ -163,6 +163,7 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./analytics-impl/source/bin/Release/Xamarin.GooglePlayServices.Analytics.Impl.dll" },
 				new OutputFileCopy { FromFile = "./appinvite/source/bin/Release/Xamarin.GooglePlayServices.AppInvite.dll" },
 				new OutputFileCopy { FromFile = "./auth/source/bin/Release/Xamarin.GooglePlayServices.Auth.dll" },
+				new OutputFileCopy { FromFile = "./auth-api-phone/source/bin/Release/Xamarin.GooglePlayServices.Auth.Api.Phone.dll" },
 				new OutputFileCopy { FromFile = "./auth-base/source/bin/Release/Xamarin.GooglePlayServices.Auth.Base.dll" },
 				new OutputFileCopy { FromFile = "./awareness/source/bin/Release/Xamarin.GooglePlayServices.Awareness.dll" },
 				new OutputFileCopy { FromFile = "./cast/source/bin/Release/Xamarin.GooglePlayServices.Cast.dll" },
@@ -179,11 +180,13 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./location/source/bin/Release/Xamarin.GooglePlayServices.Location.dll" },
 				new OutputFileCopy { FromFile = "./maps/source/bin/Release/Xamarin.GooglePlayServices.Maps.dll" },
 				new OutputFileCopy { FromFile = "./nearby/source/bin/Release/Xamarin.GooglePlayServices.Nearby.dll" },
+				new OutputFileCopy { FromFile = "./oss-licenses/source/bin/Release/Xamarin.GooglePlayServices.Oss.Licenses.dll" },
 				new OutputFileCopy { FromFile = "./panorama/source/bin/Release/Xamarin.GooglePlayServices.Panorama.dll" },
 				new OutputFileCopy { FromFile = "./places/source/bin/Release/Xamarin.GooglePlayServices.Places.dll" },
 				new OutputFileCopy { FromFile = "./plus/source/bin/Release/Xamarin.GooglePlayServices.Plus.dll" },
 				new OutputFileCopy { FromFile = "./safetynet/source/bin/Release/Xamarin.GooglePlayServices.SafetyNet.dll" },
 				new OutputFileCopy { FromFile = "./vision/source/bin/Release/Xamarin.GooglePlayServices.Vision.dll" },
+				new OutputFileCopy { FromFile = "./vision-common/source/bin/Release/Xamarin.GooglePlayServices.Vision.Common.dll" },
 				new OutputFileCopy { FromFile = "./wallet/source/bin/Release/Xamarin.GooglePlayServices.Wallet.dll" },
 				new OutputFileCopy { FromFile = "./wearable/source/bin/Release/Xamarin.GooglePlayServices.Wearable.dll" },
 				new OutputFileCopy { FromFile = "./tagmanager/source/bin/Release/Xamarin.GooglePlayServices.TagManager.dll" },
@@ -201,6 +204,7 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./firebase-database/source/bin/Release/Xamarin.Firebase.Database.dll" },
 				new OutputFileCopy { FromFile = "./firebase-database-connection/source/bin/Release/Xamarin.Firebase.Database.Connection.dll" },
 				new OutputFileCopy { FromFile = "./firebase-iid/source/bin/Release/Xamarin.Firebase.Iid.dll" },
+				new OutputFileCopy { FromFile = "./firebase-firestore/source/bin/Release/Xamarin.Firebase.Firestore.dll" },
 				new OutputFileCopy { FromFile = "./firebase-messaging/source/bin/Release/Xamarin.Firebase.Messaging.dll" },
 				new OutputFileCopy { FromFile = "./firebase-storage/source/bin/Release/Xamarin.Firebase.Storage.dll" },
 				new OutputFileCopy { FromFile = "./firebase-storage-common/source/bin/Release/Xamarin.Firebase.Storage.Common.dll" },
@@ -247,6 +251,7 @@ var buildSpec = new BuildSpec {
 		new NuGetInfo { NuSpec = "./analytics-impl/nuget/Xamarin.GooglePlayServices.Analytics.Impl.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./appinvite/nuget/Xamarin.GooglePlayServices.AppInvite.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./auth/nuget/Xamarin.GooglePlayServices.Auth.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./auth-api-phone/nuget/Xamarin.GooglePlayServices.Auth.Api.Phone.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./auth-base/nuget/Xamarin.GooglePlayServices.Auth.Base.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./awareness/nuget/Xamarin.GooglePlayServices.Awareness.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./cast/nuget/Xamarin.GooglePlayServices.Cast.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
@@ -263,11 +268,13 @@ var buildSpec = new BuildSpec {
 		new NuGetInfo { NuSpec = "./location/nuget/Xamarin.GooglePlayServices.Location.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./maps/nuget/Xamarin.GooglePlayServices.Maps.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./nearby/nuget/Xamarin.GooglePlayServices.Nearby.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./oss-licenses/nuget/Xamarin.GooglePlayServices.Oss.Licenses.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./panorama/nuget/Xamarin.GooglePlayServices.Panorama.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./places/nuget/Xamarin.GooglePlayServices.Places.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./plus/nuget/Xamarin.GooglePlayServices.Plus.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./safetynet/nuget/Xamarin.GooglePlayServices.SafetyNet.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./vision/nuget/Xamarin.GooglePlayServices.Vision.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./vision-common/nuget/Xamarin.GooglePlayServices.Vision.Common.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./wallet/nuget/Xamarin.GooglePlayServices.Wallet.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./wearable/nuget/Xamarin.GooglePlayServices.Wearable.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./tagmanager/nuget/Xamarin.GooglePlayServices.TagManager.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
@@ -286,6 +293,7 @@ var buildSpec = new BuildSpec {
 		new NuGetInfo { NuSpec = "./firebase-database/nuget/Xamarin.Firebase.Database.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./firebase-database-connection/nuget/Xamarin.Firebase.Database.Connection.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./firebase-iid/nuget/Xamarin.Firebase.Iid.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./firebase-firestore/nuget/Xamarin.Firebase.Firestore.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./firebase-invites/nuget/Xamarin.Firebase.Invites.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./firebase-messaging/nuget/Xamarin.Firebase.Messaging.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./firebase-storage/nuget/Xamarin.Firebase.Storage.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
