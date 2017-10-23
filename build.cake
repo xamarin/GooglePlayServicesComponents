@@ -584,7 +584,9 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 
 		// Write out the nuspec from template
 		var nuspec = new FilePath ("./" + aar.BindingDir + "/nuget/" + aar.NugetId + ".template.nuspec");
-		var nuspecTxt = FileReadText (nuspec).Replace ("$aar-version$", VERSION_DESC);
+		var nuspecTxt = FileReadText (nuspec)
+							.Replace ("$aar-version$", VERSION_DESC)
+							.Replace ("$support-version$", SUPPORT_VERSION);
 		var newNuspec = nuspec.FullPath.Replace (".template.nuspec", ".nuspec");
 		FileWriteText (newNuspec, nuspecTxt);
 
