@@ -17,9 +17,9 @@
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-auth_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
-        <dependency id="Xamarin.GooglePlayServices.Auth.Api.Phone" version="[$version$]">
-        <dependency id="Xamarin.GooglePlayServices.Auth.Base" version="[$version$]"/>
-        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+        <dependency id="Xamarin.GooglePlayServices.Auth.Api.Phone" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Auth.Base" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
       </group>
