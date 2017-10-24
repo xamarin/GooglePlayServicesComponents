@@ -103,10 +103,6 @@
       <Project>{D705BF83-81FD-4CD9-AF3B-09C50FF42C83}</Project>
       <Name>Gass</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\clearcut\source\Clearcut.csproj">
-      <Project>{44CF1968-FCDA-4141-AE78-1EFD12DDF7D6}</Project>
-      <Name>Clearcut</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\tasks\source\Tasks.csproj">
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
