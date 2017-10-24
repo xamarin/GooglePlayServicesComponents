@@ -19,7 +19,6 @@ samples:
       - Base
       - Basement
       - Basement-BuildTasks
-      - Clearcut
       - Gass
       - Tasks
       - Ads
@@ -29,7 +28,6 @@ samples:
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
-          - Xamarin.GooglePlayServices.Clearcut
           - Xamarin.GooglePlayServices.Gass
           - Xamarin.GooglePlayServices.Tasks
           - Xamarin.GooglePlayServices.Ads

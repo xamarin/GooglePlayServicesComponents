@@ -96,10 +96,6 @@
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\clearcut\source\Clearcut.csproj">
-      <Project>{44CF1968-FCDA-4141-AE78-1EFD12DDF7D6}</Project>
-      <Name>Clearcut</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\gass\source\Gass.csproj">
       <Project>{D705BF83-81FD-4CD9-AF3B-09C50FF42C83}</Project>
       <Name>Gass</Name>
