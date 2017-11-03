@@ -309,6 +309,8 @@ var buildSpec = new BuildSpec {
 
 		// Type forwarder packages for backwards compatibility
 		new NuGetInfo { NuSpec = "./appindexing/nuget/Xamarin.GooglePlayServices.AppIndexing.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
+
+		new NuGetInfo { NuSpec = "./clearcut/nuget/Xamarin.GooglePlayServices.Clearcut.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 	},
 
 	Components = new [] {
@@ -679,6 +681,7 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 
 	var extraNuspecTemplates = new [] {
 		new FilePath ("./appindexing/nuget/Xamarin.GooglePlayServices.AppIndexing.template.nuspec"),
+		new FilePath ("./clearcut/nuget/Xamarin.GooglePlayServices.Clearcut.template.nuspec"),
 	};
 
 	foreach (var nuspec in extraNuspecTemplates) {

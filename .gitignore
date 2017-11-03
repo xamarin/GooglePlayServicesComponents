@@ -18,6 +18,7 @@ output/
 *.nuspec
 !*.template.nuspec
 */nuget/*.targets
+!obsolete.targets
 
 Resource.designer.cs
 component.yaml
