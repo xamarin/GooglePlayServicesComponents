@@ -15,6 +15,12 @@
 	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.ReflectedParcelable']" />
 	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.DowngradeableSafeParcel']" />
 
+
+	<add-node path="/api/package/*[@extends='com.google.android.gms.internal.zzbck']">
+		<implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+	</add-node>
 	<attr path="/api/package/*[@extends='com.google.android.gms.internal.zzbck']" name="extends">java.lang.Object</attr>
+
 	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.internal.zzbco']" />
 </metadata>
