@@ -22,6 +22,8 @@
   <files>
     <file src="clearcut/nuget/readme.txt" target="readme.txt" />
 
+    <file src="clearcut/nuget/readme.txt" target="content" />
+
     <file src="clearcut/nuget/obsolete.targets" target="build/MonoAndroid10/Xamarin.GooglePlaySerbvices.Clearcut.targets" />
   </files>
 </package>
