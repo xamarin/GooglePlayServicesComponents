@@ -1,21 +1,5 @@
 ﻿using System;
 using Android.Runtime;
-
-
-namespace Android.Gms.Games.Internal {
-
-	public partial class Zzc
-	{
-		IntPtr id_describeContents;
-
-		public int DescribeContents ()
-		{
-			if (id_describeContents == IntPtr.Zero)
-				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
-			return JNIEnv.CallIntMethod(Handle, id_describeContents);
-		}
-	}
-}
                
 namespace Android.Gms.Games.Achievement
 {
