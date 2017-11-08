@@ -703,7 +703,7 @@ Task ("ci-setup")
 
 	if (BuildSystem.IsRunningOnJenkins) {
 		buildNumber = BuildSystem.Jenkins.Environment.Build.BuildTag;
-		buildCommit = BuildSystem.Jenkins.Environment.Change.Id;
+		buildCommit = EnvironmentVariable("GIT_COMMIT") ?? buildCommit;
 	} else if (BuildSystem.IsRunningOnVSTS) {
 		buildNumber = BuildSystem.TFBuild.Environment.Build.Number;
 		buildCommit = BuildSystem.TFBuild.Environment.Repository.SourceVersion;
