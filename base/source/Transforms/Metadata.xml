@@ -56,6 +56,14 @@
 	
 	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzf']" />
 
-	<!-- Some classes extend internal obfuscated types, so just set them to objects -->
-	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='DataHolder']" name="extends">Java.Lang.Object</attr>
+
+	<add-node path="/api/package[@name='com.google.android.gms.common.data']/class[@name='BitmapTeleporter']">
+		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+	</add-node>
+	<add-node path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='GoogleSignInAccount']">
+		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+	</add-node>
+	<add-node path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='GoogleSignInOptions']">
+		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+	</add-node>
 </metadata>

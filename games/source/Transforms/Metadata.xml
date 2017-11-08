@@ -238,12 +238,6 @@
 	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.request']/class[@name='GameRequestCluster']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.request']/class[@name='GameRequestClusterCreator']" />
 
-	<remove-node path="/api/package[@name='com.google.android.gms.games']/interface[@name='Game']/implements[@name='android.os.Parcelable']" />
-	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer']/interface[@name='Participant']/implements[@name='android.os.Parcelable']" />
-	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer']/interface[@name='Invitation']/implements[@name='android.os.Parcelable']" />
-	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='Room']/implements[@name='android.os.Parcelable']" />
-	<remove-node path="/api/package[@name='com.google.android.gms.games']/interface[@name='Player']/implements[@name='android.os.Parcelable']" />
-
 	<!-- We don't want to subclass this type, it will change the base type on a bunch of things from past versions -->
 	<add-node path="/api/package/*[@extends='com.google.android.gms.common.internal.GamesAbstractSafeParcelable']">
 		<implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
@@ -251,10 +245,21 @@
 	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.GamesAbstractSafeParcelable']" name="extends">java.lang.Object</attr>
 	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.GamesAbstractSafeParcelable']" name="extends-generic-aware">java.lang.Object</attr>
 
-	
-	<attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zzc']" name="obfuscated">false</attr>
-<!--	<attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zzc']" name="managedName">InternalGamesParcelable</attr>-->
 
+	<!-- We don't want to subclass this type, it will change the base type on a bunch of things from past versions -->
+	<add-node path="/api/package/*[@extends='com.google.android.gms.games.internal.GamesDowngradeableSafeParcel']">
+		<implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+	</add-node>
+	<attr path="/api/package/*[@extends='com.google.android.gms.games.internal.GamesDowngradeableSafeParcel']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.games.internal.GamesDowngradeableSafeParcel']" name="extends-generic-aware">java.lang.Object</attr>
+
+
+
+	<add-node path="/api/package/*[@extends='com.google.android.gms.games.internal.zzc']">
+		<implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+	</add-node>
 	<attr path="/api/package/*[@extends='com.google.android.gms.games.internal.zzc']" name="extends">java.lang.Object</attr>
 	<attr path="/api/package/*[@extends='com.google.android.gms.games.internal.zzc']" name="extends-generic-aware">java.lang.Object</attr>
 </metadata>

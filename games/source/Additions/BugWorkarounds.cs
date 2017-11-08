@@ -21,17 +21,6 @@ namespace Android.Gms.Games.Achievement
 			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
 		}
 	}
-
-	public partial class AchievementEntity
-	{
-		IntPtr id_describeContents;
-		public unsafe global::System.Int32 DescribeContents()
-		{
-			if (id_describeContents == IntPtr.Zero)
-				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
-			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
-		}
-	}
 }
 
 
@@ -53,17 +42,6 @@ namespace Android.Gms.Games.Event
 		public Java.Lang.Object Freeze()
 		{
 			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
-		}
-	}
-
-	public partial class EventEntity
-	{
-		IntPtr id_describeContents;
-		public unsafe global::System.Int32 DescribeContents()
-		{
-			if (id_describeContents == IntPtr.Zero)
-				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
-			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
 		}
 	}
 }
@@ -130,20 +108,6 @@ namespace Android.Gms.Games.MultiPlayer
 		public Java.Lang.Object Freeze()
 		{
 			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
-		}
-	}
-}
-
-namespace Android.Gms.Games.MultiPlayer.TurnBased
-{
-	public partial class TurnBasedMatchEntity
-	{
-		IntPtr id_describeContents;
-		public unsafe global::System.Int32 DescribeContents()
-		{
-			if (id_describeContents == IntPtr.Zero)
-				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
-			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
 		}
 	}
 }
@@ -370,28 +334,6 @@ namespace Android.Gms.Games.Quest
 			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
 		}
 	}
-
-	public partial class QuestEntity
-	{
-		IntPtr id_describeContents;
-		public unsafe global::System.Int32 DescribeContents()
-		{
-			if (id_describeContents == IntPtr.Zero)
-				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
-			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
-		}
-	}
-
-	public partial class MilestoneEntity
-	{
-		IntPtr id_describeContents;
-		public unsafe global::System.Int32 DescribeContents()
-		{
-			if (id_describeContents == IntPtr.Zero)
-				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
-			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
-		}
-	}
 }
 
 
@@ -413,28 +355,6 @@ namespace Android.Gms.Games.Snapshot
 		public Java.Lang.Object Freeze()
 		{
 			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
-		}
-	}
-
-	public partial class SnapshotMetadataEntity
-	{
-		IntPtr id_describeContents;
-		public unsafe global::System.Int32 DescribeContents()
-		{
-			if (id_describeContents == IntPtr.Zero)
-				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
-			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
-		}
-	}
-
-	public partial class SnapshotEntity
-	{
-		IntPtr id_describeContents;
-		public unsafe global::System.Int32 DescribeContents()
-		{
-			if (id_describeContents == IntPtr.Zero)
-				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
-			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
 		}
 	}
 }
@@ -491,17 +411,6 @@ namespace Android.Gms.Games.Request
 	//            return (Java.Lang.Object) global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallObjectMethod  (Handle, id_get, new JValue (position)), JniHandleOwnership.TransferLocalRef);
 	//        }
 	//    }
-
-	public partial class GameRequestEntity
-	{
-		IntPtr id_describeContents;
-		public unsafe global::System.Int32 DescribeContents()
-		{
-			if (id_describeContents == IntPtr.Zero)
-				id_describeContents = JNIEnv.GetMethodID(class_ref, "describeContents", "()I");
-			return JNIEnv.CallIntMethod(((global::Java.Lang.Object)this).Handle, id_describeContents);
-		}
-	}
 }
 
 namespace Android.Gms.Games.Stats
