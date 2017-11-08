@@ -693,9 +693,30 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 	}
 });
 
-Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
+Task ("ci-setup")
+	.WithCriteria (!BuildSystem.IsLocalBuild)
+	.Does (() => 
+{
+	var buildCommit = "DEV";
+	var buildNumber = "DEBUG";
+	var buildTimestamp = DateTime.UtcNow.ToString ();
 
-Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("genapi").IsDependentOn ("libs-base");
+	if (BuildSystem.IsRunningOnJenkins) {
+		buildNumber = BuildSystem.Jenkins.Environment.Build.BuildTag;
+		buildCommit = BuildSystem.Jenkins.Environment.Change.Id;
+	} else if (BuildSystem.IsRunningOnVSTS) {
+		buildNumber = BuildSystem.TFBuild.Environment.Build.Number;
+		buildCommit = BuildSystem.TFBuild.Environment.Repository.SourceVersion;
+	}
+
+	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_COMMIT}", buildCommit);
+	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_NUMBER}", buildNumber);
+	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_TIMESTAMP}", buildTimestamp);
+});
+
+Task ("nuget").IsDependentOn ("ci-setup").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
+
+Task ("libs").IsDependentOn ("ci-setup").IsDependentOn ("nuget-setup").IsDependentOn ("genapi").IsDependentOn ("libs-base");
 
 Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (() => {
 
