@@ -216,7 +216,7 @@ var buildSpec = new BuildSpec {
 
 	Samples = new [] {
 		new DefaultSolutionBuilder { SolutionPath = "./ads/samples/AdMobSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
-		new DefaultSolutionBuilder { SolutionPath = "./analytics/samples/AnalyticsSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		//new DefaultSolutionBuilder { SolutionPath = "./analytics/samples/AnalyticsSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 		new DefaultSolutionBuilder { SolutionPath = "./appinvite/samples/AppInviteSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 		new DefaultSolutionBuilder { SolutionPath = "./cast/samples/CastingCall.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 		new DefaultSolutionBuilder { SolutionPath = "./drive/samples/DriveSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
@@ -310,6 +310,7 @@ var buildSpec = new BuildSpec {
 		// Type forwarder packages for backwards compatibility
 		new NuGetInfo { NuSpec = "./appindexing/nuget/Xamarin.GooglePlayServices.AppIndexing.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 
+		// Empty package for backwards compatibility
 		new NuGetInfo { NuSpec = "./clearcut/nuget/Xamarin.GooglePlayServices.Clearcut.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
 	},
 
@@ -443,7 +444,9 @@ Task ("diff")
 	FileWriteText ("./output/missing-metadata.txt", metaLog);
 });
 
-Task ("merge").IsDependentOn ("libs").Does (() =>
+Task ("merge")
+	.IsDependentOn ("libs") 
+	.Does (() =>
 {
 	if (FileExists ("./output/GooglePlayServices.Merged.dll"))
 		DeleteFile ("./output/GooglePlayServices.Merged.dll");
@@ -463,7 +466,9 @@ Task ("merge").IsDependentOn ("libs").Does (() =>
 	});
 });
 
-Task ("clean").IsDependentOn ("clean-base").Does (() =>
+Task ("clean")
+	.IsDependentOn ("clean-base")
+	.Does (() =>
 {
 	if (FileExists ("./generated.targets"))
 		DeleteFile ("./generated.targets");
@@ -474,19 +479,9 @@ Task ("clean").IsDependentOn ("clean-base").Does (() =>
 	CleanDirectories ("./**/packages");
 });
 
-Task ("cleanwin").Does (() =>
-{
-	if (FileExists ("./generated.targets"))
-		DeleteFile ("./generated.targets");
-
-	if (DirectoryExists ("./externals"))
-		DeleteDirectory ("./externals", true);
-
-	CleanDirectories ("./**/packages");
-});
-
-
-Task ("component-docs").Does (() =>
+Task ("component-docs")
+	.IsDependentOn ("component-setup")
+	.Does (() =>
 {
 	var gettingStartedTemplates = new Dictionary<string, string> ();
 
@@ -553,7 +548,8 @@ Task ("component-docs").Does (() =>
 	}
 });
 
-Task ("component-setup").Does (() =>
+Task ("component-setup")
+	.Does (() =>
 {
 	var yamls = GetFiles ("./**/component/component.template.yaml");
 	foreach (var yaml in yamls) {
@@ -577,10 +573,14 @@ Task ("component-setup").Does (() =>
 		DeleteFiles ("./output/*.xam");
 });
 
-Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base");
+Task ("component")
+	.IsDependentOn ("component-docs")
+	.IsDependentOn ("component-base");
 
-Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
-
+Task ("nuget-setup")
+	.IsDependentOn ("buildtasks")
+	.Does (() =>
+{
 	var templateText = FileReadText ("./template.targets");
 
 	if (FileExists ("./generated.targets"))
@@ -714,11 +714,10 @@ Task ("ci-setup")
 	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_TIMESTAMP}", buildTimestamp);
 });
 
-Task ("nuget").IsDependentOn ("ci-setup").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
-
-Task ("libs").IsDependentOn ("ci-setup").IsDependentOn ("nuget-setup").IsDependentOn ("genapi").IsDependentOn ("libs-base");
-
-Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (() => {
+Task ("genapi")
+	.IsDependentOn ("libs-base")
+	.Does (() =>
+{
 
 	var GenApiToolPath = GetFiles ("./tools/**/GenAPI.exe").FirstOrDefault ();
 
@@ -753,7 +752,8 @@ Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (()
 	CopyFile ("./appindexing/source/bin/" + BUILD_CONFIG + "/Xamarin.GooglePlayServices.AppIndexing.dll", "./output/Xamarin.GooglePlayServices.AppIndexing.dll");
 });
 
-Task ("buildtasks").Does (() =>
+Task ("buildtasks")
+	.Does (() =>
 {
 	NuGetRestore ("./basement/buildtasks/Basement-BuildTasks.csproj");
 
@@ -762,6 +762,83 @@ Task ("buildtasks").Does (() =>
 	CopyFile ("./basement/buildtasks/bin/Release/Xamarin.GooglePlayServices.Basement.targets", "./basement/nuget/merge.targets");
 });
 
+Task ("package-samples")
+	.IsDependentOn ("nuget")
+	.IsDependentOn ("samples")
+	.Does (() => 
+{
+	EnsureDirectoryExists ("./output/samples/");
+
+	foreach (var sampleSln in buildSpec.Samples) {
+
+		var slnPath = new FilePath ((sampleSln as DefaultSolutionBuilder).SolutionPath);
+		Information ("Packing sample: {0}", slnPath);
+		
+		var tempPath = new DirectoryPath ("./output/samples/tmp/");
+		if (DirectoryExists (tempPath))
+			DeleteDirectory (tempPath, true);
+		EnsureDirectoryExists (tempPath);
+
+		var sampleDir = slnPath.GetDirectory ();
+		
+		CleanDirectories (sampleDir.FullPath.TrimEnd ('/') + "/**/bin");
+		CleanDirectories (sampleDir.FullPath.TrimEnd ('/') + "/**/obj");
+
+		CopyDirectory (sampleDir, tempPath);
+
+		var csprojGlobPattern = tempPath.FullPath.TrimEnd ('/') + "/**/*.csproj";
+		var csprojs = GetFiles (csprojGlobPattern);
+
+		
+		foreach (var csproj in csprojs) {
+
+			Information ("Fixing CSPROJ: {0}", csproj);
+
+			var xcsproj = System.Xml.Linq.XDocument.Load (MakeAbsolute (csproj).FullPath);
+			System.Xml.Linq.XNamespace nsRoot = xcsproj.Root.Name.Namespace;
+
+			var prItemGroup = System.Xml.XPath.Extensions.XPathSelectElements (xcsproj, "//ItemGroup/PackageReference/..").FirstOrDefault();
+			var prElems = System.Xml.XPath.Extensions.XPathSelectElements (xcsproj, "//ProjectReference[@NugetId!='']");
+
+			foreach (var prElem in prElems) {
+				Information ("Found element");
+				var nugetId = prElem.Attribute (nsRoot + "NugetId")?.Value;
+				var aarInfo = AAR_INFOS.First (a => a.NugetId == nugetId);
+				var nugetVersion = aarInfo.NuGetVersion;
+
+				Information ("Adding PackageReference: {0}, {1}", nugetId, nugetVersion);
+
+				prItemGroup.Add (new System.Xml.Linq.XElement (nsRoot + "PackageReference",
+					new System.Xml.Linq.XAttribute (nsRoot + "Include", nugetId),
+					new System.Xml.Linq.XAttribute (nsRoot + "Version", nugetVersion)));
+
+				prElem.Remove ();
+			}
+
+			xcsproj.Save (MakeAbsolute (csproj).FullPath);
+		}
+
+		ZipCompress(tempPath, "./output/samples/" + slnPath.GetFilenameWithoutExtension() + ".zip");
+
+		DeleteDirectory (tempPath, true);
+	}
+});
+
+Task ("nuget")
+	.IsDependentOn ("libs")
+	.IsDependentOn ("nuget-setup")
+	.IsDependentOn ("nuget-base");
+
+Task ("libs")
+	.IsDependentOn ("externals")
+	.IsDependentOn ("nuget-setup")
+	.IsDependentOn ("libs-base")
+	.IsDependentOn ("genapi");
+
+Task ("ci")
+	.IsDependentOn ("ci-setup")
+	.IsDependentOn ("diff")
+	.IsDependentOn ("package-samples");
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
 
