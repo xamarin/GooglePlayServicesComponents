@@ -20,19 +20,12 @@
 
   <PropertyGroup>
     <ProcessGoogleServicesJsonTaskFilename Condition=" '$(ProcessGoogleServicesJsonTaskFilename)' == '' ">$(MSBuildThisFileDirectory)Xamarin.GooglePlayServices.Tasks.dll</ProcessGoogleServicesJsonTaskFilename>
-  </PropertyGroup>
+    <ProcessGoogleServicesJsonResDirName Condition=" '$(ProcessGoogleServicesJsonResDirName)' == '' ">googsvcsjson</ProcessGoogleServicesJsonResDirName>
 
-  <!-- set some defaults -->
-  <PropertyGroup>
-    <ProcessGoogleServicesJsonDependsOn>
-       $(ProcessGoogleServicesJsonDependsOn);
-    </ProcessGoogleServicesJsonDependsOn>
-    <ProcessGoogleServicesJsonBeforeTargets>
-      _GenerateAndroidResourceDir;$(ProcessGoogleServicesJsonBeforeTargets);
-    </ProcessGoogleServicesJsonBeforeTargets>
-    <ProcessGoogleServicesJsonAfterTargets>
-      $(ProcessGoogleServicesJsonAfterTargets);
-    </ProcessGoogleServicesJsonAfterTargets>
+    <ProcessGoogleServicesJsonResDirPath>$(IntermediateOutputPath)$(ProcessGoogleServicesJsonResDirName)\</ProcessGoogleServicesJsonResDirPath>
+    <ProcessGoogleServicesJsonResStringsPath>$(ProcessGoogleServicesJsonResDirPath)values\goog_svcs_json.xml</ProcessGoogleServicesJsonResStringsPath>
+    <ProcessGoogleServicesJsonResXmlPath>$(ProcessGoogleServicesJsonResDirPath)xml\global_tracker.xml</ProcessGoogleServicesJsonResXmlPath>
+    <ProcessGoogleServicesJsonStampPath>$(IntermediateOutputPath)googsvcsjson.stamp</ProcessGoogleServicesJsonStampPath>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -49,49 +42,51 @@
 
   <!-- the build tasks -->
   <Target
+    Name="SetupGoogleServicesJson"
+    Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True'"
+    BeforeTargets="ProcessGoogleServicesJson">
+      
+    <ConvertToAbsolutePath Paths="$(ProcessGoogleServicesJsonResDirPath)">
+      <Output TaskParameter="AbsolutePaths" PropertyName="ProcessGoogleServicesJsonResDirPathAbs"/>
+    </ConvertToAbsolutePath>
+
+    <ItemGroup>
+        <LibraryResourceDirectories Condition="Exists ('$(ProcessGoogleServicesJsonResDirPathAbs)')" Include="$(ProcessGoogleServicesJsonResDirPathAbs)" />
+    </ItemGroup>
+  </Target>
+
+
+  <Target
     Name="ProcessGoogleServicesJson" 
     Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True'"
-    BeforeTargets="$(ProcessGoogleServicesJsonBeforeTargets)"
-    AfterTargets="$(ProcessGoogleServicesJsonAfterTargets)"
-    Inputs="@(GoogleServicesJson);@(AndroidResource);$(MSBuildProjectFullPath);$(MSBuildAllProjects);"
-    Outputs="$(IntermediateOutputPath)ProcessGoogleServicesJson.stamp">
+    BeforeTargets="_GenerateAndroidResourceDir"
+    AfterTargets="SetupGoogleServicesJson"
+    DependsOnTargets="SetupGoogleServicesJson"
+    Inputs="@(GoogleServicesJson)"
+    Outputs="$(IntermediateOutputPath)googsvcsjson.stamp">
 
     <ProcessGoogleServicesJson
         GoogleServicesJsons="@(GoogleServicesJson)"
-        IntermediateOutputPath="$(IntermediateOutputPath)"
-        MonoAndroidResDirIntermediate="$(MonoAndroidResDirIntermediate)"
+        ResPath="$(ProcessGoogleServicesJsonResDirPath)"
+        StampPath="$(ProcessGoogleServicesJsonStampPath)"
+        ResStringsPath="$(ProcessGoogleServicesJsonResStringsPath)"
+        ResXmlPath="$(ProcessGoogleServicesJsonResXmlPath)"
         AndroidPackageName="$(_AndroidPackage)">
-            <!-- Source of generated resource file, to be copied into obj/Debug/res/   eg: Resources\values\goog_svcs_json.xml -->
-            <Output ItemName="AndroidResource" TaskParameter="GoogleServicesGeneratedResourcesSource" />
-            <!-- Destination of resource file, where it should go inside obj/Debug/res/  eg: obj\Debug\res\values\goog_svcs_json.xml - should use full path -->
-            <Output ItemName="_AndroidResourceDest" TaskParameter="GoogleServicesGeneratedResourcesDest" />
+          <Output TaskParameter="ResPathAbs" ItemName="LibraryResourceDirectories" />
     </ProcessGoogleServicesJson>
 
     <ItemGroup>
-        <FileWrites Include="$(IntermediateOutputPath)ProcessGoogleServicesJson.stamp" />
+        <FileWrites Condition="Exists ('$(ProcessGoogleServicesJsonResStringsPath)')" Include="$(ProcessGoogleServicesJsonResStringsPath)" />
+        <FileWrites Condition="Exists ('$(ProcessGoogleServicesJsonResXmlPath)')" Include="$(ProcessGoogleServicesJsonResXmlPath)" />
     </ItemGroup>
   </Target>
 
   <Target Name="_CleanProcessGoogleServicesJson">
-    <RemoveDir Directories="$(IntermediateOutputPath)procgoogsvcsjson" Condition="Exists ('$(IntermediateOutputPath)procgoogsvcsjson' )" />
-    <Delete Files="$(IntermediateOutputPath)ProcessGoogleServicesJson.stamp" Condition="Exists ('$(IntermediateOutputPath)ProcessGoogleServicesJson.stamp' )" />
+    <RemoveDir Directories="$(ProcessGoogleServicesJsonResDirPath)" Condition="Exists ('$(ProcessGoogleServicesJsonResDirPath)' )" />
+    <Delete Files="$(ProcessGoogleServicesJsonStampPath)" />
   </Target>
 
-  <!-- 
-  IncrementalClean in msbuild will try and remove files from obj/$(Configuration)/res/* that we added if they aren't in the `_CleanCurrentFileWrites` item group
-  This target just ensures the files we might generate actually end up in the that item group so they aren't removed on build
-   -->
-  <Target Name="_RegisterGoogleServicesJsonResourcesWithFileWrites" BeforeTargets="IncrementalClean;_GenerateAndroidResourceDir">  
-    <CreateItem Include="$(IntermediateOutputPath)res\values\goog_svcs_json.xml;$(IntermediateOutputPath)res\xml\global_tracker.xml">  
-      <Output TaskParameter="Include" ItemName="_FilesToRegister" />  
-    </CreateItem>  
-    <CreateItem Include="$([System.IO.Path]::GetFullPath('%(_FilesToRegister.Identity)'))"
-        Condition="Exists('%(_FilesToRegister.Identity)')">  
-      <Output TaskParameter="Include" ItemName="_CleanCurrentFileWrites" />  
-    </CreateItem>
-  </Target>
-
-
+	
   <!-- If set to False, here, or elsewhere, we won't try to add this optional library to proguard invocations -->
   <PropertyGroup Condition=" $(IncludeOrgApacheHttpLegacyJarInProguard) == '' ">
     <IncludeOrgApacheHttpLegacyJarInProguard>True</IncludeOrgApacheHttpLegacyJarInProguard>
