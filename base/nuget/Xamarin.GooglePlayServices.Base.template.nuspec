@@ -7,11 +7,9 @@
     <authors>Xamarin Inc.</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <summary>Xamarin.Android Bindings for Google Play Services - Base $aar-version$ - do not install directly</summary>
+    <summary>Xamarin.Android Bindings for Google Play Services - Base $aar-version$</summary>
     <description>
-      Xamarin.Android Bindings for Google Play Services - Base $aar-version$ - You should not install this package directly
-
-      Instead of installing this package directly, install the specific package(s) you need.
+      Xamarin.Android Bindings for Google Play Services - Base $aar-version$
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
     <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
