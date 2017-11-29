@@ -50,6 +50,16 @@ namespace GooglePlayServices.Tests
 		}
 
 		[Fact]
+		public void Location_Places_UI_PlacePicker_IntentBuilder_Exists()
+		{
+			var ib = new Android.Gms.Location.Places.UI.PlacePicker.IntentBuilder ();
+
+			Console.WriteLine("Location.Places.UI.PlacePicker.IntentBuilder: {0}", ib != null);
+
+			Assert.True(ib != null);
+		}
+
+		[Fact]
 		public void Location_Places_UI_PlaceAutocomplete_Exists()
 		{
 			var resErr = Android.Gms.Location.Places.UI.PlaceAutocomplete.ResultError;

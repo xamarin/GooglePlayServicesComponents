@@ -70,6 +70,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\Menu.axml" />
   </ItemGroup>
+  <Import Project="..\..\..\generated.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\..\..\basement\source\Basement.csproj">
@@ -89,5 +90,4 @@
       <Name>Tasks</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="..\..\..\generated.targets" />
 </Project>

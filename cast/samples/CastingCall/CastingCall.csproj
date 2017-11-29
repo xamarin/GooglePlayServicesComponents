@@ -80,13 +80,13 @@
       <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
       <Name>Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\source\Cast.csproj">
-      <Project>{C1A9C587-B744-44D2-AD42-14386D424667}</Project>
-      <Name>Cast</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\basement\source\Basement.csproj">
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\source\Cast.csproj">
+      <Project>{C1A9C587-B744-44D2-AD42-14386D424667}</Project>
+      <Name>Cast</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\tasks\source\Tasks.csproj">
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
