@@ -709,9 +709,14 @@ Task ("ci-setup")
 		buildCommit = BuildSystem.TFBuild.Environment.Repository.SourceVersion;
 	}
 
-	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_COMMIT}", buildCommit);
-	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_NUMBER}", buildNumber);
-	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_TIMESTAMP}", buildTimestamp);
+	foreach (var art in AAR_INFOS) {
+		var glob = "./" + art.BindingDir + "/**/source/**/AssemblyInfo.cs";
+
+		ReplaceTextInFiles(glob, "{NUGET_VERSION}", art.NuGetVersion);
+		ReplaceTextInFiles(glob, "{BUILD_COMMIT}", buildCommit);
+		ReplaceTextInFiles(glob, "{BUILD_NUMBER}", buildNumber);
+		ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", buildTimestamp);
+	}
 });
 
 Task ("genapi")
