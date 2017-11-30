@@ -29,7 +29,7 @@
                 <Url>$XbdUrl$</Url>
                 <ToFile>$AarKey$-$AarVersion$.aar</ToFile>
                 <Kind>Uncompressed</Kind>
-                <Md5>$XbdMd5$</Md5>
+                <!-- <Md5>$XbdMd5$</Md5> -->
             </XamarinBuildDownload>
         </ItemGroup>
 
