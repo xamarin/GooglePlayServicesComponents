@@ -163,12 +163,12 @@ namespace AndroidPayQuickstart
      * @return {@link NotifyTransactionStatusRequest} instance
      */
 
-        public static NotifyTransactionStatusRequest CreateNotifyTransactionStatusRequest (string googleTransactionId, int status) {
-            return NotifyTransactionStatusRequest.NewBuilder ()
-                .SetGoogleTransactionId (googleTransactionId)
-                .SetStatus (status)
-                .Build ();
-        }
+        //public static NotifyTransactionStatusRequest CreateNotifyTransactionStatusRequest (string googleTransactionId, int status) {
+        //    return NotifyTransactionStatusRequest.NewBuilder ()
+        //        .SetGoogleTransactionId (googleTransactionId)
+        //        .SetStatus (status)
+        //        .Build ();
+        //}
 
         /**
      * @param micros Amount micros

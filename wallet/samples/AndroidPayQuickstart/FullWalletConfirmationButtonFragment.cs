@@ -345,9 +345,9 @@ namespace AndroidPayQuickstart
             // to your server and get back success or failure. If you used Stripe for processing,
             // you can get the token from fullWallet.getPaymentMethodToken()
             // The following code assumes a successful response and calls notifyTransactionStatus
-            WalletClass.Payments.NotifyTransactionStatus (mGoogleApiClient,
-                WalletUtil.CreateNotifyTransactionStatusRequest (fullWallet.GoogleTransactionId,
-                    NotifyTransactionStatusRequest.Status.Success));
+            //WalletClass.Payments.NotifyTransactionStatus (mGoogleApiClient,
+                //WalletUtil.CreateNotifyTransactionStatusRequest (fullWallet.GoogleTransactionId,
+                    //NotifyTransactionStatusRequest.Status.Success));
 
             Intent intent = new Intent(Activity, typeof (OrderCompleteActivity));
             intent.SetFlags (ActivityFlags.ClearTask | ActivityFlags.NewTask);
