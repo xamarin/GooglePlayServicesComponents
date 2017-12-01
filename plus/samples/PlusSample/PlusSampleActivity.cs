@@ -29,7 +29,6 @@ namespace PlusSample
             //SAMPLES_MAP.Add ("List & remove moments", typeof (ListMomentsActivity));
             SAMPLES_MAP.Add ("List visible people (circled by you)", typeof (ListVisiblePeopleActivity));
             SAMPLES_MAP.Add ("List connected people", typeof (ListConnectedPeopleActivity));
-            SAMPLES_MAP.Add ("License info", typeof (LicenseActivity));
         }
             
         protected override void OnCreate (Bundle savedInstanceState) 

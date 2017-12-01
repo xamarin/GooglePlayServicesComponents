@@ -61,7 +61,6 @@
     <Compile Include="PlusSampleActivity.cs" />
     <Compile Include="ShareActivity.cs" />
     <Compile Include="SignInActivity.cs" />
-    <Compile Include="LicenseActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
