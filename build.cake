@@ -64,7 +64,7 @@ var FIREBASE_AAR_VERSION = PLAY_AAR_VERSION;
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
 
-var CPU_COUNT = System.Environment.ProcessorCount;
+var CPU_COUNT = 1;// System.Environment.ProcessorCount;
 // MSBuild in < Mono 5.0 has some issues with multi cpu count being specified causing errors
 if (!IsRunningOnWindows())
 	CPU_COUNT = 1;
