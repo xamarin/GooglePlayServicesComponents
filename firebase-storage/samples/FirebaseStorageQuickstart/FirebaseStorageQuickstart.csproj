@@ -57,7 +57,6 @@
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
-    <None Include="Resources\.DS_Store" />
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -114,5 +113,5 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\..\generated.targets" />
-  <Import Project="..\..\..\basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Basement.targets" />
+  <!--<Import Project="..\..\..\basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Basement.targets" />-->
 </Project>
