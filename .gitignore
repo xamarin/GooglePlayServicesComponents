@@ -1,4 +1,5 @@
-tools/
+tools/**
+!tools/packages.config
 bin/
 obj/
 packages/
