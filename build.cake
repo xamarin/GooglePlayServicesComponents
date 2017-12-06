@@ -5,6 +5,7 @@
 #tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 #tool nuget:?package=NUnit.Runners&version=2.6.4
 #tool nuget:?package=Paket
+#tool nuget:?package=vswhere
 
 // Dependencies of Cake Addins - this should be removed once 
 // Cake 0.23 is out
@@ -54,6 +55,9 @@ var PLAY_NUGET_VERSION = "60.1142.0" + COMMON_NUGET_VERSION;
 var PLAY_AAR_VERSION = "11.4.2";
 var VERSION_DESC = "11.4.2";
 var SUPPORT_VERSION = "26.0.2";
+
+var ANDROID_API_LEVEL = "26";
+var ANDROID_SDK_VERSION = "8.0";
 
 var MAVEN_REPO_BASE_URL = "https://dl.google.com/dl/android/maven2/com/google/";
 
@@ -154,9 +158,14 @@ class AarInfo
 	public string Extension { get;set; }
 }
 
-var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/android-23/";
-if (IsRunningOnWindows ())
-	MONODROID_PATH = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.ProgramFilesX86)).Combine ("Reference Assemblies/Microsoft/Framework/MonoAndroid/v6.0/").FullPath;
+var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/android-" + ANDROID_API_LEVEL + "/";
+if (IsRunningOnWindows ()) {
+	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings {
+		Requires = "Component.Xamarin"
+	});
+
+	MONODROID_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/v" + ANDROID_SDK_VERSION).FullPath;
+}
 
 var MONO_PATH = "/Library/Frameworks/Mono.framework/Versions/Current";
 
@@ -170,6 +179,9 @@ if (IsRunningOnWindows ()) {
 	else
 		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
 }
+
+Information("MONODROID_PATH: {0}", MONODROID_PATH);
+Information("MSCORLIB_PATH: {0}", MSCORLIB_PATH);
 
 var buildsOnWinMac = BuildPlatforms.Windows | BuildPlatforms.Mac;
 
