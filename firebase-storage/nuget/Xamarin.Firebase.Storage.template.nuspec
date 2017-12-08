@@ -12,11 +12,11 @@
       Xamarin.Android Bindings for Firebase - Storage $aar-version$
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
+    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/firebase-storage_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.Firebase.Storage.Common" version="[$version$]"/>
         <dependency id="Xamarin.Firebase.Common" version="[$version$]"/>
@@ -25,8 +25,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.Firebase.Storage.dll" target="lib/MonoAndroid41" />
+    <file src="output/Xamarin.Firebase.Storage.dll" target="lib/MonoAndroid80" />
 
-    <file src="firebase-storage/nuget/Xamarin.Firebase.Storage.targets" target="build/MonoAndroid70" />
+    <file src="firebase-storage/nuget/Xamarin.Firebase.Storage.targets" target="build/MonoAndroid80" />
   </files>
 </package>

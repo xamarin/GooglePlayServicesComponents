@@ -27,5 +27,5 @@
 
 	<remove-node path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageException']/method[@name='getMessage' and count(parameter)=0]" />
 	
-<!--	<attr path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageTask']/method[@name='addOnFailureListener']" name="managedReturn">Android.Gms.Tasks.Task</attr>-->
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
 </metadata>

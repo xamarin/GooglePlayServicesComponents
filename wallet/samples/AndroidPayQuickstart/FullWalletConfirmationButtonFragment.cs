@@ -229,7 +229,7 @@ namespace AndroidPayQuickstart
                     } else if (data.HasExtra(WalletConstants.ExtraMaskedWallet)) {
                         // re-launch the activity with new masked wallet information
                         mMaskedWallet = data.GetParcelableExtra (WalletConstants.ExtraMaskedWallet).JavaCast<MaskedWallet> ();
-                        mActivityLaunchIntent.PutExtra (Constants.EXTRA_MASKED_WALLET, mMaskedWallet);
+                        mActivityLaunchIntent.PutExtra (Constants.EXTRA_MASKED_WALLET, mMaskedWallet.JavaCast<IParcelable>());
 
                         StartActivity(mActivityLaunchIntent);
                     }
@@ -345,13 +345,13 @@ namespace AndroidPayQuickstart
             // to your server and get back success or failure. If you used Stripe for processing,
             // you can get the token from fullWallet.getPaymentMethodToken()
             // The following code assumes a successful response and calls notifyTransactionStatus
-            WalletClass.Payments.NotifyTransactionStatus (mGoogleApiClient,
-                WalletUtil.CreateNotifyTransactionStatusRequest (fullWallet.GoogleTransactionId,
-                    NotifyTransactionStatusRequest.Status.Success));
+            //WalletClass.Payments.NotifyTransactionStatus (mGoogleApiClient,
+                //WalletUtil.CreateNotifyTransactionStatusRequest (fullWallet.GoogleTransactionId,
+                    //NotifyTransactionStatusRequest.Status.Success));
 
             Intent intent = new Intent(Activity, typeof (OrderCompleteActivity));
             intent.SetFlags (ActivityFlags.ClearTask | ActivityFlags.NewTask);
-            intent.PutExtra (Constants.EXTRA_FULL_WALLET, fullWallet);
+            intent.PutExtra (Constants.EXTRA_FULL_WALLET, fullWallet.JavaCast<IParcelable>());
 
             StartActivity(intent);
         }

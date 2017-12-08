@@ -4,7 +4,6 @@ using Android.App;
 using Android.OS;
 using Android.Support.V4.App;
 using Xunit;
-using Xunit.Extensions;
 
 namespace GooglePlayServices.Tests
 {
@@ -48,6 +47,16 @@ namespace GooglePlayServices.Tests
 			Console.WriteLine("Location.Places.UI.PlacePicker.ResultError: {0}", resErr);
 
 			Assert.True(resErr == 2);
+		}
+
+		[Fact]
+		public void Location_Places_UI_PlacePicker_IntentBuilder_Exists()
+		{
+			var ib = new Android.Gms.Location.Places.UI.PlacePicker.IntentBuilder ();
+
+			Console.WriteLine("Location.Places.UI.PlacePicker.IntentBuilder: {0}", ib != null);
+
+			Assert.True(ib != null);
 		}
 
 		[Fact]

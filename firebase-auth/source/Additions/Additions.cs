@@ -40,6 +40,11 @@ namespace Firebase.Auth
             return SendPasswordResetEmail (email).AsAsync ();
         }
 
+		public System.Threading.Tasks.Task SendPasswordResetEmailAsync (string email, ActionCodeSettings settings)
+		{
+			return SendPasswordResetEmail(email, settings).AsAsync();
+		}
+
         public System.Threading.Tasks.Task ApplyActionCodeAsync(string code)
         {
             return ApplyActionCode(code).AsAsync();
@@ -76,15 +81,26 @@ namespace Firebase.Auth
             return Delete ().AsAsync ();
         }
 
-        public System.Threading.Tasks.Task<GetTokenResult> GetTokenAsync (bool flag)
+		[Obsolete]
+        public System.Threading.Tasks.Task<GetTokenResult> GetTokenAsync (bool forceRefresh)
         {
-            return GetToken (flag).AsAsync<GetTokenResult> ();
+            return GetToken (forceRefresh).AsAsync<GetTokenResult> ();
         }
+
+		public System.Threading.Tasks.Task<GetTokenResult> GetIdTokenAsync(bool forceRefresh)
+		{
+			return GetIdToken(forceRefresh).AsAsync<GetTokenResult>();
+		}
 
         public System.Threading.Tasks.Task ReauthenticateAsync (AuthCredential credential)
         {
             return Reauthenticate (credential).AsAsync ();
         }
+
+		public System.Threading.Tasks.Task<IAuthResult> ReauthenticateAndRetrieveDataAsync(AuthCredential credential)
+		{
+			return ReauthenticateAndRetrieveData(credential).AsAsync<IAuthResult>();
+		}
 
         public System.Threading.Tasks.Task ReloadAsync ()
         {
@@ -101,6 +117,11 @@ namespace Firebase.Auth
             return UpdateEmail (email).AsAsync ();
         }
 
+		public System.Threading.Tasks.Task UpdatePhoneNumberAsync(PhoneAuthCredential phoneAuthCredential)
+		{
+			return UpdatePhoneNumber(phoneAuthCredential).AsAsync();
+		}
+
         public System.Threading.Tasks.Task UpdatePasswordAsync (string password)
         {
             return UpdatePassword (password).AsAsync ();
@@ -110,6 +131,11 @@ namespace Firebase.Auth
         {
             return UpdateProfile (userProfileChangeRequest).AsAsync ();
         }
+
+		public System.Threading.Tasks.Task SendEmailVerificationAsync(ActionCodeSettings settings)
+		{
+			return SendEmailVerification(settings).AsAsync();
+		}
     }
 }
 

@@ -7,6 +7,7 @@
 	<attr path="/api/package[@name='com.google.android.gms.nearby.internal.connection']" name="managedName">Android.Gms.Nearby.Internal.Connection</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.internal.connection.dev']" name="managedName">Android.Gms.Nearby.Internal.Connection.Dev</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.messages']" name="managedName">Android.Gms.Nearby.Messages</attr>
+	<attr path="/api/package[@name='com.google.android.gms.nearby.messages.audio']" name="managedName">Android.Gms.Nearby.Messages.Audio</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.messages.devices']" name="managedName">Android.Gms.Nearby.Messages.Devices</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.sharing']" name="managedName">Android.Gms.Nearby.Sharing</attr>
 
@@ -50,7 +51,20 @@
 	<remove-node path="/api/package[@name='com.google.android.gms.nearby.sharing']/class[@name='SharedContent']/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/package[@name='com.google.android.gms.nearby.sharing']/class[@name='ViewableItem']/method[contains(@name, 'zz')]" />
 
+	<remove-node path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='Payload.File']/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='Payload.Stream']/method[contains(@name, 'zz')]" />
+
 
 <!--	<remove-node path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='AppIdentifierCreator']/implements[@name='android.os.Parcelable.Creator']" />-->
 <!--	<remove-node path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='AppMetadataCreator']/implements[@name='android.os.Parcelable.Creator']" />-->
+
+	<!-- We don't want to subclass this type, it will change the base type on a bunch of things from past versions -->
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends-generic-aware">java.lang.Object</attr>
+	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.ReflectedParcelable']" />
+
+	<attr path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='Payload']/method[@name='getType' and count(parameter)=0]" name="propertyName">PayloadType</attr>
+	<attr path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='PayloadTransferUpdate']/method[@name='getStatus' and count(parameter)=0]" name="propertyName">TransferStatus</attr>
+
+
 </metadata>

@@ -14,11 +14,11 @@
       SafetyNet provides services for analyzing the configuration of a particular device, to make sure that apps function properly on a particular device and that users have a great experience.
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>http://components.xamarin.com/view/googleplayservices-safetynet/</projectUrl>
-    <licenseUrl>http://components.xamarin.com/license/googleplayservices-safetynet/</licenseUrl>
+    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
+    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-safetynet_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
@@ -26,8 +26,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.SafetyNet.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.GooglePlayServices.SafetyNet.dll" target="lib/MonoAndroid80" />
 
-    <file src="safetynet/nuget/Xamarin.GooglePlayServices.SafetyNet.targets" target="build/MonoAndroid70" />
+    <file src="safetynet/nuget/Xamarin.GooglePlayServices.SafetyNet.targets" target="build/MonoAndroid80" />
   </files>
 </package>

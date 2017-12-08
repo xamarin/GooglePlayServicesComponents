@@ -18,19 +18,20 @@
       The Barcode Scanner API detects barcodes in real time in any orientation. You can also detect and parse several barcodes in different formats at the same time.
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>http://components.xamarin.com/view/googleplayservices-vision/</projectUrl>
-    <licenseUrl>http://components.xamarin.com/license/googleplayservices-vision/</licenseUrl>
+    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
+    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-vision_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Vision.Common" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Vision.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.GooglePlayServices.Vision.dll" target="lib/MonoAndroid80" />
 
-    <file src="vision/nuget/Xamarin.GooglePlayServices.Vision.targets" target="build/MonoAndroid70" />
+    <file src="vision/nuget/Xamarin.GooglePlayServices.Vision.targets" target="build/MonoAndroid80" />
   </files>
 </package>

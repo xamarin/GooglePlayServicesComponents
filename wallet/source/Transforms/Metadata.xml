@@ -28,4 +28,6 @@
 
 	<attr path="/api/package[@name='com.google.android.gms.wallet']/class[@name='NotifyTransactionStatusRequest']/method[@name='getStatus' and count(parameter)=0]" name="managedName">TransactionStatus</attr>
 	<attr path="/api/package[@name='com.google.android.gms.wallet']/class[@name='LineItem']/method[@name='getRole' and count(parameter)=0]" name="managedName">LineItemRole</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.wallet.wobs']/class[@name='LoyaltyPointsBalance']/method[@name='getType' and count(parameter)=0]" name="managedName">LoyaltyPointsBalanceType</attr>
 </metadata>

@@ -17,4 +17,6 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
 	<attr path="/api/package[@name='com.google.firebase.iid']/class[@name='zzb']" name="obfuscated">false</attr>
+
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
 </metadata>

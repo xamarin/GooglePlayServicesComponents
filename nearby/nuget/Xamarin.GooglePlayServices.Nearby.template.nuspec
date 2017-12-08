@@ -14,19 +14,19 @@
       Nearby exposes simple publish and subscribe methods that rely on proximity. Your app publishes a payload that can be received by nearby subscribers. On top of this foundation, you can build a variety of user experiences to share messages and create real-time connections between nearby devices.
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>http://components.xamarin.com/view/googleplayservices-nearby/</projectUrl>
-    <licenseUrl>http://components.xamarin.com/license/googleplayservices-nearby/</licenseUrl>
+    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
+    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-nearby_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Nearby.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.GooglePlayServices.Nearby.dll" target="lib/MonoAndroid80" />
 
-    <file src="nearby/nuget/Xamarin.GooglePlayServices.Nearby.targets" target="build/MonoAndroid70" />
+    <file src="nearby/nuget/Xamarin.GooglePlayServices.Nearby.targets" target="build/MonoAndroid80" />
   </files>
 </package>

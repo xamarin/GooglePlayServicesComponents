@@ -12,18 +12,18 @@
       Xamarin.Android Bindings for Google Play Services - Gass $aar-version$
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
+    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-gass_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Gass.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.GooglePlayServices.Gass.dll" target="lib/MonoAndroid80" />
 
-    <file src="gass/nuget/Xamarin.GooglePlayServices.Gass.targets" target="build/MonoAndroid70" />
+    <file src="gass/nuget/Xamarin.GooglePlayServices.Gass.targets" target="build/MonoAndroid80" />
   </files>
 </package>

@@ -20,19 +20,19 @@
 
   <PropertyGroup>
     <ProcessGoogleServicesJsonTaskFilename Condition=" '$(ProcessGoogleServicesJsonTaskFilename)' == '' ">$(MSBuildThisFileDirectory)Xamarin.GooglePlayServices.Tasks.dll</ProcessGoogleServicesJsonTaskFilename>
+    <ProcessGoogleServicesJsonResDirName Condition=" '$(ProcessGoogleServicesJsonResDirName)' == '' ">googsvcsjson</ProcessGoogleServicesJsonResDirName>
+
+    <ProcessGoogleServicesJsonResDirPath>$(IntermediateOutputPath)$(ProcessGoogleServicesJsonResDirName)\</ProcessGoogleServicesJsonResDirPath>
+    <ProcessGoogleServicesJsonResStringsPath>$(ProcessGoogleServicesJsonResDirPath)values\goog_svcs_json.xml</ProcessGoogleServicesJsonResStringsPath>
+    <ProcessGoogleServicesJsonResXmlPath>$(ProcessGoogleServicesJsonResDirPath)xml\global_tracker.xml</ProcessGoogleServicesJsonResXmlPath>
+    <ProcessGoogleServicesJsonStampPath>$(IntermediateOutputPath)googsvcsjson.stamp</ProcessGoogleServicesJsonStampPath>
   </PropertyGroup>
 
-  <!-- set some defaults -->
   <PropertyGroup>
-    <ProcessGoogleServicesJsonDependsOn>
-       $(ProcessGoogleServicesJsonDependsOn);
-    </ProcessGoogleServicesJsonDependsOn>
-    <ProcessGoogleServicesJsonBeforeTargets>
-      _UpdateAndroidResgen;$(ProcessGoogleServicesJsonBeforeTargets);
-    </ProcessGoogleServicesJsonBeforeTargets>
-    <ProcessGoogleServicesJsonAfterTargets>
-      $(ProcessGoogleServicesJsonAfterTargets);
-    </ProcessGoogleServicesJsonAfterTargets>
+    <CleanDependsOn>
+      $(CleanDependsOn);
+      _CleanProcessGoogleServicesJson;
+    </CleanDependsOn>
   </PropertyGroup>
 
   <!-- include the task assembly -->
@@ -40,27 +40,70 @@
       AssemblyFile="Xamarin.GooglePlayServices.Tasks.dll" 
       TaskName="Xamarin.GooglePlayServices.Tasks.ProcessGoogleServicesJson" />
 
-	
   <!-- the build tasks -->
   <Target
+    Name="SetupGoogleServicesJson"
+    Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True'"
+    BeforeTargets="ProcessGoogleServicesJson">
+      
+    <ConvertToAbsolutePath Paths="$(ProcessGoogleServicesJsonResDirPath)">
+      <Output TaskParameter="AbsolutePaths" PropertyName="ProcessGoogleServicesJsonResDirPathAbs"/>
+    </ConvertToAbsolutePath>
+
+    <ItemGroup>
+        <LibraryResourceDirectories Condition="Exists ('$(ProcessGoogleServicesJsonResDirPathAbs)')" Include="$(ProcessGoogleServicesJsonResDirPathAbs)" />
+    </ItemGroup>
+  </Target>
+
+
+  <Target
     Name="ProcessGoogleServicesJson" 
-    Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True' AND '$(DesignTimeBuild)' != 'True'"
-    BeforeTargets="$(ProcessGoogleServicesJsonBeforeTargets)"
-    AfterTargets="$(ProcessGoogleServicesJsonAfterTargets)"
+    Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True'"
+    BeforeTargets="_GenerateAndroidResourceDir"
+    AfterTargets="SetupGoogleServicesJson"
+    DependsOnTargets="SetupGoogleServicesJson"
     Inputs="@(GoogleServicesJson)"
-    Outputs="$(IntermediateOutputPath)\ProcessGoogleServicesJson.stamp">
+    Outputs="$(IntermediateOutputPath)googsvcsjson.stamp">
 
     <ProcessGoogleServicesJson
         GoogleServicesJsons="@(GoogleServicesJson)"
-        IntermediateOutputPath="$(IntermediateOutputPath)"
-        MonoAndroidResDirIntermediate="$(MonoAndroidResDirIntermediate)"
+        ResPath="$(ProcessGoogleServicesJsonResDirPath)"
+        StampPath="$(ProcessGoogleServicesJsonStampPath)"
+        ResStringsPath="$(ProcessGoogleServicesJsonResStringsPath)"
+        ResXmlPath="$(ProcessGoogleServicesJsonResXmlPath)"
         AndroidPackageName="$(_AndroidPackage)">
-            <Output ItemName="_AndroidResourceDest" TaskParameter="GoogleServicesGeneratedResources" />
-            <Output ItemName="FileWrites" TaskParameter="GoogleServicesGeneratedResources" />
+          <Output TaskParameter="ResPathAbs" ItemName="LibraryResourceDirectories" />
     </ProcessGoogleServicesJson>
 
     <ItemGroup>
-        <FileWrites Include="$(IntermediateOutputPath)\ProcessGoogleServicesJson.stamp" />
+        <FileWrites Condition="Exists ('$(ProcessGoogleServicesJsonResStringsPath)')" Include="$(ProcessGoogleServicesJsonResStringsPath)" />
+        <FileWrites Condition="Exists ('$(ProcessGoogleServicesJsonResXmlPath)')" Include="$(ProcessGoogleServicesJsonResXmlPath)" />
+    </ItemGroup>
+  </Target>
+
+  <Target Name="_CleanProcessGoogleServicesJson">
+    <RemoveDir Directories="$(ProcessGoogleServicesJsonResDirPath)" Condition="Exists ('$(ProcessGoogleServicesJsonResDirPath)' )" />
+    <Delete Files="$(ProcessGoogleServicesJsonStampPath)" />
+  </Target>
+
+	
+  <!-- If set to False, here, or elsewhere, we won't try to add this optional library to proguard invocations -->
+  <PropertyGroup Condition=" $(IncludeOrgApacheHttpLegacyJarInProguard) == '' ">
+    <IncludeOrgApacheHttpLegacyJarInProguard>True</IncludeOrgApacheHttpLegacyJarInProguard>
+  </PropertyGroup>
+
+  <!-- 
+  Play Services still references org.apache.http.legacy.jar, however this lib is optional and not included in the proguard
+  call by default.  This target will add this external library, if it exists in the ANDROID_HOME/platform/android-ZZ/optional/ folder
+  For the given api level (ZZ) unless the property is explicitly set to override this behaviour
+  -->
+  <Target Name="AddOrgApacheHttpLegacyJarInProguardExternalJavaLibs"
+      DependsOnTargets="_ResolveMonoAndroidSdks;_ValidateAndroidPackageProperties"
+      AfterTargets="_ResolveMonoAndroidSdks;_ValidateAndroidPackageProperties"
+      BeforeTargets="Proguard"
+      Condition="$(IncludeOrgApacheHttpLegacyJarInProguard) == 'True' and Exists ('$(AndroidSdkDirectory)/platforms/android-$(_AndroidTargetSdkVersion)/optional/org.apache.http.legacy.jar')">
+    <ItemGroup>
+      <AndroidExternalJavaLibrary Include="$(AndroidSdkDirectory)/platforms/android-$(_AndroidTargetSdkVersion)/optional/org.apache.http.legacy.jar" />
     </ItemGroup>
   </Target>
 </Project>

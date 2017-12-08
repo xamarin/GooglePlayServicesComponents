@@ -4,6 +4,7 @@ using Android.Widget;
 using Android.Gms.Wallet.Fragment;
 using Android.Content;
 using Android.Runtime;
+using Android.OS;
 
 namespace AndroidPayQuickstart
 {
@@ -168,7 +169,7 @@ namespace AndroidPayQuickstart
         private void launchConfirmationPage (MaskedWallet maskedWallet) {
             var intent = new Intent(this, typeof (ConfirmationActivity));
             intent.PutExtra (Constants.EXTRA_ITEM_ID, mItemId);
-            intent.PutExtra (Constants.EXTRA_MASKED_WALLET, maskedWallet);
+            intent.PutExtra (Constants.EXTRA_MASKED_WALLET, maskedWallet.JavaCast<IParcelable>());
             StartActivity (intent);
         }
 

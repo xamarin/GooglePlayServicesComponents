@@ -56,4 +56,8 @@
 	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='Places']/field[@name='PLACE_DETECTION_API']" name="managedName">PLACE_DETECTION_API</attr>
 	<attr path="/api/package[@name='com.google.android.gms.location']/class[@name='LocationServices']/field[@name='API']" name="managedName">API</attr>
 
+
+	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='AutocompletePredictionBufferResponse']" name="extends">com.google.android.gms.common.api.Response</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.location.places.ui']/class[@name='PlacePicker.IntentBuilder']" name="extends">java.lang.Object</attr>	
 </metadata>

@@ -2,29 +2,28 @@
 <package>
   <metadata>
     <id>Xamarin.GooglePlayServices.Clearcut</id>
-    <title>Xamarin Google Play Services - Clearcut</title>
+    <title>OBSOLETE: Xamarin Google Play Services - Clearcut</title>
     <version>$version$</version>
     <authors>Xamarin Inc.</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <summary>Xamarin.Android Bindings for Google Play Services - Clearcut $aar-version$</summary>
+    <summary>OBSOLETE: Xamarin.Android Bindings for Google Play Services - Clearcut</summary>
     <description>
-      Xamarin.Android Bindings for Google Play Services - Clearcut $aar-version$
+      PLEASE UNINSTALL THIS PACKAGE
+
+      This package is an empty placeholder for the Xamarin.Android Bindings for Google Play Services - Clearcut
+      New versions of this library are no longer shipped and this nuget package should be uninstalled from your projects.
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
+    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-clearcut_128x128.png</iconUrl>
-    <dependencies>
-      <group targetFramework="MonoAndroid70">
-        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
-        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
-      </group>
-    </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Clearcut.dll" target="lib/MonoAndroid70" />
+    <file src="clearcut/nuget/readme.txt" target="readme.txt" />
 
-    <file src="clearcut/nuget/Xamarin.GooglePlayServices.Clearcut.targets" target="build/MonoAndroid70" />
+    <file src="clearcut/nuget/readme.txt" target="content" />
+
+    <file src="clearcut/nuget/obsolete.targets" target="build/MonoAndroid10/Xamarin.GooglePlaySerbvices.Clearcut.targets" />
   </files>
 </package>

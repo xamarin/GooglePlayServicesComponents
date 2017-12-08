@@ -19,4 +19,7 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
 	<attr path="/api/package/class[@extends='android.app.IntentService']" name="extends">mono.android.app.IntentService</attr>
+
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[starts-with(@name, 'm')]" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/interface[starts-with(@name, 'm')]" />
 </metadata>

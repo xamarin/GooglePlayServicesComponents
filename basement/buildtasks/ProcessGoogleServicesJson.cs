@@ -9,203 +9,197 @@ using System.Xml;
 
 namespace Xamarin.GooglePlayServices.Tasks
 {
-    public class ProcessGoogleServicesJson : Task
-    {
-        const string RESFILE_VALUES = "goog_svcs_json.xml";
-        const string RESFILE_XML = "global_tracker.xml";
+	public class ProcessGoogleServicesJson : Task
+	{
+		[Required]
+		public ITaskItem ResStringsPath { get; set; }
 
-        [Output]
-        public ITaskItem[] GoogleServicesGeneratedResources { get; set; }
+		[Required]
+		public ITaskItem ResXmlPath { get; set; }
 
-        [Required]
-        public string AndroidPackageName { get; set; }
+		[Required]
+		public ITaskItem StampPath { get; set; }
 
-        [Required]
-        public ITaskItem[] GoogleServicesJsons { get; set; }
+		[Required]
+		public string AndroidPackageName { get; set; }
 
-        [Required]
-        public string IntermediateOutputPath { get; set; }
+		[Required]
+		public ITaskItem[] GoogleServicesJsons { get; set; }
 
-        [Required]
-        public string MonoAndroidResDirIntermediate { get;set; }
+		[Required]
+		public ITaskItem ResPath { get; set; }
 
-        public override bool Execute ()
-        {
-            Log.LogMessage ("Started ProcessGoogleServicesJson...");
+		[Output]
+		public ITaskItem[] ResPathAbs { get; set; }
 
-            Log.LogMessage ("Android Package Name: {0}", AndroidPackageName);
+		public override bool Execute()
+		{
+			Log.LogMessage("Started ProcessGoogleServicesJson...");
 
-            // Paths to write resource files to
-            var xmlPath = Path.Combine (MonoAndroidResDirIntermediate, "xml", RESFILE_XML);
-            var valuesPath = Path.Combine (MonoAndroidResDirIntermediate, "values", RESFILE_VALUES);
+			var resPath = ResPath.GetMetadata("FullPath");
+			var stampPath = StampPath.GetMetadata("FullPath");
+			var resValuesPath = ResStringsPath.GetMetadata("FullPath");
+			var resXmlPath = ResXmlPath.GetMetadata("FullPath");
 
-            var wroteXmlPath = false;
-            var wroteValuesPath = false;
+			Log.LogMessage("Android Package Name: {0}", AndroidPackageName);
+			Log.LogMessage("Resource Path: {0}", resPath);
+			Log.LogMessage("Resource Strings Path: {0}", resValuesPath);
+			Log.LogMessage("Resource Xml Path: {0}", resXmlPath);
+			Log.LogMessage("Stamp Path: {0}", stampPath);
 
-            if (GoogleServicesJsons == null || !GoogleServicesJsons.Any ()) {
-                Log.LogMessage ("No GoogleServicesJson Build Action items specified, skipping task.");
-                DeleteFiles (valuesPath, xmlPath);
-                return true;
-            }
+			// Return out the absolute path of our resources dir
+			ResPathAbs = new ITaskItem[] { new TaskItem(resPath) };
 
-            if (GoogleServicesJsons.Count () > 1)
-                Log.LogMessage ("More than one GoogleServicesJson file specified for build configuration, using first one found.");
+			if (GoogleServicesJsons == null || !GoogleServicesJsons.Any()) {
+				Log.LogMessage("No GoogleServicesJson Build Action items specified, skipping task.");
+				DeleteFiles(resValuesPath, resXmlPath);
+				return true;
+			}
 
-            var gsItem = GoogleServicesJsons.First ();
+			if (GoogleServicesJsons.Count() > 1)
+				Log.LogMessage("More than one GoogleServicesJson file specified for build configuration, using first one found.");
 
-            var gsPath = CleanPath (gsItem.ItemSpec);
+			var gsItem = GoogleServicesJsons.First();
 
-            GoogleServices googleServices;
+			var gsPath = CleanPath(gsItem.ItemSpec);
 
-            try {
-                using (var sr = File.OpenRead (gsPath)) {
-                    googleServices = GoogleServicesJsonProcessor.ProcessJson (AndroidPackageName, sr);
-                }
-                if (googleServices == null)
-                    throw new NullReferenceException ();
-            } catch (Exception ex) {
-                Log.LogError ("Failed to Read or Deserialize GoogleServicesJson file: {0}{1}{2}", gsPath, Environment.NewLine, ex);
-                DeleteFiles (valuesPath, xmlPath);
-                return false;
-            }
+			GoogleServices googleServices;
 
-            if (string.IsNullOrEmpty (AndroidPackageName)) {
-                Log.LogError ("Android Package Name not specified for project");
-                return false;
-            }
+			try {
+				using (var sr = File.OpenRead(gsPath))
+					googleServices = GoogleServicesJsonProcessor.ProcessJson(AndroidPackageName, sr);
 
-            var resolvedClientInfo = googleServices.GetClient (AndroidPackageName);
-            if (resolvedClientInfo == null) {
-                Log.LogWarning ("Failed to find client_info in google-services.json matching package name: {0}", AndroidPackageName);
-            }
+				if (googleServices == null)
+					throw new NullReferenceException();
+			} catch (Exception ex) {
+				Log.LogError("Failed to Read or Deserialize GoogleServicesJson file: {0}{1}{2}", gsPath, Environment.NewLine, ex);
+				DeleteFiles(resValuesPath, resXmlPath);
+				return false;
+			}
 
-            var valuesItems = new Dictionary <string, string> {
-                { "ga_trackingId", googleServices.GetGATrackingId (AndroidPackageName) },
-                { "gcm_defaultSenderId", googleServices.GetDefaultGcmSenderId () },
-                { "google_app_id", googleServices.GetGoogleAppId (AndroidPackageName) },
-                { "test_banner_ad_unit_id", googleServices.GetTestBannerAdUnitId (AndroidPackageName) },
-                { "test_interstitial_ad_unit_id", googleServices.GetTestInterstitialAdUnitId (AndroidPackageName) },
-                { "default_web_client_id", googleServices.GetDefaultWebClientId (AndroidPackageName) },
-                { "firebase_database_url", googleServices.GetFirebaseDatabaseUrl () },
-                { "google_api_key", googleServices.GetGoogleApiKey (AndroidPackageName) },
-                { "google_crash_reporting_api_key", googleServices.GetCrashReportingApiKey (AndroidPackageName) },
-                { "google_storage_bucket", googleServices.GetStorageBucket (AndroidPackageName) },
-            };
+			if (string.IsNullOrEmpty(AndroidPackageName)) {
+				Log.LogError("Android Package Name not specified for project");
+				return false;
+			}
 
-            // We only want to create the file if not all of these values are missing
-            if (valuesItems.Any (kvp => !string.IsNullOrEmpty (kvp.Value))) {
-                Log.LogMessage ("Writing Resource File: {0}", valuesPath);
-                WriteResourceDoc (valuesPath, valuesItems);
-                wroteValuesPath = true;
-                Log.LogMessage ("Wrote Resource File: {0}", valuesPath);
-            } else {
-                if (File.Exists (valuesPath)) {
-                    Log.LogMessage ("Deleting Resource File: {0}", valuesPath);
-                    try {
-                        File.Delete (valuesPath);
-                    } catch (Exception ex) {
-                        Log.LogWarning ("Failed to delete Resource File: {0}{1}{2}", valuesPath, Environment.NewLine, ex);
-                    }
-                }
-            }
+			var resolvedClientInfo = googleServices.GetClient(AndroidPackageName);
+			if (resolvedClientInfo == null)
+				Log.LogWarning("Failed to find client_info in google-services.json matching package name: {0}", AndroidPackageName);
 
-            var xmlItems = new Dictionary <string, string> {
-                { "ga_trackingId", googleServices.GetGATrackingId (AndroidPackageName) }
-            };
+			var valuesItems = new Dictionary<string, string> {
+				{ "ga_trackingId", googleServices.GetGATrackingId (AndroidPackageName) },
+				{ "gcm_defaultSenderId", googleServices.GetDefaultGcmSenderId () },
+				{ "google_app_id", googleServices.GetGoogleAppId (AndroidPackageName) },
+				{ "test_banner_ad_unit_id", googleServices.GetTestBannerAdUnitId (AndroidPackageName) },
+				{ "test_interstitial_ad_unit_id", googleServices.GetTestInterstitialAdUnitId (AndroidPackageName) },
+				{ "default_web_client_id", googleServices.GetDefaultWebClientId (AndroidPackageName) },
+				{ "firebase_database_url", googleServices.GetFirebaseDatabaseUrl () },
+				{ "google_api_key", googleServices.GetGoogleApiKey (AndroidPackageName) },
+				{ "google_crash_reporting_api_key", googleServices.GetCrashReportingApiKey (AndroidPackageName) },
+				{ "google_storage_bucket", googleServices.GetStorageBucket (AndroidPackageName) },
+			};
 
-            // We only want to create the file if not all of these values are missing
-            if (xmlItems.Any (kvp => !string.IsNullOrEmpty (kvp.Value))) {
-                Log.LogMessage ("Writing Resource File: {0}", xmlPath);
-                WriteResourceDoc (xmlPath, xmlItems);
-                wroteXmlPath = true;
-                Log.LogMessage ("Wrote Resource File: {0}", xmlPath);
-            } else {
-                // If no 
-                if (File.Exists (xmlPath)) {
-                    Log.LogMessage ("Deleting Resource File: {0}", xmlPath);
-                    try {
-                        File.Delete (xmlPath);
-                    } catch (Exception ex) {
-                        Log.LogWarning ("Failed to delete Resource File: {0}{1}{2}", xmlPath, Environment.NewLine, ex);
-                    }
-                }
-            }
+			// We only want to create the file if not all of these values are missing
+			if (valuesItems.Any(kvp => !string.IsNullOrEmpty(kvp.Value))) {
+				Log.LogMessage("Writing Resource File: {0}", resValuesPath);
+				WriteResourceDoc(resValuesPath, valuesItems);
+				Log.LogMessage("Wrote Resource File: {0}", resValuesPath);
+			} else {
+				if (File.Exists(resValuesPath)) {
+					Log.LogMessage("Deleting Resource File: {0}", resValuesPath);
+					try {
+						File.Delete(resValuesPath);
+					} catch (Exception ex) {
+						Log.LogWarning("Failed to delete Resource File: {0}{1}{2}", resValuesPath, Environment.NewLine, ex);
+					}
+				}
+			}
 
-            var outputFiles = new List<ITaskItem> ();
-            if (wroteXmlPath)
-                outputFiles.Add (new TaskItem (xmlPath));
-            if (wroteValuesPath)
-                outputFiles.Add (new TaskItem (valuesPath));
+			var xmlItems = new Dictionary<string, string> {
+				{ "ga_trackingId", googleServices.GetGATrackingId (AndroidPackageName) }
+			};
 
-            if (outputFiles.Any ())
-                GoogleServicesGeneratedResources = outputFiles.ToArray ();
+			// We only want to create the file if not all of these values are missing
+			if (xmlItems.Any(kvp => !string.IsNullOrEmpty(kvp.Value))) {
+				Log.LogMessage("Writing Resource File: {0}", resXmlPath);
+				WriteResourceDoc(resXmlPath, xmlItems);
+				Log.LogMessage("Wrote Resource File: {0}", resXmlPath);
+			} else {
+				// If no 
+				if (File.Exists(resXmlPath)) {
+					Log.LogMessage("Deleting Resource File: {0}", resXmlPath);
+					try {
+						File.Delete(resXmlPath);
+					} catch (Exception ex) {
+						Log.LogWarning("Failed to delete Resource File: {0}{1}{2}", resXmlPath, Environment.NewLine, ex);
+					}
+				}
+			}
 
-			Log.LogMessage("Writing stamp file...");
+			var stampTxt = string.Empty;
+			if (File.Exists(resXmlPath))
+				stampTxt += resXmlPath + Environment.NewLine;
+			if (File.Exists(resValuesPath))
+				stampTxt += resValuesPath + Environment.NewLine;
 
-			var stampText = string.Empty;
-			if (wroteXmlPath)
-				stampText += xmlPath + Environment.NewLine;
-			if (wroteValuesPath)
-				stampText += valuesPath + Environment.NewLine;
-			
-			File.WriteAllText(Path.Combine(IntermediateOutputPath ?? MonoAndroidResDirIntermediate, "ProcessGoogleServicesJson.stamp"), stampText.Trim());
+			File.WriteAllText(stampPath, stampTxt);
 
-			Log.LogMessage ("Finished ProcessGoogleServicesJson...");
-            return true;
-        }
+			Log.LogMessage("Finished ProcessGoogleServicesJson...");
+			return true;
+		}
 
-        void WriteResourceDoc (string path, Dictionary<string, string> resourceValues)
-        {
-            var pathInfo = new FileInfo (path);
+		void WriteResourceDoc(string path, Dictionary<string, string> resourceValues)
+		{
+			var pathInfo = new FileInfo(path);
 
-            if (!pathInfo.Directory.Exists)
-                pathInfo.Directory.Create ();
+			if (!pathInfo.Directory.Exists)
+				pathInfo.Directory.Create();
 
-            var xws = new XmlWriterSettings {
-                Indent = true
-            };
-            using (var sw = File.Create (path)) 
-            using (var xw = XmlTextWriter.Create (sw, xws)) {
-                xw.WriteStartDocument ();
-                xw.WriteStartElement ("resources");
+			var xws = new XmlWriterSettings {
+				Indent = true
+			};
+			using (var sw = File.Create(path))
+			using (var xw = XmlTextWriter.Create(sw, xws)) {
+				xw.WriteStartDocument();
+				xw.WriteStartElement("resources");
 
-                foreach (var kvp in resourceValues) {
-                    if (!string.IsNullOrEmpty (kvp.Value)) {
-                        xw.WriteStartElement ("string");
-                        xw.WriteAttributeString ("name", kvp.Key);
-                        xw.WriteAttributeString ("translatable", "false");
-                        xw.WriteString (kvp.Value);
-                        xw.WriteEndElement ();
-                    }
-                }
+				foreach (var kvp in resourceValues) {
+					if (!string.IsNullOrEmpty(kvp.Value)) {
+						xw.WriteStartElement("string");
+						xw.WriteAttributeString("name", kvp.Key);
+						xw.WriteAttributeString("translatable", "false");
+						xw.WriteString(kvp.Value);
+						xw.WriteEndElement();
+					}
+				}
 
-                xw.WriteEndElement ();
-                xw.WriteEndDocument ();
-                xw.Flush ();
-                xw.Close ();
-            }
-        }
+				xw.WriteEndElement();
+				xw.WriteEndDocument();
+				xw.Flush();
+				xw.Close();
+			}
+		}
 
-        void DeleteFiles (params string[] paths)
-        {
-            if (paths == null || !paths.Any ())
-                return;
+		void DeleteFiles(params string[] paths)
+		{
+			if (paths == null || !paths.Any())
+				return;
 
-            foreach (var p in paths) {
-                if (!File.Exists (p))
-                    continue;
-                try { 
-                    File.Delete (p); 
-                } catch (Exception ex) {
-                    Log.LogWarning ("Failed to delete file: {0}{1}{2}", p, Environment.NewLine, ex);
-                }
-            }
-        }
+			foreach (var p in paths) {
+				if (!File.Exists(p))
+					continue;
+				try {
+					File.Delete(p);
+				} catch (Exception ex) {
+					Log.LogWarning("Failed to delete file: {0}{1}{2}", p, Environment.NewLine, ex);
+				}
+			}
+		}
 
-        static string CleanPath (params string[] paths)
-        {
-            var combined = Path.Combine (paths);
-            return combined.Replace ('/', Path.DirectorySeparatorChar).Replace ('\\', Path.DirectorySeparatorChar);
-        }
-    }
+		static string CleanPath(params string[] paths)
+		{
+			var combined = Path.Combine(paths);
+			return combined.Replace('/', Path.DirectorySeparatorChar).Replace('\\', Path.DirectorySeparatorChar);
+		}
+	}
 }

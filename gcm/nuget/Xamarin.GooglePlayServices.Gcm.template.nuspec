@@ -16,11 +16,11 @@
       For example, a lightweight downstream message could inform a client app that there is new data to be fetched from the server, as in the case of a "new email" notification. For use cases such as instant messaging, a GCM message can transfer up to 4kb of payload to the client app. The GCM service handles all aspects of queueing of messages and delivery to and from the target client app.
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>http://components.xamarin.com/view/googleplayservices-gcm/</projectUrl>
-    <licenseUrl>http://components.xamarin.com/license/googleplayservices-gcm/</licenseUrl>
+    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
+    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-gcm_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Iid" version="[$version$]" />
@@ -28,8 +28,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Gcm.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.GooglePlayServices.Gcm.dll" target="lib/MonoAndroid80" />
 
-    <file src="gcm/nuget/Xamarin.GooglePlayServices.Gcm.targets" target="build/MonoAndroid70" />
+    <file src="gcm/nuget/Xamarin.GooglePlayServices.Gcm.targets" target="build/MonoAndroid80" />
   </files>
 </package>

@@ -1,4 +1,5 @@
-tools/
+tools/**
+!tools/packages.config
 bin/
 obj/
 packages/
@@ -18,6 +19,7 @@ output/
 *.nuspec
 !*.template.nuspec
 */nuget/*.targets
+!obsolete.targets
 
 Resource.designer.cs
 component.yaml
@@ -25,3 +27,5 @@ GettingStarted.md
 Details.md
 generated.targets
 .droidres
+cake.sh
+cake.sh.commit

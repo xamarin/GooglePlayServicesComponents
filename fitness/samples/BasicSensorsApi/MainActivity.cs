@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 namespace BasicSensorsApi
 {
     [Activity (Label = "Basic Sensors Api", MainLauncher = true, Icon = "@drawable/ic_launcher")]
-    public class MainActivity : ActionBarActivity
+    public class MainActivity : AppCompatActivity
     {
         const string TAG = "BasicSensorsApi";
         // [START auth_variable_references]

@@ -40,5 +40,41 @@ namespace Android.Gms.Location
                 evt (location);
         }
     }
+
+	public class LocationCallbackResultEventArgs : EventArgs
+	{
+		public LocationCallbackResultEventArgs (LocationResult result)
+		{
+			Result = result;
+		}
+		public LocationResult Result { get; private set; }
+	}
+
+	public class LocationCallbackAvailabilityEventArgs : EventArgs
+	{
+		public LocationCallbackAvailabilityEventArgs(LocationAvailability availability)
+		{
+			Availability = availability;
+		}
+		public LocationAvailability Availability { get; private set; }
+	}
+
+	public class LocationCallback : LocationCallbackBase
+	{
+		public event EventHandler<LocationCallbackResultEventArgs> LocationResult;
+		public event EventHandler<LocationCallbackAvailabilityEventArgs> LocationAvailability;
+
+		public override void OnLocationResult(LocationResult result)
+		{
+			base.OnLocationResult(result);
+			LocationResult?.Invoke(this, new LocationCallbackResultEventArgs(result));
+		}
+
+		public override void OnLocationAvailability (LocationAvailability locationAvailability)
+		{
+			base.OnLocationAvailability(locationAvailability);
+			LocationAvailability?.Invoke(this, new LocationCallbackAvailabilityEventArgs(locationAvailability));
+		}
+	}
 }
 

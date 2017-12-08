@@ -18,7 +18,6 @@ samples:
     removeProjects:
       - Base
       - Basement
-      - Clearcut
       - Gass
       - Tasks
       - Ads
@@ -28,7 +27,6 @@ samples:
         packages:
           - Xamarin.GooglePlayServices.Base
           - Xamarin.GooglePlayServices.Basement
-          - Xamarin.GooglePlayServices.Clearcut
           - Xamarin.GooglePlayServices.Gass
           - Xamarin.GooglePlayServices.Tasks
           - Xamarin.GooglePlayServices.Ads

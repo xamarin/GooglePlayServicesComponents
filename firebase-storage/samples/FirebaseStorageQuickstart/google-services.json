@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "YOUR-APP-ID",
         "android_client_info": {
-          "package_name": "com.xamarin.firebase.authquickstart"
+          "package_name": "com.xamarin.firebase.storagequickstart"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "YOUR-CLIENT-ID",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.xamarin.firebase.authquickstart",
+            "package_name": "com.xamarin.firebase.storagequickstart",
             "certificate_hash": "YOUR-CERT-HASH"
           }
         },

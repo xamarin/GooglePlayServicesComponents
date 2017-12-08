@@ -7,9 +7,9 @@ namespace Android.Gms.InstantApp
 {
     public static class IInstantAppsApiExtensions
     {
-        public static async Task<IInstantAppsApiLaunchDataResult> GetInstantAppLaunchDataAsync (this IInstantAppsApi api, GoogleApiClient client, string url)
-        {
-            return (await api.GetInstantAppLaunchData (client, url)).JavaCast<IInstantAppsApiLaunchDataResult> ();
-        }
+		public static async Task<IInstantAppsApiGetInstantAppDataResult> GetInstantAppDataAsync(this IInstantAppsApi api, Android.Gms.Common.Apis.GoogleApiClient apiClient)
+		{
+			return (await api.GetInstantAppData(apiClient)).JavaCast<IInstantAppsApiGetInstantAppDataResult>();
+		}
     }
 }

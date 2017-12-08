@@ -98,6 +98,8 @@
 	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.TransactionBuilder']/method[@name='build']" name="return">java.util.Map&lt;java.lang.String, java.lang.String&gt;</attr>
 	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.ScreenViewBuilder']/method[@name='build']" name="return">java.util.Map&lt;java.lang.String, java.lang.String&gt;</attr>
 
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='build']" name="return">java.util.Map&lt;java.lang.String, java.lang.String&gt;</attr>
+
 	<!-- Fix inheritence of IntentService - Not required for 5.1 -->
 <!--	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='AnalyticsService']" name="extends">mono.android.app.IntentService</attr>
 	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='AnalyticsService']/method[@name='onHandleIntent']" name="visibility">protected</attr>	

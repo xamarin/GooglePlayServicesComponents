@@ -12,19 +12,20 @@
       Xamarin.Android Bindings for Google Play Services - Auth Base $aar-version$
     </description>
     <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
+    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-auth-base_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Auth.Base.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.GooglePlayServices.Auth.Base.dll" target="lib/MonoAndroid80" />
 
-    <file src="auth-base/nuget/Xamarin.GooglePlayServices.Auth.Base.targets" target="build/MonoAndroid70" />
+    <file src="auth-base/nuget/Xamarin.GooglePlayServices.Auth.Base.targets" target="build/MonoAndroid80" />
   </files>
 </package>
