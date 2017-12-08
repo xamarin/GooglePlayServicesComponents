@@ -1,6 +1,5 @@
 tools/**
 !tools/packages.config
-!tools/Modules/packages.config
 bin/
 obj/
 packages/
