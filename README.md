@@ -36,7 +36,7 @@ The build script for this project uses [Cake](http://cakebuild.net).  To run the
 
 **Mac**:
 ```
-sh build.sh --target libs
+sh build.sh --target=libs
 ```
 
 **Windows (experimental support only):**
@@ -52,6 +52,7 @@ The bootstrapper script will automatically download Cake.exe and all the require
 
 The following targets can be specified:
 
+ - `ci` builds the kitchen sink - what we run in CI
  - `libs` builds the class library bindings (depends on `externals`)
  - `externals` downloads the external dependencies
  - `samples` builds all of the samples (depends on `libs`)
@@ -90,7 +91,9 @@ Historically, Component and later NuGet package versions were based on the revis
 | 32.4.0-beta2              | 32                           | 9.4.0                        |
 | 32.961.0                  | 32                           | 9.6.1                        |
 | 42.1001.0                 | 42                           | 10.0.1                       |
-
+| 42.1021.0                 | n/a                          | 10.2.1                       |
+| 42.1021.1                 | n/a                          | 10.2.1                       |
+| 60.1142.0                 | n/a                          | 11.4.2                       |
 
 ## License
 
