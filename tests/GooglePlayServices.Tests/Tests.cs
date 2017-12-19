@@ -69,6 +69,16 @@ namespace GooglePlayServices.Tests
 			Assert.True(resErr == 2);
 		}
 
+        [Fact]
+        public void Location_Places_UI_PlaceAutocomplete_IntentBuilder_Exists()
+        {
+            var resErr = new Android.Gms.Location.Places.UI.PlaceAutocomplete.IntentBuilder();
+
+            Console.WriteLine("Location.Places.UI.PlaceAutocomplete.ResultError: {0}", resErr);
+
+            Assert.True(resErr == 2);
+        }
+
 		[Fact]
 		public void Cast_Framework_Media_Widget_ExpandedControllerActivity_Exists()
 		{
