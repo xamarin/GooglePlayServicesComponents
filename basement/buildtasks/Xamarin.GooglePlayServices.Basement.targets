@@ -60,7 +60,6 @@
     Name="ProcessGoogleServicesJson" 
     Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True'"
     BeforeTargets="_GenerateAndroidResourceDir"
-    AfterTargets="SetupGoogleServicesJson"
     DependsOnTargets="SetupGoogleServicesJson"
     Inputs="@(GoogleServicesJson)"
     Outputs="$(IntermediateOutputPath)googsvcsjson.stamp">
@@ -99,7 +98,6 @@
   -->
   <Target Name="AddOrgApacheHttpLegacyJarInProguardExternalJavaLibs"
       DependsOnTargets="_ResolveMonoAndroidSdks;_ValidateAndroidPackageProperties"
-      AfterTargets="_ResolveMonoAndroidSdks;_ValidateAndroidPackageProperties"
       BeforeTargets="Proguard"
       Condition="$(IncludeOrgApacheHttpLegacyJarInProguard) == 'True' and Exists ('$(AndroidSdkDirectory)/platforms/android-$(_AndroidTargetSdkVersion)/optional/org.apache.http.legacy.jar')">
     <ItemGroup>
