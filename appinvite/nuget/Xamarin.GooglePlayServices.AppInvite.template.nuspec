@@ -13,13 +13,13 @@
 
       App Invites provide a powerful way to organically grow your app, user-to-user. Your users recommend your app to their friends using personalized, contextual invitations powered by Google. App Invites provide a great onboarding experience to your new users. Google optimizes your app install rates by reducing friction and using relevant context at every step of the user invitation flow.
     </description>
-    <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
-    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865435</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-appinvite_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
-        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
         <dependency id="Xamarin.Firebase.Dynamic.Links" version="[$version$]" />
@@ -28,7 +28,6 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.AppInvite.dll" target="lib/MonoAndroid80" />
-
     <file src="appinvite/nuget/Xamarin.GooglePlayServices.AppInvite.targets" target="build/MonoAndroid80" />
   </files>
 </package>

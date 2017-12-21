@@ -11,9 +11,9 @@
     <description>
       Xamarin.Android Bindings for Google Play Services - Tasks $aar-version$
     </description>
-    <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
-    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865435</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-tasks_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
@@ -23,7 +23,6 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Tasks.dll" target="lib/MonoAndroid80" />
-
     <file src="tasks/nuget/Xamarin.GooglePlayServices.Tasks.targets" target="build/MonoAndroid80" />
   </files>
 </package>

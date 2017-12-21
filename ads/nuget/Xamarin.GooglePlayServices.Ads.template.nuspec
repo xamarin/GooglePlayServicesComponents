@@ -13,9 +13,9 @@
 
       The Google Mobile Ads SDK is the latest generation in Google mobile advertising, featuring refined ad formats and streamlined APIs for access to mobile ad networks and advertising solutions. The SDK enables mobile app developers to maximize their monetization in native mobile apps.
     </description>
-    <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
-    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865354</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-ads_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
@@ -27,7 +27,6 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Ads.dll" target="lib/MonoAndroid80" />
-
     <file src="ads/nuget/Xamarin.GooglePlayServices.Ads.targets" target="build/MonoAndroid80" />
   </files>
 </package>

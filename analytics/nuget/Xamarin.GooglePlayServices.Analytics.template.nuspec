@@ -13,9 +13,9 @@
 
       The Google Analytics SDK for Android makes it easy for developers to collect user engagement data form their apps.
     </description>
-    <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
-    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865360</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-analytics_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
@@ -28,7 +28,6 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Analytics.dll" target="lib/MonoAndroid80" />
-
     <file src="analytics/nuget/Xamarin.GooglePlayServices.Analytics.targets" target="build/MonoAndroid80" />
   </files>
 </package>

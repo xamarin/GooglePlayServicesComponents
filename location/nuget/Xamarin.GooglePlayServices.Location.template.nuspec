@@ -13,13 +13,13 @@
 
       One of the unique features of mobile applications is location awareness. Mobile users take their devices with them everywhere, and adding location awareness to your app offers users a more contextual experience. The location APIs available in Google Play services facilitate adding location awareness to your app with automated location tracking, geofencing, and activity recognition.
     </description>
-    <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
-    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865326</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-location_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
-        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
       </group>
@@ -27,7 +27,6 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Location.dll" target="lib/MonoAndroid80" />
-
     <file src="location/nuget/Xamarin.GooglePlayServices.Location.targets" target="build/MonoAndroid80" />
   </files>
 </package>

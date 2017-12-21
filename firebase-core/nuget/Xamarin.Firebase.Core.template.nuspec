@@ -11,9 +11,9 @@
     <description>
       Xamarin.Android Bindings for Firebase - Core $aar-version$
     </description>
-    <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
-    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865436</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865377</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/firebase-core_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">

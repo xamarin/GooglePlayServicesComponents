@@ -13,22 +13,21 @@
 
       The Google Cast SDK lets you extend your Android app to control a TV or sound system. It supports many media formats, protocols and codecs to ease integration.  Continuous playback is enabled by autoplay and queuing APIs and Game Manager APIs make Cast enabled gaming a breeze.
     </description>
-    <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
-    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865372</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-cast_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
-        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
-        <dependency id="Xamarin.Android.Support.v7.MediaRouter" version="$support-version$"/>
+        <dependency id="Xamarin.Android.Support.v7.MediaRouter" version="$support-version$" />
       </group>
     </dependencies>
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Cast.dll" target="lib/MonoAndroid80" />
-
     <file src="cast/nuget/Xamarin.GooglePlayServices.Cast.targets" target="build/MonoAndroid80" />
   </files>
 </package>

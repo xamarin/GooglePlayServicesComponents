@@ -11,13 +11,13 @@
     <description>
       Xamarin.Android Bindings for Google Play Services - Awareness $aar-version$
     </description>
-    <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
-    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865368</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-awareness_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
-        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]"/>
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Location" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Places" version="[$version$]" />
@@ -27,7 +27,6 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Awareness.dll" target="lib/MonoAndroid80" />
-
     <file src="awareness/nuget/Xamarin.GooglePlayServices.Awareness.targets" target="build/MonoAndroid80" />
   </files>
 </package>

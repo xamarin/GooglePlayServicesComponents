@@ -13,13 +13,13 @@
 
       NOTE: This is package only contains type forwarders to the types which now exist in Xamarin.Firebase.AppIndexing and is only available for backwards compatibility purposes.
     </description>
-    <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/googleplayservicescomponents</projectUrl>
-    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865435</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-appindexing_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
-        <dependency id="Xamarin.Firebase.AppIndexing" version="[$version$]"/>
+        <dependency id="Xamarin.Firebase.AppIndexing" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
