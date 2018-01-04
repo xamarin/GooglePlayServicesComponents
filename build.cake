@@ -43,7 +43,7 @@
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/google_play_services_v13_2_rc09.zip";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/42.1021.0/api-info.xml";
+var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/60.1142.0/api-info.xml";
 
 // The common suffix for nuget version
 // Sometimes might be "-beta1" for a prerelease, or ".1" if we have a point release for the same actual aar's
