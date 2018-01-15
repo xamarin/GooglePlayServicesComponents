@@ -409,8 +409,8 @@ Task ("externals")
 			DownloadFile (aarUrl, aarFile);
 
 		// Download the .md5 for the .aar
-		//if (!FileExists (aarFile + ".md5"))
-		//	DownloadFile (aarUrl + ".md5", aarFile + ".md5");
+		if (!FileExists (aarFile + ".md5"))
+			DownloadFile (aarUrl + ".md5", aarFile + ".md5");
 		
 		// Unzip the .aar
 		if (!DirectoryExists (path + aar.Dir))
@@ -626,6 +626,8 @@ Task ("nuget-setup")
 
 	foreach (var aar in AAR_INFOS) {
 
+		var aarMd5File = "./externals/" + aar.Dir + ".aar.md5";
+
 		// Write out the nuspec from template
 		var nuspec = new FilePath ("./" + aar.BindingDir + "/nuget/" + aar.NugetId + ".template.nuspec");
 		var nuspecTxt = FileReadText (nuspec)
@@ -649,7 +651,7 @@ Task ("nuget-setup")
 			{ "_XbdAarFileFullPath_", "_XbdAarFileFullPath_" + msName },
 			{ "_XbdRestoreItems_", "_XbdRestoreItems_" + msName },
 			{ "$XbdUrl$", MAVEN_REPO_BASE_URL + aar.Path + "/" + aar.AarVersion + "/" + aar.Dir + "-" + aar.AarVersion + ".aar" },
-			// { "$XbdMd5$", part.Md5 },
+			{ "$XbdMd5$", FileReadText (aarMd5File) },
 			{ "$XbdKey$", xbdKey },
 			{ "$XbdAssemblyName$", aar.NugetId },
 			// { "$XbdRangeStart$", part.RangeStart.ToString() },
