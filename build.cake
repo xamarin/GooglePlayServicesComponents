@@ -50,10 +50,10 @@ var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents
 // will be blank for a stable release that has no point release fixes
 var COMMON_NUGET_VERSION = "";
 
-var PLAY_COMPONENT_VERSION = "60.1142.0.0";
-var PLAY_NUGET_VERSION = "60.1142.1" + COMMON_NUGET_VERSION;
-var PLAY_AAR_VERSION = "11.4.2";
-var VERSION_DESC = "11.4.2";
+var PLAY_COMPONENT_VERSION = "60.1180.0.0";
+var PLAY_NUGET_VERSION = "60.1180.0" + COMMON_NUGET_VERSION;
+var PLAY_AAR_VERSION = "11.8.0";
+var VERSION_DESC = "11.8.0";
 var SUPPORT_VERSION = "26.0.2";
 
 var ANDROID_API_LEVEL = "26";
