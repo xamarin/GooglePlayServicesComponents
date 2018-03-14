@@ -89,7 +89,7 @@
     <Folder Include="Jars\" />
   </ItemGroup>
   <ItemGroup>
-    <InputJar Include="..\..\externals\firebase-firestore\firebase-firestore-aar.jar">
+    <InputJar Include="..\..\externals\firebase-firestore\classes.jar">
       <Link>Jars\firebase-firestore-aar.jar</Link>
     </InputJar>
   </ItemGroup>
