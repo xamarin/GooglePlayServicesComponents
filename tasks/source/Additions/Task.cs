@@ -86,4 +86,9 @@ namespace Android.Gms.Tasks
             get { return RawResult; }
         }
     }
+
+    public partial class TaskCompletionSource
+    {
+        public virtual Task Task { get { return GetTask (); } }
+    }
 }

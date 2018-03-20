@@ -5,10 +5,16 @@
 	<!-- Remove some internal namespaces -->
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
 	<!-- Remove *zz* obfuscated items -->
-	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'zzb']" />
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<attr path="/api/package[@name='com.google.android.gms.iid']/class[@name='zzb']" name="obfuscated">false</attr>
+
+	<remove-node path="/api/package[@name='com.google.android.gms.iid']/class[@name='zzb']/method[contains(@name, 'zz')]" />
+
+	
 	<!-- Fix params for some inherited parcelable types -->
 	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
 	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>

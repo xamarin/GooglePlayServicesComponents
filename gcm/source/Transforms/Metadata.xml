@@ -9,6 +9,10 @@
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 
+	<!--<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='GcmListenerService' and @extends='com.google.android.gms.iid.zzb']" name="extends">android.app.Service</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='GcmListenerService' and @extends='com.google.android.gms.iid.zzb']" name="extends-generic-aware">android.app.Service</attr>
+-->
+	
 	<!-- Fix params for some inherited parcelable types -->
 	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
 	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>

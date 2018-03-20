@@ -67,6 +67,11 @@ namespace Android.Gms.Nearby.Connection
         {
             return (await api.StartDiscovery (apiClient, serviceId, durationMillis, listener)).JavaCast<Statuses> ();
         }
+
+        public static async Task<Statuses> CancelPayloadAsync (this IConnections api, GoogleApiClient apiClient, long l)
+        {
+            return (await api.CancelPayload (apiClient, l)).JavaCast<Statuses> ();
+        }
     }
 }
 

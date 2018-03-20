@@ -11,18 +11,13 @@
 	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends">java.lang.Object</attr>
 	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends-generic-aware">java.lang.Object</attr>
 
-
-
-
-
-
-	<add-node path="/api/package/*[@extends='com.google.android.gms.internal.zzbck' and @name != 'BitmapTeleporter' and @name != 'GoogleSignInAccount' and @name != 'GoogleSignInOptions']">
+	<add-node path="/api/package/*[@extends='com.google.android.gms.internal.zzbfm' and @name != 'BitmapTeleporter' and @name != 'GoogleSignInAccount' and @name != 'GoogleSignInOptions']">
 		<implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
 		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
 	</add-node>
-	<attr path="/api/package/*[@extends='com.google.android.gms.internal.zzbck']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.internal.zzbfm']" name="extends">java.lang.Object</attr>
 
-	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.internal.zzbco']" />
+	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.internal.zzbfq']" />
 
 	
 	<add-node path="/api/package/*[not(implements/@name='android.os.Parcelable')]/implements[@name='com.google.android.gms.common.internal.ReflectedParcelable']/..">
@@ -38,4 +33,7 @@
 	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.DowngradeableSafeParcel']" name="extends-generic-aware">java.lang.Object</attr>
 	
 	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.DowngradeableSafeParcel']" />
+
+	<!-- Task is really not suitable to be returned as a property, so never allow the getX method to be converted to one if it returns Task -->
+	<attr path="/api/package/*/method[contains(@return, 'com.google.android.gms.tasks.Task')]" name="propertyName"></attr>
 </metadata>

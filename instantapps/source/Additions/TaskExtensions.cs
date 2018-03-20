@@ -6,9 +6,11 @@ namespace Android.Gms.InstantApp
 {
 	public partial class InstantAppsClient
 	{
+        [Obsolete]
+        public Android.Gms.Tasks.Task InstantAppDate { get { return GetInstantAppData (); } }
 		public Task<Android.OS.ParcelFileDescriptor> GetInstantAppDataAsync ()
 		{
-			return InstantAppData.AsAsync<Android.OS.ParcelFileDescriptor>();
+			return GetInstantAppData().AsAsync<Android.OS.ParcelFileDescriptor>();
 		}
 	}
 }

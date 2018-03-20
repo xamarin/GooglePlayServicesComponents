@@ -19,25 +19,34 @@ namespace Android.Gms.Cast.Framework.Media
 {
     public partial class RemoteMediaClient
     {
+        [Obsolete]
         public async Task<IMediaChannelResult> LoadAsync (MediaInfo mediaInfo)
         {
             return (await Load (mediaInfo)).JavaCast<IMediaChannelResult> ();
         }
+        [Obsolete]
         public async Task<IMediaChannelResult> LoadAsync (MediaInfo mediaInfo, bool autoplay)
         {
             return (await Load (mediaInfo, autoplay)).JavaCast<IMediaChannelResult> ();
         }
+        [Obsolete]
         public async Task<IMediaChannelResult> LoadAsync (MediaInfo mediaInfo, bool autoplay, long playPosition)
         {
             return (await Load (mediaInfo, autoplay, playPosition)).JavaCast<IMediaChannelResult> ();
         }
+        [Obsolete]
         public async Task<IMediaChannelResult> LoadAsync (MediaInfo mediaInfo, bool autoplay, long playPosition, Org.Json.JSONObject customData)
         {
             return (await Load (mediaInfo, autoplay, playPosition, customData)).JavaCast<IMediaChannelResult> ();
         }
+        [Obsolete]
         public async Task<IMediaChannelResult> LoadAsync (MediaInfo mediaInfo, bool autoplay, long playPosition, long [] activeTrackIds, Org.Json.JSONObject customData)
         {
             return (await Load (mediaInfo, autoplay, playPosition, activeTrackIds, customData)).JavaCast<IMediaChannelResult> ();
+        }
+        public async Task<IMediaChannelResult> LoadAsync (MediaInfo mediaInfo, MediaLoadOptions mediaLoadOptions)
+        {
+            return (await Load (mediaInfo, mediaLoadOptions)).JavaCast<IMediaChannelResult> ();
         }
         public async Task<IMediaChannelResult> PauseAsync ()
         {
@@ -166,6 +175,11 @@ namespace Android.Gms.Cast.Framework.Media
         public async Task<IMediaChannelResult> StopAsync (Org.Json.JSONObject customData)
         {
             return (await Stop (customData)).JavaCast<IMediaChannelResult> ();
+        }
+
+        public async Task<IMediaChannelResult> SetPlaybackRateAsync (double rate)
+        {
+            return (await SetPlaybackRate (rate)).JavaCast<IMediaChannelResult> ();
         }
     }
 }

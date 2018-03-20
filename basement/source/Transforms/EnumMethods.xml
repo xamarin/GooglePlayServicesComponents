@@ -15,11 +15,11 @@
   - To change the type of the return value, use "return" as the parameter name.
   - The parameter names will be p0, p1, ... unless you provide JavaDoc file in the project.
   -->
-  <mapping jni-class="com/google/android/gms/internal/zzbck">
+  <mapping jni-class="com/google/android/gms/internal/zzbfm">
     <method jni-name="writeToParcel" parameter="flags" clr-enum-type="Android.OS.ParcelableWriteFlags" />
   </mapping>
 
-  <mapping jni-class="com/google/android/gms/internal/zzbco">
+  <mapping jni-class="com/google/android/gms/internal/zzbfq">
     <method jni-name="writeToParcel" parameter="flags" clr-enum-type="Android.OS.ParcelableWriteFlags" />
   </mapping>
   <mapping jni-class="com/google/android/gms/common/zze">

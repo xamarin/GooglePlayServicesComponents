@@ -152,10 +152,6 @@ namespace Android.Gms.Wearable
 
     public static partial class INodeApiExtensions
     {
-        public static async Task<Statuses> AddListenerAsync (this INodeApi api, GoogleApiClient client, INodeApiNodeListener listener)
-        {
-            return (await api.AddListener (client, listener)).JavaCast<Statuses> ();
-        }
         public static async Task<INodeApiGetConnectedNodesResult> GetConnectedNodesAsync (this INodeApi api, GoogleApiClient client)
         {
             return (await api.GetConnectedNodes (client)).JavaCast<INodeApiGetConnectedNodesResult> ();
@@ -163,10 +159,6 @@ namespace Android.Gms.Wearable
         public static async Task<INodeApiGetLocalNodeResult> GetLocalNodeAsync (this INodeApi api, GoogleApiClient client)
         {
             return (await api.GetLocalNode (client)).JavaCast<INodeApiGetLocalNodeResult> ();
-        }
-        public static async Task<Statuses> RemoveListenerAsync (this INodeApi api, GoogleApiClient client, INodeApiNodeListener listener)
-        {
-            return (await api.RemoveListener (client, listener)).JavaCast<Statuses> ();
         }
     }
 }

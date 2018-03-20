@@ -6,14 +6,18 @@ namespace Android.Gms.Location
 {
 	public partial class FusedLocationProviderClient
 	{
+        [Obsolete]
+        public Android.Gms.Tasks.Task LastLocation { get { return GetLastLocation (); } }
 		public Task<Android.Locations.Location> GetLastLocationAsync ()
 		{
-			return LastLocation.AsAsync<Android.Locations.Location>();
+			return GetLastLocation().AsAsync<Android.Locations.Location>();
 		}
 
+        [Obsolete]
+        public Android.Gms.Tasks.Task LocationAvailability { get { return GetLocationAvailability (); } }
 		public Task<Android.Gms.Location.LocationAvailability> GetLocationAvailabilityAsync()
 		{
-			return LocationAvailability.AsAsync<Android.Gms.Location.LocationAvailability>();
+			return GetLocationAvailability().AsAsync<Android.Gms.Location.LocationAvailability>();
 		}
 
 		public Task FlushLocationsAsync ()
