@@ -5,30 +5,30 @@ namespace Firebase.Auth
 {
     public partial class FirebaseAuth
     {
-        public System.Threading.Tasks.Task<IAuthResult> SignInAnonymouslyAsync ()
-        {
-            return SignInAnonymously ().AsAsync<IAuthResult> ();
-        }
+        //public System.Threading.Tasks.Task<IAuthResult> SignInAnonymouslyAsync ()
+        //{
+        //    return SignInAnonymously ().AsAsync<IAuthResult> ();
+        //}
 
-        public System.Threading.Tasks.Task<IAuthResult> SignInWithCustomTokenAsync (string customToken)
-        {
-            return SignInWithCustomToken (customToken).AsAsync<IAuthResult> ();
-        }
+        //public System.Threading.Tasks.Task<IAuthResult> SignInWithCustomTokenAsync (string customToken)
+        //{
+        //    return SignInWithCustomToken (customToken).AsAsync<IAuthResult> ();
+        //}
 
-        public System.Threading.Tasks.Task<IAuthResult> CreateUserWithEmailAndPasswordAsync (string email, string password)
-        {
-            return CreateUserWithEmailAndPassword (email, password).AsAsync<IAuthResult> ();
-        }
+        //public System.Threading.Tasks.Task<IAuthResult> CreateUserWithEmailAndPasswordAsync (string email, string password)
+        //{
+        //    return CreateUserWithEmailAndPassword (email, password).AsAsync<IAuthResult> ();
+        //}
 
-        public System.Threading.Tasks.Task<IAuthResult> SignInWithCredentialAsync (AuthCredential authCredential)
-        {
-            return SignInWithCredential (authCredential).AsAsync<IAuthResult> ();
-        }
+        //public System.Threading.Tasks.Task<IAuthResult> SignInWithCredentialAsync (AuthCredential authCredential)
+        //{
+        //    return SignInWithCredential (authCredential).AsAsync<IAuthResult> ();
+        //}
 
-        public System.Threading.Tasks.Task<IAuthResult> SignInWithEmailAndPasswordAsync (string email, string password)
-        {
-            return SignInWithEmailAndPassword (email, password).AsAsync<IAuthResult> ();
-        }
+        //public System.Threading.Tasks.Task<IAuthResult> SignInWithEmailAndPasswordAsync (string email, string password)
+        //{
+        //    return SignInWithEmailAndPassword (email, password).AsAsync<IAuthResult> ();
+        //}
 
         public System.Threading.Tasks.Task<IProviderQueryResult> FetchProvidersForEmailAsync (string email)
         {
@@ -71,10 +71,10 @@ namespace Firebase.Auth
 {
     public partial class FirebaseUser
     {
-        public System.Threading.Tasks.Task<IAuthResult> LinkWithCredentialAsync (AuthCredential credential)
-        {
-            return LinkWithCredential (credential).AsAsync<IAuthResult> ();
-        }
+        //public System.Threading.Tasks.Task<IAuthResult> LinkWithCredentialAsync (AuthCredential credential)
+        //{
+        //    return LinkWithCredential (credential).AsAsync<IAuthResult> ();
+        //}
 
         public System.Threading.Tasks.Task DeleteAsync ()
         {
@@ -97,20 +97,20 @@ namespace Firebase.Auth
             return Reauthenticate (credential).AsAsync ();
         }
 
-		public System.Threading.Tasks.Task<IAuthResult> ReauthenticateAndRetrieveDataAsync(AuthCredential credential)
-		{
-			return ReauthenticateAndRetrieveData(credential).AsAsync<IAuthResult>();
-		}
+		//public System.Threading.Tasks.Task<IAuthResult> ReauthenticateAndRetrieveDataAsync(AuthCredential credential)
+		//{
+		//	return ReauthenticateAndRetrieveData(credential).AsAsync<IAuthResult>();
+		//}
 
         public System.Threading.Tasks.Task ReloadAsync ()
         {
             return Reload ().AsAsync ();
         }
 
-        public System.Threading.Tasks.Task<IAuthResult> UnlinkAsync (string value)
-        {
-            return Unlink (value).AsAsync<IAuthResult> ();
-        }
+        //public System.Threading.Tasks.Task<IAuthResult> UnlinkAsync (string value)
+        //{
+        //    return Unlink (value).AsAsync<IAuthResult> ();
+        //}
 
         public System.Threading.Tasks.Task UpdateEmailAsync (string email)
         {

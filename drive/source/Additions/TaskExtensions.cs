@@ -18,10 +18,10 @@ namespace Android.Gms.Drive
             return GetUploadPreferences ().AsAsync<ITransferPreferences> ();
         }
 
-        public Task<IntentSender> NewCreateFileActivityIntentSenderAsync (CreateFileActivityOptions options)
-        {
-            return NewCreateFileActivityIntentSender (options).AsAsync<IntentSender> ();
-        }
+        //public Task<IntentSender> NewCreateFileActivityIntentSenderAsync (CreateFileActivityOptions options)
+        //{
+        //    return NewCreateFileActivityIntentSender (options).AsAsync<IntentSender> ();
+        //}
 
         public Task<IntentSender> NewOpenFileActivityIntentSenderAsync (OpenFileActivityOptions options)
         {

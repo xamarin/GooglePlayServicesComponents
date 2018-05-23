@@ -1,7 +1,7 @@
 // Tools needed by cake addins
 #tool nuget:?package=XamarinComponent&version=1.1.0.49
 #tool nuget:?package=ILRepack&version=2.0.13
-#tool nuget:?package=Cake.MonoApiTools&version=1.0.10
+#tool nuget:?package=Cake.MonoApiTools&version=2.0.0
 #tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 #tool nuget:?package=NUnit.Runners&version=2.6.4
 #tool nuget:?package=Paket
@@ -9,26 +9,26 @@
 
 // Dependencies of Cake Addins - this should be removed once 
 // Cake 0.23 is out
-#addin nuget:?package=SharpZipLib&version=0.86.0
-#addin nuget:?package=Newtonsoft.Json&version=9.0.1
-#addin nuget:?package=semver&version=2.0.4
-#addin nuget:?package=YamlDotNet&version=4.2.1
-#addin nuget:?package=NuGet.Core&version=2.14.0
+// #addin nuget:?package=SharpZipLib&version=0.86.0
+// #addin nuget:?package=Newtonsoft.Json&version=9.0.1
+// #addin nuget:?package=semver&version=2.0.4
+// #addin nuget:?package=YamlDotNet&version=4.2.1
+// #addin nuget:?package=NuGet.Core&version=2.14.0
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=2.0.0
-#addin nuget:?package=Cake.Json&version=2.0.28
+#addin nuget:?package=Cake.FileHelpers&version=3.0.0
+#addin nuget:?package=Cake.Json&version=3.0.0
 #addin nuget:?package=Cake.Yaml&version=2.0.0
-#addin nuget:?package=Cake.Xamarin&version=2.0.1
-#addin nuget:?package=Cake.XCode&version=3.0.0
-#addin nuget:?package=Cake.Xamarin.Build&version=3.0.3
+#addin nuget:?package=Cake.Xamarin&version=3.0.0
+#addin nuget:?package=Cake.XCode&version=4.0.0
+#addin nuget:?package=Cake.Xamarin.Build&version=4.0.0
 #addin nuget:?package=Cake.Compression&version=0.1.4
-#addin nuget:?package=Cake.Android.SdkManager&version=2.0.1
-#addin nuget:?package=Cake.Android.Adb&version=2.0.4
+#addin nuget:?package=Cake.Android.SdkManager&version=3.0.0
+#addin nuget:?package=Cake.Android.Adb&version=3.0.0
 
 // Not yet cake 0.22+ compatible (requires --settings_skipverification=true)
-#addin nuget:?package=Cake.MonoApiTools&version=1.0.10
-#addin nuget:?package=Cake.Xamarin.Binding.Util&version=1.0.2
+#addin nuget:?package=Cake.MonoApiTools&version=2.0.0
+//#addin nuget:?package=Cake.Xamarin.Binding.Util&version=1.0.2
 
 // Lists all the artifacts and their versions for com.google.android.gms.*
 // https://dl.google.com/dl/android/maven2/com/google/android/gms/group-index.xml
@@ -50,11 +50,11 @@ var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents
 // will be blank for a stable release that has no point release fixes
 var COMMON_NUGET_VERSION = "";
 
-var PLAY_COMPONENT_VERSION = "60.1180.0.0";
-var PLAY_NUGET_VERSION = "60.1180.0" + COMMON_NUGET_VERSION;
-var PLAY_AAR_VERSION = "11.8.0";
-var VERSION_DESC = "11.8.0";
-var SUPPORT_VERSION = "26.0.2";
+var PLAY_COMPONENT_VERSION = "62.1201.0.0";
+var PLAY_NUGET_VERSION = "62.1201.0" + COMMON_NUGET_VERSION;
+var PLAY_AAR_VERSION = "12.0.1";
+var VERSION_DESC = "12.0.1";
+var SUPPORT_VERSION = "26.1.0.1";
 
 var ANDROID_API_LEVEL = "26";
 var ANDROID_SDK_VERSION = "8.0";
@@ -464,22 +464,22 @@ Task ("diff")
 		"./output/GooglePlayServices.api-info.xml",
 		"./output/GooglePlayServices.api-diff.html");
 
-	// Find obfuscated types/members and log them to a file
-	var obfuscations = FindObfuscations ("./output/GooglePlayServices.Merged.dll", false, false, false, null);
+	// // Find obfuscated types/members and log them to a file
+	// var obfuscations = FindObfuscations ("./output/GooglePlayServices.Merged.dll", false, false, false, null);
 
-	var obfLog = "Obfuscated Types:" + System.Environment.NewLine;
-	foreach (var t in obfuscations.Types)
-		obfLog += t.NetType.FullName + " -> " + t.JavaType + System.Environment.NewLine;
-	obfLog += System.Environment.NewLine + "Obfuscated Members:" + System.Environment.NewLine;
-	foreach (var t in obfuscations.Members)
-		obfLog += t.NetMember.FullName + " -> " + t.JavaMember + System.Environment.NewLine;
-	FileWriteText ("./output/obfuscations.txt", obfLog);
+	// var obfLog = "Obfuscated Types:" + System.Environment.NewLine;
+	// foreach (var t in obfuscations.Types)
+	// 	obfLog += t.NetType.FullName + " -> " + t.JavaType + System.Environment.NewLine;
+	// obfLog += System.Environment.NewLine + "Obfuscated Members:" + System.Environment.NewLine;
+	// foreach (var t in obfuscations.Members)
+	// 	obfLog += t.NetMember.FullName + " -> " + t.JavaMember + System.Environment.NewLine;
+	// FileWriteText ("./output/obfuscations.txt", obfLog);
 
-	var missingMetadata = FindMissingMetadata ("./output/GooglePlayServices.Merged.dll");
-	var metaLog = string.Empty;
-	foreach (var t in missingMetadata)
-		metaLog += t.NetMember.FullName + System.Environment.NewLine;
-	FileWriteText ("./output/missing-metadata.txt", metaLog);
+	// var missingMetadata = FindMissingMetadata ("./output/GooglePlayServices.Merged.dll");
+	// var metaLog = string.Empty;
+	// foreach (var t in missingMetadata)
+	// 	metaLog += t.NetMember.FullName + System.Environment.NewLine;
+	// FileWriteText ("./output/missing-metadata.txt", metaLog);
 });
 
 Task ("merge")
