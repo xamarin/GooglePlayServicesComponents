@@ -29,3 +29,4 @@ generated.targets
 .droidres
 cake.sh
 cake.sh.commit
+/.vs

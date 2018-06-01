@@ -54,6 +54,8 @@
     <Compile Include="Additions\IPendingResultExtensions.cs" />
     <Compile Include="Additions\DataBufferAdditions.cs" />
     <Compile Include="Additions\Additions.cs" />
+    <Compile Include="Additions\SocketFactoryCreator.cs" />
+    <Compile Include="Additions\UnsupportedApiCallException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
@@ -81,4 +83,5 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />
+    
 </Project>

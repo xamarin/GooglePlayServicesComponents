@@ -20,6 +20,19 @@
 	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
 	<attr path="/api/package[@name='com.google.firebase.iid']" name="managedName">Firebase.Iid</attr>
 
+    <!-- 15.0.1+ mc++ 20180530 -->
+    <attr path="/api/package[@name='com.google.android.gms.common.net']" name="managedName">Android.Gms.Common.Net</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.collect']" name="managedName">Android.Gms.Common.Collect</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.config']" name="managedName">Android.Gms.Common.Config</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.internal.constants']" name="managedName">Android.Gms.Internal.Constants</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.logging']" name="managedName">Android.Gms.Common.Logging</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.providers']" name="managedName">Android.Gms.Common.Providers</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.sqlite']" name="managedName">Android.Gms.Common.SqlLite</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.util.concurrent']" name="managedName">Android.Gms.Common.Util.Concurrent</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.wrappers']" name="managedName">Android.Gms.Common.Util.Wrappers</attr>
+
+
+    
 	<!-- TODO: Consider removing these when Cycle 9 is released -->
 	<attr path="/api/package[@name='com.google.android.gms.flags.impl']" name="managedName">Android.Gms.Flags.Impl</attr>
 	<attr path="/api/package[@name='com.google.android.gms.internal']" name="managedName">Android.Gms.Internal</attr>
@@ -100,4 +113,46 @@
 			<parameter name="flags" type="int"></parameter>
 		</method>
 	</add-node>
+
+    
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api']/class[@name='UnsupportedApiCallException']/method[@name='getMessage' and count(parameter)=0]"
+        />
+    <!--
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.net']/class[@name='SocketFactoryCreator']/method[@name='getRemoteCreator' and count(parameter)=1]"
+        />
+    -->
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.net']/class[@name='SocketFactoryCreator']/method[@name='getRemoteCreator' and count(parameter)=1 and parameter[1][@type='android.os.IBinder']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='ConnectionEvent']/method[@name='setDurationMillis' and count(parameter)=1 and parameter[1][@type='long']]"
+        name="managedReturn"
+        >
+        Android.Gms.Common.Stats.StatsEvent
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='ConnectionEvent']/method[@name='setEventType' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Android.Gms.Common.Stats.StatsEvent
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='ConnectionEvent']/method[@name='markTimeOut' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Android.Gms.Common.Stats.StatsEvent
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='WakeLockEvent']/method[@name='markTimeOut' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Android.Gms.Common.Stats.StatsEvent
+    </attr>
+
 </metadata>

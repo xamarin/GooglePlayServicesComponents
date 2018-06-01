@@ -12,6 +12,16 @@
 	<attr path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']" name="managedName">Android.Gms.Auth.Api.SignIn.Internal</attr>
 	<attr path="/api/package[@name='com.google.android.gms.common.api']" name="managedName">Android.Gms.Common.Apis</attr>
     <attr path="/api/package[@name='com.google.android.gms.phenotype']" name="managedName">Android.Gms.Phenotype</attr>  
+
+    <!-- 15.0.1+ mc++ 20180530 -->
+    <attr path="/api/package[@name='com.google.android.gms.common.images.internal']" name="managedName">Android.Gms.Common.Images.Internal</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.oob']" name="managedName">Android.Gms.Common.Oob</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.server.converter']" name="managedName">Android.Gms.Common.Server.Converter</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.server.response']" name="managedName">Android.Gms.Common.Server.Response</attr>
+    <attr path="/api/package[@name='com.google.android.gms.dynamic']" name="managedName">Android.Gms.Dynamic</attr>
+    <attr path="/api/package[@name='com.google.android.gms.signin']" name="managedName">Android.Gms.SignIn</attr>
+    <attr path="/api/package[@name='com.google.android.gms.signin.internal']" name="managedName">Android.Gms.SignIn.Internal</attr>
+
     
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
 	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'Api.zzf' and @name != 'zzf' and @name != 'zzb' and @name != 'zzc' and @name != 'zzd' and @name != 'zze' and @name != 'zzg']" />
@@ -71,4 +81,104 @@
 	</add-node>
 
     <remove-node path="/api/package[@name='com.google.android.gms.phenotype']/class[@name='Configuration']/implements[@name='java.lang.Comparable']" />
+
+    <!-- In Additions -->
+    <remove-node 
+        path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='GoogleSignInAccount']/method[@name='describeContents' and count(parameter)=0]"
+        />
+    <!-- In Additions -->
+    <remove-node 
+        path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='GoogleSignInOptions']/method[@name='describeContents' and count(parameter)=0]"
+        />
+    <!-- In Additions -->
+    <remove-node 
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='BitmapTeleporter']/method[@name='describeContents' and count(parameter)=0]"
+        />
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Batch']/method[@name='createFailedResult' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.common.api.Status']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Batch']/method[@name='createFailedResult' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.common.api.Status']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+
+    <!-- mc++ 20180530 make method in derived class protected or in base class public?? -->
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='ExclusionFilteredDataBuffer']/method[@name='computeRealPosition' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <!-- mc++ 20180530 make method in derived class protected or in base class public?? -->
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='TextFilteredDataBuffer']/method[@name='computeRealPosition' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <!-- mc++ 20180530 make method in derived class protected or in base class public?? -->
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='ShuffleFilteredDataBuffer']/method[@name='computeRealPosition' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <!-- mc++ 20180530 make method in derived class protected or in base class public?? -->
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='PositionFilteredDataBuffer']/method[@name='computeRealPosition' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+
+
+
+    
+
+    <!-- mc++ 20180530 make method in derived class protected or in base class public?? -->
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='FastMapJsonResponse']/method[@name='getValueObject' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='FastSafeParcelableJsonResponse']/method[@name='getValueObject' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='FastSafeParcelableJsonResponse']/method[@name='isPrimitiveFieldSet' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"        
+        name="visibility"
+        >
+        protected
+    </attr>
+    
+
+    <remove-node 
+        path="/api/package[@name='com.google.android.gms.common.images.internal']/class[@name='CrossFadingDrawable']/method[@name='getConstantState' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.images.internal']/class[@name='CrossFadingDrawable']/method[@name='getChangingConfigurations' and count(parameter)=0]"
+        />
+
+    <add-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='StatusPendingResult']"
+        >
+        <method 
+            abstract="false" deprecated="not deprecated" final="false" name="createFailedResult" native="false" 
+            return="Java.Lang.Object" static="false" synchronized="false" visibility="protected">
+            <parameter name="p0" type="com.google.android.gms.common.api.Status">
+            </parameter>
+        </method>       
+    </add-node>   
+        
+
 </metadata>
