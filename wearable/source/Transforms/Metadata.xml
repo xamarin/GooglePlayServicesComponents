@@ -27,4 +27,34 @@
 	<!-- There was a duplicate field error (since they expose this as a getUri property as well), so removing the field -->
 	<remove-node path="/api/package[@name='com.google.android.gms.wearable']/class[@name='Asset']/field[@name='uri']" />
 
+    <!--
+    protected abstract Object GetEntry (int p0, int p1);
+    -->
+   <add-node
+        path="/api/package[@name='com.google.android.gms.wearable']/class[@name='DataEventBuffer']"
+        >
+        <method 
+            static="false" visibility="protected" return="Java.Lang.Object" name="getEntry" 
+            abstract="false" deprecated="not deprecated" final="false" native="false" synchronized="false" 
+            >
+            <parameter type="int" name="p0">
+            </parameter>
+            <parameter type="int" name="p1">
+            </parameter>
+        </method>
+    </add-node>
+   <add-node
+        path="/api/package[@name='com.google.android.gms.wearable']/class[@name='DataItemBuffer']"
+        >
+        <method 
+            static="false" visibility="protected" return="Java.Lang.Object" name="getEntry" 
+            abstract="false" deprecated="not deprecated" final="false" native="false" synchronized="false" 
+            >
+            <parameter type="int" name="p0">
+            </parameter>
+            <parameter type="int" name="p1">
+            </parameter>
+        </method>
+    </add-node>
+    
 </metadata>

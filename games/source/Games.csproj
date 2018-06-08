@@ -13,6 +13,7 @@
     <AssemblyName>Xamarin.GooglePlayServices.Games</AssemblyName>
     <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidClassParser>class-parse</AndroidClassParser>
+    <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
     <!-- <SignAssembly>true</SignAssembly>
     <DelaySign>true</DelaySign>
@@ -49,12 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Additions\BugWorkarounds.cs" />
-    <Compile Include="Additions\IPendingResultExtensions.cs" />
-    <Compile Include="Additions\DataBufferAdditions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
+    <None Include="Additions\BugWorkarounds.cs" />
+    <None Include="Additions\IPendingResultExtensions.cs" />
+    <None Include="Additions\DataBufferAdditions.cs" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
@@ -97,4 +98,5 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />
+    
 </Project>

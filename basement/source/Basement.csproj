@@ -14,6 +14,7 @@
     <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <!-- <AndroidClassParser>class-parse</AndroidClassParser> -->
     <AndroidClassParser>class-parse</AndroidClassParser>
+    <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
     <!-- <SignAssembly>true</SignAssembly>
     <DelaySign>true</DelaySign>

@@ -14,12 +14,13 @@ namespace Android.Gms.People.ProtoModel
 		}
 	}
 
-	public partial class FetchBackUpDeviceContactInfoResponseEntity
-	{
-		IntPtr id_freeze;
-		public Java.Lang.Object Freeze()
-		{
-			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
-		}
-	}
+
+	//public partial class FetchBackUpDeviceContactInfoResponseEntity
+	//{
+	//	IntPtr id_freeze;
+	//	public Java.Lang.Object Freeze()
+	//	{
+	//		return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
+	//	}
+	//}
 }

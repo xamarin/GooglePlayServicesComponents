@@ -1,9 +1,9 @@
 // Tools needed by cake addins
-#tool nuget:?package=XamarinComponent&version=1.1.0.49
-#tool nuget:?package=ILRepack&version=2.0.13
+#tool nuget:?package=XamarinComponent&version=1.1.0.65
+#tool nuget:?package=ILRepack&version=2.0.15
 #tool nuget:?package=Cake.MonoApiTools&version=2.0.0
 #tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
-#tool nuget:?package=NUnit.Runners&version=2.6.4
+#tool nuget:?package=NUnit.Runners&version=2.6.6
 #tool nuget:?package=Paket
 #tool nuget:?package=vswhere
 
