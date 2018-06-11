@@ -30,40 +30,40 @@ namespace Firebase.Auth
         //    return SignInWithEmailAndPassword (email, password).AsAsync<IAuthResult> ();
         //}
 
-        public System.Threading.Tasks.Task<IProviderQueryResult> FetchProvidersForEmailAsync (string email)
-        {
-            return FetchProvidersForEmail (email).AsAsync<IProviderQueryResult> ();
-        }
+  //      public System.Threading.Tasks.Task<IProviderQueryResult> FetchProvidersForEmailAsync (string email)
+  //      {
+  //          return FetchProvidersForEmail (email).AsAsync<IProviderQueryResult> ();
+  //      }
 
-        public System.Threading.Tasks.Task SendPasswordResetEmailAsync (string email)
-        {
-            return SendPasswordResetEmail (email).AsAsync ();
-        }
+  //      public System.Threading.Tasks.Task SendPasswordResetEmailAsync (string email)
+  //      {
+  //          return SendPasswordResetEmail (email).AsAsync ();
+  //      }
 
-		public System.Threading.Tasks.Task SendPasswordResetEmailAsync (string email, ActionCodeSettings settings)
-		{
-			return SendPasswordResetEmail(email, settings).AsAsync();
-		}
+		//public System.Threading.Tasks.Task SendPasswordResetEmailAsync (string email, ActionCodeSettings settings)
+		//{
+		//	return SendPasswordResetEmail(email, settings).AsAsync();
+		//}
 
-        public System.Threading.Tasks.Task ApplyActionCodeAsync(string code)
-        {
-            return ApplyActionCode(code).AsAsync();
-        }
+        //public System.Threading.Tasks.Task ApplyActionCodeAsync(string code)
+        //{
+        //    return ApplyActionCode(code).AsAsync();
+        //}
 
-        public System.Threading.Tasks.Task CheckActionCodeAsync(string code)
-        {
-            return CheckActionCode(code).AsAsync();
-        }
+        //public System.Threading.Tasks.Task CheckActionCodeAsync(string code)
+        //{
+        //    return CheckActionCode(code).AsAsync();
+        //}
 
-        public System.Threading.Tasks.Task ConfirmPasswordResetAsync(string code, string newPassword)
-        {
-            return ConfirmPasswordReset(code, newPassword).AsAsync();
-        }
+        //public System.Threading.Tasks.Task ConfirmPasswordResetAsync(string code, string newPassword)
+        //{
+        //    return ConfirmPasswordReset(code, newPassword).AsAsync();
+        //}
 
-        public System.Threading.Tasks.Task VerifyPasswordResetCodeAsync(string code)
-        {
-            return VerifyPasswordResetCode(code).AsAsync();
-        }
+        //public System.Threading.Tasks.Task VerifyPasswordResetCodeAsync(string code)
+        //{
+        //    return VerifyPasswordResetCode(code).AsAsync();
+        //}
     }
 }
 
@@ -81,11 +81,11 @@ namespace Firebase.Auth
             return Delete ().AsAsync ();
         }
 
-		[Obsolete]
-        public System.Threading.Tasks.Task<GetTokenResult> GetTokenAsync (bool forceRefresh)
-        {
-            return GetToken (forceRefresh).AsAsync<GetTokenResult> ();
-        }
+		//[Obsolete]
+        //public System.Threading.Tasks.Task<GetTokenResult> GetTokenAsync (bool forceRefresh)
+        //{
+        //    return GetToken (forceRefresh).AsAsync<GetTokenResult> ();
+        //}
 
 		public System.Threading.Tasks.Task<GetTokenResult> GetIdTokenAsync(bool forceRefresh)
 		{

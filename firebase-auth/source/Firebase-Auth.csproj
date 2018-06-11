@@ -90,19 +90,8 @@
     <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.0.2" />
     <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.0.2" />
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.7" />
+    <PackageReference Include="Xamarin.Android.Support.Annotations" Version="26.0.2" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />
-    <!--
-    Xamarin Android Bindings csproj trick 
-    Enable code navigation in generated code.
-    Remove that after bindings are done! 
-    Otherwise duplicate symbol (definition) errors might arise
-    -->
-    <ItemGroup>
-        <Compile Include="obj\Debug\generated\src\*.cs" />
-        <Compile Include="obj\Release\generated\src\*.cs" />
-        <None Include="obj\Debug\api.xml" />
-        <None Include="obj\Release\api.xml" />
-    </ItemGroup>
 </Project>

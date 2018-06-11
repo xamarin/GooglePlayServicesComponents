@@ -6,9 +6,11 @@
 	<attr path="/api/package[@name='com.google.firebase.auth.internal']" name="managedName">Firebase.Auth.Internal</attr>
     
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
-	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+    <!--
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'zz']" />
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+    -->
 	<!--<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />-->
 
 	<!-- Fix params for some inherited parcelable types -->
@@ -17,10 +19,16 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
-	<!-- Remove the implementation of this nonsense obfuscated interface which has no useful methods in it anyway -->
+    <!--
+    mc++ 20180608 mathced no nodes
+	Remove the implementation of this nonsense obfuscated interface which has no useful methods in it anyway
 	<remove-node path="/api/package[@name='com.google.firebase.auth']/class[@name='FirebaseAuth']/implements[@name='com.google.android.gms.internal.zzbti']" />
-
     <remove-node path="/api/package[@name='com.google.firebase.auth']/interface[@name='AuthResult']/implements[@name='com.google.android.gms.internal.zzbgp']" />
     <remove-node path="/api/package[@name='com.google.firebase.auth']/interface[@name='AdditionalUserInfo']/implements[@name='com.google.android.gms.internal.zzbgp']" />
-	
+    -->
+    
+    <attr path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth.zza']" name="visibility">internal</attr>
+    <attr path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth.zzb']" name="visibility">internal</attr>
+    <attr path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth.zzc']" name="visibility">internal</attr>
+
 </metadata>
