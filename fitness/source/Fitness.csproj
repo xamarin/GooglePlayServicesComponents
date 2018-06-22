@@ -64,6 +64,9 @@
     <TransformFile Include="..\..\Metadata.Common.xml">
       <Link>Transforms\Metadata.Common.xml</Link>
     </TransformFile>
+    <TransformFile Include="..\..\Metadata.generated.xml">
+      <Link>Transforms\Metadata.generated.xml</Link>
+    </TransformFile>
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\play-services-fitness\classes.jar">

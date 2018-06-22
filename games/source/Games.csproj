@@ -56,6 +56,7 @@
     <None Include="Additions\BugWorkarounds.cs" />
     <None Include="Additions\IPendingResultExtensions.cs" />
     <None Include="Additions\DataBufferAdditions.cs" />
+    <None Include="Additions\TurnBasedMatchBuffer.cs" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
@@ -63,6 +64,9 @@
     <TransformFile Include="Transforms\Metadata.xml" />
     <TransformFile Include="..\..\Metadata.Common.xml">
       <Link>Transforms\Metadata.Common.xml</Link>
+    </TransformFile>
+    <TransformFile Include="..\..\Metadata.generated.xml">
+      <Link>Transforms\Metadata.generated.xml</Link>
     </TransformFile>
   </ItemGroup>
   <ItemGroup>

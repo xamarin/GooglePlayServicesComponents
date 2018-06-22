@@ -421,6 +421,19 @@ Task ("externals")
 			Unzip (aarFile, path + aar.Dir);
 	}
 
+	RunTarget("docs");
+
+	// Put the uitest.keystore in our artifacts for downstream jobs to use
+	EnsureDirectoryExists ("./output");
+	if (FileExists ("./uitest.keystore"))
+		CopyFile ("./uitest.keystore", "./output/uitest.keystore");
+});
+
+Task ("docs")
+	.Does (() =>
+{
+	var path = "./externals/";
+
 	// Get the GPS Docs
 	if (!FileExists (path + "docs.zip"))
 		DownloadFile (DOCS_URL, path + "docs.zip");
@@ -434,11 +447,6 @@ Task ("externals")
 			Force = true
 		});
 	}
-
-	// Put the uitest.keystore in our artifacts for downstream jobs to use
-	EnsureDirectoryExists ("./output");
-	if (FileExists ("./uitest.keystore"))
-		CopyFile ("./uitest.keystore", "./output/uitest.keystore");
 });
 
 Task ("diff")
