@@ -103,7 +103,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagManager.V4.Impl", "tagma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-AppIndexing", "firebase-appindexing\source\Firebase-AppIndexing.csproj", "{8D01CC30-64F5-4AD3-B9C8-0970B0F1D562}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Database-Collection", "firebase-database-collection\source\Firebase-Database-Collection.csproj", "{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Dynamic-Links", "firebase-dynamic-links\source\Firebase-Dynamic-Links.csproj", "{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Perf", "firebase-perf\source\Firebase-Perf.csproj", "{2233FF89-3CDD-4FA5-844E-A43EDAE8463F}"
 EndProject

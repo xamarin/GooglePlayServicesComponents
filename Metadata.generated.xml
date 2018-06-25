@@ -6745,7 +6745,7 @@
         path="/api/package/*/constructor[count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] ]/parameter[3]" 
         name="managedName"
         >
-        defStyle
+        defStyleAttr
     </attr>
 
 
@@ -6765,7 +6765,7 @@
         path="/api/package/*/constructor[count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] and parameter[4][@type='int'] ]/parameter[3]" 
         name="managedName"
         >
-        defStyle
+        defStyleAttr
     </attr>
     <attr 
         path="/api/package/*/constructor[count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] and parameter[4][@type='int'] ]/parameter[4]" 
