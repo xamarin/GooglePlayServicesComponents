@@ -80,8 +80,8 @@ LogSystemInfo ();
 var AAR_INFOS = new [] {
 	new AarInfo ("ads", "play-services-ads", "android/gms/play-services-ads", "Xamarin.GooglePlayServices.Ads", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("ads-lite", "play-services-ads-lite", "android/gms/play-services-ads-lite", "Xamarin.GooglePlayServices.Ads.Lite", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("analytics", "play-services-analytics", "android/gms/play-services-analytics", "Xamarin.GooglePlayServices.Analytics", "16.0.0", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("analytics-impl", "play-services-analytics-impl", "android/gms/play-services-analytics-impl", "Xamarin.GooglePlayServices.Analytics.Impl", "16.0.0", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("analytics", "play-services-analytics", "android/gms/play-services-analytics", "Xamarin.GooglePlayServices.Analytics", "16.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("analytics-impl", "play-services-analytics-impl", "android/gms/play-services-analytics-impl", "Xamarin.GooglePlayServices.Analytics.Impl", "16.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("auth", "play-services-auth", "android/gms/play-services-auth", "Xamarin.GooglePlayServices.Auth", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("auth-base", "play-services-auth-base", "android/gms/play-services-auth-base", "Xamarin.GooglePlayServices.Auth.Base", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("auth-api-phone", "play-services-auth-api-phone", "android/gms/play-services-auth-api-phone", "Xamarin.GooglePlayServices.Auth.Api.Phone", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
@@ -117,6 +117,8 @@ var AAR_INFOS = new [] {
 	new AarInfo ("wallet", "play-services-wallet", "android/gms/play-services-wallet", "Xamarin.GooglePlayServices.Wallet", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("wearable", "play-services-wearable", "android/gms/play-services-wearable", "Xamarin.GooglePlayServices.Wearable", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 
+	// new AarInfo ("phenotype", "play-services-phenotype", "android/gms/play-services-phenotype", "Xamarin.GooglePlayServices.Phenotype", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+
 	new AarInfo ("firebase-ads", "firebase-ads", "firebase/firebase-ads", "Xamarin.Firebase.Ads", "15.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-analytics", "firebase-analytics", "firebase/firebase-analytics", "Xamarin.Firebase.Analytics", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-analytics-impl", "firebase-analytics-impl", "firebase/firebase-analytics-impl", "Xamarin.Firebase.Analytics.Impl", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
@@ -136,6 +138,13 @@ var AAR_INFOS = new [] {
 	new AarInfo ("firebase-perf", "firebase-perf", "firebase/firebase-perf", "Xamarin.Firebase.Perf", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-storage", "firebase-storage", "firebase/firebase-storage", "Xamarin.Firebase.Storage", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-storage-common", "firebase-storage-common", "firebase/firebase-storage-common", "Xamarin.Firebase.Storage.Common", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+
+	new AarInfo ("firebase-abt", "firebase-abt", "firebase/firebase-abt", "Xamarin.Firebase.Abt", "15.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-ads-lite", "firebase-ads-lite", "firebase/firebase-ads-lite", "Xamarin.Firebase.Ads.Lite", "15.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-auth-interop", "firebase-auth-interop", "firebase/firebase-auth-interop", "Xamarin.Firebase.Auth.Interop", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-database-collection", "firebase-database-collection", "firebase/firebase-database-collection", "Xamarin.Firebase.Database.Collection", "15.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+
+
 };
 
 class AarInfo

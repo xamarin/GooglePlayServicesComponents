@@ -37,4 +37,6 @@
 
 	<!-- Task is really not suitable to be returned as a property, so never allow the getX method to be converted to one if it returns Task -->
 	<attr path="/api/package/*/method[contains(@return, 'com.google.android.gms.tasks.Task')]" name="propertyName"></attr>
+
+
 </metadata>

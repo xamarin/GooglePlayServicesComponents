@@ -103,7 +103,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagManager.V4.Impl", "tagma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-AppIndexing", "firebase-appindexing\source\Firebase-AppIndexing.csproj", "{8D01CC30-64F5-4AD3-B9C8-0970B0F1D562}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Dynamic-Links", "firebase-dynamic-links\source\Firebase-Dynamic-Links.csproj", "{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Database-Collection", "firebase-database-collection\source\Firebase-Database-Collection.csproj", "{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Perf", "firebase-perf\source\Firebase-Perf.csproj", "{2233FF89-3CDD-4FA5-844E-A43EDAE8463F}"
 EndProject
@@ -118,6 +118,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fido", "fido\source\Fido.csproj", "{B78600C5-A46A-4BEA-A060-D8074FA31469}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Firestore", "firebase-firestore\source\Firebase-Firestore.csproj", "{7A3C38F7-AD6A-4BF4-9F63-3C0B0A82FB5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Abt", "firebase-abt\source\Firebase-Abt.csproj", "{2DA8109F-C282-4FEC-9F4B-C7CE8B53F6DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Ads-Lite", "firebase-ads-lite\source\Firebase-Ads-Lite.csproj", "{F13C1184-88B6-46DE-B066-B2C057058CC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Auth-Interop", "firebase-auth-interop\source\Firebase-Auth-Interop.csproj", "{14740758-46A6-4948-9D53-587C171B074D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -349,6 +355,18 @@ Global
 		{7A3C38F7-AD6A-4BF4-9F63-3C0B0A82FB5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A3C38F7-AD6A-4BF4-9F63-3C0B0A82FB5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A3C38F7-AD6A-4BF4-9F63-3C0B0A82FB5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA8109F-C282-4FEC-9F4B-C7CE8B53F6DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA8109F-C282-4FEC-9F4B-C7CE8B53F6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA8109F-C282-4FEC-9F4B-C7CE8B53F6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA8109F-C282-4FEC-9F4B-C7CE8B53F6DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F13C1184-88B6-46DE-B066-B2C057058CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F13C1184-88B6-46DE-B066-B2C057058CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F13C1184-88B6-46DE-B066-B2C057058CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F13C1184-88B6-46DE-B066-B2C057058CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14740758-46A6-4948-9D53-587C171B074D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14740758-46A6-4948-9D53-587C171B074D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14740758-46A6-4948-9D53-587C171B074D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14740758-46A6-4948-9D53-587C171B074D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE} = {AFB1EDA0-E0D2-4E95-BAEC-9781B046413E}
@@ -407,5 +425,8 @@ Global
 		{8900C5EF-1182-4E8B-88FE-596EC2DB379D} = {AFB1EDA0-E0D2-4E95-BAEC-9781B046413E}
 		{B78600C5-A46A-4BEA-A060-D8074FA31469} = {AFB1EDA0-E0D2-4E95-BAEC-9781B046413E}
 		{7A3C38F7-AD6A-4BF4-9F63-3C0B0A82FB5A} = {1EC5651F-83A6-4862-AED2-6BE5103652D0}
+		{2DA8109F-C282-4FEC-9F4B-C7CE8B53F6DB} = {1EC5651F-83A6-4862-AED2-6BE5103652D0}
+		{F13C1184-88B6-46DE-B066-B2C057058CC6} = {1EC5651F-83A6-4862-AED2-6BE5103652D0}
+		{14740758-46A6-4948-9D53-587C171B074D} = {1EC5651F-83A6-4862-AED2-6BE5103652D0}
 	EndGlobalSection
 EndGlobal
