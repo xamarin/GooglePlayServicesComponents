@@ -143,6 +143,8 @@ var AAR_INFOS = new [] {
 	new AarInfo ("firebase-ads-lite", "firebase-ads-lite", "firebase/firebase-ads-lite", "Xamarin.Firebase.Ads.Lite", "15.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-auth-interop", "firebase-auth-interop", "firebase/firebase-auth-interop", "Xamarin.Firebase.Auth.Interop", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-database-collection", "firebase-database-collection", "firebase/firebase-database-collection", "Xamarin.Firebase.Database.Collection", "15.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-functions", "firebase-functions", "firebase/firebase-functions", "Xamarin.Firebase.Functions", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-iid-interop", "firebase-iid-interop", "firebase/firebase-iid-interop", "Xamarin.Firebase.Iid.Interop", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 
 
 };
