@@ -81,7 +81,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <InputJar Include="..\..\externals\firebase-dynamic-links\classes.jar">
+    <InputJar Include="..\..\externals\firebase-dynamic-links\firebase-measurement-connector.jar">
       <Link>Jars\firebase-dynamic-links.jar</Link>
     </InputJar>
   </ItemGroup>

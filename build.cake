@@ -145,6 +145,8 @@ var AAR_INFOS = new [] {
 	new AarInfo ("firebase-database-collection", "firebase-database-collection", "firebase/firebase-database-collection", "Xamarin.Firebase.Database.Collection", "15.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-functions", "firebase-functions", "firebase/firebase-functions", "Xamarin.Firebase.Functions", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-iid-interop", "firebase-iid-interop", "firebase/firebase-iid-interop", "Xamarin.Firebase.Iid.Interop", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-invites", "firebase-invites", "firebase/firebase-invites", "Xamarin.Firebase.Invites", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-measurement-connector", "firebase-measurement-connector", "firebase/firebase-measurement-connector", "Xamarin.Firebase.Measurement.Connector", "17.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 
 
 };

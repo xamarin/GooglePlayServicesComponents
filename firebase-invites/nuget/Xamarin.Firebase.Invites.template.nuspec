@@ -12,17 +12,20 @@
       Xamarin.Android Bindings for Firebase - Invites $aar-version$
     </description>
     <copyright>© Microsoft Corporation. All rights reserved.</copyright>
-    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865336</projectUrl>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865436</projectUrl>
     <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865377</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/firebase-invites_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
-        <dependency id="Xamarin.GooglePlayServices.AppInvite" version="[$version$]" />
-        <dependency id="Xamarin.Firebase.Analytics" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
+        <dependency id="Xamarin.Firebase.Common" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <!-- No files, just a wrapper around other packages -->
+    <file src="output/Xamarin.Firebase.Invites.dll" target="lib/MonoAndroid80" />
+    <file src="firebase-invites/nuget/Xamarin.Firebase.Invites.targets" target="build/MonoAndroid80" />
   </files>
 </package>
