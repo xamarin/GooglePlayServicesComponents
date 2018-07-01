@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}</ProjectGuid>
+    <ProjectGuid>{db477a2b-690d-4749-9666-2909044b1f93}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>GooglePlayServices.Database.Collection</RootNamespace>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>

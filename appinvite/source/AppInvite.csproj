@@ -85,10 +85,6 @@
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\firebase-dynamic-links\source\Firebase-Dynamic-Links.csproj">
-      <Project>{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}</Project>
-      <Name>Firebase-Dynamic-Links</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.0.2" />

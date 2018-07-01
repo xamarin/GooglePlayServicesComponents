@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}</ProjectGuid>
+    <ProjectGuid>{c982f6c8-42ab-481b-9d23-4bbf0bc3b2b6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>GooglePlayServices.Invites</RootNamespace>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
@@ -81,8 +81,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <InputJar Include="..\..\externals\firebase-dynamic-links\firebase-measurement-connector.jar">
-      <Link>Jars\firebase-dynamic-links.jar</Link>
+    <InputJar Include="..\..\externals\firebase-measurement-connector\classes.jar">
+      <Link>Jars\firebase-invites.jar</Link>
     </InputJar>
   </ItemGroup>
   <ItemGroup>

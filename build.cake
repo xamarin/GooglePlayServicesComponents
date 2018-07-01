@@ -117,7 +117,10 @@ var AAR_INFOS = new [] {
 	new AarInfo ("wallet", "play-services-wallet", "android/gms/play-services-wallet", "Xamarin.GooglePlayServices.Wallet", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("wearable", "play-services-wearable", "android/gms/play-services-wearable", "Xamarin.GooglePlayServices.Wearable", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 
-	// new AarInfo ("phenotype", "play-services-phenotype", "android/gms/play-services-phenotype", "Xamarin.GooglePlayServices.Phenotype", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("phenotype", "play-services-phenotype", "android/gms/play-services-phenotype", "Xamarin.GooglePlayServices.Phenotype", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("places-placereport", "play-services-places-placereport", "android/gms/play-services-places-placereport", "Xamarin.GooglePlayServices.Places.PlaceReport", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("stats", "play-services-stats", "android/gms/play-services-stats", "Xamarin.GooglePlayServices.Stats", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("vision-image-label", "play-services-vision-image-label", "android/gms/play-services-vision-image-label", "Xamarin.GooglePlayServices.Vision.ImageLabel", "15.0.0", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 
 	new AarInfo ("firebase-ads", "firebase-ads", "firebase/firebase-ads", "Xamarin.Firebase.Ads", "15.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-analytics", "firebase-analytics", "firebase/firebase-analytics", "Xamarin.Firebase.Analytics", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
@@ -147,7 +150,11 @@ var AAR_INFOS = new [] {
 	new AarInfo ("firebase-iid-interop", "firebase-iid-interop", "firebase/firebase-iid-interop", "Xamarin.Firebase.Iid.Interop", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-invites", "firebase-invites", "firebase/firebase-invites", "Xamarin.Firebase.Invites", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-measurement-connector", "firebase-measurement-connector", "firebase/firebase-measurement-connector", "Xamarin.Firebase.Measurement.Connector", "17.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-
+	new AarInfo ("firebase-ml-common", "firebase-ml-common", "firebase/firebase-ml-common", "Xamarin.Firebase.ML.Common", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-ml-model-interpreter", "firebase-ml-model-interpreter", "firebase/firebase-ml-model-interpreter", "Xamarin.Firebase.ML.Model.Interpreter", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-ml-vision", "firebase-ml-vision", "firebase/firebase-ml-vision", "Xamarin.Firebase.ML.Vision", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-ml-vision-image-label-model", "firebase-ml-vision-image-label-model", "firebase/firebase-ml-vision-image-label-model", "Xamarin.Firebase.ML.Vision.Image.Label.Model", "15.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("protolite-well-known-types", "protolite-well-known-types", "firebase/protolite-well-known-types", "Xamarin.Firebase.ProtoliteWellKnownTypes", "15.0.0", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 
 };
 

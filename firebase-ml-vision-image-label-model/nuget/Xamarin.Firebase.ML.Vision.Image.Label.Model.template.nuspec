@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.Firebase.ML.Vision.Image.Label.Model</id>
+    <title>Xamarin Firebase - ML Vision Image Label Model</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Firebase - ML Vision Image Label Model $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Firebase - ML Vision Image Label Model $aar-version$
+    </description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865436</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865377</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/firebase-ml-vision-image-label-model_128x128.png</iconUrl>
+    <dependencies>
+      <group targetFramework="MonoAndroid80">
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
+        <dependency id="Xamarin.Firebase.Common" version="[$version$]" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.Firebase.ML.Vision.Image.Label.Model.dll" target="lib/MonoAndroid80" />
+    <file src="firebase-ml-vision-image-label-model/nuget/Xamarin.Firebase.ML.Vision.Image.Label.Model.targets" target="build/MonoAndroid80" />
+  </files>
+</package>

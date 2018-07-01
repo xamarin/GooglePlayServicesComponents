@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.Firebase.ML.Model.Interpreter</id>
+    <title>Xamarin Firebase - ML Model Interpreter</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Firebase - ML Model Interpreter $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Firebase - ML Model Interpreter $aar-version$
+    </description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865436</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865377</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/firebase-ml-model-interpreter_128x128.png</iconUrl>
+    <dependencies>
+      <group targetFramework="MonoAndroid80">
+        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+        <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
+        <dependency id="Xamarin.Firebase.Common" version="[$version$]" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.Firebase.ML.Model.Interpreter.dll" target="lib/MonoAndroid80" />
+    <file src="firebase-ml-model-interpreter/nuget/Xamarin.Firebase.ML.Model.Interpreter.targets" target="build/MonoAndroid80" />
+  </files>
+</package>
