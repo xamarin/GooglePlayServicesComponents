@@ -81,8 +81,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <InputJar Include="..\..\externals\firebase-dynamic-links\classes.jar">
-      <Link>Jars\firebase-dynamic-links.jar</Link>
+    <InputJar Include="..\..\externals\firebase-ml-model-interpreter\classes.jar">
+      <Link>Jars\firebase-ml-model-interpreter.jar</Link>
     </InputJar>
   </ItemGroup>
   <ItemGroup>
@@ -95,4 +95,5 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />
+
 </Project>

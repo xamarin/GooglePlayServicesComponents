@@ -50,9 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Additions\DataBufferAdditions.cs" />
-    <Compile Include="Additions\IPendingResultExtensions.cs" />
-    <Compile Include="Additions\TaskExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
@@ -102,6 +99,9 @@
     <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.0.2" />
     <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.0.2" />
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Additions\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />
