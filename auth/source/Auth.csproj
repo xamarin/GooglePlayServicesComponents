@@ -88,7 +88,7 @@
     </ProjectReference>
     <ProjectReference Include="..\..\auth-api-phone\source\Auth-Api-Phone.csproj">
       <Project>{B797EA6B-9566-4980-9665-F808C953B24D}</Project>
-      <Name>Auth-Api-Phone</Name>
+      <Name>Auth.Api.Phone</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

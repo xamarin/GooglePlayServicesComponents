@@ -6,6 +6,12 @@
 	<attr path="/api/package[@name='com.google.firebase.perf.metrics']" name="managedName">Firebase.Perf.Metrics</attr>
 	<attr path="/api/package[@name='com.google.firebase.perf.network']" name="managedName">Firebase.Perf.Network</attr>
 	<attr path="/api/package[@name='com.google.firebase.perf.provider']" name="managedName">Firebase.Perf.Provider</attr>
+    <attr path="/api/package[@name='com.google.firebase.perf.component']" name="managedName">Firebase.Perf.Component</attr>
+    <attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.firebase.perf']" name="managedName">Firebase.Perf.Provider</attr>
+    <remove-node path="/api/package[@name='com.google.android.gms.internal.firebase-perf']" ></remove-node>>
+
+
+
 
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
 	<remove-node path="/api/package/class[contains(@name, 'zz')]" />

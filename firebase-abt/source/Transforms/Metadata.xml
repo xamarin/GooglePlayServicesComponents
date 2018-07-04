@@ -2,8 +2,7 @@
 	
 	<!-- Rename Namespaces -->
 	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
-	<attr path="/api/package[@name='com.google.firebase.auth']" name="managedName">Firebase.Auth</attr>
-	<attr path="/api/package[@name='com.google.firebase.provider']" name="managedName">Firebase.Provider</attr>
+	<attr path="/api/package[@name='com.google.firebase.abt']" name="managedName">Firebase.Abt</attr>
 
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
 	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
@@ -18,4 +17,7 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
 	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
+    <remove-node path="/api/package[@name='com.google.android.gms.internal.firebase_abt']" />
+
+    
 </metadata>

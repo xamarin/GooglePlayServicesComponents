@@ -4,6 +4,10 @@
 	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
 	<attr path="/api/package[@name='com.google.firebase.auth']" name="managedName">Firebase.Auth</attr>
 	<attr path="/api/package[@name='com.google.firebase.provider']" name="managedName">Firebase.Provider</attr>
+    <attr path="/api/package[@name='com.google.firebase.components']" name="managedName">Firebase.Componentsw</attr>
+    <attr path="/api/package[@name='com.google.firebase.inject']" name="managedName">Firebase.Inject</attr>
+    <attr path="/api/package[@name='com.google.firebase.internal']" name="managedName">Firebase.Internal</attr>
+    <attr path="/api/package[@name='com.google.firebase.internal.api']" name="managedName">Firebase.Internal.Api</attr>
 
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
 	<remove-node path="/api/package/class[contains(@name, 'zz')]" />

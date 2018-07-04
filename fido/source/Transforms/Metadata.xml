@@ -6,5 +6,11 @@
 	<attr path="/api/package[@name='com.google.android.gms.fido.u2f.api.common']" name="managedName">Android.Gms.Fido.U2F.Api.Common</attr>
 	<attr path="/api/package[@name='com.google.android.gms.fido.u2f.api.messagebased']" name="managedName">Android.Gms.Fido.U2F.MessageBased</attr>
 
-	
+    <attr path="/api/package[@name='com.google.android.gms.fido.fido2']" name="managedName">Android.Gms.Fido.Fido2</attr>
+    <attr path="/api/package[@name='com.google.android.gms.fido.fido2.api.common']" name="managedName">Android.Gms.Fido.Fido2.Api.Common</attr>
+    <attr path="/api/package[@name='com.google.android.gms.internal.fido']" name="managedName">Android.Gms.Internal.Fido</attr>
+
+
+
+    
 </metadata>

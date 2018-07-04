@@ -1,7 +1,8 @@
 ﻿<metadata>
 	<!-- Rename Namespaces -->
 	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
-	<attr path="/api/package[@name='com.google.firebase.dynamiclinks']" name="managedName">Firebase.DynamicLinks</attr>
+	<attr path="/api/package[@name='com.google.firebase.functions']" name="managedName">Firebase.Functions</attr>
 
-
+    <remove-node path="/api/package[@name='com.google.firebase.functions.a']" ></remove-node>
+        
 </metadata>

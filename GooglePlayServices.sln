@@ -107,7 +107,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Dynamic-Links", "f
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Perf", "firebase-perf\source\Firebase-Perf.csproj", "{2233FF89-3CDD-4FA5-844E-A43EDAE8463F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth-Api-Phone", "auth-api-phone\source\Auth-Api-Phone.csproj", "{B797EA6B-9566-4980-9665-F808C953B24D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth.Api.Phone", "auth-api-phone\source\Auth.Api.Phone.csproj", "{B797EA6B-9566-4980-9665-F808C953B24D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oss-Licenses", "oss-licenses\source\Oss-Licenses.csproj", "{DCCFBAD3-A366-4C61-B56F-DBD46D68980F}"
 EndProject

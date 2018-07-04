@@ -2,8 +2,9 @@
 	
 	<!-- Rename Namespaces -->
 	<attr path="/api/package[@name='com.google.firebase.database.connection.idl']" name="managedName">Firebase.Database.Connection.Idl</attr>
-	<attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.firebase_database']" name="managedName">Android.Gms.Dynamite.Descriptors.FirebaseDatabase</attr>
-
+	<remove-node path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.firebase_database']" ></remove-node>
+    <remove-node path="/api/package[@name='com.google.android.gms.internal.firebase_database']"></remove-node>
+    
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
 	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />

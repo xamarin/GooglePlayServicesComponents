@@ -1,7 +1,10 @@
 ﻿<metadata>
 	<!-- Fix Namespaces -->
 	<attr path="/api/package[@name='com.google.android.gms.gass.internal']" name="managedName">Android.Gms.Gass.Internal</attr>
+    <attr path="/api/package[@name='com.google.android.gms.auth.api.phone']" name="managedName">Android.Gms.Auth.Api.Phone</attr>
+    <remove-node path="/api/package[@name='com.google.android.gms.internal.auth-api-phone']" ></remove-node>
 
+    
 	<!-- Remove some internal namespaces -->
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
 
