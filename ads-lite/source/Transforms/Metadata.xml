@@ -131,5 +131,61 @@
 			<parameter name="customTemplateAd" type="com.android.gms.ads.formats.NativeCustomTemplateAd"></parameter>
 		</method>
 	</add-node>-->
-  
+
+    <attr
+        path="/api/*/*/method[@name='getCustomEventExtrasBundle' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;T&gt;']]/parameter[@name='p0']"
+        name="managedName"
+        >
+        adapterClass
+    </attr>
+    <attr
+        path="/api/*/*/method[@name='getNetworkExtras' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;T&gt;']]/parameter[@name='p0']"
+        name="managedName"
+        >
+        networkExtrasClass
+    </attr>
+    <attr
+        path="/api/*/*/method[@name='getNetworkExtrasBundle' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;T&gt;']]/parameter[@name='p0']"
+        name="managedName"
+        >
+        adapterClass
+    </attr>
+
+
+    
+    <attr
+        path="/api/*/*/method[@name='AddCustomEventExtrasBundle' and count(parameter)=2 and parameter[1][@type='java.lang.Class&lt;T&gt;']]/parameter[@name='p0']"
+        name="managedName"
+        >
+        adapterClass
+    </attr>
+    <attr
+        path="/api/*/*/method[@name='AddCustomEventExtrasBundle' and count(parameter)=2 and parameter[1][@type='java.lang.Class&lt;T&gt;']]/parameter[@name='p1']"
+        name="managedName"
+        >
+        customEventExtras
+    </attr>
+
+    <attr
+        path="/api/*/*/method[@name='AddNetworkExtrasBundle' and count(parameter)=2 and parameter[1][@type='java.lang.Class&lt;T&gt;']]/parameter[@name='p0']"
+        name="managedName"
+        >
+        adapterClass
+    </attr>
+    <attr
+        path="/api/*/*/method[@name='AddNetworkExtrasBundle' and count(parameter)=2 and parameter[1][@type='java.lang.Class&lt;T&gt;']]/parameter[@name='p1']"
+        name="managedName"
+        >
+        networkExtras
+    </attr>
+
+    <attr
+        path="/api/*/*/method[@name='AdView' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;T&gt;']]/parameter[@name='p1']"
+        name="managedName"
+        >
+        networkExtras
+    </attr>
+
+
+
 </metadata>

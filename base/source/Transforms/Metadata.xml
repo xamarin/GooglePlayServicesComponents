@@ -24,11 +24,11 @@
 
     
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
-	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'Api.zzf' and @name != 'zzf' and @name != 'zzb' and @name != 'zzc' and @name != 'zzd' and @name != 'zze' and @name != 'zzg']" />
+    <remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'Api.zzf' and @name != 'zzf' and @name != 'zzb' and @name != 'zzc' and @name != 'zzd' and @name != 'zze' and @name != 'zzg']" />
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
-
+    
 	<!-- Allowing zzc classes allows a bit too much, so remove these specifically -->
 	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[contains(@name, 'zz') and @name != 'zzc' and @name != 'zzf' and @name != 'zzg']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']/class[@name='zzf']" />
@@ -180,5 +180,12 @@
         </method>       
     </add-node>   
         
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.images']/class[@name='ImageManager.ImageReceiver']"
+        name="visibility"
+        >
+        public
+    </attr>
 
+    
 </metadata>
