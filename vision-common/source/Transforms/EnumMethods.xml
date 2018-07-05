@@ -17,6 +17,7 @@
   -->
   <mapping jni-class="com/google/android/gms/vision/CameraSource$Builder">
     <method jni-name="setFacing" parameter="facing" clr-enum-type="Android.Gms.Vision.CameraFacing" />
+    <method jni-name="setFacing" parameter="p0" clr-enum-type="Android.Gms.Vision.CameraFacing" />
   </mapping>
 
   <mapping jni-class="com/google/android/gms/vision/CameraSource">
@@ -29,6 +30,7 @@
 
   <mapping jni-class="com/google/android/gms/vision/Frame$Builder">
     <method jni-name="setRotation" parameter="rotation" clr-enum-type="Android.Gms.Vision.FrameRotation" />
+    <method jni-name="setRotation" parameter="p0" clr-enum-type="Android.Gms.Vision.FrameRotation" />
   </mapping>
 
 </enum-method-mappings>
