@@ -56,5 +56,18 @@
             </parameter>
         </method>
     </add-node>
-    
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.wearable']/class[@name='WearableListenerService']/method[@name='onPeerConnected']"
+        name="argsType"
+        >
+        PeerConnectedEventArgs
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.wearable']/class[@name='WearableListenerService']/method[@name='onPeerDisconnected']"
+        name="argsType"
+        >
+        PeerDisconnectedEventArgs
+    </attr>
+
 </metadata>
