@@ -22,6 +22,7 @@
 
   <mapping jni-class="com/google/android/gms/vision/barcode/BarcodeDetector$Builder">
     <method jni-name="setBarcodeFormats" parameter="format" clr-enum-type="Android.Gms.Vision.Barcodes.BarcodeFormat" />
+    <method jni-name="setBarcodeFormats" parameter="p0" clr-enum-type="Android.Gms.Vision.Barcodes.BarcodeFormat" />
   </mapping>
 
   <mapping jni-class="com/google/android/gms/vision/barcode/Barcode">
@@ -30,16 +31,18 @@
 
   <mapping jni-class="com/google/android/gms/vision/face/FaceDetector$Builder">
     <method jni-name="setClassificationType" parameter="classificationType" clr-enum-type="Android.Gms.Vision.Faces.ClassificationType" />
-  </mapping>
-
-  <mapping jni-class="com/google/android/gms/vision/face/FaceDetector$Builder">
-    <method jni-name="setLandmarkType" parameter="landmarkType" clr-enum-type="Android.Gms.Vision.Faces.LandmarkDetectionType" />
+    <method jni-name="setClassificationType" parameter="p0" clr-enum-type="Android.Gms.Vision.Faces.ClassificationType" />
   </mapping>
 
   <mapping jni-class="com/google/android/gms/vision/face/FaceDetector$Builder">
     <method jni-name="setMode" parameter="mode" clr-enum-type="Android.Gms.Vision.Faces.FaceDetectionMode" />
+    <method jni-name="setMode" parameter="p0" clr-enum-type="Android.Gms.Vision.Faces.FaceDetectionMode" />
   </mapping>
 
+  <mapping jni-class="com/google/android/gms/vision/face/FaceDetector$Builder">
+    <method jni-name="setLandmarkType" parameter="landmarkType" clr-enum-type="Android.Gms.Vision.Faces.LandmarkDetectionType" />
+    <method jni-name="setLandmarkType" parameter="p0" clr-enum-type="Android.Gms.Vision.Faces.LandmarkDetectionType" />
+  </mapping>
 
   <mapping jni-class="com/google/android/gms/vision/face/Landmark">
     <method jni-name="getType" parameter="return" clr-enum-type="Android.Gms.Vision.Faces.LandmarkType" />
