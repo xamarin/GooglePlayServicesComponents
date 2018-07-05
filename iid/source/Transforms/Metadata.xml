@@ -5,15 +5,17 @@
 	<!-- Remove some internal namespaces -->
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
 	<!-- Remove *zz* obfuscated items -->
-	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'zzb']" />
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'zze']" />
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 
-	<attr path="/api/package[@name='com.google.android.gms.iid']/class[@name='zzb']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.iid']/class[@name='zze']" name="obfuscated">false</attr>
 
-	<remove-node path="/api/package[@name='com.google.android.gms.iid']/class[@name='zzb']/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/package[@name='com.google.android.gms.iid']/class[@name='zze']/method[contains(@name, 'zz')]" />
 
+    <!-- Used to be named Zzb, so let's keep it that way -->
+    <attr path="/api/package[@name='com.google.android.gms.iid']/class[@name='zze']" name="managedName">Zzb</attr>
 	
 	<!-- Fix params for some inherited parcelable types -->
 	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>

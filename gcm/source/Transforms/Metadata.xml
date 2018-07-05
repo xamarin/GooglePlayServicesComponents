@@ -3,21 +3,11 @@
 	<attr path="/api/package[@name='com.google.android.gms.gcm']" name="managedName">Android.Gms.Gcm</attr>
 	<attr path="/api/package[@name='com.google.android.gms.iid']" name="managedName">Android.Gms.Gcm.Iid</attr>
 
-	<!-- Remove *zz* obfuscated items -->
-    <attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='zzd']" name="obfuscated">false</attr>
-    <attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='zzd']" name="visibility">public</attr>
-    <attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='zze']" name="obfuscated">false</attr>
-    <attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='zze']" name="visibility">public</attr>
-	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'zze' and @name != 'zzd' ]" />
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
 
-	<!--
-    <attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='GcmListenerService' and @extends='com.google.android.gms.iid.zzb']" name="extends">android.app.Service</attr>
-	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='GcmListenerService' and @extends='com.google.android.gms.iid.zzb']" name="extends-generic-aware">android.app.Service</attr>
-    -->
-	
 	<!-- Fix params for some inherited parcelable types -->
 	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
 	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
