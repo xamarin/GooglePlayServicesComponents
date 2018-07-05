@@ -27,8 +27,12 @@
     <remove-node path="/api/package[@name='com.google.firebase.auth']/interface[@name='AdditionalUserInfo']/implements[@name='com.google.android.gms.internal.zzbgp']" />
     -->
     
+    <attr path="/api/package[@name='com.google.firebase.auth']/class[@name='zzh']" name="obfuscated">false</attr>
+    <attr path="/api/package[@name='com.google.firebase.auth']/class[@name='zzh']" name="visibility">public</attr>
+
     <attr path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth.zza']" name="visibility">internal</attr>
     <attr path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth.zzb']" name="visibility">internal</attr>
     <attr path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth.zzc']" name="visibility">internal</attr>
+
 
 </metadata>
