@@ -53,6 +53,7 @@
     <Compile Include="Additions\DataBufferAdditions.cs" />
     <Compile Include="Additions\IPendingResultExtensions.cs" />
     <Compile Include="Additions\TaskExtensions.cs" />
+    <Compile Include="Additions\TypeForwards.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
@@ -88,6 +89,10 @@
     <ProjectReference Include="..\..\location\source\Location.csproj">
       <Project>{F666DC89-9CE4-491C-8450-6FBC70298FA3}</Project>
       <Name>Location</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\places-placereport\source\Places-PlaceReport.csproj">
+      <Project>{D2A2F9D7-84FB-4829-AEDA-C5B0F806E8A6}</Project>
+      <Name>Places-PlaceReport</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

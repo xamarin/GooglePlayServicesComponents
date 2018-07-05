@@ -31,15 +31,15 @@ namespace Android.Gms.Location.Places
 
     public static partial class IPlaceDetectionApiExtensions
     {
-        //public static async Task<PlaceLikelihoodBuffer> GetCurrentPlaceAsync (this IPlaceDetectionApi api, GoogleApiClient client, PlaceFilter filter)
-        //{
-        //    return (await api.GetCurrentPlace (client, filter)).JavaCast<PlaceLikelihoodBuffer> ();
-        //}
+        public static async Task<PlaceLikelihoodBuffer> GetCurrentPlaceAsync (this IPlaceDetectionApi api, GoogleApiClient client, PlaceFilter filter)
+        {
+            return (await api.GetCurrentPlace (client, filter)).JavaCast<PlaceLikelihoodBuffer> ();
+        }
 
-        //public static async Task<Statuses> ReportDeviceAtPlaceAsync (this IPlaceDetectionApi api, GoogleApiClient client, PlaceReport report)
-        //{
-        //    return (await api.ReportDeviceAtPlace (client, report)).JavaCast<Statuses> ();
-        //}
+        public static async Task<Statuses> ReportDeviceAtPlaceAsync (this IPlaceDetectionApi api, GoogleApiClient client, PlaceReport report)
+        {
+            return (await api.ReportDeviceAtPlace (client, report)).JavaCast<Statuses> ();
+        }
     }
 
     public static partial class IPlacePhotoMetadataExtensions
