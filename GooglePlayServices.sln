@@ -151,6 +151,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Places-PlaceReport", "place
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stats", "stats\source\Stats.csproj", "{B5360982-854F-4DB8-86A2-326041BFC46F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Measurement-Connector-Impl", "firebase-measurement-connector-impl\source\Firebase-Measurement-Connector-Impl.csproj", "{2383372C-0F9A-48F2-A02D-F46D3229AB04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -445,6 +447,10 @@ Global
 		{B5360982-854F-4DB8-86A2-326041BFC46F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5360982-854F-4DB8-86A2-326041BFC46F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5360982-854F-4DB8-86A2-326041BFC46F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2383372C-0F9A-48F2-A02D-F46D3229AB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2383372C-0F9A-48F2-A02D-F46D3229AB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2383372C-0F9A-48F2-A02D-F46D3229AB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2383372C-0F9A-48F2-A02D-F46D3229AB04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE} = {AFB1EDA0-E0D2-4E95-BAEC-9781B046413E}
@@ -519,5 +525,6 @@ Global
 		{A08CB639-55C2-4431-8792-9953D5627DD4} = {1EC5651F-83A6-4862-AED2-6BE5103652D0}
 		{D2A2F9D7-84FB-4829-AEDA-C5B0F806E8A6} = {AFB1EDA0-E0D2-4E95-BAEC-9781B046413E}
 		{B5360982-854F-4DB8-86A2-326041BFC46F} = {AFB1EDA0-E0D2-4E95-BAEC-9781B046413E}
+		{2383372C-0F9A-48F2-A02D-F46D3229AB04} = {1EC5651F-83A6-4862-AED2-6BE5103652D0}
 	EndGlobalSection
 EndGlobal

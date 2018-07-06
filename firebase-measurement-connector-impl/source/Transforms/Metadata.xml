@@ -1,7 +1,7 @@
 ﻿<metadata>
-	<!-- Rename Namespaces -->
-	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
-	<attr path="/api/package[@name='com.google.firebase.dynamiclinks']" name="managedName">Firebase.DynamicLinks</attr>
+    <!-- Rename Namespaces -->
+    <attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
+    <attr path="/api/package[@name='com.google.firebase.analytics.connector']" name="managedName">Firebase.Analytics.Connector</attr>
 
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
 	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
