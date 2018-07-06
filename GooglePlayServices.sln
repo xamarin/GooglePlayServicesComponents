@@ -45,7 +45,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ads", "ads\source\Ads.cspro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "tasks\source\Tasks.csproj", "{53F87D88-8871-41A2-9F81-B79AB02FEC24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ads.Lite", "ads-lite\source\Ads.Lite.csproj", "{ECB1F68B-B588-4F3B-9A86-510CF4AAA784}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ads.Identifier", "ads-identifier\source\Ads.Identifier.csproj", "{ECB1F68B-B588-4F3B-9A86-510CF4AAA784}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth.Base", "auth-base\source\Auth.Base.csproj", "{B04C50F7-B0CC-4170-8820-9D584E1C0ED3}"
 EndProject

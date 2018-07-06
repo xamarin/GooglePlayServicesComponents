@@ -121,6 +121,8 @@ var AAR_INFOS = new [] {
 	new AarInfo ("places-placereport", "play-services-places-placereport", "android/gms/play-services-places-placereport", "Xamarin.GooglePlayServices.Places.PlaceReport", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("stats", "play-services-stats", "android/gms/play-services-stats", "Xamarin.GooglePlayServices.Stats", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("vision-image-label", "play-services-vision-image-label", "android/gms/play-services-vision-image-label", "Xamarin.GooglePlayServices.Vision.ImageLabel", "15.0.0", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("ads-base", "play-services-ads-base", "android/gms/play-services-ads-base", "Xamarin.GooglePlayServices.Ads.Base", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("ads-identifier", "play-services-ads-identifier", "android/gms/play-services-ads-identifier", "Xamarin.GooglePlayServices.Ads.Identifier", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 
 	new AarInfo ("firebase-ads", "firebase-ads", "firebase/firebase-ads", "Xamarin.Firebase.Ads", "15.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-analytics", "firebase-analytics", "firebase/firebase-analytics", "Xamarin.Firebase.Analytics", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
@@ -150,6 +152,7 @@ var AAR_INFOS = new [] {
 	new AarInfo ("firebase-iid-interop", "firebase-iid-interop", "firebase/firebase-iid-interop", "Xamarin.Firebase.Iid.Interop", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-invites", "firebase-invites", "firebase/firebase-invites", "Xamarin.Firebase.Invites", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-measurement-connector", "firebase-measurement-connector", "firebase/firebase-measurement-connector", "Xamarin.Firebase.Measurement.Connector", "17.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-measurement-connector-impl", "firebase-measurement-connector-impl", "firebase/firebase-measurement-connector-impl", "Xamarin.Firebase.Measurement.Connector.Impl", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-ml-common", "firebase-ml-common", "firebase/firebase-ml-common", "Xamarin.Firebase.ML.Common", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-ml-model-interpreter", "firebase-ml-model-interpreter", "firebase/firebase-ml-model-interpreter", "Xamarin.Firebase.ML.Model.Interpreter", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
 	new AarInfo ("firebase-ml-vision", "firebase-ml-vision", "firebase/firebase-ml-vision", "Xamarin.Firebase.ML.Vision", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),

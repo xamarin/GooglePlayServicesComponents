@@ -1,0 +1,12 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+  	<attr path="/api/package[@name='com.google.ads']" name="managedName">Google.Ads</attr>
+    <attr path="/api/package[@name='com.google.android.gms.ads.identifier']" name="managedName">Google.Ads.Identifier</attr>
+ 
+
+    
+
+
+
+</metadata>
