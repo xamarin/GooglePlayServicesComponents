@@ -73,7 +73,7 @@
       <Name>Basement</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\ads-lite\source\Ads.Lite.csproj">
-      <Project>{ECB1F68B-B588-4F3B-9A86-510CF4AAA784}</Project>
+      <Project>{4C9281F4-B0FC-4DE8-B170-93DBD629B79C}</Project>
       <Name>Ads.Lite</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\gass\source\Gass.csproj">

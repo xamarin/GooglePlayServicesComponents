@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{ECB1F68B-B588-4F3B-9A86-510CF4AAA784}</ProjectGuid>
+    <ProjectGuid>{24AF7352-6F6E-458D-9D8C-8EEED536920F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>GooglePlayServices.Ads.Identifier</RootNamespace>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
