@@ -54,21 +54,14 @@ var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents
 // Sometimes might be "-beta1" for a prerelease, or ".1" if we have a point release for the same actual aar's
 // will be blank for a stable release that has no point release fixes
 var COMMON_NUGET_VERSION = "";
+const string NUGET_VERSION_PREFIX = "70.";
 
-var PLAY_COMPONENT_VERSION = "62.1201.0.0";
-var PLAY_NUGET_VERSION = "62.1201.0" + COMMON_NUGET_VERSION;
-var PLAY_AAR_VERSION = "15.0.1";
-var VERSION_DESC = "15.0.1";
 var SUPPORT_VERSION = "26.1.0.1";
 
 var ANDROID_API_LEVEL = "26";
 var ANDROID_SDK_VERSION = "8.0";
 
 var MAVEN_REPO_BASE_URL = "https://dl.google.com/dl/android/maven2/com/google/";
-
-var FIREBASE_COMPONENT_VERSION = PLAY_COMPONENT_VERSION;
-var FIREBASE_NUGET_VERSION = PLAY_NUGET_VERSION;
-var FIREBASE_AAR_VERSION = PLAY_AAR_VERSION;
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
@@ -79,104 +72,103 @@ var ALWAYS_MSBUILD = true;
 LogSystemInfo ();
 
 var AAR_INFOS = new [] {
-	new AarInfo ("ads", "play-services-ads", "android/gms/play-services-ads", "Xamarin.GooglePlayServices.Ads", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("ads-lite", "play-services-ads-lite", "android/gms/play-services-ads-lite", "Xamarin.GooglePlayServices.Ads.Lite", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("analytics", "play-services-analytics", "android/gms/play-services-analytics", "Xamarin.GooglePlayServices.Analytics", "16.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("analytics-impl", "play-services-analytics-impl", "android/gms/play-services-analytics-impl", "Xamarin.GooglePlayServices.Analytics.Impl", "16.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("audience", "play-services-audience", "android/gms/play-services-audience", "Xamarin.GooglePlayServices.Audience", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("auth", "play-services-auth", "android/gms/play-services-auth", "Xamarin.GooglePlayServices.Auth", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("auth-base", "play-services-auth-base", "android/gms/play-services-auth-base", "Xamarin.GooglePlayServices.Auth.Base", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("auth-api-phone", "play-services-auth-api-phone", "android/gms/play-services-auth-api-phone", "Xamarin.GooglePlayServices.Auth.Api.Phone", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("awareness", "play-services-awareness", "android/gms/play-services-awareness", "Xamarin.GooglePlayServices.Awareness", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("base", "play-services-base", "android/gms/play-services-base", "Xamarin.GooglePlayServices.Base", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("basement", "play-services-basement", "android/gms/play-services-basement", "Xamarin.GooglePlayServices.Basement", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("appinvite", "play-services-appinvite", "android/gms/play-services-appinvite", "Xamarin.GooglePlayServices.AppInvite", "16.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("cast", "play-services-cast", "android/gms/play-services-cast", "Xamarin.GooglePlayServices.Cast", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("cast-framework", "play-services-cast-framework", "android/gms/play-services-cast-framework", "Xamarin.GooglePlayServices.Cast.Framework", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("clearcut", "play-services-clearcut", "android/gms/play-services-clearcut", "Xamarin.GooglePlayServices.Clearcut", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("drive", "play-services-drive", "android/gms/play-services-drive", "Xamarin.GooglePlayServices.Drive", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("fido", "play-services-fido", "android/gms/play-services-fido", "Xamarin.GooglePlayServices.Fido", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("flags", "play-services-flags", "android/gms/play-services-flags", "Xamarin.GooglePlayServices.Flags", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("fitness", "play-services-fitness", "android/gms/play-services-fitness", "Xamarin.GooglePlayServices.Fitness", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("games", "play-services-games", "android/gms/play-services-games", "Xamarin.GooglePlayServices.Games", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("gass", "play-services-gass", "android/gms/play-services-gass", "Xamarin.GooglePlayServices.Gass", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("gcm", "play-services-gcm", "android/gms/play-services-gcm", "Xamarin.GooglePlayServices.Gcm", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("identity", "play-services-identity", "android/gms/play-services-identity", "Xamarin.GooglePlayServices.Identity", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("iid", "play-services-iid", "android/gms/play-services-iid", "Xamarin.GooglePlayServices.Iid", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("instantapps", "play-services-instantapps", "android/gms/play-services-instantapps", "Xamarin.GooglePlayServices.InstantApps", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("location", "play-services-location", "android/gms/play-services-location", "Xamarin.GooglePlayServices.Location", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("maps", "play-services-maps", "android/gms/play-services-maps", "Xamarin.GooglePlayServices.Maps", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("measurement-base", "play-services-measurement-base", "android/gms/play-services-measurement-base", "Xamarin.GooglePlayServices.Measurement.Base", "16.0.0", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("nearby", "play-services-nearby", "android/gms/play-services-nearby", "Xamarin.GooglePlayServices.Nearby", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("oss-licenses", "play-services-oss-licenses", "android/gms/play-services-oss-licenses", "Xamarin.GooglePlayServices.Oss.Licenses", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("panorama", "play-services-panorama", "android/gms/play-services-panorama", "Xamarin.GooglePlayServices.Panorama", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("places", "play-services-places", "android/gms/play-services-places", "Xamarin.GooglePlayServices.Places", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("plus", "play-services-plus", "android/gms/play-services-plus", "Xamarin.GooglePlayServices.Plus", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("safetynet", "play-services-safetynet", "android/gms/play-services-safetynet", "Xamarin.GooglePlayServices.SafetyNet", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("tasks", "play-services-tasks", "android/gms/play-services-tasks", "Xamarin.GooglePlayServices.Tasks", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("tagmanager", "play-services-tagmanager", "android/gms/play-services-tagmanager", "Xamarin.GooglePlayServices.TagManager", "16.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("tagmanager-api", "play-services-tagmanager-api", "android/gms/play-services-tagmanager-api", "Xamarin.GooglePlayServices.TagManager.Api", "16.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("tagmanager-v4-impl", "play-services-tagmanager-v4-impl", "android/gms/play-services-tagmanager-v4-impl", "Xamarin.GooglePlayServices.TagManager.V4.Impl", "16.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("vision", "play-services-vision", "android/gms/play-services-vision", "Xamarin.GooglePlayServices.Vision", "15.0.2", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("vision-common", "play-services-vision-common", "android/gms/play-services-vision-common", "Xamarin.GooglePlayServices.Vision.Common", "15.0.2", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("wallet", "play-services-wallet", "android/gms/play-services-wallet", "Xamarin.GooglePlayServices.Wallet", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("wearable", "play-services-wearable", "android/gms/play-services-wearable", "Xamarin.GooglePlayServices.Wearable", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("ads", "play-services-ads", "android/gms/play-services-ads", "Xamarin.GooglePlayServices.Ads", "15.0.1"),
+	new AarInfo ("ads-lite", "play-services-ads-lite", "android/gms/play-services-ads-lite", "Xamarin.GooglePlayServices.Ads.Lite", "15.0.1"),
+	new AarInfo ("analytics", "play-services-analytics", "android/gms/play-services-analytics", "Xamarin.GooglePlayServices.Analytics", "16.0.1"),
+	new AarInfo ("analytics-impl", "play-services-analytics-impl", "android/gms/play-services-analytics-impl", "Xamarin.GooglePlayServices.Analytics.Impl", "16.0.1"),
+	new AarInfo ("audience", "play-services-audience", "android/gms/play-services-audience", "Xamarin.GooglePlayServices.Audience", "15.0.1"),
+	new AarInfo ("auth", "play-services-auth", "android/gms/play-services-auth", "Xamarin.GooglePlayServices.Auth", "15.0.1"),
+	new AarInfo ("auth-base", "play-services-auth-base", "android/gms/play-services-auth-base", "Xamarin.GooglePlayServices.Auth.Base", "15.0.1"),
+	new AarInfo ("auth-api-phone", "play-services-auth-api-phone", "android/gms/play-services-auth-api-phone", "Xamarin.GooglePlayServices.Auth.Api.Phone", "15.0.1"),
+	new AarInfo ("awareness", "play-services-awareness", "android/gms/play-services-awareness", "Xamarin.GooglePlayServices.Awareness", "15.0.1"),
+	new AarInfo ("base", "play-services-base", "android/gms/play-services-base", "Xamarin.GooglePlayServices.Base", "15.0.1"),
+	new AarInfo ("basement", "play-services-basement", "android/gms/play-services-basement", "Xamarin.GooglePlayServices.Basement", "15.0.1"),
+	new AarInfo ("appinvite", "play-services-appinvite", "android/gms/play-services-appinvite", "Xamarin.GooglePlayServices.AppInvite", "16.0.1"),
+	new AarInfo ("cast", "play-services-cast", "android/gms/play-services-cast", "Xamarin.GooglePlayServices.Cast", "15.0.1"),
+	new AarInfo ("cast-framework", "play-services-cast-framework", "android/gms/play-services-cast-framework", "Xamarin.GooglePlayServices.Cast.Framework", "15.0.1"),
+	new AarInfo ("clearcut", "play-services-clearcut", "android/gms/play-services-clearcut", "Xamarin.GooglePlayServices.Clearcut", "15.0.1"),
+	new AarInfo ("drive", "play-services-drive", "android/gms/play-services-drive", "Xamarin.GooglePlayServices.Drive", "15.0.1"),
+	new AarInfo ("fido", "play-services-fido", "android/gms/play-services-fido", "Xamarin.GooglePlayServices.Fido", "15.0.1"),
+	new AarInfo ("flags", "play-services-flags", "android/gms/play-services-flags", "Xamarin.GooglePlayServices.Flags", "15.0.1"),
+	new AarInfo ("fitness", "play-services-fitness", "android/gms/play-services-fitness", "Xamarin.GooglePlayServices.Fitness", "15.0.1"),
+	new AarInfo ("games", "play-services-games", "android/gms/play-services-games", "Xamarin.GooglePlayServices.Games", "15.0.1"),
+	new AarInfo ("gass", "play-services-gass", "android/gms/play-services-gass", "Xamarin.GooglePlayServices.Gass", "15.0.1"),
+	new AarInfo ("gcm", "play-services-gcm", "android/gms/play-services-gcm", "Xamarin.GooglePlayServices.Gcm", "15.0.1"),
+	new AarInfo ("identity", "play-services-identity", "android/gms/play-services-identity", "Xamarin.GooglePlayServices.Identity", "15.0.1"),
+	new AarInfo ("iid", "play-services-iid", "android/gms/play-services-iid", "Xamarin.GooglePlayServices.Iid", "15.0.1"),
+	new AarInfo ("instantapps", "play-services-instantapps", "android/gms/play-services-instantapps", "Xamarin.GooglePlayServices.InstantApps", "15.0.1"),
+	new AarInfo ("location", "play-services-location", "android/gms/play-services-location", "Xamarin.GooglePlayServices.Location", "15.0.1"),
+	new AarInfo ("maps", "play-services-maps", "android/gms/play-services-maps", "Xamarin.GooglePlayServices.Maps", "15.0.1"),
+	new AarInfo ("measurement-base", "play-services-measurement-base", "android/gms/play-services-measurement-base", "Xamarin.GooglePlayServices.Measurement.Base", "16.0.0"),
+	new AarInfo ("nearby", "play-services-nearby", "android/gms/play-services-nearby", "Xamarin.GooglePlayServices.Nearby", "15.0.1"),
+	new AarInfo ("oss-licenses", "play-services-oss-licenses", "android/gms/play-services-oss-licenses", "Xamarin.GooglePlayServices.Oss.Licenses", "15.0.1"),
+	new AarInfo ("panorama", "play-services-panorama", "android/gms/play-services-panorama", "Xamarin.GooglePlayServices.Panorama", "15.0.1"),
+	new AarInfo ("places", "play-services-places", "android/gms/play-services-places", "Xamarin.GooglePlayServices.Places", "15.0.1"),
+	new AarInfo ("plus", "play-services-plus", "android/gms/play-services-plus", "Xamarin.GooglePlayServices.Plus", "15.0.1"),
+	new AarInfo ("safetynet", "play-services-safetynet", "android/gms/play-services-safetynet", "Xamarin.GooglePlayServices.SafetyNet", "15.0.1"),
+	new AarInfo ("tasks", "play-services-tasks", "android/gms/play-services-tasks", "Xamarin.GooglePlayServices.Tasks", "15.0.1"),
+	new AarInfo ("tagmanager", "play-services-tagmanager", "android/gms/play-services-tagmanager", "Xamarin.GooglePlayServices.TagManager", "16.0.1"),
+	new AarInfo ("tagmanager-api", "play-services-tagmanager-api", "android/gms/play-services-tagmanager-api", "Xamarin.GooglePlayServices.TagManager.Api", "16.0.1"),
+	new AarInfo ("tagmanager-v4-impl", "play-services-tagmanager-v4-impl", "android/gms/play-services-tagmanager-v4-impl", "Xamarin.GooglePlayServices.TagManager.V4.Impl", "16.0.1"),
+	new AarInfo ("vision", "play-services-vision", "android/gms/play-services-vision", "Xamarin.GooglePlayServices.Vision", "15.0.2"),
+	new AarInfo ("vision-common", "play-services-vision-common", "android/gms/play-services-vision-common", "Xamarin.GooglePlayServices.Vision.Common", "15.0.2"),
+	new AarInfo ("wallet", "play-services-wallet", "android/gms/play-services-wallet", "Xamarin.GooglePlayServices.Wallet", "15.0.1"),
+	new AarInfo ("wearable", "play-services-wearable", "android/gms/play-services-wearable", "Xamarin.GooglePlayServices.Wearable", "15.0.1"),
 
-	new AarInfo ("phenotype", "play-services-phenotype", "android/gms/play-services-phenotype", "Xamarin.GooglePlayServices.Phenotype", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("places-placereport", "play-services-places-placereport", "android/gms/play-services-places-placereport", "Xamarin.GooglePlayServices.Places.PlaceReport", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("stats", "play-services-stats", "android/gms/play-services-stats", "Xamarin.GooglePlayServices.Stats", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("vision-image-label", "play-services-vision-image-label", "android/gms/play-services-vision-image-label", "Xamarin.GooglePlayServices.Vision.ImageLabel", "15.0.0", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("ads-base", "play-services-ads-base", "android/gms/play-services-ads-base", "Xamarin.GooglePlayServices.Ads.Base", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
-	new AarInfo ("ads-identifier", "play-services-ads-identifier", "android/gms/play-services-ads-identifier", "Xamarin.GooglePlayServices.Ads.Identifier", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("phenotype", "play-services-phenotype", "android/gms/play-services-phenotype", "Xamarin.GooglePlayServices.Phenotype", "15.0.1"),
+	new AarInfo ("places-placereport", "play-services-places-placereport", "android/gms/play-services-places-placereport", "Xamarin.GooglePlayServices.Places.PlaceReport", "15.0.1"),
+	new AarInfo ("stats", "play-services-stats", "android/gms/play-services-stats", "Xamarin.GooglePlayServices.Stats", "15.0.1"),
+	new AarInfo ("vision-image-label", "play-services-vision-image-label", "android/gms/play-services-vision-image-label", "Xamarin.GooglePlayServices.Vision.ImageLabel", "15.0.0"),
+	new AarInfo ("ads-base", "play-services-ads-base", "android/gms/play-services-ads-base", "Xamarin.GooglePlayServices.Ads.Base", "15.0.1"),
+	new AarInfo ("ads-identifier", "play-services-ads-identifier", "android/gms/play-services-ads-identifier", "Xamarin.GooglePlayServices.Ads.Identifier", "15.0.1"),
 
-	new AarInfo ("firebase-ads", "firebase-ads", "firebase/firebase-ads", "Xamarin.Firebase.Ads", "15.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-analytics", "firebase-analytics", "firebase/firebase-analytics", "Xamarin.Firebase.Analytics", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-analytics-impl", "firebase-analytics-impl", "firebase/firebase-analytics-impl", "Xamarin.Firebase.Analytics.Impl", "16.1.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-appindexing", "firebase-appindexing", "firebase/firebase-appindexing", "Xamarin.Firebase.AppIndexing", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-auth", "firebase-auth", "firebase/firebase-auth", "Xamarin.Firebase.Auth", "16.0.2", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-common", "firebase-common", "firebase/firebase-common", "Xamarin.Firebase.Common", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-config", "firebase-config", "firebase/firebase-config", "Xamarin.Firebase.Config", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-core", "firebase-core", "firebase/firebase-core", "Xamarin.Firebase.Core", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-crash", "firebase-crash", "firebase/firebase-crash", "Xamarin.Firebase.Crash", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-database", "firebase-database", "firebase/firebase-database", "Xamarin.Firebase.Database", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-database-connection", "firebase-database-connection", "firebase/firebase-database-connection", "Xamarin.Firebase.Database.Connection", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-dynamic-links", "firebase-dynamic-links", "firebase/firebase-dynamic-links", "Xamarin.Firebase.Dynamic.Links", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-firestore", "firebase-firestore", "firebase/firebase-firestore", "Xamarin.Firebase.Firestore", "17.0.2", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-iid", "firebase-iid", "firebase/firebase-iid", "Xamarin.Firebase.Iid", "16.2.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-invites", "firebase-invites", "firebase/firebase-invites", "Xamarin.Firebase.Invites", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-messaging", "firebase-messaging", "firebase/firebase-messaging", "Xamarin.Firebase.Messaging", "17.1.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-perf", "firebase-perf", "firebase/firebase-perf", "Xamarin.Firebase.Perf", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-storage", "firebase-storage", "firebase/firebase-storage", "Xamarin.Firebase.Storage", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-storage-common", "firebase-storage-common", "firebase/firebase-storage-common", "Xamarin.Firebase.Storage.Common", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
+	new AarInfo ("firebase-ads", "firebase-ads", "firebase/firebase-ads", "Xamarin.Firebase.Ads", "15.0.1"),
+	new AarInfo ("firebase-analytics", "firebase-analytics", "firebase/firebase-analytics", "Xamarin.Firebase.Analytics", "16.0.1"),
+	new AarInfo ("firebase-analytics-impl", "firebase-analytics-impl", "firebase/firebase-analytics-impl", "Xamarin.Firebase.Analytics.Impl", "16.1.1"),
+	new AarInfo ("firebase-appindexing", "firebase-appindexing", "firebase/firebase-appindexing", "Xamarin.Firebase.AppIndexing", "16.0.1"),
+	new AarInfo ("firebase-auth", "firebase-auth", "firebase/firebase-auth", "Xamarin.Firebase.Auth", "16.0.2"),
+	new AarInfo ("firebase-common", "firebase-common", "firebase/firebase-common", "Xamarin.Firebase.Common", "16.0.0"),
+	new AarInfo ("firebase-config", "firebase-config", "firebase/firebase-config", "Xamarin.Firebase.Config", "16.0.0"),
+	new AarInfo ("firebase-core", "firebase-core", "firebase/firebase-core", "Xamarin.Firebase.Core", "16.0.1"),
+	new AarInfo ("firebase-crash", "firebase-crash", "firebase/firebase-crash", "Xamarin.Firebase.Crash", "16.0.1"),
+	new AarInfo ("firebase-database", "firebase-database", "firebase/firebase-database", "Xamarin.Firebase.Database", "16.0.1"),
+	new AarInfo ("firebase-database-connection", "firebase-database-connection", "firebase/firebase-database-connection", "Xamarin.Firebase.Database.Connection", "16.0.1"),
+	new AarInfo ("firebase-dynamic-links", "firebase-dynamic-links", "firebase/firebase-dynamic-links", "Xamarin.Firebase.Dynamic.Links", "16.0.1"),
+	new AarInfo ("firebase-firestore", "firebase-firestore", "firebase/firebase-firestore", "Xamarin.Firebase.Firestore", "17.0.2"),
+	new AarInfo ("firebase-iid", "firebase-iid", "firebase/firebase-iid", "Xamarin.Firebase.Iid", "16.2.0"),
+	new AarInfo ("firebase-invites", "firebase-invites", "firebase/firebase-invites", "Xamarin.Firebase.Invites", "16.0.1"),
+	new AarInfo ("firebase-messaging", "firebase-messaging", "firebase/firebase-messaging", "Xamarin.Firebase.Messaging", "17.1.0"),
+	new AarInfo ("firebase-perf", "firebase-perf", "firebase/firebase-perf", "Xamarin.Firebase.Perf", "16.0.0"),
+	new AarInfo ("firebase-storage", "firebase-storage", "firebase/firebase-storage", "Xamarin.Firebase.Storage", "16.0.1"),
+	new AarInfo ("firebase-storage-common", "firebase-storage-common", "firebase/firebase-storage-common", "Xamarin.Firebase.Storage.Common", "16.0.1"),
 
-	new AarInfo ("firebase-abt", "firebase-abt", "firebase/firebase-abt", "Xamarin.Firebase.Abt", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-ads-lite", "firebase-ads-lite", "firebase/firebase-ads-lite", "Xamarin.Firebase.Ads.Lite", "15.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-auth-interop", "firebase-auth-interop", "firebase/firebase-auth-interop", "Xamarin.Firebase.Auth.Interop", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-database-collection", "firebase-database-collection", "firebase/firebase-database-collection", "Xamarin.Firebase.Database.Collection", "15.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-functions", "firebase-functions", "firebase/firebase-functions", "Xamarin.Firebase.Functions", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-iid-interop", "firebase-iid-interop", "firebase/firebase-iid-interop", "Xamarin.Firebase.Iid.Interop", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-invites", "firebase-invites", "firebase/firebase-invites", "Xamarin.Firebase.Invites", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-measurement-connector", "firebase-measurement-connector", "firebase/firebase-measurement-connector", "Xamarin.Firebase.Measurement.Connector", "17.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-measurement-connector-impl", "firebase-measurement-connector-impl", "firebase/firebase-measurement-connector-impl", "Xamarin.Firebase.Measurement.Connector.Impl", "16.0.1", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-ml-common", "firebase-ml-common", "firebase/firebase-ml-common", "Xamarin.Firebase.ML.Common", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-ml-model-interpreter", "firebase-ml-model-interpreter", "firebase/firebase-ml-model-interpreter", "Xamarin.Firebase.ML.Model.Interpreter", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-ml-vision", "firebase-ml-vision", "firebase/firebase-ml-vision", "Xamarin.Firebase.ML.Vision", "16.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("firebase-ml-vision-image-label-model", "firebase-ml-vision-image-label-model", "firebase/firebase-ml-vision-image-label-model", "Xamarin.Firebase.ML.Vision.Image.Label.Model", "15.0.0", FIREBASE_NUGET_VERSION, FIREBASE_COMPONENT_VERSION),
-	new AarInfo ("protolite-well-known-types", "protolite-well-known-types", "firebase/protolite-well-known-types", "Xamarin.Firebase.ProtoliteWellKnownTypes", "15.0.0", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("firebase-abt", "firebase-abt", "firebase/firebase-abt", "Xamarin.Firebase.Abt", "16.0.0"),
+	new AarInfo ("firebase-ads-lite", "firebase-ads-lite", "firebase/firebase-ads-lite", "Xamarin.Firebase.Ads.Lite", "15.0.1"),
+	new AarInfo ("firebase-auth-interop", "firebase-auth-interop", "firebase/firebase-auth-interop", "Xamarin.Firebase.Auth.Interop", "16.0.0"),
+	new AarInfo ("firebase-database-collection", "firebase-database-collection", "firebase/firebase-database-collection", "Xamarin.Firebase.Database.Collection", "15.0.1"),
+	new AarInfo ("firebase-functions", "firebase-functions", "firebase/firebase-functions", "Xamarin.Firebase.Functions", "16.0.1"),
+	new AarInfo ("firebase-iid-interop", "firebase-iid-interop", "firebase/firebase-iid-interop", "Xamarin.Firebase.Iid.Interop", "16.0.0"),
+	new AarInfo ("firebase-invites", "firebase-invites", "firebase/firebase-invites", "Xamarin.Firebase.Invites", "16.0.1"),
+	new AarInfo ("firebase-measurement-connector", "firebase-measurement-connector", "firebase/firebase-measurement-connector", "Xamarin.Firebase.Measurement.Connector", "17.0.0"),
+	new AarInfo ("firebase-measurement-connector-impl", "firebase-measurement-connector-impl", "firebase/firebase-measurement-connector-impl", "Xamarin.Firebase.Measurement.Connector.Impl", "16.0.1"),
+	new AarInfo ("firebase-ml-common", "firebase-ml-common", "firebase/firebase-ml-common", "Xamarin.Firebase.ML.Common", "16.0.0"),
+	new AarInfo ("firebase-ml-model-interpreter", "firebase-ml-model-interpreter", "firebase/firebase-ml-model-interpreter", "Xamarin.Firebase.ML.Model.Interpreter", "16.0.0"),
+	new AarInfo ("firebase-ml-vision", "firebase-ml-vision", "firebase/firebase-ml-vision", "Xamarin.Firebase.ML.Vision", "16.0.0"),
+	new AarInfo ("firebase-ml-vision-image-label-model", "firebase-ml-vision-image-label-model", "firebase/firebase-ml-vision-image-label-model", "Xamarin.Firebase.ML.Vision.Image.Label.Model", "15.0.0"),
+	new AarInfo ("protolite-well-known-types", "protolite-well-known-types", "firebase/protolite-well-known-types", "Xamarin.Firebase.ProtoliteWellKnownTypes", "15.0.0"),
 
 };
 
 class AarInfo
 {
-	public AarInfo (string bindingDir, string dir, string path, string nugetId, string aarVersion, string nugetVersion, string componentVersion)
+	public AarInfo (string bindingDir, string dir, string path, string nugetId, string aarVersion, string nugetVersionPostfix = null)
 	{
 		BindingDir = bindingDir;
 		Dir = dir;
 		Path = path;
 		NugetId = nugetId;
 		AarVersion = aarVersion;
-		NuGetVersion = nugetVersion;
-		ComponentVersion = componentVersion;
+		NuGetVersion = NUGET_VERSION_PREFIX + aarVersion.Replace(".", "") + (nugetVersionPostfix ?? "");
 		Extension = ".aar";
 	}
 
@@ -186,7 +178,6 @@ class AarInfo
 	public string NugetId { get;set; }
 	public string AarVersion { get; set; }
 	public string NuGetVersion { get; set; }
-	public string ComponentVersion { get; set; }
 	public string Extension { get;set; }
 }
 
@@ -217,6 +208,10 @@ Information("MSCORLIB_PATH: {0}", MSCORLIB_PATH);
 
 var buildsOnWinMac = BuildPlatforms.Windows | BuildPlatforms.Mac;
 
+var nugetInfos = AAR_INFOS.Select (a => new NuGetInfo { NuSpec = "./" + a.BindingDir + "/nuget/" + a.NugetId + ".nuspec", Version = a.NuGetVersion, RequireLicenseAcceptance = true }).ToList ();
+nugetInfos.Add(new NuGetInfo { NuSpec = "./firebase-core/nuget/Xamarin.Firebase.Core.nuspec", Version = NUGET_VERSION_PREFIX + "1601", RequireLicenseAcceptance = true });
+nugetInfos.Add(new NuGetInfo { NuSpec = "./firebase-ads/nuget/Xamarin.Firebase.Ads.nuspec", Version = NUGET_VERSION_PREFIX + "1501", RequireLicenseAcceptance = true });
+
 var buildSpec = new BuildSpec {
 	Libs = new [] {
 		new DefaultSolutionBuilder {
@@ -224,63 +219,7 @@ var buildSpec = new BuildSpec {
 			BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac,
 			MaxCpuCount = CPU_COUNT,
 			//AlwaysUseMSBuild = ALWAYS_MSBUILD,
-			OutputFiles = new [] {
-				new OutputFileCopy { FromFile = "./base/source/bin/Release/Xamarin.GooglePlayServices.Base.dll" },
-				new OutputFileCopy { FromFile = "./basement/source/bin/Release/Xamarin.GooglePlayServices.Basement.dll" },
-				new OutputFileCopy { FromFile = "./ads/source/bin/Release/Xamarin.GooglePlayServices.Ads.dll" },
-				new OutputFileCopy { FromFile = "./ads-lite/source/bin/Release/Xamarin.GooglePlayServices.Ads.Lite.dll" },
-				new OutputFileCopy { FromFile = "./analytics/source/bin/Release/Xamarin.GooglePlayServices.Analytics.dll" },
-				new OutputFileCopy { FromFile = "./analytics-impl/source/bin/Release/Xamarin.GooglePlayServices.Analytics.Impl.dll" },
-				new OutputFileCopy { FromFile = "./appinvite/source/bin/Release/Xamarin.GooglePlayServices.AppInvite.dll" },
-				new OutputFileCopy { FromFile = "./auth/source/bin/Release/Xamarin.GooglePlayServices.Auth.dll" },
-				new OutputFileCopy { FromFile = "./auth-api-phone/source/bin/Release/Xamarin.GooglePlayServices.Auth.Api.Phone.dll" },
-				new OutputFileCopy { FromFile = "./auth-base/source/bin/Release/Xamarin.GooglePlayServices.Auth.Base.dll" },
-				new OutputFileCopy { FromFile = "./awareness/source/bin/Release/Xamarin.GooglePlayServices.Awareness.dll" },
-				new OutputFileCopy { FromFile = "./cast/source/bin/Release/Xamarin.GooglePlayServices.Cast.dll" },
-				new OutputFileCopy { FromFile = "./cast-framework/source/bin/Release/Xamarin.GooglePlayServices.Cast.Framework.dll" },
-				new OutputFileCopy { FromFile = "./drive/source/bin/Release/Xamarin.GooglePlayServices.Drive.dll" },
-				new OutputFileCopy { FromFile = "./fido/source/bin/Release/Xamarin.GooglePlayServices.Fido.dll" },
-				new OutputFileCopy { FromFile = "./fitness/source/bin/Release/Xamarin.GooglePlayServices.Fitness.dll" },
-				new OutputFileCopy { FromFile = "./games/source/bin/Release/Xamarin.GooglePlayServices.Games.dll" },
-				new OutputFileCopy { FromFile = "./gass/source/bin/Release/Xamarin.GooglePlayServices.Gass.dll" },
-				new OutputFileCopy { FromFile = "./gcm/source/bin/Release/Xamarin.GooglePlayServices.Gcm.dll" },
-				new OutputFileCopy { FromFile = "./identity/source/bin/Release/Xamarin.GooglePlayServices.Identity.dll" },
-				new OutputFileCopy { FromFile = "./iid/source/bin/Release/Xamarin.GooglePlayServices.Iid.dll" },
-				new OutputFileCopy { FromFile = "./instantapps/source/bin/Release/Xamarin.GooglePlayServices.InstantApps.dll" },
-				new OutputFileCopy { FromFile = "./location/source/bin/Release/Xamarin.GooglePlayServices.Location.dll" },
-				new OutputFileCopy { FromFile = "./maps/source/bin/Release/Xamarin.GooglePlayServices.Maps.dll" },
-				new OutputFileCopy { FromFile = "./nearby/source/bin/Release/Xamarin.GooglePlayServices.Nearby.dll" },
-				new OutputFileCopy { FromFile = "./oss-licenses/source/bin/Release/Xamarin.GooglePlayServices.Oss.Licenses.dll" },
-				new OutputFileCopy { FromFile = "./panorama/source/bin/Release/Xamarin.GooglePlayServices.Panorama.dll" },
-				new OutputFileCopy { FromFile = "./places/source/bin/Release/Xamarin.GooglePlayServices.Places.dll" },
-				new OutputFileCopy { FromFile = "./plus/source/bin/Release/Xamarin.GooglePlayServices.Plus.dll" },
-				new OutputFileCopy { FromFile = "./safetynet/source/bin/Release/Xamarin.GooglePlayServices.SafetyNet.dll" },
-				new OutputFileCopy { FromFile = "./vision/source/bin/Release/Xamarin.GooglePlayServices.Vision.dll" },
-				new OutputFileCopy { FromFile = "./vision-common/source/bin/Release/Xamarin.GooglePlayServices.Vision.Common.dll" },
-				new OutputFileCopy { FromFile = "./wallet/source/bin/Release/Xamarin.GooglePlayServices.Wallet.dll" },
-				new OutputFileCopy { FromFile = "./wearable/source/bin/Release/Xamarin.GooglePlayServices.Wearable.dll" },
-				new OutputFileCopy { FromFile = "./tagmanager/source/bin/Release/Xamarin.GooglePlayServices.TagManager.dll" },
-				new OutputFileCopy { FromFile = "./tagmanager-api/source/bin/Release/Xamarin.GooglePlayServices.TagManager.Api.dll" },
-				new OutputFileCopy { FromFile = "./tagmanager-v4-impl/source/bin/Release/Xamarin.GooglePlayServices.TagManager.V4.Impl.dll" },
-				new OutputFileCopy { FromFile = "./tasks/source/bin/Release/Xamarin.GooglePlayServices.Tasks.dll" },
-
-				new OutputFileCopy { FromFile = "./firebase-analytics/source/bin/Release/Xamarin.Firebase.Analytics.dll" },
-				new OutputFileCopy { FromFile = "./firebase-analytics-impl/source/bin/Release/Xamarin.Firebase.Analytics.Impl.dll" },
-				new OutputFileCopy { FromFile = "./firebase-appindexing/source/bin/Release/Xamarin.Firebase.AppIndexing.dll" },
-				new OutputFileCopy { FromFile = "./firebase-auth/source/bin/Release/Xamarin.Firebase.Auth.dll" },
-				new OutputFileCopy { FromFile = "./firebase-common/source/bin/Release/Xamarin.Firebase.Common.dll" },
-				new OutputFileCopy { FromFile = "./firebase-config/source/bin/Release/Xamarin.Firebase.Config.dll" },
-				new OutputFileCopy { FromFile = "./firebase-crash/source/bin/Release/Xamarin.Firebase.Crash.dll" },
-				new OutputFileCopy { FromFile = "./firebase-database/source/bin/Release/Xamarin.Firebase.Database.dll" },
-				new OutputFileCopy { FromFile = "./firebase-database-connection/source/bin/Release/Xamarin.Firebase.Database.Connection.dll" },
-				new OutputFileCopy { FromFile = "./firebase-dynamic-links/source/bin/Release/Xamarin.Firebase.Dynamic.Links.dll" },
-				new OutputFileCopy { FromFile = "./firebase-iid/source/bin/Release/Xamarin.Firebase.Iid.dll" },
-				new OutputFileCopy { FromFile = "./firebase-firestore/source/bin/Release/Xamarin.Firebase.Firestore.dll" },
-				new OutputFileCopy { FromFile = "./firebase-messaging/source/bin/Release/Xamarin.Firebase.Messaging.dll" },
-				new OutputFileCopy { FromFile = "./firebase-perf/source/bin/Release/Xamarin.Firebase.Perf.dll" },
-				new OutputFileCopy { FromFile = "./firebase-storage/source/bin/Release/Xamarin.Firebase.Storage.dll" },
-				new OutputFileCopy { FromFile = "./firebase-storage-common/source/bin/Release/Xamarin.Firebase.Storage.Common.dll" },
-			}
+			OutputFiles = AAR_INFOS.Select (a => new OutputFileCopy { FromFile = "./" + a.BindingDir + "/source/bin/" + BUILD_CONFIG + "/" + a.NugetId + ".dll" }).ToArray (),
 		},
 	},
 
@@ -314,104 +253,7 @@ var buildSpec = new BuildSpec {
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-storage/samples/FirebaseStorageQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 	},
 
-	NuGets = new [] {
-		new NuGetInfo { NuSpec = "./base/nuget/Xamarin.GooglePlayServices.Base.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./basement/nuget/Xamarin.GooglePlayServices.Basement.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./ads/nuget/Xamarin.GooglePlayServices.Ads.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./ads-lite/nuget/Xamarin.GooglePlayServices.Ads.Lite.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./analytics/nuget/Xamarin.GooglePlayServices.Analytics.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./analytics-impl/nuget/Xamarin.GooglePlayServices.Analytics.Impl.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./appinvite/nuget/Xamarin.GooglePlayServices.AppInvite.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./auth/nuget/Xamarin.GooglePlayServices.Auth.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./auth-api-phone/nuget/Xamarin.GooglePlayServices.Auth.Api.Phone.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./auth-base/nuget/Xamarin.GooglePlayServices.Auth.Base.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./awareness/nuget/Xamarin.GooglePlayServices.Awareness.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./cast/nuget/Xamarin.GooglePlayServices.Cast.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./cast-framework/nuget/Xamarin.GooglePlayServices.Cast.Framework.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./drive/nuget/Xamarin.GooglePlayServices.Drive.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./fido/nuget/Xamarin.GooglePlayServices.Fido.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./fitness/nuget/Xamarin.GooglePlayServices.Fitness.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./games/nuget/Xamarin.GooglePlayServices.Games.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./gass/nuget/Xamarin.GooglePlayServices.Gass.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./gcm/nuget/Xamarin.GooglePlayServices.Gcm.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./identity/nuget/Xamarin.GooglePlayServices.Identity.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./iid/nuget/Xamarin.GooglePlayServices.Iid.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./instantapps/nuget/Xamarin.GooglePlayServices.InstantApps.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./location/nuget/Xamarin.GooglePlayServices.Location.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./maps/nuget/Xamarin.GooglePlayServices.Maps.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./nearby/nuget/Xamarin.GooglePlayServices.Nearby.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./oss-licenses/nuget/Xamarin.GooglePlayServices.Oss.Licenses.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./panorama/nuget/Xamarin.GooglePlayServices.Panorama.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./places/nuget/Xamarin.GooglePlayServices.Places.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./plus/nuget/Xamarin.GooglePlayServices.Plus.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./safetynet/nuget/Xamarin.GooglePlayServices.SafetyNet.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./vision/nuget/Xamarin.GooglePlayServices.Vision.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./vision-common/nuget/Xamarin.GooglePlayServices.Vision.Common.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./wallet/nuget/Xamarin.GooglePlayServices.Wallet.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./wearable/nuget/Xamarin.GooglePlayServices.Wearable.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./tagmanager/nuget/Xamarin.GooglePlayServices.TagManager.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./tagmanager-api/nuget/Xamarin.GooglePlayServices.TagManager.Api.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./tagmanager-v4-impl/nuget/Xamarin.GooglePlayServices.TagManager.V4.Impl.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./tasks/nuget/Xamarin.GooglePlayServices.Tasks.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-
-		new NuGetInfo { NuSpec = "./firebase-ads/nuget/Xamarin.Firebase.Ads.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-analytics/nuget/Xamarin.Firebase.Analytics.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-analytics-impl/nuget/Xamarin.Firebase.Analytics.Impl.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-appindexing/nuget/Xamarin.Firebase.AppIndexing.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-auth/nuget/Xamarin.Firebase.Auth.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-common/nuget/Xamarin.Firebase.Common.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-config/nuget/Xamarin.Firebase.Config.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-crash/nuget/Xamarin.Firebase.Crash.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-database/nuget/Xamarin.Firebase.Database.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-database-connection/nuget/Xamarin.Firebase.Database.Connection.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-dynamic-links/nuget/Xamarin.Firebase.Dynamic.Links.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-firestore/nuget/Xamarin.Firebase.Firestore.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-iid/nuget/Xamarin.Firebase.Iid.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-invites/nuget/Xamarin.Firebase.Invites.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-messaging/nuget/Xamarin.Firebase.Messaging.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-perf/nuget/Xamarin.Firebase.Perf.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-storage/nuget/Xamarin.Firebase.Storage.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-storage-common/nuget/Xamarin.Firebase.Storage.Common.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-
-		// These are empty packages that depend on others
-		new NuGetInfo { NuSpec = "./firebase-core/nuget/Xamarin.Firebase.Core.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./firebase-ads/nuget/Xamarin.Firebase.Ads.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-
-		// Type forwarder packages for backwards compatibility
-		new NuGetInfo { NuSpec = "./appindexing/nuget/Xamarin.GooglePlayServices.AppIndexing.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-
-		// Empty package for backwards compatibility
-		new NuGetInfo { NuSpec = "./clearcut/nuget/Xamarin.GooglePlayServices.Clearcut.nuspec", Version = PLAY_NUGET_VERSION, RequireLicenseAcceptance = true },
-	},
-
-	Components = new [] {
-		new Component { ManifestDirectory = "./ads/component" },
-		new Component { ManifestDirectory = "./analytics/component" },
-		new Component { ManifestDirectory = "./appinvite/component" },
-		new Component { ManifestDirectory = "./cast/component" },
-		new Component { ManifestDirectory = "./drive/component" },
-		new Component { ManifestDirectory = "./fitness/component" },
-		new Component { ManifestDirectory = "./games/component" },
-		new Component { ManifestDirectory = "./gcm/component" },
-		new Component { ManifestDirectory = "./location/component" },
-		new Component { ManifestDirectory = "./maps/component" },
-		new Component { ManifestDirectory = "./nearby/component" },
-		new Component { ManifestDirectory = "./panorama/component" },
-		new Component { ManifestDirectory = "./plus/component" },
-		new Component { ManifestDirectory = "./safetynet/component" },
-		new Component { ManifestDirectory = "./vision/component" },
-		new Component { ManifestDirectory = "./wallet/component" },
-
-		new Component { ManifestDirectory = "./firebase-ads/component" },
-		new Component { ManifestDirectory = "./firebase-analytics/component" },
-		new Component { ManifestDirectory = "./firebase-appindexing/component" },
-		new Component { ManifestDirectory = "./firebase-auth/component" },
-		new Component { ManifestDirectory = "./firebase-config/component" },
-		new Component { ManifestDirectory = "./firebase-crash/component" },
-		new Component { ManifestDirectory = "./firebase-invites/component" },
-		new Component { ManifestDirectory = "./firebase-messaging/component" },
-		new Component { ManifestDirectory = "./firebase-storage/component" },
-	}
+	NuGets = nugetInfos.ToArray()
 };
 
 var NUGET_SOURCES = EnvironmentVariable ("NUGET_SOURCES") ?? Argument ("nugetsources", string.Empty);;
@@ -564,104 +406,6 @@ Task ("clean")
 	CleanDirectories ("./**/packages");
 });
 
-Task ("component-docs")
-	.IsDependentOn ("component-setup")
-	.Does (() =>
-{
-	var gettingStartedTemplates = new Dictionary<string, string> ();
-
-	foreach (var f in GetFiles ("./component/GettingStarted.*.md")) {
-
-		var key = f.GetFilenameWithoutExtension ().FullPath.Replace ("GettingStarted.", "");
-		var val = TransformTextFile (f).ToString ();
-
-		gettingStartedTemplates.Add (key, val);
-	}
-
-	var componentDirs = GetDirectories ("./*");
-
-	foreach (var compDir in componentDirs)
-		Information ("Found: {0}", compDir);
-
-	foreach (var compDir in componentDirs) {
-
-		var f = compDir.CombineWithFilePath ("./component/GettingStarted.template.md");
-
-		if (!FileExists (f))
-			continue;
-
-		Information ("Transforming: {0}", compDir);
-
-		var apiLevel = compDir.FullPath.Contains (".Cast") ? "Android 4.2 (API Level 17)" : "Android 4.1 (API Level 16)";
-
-		var t = TransformTextFile (f, "{", "}");
-
-		foreach (var kvp in gettingStartedTemplates) {
-			var v = TransformText (kvp.Value, "{", "}").WithToken ("APILEVEL", apiLevel).ToString ();
-			t = t.WithToken (kvp.Key, v);
-		}
-
-		FileWriteText (compDir.CombineWithFilePath ("./component/GettingStarted.md"), t.ToString ());
-	}
-
-
-	var detailsTemplates = new Dictionary<string, string> ();
-
-	foreach (var f in GetFiles ("./component/Details.*.md")) {
-
-		var key = f.GetFilenameWithoutExtension ().FullPath.Replace ("Details.", "");
-		var val = TransformTextFile (f).ToString ();
-
-		detailsTemplates.Add (key, val);
-	}
-
-	foreach (var compDir in componentDirs) {
-
-		var f = compDir.CombineWithFilePath ("./component/Details.template.md");
-
-		if (!FileExists (f))
-			continue;
-
-		Information ("Transforming: {0}", compDir);
-
-		var t = TransformTextFile (f, "{", "}");
-
-		foreach (var kvp in detailsTemplates)
-			t = t.WithToken (kvp.Key, kvp.Value);
-
-		FileWriteText (compDir.CombineWithFilePath ("./component/Details.md"), t.ToString ());
-	}
-});
-
-Task ("component-setup")
-	.Does (() =>
-{
-	var yamls = GetFiles ("./**/component/component.template.yaml");
-	foreach (var yaml in yamls) {
-		var NUGET_VERSION = PLAY_NUGET_VERSION;
-		var COMPONENT_VERSION = PLAY_COMPONENT_VERSION;
-
-		if (yaml.FullPath.Contains ("firebase-")) {
-			NUGET_VERSION = FIREBASE_NUGET_VERSION;
-			COMPONENT_VERSION = FIREBASE_COMPONENT_VERSION;
-		}
-
-		var manifestTxt = FileReadText (yaml)
-			.Replace ("$nuget-version$", NUGET_VERSION)
-			.Replace ("$version$", COMPONENT_VERSION);
-
-		var newYaml = yaml.GetDirectory ().CombineWithFilePath ("component.yaml");
-		FileWriteText (newYaml, manifestTxt);
-	}
-
-	if (DirectoryExists ("./output"))
-		DeleteFiles ("./output/*.xam");
-});
-
-Task ("component")
-	.IsDependentOn ("component-docs")
-	.IsDependentOn ("component-base");
-
 Task ("nuget-setup")
 	.IsDependentOn ("buildtasks")
 	.Does (() =>
@@ -683,7 +427,7 @@ Task ("nuget-setup")
 		// Write out the nuspec from template
 		var nuspec = new FilePath ("./" + aar.BindingDir + "/nuget/" + aar.NugetId + ".template.nuspec");
 		var nuspecTxt = FileReadText (nuspec)
-							.Replace ("$aar-version$", VERSION_DESC)
+							.Replace ("$aar-version$", aar.AarVersion)
 							.Replace ("$support-version$", SUPPORT_VERSION);
 		var newNuspec = nuspec.FullPath.Replace (".template.nuspec", ".nuspec");
 		
@@ -721,10 +465,10 @@ Task ("nuget-setup")
 		FileWriteText (newNuspec, nuspecTxt);
 
 		var msName = aar.Dir.Replace("-", "");
-		var xbdKey = "playservices-" + PLAY_AAR_VERSION + "/" + msName;
+		var xbdKey = "playservices-" + aar.AarVersion + "/" + msName;
 		
 		if (aar.Dir.StartsWith ("firebase-"))
-			xbdKey = "firebase-" + FIREBASE_AAR_VERSION + "/" + msName;
+			xbdKey = "firebase-" + aar.AarVersion + "/" + msName;
 		
 		var items = new Dictionary<string, string> {
 			{ "_XbdUrl_", "_XbdUrl_" + msName },
@@ -801,19 +545,6 @@ Task ("nuget-setup")
 
 			xOrig.Save (MakeAbsolute (targetsFile).FullPath);
 		}
-	}
-
-	var extraNuspecTemplates = new [] {
-		new FilePath ("./appindexing/nuget/Xamarin.GooglePlayServices.AppIndexing.template.nuspec"),
-		new FilePath ("./clearcut/nuget/Xamarin.GooglePlayServices.Clearcut.template.nuspec"),
-	};
-
-	foreach (var nuspec in extraNuspecTemplates) {
-		var nuspecTxt = FileReadText (nuspec)
-							.Replace ("$aar-version$", VERSION_DESC)
-							.Replace ("$support-version$", SUPPORT_VERSION);
-		var newNuspec = nuspec.FullPath.Replace (".template.nuspec", ".nuspec");
-		FileWriteText (newNuspec, nuspecTxt);
 	}
 });
 
