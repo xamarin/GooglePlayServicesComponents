@@ -82,7 +82,7 @@
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="26.0.2" />
     <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.0.2" />
     <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.0.2" />
-    <PackageReference Include="Xamarin.Build.Download" Version="0.4.7" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />

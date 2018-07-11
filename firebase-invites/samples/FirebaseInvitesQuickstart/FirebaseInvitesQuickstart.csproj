@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="26.0.2" />
-    <PackageReference Include="Xamarin.Build.Download" Version="0.4.7" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

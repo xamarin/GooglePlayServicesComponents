@@ -36,7 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FirebaseAuthQuickstart\FirebaseAuthQuickstart.csproj">
-      <Project>{D4AFDB96-B559-41B4-93D1-33E598E0A477}</Project>
+      <Project>{D4AFDB96-B559-41B4-93D1-33E598E0.4.11}</Project>
       <Name>FirebaseAuthQuickstart</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
