@@ -671,6 +671,11 @@ Task ("nuget-setup")
 	if (FileExists ("./generated.targets"))
 		DeleteFile ("./generated.targets");
 
+	var mavenRepo = MavenNet.MavenRepository.FromGoogle();
+	Information ("Loading Maven Repo...");
+	mavenRepo.Refresh("com.google.android.gms", "com.google.firebase").Wait();
+	Information ("Loaded Maven Repo.");
+
 	foreach (var aar in AAR_INFOS) {
 
 		var aarMd5File = "./externals/" + aar.Dir + ".aar.md5";
@@ -681,6 +686,38 @@ Task ("nuget-setup")
 							.Replace ("$aar-version$", VERSION_DESC)
 							.Replace ("$support-version$", SUPPORT_VERSION);
 		var newNuspec = nuspec.FullPath.Replace (".template.nuspec", ".nuspec");
+		
+		var mavenGroupId = "com.google." + aar.Path.Substring(0, aar.Path.LastIndexOf("/")).Replace("/", ".").Trim('.');
+		var mavenArtifactId = aar.Path.Substring(aar.Path.LastIndexOf("/") + 1).Trim('/');
+		
+		Information("Maven GroupId: {0}, ArtifactId: {1}", mavenGroupId, mavenArtifactId);
+
+		var mavenProject = mavenRepo.GetProjectAsync(mavenGroupId, mavenArtifactId, aar.AarVersion).Result;
+
+		Information("Maven Project: {0}", mavenProject);
+
+		var depXml = string.Empty;
+
+		foreach (var mavenDep in mavenProject.Dependencies) {
+
+			if (!mavenDep.GroupId.StartsWith("com.google.android.gms") && !mavenDep.GroupId.StartsWith("com.google.firebase"))
+				continue;
+
+			var mdepGid = mavenDep.GroupId.Replace(".", "/");
+
+			if (mdepGid.StartsWith("com/google/"))
+				mdepGid = mdepGid.Replace("com/google/", "");
+
+			var mdepAid = mavenDep.ArtifactId;
+			var mpath = mdepGid.Trim('/') + "/" + mdepAid;
+			Information("Maven Dep Path: {0}", mpath);
+			var depAarInfo = AAR_INFOS.FirstOrDefault(ai => ai.Path == mpath);
+
+			depXml += "        <dependency id=\"" + depAarInfo.NugetId + "\" version=\"" + depAarInfo.NuGetVersion + "\" />\r\n";
+		}
+
+		nuspecTxt = nuspecTxt.Replace("<!-- dependencies -->", depXml);
+		
 		FileWriteText (newNuspec, nuspecTxt);
 
 		var msName = aar.Dir.Replace("-", "");
