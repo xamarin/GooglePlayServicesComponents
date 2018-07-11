@@ -18,9 +18,7 @@
     <dependencies>
       <group targetFramework="MonoAndroid80">
         <dependency id="Square.OkHttp" version="2.7.5" />
-        <dependency id="Xamarin.Firebase.Common" version="[$version$]" />
-        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
-        <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
+<!-- dependencies -->
       </group>
     </dependencies>
   </metadata>

@@ -19,8 +19,7 @@
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-wearable_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
-        <dependency id="Xamarin.GooglePlayServices.Base" version="[$version$]" />
-        <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
+<!-- dependencies -->
         <dependency id="Xamarin.Android.Support.Compat" version="$support-version$" />
         <dependency id="Xamarin.Android.Support.Core.UI" version="$support-version$" />
         <dependency id="Xamarin.Android.Support.Core.Utils" version="$support-version$" />
