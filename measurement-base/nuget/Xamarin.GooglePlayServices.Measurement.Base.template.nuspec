@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.Measurement.Base</id>
+    <title>Xamarin Google Play Services - Measurement Base</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - Measurement Base $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - Measurement Base $aar-version$
+    </description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865435</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-measurement-base_128x128.png</iconUrl>
+    <dependencies>
+      <group targetFramework="MonoAndroid80">
+<!-- dependencies -->
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.GooglePlayServices.Measurement.Base.dll" target="lib/MonoAndroid80" />
+    <file src="measurement-base/nuget/Xamarin.GooglePlayServices.Measurement.Base.targets" target="build/MonoAndroid80" />
+  </files>
+</package>

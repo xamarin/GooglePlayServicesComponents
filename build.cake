@@ -25,6 +25,7 @@
 #addin nuget:?package=Cake.Compression&version=0.1.6
 #addin nuget:?package=Cake.Android.SdkManager&version=3.0.0
 #addin nuget:?package=Cake.Android.Adb&version=3.0.0
+#addin nuget:?package=MavenNet&version=2.0.2
 
 // Not yet cake 0.22+ compatible (requires --settings_skipverification=true)
 #addin nuget:?package=Cake.MonoApiTools&version=2.0.0
@@ -82,6 +83,7 @@ var AAR_INFOS = new [] {
 	new AarInfo ("ads-lite", "play-services-ads-lite", "android/gms/play-services-ads-lite", "Xamarin.GooglePlayServices.Ads.Lite", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("analytics", "play-services-analytics", "android/gms/play-services-analytics", "Xamarin.GooglePlayServices.Analytics", "16.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("analytics-impl", "play-services-analytics-impl", "android/gms/play-services-analytics-impl", "Xamarin.GooglePlayServices.Analytics.Impl", "16.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("audience", "play-services-audience", "android/gms/play-services-audience", "Xamarin.GooglePlayServices.Audience", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("auth", "play-services-auth", "android/gms/play-services-auth", "Xamarin.GooglePlayServices.Auth", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("auth-base", "play-services-auth-base", "android/gms/play-services-auth-base", "Xamarin.GooglePlayServices.Auth.Base", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("auth-api-phone", "play-services-auth-api-phone", "android/gms/play-services-auth-api-phone", "Xamarin.GooglePlayServices.Auth.Api.Phone", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
@@ -91,8 +93,10 @@ var AAR_INFOS = new [] {
 	new AarInfo ("appinvite", "play-services-appinvite", "android/gms/play-services-appinvite", "Xamarin.GooglePlayServices.AppInvite", "16.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("cast", "play-services-cast", "android/gms/play-services-cast", "Xamarin.GooglePlayServices.Cast", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("cast-framework", "play-services-cast-framework", "android/gms/play-services-cast-framework", "Xamarin.GooglePlayServices.Cast.Framework", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("clearcut", "play-services-clearcut", "android/gms/play-services-clearcut", "Xamarin.GooglePlayServices.Clearcut", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("drive", "play-services-drive", "android/gms/play-services-drive", "Xamarin.GooglePlayServices.Drive", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("fido", "play-services-fido", "android/gms/play-services-fido", "Xamarin.GooglePlayServices.Fido", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("flags", "play-services-flags", "android/gms/play-services-flags", "Xamarin.GooglePlayServices.Flags", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("fitness", "play-services-fitness", "android/gms/play-services-fitness", "Xamarin.GooglePlayServices.Fitness", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("games", "play-services-games", "android/gms/play-services-games", "Xamarin.GooglePlayServices.Games", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("gass", "play-services-gass", "android/gms/play-services-gass", "Xamarin.GooglePlayServices.Gass", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
@@ -102,6 +106,7 @@ var AAR_INFOS = new [] {
 	new AarInfo ("instantapps", "play-services-instantapps", "android/gms/play-services-instantapps", "Xamarin.GooglePlayServices.InstantApps", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("location", "play-services-location", "android/gms/play-services-location", "Xamarin.GooglePlayServices.Location", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("maps", "play-services-maps", "android/gms/play-services-maps", "Xamarin.GooglePlayServices.Maps", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
+	new AarInfo ("measurement-base", "play-services-measurement-base", "android/gms/play-services-measurement-base", "Xamarin.GooglePlayServices.Measurement.Base", "16.0.0", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("nearby", "play-services-nearby", "android/gms/play-services-nearby", "Xamarin.GooglePlayServices.Nearby", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("oss-licenses", "play-services-oss-licenses", "android/gms/play-services-oss-licenses", "Xamarin.GooglePlayServices.Oss.Licenses", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),
 	new AarInfo ("panorama", "play-services-panorama", "android/gms/play-services-panorama", "Xamarin.GooglePlayServices.Panorama", "15.0.1", PLAY_NUGET_VERSION, PLAY_COMPONENT_VERSION),

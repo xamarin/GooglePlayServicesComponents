@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Target Name="XamarinGooglePlayServices_Clearcut_Obsolete">  
-        <Warning Text="Xamarin.GooglePlayServices.Clearcut nuget package is obsolete and should be removed from your project!" />  
-    </Target>
-</Project>
