@@ -78,7 +78,6 @@
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
     </ProjectReference>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\play-services-phenotype\classes.jar">
@@ -86,12 +85,15 @@
     </InputJar>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="26.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="26.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.0.2" />
-    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.1.0.1" />
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Additions\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />
