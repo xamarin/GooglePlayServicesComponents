@@ -1,6 +1,7 @@
 ﻿<metadata>
 	<!-- Fix Namespaces -->
-	<attr path="/api/package[@name='com.google.android.gms.gass.internal']" name="managedName">Android.Gms.Gass.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.clearcut']" name="managedName">Android.Gms.Clearcut</attr>
+    <attr path="/api/package[@name='com.google.android.gms.clearcut.internal']" name="managedName">Android.Gms.Clearcut.Internal</attr>
 
 	<!-- Remove some internal namespaces -->
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
