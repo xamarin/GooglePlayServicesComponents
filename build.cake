@@ -433,12 +433,10 @@ Task ("nuget-setup")
 		
 		var mavenGroupId = "com.google." + aar.Path.Substring(0, aar.Path.LastIndexOf("/")).Replace("/", ".").Trim('.');
 		var mavenArtifactId = aar.Path.Substring(aar.Path.LastIndexOf("/") + 1).Trim('/');
-		
-		Information("Maven GroupId: {0}, ArtifactId: {1}", mavenGroupId, mavenArtifactId);
+
+		Information("Maven GroupId: {0}, ArtifactId: {1}, Version: {2}", mavenGroupId, mavenArtifactId, aar.AarVersion);
 
 		var mavenProject = mavenRepo.GetProjectAsync(mavenGroupId, mavenArtifactId, aar.AarVersion).Result;
-
-		Information("Maven Project: {0}", mavenProject);
 
 		var depXml = string.Empty;
 
@@ -454,13 +452,13 @@ Task ("nuget-setup")
 
 			var mdepAid = mavenDep.ArtifactId;
 			var mpath = mdepGid.Trim('/') + "/" + mdepAid;
-			Information("Maven Dep Path: {0}", mpath);
+			Information("  Depends on ArtifactId: {0}, Version: {1} ({2})", mdepAid, mavenDep.Version, mpath);
 			var depAarInfo = AAR_INFOS.FirstOrDefault(ai => ai.Path == mpath);
 
-			depXml += "        <dependency id=\"" + depAarInfo.NugetId + "\" version=\"" + depAarInfo.NuGetVersion + "\" />\r\n";
+			depXml += "        <dependency id=\"" + depAarInfo.NugetId + "\" version=\"" + mavenDep.Version + "\" />\r\n";
 		}
 
-		nuspecTxt = nuspecTxt.Replace("<!-- dependencies -->", depXml);
+		nuspecTxt = nuspecTxt.Replace("<!-- dependencies -->", depXml.TrimEnd());
 		
 		FileWriteText (newNuspec, nuspecTxt);
 
@@ -572,6 +570,41 @@ Task ("ci-setup")
 		ReplaceTextInFiles(glob, "{BUILD_NUMBER}", buildNumber);
 		ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", buildTimestamp);
 	}
+});
+
+Task ("dependency-list")
+	.Does(() =>
+{
+	var mavenRepo = MavenNet.MavenRepository.FromGoogle();
+	
+	Information ("Loading Maven Repo...");
+	mavenRepo.Refresh("com.google.android.gms", "com.google.firebase").Wait();
+	Information ("Loaded Maven Repo.");
+
+	var depText = string.Empty;
+
+	foreach (var aar in AAR_INFOS) {
+		var mavenGroupId = aar.Path.Substring(0, aar.Path.LastIndexOf("/")).Replace("/", ".").Trim('.');
+		var mavenArtifactId = aar.Path.Substring(aar.Path.LastIndexOf("/") + 1).Trim('/');
+
+		MavenNet.Models.Project mavenProject = null;
+
+		try {
+			mavenProject = mavenRepo.GetProjectAsync(mavenGroupId, mavenArtifactId, aar.AarVersion).Result;
+		} catch {
+			mavenGroupId = "com.google." + mavenGroupId;
+			mavenProject = mavenRepo.GetProjectAsync(mavenGroupId, mavenArtifactId, aar.AarVersion).Result;
+		}
+
+		depText += mavenGroupId + " -> " + mavenArtifactId + Environment.NewLine;
+
+		foreach (var mavenDep in mavenProject.Dependencies)
+			depText += "    " + mavenDep.GroupId + " -> " + mavenDep.ArtifactId + ": " + mavenDep.Version + Environment.NewLine;
+
+		depText += Environment.NewLine;
+	}
+
+	FileWriteText("./output/dependency-list.txt", depText);
 });
 
 Task ("genapi")
@@ -704,6 +737,7 @@ Task ("libs")
 Task ("ci")
 	.IsDependentOn ("ci-setup")
 	.IsDependentOn ("diff")
+	.IsDependentOn ("dependency-list")
 	.IsDependentOn ("package-samples");
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
