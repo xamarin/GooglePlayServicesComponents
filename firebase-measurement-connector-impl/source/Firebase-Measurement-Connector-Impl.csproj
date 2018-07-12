@@ -67,17 +67,25 @@
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\base\source\Base.csproj">
-      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
-      <Name>Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\tasks\source\Tasks.csproj">
-      <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
-      <Name>Tasks</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\firebase-common\source\Firebase-Common.csproj">
       <Project>{865652D3-8D1A-4779-92FC-4C54719286B7}</Project>
       <Name>Firebase-Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\measurement-base\source\Measurement-Base.csproj">
+      <Project>{1366A650-E063-455B-92D3-BEE8DD2D147B}</Project>
+      <Name>Measurement-Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-analytics\source\Firebase-Analytics.csproj">
+      <Project>{DC5BEB52-1715-4E53-88EF-2D4F1708E394}</Project>
+      <Name>Firebase-Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-analytics-impl\source\Firebase-Analytics-Impl.csproj">
+      <Project>{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}</Project>
+      <Name>Firebase-Analytics-Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-measurement-connector\source\Firebase-Measurement-Connector.csproj">
+      <Project>{696B7DF8-7903-4A50-B96E-0738A24FA459}</Project>
+      <Name>Firebase-Measurement-Connector</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

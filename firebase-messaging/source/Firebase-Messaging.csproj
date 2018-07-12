@@ -80,6 +80,10 @@
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\firebase-measurement-connector\source\Firebase-Measurement-Connector.csproj">
+      <Project>{696B7DF8-7903-4A50-B96E-0738A24FA459}</Project>
+      <Name>Firebase-Measurement-Connector</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\firebase-messaging\classes.jar">

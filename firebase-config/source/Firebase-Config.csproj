@@ -85,6 +85,18 @@
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\vision-image-label\source\Vision-Image-Label.csproj">
+      <Project>{EDBDAE68-450D-47B8-8771-E2C97BF00C86}</Project>
+      <Name>Phenotype</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-abt\source\Firebase-Abt.csproj">
+      <Project>{2DA8109F-C282-4FEC-9F4B-C7CE8B53F6DB}</Project>
+      <Name>Firebase-Abt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-analytics-impl\source\Firebase-Analytics-Impl.csproj">
+      <Project>{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}</Project>
+      <Name>Firebase-Analytics-Impl</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\firebase-config\classes.jar">

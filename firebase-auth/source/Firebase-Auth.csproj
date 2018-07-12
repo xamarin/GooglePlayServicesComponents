@@ -80,6 +80,14 @@
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\flags\source\Flags.csproj">
+      <Project>{F8422FD1-3818-40DB-9CBF-7347574873CC}</Project>
+      <Name>Flags</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-auth-interop\source\Firebase-Auth-Interop.csproj">
+      <Project>{14740758-46A6-4948-9D53-587C171B074D}</Project>
+      <Name>Firebase-Auth-Interop</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\firebase-auth\classes.jar">

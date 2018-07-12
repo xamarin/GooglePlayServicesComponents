@@ -66,28 +66,6 @@
     </TransformFile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\base\source\Base.csproj">
-      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
-      <Name>Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\basement\source\Basement.csproj">
-      <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
-      <Name>Basement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\maps\source\Maps.csproj">
-      <Project>{7CB92D61-E2FF-472A-9FDF-7E42D15B3EE6}</Project>
-      <Name>Maps</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\tasks\source\Tasks.csproj">
-      <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
-      <Name>Tasks</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\location\source\Location.csproj">
-      <Project>{F666DC89-9CE4-491C-8450-6FBC70298FA3}</Project>
-      <Name>Location</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <InputJar Include="..\..\externals\protolite-well-known-types\classes.jar">
       <Link>Jars\protolite-well-known-types.jar</Link>
     </InputJar>

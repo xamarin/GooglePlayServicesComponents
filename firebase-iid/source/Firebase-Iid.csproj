@@ -76,6 +76,14 @@
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\stats\source\Stats.csproj">
+      <Project>{B5360982-854F-4DB8-86A2-326041BFC46F}</Project>
+      <Name>Stats</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-iid-interop\source\Firebase-Iid-Interop.csproj">
+      <Project>{9F5638E1-7D20-42B2-8C14-AB815E5A5B7B}</Project>
+      <Name>Firebase-Iid-Interop</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\firebase-iid\classes.jar">

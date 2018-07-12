@@ -67,6 +67,10 @@
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ads-base\source\Ads.Base.csproj">
+      <Project>{11B79CD7-E9F5-4DC5-8ED6-534BA8661A28}</Project>
+      <Name>Ads.Base</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\play-services-ads-lite\classes.jar">

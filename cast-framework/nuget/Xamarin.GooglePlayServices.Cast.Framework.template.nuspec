@@ -18,8 +18,8 @@
     <dependencies>
       <group targetFramework="MonoAndroid80">
 <!-- dependencies -->
-        <dependency id="Xamarin.Android.Support.v7.AppCompat" version="$support-version$" />
         <dependency id="Xamarin.Android.Support.v7.MediaRouter" version="$support-version$" />
+        <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="$support-version$" />
       </group>
     </dependencies>
   </metadata>

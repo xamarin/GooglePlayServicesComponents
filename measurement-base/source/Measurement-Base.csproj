@@ -63,12 +63,6 @@
     </TransformFile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\basement\source\Basement.csproj">
-      <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
-      <Name>Basement</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <InputJar Include="..\..\externals\play-services-measurement-base\classes.jar">
       <Link>Jars\play-services-measurement-base.jar</Link>
     </InputJar>

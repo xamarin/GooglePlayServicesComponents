@@ -79,6 +79,18 @@
       <Project>{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}</Project>
       <Name>Firebase-Iid</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\vision-image-label\source\Vision-Image-Label.csproj">
+      <Project>{EDBDAE68-450D-47B8-8771-E2C97BF00C86}</Project>
+      <Name>Phenotype</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-analytics\source\Firebase-Analytics.csproj">
+      <Project>{DC5BEB52-1715-4E53-88EF-2D4F1708E394}</Project>
+      <Name>Firebase-Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\clearcut\source\Clearcut.csproj">
+      <Project>{FBC72523-8978-4F86-9D49-8FC8E3A2CAF9}</Project>
+      <Name>Clearcut</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\firebase-perf\classes.jar">

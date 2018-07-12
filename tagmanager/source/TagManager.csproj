@@ -78,6 +78,18 @@
       <Project>{7893F52D-09B9-4441-AC47-6F7875BD68BC}</Project>
       <Name>Analytics.Impl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ads-identifier\source\Ads.Identifier.csproj">
+      <Project>{24AF7352-6F6E-458D-9D8C-8EEED536920F}</Project>
+      <Name>Ads.Identifier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\measurement-base\source\Measurement-Base.csproj">
+      <Project>{1366A650-E063-455B-92D3-BEE8DD2D147B}</Project>
+      <Name>Measurement-Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\stats\source\Stats.csproj">
+      <Project>{B5360982-854F-4DB8-86A2-326041BFC46F}</Project>
+      <Name>Stats</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\play-services-tagmanager\classes.jar">

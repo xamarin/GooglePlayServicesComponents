@@ -70,9 +70,13 @@
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\firebase-analytics\source\Firebase-Analytics.csproj">
-      <Project>{DC5BEB52-1715-4E53-88EF-2D4F1708E394}</Project>
-      <Name>Firebase-Analytics</Name>
+    <ProjectReference Include="..\..\firebase-analytics-impl\source\Firebase-Analytics-Impl.csproj">
+      <Project>{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}</Project>
+      <Name>Firebase-Analytics-Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\measurement-base\source\Measurement-Base.csproj">
+      <Project>{1366A650-E063-455B-92D3-BEE8DD2D147B}</Project>
+      <Name>Measurement-Base</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -75,6 +75,14 @@
       <Project>{865652D3-8D1A-4779-92FC-4C54719286B7}</Project>
       <Name>Firebase-Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\firebase-database-collection\source\Firebase-Database-Collection.csproj">
+      <Project>{DB477A2B-690D-4749-9666-2909044B1F93}</Project>
+      <Name>Firebase-Database-Collection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\protolite-well-known-types\source\ProtoliteWellKnownTypes.csproj">
+      <Project>{A08CB639-55C2-4431-8792-9953D5627DD4}</Project>
+      <Name>ProtoliteWellKnownTypes</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.0.2" />

@@ -81,6 +81,10 @@
       <Project>{2858C3DB-1E15-4D12-AF09-02CFD624ADD4}</Project>
       <Name>Firebase-Database-Connection</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\firebase-database-collection\source\Firebase-Database-Collection.csproj">
+      <Project>{DB477A2B-690D-4749-9666-2909044B1F93}</Project>
+      <Name>Firebase-Database-Collection</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\firebase-database\classes.jar">

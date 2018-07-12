@@ -17,6 +17,7 @@
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-oss-licenses_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
+        <dependency id="Xamarin.Android.Support.v7.AppCompat" version="$support-version$" />
 <!-- dependencies -->
       </group>
     </dependencies>

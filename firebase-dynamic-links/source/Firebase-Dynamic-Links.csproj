@@ -79,6 +79,14 @@
       <Project>{865652D3-8D1A-4779-92FC-4C54719286B7}</Project>
       <Name>Firebase-Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\measurement-base\source\Measurement-Base.csproj">
+      <Project>{1366A650-E063-455B-92D3-BEE8DD2D147B}</Project>
+      <Name>Measurement-Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-analytics-impl\source\Firebase-Analytics-Impl.csproj">
+      <Project>{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}</Project>
+      <Name>Firebase-Analytics-Impl</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\firebase-dynamic-links\classes.jar">

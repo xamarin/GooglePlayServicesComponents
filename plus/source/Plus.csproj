@@ -82,6 +82,10 @@
       <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
       <Name>Basement</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\audience\source\Audience.csproj">
+      <Project>{2B5E51BF-FC32-4AB3-A823-2DCBFFB6F3CC}</Project>
+      <Name>Audience</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.0.2" />

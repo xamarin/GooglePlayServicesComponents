@@ -79,6 +79,18 @@
       <Project>{865652D3-8D1A-4779-92FC-4C54719286B7}</Project>
       <Name>Firebase-Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\clearcut\source\Clearcut.csproj">
+      <Project>{FBC72523-8978-4F86-9D49-8FC8E3A2CAF9}</Project>
+      <Name>Clearcut</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vision-common\source\Vision-Common.csproj">
+      <Project>{148E13D5-9D81-4937-801D-A8DF043B2A4F}</Project>
+      <Name>Vision-Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vision-image-label\source\Vision-Image-Label.csproj">
+      <Project>{D23F95D5-E70D-4E78-ABA6-3E3F7AE88AAC}</Project>
+      <Name>Vision-Image-Label</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\firebase-ml-vision-image-label-model\classes.jar">

@@ -87,6 +87,10 @@
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\places-placereport\source\Places-PlaceReport.csproj">
+      <Project>{D2A2F9D7-84FB-4829-AEDA-C5B0F806E8A6}</Project>
+      <Name>Places-PlaceReport</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.0.2" />

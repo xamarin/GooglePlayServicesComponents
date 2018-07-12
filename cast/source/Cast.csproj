@@ -86,6 +86,10 @@
       <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
       <Name>Base</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\flags\source\Flags.csproj">
+      <Project>{F8422FD1-3818-40DB-9CBF-7347574873CC}</Project>
+      <Name>Flags</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.0.2" />

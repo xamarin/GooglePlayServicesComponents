@@ -80,6 +80,14 @@
       <Project>{D705BF83-81FD-4CD9-AF3B-09C50FF42C83}</Project>
       <Name>Gass</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ads-base\source\Ads.Base.csproj">
+      <Project>{11B79CD7-E9F5-4DC5-8ED6-534BA8661A28}</Project>
+      <Name>Ads.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ads-identifier\source\Ads.Identifier.csproj">
+      <Project>{24AF7352-6F6E-458D-9D8C-8EEED536920F}</Project>
+      <Name>Ads.Identifier</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
