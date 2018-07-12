@@ -63,28 +63,6 @@
     </TransformFile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\basement\source\Basement.csproj">
-      <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
-      <Name>Basement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\base\source\Base.csproj">
-      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
-      <Name>Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\clearcut\source\Clearcut.csproj">
-      <Project>{FBC72523-8978-4F86-9D49-8FC8E3A2CAF9}</Project>
-      <Name>Clearcut</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\flags\source\Flags.csproj">
-      <Project>{F8422FD1-3818-40DB-9CBF-7347574873CC}</Project>
-      <Name>Flags</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\vision-image-label\source\Vision-Image-Label.csproj">
-      <Project>{EDBDAE68-450D-47B8-8771-E2C97BF00C86}</Project>
-      <Name>Phenotype</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <InputJar Include="..\..\externals\play-services-vision-common\classes.jar">
       <Link>Jars\play-services-vision-common.jar</Link>
     </InputJar>
@@ -96,6 +74,28 @@
     <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.1.0.1" />
     <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.1.0.1" />
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\base\source\Base.csproj">
+      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
+      <Name>Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\basement\source\Basement.csproj">
+      <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
+      <Name>Basement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\clearcut\source\Clearcut.csproj">
+      <Project>{FBC72523-8978-4F86-9D49-8FC8E3A2CAF9}</Project>
+      <Name>Clearcut</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\flags\source\Flags.csproj">
+      <Project>{F8422FD1-3818-40DB-9CBF-7347574873CC}</Project>
+      <Name>Flags</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\phenotype\source\Phenotype.csproj">
+      <Project>{EDBDAE68-450D-47B8-8771-E2C97BF00C86}</Project>
+      <Name>Phenotype</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />

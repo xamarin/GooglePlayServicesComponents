@@ -65,29 +65,29 @@
     </TransformFile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\basement\source\Basement.csproj">
-      <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
-      <Name>Basement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\firebase-common\source\Firebase-Common.csproj">
-      <Project>{865652D3-8D1A-4779-92FC-4C54719286B7}</Project>
-      <Name>Firebase-Common</Name>
-    </ProjectReference>
+    <InputJar Include="..\..\externals\firebase-config\classes.jar">
+      <Link>Jars\firebase-config.jar</Link>
+    </InputJar>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\base\source\Base.csproj">
       <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
       <Name>Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\firebase-iid\source\Firebase-Iid.csproj">
-      <Project>{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}</Project>
-      <Name>Firebase-Iid</Name>
+    <ProjectReference Include="..\..\basement\source\Basement.csproj">
+      <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
+      <Name>Basement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\phenotype\source\Phenotype.csproj">
+      <Project>{EDBDAE68-450D-47B8-8771-E2C97BF00C86}</Project>
+      <Name>Phenotype</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\tasks\source\Tasks.csproj">
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\vision-image-label\source\Vision-Image-Label.csproj">
-      <Project>{EDBDAE68-450D-47B8-8771-E2C97BF00C86}</Project>
-      <Name>Phenotype</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\firebase-abt\source\Firebase-Abt.csproj">
       <Project>{2DA8109F-C282-4FEC-9F4B-C7CE8B53F6DB}</Project>
@@ -97,14 +97,14 @@
       <Project>{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}</Project>
       <Name>Firebase-Analytics-Impl</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <InputJar Include="..\..\externals\firebase-config\classes.jar">
-      <Link>Jars\firebase-config.jar</Link>
-    </InputJar>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
+    <ProjectReference Include="..\..\firebase-common\source\Firebase-Common.csproj">
+      <Project>{865652D3-8D1A-4779-92FC-4C54719286B7}</Project>
+      <Name>Firebase-Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-iid\source\Firebase-Iid.csproj">
+      <Project>{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}</Project>
+      <Name>Firebase-Iid</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />

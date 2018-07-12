@@ -72,6 +72,14 @@
     </InputJar>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\base\source\Base.csproj">
       <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
       <Name>Base</Name>
@@ -84,14 +92,6 @@
       <Project>{148E13D5-9D81-4937-801D-A8DF043B2A4F}</Project>
       <Name>Vision-Common</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.1.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="26.1.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="26.1.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.1.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.1.0.1" />
-    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />
