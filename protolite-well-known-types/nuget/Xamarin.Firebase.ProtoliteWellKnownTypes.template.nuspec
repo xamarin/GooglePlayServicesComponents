@@ -22,7 +22,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.ProtoliteWellKnownTypes.dll" target="lib/MonoAndroid80" />
-    <file src="protolitewellknowntypes/nuget/Xamarin.GooglePlayServices.ProtoliteWellKnownTypes.targets" target="build/MonoAndroid80" />
+    <file src="output/Xamarin.Firebase.ProtoliteWellKnownTypes.dll" target="lib/MonoAndroid80" />
+    <file src="protolite-well-known-types/nuget/Xamarin.Firebase.ProtoliteWellKnownTypes.targets" target="build/MonoAndroid80" />
   </files>
 </package>

@@ -25,6 +25,6 @@
   </metadata>
   <files>
     <file src="output/Xamarin.GooglePlayServices.Ads.Identifier.dll" target="lib/MonoAndroid80" />
-    <file src="ads-base/nuget/Xamarin.GooglePlayServices.Ads.Identifier.targets" target="build/MonoAndroid80" />
+    <file src="ads-identifier/nuget/Xamarin.GooglePlayServices.Ads.Identifier.targets" target="build/MonoAndroid80" />
   </files>
 </package>
