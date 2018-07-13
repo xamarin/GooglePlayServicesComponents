@@ -209,8 +209,8 @@ Information("MSCORLIB_PATH: {0}", MSCORLIB_PATH);
 var buildsOnWinMac = BuildPlatforms.Windows | BuildPlatforms.Mac;
 
 var nugetInfos = AAR_INFOS.Select (a => new NuGetInfo { NuSpec = "./" + a.BindingDir + "/nuget/" + a.NugetId + ".nuspec", Version = a.NuGetVersion, RequireLicenseAcceptance = true }).ToList ();
-nugetInfos.Add(new NuGetInfo { NuSpec = "./firebase-core/nuget/Xamarin.Firebase.Core.nuspec", Version = NUGET_VERSION_PREFIX + "1601", RequireLicenseAcceptance = true });
-nugetInfos.Add(new NuGetInfo { NuSpec = "./firebase-ads/nuget/Xamarin.Firebase.Ads.nuspec", Version = NUGET_VERSION_PREFIX + "1501", RequireLicenseAcceptance = true });
+nugetInfos.Add(new NuGetInfo { NuSpec = "./firebase-core/nuget/Xamarin.Firebase.Core.nuspec", Version = NUGET_VERSION_PREFIX + "1601" + COMMON_NUGET_VERSION, RequireLicenseAcceptance = true });
+nugetInfos.Add(new NuGetInfo { NuSpec = "./firebase-ads/nuget/Xamarin.Firebase.Ads.nuspec", Version = NUGET_VERSION_PREFIX + "1501" + COMMON_NUGET_VERSION, RequireLicenseAcceptance = true });
 
 // There are no actual bindings for these, they are just nuget packages that depend on others
 var redirectArtifacts = new List<string> { "firebase-ads", "firebase-core" };
