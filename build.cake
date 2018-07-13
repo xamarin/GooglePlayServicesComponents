@@ -212,6 +212,9 @@ var nugetInfos = AAR_INFOS.Select (a => new NuGetInfo { NuSpec = "./" + a.Bindin
 nugetInfos.Add(new NuGetInfo { NuSpec = "./firebase-core/nuget/Xamarin.Firebase.Core.nuspec", Version = NUGET_VERSION_PREFIX + "1601", RequireLicenseAcceptance = true });
 nugetInfos.Add(new NuGetInfo { NuSpec = "./firebase-ads/nuget/Xamarin.Firebase.Ads.nuspec", Version = NUGET_VERSION_PREFIX + "1501", RequireLicenseAcceptance = true });
 
+// There are no actual bindings for these, they are just nuget packages that depend on others
+var redirectArtifacts = new List<string> { "firebase-ads", "firebase-core" };
+
 var buildSpec = new BuildSpec {
 	Libs = new [] {
 		new DefaultSolutionBuilder {
@@ -219,7 +222,10 @@ var buildSpec = new BuildSpec {
 			BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac,
 			MaxCpuCount = CPU_COUNT,
 			//AlwaysUseMSBuild = ALWAYS_MSBUILD,
-			OutputFiles = AAR_INFOS.Select (a => new OutputFileCopy { FromFile = "./" + a.BindingDir + "/source/bin/" + BUILD_CONFIG + "/" + a.NugetId + ".dll" }).ToArray (),
+			OutputFiles = AAR_INFOS
+				.Where(a => !redirectArtifacts.Contains(a.Dir))
+				.Select (a => new OutputFileCopy { FromFile = "./" + a.BindingDir + "/source/bin/" + BUILD_CONFIG + "/" + a.NugetId + ".dll" })
+				.ToArray (),
 		},
 	},
 
