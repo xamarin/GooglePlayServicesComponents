@@ -25,7 +25,6 @@
 #addin nuget:?package=Cake.Compression&version=0.1.6
 #addin nuget:?package=Cake.Android.SdkManager&version=3.0.0
 #addin nuget:?package=Cake.Android.Adb&version=3.0.0
-#addin nuget:?package=MavenNet&version=2.0.2
 
 // Not yet cake 0.22+ compatible (requires --settings_skipverification=true)
 #addin nuget:?package=Cake.MonoApiTools&version=2.0.0
