@@ -1,9 +1,10 @@
 ﻿<metadata>
     <attr path="/api/package[@name='com.google.android.gms.flags']" name="managedName">Android.Gms.Flags</attr>
     <attr path="/api/package[@name='com.google.android.gms.flags.impl']" name="managedName">Android.Gms.Flags.Impl</attr>
-    <attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.flags']/class[@name='ModuleDescriptor']" name="managedName">Android.Gms.Dynamite.Descriptors.Flags</attr>
+    <attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.flags']" name="managedName">Android.Gms.Dynamite.Descriptors.Flags</attr>
     <attr path="/api/package[@name='com.google.android.gms.flags.impl.util']" name="managedName">Anroid.Gms.Flags.Impl.Util</attr>
-	<!-- Remove some internal namespaces -->
+
+    <!-- Remove some internal namespaces -->
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
 
 	<!-- Remove *zz* obfuscated items -->

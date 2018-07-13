@@ -3,6 +3,7 @@
 	<!-- Rename Namespaces -->
 	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
 	<attr path="/api/package[@name='com.google.firebase.auth']" name="managedName">Firebase.Auth</attr>
+    <attr path="/api/package[@name='com.google.firebase.events']" name="managedName">Firebase.Events</attr>
 	<attr path="/api/package[@name='com.google.firebase.provider']" name="managedName">Firebase.Provider</attr>
     <attr path="/api/package[@name='com.google.firebase.components']" name="managedName">Firebase.Componentsw</attr>
     <attr path="/api/package[@name='com.google.firebase.inject']" name="managedName">Firebase.Inject</attr>
