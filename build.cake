@@ -53,7 +53,7 @@ var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents
 // The common suffix for nuget version
 // Sometimes might be "-beta1" for a prerelease, or ".1" if we have a point release for the same actual aar's
 // will be blank for a stable release that has no point release fixes
-var COMMON_NUGET_VERSION = "";
+const string COMMON_NUGET_VERSION = "-beta01";
 const string NUGET_VERSION_PREFIX = "70.";
 
 var SUPPORT_VERSION = "26.1.0.1";
@@ -168,7 +168,7 @@ class AarInfo
 		Path = path;
 		NugetId = nugetId;
 		AarVersion = aarVersion;
-		NuGetVersion = NUGET_VERSION_PREFIX + aarVersion.Replace(".", "") + (nugetVersionPostfix ?? "");
+		NuGetVersion = NUGET_VERSION_PREFIX + aarVersion.Replace(".", "") + (nugetVersionPostfix ?? "") + (COMMON_NUGET_VERSION ?? "");
 		Extension = ".aar";
 	}
 
