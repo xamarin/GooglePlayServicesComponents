@@ -13,6 +13,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basement", "..\..\basement\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "..\..\tasks\source\Tasks.csproj", "{53F87D88-8871-41A2-9F81-B79AB02FEC24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Dynamic-Links", "..\..\firebase-dynamic-links\source\Firebase-Dynamic-Links.csproj", "{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Analytics-Impl", "..\..\firebase-analytics-impl\source\Firebase-Analytics-Impl.csproj", "{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Common", "..\..\firebase-common\source\Firebase-Common.csproj", "{865652D3-8D1A-4779-92FC-4C54719286B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Iid", "..\..\firebase-iid\source\Firebase-Iid.csproj", "{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,5 +51,21 @@ Global
 		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{865652D3-8D1A-4779-92FC-4C54719286B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
