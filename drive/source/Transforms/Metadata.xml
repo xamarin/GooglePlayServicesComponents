@@ -15,6 +15,11 @@
 	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='Drive']/field[@name='API']" name="managedName">API</attr>
 
 
+        <attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='OnChangeListener']/method[@name='onChange']" name="argsType">ChangeEventEventArgs</attr>
+
+    <attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='ChangeListener']/method[@name='onChange']" name="argsType">OnChangeEventEventArgs</attr>
+
+    
 	<!-- Remove some internal namespaces -->
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.drive.internal')]" />
@@ -59,12 +64,18 @@
 	<attr path="/api/package[@name='com.google.android.gms.drive.events']/*/implements[@name='com.google.android.gms.drive.events.zzh']" name="name">java.lang.Thread</attr>
 	<attr path="/api/package[@name='com.google.android.gms.drive.events']/*/implements[@name='com.google.android.gms.drive.events.zzh']" name="name-generic-aware">java.lang.Thread</attr>
 
-	<attr path="/api/package/*[@extends='com.google.android.gms.internal.zzbld']" name="extends">java.lang.Object</attr>
-	<attr path="/api/package/*[@extends='com.google.android.gms.internal.zzbld']" name="extends-generic-aware">java.lang.Object</attr>
+    <!-- From CreateFileActivityOptions -->
+	<attr path="/api/package/*[@extends='com.google.android.gms.internal.zzq']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.internal.zzq']" name="extends-generic-aware">java.lang.Object</attr>
 
+    <attr path="/api/package/*[@extends='com.google.android.gms.drive.zzi']" name="extends">java.lang.Object</attr>
 
-	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='CreateFileActivityOptions.Builder']/field[@name='builder']" name="managedName">FileBuilder</attr>
+    <attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='OnChangeListener']/method[@name='onChange']" name="argsType">SomeOtherTypeEventArgs</attr>
+    <!--<attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='ChangeListener']" name="managedName">DeprecatedChangeListener</attr>-->
+    <attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='ChangeListener']/method[@name='onChange']" name="argsType">SomeTypeEventArgs</attr>
+    <attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='ChangeListener']/method[@name='onChange']" name="eventName"></attr>
 
-	<remove-node path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='ChangeListener']/method[@name='onChange']" />
+    <attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='CreateFileActivityOptions.Builder']/field[@name='builder']" name="managedName">FileBuilder</attr>
+
 
 </metadata>
