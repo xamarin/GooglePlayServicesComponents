@@ -50,11 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Additions\IPendingResultExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
     <None Include="Additions\BugWorkarounds.cs" />
-    <None Include="Additions\IPendingResultExtensions.cs" />
     <None Include="Additions\DataBufferAdditions.cs" />
     <None Include="Additions\TurnBasedMatchBuffer.cs" />
   </ItemGroup>
