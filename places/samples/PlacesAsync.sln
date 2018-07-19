@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maps", "..\..\maps\source\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Places", "..\source\Places.csproj", "{D42D621B-0370-44F6-A58E-0749629F9F4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Places-PlaceReport", "..\..\places-placereport\source\Places-PlaceReport.csproj", "{D2A2F9D7-84FB-4829-AEDA-C5B0F806E8A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Location", "..\..\location\source\Location.csproj", "{F666DC89-9CE4-491C-8450-6FBC70298FA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,5 +53,13 @@ Global
 		{D42D621B-0370-44F6-A58E-0749629F9F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D42D621B-0370-44F6-A58E-0749629F9F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D42D621B-0370-44F6-A58E-0749629F9F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A2F9D7-84FB-4829-AEDA-C5B0F806E8A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A2F9D7-84FB-4829-AEDA-C5B0F806E8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A2F9D7-84FB-4829-AEDA-C5B0F806E8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A2F9D7-84FB-4829-AEDA-C5B0F806E8A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F666DC89-9CE4-491C-8450-6FBC70298FA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F666DC89-9CE4-491C-8450-6FBC70298FA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F666DC89-9CE4-491C-8450-6FBC70298FA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F666DC89-9CE4-491C-8450-6FBC70298FA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Location", "..\source\Locat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "..\..\tasks\source\Tasks.csproj", "{53F87D88-8871-41A2-9F81-B79AB02FEC24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Places-PlaceReport", "..\..\places-placereport\source\Places-PlaceReport.csproj", "{D2A2F9D7-84FB-4829-AEDA-C5B0F806E8A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,5 +45,9 @@ Global
 		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A2F9D7-84FB-4829-AEDA-C5B0F806E8A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A2F9D7-84FB-4829-AEDA-C5B0F806E8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A2F9D7-84FB-4829-AEDA-C5B0F806E8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A2F9D7-84FB-4829-AEDA-C5B0F806E8A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
