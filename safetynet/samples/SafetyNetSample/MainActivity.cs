@@ -10,16 +10,17 @@ using Android.Gms.Common.Apis;
 using Android.Support.V4.App;
 using Android.Gms.SafetyNet;
 using System.Json;
+using Android.Gms.Common;
 
 namespace SafetyNetSample
 {
     [Activity (Label = "SafetyNet Sample", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : FragmentActivity
+    public class MainActivity : FragmentActivity, Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener
     {
         GoogleApiClient googleApiClient;
         Button buttonCheck;
         Button buttonVerify;
-        ISafetyNetApiAttestationResult attestationResult;
+		SafetyNetApiAttestationResponse attestationResult;
 
         const string DEVELOPERS_CONSOLE_API_KEY = "YOUR-API-KEY";
 
@@ -35,18 +36,17 @@ namespace SafetyNetSample
             buttonVerify.Enabled = false;
 
             googleApiClient = new GoogleApiClient.Builder (this)
-                .EnableAutoManage (this, 1, result => {
-                    Toast.MakeText (this, "Failed to connect to Google Play Services", ToastLength.Long).Show ();
-                })
+                .EnableAutoManage(this, this)
                 .AddApi (SafetyNetClass.API)
                 .Build ();
 
             buttonCheck.Click += async delegate {
-                
-                var nonce = Nonce.Generate (); // Should be at least 16 bytes in length.
-                var r = await SafetyNetClass.SafetyNetApi.AttestAsync (googleApiClient, nonce);
 
-                if (r.Status.IsSuccess) {
+				var api = SafetyNetClass.GetClient(this);
+                var nonce = Nonce.Generate (); // Should be at least 16 bytes in length.
+				var r = await api.AttestAsync(nonce, DEVELOPERS_CONSOLE_API_KEY);
+
+				if (r != null && !string.IsNullOrEmpty(r.JwsResult)) {
 
                     // Store for future verification with google servers
                     attestationResult = r;
@@ -131,7 +131,12 @@ namespace SafetyNetSample
             
             return json [field].ToString ().Trim ('"');
         }
-    }
+
+		public void OnConnectionFailed(ConnectionResult result)
+		{
+			Toast.MakeText(this, "Failed to connect to Google Play Services", ToastLength.Long).Show();
+		}
+	}
 }
 
 
