@@ -30,3 +30,6 @@ generated.targets
 cake.sh
 cake.sh.commit
 /.vs
+.vs/
+tools/
+.vscode/
