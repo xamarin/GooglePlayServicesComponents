@@ -64,10 +64,10 @@ namespace Firebase.Storage
         //     return GetBytes (l).AsAsync<byte []> ();
         // }
 
-        // public System.Threading.Tasks.Task<Android.Net.Uri> GetDownloadUrlAsync ()
-        // {
-        //     return GetDownloadUrl ().AsAsync<Android.Net.Uri> ();
-        // }
+         public System.Threading.Tasks.Task<Android.Net.Uri> GetDownloadUrlAsync ()
+         {
+             return GetDownloadUrl ().AsAsync<Android.Net.Uri> ();
+         }
     }
 
     public partial class StorageException

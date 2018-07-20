@@ -325,7 +325,7 @@ namespace FirebaseStorageQuickstart
 			base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 		}
 
-		public void OnSuccess(Java.Lang.Object result)
+		public async void OnSuccess(Java.Lang.Object result)
 		{
 			// Upload succeeded
 			Log.Debug(TAG, "uploadFromUri:onSuccess");
@@ -333,7 +333,7 @@ namespace FirebaseStorageQuickstart
 			UploadTask.TaskSnapshot taskSnapshot = (UploadTask.TaskSnapshot)result;
 
 			// Get the public download URL
-			mDownloadUrl = taskSnapshot.Metadata.DownloadUrl;
+			mDownloadUrl = await taskSnapshot.Storage.GetDownloadUrlAsync();
 
 			// [START_EXCLUDE]
 			HideProgressDialog();
