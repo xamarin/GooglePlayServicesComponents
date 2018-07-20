@@ -250,7 +250,7 @@ var buildSpec = new BuildSpec {
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-ads/samples/FirebaseAdmobQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-analytics/samples/FirebaseAnalyticsQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-appindexing/samples/AppIndexingSample.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
-		new DefaultSolutionBuilder { SolutionPath = "./firebase-auth/samples/FirebaseAuthQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
+		//new DefaultSolutionBuilder { SolutionPath = "./firebase-auth/samples/FirebaseAuthQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-config/samples/FirebaseConfigQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-crash/samples/FirebaseCrashReportingQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
 		new DefaultSolutionBuilder { SolutionPath = "./firebase-invites/samples/FirebaseInvitesQuickstart.sln", BuildsOn = buildsOnWinMac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = ALWAYS_MSBUILD },
