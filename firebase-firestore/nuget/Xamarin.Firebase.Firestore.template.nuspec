@@ -21,6 +21,7 @@
         <dependency id="Xamarin.Firebase.Common" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Basement" version="[$version$]" />
         <dependency id="Xamarin.GooglePlayServices.Tasks" version="[$version$]" />
+        <dependency id="Xamarin.Google.Guava" version="23.2.0" />
       </group>
     </dependencies>
   </metadata>
