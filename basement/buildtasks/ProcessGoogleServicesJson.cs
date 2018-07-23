@@ -97,6 +97,7 @@ namespace Xamarin.GooglePlayServices.Tasks
 				{ "google_api_key", googleServices.GetGoogleApiKey (AndroidPackageName) },
 				{ "google_crash_reporting_api_key", googleServices.GetCrashReportingApiKey (AndroidPackageName) },
 				{ "google_storage_bucket", googleServices.GetStorageBucket (AndroidPackageName) },
+				{ "project_id", googleServices.ProjectInfo.ProjectId }
 			};
 
 			// We only want to create the file if not all of these values are missing

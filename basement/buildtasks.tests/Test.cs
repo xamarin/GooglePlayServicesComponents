@@ -80,6 +80,15 @@ namespace buildtasks.tests
 
             Assert.AreEqual ("UA-6465612-26", v);
         }
+
+        [Test]
+        public void ProjectId_Should_Match_Test ()
+        {
+            var g = GoogleServicesJsonProcessor.ProcessJson (TestPkgName, OpenTestFile ());
+            var v = g.ProjectInfo.ProjectId;
+
+            Assert.AreEqual ("white-cedar-97320", v);
+        }
     }
 }
 
