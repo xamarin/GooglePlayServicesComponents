@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>Xamarin.GooglePlayServices.ProtoliteWellKnownTypes</id>
+    <id>Xamarin.Firebase.ProtoliteWellKnownTypes</id>
     <title>Xamarin Google Play Services - ProtoliteWellKnownTypes</title>
     <version>$version$</version>
     <authors>Xamarin Inc.</authors>
