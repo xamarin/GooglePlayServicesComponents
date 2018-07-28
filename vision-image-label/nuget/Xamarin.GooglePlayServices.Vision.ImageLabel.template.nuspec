@@ -12,7 +12,7 @@
       Xamarin.Android Bindings for Google Play Services - Vision.ImageLabel $aar-version$
     </description>
     <copyright>© Microsoft Corporation. All rights reserved.</copyright>
-    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865345</projectUrl>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865435</projectUrl>
     <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-vision-image-label_128x128.png</iconUrl>
     <dependencies>
