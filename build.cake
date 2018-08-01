@@ -52,7 +52,7 @@ var BASE_API_INFO_URL = "https://github.com/xamarin/GooglePlayServicesComponents
 // The common suffix for nuget version
 // Sometimes might be "-beta1" for a prerelease, or ".1" if we have a point release for the same actual aar's
 // will be blank for a stable release that has no point release fixes
-const string COMMON_NUGET_VERSION = "-preview1";
+const string COMMON_NUGET_VERSION = "-beta02";
 const string NUGET_VERSION_PREFIX = "70.";
 
 var SUPPORT_VERSION = "26.1.0.1";
@@ -460,7 +460,7 @@ Task ("nuget-setup")
 			Information("  Depends on ArtifactId: {0}, Version: {1} ({2})", mdepAid, mavenDep.Version, mpath);
 			var depAarInfo = AAR_INFOS.FirstOrDefault(ai => ai.Path == mpath);
 
-			depXml += "        <dependency id=\"" + depAarInfo.NugetId + "\" version=\"" + mavenDep.Version + "\" />\r\n";
+			depXml += "        <dependency id=\"" + depAarInfo.NugetId + "\" version=\"" + depAarInfo.NuGetVersion + "\" />\r\n";
 		}
 
 		nuspecTxt = nuspecTxt.Replace("<!-- dependencies -->", depXml.TrimEnd());
