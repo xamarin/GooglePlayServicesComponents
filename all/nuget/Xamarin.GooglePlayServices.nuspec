@@ -4,11 +4,11 @@
     <id>Xamarin.GooglePlayServices</id>
     <title>Xamarin Google Play Services - All - DEPRECATED</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>DEPRECATED: Use individual Xamarin Google Play Services packages instead!</description>
-    <copyright>Copyright © Microsoft Corporation</copyright>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
     <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents/</projectUrl>
     <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.GooglePlayServices.png</iconUrl>

@@ -4,7 +4,7 @@
     <id>Xamarin.Firebase.Iid</id>
     <title>Xamarin Firebase - Iid</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Firebase - Iid $aar-version$</summary>

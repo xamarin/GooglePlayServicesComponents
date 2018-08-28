@@ -4,7 +4,7 @@
     <id>Xamarin.GooglePlayServices.Places.PlaceReport</id>
     <title>Xamarin Google Play Services - Places.PlaceReport</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Google Play Services - Places.PlaceReport $aar-version$</summary>

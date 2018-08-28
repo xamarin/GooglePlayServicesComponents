@@ -4,7 +4,7 @@
     <id>Xamarin.Firebase.ML.Vision</id>
     <title>Xamarin Firebase - ML Vision</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Firebase - ML Vision $aar-version$</summary>

@@ -4,7 +4,7 @@
     <id>Xamarin.Firebase.Core</id>
     <title>Xamarin Firebase - Core</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Firebase - Core $aar-version$</summary>

@@ -4,7 +4,7 @@
     <id>Xamarin.GooglePlayServices.Flags</id>
     <title>Xamarin Google Play Services - Flags</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Google Play Services - Flags $aar-version$</summary>

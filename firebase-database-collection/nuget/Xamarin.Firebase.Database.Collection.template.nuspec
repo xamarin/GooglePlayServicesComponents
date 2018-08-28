@@ -4,7 +4,7 @@
     <id>Xamarin.Firebase.Database.Collection</id>
     <title>Xamarin Firebase - Database Collection</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Firebase - Database Collection $aar-version$</summary>

@@ -4,7 +4,7 @@
     <id>Xamarin.GooglePlayServices.TagManager.Api</id>
     <title>Xamarin Google Play Services - TagManager API</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Google Play Services - TagManager API $aar-version$</summary>

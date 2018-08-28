@@ -4,7 +4,7 @@
     <id>Xamarin.GooglePlayServices.Cast.Framework</id>
     <title>Xamarin Google Play Services - Cast Framework</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Google Play Services - Cast Framework $aar-version$</summary>

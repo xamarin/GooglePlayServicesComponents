@@ -4,7 +4,7 @@
     <id>Xamarin.Firebase.Common</id>
     <title>Xamarin Firebase - Common</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Firebase - Common $aar-version$ - do not install directly $aar-version$</summary>

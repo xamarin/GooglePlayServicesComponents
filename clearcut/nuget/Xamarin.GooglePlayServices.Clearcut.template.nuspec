@@ -4,7 +4,7 @@
     <id>Xamarin.GooglePlayServices.Clearcut</id>
     <title>Xamarin Google Play Services - Clearcut</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Google Play Services - Clearcut $aar-version$</summary>

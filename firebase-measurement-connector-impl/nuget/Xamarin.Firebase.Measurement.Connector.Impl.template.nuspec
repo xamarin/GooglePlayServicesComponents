@@ -4,7 +4,7 @@
     <id>Xamarin.Firebase.Measurement.Connector.Impl</id>
     <title>Xamarin Firebase - Measurement Connector Impl</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Firebase - Measurement Connector Impl $aar-version$</summary>

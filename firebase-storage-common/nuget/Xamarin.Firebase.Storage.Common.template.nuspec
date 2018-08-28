@@ -4,7 +4,7 @@
     <id>Xamarin.Firebase.Storage.Common</id>
     <title>Xamarin Firebase - Storage Common</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Firebase - Storage Common $aar-version$</summary>

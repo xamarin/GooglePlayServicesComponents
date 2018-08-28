@@ -4,7 +4,7 @@
     <id>Xamarin.Firebase.Database.Connection</id>
     <title>Xamarin Firebase - Database Connection</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Firebase - Database Connection $aar-version$</summary>

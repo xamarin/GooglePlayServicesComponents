@@ -4,7 +4,7 @@
     <id>Xamarin.Firebase.Analytics.Impl</id>
     <title>Xamarin Firebase - Analytics Impl</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Firebase - Analytics Impl $aar-version$</summary>

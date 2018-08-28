@@ -4,7 +4,7 @@
     <id>Xamarin.Firebase.ML.Model.Interpreter</id>
     <title>Xamarin Firebase - ML Model Interpreter</title>
     <version>$version$</version>
-    <authors>Xamarin Inc.</authors>
+    <authors>Microsoft</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Firebase - ML Model Interpreter $aar-version$</summary>
