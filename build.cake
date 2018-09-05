@@ -340,9 +340,6 @@ Task ("diff")
 		"./wearable/source/bin/Release/"
 	};
 
-	MonoApiInfo ("./output/GooglePlayServices.Merged.dll", 
-		"./output/GooglePlayServices.api-info.xml", 
-		new MonoApiInfoToolSettings { SearchPaths = SEARCH_DIRS });
 
 	// Grab the last public release's api-info.xml to use as a base to compare and make an API diff
 	DownloadFile (BASE_API_INFO_URL, "./output/GooglePlayServices.api-info.previous.xml");
@@ -370,14 +367,7 @@ Task ("merge").IsDependentOn ("libs").Does (() =>
 
 	var mergeDlls = GetFiles ("./output/*.dll");
 
-	ILRepack ("./output/GooglePlayServices.Merged.dll", mergeDlls.First(), mergeDlls.Skip(1), new ILRepackSettings {
-		CopyAttrs = true,
-		AllowMultiple = true,
-		//TargetKind = ILRepack.TargetKind.Dll,
-		Libs = new List<FilePath> {
-			MONODROID_PATH
-		},
-	});
+	
 });
 
 

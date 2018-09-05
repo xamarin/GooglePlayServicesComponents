@@ -1,0 +1,4 @@
+﻿<metadata>
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.protobuf']" name="managedName">Google.Protobuf</attr>
+</metadata>
