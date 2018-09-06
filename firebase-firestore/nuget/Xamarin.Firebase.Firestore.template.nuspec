@@ -4,7 +4,7 @@
     <id>Xamarin.Firebase.Firestore</id>
     <title>Xamarin Firebase - Firestore</title>
     <version>$version$</version>
-    <authors>Microsoft</authors>
+    <authors>Xamarin Inc.</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Xamarin.Android Bindings for Firebase - Firestore $aar-version$</summary>
