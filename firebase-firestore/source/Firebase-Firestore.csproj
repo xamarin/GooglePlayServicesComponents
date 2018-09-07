@@ -109,6 +109,22 @@
       <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
       <Name>Tasks</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\FirestoreDependences\OkHttp\OkHttp.csproj">
+      <Project>{5E48630C-1FB8-4C38-851A-56289FD86560}</Project>
+      <Name>OkHttp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FirestoreDependences\GRPC-OkHttp\GRPC-OkHttp.csproj">
+      <Project>{838D58C6-0777-4CF5-A09D-4D46D48AC494}</Project>
+      <Name>GRPC-OkHttp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FirestoreDependences\GRPC-ProtobufLite\GRPC-ProtobufLite.csproj">
+      <Project>{B53EAEDF-14FB-4472-AD44-A7A75D959771}</Project>
+      <Name>GRPC-ProtobufLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FirestoreDependences\GRPC-Stub\GRPC-Stub.csproj">
+      <Project>{DB4BEA0A-E773-41C3-B94E-D53FB879B05F}</Project>
+      <Name>GRPC-Stub</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\generated.targets" />

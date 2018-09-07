@@ -133,14 +133,14 @@ var AAR_INFOS = new [] {
 	new AarInfo ("firebase-database", "firebase-database", "firebase/firebase-database", "Xamarin.Firebase.Database", "16.0.1"),
 	new AarInfo ("firebase-database-connection", "firebase-database-connection", "firebase/firebase-database-connection", "Xamarin.Firebase.Database.Connection", "16.0.1"),
 	new AarInfo ("firebase-dynamic-links", "firebase-dynamic-links", "firebase/firebase-dynamic-links", "Xamarin.Firebase.Dynamic.Links", "16.0.1"),
-	new AarInfo ("firebase-firestore", "firebase-firestore", "firebase/firebase-firestore", "Xamarin.Firebase.Firestore", "17.0.2"),
+	new AarInfo ("firebase-firestore", "firebase-firestore", "firebase/firebase-firestore", "Xamarin.Firebase.Firestore", "17.1.0"),
 	new AarInfo ("firebase-iid", "firebase-iid", "firebase/firebase-iid", "Xamarin.Firebase.Iid", "16.2.0"),
 	new AarInfo ("firebase-invites", "firebase-invites", "firebase/firebase-invites", "Xamarin.Firebase.Invites", "16.0.1"),
 	new AarInfo ("firebase-messaging", "firebase-messaging", "firebase/firebase-messaging", "Xamarin.Firebase.Messaging", "17.1.0"),
 	new AarInfo ("firebase-perf", "firebase-perf", "firebase/firebase-perf", "Xamarin.Firebase.Perf", "16.0.0"),
 	new AarInfo ("firebase-storage", "firebase-storage", "firebase/firebase-storage", "Xamarin.Firebase.Storage", "16.0.1"),
 	new AarInfo ("firebase-storage-common", "firebase-storage-common", "firebase/firebase-storage-common", "Xamarin.Firebase.Storage.Common", "16.0.1"),
-
+	
 	new AarInfo ("firebase-abt", "firebase-abt", "firebase/firebase-abt", "Xamarin.Firebase.Abt", "16.0.0"),
 	new AarInfo ("firebase-ads-lite", "firebase-ads-lite", "firebase/firebase-ads-lite", "Xamarin.Firebase.Ads.Lite", "15.0.1"),
 	new AarInfo ("firebase-auth-interop", "firebase-auth-interop", "firebase/firebase-auth-interop", "Xamarin.Firebase.Auth.Interop", "16.0.0"),
