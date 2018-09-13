@@ -150,9 +150,9 @@ var AAR_INFOS = new [] {
 	new AarInfo ("firebase-invites", "firebase-invites", "firebase/firebase-invites", "Xamarin.Firebase.Invites", "16.0.1"),
 	new AarInfo ("firebase-measurement-connector", "firebase-measurement-connector", "firebase/firebase-measurement-connector", "Xamarin.Firebase.Measurement.Connector", "17.0.0"),
 	new AarInfo ("firebase-measurement-connector-impl", "firebase-measurement-connector-impl", "firebase/firebase-measurement-connector-impl", "Xamarin.Firebase.Measurement.Connector.Impl", "16.0.1"),
-	new AarInfo ("firebase-ml-common", "firebase-ml-common", "firebase/firebase-ml-common", "Xamarin.Firebase.ML.Common", "16.0.0"),
-	new AarInfo ("firebase-ml-model-interpreter", "firebase-ml-model-interpreter", "firebase/firebase-ml-model-interpreter", "Xamarin.Firebase.ML.Model.Interpreter", "16.0.0"),
-	new AarInfo ("firebase-ml-vision", "firebase-ml-vision", "firebase/firebase-ml-vision", "Xamarin.Firebase.ML.Vision", "16.0.0"),
+	new AarInfo ("firebase-ml-common", "firebase-ml-common", "firebase/firebase-ml-common", "Xamarin.Firebase.ML.Common", "16.1.2"),
+	new AarInfo ("firebase-ml-model-interpreter", "firebase-ml-model-interpreter", "firebase/firebase-ml-model-interpreter", "Xamarin.Firebase.ML.Model.Interpreter", "16.2.0"),
+	new AarInfo ("firebase-ml-vision", "firebase-ml-vision", "firebase/firebase-ml-vision", "Xamarin.Firebase.ML.Vision", "17.0.0"),
 	new AarInfo ("firebase-ml-vision-image-label-model", "firebase-ml-vision-image-label-model", "firebase/firebase-ml-vision-image-label-model", "Xamarin.Firebase.ML.Vision.Image.Label.Model", "15.0.0"),
 	new AarInfo ("protolite-well-known-types", "protolite-well-known-types", "firebase/protolite-well-known-types", "Xamarin.Firebase.ProtoliteWellKnownTypes", "15.0.0"),
 
