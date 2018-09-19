@@ -1,0 +1,36 @@
+﻿@using System.Linq
+@using System.IO
+@using System.Xml.Linq
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  @if (@Model.MavenArtifacts.Count > 0) {
+  <ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) {
+      if (art.ProguardFile != null) {
+    <ProguardConfiguration Include="$(MSBuildThisFileDirectory)..\..\proguard\proguard.txt" />
+      }
+    }
+  </ItemGroup>
+  }
+
+  <ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) {
+      if (art.MavenArtifactPackaging == "aar") {
+    <AndroidAarLibrary Include="$(MSBuildThisFileDirectory)..\..\aar\@(art.MavenArtifactId).aar" />
+      }
+    }   
+  </ItemGroup>
+
+@{
+  string mergeTargets = Path.Combine(Model.Config.BasePath, "source", Model.MavenGroupId, Model.Name, "merge.targets");
+  if (File.Exists(mergeTargets)) {
+    XDocument xmlTargets = XDocument.Load(mergeTargets);
+    XNamespace nsChild = xmlTargets.Root.Name.Namespace;
+    @Raw("\r\n\r\n");
+    foreach (var xelem in xmlTargets.Element (nsChild + "Project").Elements ()) {
+      @Raw("\r\n" + xelem.ToString());
+    }
+    @Raw("\r\n\r\n");
+  }
+}
+</Project>

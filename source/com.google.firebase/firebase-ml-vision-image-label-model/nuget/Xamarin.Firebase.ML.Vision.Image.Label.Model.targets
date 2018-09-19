@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!-- Unique key for cached download -->
+        <_XbdKey_firebasemlvisionimagelabelmodel>firebase-15.0.0/firebasemlvisionimagelabelmodel</_XbdKey_firebasemlvisionimagelabelmodel>
+        
+        <!-- Path to .aar file within the extracted contents of the cached download -->
+        <_XbdAarFile_firebasemlvisionimagelabelmodel>m2repository\com\google\firebase\firebase-ml-vision-image-label-model\15.0.0\firebase-ml-vision-image-label-model-15.0.0.aar</_XbdAarFile_firebasemlvisionimagelabelmodel>
+        
+        <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdAarFileFullPath_firebasemlvisionimagelabelmodel>$(XamarinBuildDownloadDir)$(_XbdKey_firebasemlvisionimagelabelmodel)\firebase-ml-vision-image-label-model-15.0.0.aar</_XbdAarFileFullPath_firebasemlvisionimagelabelmodel>
+
+        <!-- Assembly name to embed .aar in -->
+        <_XbdAssemblyName_firebasemlvisionimagelabelmodel>Xamarin.Firebase.ML.Vision.Image.Label.Model</_XbdAssemblyName_firebasemlvisionimagelabelmodel>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebasemlvisionimagelabelmodel"/>
+    </ItemGroup>
+
+    <Target Name="_XbdRestoreItems_firebasemlvisionimagelabelmodel">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasemlvisionimagelabelmodel)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasemlvisionimagelabelmodel)')">
+            <Output PropertyName="_XbdAarFileFullPath_firebasemlvisionimagelabelmodel" TaskParameter="Value" />
+        </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownload Include="$(_XbdKey_firebasemlvisionimagelabelmodel)">
+                <Url>https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-ml-vision-image-label-model/15.0.0/firebase-ml-vision-image-label-model-15.0.0.aar</Url>
+                <ToFile>firebase-ml-vision-image-label-model-15.0.0.aar</ToFile>
+                <Kind>Uncompressed</Kind>
+                <Md5>8baa1d78a250610c791b5ea70d7ead8f</Md5>
+            </XamarinBuildDownload>
+        </ItemGroup>
+
+        <ItemGroup>
+            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebasemlvisionimagelabelmodel)">
+                <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+                <AssemblyName>$(_XbdAssemblyName_firebasemlvisionimagelabelmodel)</AssemblyName>
+            </XamarinBuildDownloadRestoreAssemblyAar>
+        </ItemGroup>
+    </Target>
+</Project>

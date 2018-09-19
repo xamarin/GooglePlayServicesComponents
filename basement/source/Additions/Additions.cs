@@ -1,3 +1,0 @@
-﻿namespace Android.Gms.Common
-{
-}

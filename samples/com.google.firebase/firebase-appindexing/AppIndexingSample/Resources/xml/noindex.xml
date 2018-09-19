@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<search-engine xmlns:android="http://schemas.android.com/apk/res/android">
+  <noindex uri="http://recipe-app.com/recipes/hidden_uri"/>
+  <noindex uriPrefix="http://recipe-app.com/recipes/hidden_prefix"/>
+  <noindex uri="recipe-app://hidden_path"/>
+  <noindex uriPrefix="recipe-app://hidden_prefix"/>
+</search-engine>
