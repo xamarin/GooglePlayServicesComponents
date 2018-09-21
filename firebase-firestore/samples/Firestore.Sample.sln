@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firestore.Sample", "Firestore.Sample\Firestore.Sample.csproj", "{96D6560E-F7A9-4249-BE2B-F63D1D1A7BCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96D6560E-F7A9-4249-BE2B-F63D1D1A7BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D6560E-F7A9-4249-BE2B-F63D1D1A7BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D6560E-F7A9-4249-BE2B-F63D1D1A7BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D6560E-F7A9-4249-BE2B-F63D1D1A7BCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -3,7 +3,7 @@ using Android.OS;
 using Android.Runtime;
 using Java.Lang;
 
-namespace Com.Google.Firebase
+namespace Firebase
 {
     public partial class Timestamp : global::Java.Lang.Object, global::Android.OS.IParcelable, global::Java.Lang.IComparable
     {

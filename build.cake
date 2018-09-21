@@ -154,7 +154,7 @@ var AAR_INFOS = new [] {
 	new AarInfo ("firebase-ml-model-interpreter", "firebase-ml-model-interpreter", "firebase/firebase-ml-model-interpreter", "Xamarin.Firebase.ML.Model.Interpreter", "16.2.0"),
 	new AarInfo ("firebase-ml-vision", "firebase-ml-vision", "firebase/firebase-ml-vision", "Xamarin.Firebase.ML.Vision", "17.0.0"),
 	new AarInfo ("firebase-ml-vision-image-label-model", "firebase-ml-vision-image-label-model", "firebase/firebase-ml-vision-image-label-model", "Xamarin.Firebase.ML.Vision.Image.Label.Model", "15.0.0"),
-	new AarInfo ("protolite-well-known-types", "protolite-well-known-types", "firebase/protolite-well-known-types", "Xamarin.Firebase.ProtoliteWellKnownTypes", "15.0.0"),
+	new AarInfo ("protolite-well-known-types", "protolite-well-known-types", "firebase/protolite-well-known-types", "Xamarin.Firebase.ProtoliteWellKnownTypes", "16.0.0"),
 
 };
 

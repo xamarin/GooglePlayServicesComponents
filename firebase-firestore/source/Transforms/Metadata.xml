@@ -2,6 +2,7 @@
 	
 	<!-- Rename Namespaces -->
 	<attr path="/api/package[@name='com.google.firebase.firestore']" name="managedName">Firebase.Firestore</attr>
+    <attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
 	<attr path="/api/package[@name='io.grpc.okhttp']" name="managedName">IO.Grpc.OkHttp</attr>
 
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
