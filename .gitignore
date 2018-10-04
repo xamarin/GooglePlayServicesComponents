@@ -33,3 +33,5 @@ cake.sh.commit
 .vs/
 tools/
 .vscode/
+generated
+binderator

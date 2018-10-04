@@ -31,7 +31,7 @@ var TF_MONIKER = "monoandroid90";
 var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/ea/ea65204c51cf20873c17c32584f3b12ed390ac55/android-support.zip";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/27.1.1-rc/api-info.xml";
+var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/27.1.1-rc/api-info.xml";
 
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
@@ -99,21 +99,21 @@ Task("libs")
 	.IsDependentOn("nuget-restore")
 	.Does(() =>
 {
-	NuGetRestore("./generated/AndroidSupport.sln", new NuGetRestoreSettings { });
+	NuGetRestore("./generated/GooglePlayServices.sln", new NuGetRestoreSettings { });
 
-	MSBuild("./generated/AndroidSupport.sln", c => c.Configuration = "Release");
+	MSBuild("./generated/GooglePlayServices.sln", c => c.Configuration = "Release");
 });
 
 Task("nuget-restore")
 	.Does(() =>
 {
-	NuGetRestore("./generated/AndroidSupport.sln", new NuGetRestoreSettings { });
+	NuGetRestore("./generated/GooglePlayServices.sln", new NuGetRestoreSettings { });
 });
 Task("nuget")
 	.IsDependentOn("libs")
 	.Does(() =>
 {
-	MSBuild ("./generated/AndroidSupport.sln", c => {
+	MSBuild ("./generated/GooglePlayServices.sln", c => {
         c.Configuration = "Release";
         c.Targets.Clear();
         c.Targets.Add("Pack");
@@ -132,24 +132,24 @@ Task ("diff")
 		"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mono/2.1/"
 	};
 
-	MonoApiInfo ("./output/AndroidSupport.Merged.dll",
-		"./output/AndroidSupport.api-info.xml",
+	MonoApiInfo ("./output/GooglePlayServices.Merged.dll",
+		"./output/GooglePlayServices.api-info.xml",
 		new MonoApiInfoToolSettings { SearchPaths = SEARCH_DIRS });
 
 	// Grab the last public release's api-info.xml to use as a base to compare and make an API diff
-	DownloadFile (BASE_API_INFO_URL, "./output/AndroidSupport.api-info.previous.xml");
+	DownloadFile (BASE_API_INFO_URL, "./output/GooglePlayServices.api-info.previous.xml");
 
 	// Now diff against current release'd api info
 	// eg: mono mono-api-diff.exe ./gps.r26.xml ./gps.r27.xml > gps.diff.xml
-	MonoApiDiff ("./output/AndroidSupport.api-info.previous.xml",
-		"./output/AndroidSupport.api-info.xml",
-		"./output/AndroidSupport.api-diff.xml");
+	MonoApiDiff ("./output/GooglePlayServices.api-info.previous.xml",
+		"./output/GooglePlayServices.api-info.xml",
+		"./output/GooglePlayServices.api-diff.xml");
 
 	// Now let's make a purty html file
 	// eg: mono mono-api-html.exe -c -x ./gps.previous.info.xml ./gps.current.info.xml > gps.diff.html
-	MonoApiHtml ("./output/AndroidSupport.api-info.previous.xml",
-		"./output/AndroidSupport.api-info.xml",
-		"./output/AndroidSupport.api-diff.html");
+	MonoApiHtml ("./output/GooglePlayServices.api-info.previous.xml",
+		"./output/GooglePlayServices.api-info.xml",
+		"./output/GooglePlayServices.api-diff.html");
 });
 
 Task ("merge")
@@ -158,8 +158,8 @@ Task ("merge")
 {
 	EnsureDirectoryExists("./output/");
 
-	if (FileExists ("./output/AndroidSupport.Merged.dll"))
-		DeleteFile ("./output/AndroidSupport.Merged.dll");
+	if (FileExists ("./output/GooglePlayServices.Merged.dll"))
+		DeleteFile ("./output/GooglePlayServices.Merged.dll");
 
 	var allDlls = GetFiles ("./generated/**/bin/Release/" + TF_MONIKER + "/*.dll");
 
@@ -172,7 +172,7 @@ Task ("merge")
 	Information("Merging: \n {0}", string.Join("\n", mergeDlls));
 
 	// Wait for ILRepack support in cake-0.5.2
-	ILRepack ("./output/AndroidSupport.Merged.dll", mergeDlls.First(), mergeDlls.Skip(1), new ILRepackSettings {
+	ILRepack ("./output/GooglePlayServices.Merged.dll", mergeDlls.First(), mergeDlls.Skip(1), new ILRepackSettings {
 		CopyAttrs = true,
 		AllowMultiple = true,
 		//TargetKind = ILRepack.TargetKind.Dll,
@@ -241,7 +241,7 @@ Task ("ci-setup")
 // 		});
 // 	}
 
-// 	MSBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
+// 	MSBuild ("./GooglePlayServices.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
 
 // 	CopyFile ("./support-v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
 // });

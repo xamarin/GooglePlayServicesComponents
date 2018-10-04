@@ -1,6 +1,7 @@
 [{
 	"mavenRepositoryType" : "Google",
 	"slnFile" : "generated/GooglePlayServices.sln",
+	"debug": { "DumpModels" : true },
 	"additionalProjects": [
 	],
 	"templates" : [
@@ -416,7 +417,7 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-functions",
-			"version" : "16.1.0",
+			"version" : "15.0.0",
 			"nugetId" : "Xamarin.Firebase.Functions"
 		},		
 		{
@@ -452,25 +453,25 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-messaging",
-			"version" : "17.3.1",
+			"version" : "15.0.2",
 			"nugetId" : "Xamarin.Firebase.Messaging"
 		},		
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-common",
-			"version" : "16.1.2",
+			"version" : "15.0.0",
 			"nugetId" : "Xamarin.Firebase.ML.Common"
 		},		
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-model-interpreter",
-			"version" : "16.2.0",
+			"version" : "15.0.0",
 			"nugetId" : "Xamarin.Firebase.ML.Model.Interpreter"
 		},		
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-vision",
-			"version" : "17.0.0",
+			"version" : "15.0.0",
 			"nugetId" : "Xamarin.Firebase.ML.Vision"
 		},		
 		{
@@ -482,25 +483,25 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-perf",
-			"version" : "16.1.0",
+			"version" : "15.2.0",
 			"nugetId" : "Xamarin.Firebase.Perf"
 		},		
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-storage",
-			"version" : "16.0.2",
+			"version" : "15.0.2",
 			"nugetId" : "Xamarin.Firebase.Storage"
 		},		
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-storage-common",
-			"version" : "16.0.1",
+			"version" : "15.0.2",
 			"nugetId" : "Xamarin.Firebase.Storage.Common"
 		},		
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "protolite-well-known-types",
-			"version" : "16.0.0",
+			"version" : "15.0.0",
 			"nugetId" : "Xamarin.Firebase.ProtoliteWellKnownTypes"
 		},
 
@@ -575,7 +576,20 @@
 			"version" : "2.7.2",
 			"nugetId" : "Square.OkHttp",
 			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "org.tensorflow",
+			"artifactId" : "tensorflow-lite",
+			"version" : "0.1.7",
+			"nugetId" : "Xamarin.TensorFlow.Lite",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.protobuf",
+			"artifactId" : "protobuf-lite",
+			"version" : "3.0.1",
+			"nugetId" : "Xamarin.Protobuf.Lite",
+			"dependencyOnly" : true
 		}
-
 	]
 }]
