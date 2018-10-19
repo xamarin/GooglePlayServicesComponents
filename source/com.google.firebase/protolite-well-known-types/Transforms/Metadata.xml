@@ -1,4 +1,9 @@
 ﻿<metadata>
 	<!-- Fix Namespaces -->
 	<attr path="/api/package[@name='com.google.protobuf']" name="managedName">Google.Protobuf</attr>
+
+
+    <remove-node
+        path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.UninterpretedOption.NamePart']/implements[@name='com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePartOrBuilder']"
+        />
 </metadata>

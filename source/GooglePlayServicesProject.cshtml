@@ -172,6 +172,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    @{
+        switch(@Model.NuGetPackageId)
+        {
+          case "Xamarin.GooglePlayServices.SafetyNet":
+            <PackageReference Include="System.Json" Version="4.5.0" />
+            break;
+          default:
+            break;
+        }      
+    }
+  </ItemGroup>
+  <ItemGroup>
     <!-- PackageReference -->
     @foreach (var dep in @Model.NuGetDependencies) {
       if (!dep.IsProjectReference) {

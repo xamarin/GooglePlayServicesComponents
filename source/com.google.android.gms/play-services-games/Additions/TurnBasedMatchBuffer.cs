@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Android.Gms.Common.Apis;
 using Android.Runtime;
+using Java.Interop;
 
 namespace Android.Gms.Games.MultiPlayer.TurnBased 
 {

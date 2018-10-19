@@ -3,7 +3,7 @@
 	<!-- Rename Namespaces -->
 	<attr path="/api/package[@name='com.google.firebase.firestore']" name="managedName">Firebase.Firestore</attr>
 	<attr path="/api/package[@name='io.grpc.okhttp']" name="managedName">IO.Grpc.OkHttp</attr>
-
+    
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
 	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
 	<remove-node path="/api/package/interface[contains(@name, 'zz') and @name != 'zzanb']" />
@@ -25,4 +25,13 @@
 	<!-- These methods were using the explicit types instead of the expected Java.Lang.Object types for the interface -->
 	<attr path="/api/package[@name='com.google.firebase.firestore']/class[@name='GeoPoint']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='com.google.firebase.firestore.GeoPoint']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
 	<attr path="/api/package[@name='com.google.firebase.firestore']/class[@name='Blob']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='com.google.firebase.firestore.Blob']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+
+
+    <attr
+        path="/api/package[@name='com.google.firebase']"
+        name="managedName"
+        >
+        Firebase
+    </attr>
+    
 </metadata>

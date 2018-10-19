@@ -271,16 +271,6 @@
             <parameter type="int" name="index" ></parameter>
         </method>        
     </add-node>    
-    <add-node
-        path="/api/package[@name='com.google.android.gms.games.stats']/class[@name='PlayerStatsBuffer']"
-        >
-        <method 
-            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="get" 
-            deprecated="not deprecated" final="false" native="false" synchronized="false"
-            >
-            <parameter type="int" name="index" ></parameter>
-        </method>        
-    </add-node>    
 
     <attr
         path="/api/package[@name='com.google.android.gms.games']/class[@name='GameBuffer']/method[@name='get']"
@@ -318,69 +308,6 @@
         >        
     </remove-node>
 
-    <add-node
-        path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementRef']"
-        >
-        <method 
-            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
-            deprecated="not deprecated" final="false" native="false" synchronized="false"
-            >
-        </method>        
-    </add-node>
-    <add-node
-        path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerRef']"
-        >
-        <method 
-            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
-            deprecated="not deprecated" final="false" native="false" synchronized="false"
-            >
-        </method>        
-    </add-node>
-    <add-node
-        path="/api/package[@name='com.google.android.gms.games.event']/class[@name='EventRef']"
-        >
-        <method 
-            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
-            deprecated="not deprecated" final="false" native="false" synchronized="false"
-            >
-        </method>        
-    </add-node>
-    <add-node
-        path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotMetadataRef']"
-        >
-        <method 
-            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
-            deprecated="not deprecated" final="false" native="false" synchronized="false"
-            >
-        </method>        
-    </add-node>
-    <add-node
-        path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardScoreEntity']"
-        >
-        <method 
-            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
-            deprecated="not deprecated" final="false" native="false" synchronized="false"
-            >
-        </method>        
-    </add-node>
-    <add-node
-        path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardScoreRef']"
-        >
-        <method 
-            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
-            deprecated="not deprecated" final="false" native="false" synchronized="false"
-            >
-        </method>        
-    </add-node>
-    <add-node
-        path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='ParticipantRef']"
-        >
-        <method 
-            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
-            deprecated="not deprecated" final="false" native="false" synchronized="false"
-            >
-        </method>        
-    </add-node>
     
     <add-node
         path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='InvitationBuffer']"
@@ -437,26 +364,7 @@
             <parameter type="int" name="p1"></parameter>
         </method>        
     </add-node>    
-
-     <add-node
-        path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardEntity']"
-        >
-        <method 
-            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
-            deprecated="not deprecated" final="false" native="false" synchronized="false"
-            >
-        </method>        
-    </add-node>    
-     <add-node
-        path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardRef']"
-        >
-        <method 
-            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
-            deprecated="not deprecated" final="false" native="false" synchronized="false"
-            >
-        </method>        
-    </add-node>    
-
+    
     <attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zzd']" name="obfuscated">false</attr>
     
 </metadata>

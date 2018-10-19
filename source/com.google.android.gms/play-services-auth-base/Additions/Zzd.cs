@@ -6,18 +6,17 @@ using Java.Lang;
 
 namespace Android.Gms.Auth
 {
-
     // mc++ ckeck with Jon
-    public sealed partial class Zzd : global::Android.OS.IParcelableCreator
+    public partial class Zzd : global::Android.OS.IParcelableCreator
     {
         public Java.Lang.Object CreateFromParcel(Parcel source)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Zzd.CreateFromParcel");
         }
 
         public Java.Lang.Object[] NewArray(int size)
         {
-            throw new NotImplementedException();
+            return new Java.Lang.Object[size];
         }
     }
 }
