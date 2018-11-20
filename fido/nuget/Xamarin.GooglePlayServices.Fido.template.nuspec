@@ -24,7 +24,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.GooglePlayServices.Fitness.dll" target="lib/MonoAndroid80" />
-    <file src="fitness/nuget/Xamarin.GooglePlayServices.Fitness.targets" target="build/MonoAndroid80" />
+    <file src="output/Xamarin.GooglePlayServices.Fido.dll" target="lib/MonoAndroid80" />
+    <file src="fitness/nuget/Xamarin.GooglePlayServices.Fido.targets" target="build/MonoAndroid80" />
   </files>
 </package>
