@@ -97,7 +97,7 @@
   For the given api level (ZZ) unless the property is explicitly set to override this behaviour
   -->
   <Target Name="AddOrgApacheHttpLegacyJarInProguardExternalJavaLibs"
-      DependsOnTargets="_ResolveMonoAndroidSdks;_ValidateAndroidPackageProperties"
+      AfterTargets="_ResolveMonoAndroidSdks;_ValidateAndroidPackageProperties"
       BeforeTargets="Proguard"
       Condition="$(IncludeOrgApacheHttpLegacyJarInProguard) == 'True' and Exists ('$(AndroidSdkDirectory)/platforms/android-$(_AndroidTargetSdkVersion)/optional/org.apache.http.legacy.jar')">
     <ItemGroup>
