@@ -8,10 +8,9 @@
 	<attr path="/api/package[@name='com.google.firebase.perf.provider']" name="managedName">Firebase.Perf.Provider</attr>
     <attr path="/api/package[@name='com.google.firebase.perf.component']" name="managedName">Firebase.Perf.Component</attr>
     <attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.firebase.perf']" name="managedName">Firebase.Perf.Provider</attr>
+
+    
     <remove-node path="/api/package[@name='com.google.android.gms.internal.firebase-perf']" ></remove-node>>
-
-
-
 
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
 	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
@@ -24,5 +23,8 @@
 	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
-
+    
+    <attr path="/api/package/*[@extends='com.google.android.gms.internal.zzekz']" name="extends">java.lang.Object</attr>
+    <attr path="/api/package/*[@extends='com.google.android.gms.internal.firebase-perf.zze']" name="extends">java.lang.Object</attr>
+    
 </metadata>
