@@ -436,7 +436,7 @@
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-invites",
 			"version" : "15.0.1",
-			"nugetId" : "marin.Firebase.Invites"
+			"nugetId" : "Xamarin.Firebase.Invites"
 		},		
 		{
 			"groupId" : "com.google.firebase",
