@@ -105,6 +105,19 @@ Task("libs")
 	MSBuild("./generated/GooglePlayServices.sln", c => c.Configuration = "Release");
 });
 
+
+Task("samples")
+	.IsDependentOn("libs")
+	.Does(() =>
+{
+	var sampleSlns = GetFiles("./samples/**/*.sln");
+
+	foreach (var sampleSln in sampleSlns) {
+		NuGetRestore(sampleSln, new NuGetRestoreSettings { });
+		MSBuild(sampleSln, c => c.Configuration = "Release");
+	}
+});
+
 Task("nuget-restore")
 	.Does(() =>
 {
@@ -310,12 +323,15 @@ Task ("clean")
 		DeleteDirectory ("./util/binderator", true);
 
 	CleanDirectories ("./**/packages");
+	CleanDirectories("./**/bin");
+	CleanDirectories("./**/obj");
 });
 
 Task ("ci")
 	.IsDependentOn ("ci-setup")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("diff")
+	.IsDependentOn ("samples")
 	.IsDependentOn ("nuget-validation");
 
 RunTarget (TARGET);
