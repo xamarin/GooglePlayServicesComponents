@@ -35,32 +35,47 @@ Xamarin creates and maintains Xamarin.Android bindings for the Google Play Servi
 The build script for this project uses [Cake](http://cakebuild.net).  To run the build, you can use one of the bootstrapper files either for Mac or Windows (experimental support only):
 
 **Mac**:
-```
-sh build.sh --target=libs
-```
-
-**Windows (experimental support only):**
-
-***NOTE:*** Windows build support is still experimental. You need to first build the externals target, then open the `GooglePlayServices.sln` in Visual Studio, rebuild it, build the clean target, and then continue on normally building whichever targets you like. This will ensure the appropriate files are downloaded and cached in your user's AppData folder.
 
 ```
-powershell .\build.ps1 -Target externals
-powershell .\build.ps1 -Target libs
+sh ./build.sh --target=binderate && sh ./build.sh --target=libs && sh ./build.sh --target=nuget
 ```
+
+Optionally run:
+
+```
+sh ./build.sh --target=clean
+```
+
+before the build.
+
+**Windows:**
+
+```
+./build.ps1 --target=binderate && ./build.ps1 --target=libs && ./build.ps1 --target=nuget
+```
+
+Optionally run:
+
+```
+./build.ps1 --target=clean
+```
+
+before the build.
+
+
 
 The bootstrapper script will automatically download Cake.exe and all the required tools and files into the `./tools/` folder.
 
 The following targets can be specified:
 
  - `ci` builds the kitchen sink - what we run in CI
- - `libs` builds the class library bindings (depends on `externals`)
- - `externals` downloads the external dependencies
+ - `libs` builds the class library bindings (depends on `binderate`)
+ - `binderate` downloads the external dependencies and generates folder structure
  - `samples` builds all of the samples (depends on `libs`)
  - `nuget` builds the nuget packages (depends on `libs`)
- - `component` builds the xamarin components (depends on `samples` and `nuget`)
  - `clean` cleans up everything
 
-***NOTE***: The `externals` build task may take awhile to run as it downloads several large dependencies.
+***NOTE***: The `binderate` build task may take awhile to run as it downloads several large dependencies.
 
 You may want to consider passing `--verbosity diagnostic` (or `-Verbosity diagnostic` on Windows) to the bootstrapper to enable more verbose output, including downloading progress.
 
