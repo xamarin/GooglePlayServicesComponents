@@ -94,6 +94,44 @@ Task("binderate")
 
 	StartProcess("dotnet", "./util/binderator/android-binderator.dll --config=\""
 		+ MakeAbsolute(configFile).FullPath + "\" --basepath=\"" + MakeAbsolute(basePath).FullPath + "\"");
+
+	
+});
+
+Task("mergetargets")
+	.Does(() =>
+{
+	/*****************************
+	* BEGIN: Merge all the .targets together into one for the sake of compiling samples
+	******************************/
+	var generatedTargets = GetFiles("./generated/*/Xamarin.*.targets");
+
+	// Load the doc to append to, and the doc to append
+	var xFileRoot = System.Xml.Linq.XDocument.Parse("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<Project ToolsVersion=\"4.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">\n</Project>");
+	System.Xml.Linq.XNamespace nsRoot = xFileRoot.Root.Name.Namespace;
+
+	foreach (var generatedTarget in generatedTargets) {
+		var xFileChild = System.Xml.Linq.XDocument.Load (MakeAbsolute (generatedTarget).FullPath);
+		System.Xml.Linq.XNamespace nsChild = xFileRoot.Root.Name.Namespace;
+
+		// Add all the elements under <Project> into the existing file's <Project> node
+		foreach (var xItemToAdd in xFileChild.Element (nsChild + "Project").Elements ())
+			xFileRoot.Element (nsRoot + "Project").Add (xItemToAdd);
+	}
+
+	// Inject a property to prevent errors from missing assemblies in .targets
+	// this allows us to use one big .targets file in all the projects and not have to figure out which specific
+	// ones each project needs to reference for development purposes
+	if (!xFileRoot.Descendants (nsRoot + "XamarinBuildResourceMergeThrowOnMissingAssembly").Any ()) {
+		xFileRoot.Element (nsRoot + "Project")
+			.AddFirst (new System.Xml.Linq.XElement (nsRoot + "PropertyGroup",
+				new System.Xml.Linq.XElement (nsRoot + "XamarinBuildResourceMergeThrowOnMissingAssembly", false)));
+	}
+
+	xFileRoot.Save ("./generated/generated.targets");
+	/*****************************
+	* END: Merge all the .targets together into one for the sake of compiling samples
+	******************************/
 });
 
 Task("libs")
@@ -108,6 +146,7 @@ Task("libs")
 
 Task("samples")
 	.IsDependentOn("libs")
+	.IsDependentOn("mergetargets")
 	.Does(() =>
 {
 	var sampleSlns = GetFiles("./samples/**/*.sln");
