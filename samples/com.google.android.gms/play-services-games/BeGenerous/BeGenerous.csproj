@@ -121,5 +121,5 @@
   <ItemGroup>
     <Folder Include="Resources\values\" />
   </ItemGroup>
-  <Import Project="..\..\..\generated.targets" />
+  <Import Project="..\..\..\..\generated.targets" />
 </Project>

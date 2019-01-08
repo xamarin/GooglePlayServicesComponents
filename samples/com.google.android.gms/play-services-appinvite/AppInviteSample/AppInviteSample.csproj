@@ -89,5 +89,5 @@
       <Name>Tasks</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="..\..\..\generated.targets" />
+  <Import Project="..\..\..\..\generated\generated.targets" />
 </Project>

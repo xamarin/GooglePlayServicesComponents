@@ -94,5 +94,5 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <Import Project="..\..\..\generated.targets" />
+  <Import Project="..\..\..\..\generated\generated.targets" />
 </Project>

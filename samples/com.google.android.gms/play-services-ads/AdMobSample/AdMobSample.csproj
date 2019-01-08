@@ -116,5 +116,5 @@
     <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.1.0.1" />
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
   </ItemGroup>
-  <Import Project="..\..\..\generated.targets" />
+  <Import Project="..\..\..\..\generated\generated.targets" />
 </Project>

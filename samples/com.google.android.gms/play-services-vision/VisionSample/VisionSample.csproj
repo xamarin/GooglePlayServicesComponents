@@ -97,5 +97,5 @@
       <Name>Vision-Common</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="..\..\..\generated.targets" />
+  <Import Project="..\..\..\..\generated.targets" />
 </Project>

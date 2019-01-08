@@ -93,5 +93,5 @@
       <Name>Places</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="..\..\..\generated.targets" />
+  <Import Project="..\..\..\..\generated.targets" />
 </Project>
