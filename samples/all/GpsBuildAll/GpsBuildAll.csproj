@@ -17,7 +17,7 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>GpsBuildAll</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
   </PropertyGroup>
@@ -50,7 +50,8 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.4.12-preview3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -58,9 +59,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -76,222 +75,89 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\cast\source\Cast.csproj">
-      <Project>{C1A9C587-B744-44D2-AD42-14386D424667}</Project>
-      <Name>Cast</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\drive\source\Drive.csproj">
-      <Project>{8BAFA1ED-B5D9-49ED-A553-E557D2A0357F}</Project>
-      <Name>Drive</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\fitness\source\Fitness.csproj">
-      <Project>{8900C5EF-1182-4E8B-88FE-596EC2DB379D}</Project>
-      <Name>Fitness</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\games\source\Games.csproj">
-      <Project>{5DF42846-151E-40CD-A349-C0A0C6216F7B}</Project>
-      <Name>Games</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\gcm\source\Gcm.csproj">
-      <Project>{1CE82D7E-9EA1-435F-AF8C-5E07AB917617}</Project>
-      <Name>Gcm</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\identity\source\Identity.csproj">
-      <Project>{09362350-BB7F-4B4C-83B5-97F5C439B649}</Project>
-      <Name>Identity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\location\source\Location.csproj">
-      <Project>{F666DC89-9CE4-491C-8450-6FBC70298FA3}</Project>
-      <Name>Location</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\maps\source\Maps.csproj">
-      <Project>{7CB92D61-E2FF-472A-9FDF-7E42D15B3EE6}</Project>
-      <Name>Maps</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\nearby\source\Nearby.csproj">
-      <Project>{A7ADD277-FCAB-46D5-8F18-2E4BFFDA3AE7}</Project>
-      <Name>Nearby</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\panorama\source\Panorama.csproj">
-      <Project>{9E3CD219-C950-4AA9-88E5-818F42C12566}</Project>
-      <Name>Panorama</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\plus\source\Plus.csproj">
-      <Project>{A2B43C02-A237-4222-999E-3354CBB6DB8D}</Project>
-      <Name>Plus</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\safetynet\source\SafetyNet.csproj">
-      <Project>{7A015585-036A-4BD1-8D46-A669EFA89743}</Project>
-      <Name>SafetyNet</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\vision\source\Vision.csproj">
-      <Project>{72CC5E29-5EA5-40E3-98E4-87ED8AB75589}</Project>
-      <Name>Vision</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\wallet\source\Wallet.csproj">
-      <Project>{7AF74235-AEE2-4F3A-AEDB-7504ED93DDC0}</Project>
-      <Name>Wallet</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\basement\source\Basement.csproj">
-      <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
-      <Name>Basement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\base\source\Base.csproj">
-      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
-      <Name>Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\auth\source\Auth.csproj">
-      <Project>{A0CDF507-32B7-4994-8248-94FAB8646E35}</Project>
-      <Name>Auth</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\appinvite\source\AppInvite.csproj">
-      <Project>{A069B942-EE12-4283-9C4C-F46549D3978A}</Project>
-      <Name>AppInvite</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\analytics\source\Analytics.csproj">
-      <Project>{EA04524D-2A97-4ED0-AD74-21F8C30DF4A5}</Project>
-      <Name>Analytics</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\ads\source\Ads.csproj">
-      <Project>{CC4E534D-4992-4FBB-9528-A071EDDEA7E7}</Project>
-      <Name>Ads</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\analytics-impl\source\Analytics.Impl.csproj">
-      <Project>{7893F52D-09B9-4441-AC47-6F7875BD68BC}</Project>
-      <Name>Analytics.Impl</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\ads-lite\source\Ads.Lite.csproj">
-      <Project>{ECB1F68B-B588-4F3B-9A86-510CF4AAA784}</Project>
-      <Name>Ads.Lite</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\iid\source\Iid.csproj">
-      <Project>{9F7F996D-AF44-4947-8392-07B3ED2ED00D}</Project>
-      <Name>Iid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\tagmanager\source\TagManager.csproj">
-      <Project>{2EA64B09-174C-40D0-9A40-44C2BF10C9D4}</Project>
-      <Name>TagManager</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\tagmanager-api\source\TagManager.Api.csproj">
-      <Project>{B94069F7-2BD5-4695-B7B7-EBAA1C496DD9}</Project>
-      <Name>TagManager.Api</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\tasks\source\Tasks.csproj">
-      <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
-      <Name>Tasks</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-analytics\source\Firebase-Analytics.csproj">
-      <Project>{DC5BEB52-1715-4E53-88EF-2D4F1708E394}</Project>
-      <Name>Firebase-Analytics</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-analytics-impl\source\Firebase-Analytics-Impl.csproj">
-      <Project>{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}</Project>
-      <Name>Firebase-Analytics-Impl</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-common\source\Firebase-Common.csproj">
-      <Project>{865652D3-8D1A-4779-92FC-4C54719286B7}</Project>
-      <Name>Firebase-Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-iid\source\Firebase-Iid.csproj">
-      <Project>{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}</Project>
-      <Name>Firebase-Iid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\auth-base\source\Auth.Base.csproj">
-      <Project>{B04C50F7-B0CC-4170-8820-9D584E1C0ED3}</Project>
-      <Name>Auth.Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-auth\source\Firebase-Auth.csproj">
-      <Project>{62946D89-B6B1-4A38-A04D-C20912087EFD}</Project>
-      <Name>Firebase-Auth</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-config\source\Firebase-Config.csproj">
-      <Project>{00F7A18F-D2C4-4014-8E4C-552A0A0B0967}</Project>
-      <Name>Firebase-Config</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-crash\source\Firebase-Crash.csproj">
-      <Project>{7076C84E-08AE-404B-8F3C-8F66010FA1B1}</Project>
-      <Name>Firebase-Crash</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-database\source\Firebase-Database.csproj">
-      <Project>{B02737A0-890C-4921-83A5-D77CFB8A6899}</Project>
-      <Name>Firebase-Database</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-database-connection\source\Firebase-Database-Connection.csproj">
-      <Project>{2858C3DB-1E15-4D12-AF09-02CFD624ADD4}</Project>
-      <Name>Firebase-Database-Connection</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-messaging\source\Firebase-Messaging.csproj">
-      <Project>{2E333450-68BD-48C5-9540-CFA7A053DCA1}</Project>
-      <Name>Firebase-Messaging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-storage\source\Firebase-Storage.csproj">
-      <Project>{423414D9-6CB8-4AFF-8317-66AD03B6056D}</Project>
-      <Name>Firebase-Storage</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-storage-common\source\Firebase-Storage-Common.csproj">
-      <Project>{C360116C-0ED5-4E59-A974-E95F874B4398}</Project>
-      <Name>Firebase-Storage-Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\support-wearable\source\SupportWearable.csproj">
-      <Project>{7DD8E926-9F75-4F25-95A3-920A5FF48EF8}</Project>
-      <Name>SupportWearable</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\wearable\source\Wearable.csproj">
-      <Project>{92BDA198-6A78-4408-844C-CAAF4C04EAFD}</Project>
-      <Name>Wearable</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\cast-framework\source\Cast.Framework.csproj">
-      <Project>{159A8C21-0A5B-4D99-9E07-6466F8E98AF7}</Project>
-      <Name>Cast.Framework</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\clearcut\source\Clearcut.csproj">
-      <Project>{44CF1968-FCDA-4141-AE78-1EFD12DDF7D6}</Project>
-      <Name>Clearcut</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\contextmanager\source\ContextManager.csproj">
-      <Project>{541FC839-6065-4681-B6A4-C3BF358F78E9}</Project>
-      <Name>Awareness</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\gass\source\Gass.csproj">
-      <Project>{D705BF83-81FD-4CD9-AF3B-09C50FF42C83}</Project>
-      <Name>Gass</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\places\source\Places.csproj">
-      <Project>{D42D621B-0370-44F6-A58E-0749629F9F4D}</Project>
-      <Name>Places</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\auth-api-phone\source\Auth-Api-Phone.csproj">
-      <Project>{B797EA6B-9566-4980-9665-F808C953B24D}</Project>
-      <Name>Auth-Api-Phone</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-appindexing\source\Firebase-AppIndexing.csproj">
-      <Project>{8D01CC30-64F5-4AD3-B9C8-0970B0F1D562}</Project>
-      <Name>Firebase-AppIndexing</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-dynamic-links\source\Firebase-Dynamic-Links.csproj">
-      <Project>{9FB742FE-1645-4A5B-B41B-2F0BBBE7F2BE}</Project>
-      <Name>Firebase-Dynamic-Links</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\firebase-perf\source\Firebase-Perf.csproj">
-      <Project>{2233FF89-3CDD-4FA5-844E-A43EDAE8463F}</Project>
-      <Name>Firebase-Perf</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\instantapps\source\InstantApps.csproj">
-      <Project>{D7F811D2-C5E2-45BB-B7AB-88F7941A24B7}</Project>
-      <Name>InstantApps</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\oss-licenses\source\Oss-Licenses.csproj">
-      <Project>{DCCFBAD3-A366-4C61-B56F-DBD46D68980F}</Project>
-      <Name>Oss-Licenses</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\tagmanager-v4-impl\source\TagManager.V4.Impl.csproj">
-      <Project>{ED50788D-0553-48A2-A47A-6AD1C9DF41BE}</Project>
-      <Name>TagManager.V4.Impl</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\vision-common\source\Vision-Common.csproj">
-      <Project>{148E13D5-9D81-4937-801D-A8DF043B2A4F}</Project>
-      <Name>Vision-Common</Name>
-    </ProjectReference>
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-ads\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Ads.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-ads-base\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Ads.Base.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-ads-identifier\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Ads.Identifier.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-ads-lite\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Ads.Lite.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-analytics\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Analytics.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-analytics-impl\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Analytics.Impl.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-appindexing\bin\Release\monoandroid90\Xamarin.GooglePlayServices.AppIndexing.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-appinvite\bin\Release\monoandroid90\Xamarin.GooglePlayServices.AppInvite.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-audience\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Audience.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-auth\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Auth.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-auth-api-phone\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Auth.Api.Phone.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-auth-base\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Auth.Base.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-awareness\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Awareness.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-base\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Base.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-basement\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Basement.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-cast\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Cast.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-cast-framework\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Cast.Framework.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-clearcut\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Clearcut.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-drive\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Drive.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-fido\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Fido.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-fitness\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Fitness.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-flags\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Flags.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-games\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Games.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-gass\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Gass.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-gcm\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Gcm.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-identity\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Identity.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-iid\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Iid.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-instantapps\bin\Release\monoandroid90\Xamarin.GooglePlayServices.InstantApps.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-location\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Location.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-maps\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Maps.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-measurement-base\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Measurement.Base.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-nearby\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Nearby.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-oss-licenses\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Oss.Licenses.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-panorama\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Panorama.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-phenotype\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Phenotype.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-places\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Places.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-places-placereport\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Places.PlaceReport.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-plus\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Plus.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-safetynet\bin\Release\monoandroid90\Xamarin.GooglePlayServices.SafetyNet.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-stats\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Stats.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-tagmanager\bin\Release\monoandroid90\Xamarin.GooglePlayServices.TagManager.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-tagmanager-api\bin\Release\monoandroid90\Xamarin.GooglePlayServices.TagManager.Api.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-tagmanager-v4-impl\bin\Release\monoandroid90\Xamarin.GooglePlayServices.TagManager.V4.Impl.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-tasks\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Tasks.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-vision\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Vision.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-vision-common\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Vision.Common.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-vision-image-label\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Vision.Image.Label.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-wallet\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Wallet.dll" />
+    <Reference Include="..\..\..\generated\com.google.android.gms.play-services-wearable\bin\Release\monoandroid90\Xamarin.GooglePlayServices.Wearable.dll" />
+    
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-abt\bin\Release\monoandroid90\Xamarin.Firebase.Abt.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-ads\bin\Release\monoandroid90\Xamarin.Firebase.Ads.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-ads-lite\bin\Release\monoandroid90\Xamarin.Firebase.Ads.Lite.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-analytics\bin\Release\monoandroid90\Xamarin.Firebase.Analytics.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-analytics-impl\bin\Release\monoandroid90\Xamarin.Firebase.Analytics.Impl.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-appindexing\bin\Release\monoandroid90\Xamarin.Firebase.AppIndexing.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-auth\bin\Release\monoandroid90\Xamarin.Firebase.Auth.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-auth-interop\bin\Release\monoandroid90\Xamarin.Firebase.Auth.Interop.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-common\bin\Release\monoandroid90\Xamarin.Firebase.Common.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-config\bin\Release\monoandroid90\Xamarin.Firebase.Config.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-core\bin\Release\monoandroid90\Xamarin.Firebase.Core.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-crash\bin\Release\monoandroid90\Xamarin.Firebase.Crash.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-database\bin\Release\monoandroid90\Xamarin.Firebase.Database.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-database-collection\bin\Release\monoandroid90\Xamarin.Firebase.Database.Collection.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-database-connection\bin\Release\monoandroid90\Xamarin.Firebase.Database.Connection.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-dynamic-links\bin\Release\monoandroid90\Xamarin.Firebase.Dynamic.Links.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-firestore\bin\Release\monoandroid90\Xamarin.Firebase.Firestore.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-functions\bin\Release\monoandroid90\Xamarin.Firebase.Functions.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-iid\bin\Release\monoandroid90\Xamarin.Firebase.Iid.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-iid-interop\bin\Release\monoandroid90\Xamarin.Firebase.Iid.Interop.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-invites\bin\Release\monoandroid90\Xamarin.Firebase.Invites.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-measurement-connector\bin\Release\monoandroid90\Xamarin.Firebase.Measurement.Connector.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-measurement-connector-impl\bin\Release\monoandroid90\Xamarin.Firebase.Measurement.Connector.Impl.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-messaging\bin\Release\monoandroid90\Xamarin.Firebase.Messaging.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-ml-common\bin\Release\monoandroid90\Xamarin.Firebase.ML.Common.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-ml-model-interpreter\bin\Release\monoandroid90\Xamarin.Firebase.ML.Model.Interpreter.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-ml-vision\bin\Release\monoandroid90\Xamarin.Firebase.ML.Vision.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-ml-vision-image-label-model\bin\Release\monoandroid90\Xamarin.Firebase.ML.Vision.Image.Label.Model.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-perf\bin\Release\monoandroid90\Xamarin.Firebase.Perf.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-storage\bin\Release\monoandroid90\Xamarin.Firebase.Storage.dll" />
+    <Reference Include="..\..\..\generated\com.google.firebase.firebase-storage-common\bin\Release\monoandroid90\Xamarin.Firebase.Storage.Common.dll" />
+
+    <Reference Include="..\..\..\generated\com.google.firebase.protolite-well-known-types\bin\Release\monoandroid90\Xamarin.Firebase.ProtoliteWellKnownTypes.dll" />
   </ItemGroup>
-  <Import Project="..\..\..\generated.targets" />
+  <Import Project="..\..\..\generated\generated.targets" />
 </Project>
