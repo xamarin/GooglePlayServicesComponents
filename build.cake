@@ -80,7 +80,9 @@ Task("javadocs")
 	}
 });
 
+
 Task("binderate")
+	.IsDependentOn("javadocs")
 	.Does(() =>
 {
 	if (!DirectoryExists("./util/binderator"))
@@ -94,9 +96,8 @@ Task("binderate")
 
 	StartProcess("dotnet", "./util/binderator/android-binderator.dll --config=\""
 		+ MakeAbsolute(configFile).FullPath + "\" --basepath=\"" + MakeAbsolute(basePath).FullPath + "\"");
-
-	
 });
+
 
 Task("mergetargets")
 	.Does(() =>
@@ -134,13 +135,17 @@ Task("mergetargets")
 	******************************/
 });
 
+
 Task("libs")
 	.IsDependentOn("nuget-restore")
 	.Does(() =>
 {
 	NuGetRestore("./generated/GooglePlayServices.sln", new NuGetRestoreSettings { });
 
-	MSBuild("./generated/GooglePlayServices.sln", c => c.Configuration = "Release");
+	MSBuild("./generated/GooglePlayServices.sln", c => {
+		c.Configuration = "Release";
+		c.Properties.Add("DesignTimeBuild", new [] { "false" });
+	});
 });
 
 
@@ -153,24 +158,33 @@ Task("samples")
 
 	foreach (var sampleSln in sampleSlns) {
 		NuGetRestore(sampleSln, new NuGetRestoreSettings { });
-		MSBuild(sampleSln, c => c.Configuration = "Release");
+		MSBuild(sampleSln, c => {
+			c.Configuration = "Release";
+			c.Properties.Add("DesignTimeBuild", new [] { "false" });
+		});
 	}
 });
+
 
 Task("nuget-restore")
 	.Does(() =>
 {
 	NuGetRestore("./generated/GooglePlayServices.sln", new NuGetRestoreSettings { });
 });
+
+
 Task("nuget")
 	.IsDependentOn("libs")
 	.Does(() =>
 {
+	var outputPath = new DirectoryPath("./output");
+
 	MSBuild ("./generated/GooglePlayServices.sln", c => {
         c.Configuration = "Release";
         c.Targets.Clear();
         c.Targets.Add("Pack");
-		c.Properties.Add("PackageOutputPath", new [] { "output" });
+		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(outputPath).FullPath });
+		c.Properties.Add("DesignTimeBuild", new [] { "false" });
     });
 });
 
@@ -211,9 +225,7 @@ Task("nuget-validation")
 		{
 			Information ("Metadata validation passed for: {0}", nupkgFile.GetFilename ());
 		}
-			
 	}
-
 });
 
 Task ("diff")
@@ -261,7 +273,7 @@ Task ("merge")
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
 		.Select(g => g.FirstOrDefault())
-		.Where (g => !g.FullPath.Contains("v4") && !g.FullPath.Contains(".Android.Support.Constraint.Layout."))
+		.Where (g => !g.FullPath.Contains("Android.Support"))
 		.ToList();
 
 	Information("Merging: \n {0}", string.Join("\n", mergeDlls));
