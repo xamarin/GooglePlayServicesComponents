@@ -29,7 +29,10 @@ var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v9.0" : "android-28";
 var RENDERSCRIPT_FOLDER = "android-8.1.0";
 var TF_MONIKER = "monoandroid90";
 
-var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/ea/ea65204c51cf20873c17c32584f3b12ed390ac55/android-support.zip";
+var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/c0/c01ad95f7611c7039a07d393badf16ce30ec354b/play-services-firebase.zip";
+
+// These are a bunch of parameter names in the txt format which binding projects can use
+var REF_PARAMNAMES_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/c0/c01ad95f7611c7039a07d393badf16ce30ec354b/play-services-firebase-paramnames.txt";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/60.1142.0/api-info.xml";
@@ -66,6 +69,9 @@ Task("javadocs")
 
 	if (!DirectoryExists("./externals/docs"))
 		Unzip ("./externals/docs.zip", "./externals/docs");
+
+	if (!FileExists("./externals/paramnames.txt"))
+		DownloadFile(REF_PARAMNAMES_URL, "./externals/paramnames.txt");
 
 	var astJar = new FilePath("./util/JavaASTParameterNames-1.0.jar");
 	var sourcesJars = GetFiles("./externals/**/*-sources.jar");
@@ -184,6 +190,7 @@ Task("nuget")
         c.Targets.Clear();
         c.Targets.Add("Pack");
 		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(outputPath).FullPath });
+		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
     });
 });
@@ -201,7 +208,7 @@ Task("nuget-validation")
 		NeedsProjectUrl = true,
 		NeedsLicenseUrl = true,
 		ValidateRequireLicenseAcceptance = true,
-		ValidPackageNamespace = new [] { "Xamarin", "Mono", "SkiaSharp", "HarfBuzzSharp", "mdoc" },
+		ValidPackageNamespace = new [] { "Xamarin" },
 	};
 
 	var nupkgFiles = GetFiles ("./output/*.nupkg");

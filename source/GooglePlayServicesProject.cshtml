@@ -78,6 +78,7 @@
 
     
   <ItemGroup>
+    <_AndroidDocumentationPath Include="..\..\externals\paramnames.txt" Condition="Exists('..\..\..\externals\paramnames.txt')" />
     @foreach (var art in @Model.MavenArtifacts) {
     <_AndroidDocumentationPath Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt" Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt')" />
     }
