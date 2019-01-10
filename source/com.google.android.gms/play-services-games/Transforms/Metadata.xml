@@ -367,4 +367,94 @@
     
     <attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zzd']" name="obfuscated">false</attr>
     
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.games.internal']/interface[@name='zzu']"
+        >
+    </remove-node>
+    
+    <attr 
+        path="/api/package/class/implements[@name='com.google.android.gms.games.internal.zzu']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <remove-node
+        path="/api/package/class/implements[@name='com.google.android.gms.games.internal.zzu']"
+        >
+    </remove-node>
+    
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='AchievementsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='EventsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='GamesClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='InvitationsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='LeaderboardsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='NotificationsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayersClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerStatsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='RealTimeMultiplayerClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='SnapshotsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='TurnBasedMultiplayerClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='VideosClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    
+    
 </metadata>
