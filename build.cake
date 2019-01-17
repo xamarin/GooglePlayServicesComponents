@@ -153,6 +153,7 @@ Task("libs")
 	MSBuild("./generated/GooglePlayServices.sln", c => {
 		c.Configuration = "Release";
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
+		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
 	});
 });
 
@@ -194,6 +195,7 @@ Task("nuget")
 		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(outputPath).FullPath });
 		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
+		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
     });
 });
 
