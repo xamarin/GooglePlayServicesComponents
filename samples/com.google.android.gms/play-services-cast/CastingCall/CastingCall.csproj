@@ -47,11 +47,6 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="26.1.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.Palette" Version="26.1.0.1" />
-    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,23 +71,8 @@
     <Folder Include="Resources\menu\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\base\source\Base.csproj">
-      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
-      <Name>Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\basement\source\Basement.csproj">
-      <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
-      <Name>Basement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\source\Cast.csproj">
-      <Project>{C1A9C587-B744-44D2-AD42-14386D424667}</Project>
-      <Name>Cast</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\tasks\source\Tasks.csproj">
-      <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
-      <Name>Tasks</Name>
-    </ProjectReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Cast" Version="71.1602.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <Import Project="..\..\..\..\generated\generated.targets" />
 </Project>
