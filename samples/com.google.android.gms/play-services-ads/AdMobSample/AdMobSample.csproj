@@ -80,7 +80,17 @@
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
-    <PackageReference Include="Xamarin.GooglePlayServices.Ads" Version="15.0.1" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Ads.Lite" Version="15.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Annotations" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Compat" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Collections" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Interpolator" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Ads" Version="71.1501.0" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Ads.Lite" Version="71.1501.0" />
   </ItemGroup>
 </Project>
