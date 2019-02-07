@@ -98,7 +98,7 @@
   -->
   <Target Name="AddOrgApacheHttpLegacyJarInProguardExternalJavaLibs"
       DependsOnTargets="_ResolveMonoAndroidSdks;_ValidateAndroidPackageProperties"
-      BeforeTargets="Proguard"
+      BeforeTargets="_CompileDex"
       Condition="$(IncludeOrgApacheHttpLegacyJarInProguard) == 'True' and Exists ('$(AndroidSdkDirectory)/platforms/android-$(_AndroidTargetSdkVersion)/optional/org.apache.http.legacy.jar')">
     <ItemGroup>
       <AndroidExternalJavaLibrary Include="$(AndroidSdkDirectory)/platforms/android-$(_AndroidTargetSdkVersion)/optional/org.apache.http.legacy.jar" />
