@@ -16,7 +16,7 @@ using Fragment = Android.Support.V4.App.Fragment;
 namespace Analytics
 {
     [Activity (MainLauncher = true, Label = "@string/app_name", Theme = "@style/Theme.AppCompat")]			
-    public class MobilePlayground : ActionBarActivity
+    public class MobilePlayground : AppCompatActivity
     {
         protected override void OnCreate (Bundle bundle)
         {
@@ -54,13 +54,13 @@ namespace Analytics
         class TabListener<TFragment> : Java.Lang.Object, Android.Support.V7.App.ActionBar.ITabListener 
             where TFragment : Fragment
         {
-            ActionBarActivity parent;
+            AppCompatActivity parent;
             string tag;
             Type fragmentType;
             Bundle args;
             Fragment fragment;
 
-            public TabListener (ActionBarActivity activity, string tag, Bundle args = null)
+            public TabListener (AppCompatActivity activity, string tag, Bundle args = null)
             {
                 this.parent = activity;
                 this.tag = tag;
