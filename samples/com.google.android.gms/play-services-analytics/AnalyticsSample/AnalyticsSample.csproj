@@ -14,7 +14,6 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
-    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>Analytics</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
@@ -94,7 +93,7 @@
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.Interpolator" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Analytics" Version="71.1501.0" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Analytics" Version="71.1502.0" />
   </ItemGroup>
   <Import Project="..\..\..\..\generated\generated.targets" />
 </Project>

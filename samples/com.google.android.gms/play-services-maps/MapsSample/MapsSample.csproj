@@ -13,9 +13,8 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <AssemblyName>MapsSample</AssemblyName>
-    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -46,8 +45,20 @@
     <Reference Include="Mono.Android.Export" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="26.1.0.1" />
-    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
+      <PackageReference Include="Xamarin.Android.Support.Annotations" Version="28.0.0.1" />
+      <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.1" />
+      <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
+      <PackageReference Include="Xamarin.Android.Support.Compat" Version="28.0.0.1" />
+      <PackageReference Include="Xamarin.Android.Support.Collections" Version="28.0.0.1" />
+      <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="28.0.0.1" />
+      <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
+      <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
+      <PackageReference Include="Xamarin.Android.Support.Interpolator" Version="28.0.0.1" />
+      <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="28.0.0.1" />
+      <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.1" />
+      <PackageReference Include="Xamarin.Android.Support.v7.Palette" Version="28.0.0.1" />
+      <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="28.0.0.1" />
+      <PackageReference Include="Xamarin.GooglePlayServices.Maps" Version="71.1501.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -140,23 +151,5 @@
     <AndroidResource Include="Resources\values\demo_strings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\base\source\Base.csproj">
-      <Project>{3F6BAE25-ADEB-468C-8384-AD655623C341}</Project>
-      <Name>Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\source\Maps.csproj">
-      <Project>{7CB92D61-E2FF-472A-9FDF-7E42D15B3EE6}</Project>
-      <Name>Maps</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\basement\source\Basement.csproj">
-      <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
-      <Name>Basement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\tasks\source\Tasks.csproj">
-      <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
-      <Name>Tasks</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="..\..\..\..\generated.targets" />
 </Project>
