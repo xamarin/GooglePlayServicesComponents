@@ -1,18 +1,6 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppInvite", "..\..\appinvite\source\AppInvite.csproj", "{A069B942-EE12-4283-9C4C-F46549D3978A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base", "..\..\base\source\Base.csproj", "{3F6BAE25-ADEB-468C-8384-AD655623C341}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basement", "..\..\basement\source\Basement.csproj", "{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "..\..\tasks\source\Tasks.csproj", "{53F87D88-8871-41A2-9F81-B79AB02FEC24}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Analytics-Impl", "..\..\firebase-analytics-impl\source\Firebase-Analytics-Impl.csproj", "{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Analytics", "..\..\firebase-analytics\source\Firebase-Analytics.csproj", "{DC5BEB52-1715-4E53-88EF-2D4F1708E394}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseInvitesQuickstart.UITests", "FirebaseInvitesQuickstart.UITests\FirebaseInvitesQuickstart.UITests.csproj", "{325FAFCD-A286-4DB2-9D1B-BB3DC3674957}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseInvitesQuickstart", "FirebaseInvitesQuickstart\FirebaseInvitesQuickstart.csproj", "{9DD2827E-7F79-49AC-A078-7CC2901A26EC}"
@@ -23,30 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A069B942-EE12-4283-9C4C-F46549D3978A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A069B942-EE12-4283-9C4C-F46549D3978A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A069B942-EE12-4283-9C4C-F46549D3978A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A069B942-EE12-4283-9C4C-F46549D3978A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3F6BAE25-ADEB-468C-8384-AD655623C341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F6BAE25-ADEB-468C-8384-AD655623C341}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F6BAE25-ADEB-468C-8384-AD655623C341}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F6BAE25-ADEB-468C-8384-AD655623C341}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CFB0A03A-F787-4EE9-9EA6-8A2A65E82704}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DC5BEB52-1715-4E53-88EF-2D4F1708E394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC5BEB52-1715-4E53-88EF-2D4F1708E394}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC5BEB52-1715-4E53-88EF-2D4F1708E394}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC5BEB52-1715-4E53-88EF-2D4F1708E394}.Release|Any CPU.Build.0 = Release|Any CPU
 		{325FAFCD-A286-4DB2-9D1B-BB3DC3674957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{325FAFCD-A286-4DB2-9D1B-BB3DC3674957}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{325FAFCD-A286-4DB2-9D1B-BB3DC3674957}.Release|Any CPU.ActiveCfg = Release|Any CPU

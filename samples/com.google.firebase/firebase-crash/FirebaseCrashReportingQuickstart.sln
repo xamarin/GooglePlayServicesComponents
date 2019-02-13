@@ -3,20 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseCrashReportingQuickstart", "FirebaseCrashReportingQuickstart\FirebaseCrashReportingQuickstart.csproj", "{76D81BCF-1EFB-4AD8-8A72-6491522A6086}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basement", "..\..\basement\source\Basement.csproj", "{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base", "..\..\base\source\Base.csproj", "{3F6BAE25-ADEB-468C-8384-AD655623C341}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Common", "..\..\firebase-common\source\Firebase-Common.csproj", "{865652D3-8D1A-4779-92FC-4C54719286B7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "..\..\tasks\source\Tasks.csproj", "{53F87D88-8871-41A2-9F81-B79AB02FEC24}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Iid", "..\..\firebase-iid\source\Firebase-Iid.csproj", "{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firebase-Crash", "..\source\Firebase-Crash.csproj", "{7076C84E-08AE-404B-8F3C-8F66010FA1B1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basement-BuildTasks", "..\..\basement\buildtasks\Basement-BuildTasks.csproj", "{21D99A15-AB98-4691-A45B-D236B2A91DEB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseCrashReportingQuickstart.UITests", "FirebaseCrashReportingQuickstart.UITests\FirebaseCrashReportingQuickstart.UITests.csproj", "{CC7EE1D3-A8BB-4135-AF99-3CC190A006AF}"
 EndProject
 Global
@@ -29,34 +15,6 @@ Global
 		{76D81BCF-1EFB-4AD8-8A72-6491522A6086}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76D81BCF-1EFB-4AD8-8A72-6491522A6086}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76D81BCF-1EFB-4AD8-8A72-6491522A6086}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3F6BAE25-ADEB-468C-8384-AD655623C341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F6BAE25-ADEB-468C-8384-AD655623C341}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F6BAE25-ADEB-468C-8384-AD655623C341}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F6BAE25-ADEB-468C-8384-AD655623C341}.Release|Any CPU.Build.0 = Release|Any CPU
-		{865652D3-8D1A-4779-92FC-4C54719286B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{865652D3-8D1A-4779-92FC-4C54719286B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{865652D3-8D1A-4779-92FC-4C54719286B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{865652D3-8D1A-4779-92FC-4C54719286B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53F87D88-8871-41A2-9F81-B79AB02FEC24}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7076C84E-08AE-404B-8F3C-8F66010FA1B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7076C84E-08AE-404B-8F3C-8F66010FA1B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7076C84E-08AE-404B-8F3C-8F66010FA1B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7076C84E-08AE-404B-8F3C-8F66010FA1B1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21D99A15-AB98-4691-A45B-D236B2A91DEB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CC7EE1D3-A8BB-4135-AF99-3CC190A006AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CC7EE1D3-A8BB-4135-AF99-3CC190A006AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC7EE1D3-A8BB-4135-AF99-3CC190A006AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
