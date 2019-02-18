@@ -61,6 +61,9 @@
     <PackageReference Include="Xamarin.Build.Download">
       <Version>0.4.11</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Plus">
+      <Version>71.1501.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -109,5 +112,5 @@
   <ItemGroup>
     <Folder Include="Resources\values\" />
   </ItemGroup>
-  <Import Project="..\..\..\..\generated.targets" />
+  <Import Project="..\..\..\..\generated\generated.targets" />
 </Project>
