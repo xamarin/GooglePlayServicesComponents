@@ -78,6 +78,7 @@
 
     
   <ItemGroup>
+    <_AndroidDocumentationPath Include="..\..\externals\paramnames.txt" Condition="Exists('..\..\..\externals\paramnames.txt')" />
     @foreach (var art in @Model.MavenArtifacts) {
     <_AndroidDocumentationPath Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt" Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt')" />
     }
@@ -120,7 +121,7 @@
 
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
-      if (art.MavenArtifactPackaging == "aar") {
+      if (1==2 && art.MavenArtifactPackaging == "aar") {
     <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar\" />
       }
     }
@@ -151,7 +152,7 @@
     <!-- ProjectReference -->
     @foreach (var dep in @Model.NuGetDependencies) {
       if (dep.IsProjectReference) {
-        <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" />
+        <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" />
       }
     }
     <!-- some additional fixes -->

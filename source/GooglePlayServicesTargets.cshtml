@@ -15,11 +15,42 @@
 
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
-      if (art.MavenArtifactPackaging == "aar") {
+      if (1==2 && art.MavenArtifactPackaging == "aar") {
     <AndroidAarLibrary Include="$(MSBuildThisFileDirectory)..\..\aar\@(art.MavenArtifactId).aar" />
       }
-    }   
+    }
   </ItemGroup>
+
+  @foreach (var art in @Model.MavenArtifacts) {
+      if (art.MavenArtifactPackaging == "aar") {
+        var friendlyGroupId = art.MavenGroupId.Contains("firebase") ? "firebase" : "playservices";
+        var friendlyArtifactId = art.MavenArtifactId.Replace("-", "");
+        var friendlyId = friendlyGroupId + "_" + friendlyArtifactId;
+        var url = "https://dl.google.com/dl/android/maven2/" + art.MavenGroupId.Replace(".", "/") + "/" + art.MavenArtifactId + "/" + art.MavenArtifactVersion + "/" + art.MavenArtifactId + "-" + art.MavenArtifactVersion + ".aar";
+        var xbdKey = friendlyGroupId + "-" + art.MavenArtifactVersion + "/" + friendlyArtifactId;
+        var xbdAarFile = friendlyArtifactId + "-" + art.MavenArtifactVersion + ".aar";
+        var xbdAarPath = xbdKey.Replace("/", "\\") + "\\" + xbdAarFile;
+        var xbdAsmName = string.IsNullOrEmpty(Model.AssemblyName) ? Model.NuGetPackageId : Model.AssemblyName;
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_@(friendlyId)" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_@(friendlyId)">
+    <ItemGroup>
+      <XamarinBuildDownload Include="@(xbdKey)">
+        <Url>@(url)</Url>
+        <ToFile>@(xbdAarFile)</ToFile>
+        <Kind>Uncompressed</Kind>
+      </XamarinBuildDownload>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(XamarinBuildDownloadDir)@(xbdAarPath)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>@(xbdAsmName)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+      }
+    }
 
 @{
   string mergeTargets = Path.Combine(Model.Config.BasePath, "source", Model.MavenGroupId, Model.Name, "merge.targets");

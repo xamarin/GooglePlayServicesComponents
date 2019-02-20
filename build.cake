@@ -29,7 +29,10 @@ var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v9.0" : "android-28";
 var RENDERSCRIPT_FOLDER = "android-8.1.0";
 var TF_MONIKER = "monoandroid90";
 
-var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/ea/ea65204c51cf20873c17c32584f3b12ed390ac55/android-support.zip";
+var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/1a/1ab829ffb7e8f782f3a3cc14b9a74994bc38aab2/play-services-firebase.zip";
+
+// These are a bunch of parameter names in the txt format which binding projects can use
+var REF_PARAMNAMES_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/1a/1ab829ffb7e8f782f3a3cc14b9a74994bc38aab2/play-services-firebase-paramnames.txt";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/60.1142.0/api-info.xml";
@@ -61,11 +64,16 @@ Information ("MSCORLIB_PATH: {0}", MSCORLIB_PATH);
 Task("javadocs")
 	.Does(() =>
 {
+	EnsureDirectoryExists("./externals/");
+
 	if (!FileExists("./externals/docs.zip"))
 		DownloadFile(REF_DOCS_URL, "./externals/docs.zip");
 
 	if (!DirectoryExists("./externals/docs"))
 		Unzip ("./externals/docs.zip", "./externals/docs");
+
+	if (!FileExists("./externals/paramnames.txt"))
+		DownloadFile(REF_PARAMNAMES_URL, "./externals/paramnames.txt");
 
 	var astJar = new FilePath("./util/JavaASTParameterNames-1.0.jar");
 	var sourcesJars = GetFiles("./externals/**/*-sources.jar");
@@ -80,7 +88,9 @@ Task("javadocs")
 	}
 });
 
+
 Task("binderate")
+	.IsDependentOn("javadocs")
 	.Does(() =>
 {
 	if (!DirectoryExists("./util/binderator"))
@@ -96,29 +106,96 @@ Task("binderate")
 		+ MakeAbsolute(configFile).FullPath + "\" --basepath=\"" + MakeAbsolute(basePath).FullPath + "\"");
 });
 
+
+Task("mergetargets")
+	.Does(() =>
+{
+	/*****************************
+	* BEGIN: Merge all the .targets together into one for the sake of compiling samples
+	******************************/
+	var generatedTargets = GetFiles("./generated/*/Xamarin.*.targets");
+
+	// Load the doc to append to, and the doc to append
+	var xFileRoot = System.Xml.Linq.XDocument.Parse("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<Project ToolsVersion=\"4.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">\n</Project>");
+	System.Xml.Linq.XNamespace nsRoot = xFileRoot.Root.Name.Namespace;
+
+	foreach (var generatedTarget in generatedTargets) {
+		var xFileChild = System.Xml.Linq.XDocument.Load (MakeAbsolute (generatedTarget).FullPath);
+		System.Xml.Linq.XNamespace nsChild = xFileRoot.Root.Name.Namespace;
+
+		// Add all the elements under <Project> into the existing file's <Project> node
+		foreach (var xItemToAdd in xFileChild.Element (nsChild + "Project").Elements ())
+			xFileRoot.Element (nsRoot + "Project").Add (xItemToAdd);
+	}
+
+	// Inject a property to prevent errors from missing assemblies in .targets
+	// this allows us to use one big .targets file in all the projects and not have to figure out which specific
+	// ones each project needs to reference for development purposes
+	if (!xFileRoot.Descendants (nsRoot + "XamarinBuildResourceMergeThrowOnMissingAssembly").Any ()) {
+		xFileRoot.Element (nsRoot + "Project")
+			.AddFirst (new System.Xml.Linq.XElement (nsRoot + "PropertyGroup",
+				new System.Xml.Linq.XElement (nsRoot + "XamarinBuildResourceMergeThrowOnMissingAssembly", false)));
+	}
+
+	xFileRoot.Save ("./generated/generated.targets");
+	/*****************************
+	* END: Merge all the .targets together into one for the sake of compiling samples
+	******************************/
+});
+
+
 Task("libs")
 	.IsDependentOn("nuget-restore")
 	.Does(() =>
 {
 	NuGetRestore("./generated/GooglePlayServices.sln", new NuGetRestoreSettings { });
 
-	MSBuild("./generated/GooglePlayServices.sln", c => c.Configuration = "Release");
+	MSBuild("./generated/GooglePlayServices.sln", c => {
+		c.Configuration = "Release";
+		c.Properties.Add("DesignTimeBuild", new [] { "false" });
+		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
+	});
 });
+
+
+Task("samples")
+	.IsDependentOn("libs")
+	.IsDependentOn("mergetargets")
+	.Does(() =>
+{
+	var sampleSlns = GetFiles("./samples/**/*.sln");
+
+	foreach (var sampleSln in sampleSlns) {
+		NuGetRestore(sampleSln, new NuGetRestoreSettings { });
+		MSBuild(sampleSln, c => {
+			c.Configuration = "Release";
+			c.Properties.Add("DesignTimeBuild", new [] { "false" });
+		});
+	}
+});
+
 
 Task("nuget-restore")
 	.Does(() =>
 {
 	NuGetRestore("./generated/GooglePlayServices.sln", new NuGetRestoreSettings { });
 });
+
+
 Task("nuget")
 	.IsDependentOn("libs")
 	.Does(() =>
 {
+	var outputPath = new DirectoryPath("./output");
+
 	MSBuild ("./generated/GooglePlayServices.sln", c => {
         c.Configuration = "Release";
         c.Targets.Clear();
         c.Targets.Add("Pack");
-		c.Properties.Add("PackageOutputPath", new [] { "output" });
+		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(outputPath).FullPath });
+		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
+		c.Properties.Add("DesignTimeBuild", new [] { "false" });
+		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
     });
 });
 
@@ -135,7 +212,7 @@ Task("nuget-validation")
 		NeedsProjectUrl = true,
 		NeedsLicenseUrl = true,
 		ValidateRequireLicenseAcceptance = true,
-		ValidPackageNamespace = new [] { "Xamarin", "Mono", "SkiaSharp", "HarfBuzzSharp", "mdoc" },
+		ValidPackageNamespace = new [] { "Xamarin" },
 	};
 
 	var nupkgFiles = GetFiles ("./output/*.nupkg");
@@ -159,9 +236,7 @@ Task("nuget-validation")
 		{
 			Information ("Metadata validation passed for: {0}", nupkgFile.GetFilename ());
 		}
-			
 	}
-
 });
 
 Task ("diff")
@@ -209,7 +284,7 @@ Task ("merge")
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
 		.Select(g => g.FirstOrDefault())
-		.Where (g => !g.FullPath.Contains("v4") && !g.FullPath.Contains(".Android.Support.Constraint.Layout."))
+		.Where (g => !g.FullPath.Contains("Android.Support"))
 		.ToList();
 
 	Information("Merging: \n {0}", string.Join("\n", mergeDlls));
@@ -310,12 +385,15 @@ Task ("clean")
 		DeleteDirectory ("./util/binderator", true);
 
 	CleanDirectories ("./**/packages");
+	CleanDirectories("./**/bin");
+	CleanDirectories("./**/obj");
 });
 
 Task ("ci")
 	.IsDependentOn ("ci-setup")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("diff")
+	.IsDependentOn ("samples")
 	.IsDependentOn ("nuget-validation");
 
 RunTarget (TARGET);
