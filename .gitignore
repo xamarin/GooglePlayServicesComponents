@@ -35,3 +35,4 @@ tools/
 .vscode/
 generated
 binderator
+models.json
