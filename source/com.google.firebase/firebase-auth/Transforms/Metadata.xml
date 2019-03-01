@@ -34,5 +34,9 @@
     <attr path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth.zzb']" name="visibility">internal</attr>
     <attr path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth.zzc']" name="visibility">internal</attr>
 
-
+    <attr
+        path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth.AuthStateListener']/method[@name='onAuthStateChanged' and count(parameter)=1 and parameter[1][@type='com.google.firebase.auth.FirebaseAuth']]/parameter[1]"
+        name="managedName">
+        auth
+    </attr>
 </metadata>

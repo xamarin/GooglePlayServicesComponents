@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D4AFDB96-B559-41B4-93D1-33E598E0.4.11}</ProjectGuid>
+    <ProjectGuid>{FF73A476-28EE-462C-866C-3C1C8EE07F53}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>FirebaseAuthQuickstart</RootNamespace>
@@ -58,6 +58,12 @@
     <PackageReference Include="Xamarin.Firebase.Auth" Version="71.1510.0" />
     <PackageReference Include="Xamarin.Build.Download">
       <Version>0.4.11</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Auth">
+      <Version>71.1600.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Basement">
+      <Version>71.1501.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +120,6 @@
     <GoogleServicesJson Include="google-services.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <Import Project="..\..\..\..\generated\generated.targets" />
-  <Import Project="..\..\..\basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\..\basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Basement.targets')" />
+  <!--<Import Project="..\..\..\..\generated\generated.targets" />-->
+  <!--<Import Project="..\..\..\basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\..\basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Basement.targets')" />-->
 </Project>

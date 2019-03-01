@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseAuthQuickstart.UITests", "FirebaseAuthQuickstart.UITests\FirebaseAuthQuickstart.UITests.csproj", "{AB8AA3E4-AE78-4976-841C-757827ABA3E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseAuthQuickstart", "FirebaseAuthQuickstart\FirebaseAuthQuickstart.csproj", "{D4AFDB96-B559-41B4-93D1-33E598E0.4.11}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseAuthQuickstart", "FirebaseAuthQuickstart\FirebaseAuthQuickstart.csproj", "{FF73A476-28EE-462C-866C-3C1C8EE07F53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +15,9 @@ Global
 		{AB8AA3E4-AE78-4976-841C-757827ABA3E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB8AA3E4-AE78-4976-841C-757827ABA3E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB8AA3E4-AE78-4976-841C-757827ABA3E5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4AFDB96-B559-41B4-93D1-33E598E0.4.11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4AFDB96-B559-41B4-93D1-33E598E0.4.11}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4AFDB96-B559-41B4-93D1-33E598E0.4.11}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4AFDB96-B559-41B4-93D1-33E598E0.4.11}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FF73A476-28EE-462C-866C-3C1C8EE07F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF73A476-28EE-462C-866C-3C1C8EE07F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF73A476-28EE-462C-866C-3C1C8EE07F53}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF73A476-28EE-462C-866C-3C1C8EE07F53}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
