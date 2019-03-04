@@ -9,6 +9,7 @@ output/
 *.xam
 *.DS_Store
 *.pidb
+*.user
 *.userprefs
 *.dotSettings
 *.suo
