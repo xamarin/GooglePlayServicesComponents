@@ -23,7 +23,7 @@
 
   @foreach (var art in @Model.MavenArtifacts) {
       if (art.MavenArtifactPackaging == "aar") {
-        var friendlyGroupId = art.MavenGroupId.Contains("firebase") ? "firebase" : "playservices";
+        var friendlyGroupId = art.MavenGroupId.Contains("firebase") ? "googlefb" : "googlegps";
         var friendlyArtifactId = art.MavenArtifactId.Replace("-", "");
         var friendlyId = friendlyGroupId + "_" + friendlyArtifactId;
         var url = "https://dl.google.com/dl/android/maven2/" + art.MavenGroupId.Replace(".", "/") + "/" + art.MavenArtifactId + "/" + art.MavenArtifactVersion + "/" + art.MavenArtifactId + "-" + art.MavenArtifactVersion + ".aar";

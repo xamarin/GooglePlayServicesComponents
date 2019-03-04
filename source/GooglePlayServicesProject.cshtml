@@ -88,6 +88,13 @@
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\$(TargetFramework)" />
   </ItemGroup>
 
+  @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.Basement")
+  {
+    <ItemGroup>
+      <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
+    </ItemGroup>
+  }
+
   @if (@Model.MavenArtifacts.Count > 0) {
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
@@ -162,7 +169,7 @@
     <!-- PackageReference -->
     @foreach (var dep in @Model.NuGetDependencies) {
       if (!dep.IsProjectReference) {
-      <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" />
+      <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" PrivateAssets="none" />
       }      
     }
     @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.SafetyNet")

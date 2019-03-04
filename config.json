@@ -3,6 +3,7 @@
 	"slnFile" : "generated/GooglePlayServices.sln",
 	"debug": { "DumpModels" : true },
 	"additionalProjects": [
+		"source/com.google.android.gms/play-services-basement/buildtasks/Basement-BuildTasks.csproj"
 	],
 	"templates" : [
 		{
@@ -12,6 +13,10 @@
 		{
 			"templateFile": "source/GooglePlayServicesProject.cshtml",
 			"outputFileRule" : "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+		},
+		{
+			"templateFile": "source/GooglePlayServicesPom.cshtml",
+			"outputFileRule" : "generated/{groupid}.{artifactid}/dependencies.pom"
 		}
 	],
 	"artifacts" : [
