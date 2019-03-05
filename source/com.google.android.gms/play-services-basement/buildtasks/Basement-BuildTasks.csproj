@@ -50,4 +50,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <Target Name="Pack">
+  </Target>
 </Project>
