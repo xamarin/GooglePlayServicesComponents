@@ -45,7 +45,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Content Include="Xamarin.GooglePlayServices.Basement.targets">
+    <Content Include="..\merge.targets">
+      <Link>Xamarin.GooglePlayServices.Basement.targets</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
