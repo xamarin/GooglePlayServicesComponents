@@ -9,9 +9,13 @@
 #addin nuget:?package=Cake.Compression&version=0.1.6
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.1
 #addin nuget:?package=Xamarin.Nuget.Validator&version=1.1.1
+#addin nuget:?package=Mono.ApiTools.NuGetDiff&version=1.0.1&loaddependencies=true
 
 // From Cake.Xamarin.Build, dumps out versions of things
 //LogSystemInfo ();
+using Mono.ApiTools;
+using NuGet.Packaging;
+using NuGet.Versioning;
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
@@ -28,6 +32,7 @@ var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_
 var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v9.0" : "android-28";
 var RENDERSCRIPT_FOLDER = "android-8.1.0";
 var TF_MONIKER = "monoandroid90";
+var DOCAPI_CACHEPATH = "./externals/package_cache";
 
 var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/1a/1ab829ffb7e8f782f3a3cc14b9a74994bc38aab2/play-services-firebase.zip";
 
@@ -57,6 +62,57 @@ if (IsRunningOnWindows ()) {
 
 Information ("MONODROID_PATH: {0}", MONODROID_PATH);
 Information ("MSCORLIB_PATH: {0}", MSCORLIB_PATH);
+
+//set the function to download and compare the previous version of the nugets
+async Task BuildApiDiff (FilePath nupkg)
+{
+	var baseDir = nupkg.GetDirectory(); //get the parent directory of the packge file
+
+	using (var reader = new PackageArchiveReader (nupkg.FullPath)) 
+	{
+		//get the id from the package and the version number
+		 var packageId = reader.GetIdentity ().Id;
+		var currentVersionNo = reader.GetIdentity ().Version.ToNormalizedString();
+
+		//calculate the diff storage path from the location of the nuget
+		var diffRoot = $"{baseDir}/api-diff/{packageId}";
+		CleanDirectories (diffRoot);
+
+		// get the latest version of this package - if any
+		var latestVersion = (await NuGetVersions.GetLatestAsync (packageId))?.ToNormalizedString ();
+
+		// log what is going to happen
+		if (string.IsNullOrEmpty (latestVersion))
+			Information ($"Running a diff on a new package '{packageId}'...");
+		else
+			Information ($"Running a diff on '{latestVersion}' vs '{currentVersionNo}' of '{packageId}'...");
+
+		// create comparer
+		var comparer = new NuGetDiff ();
+		comparer.PackageCache = DOCAPI_CACHEPATH;  // Cache path
+		comparer.SaveAssemblyApiInfo = true;       // we don't keep this, but it lets us know if there were no changes
+		comparer.SaveAssemblyMarkdownDiff = true;  // we want markdown
+		comparer.IgnoreResolutionErrors = true;    // we don't care if frameowrk/platform types can't be found
+
+		await comparer.SaveCompleteDiffToDirectoryAsync (packageId, latestVersion, reader, diffRoot);
+
+		// run the diff with just the breaking changes
+		comparer.MarkdownDiffFileExtension = ".breaking.md";
+		comparer.IgnoreNonBreakingChanges = true;
+		await comparer.SaveCompleteDiffToDirectoryAsync (packageId, latestVersion, reader, diffRoot);
+
+		// TODO: there are two bugs in this version of mono-api-html
+		var mdFiles = $"{diffRoot}/*.*.md";
+		// 1. the <h4> doesn't look pretty in the markdown
+		ReplaceTextInFiles (mdFiles, "<h4>", "> ");
+		ReplaceTextInFiles (mdFiles, "</h4>", Environment.NewLine); 
+		// 2. newlines are inccorect on Windows: https://github.com/mono/mono/pull/9918
+		ReplaceTextInFiles (mdFiles, "\r\r", "\r");
+
+		// we are done
+		Information ($"Diff complete of '{packageId}'.");
+	}
+}
 
 // You shouldn't have to configure anything below here
 // ######################################################
@@ -371,6 +427,20 @@ Task ("ci-setup")
 
 // 	MSBuild ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj", c => c.Configuration = BUILD_CONFIG);
 // });
+Task ("docs-api-diff")
+    .Does (async () =>
+{
+	
+	var nupkgFiles = GetFiles ("./**/output/*.nupkg"); //get all of the nugets in the output
+
+	Information ("Found ({0}) Nuget's to Diff", nupkgFiles.Count ());
+
+	foreach (var nupkgFile in nupkgFiles)  //loop through each nuget that is found
+	{
+		await BuildApiDiff(nupkgFile);
+	}
+	
+});
 
 Task ("clean")
 	.Does (() =>
