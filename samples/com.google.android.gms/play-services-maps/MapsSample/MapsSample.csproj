@@ -155,5 +155,4 @@
     <AndroidResource Include="Resources\values\demo_strings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <Import Project="..\..\..\..\generated\generated.targets" />
 </Project>

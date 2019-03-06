@@ -92,5 +92,4 @@
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\layout\" />
   </ItemGroup>
-  <Import Project="..\..\..\..\generated\generated.targets" />
 </Project>

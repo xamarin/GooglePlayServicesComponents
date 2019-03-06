@@ -75,5 +75,4 @@
     <AndroidResource Include="Resources\layout\Menu.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <Import Project="..\..\..\..\generated\generated.targets" />
 </Project>

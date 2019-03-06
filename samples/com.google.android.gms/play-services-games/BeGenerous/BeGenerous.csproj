@@ -112,5 +112,4 @@
   <ItemGroup>
     <Folder Include="Resources\values\" />
   </ItemGroup>
-  <Import Project="..\..\..\..\generated\generated.targets" />
 </Project>

@@ -79,5 +79,4 @@
     <AndroidResource Include="Resources\layout\DeepLink.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <Import Project="..\..\..\..\generated\generated.targets" />
 </Project>
