@@ -314,10 +314,18 @@ Task ("diff")
 	.IsDependentOn ("merge")
 	.Does (() =>
 {
+	if (DirectoryExists("./output/dependencies"))
+		DeleteDirectory("./output/dependencies", true);
+	EnsureDirectoryExists("./output/dependencies/");
+
+	// Copy all the dependencies into one spot to reference from MonoApiTools
+	CopyFiles("./generated/**/bin/Release/" + TF_MONIKER + "/*.dll", "./output/dependencies/");
+
 	var SEARCH_DIRS = new DirectoryPath [] {
 		MONODROID_PATH,
 		"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xbuild-frameworks/MonoAndroid/v1.0/",
-		"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mono/2.1/"
+		"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mono/2.1/",
+		"./output/dependencies/"
 	};
 
 	MonoApiInfo ("./output/GooglePlayServices.Merged.dll",
@@ -338,6 +346,9 @@ Task ("diff")
 	MonoApiHtml ("./output/GooglePlayServices.api-info.previous.xml",
 		"./output/GooglePlayServices.api-info.xml",
 		"./output/GooglePlayServices.api-diff.html");
+
+	if (DirectoryExists("./output/dependencies"))
+		DeleteDirectory("./output/dependencies", true);
 });
 
 Task ("merge")
@@ -345,6 +356,8 @@ Task ("merge")
 	.Does (() =>
 {
 	EnsureDirectoryExists("./output/");
+	if (DirectoryExists("./output/dependencies"))
+		DeleteDirectory("./output/dependencies", true);
 	EnsureDirectoryExists("./output/dependencies/");
 
 	// Copy all the dependencies into one spot to reference from ILRepack
@@ -374,7 +387,8 @@ Task ("merge")
 		},
 	});
 
-	DeleteDirectory("./output/dependencies/", true);
+	if (DirectoryExists("./output/dependencies"))
+		DeleteDirectory("./output/dependencies", true);
 });
 
 Task ("ci-setup")
