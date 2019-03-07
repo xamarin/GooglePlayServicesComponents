@@ -331,6 +331,12 @@ Task ("merge")
 	.Does (() =>
 {
 	EnsureDirectoryExists("./output/");
+	EnsureDirectoryExists("./output/dependencies/");
+
+	// Copy all the dependencies into one spot to reference from ILRepack
+	CopyFiles("./generated/**/bin/Release/" + TF_MONIKER + "/Xamarin.Android.Support.*.dll", "./output/dependencies/");
+	CopyFiles("./generated/**/bin/Release/" + TF_MONIKER + "/Xamarin.AndroidX.*.dll", "./output/dependencies/");
+	CopyFiles("./generated/**/bin/Release/" + TF_MONIKER + "/Xamarin.Google.Android.Material*.dll", "./output/dependencies/");
 
 	if (FileExists ("./output/GooglePlayServices.Merged.dll"))
 		DeleteFile ("./output/GooglePlayServices.Merged.dll");
@@ -340,7 +346,7 @@ Task ("merge")
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
 		.Select(g => g.FirstOrDefault())
-		.Where (g => !g.FullPath.Contains("Android.Support"))
+		.Where (g => !g.FullPath.Contains("Android.Support") && !g.FullPath.Contains("AndroidX") && !g.FullPath.Contains("Xamarin.Google.Android.Material"))
 		.ToList();
 
 	Information("Merging: \n {0}", string.Join("\n", mergeDlls));
@@ -351,7 +357,8 @@ Task ("merge")
 		AllowMultiple = true,
 		//TargetKind = ILRepack.TargetKind.Dll,
 		Libs = new List<DirectoryPath> {
-			MONODROID_PATH
+			MONODROID_PATH,
+			"./output/dependencies/"
 		},
 	});
 });
