@@ -230,6 +230,20 @@ Task("samples")
 	}
 });
 
+Task("mastersample")
+	.IsDependentOn("libs")
+	.IsDependentOn("mergetargets")
+	.Does(() =>
+{
+	var sampleSln = "./samples/all/BuildAll.sln";
+
+	NuGetRestore(sampleSln, new NuGetRestoreSettings { });
+	MSBuild(sampleSln, c => {
+		c.Configuration = "Release";
+		c.Properties.Add("DesignTimeBuild", new [] { "false" });
+	});
+});
+
 
 Task("nuget-restore")
 	.Does(() =>
@@ -334,19 +348,17 @@ Task ("merge")
 	EnsureDirectoryExists("./output/dependencies/");
 
 	// Copy all the dependencies into one spot to reference from ILRepack
-	CopyFiles("./generated/**/bin/Release/" + TF_MONIKER + "/Xamarin.Android.Support.*.dll", "./output/dependencies/");
-	CopyFiles("./generated/**/bin/Release/" + TF_MONIKER + "/Xamarin.AndroidX.*.dll", "./output/dependencies/");
-	CopyFiles("./generated/**/bin/Release/" + TF_MONIKER + "/Xamarin.Google.Android.Material*.dll", "./output/dependencies/");
+	CopyFiles("./generated/**/bin/Release/" + TF_MONIKER + "/*.dll", "./output/dependencies/");
 
 	if (FileExists ("./output/GooglePlayServices.Merged.dll"))
 		DeleteFile ("./output/GooglePlayServices.Merged.dll");
 
-	var allDlls = GetFiles ("./generated/**/bin/Release/" + TF_MONIKER + "/*.dll");
+	var allDlls = GetFiles ("./generated/**/bin/Release/" + TF_MONIKER + "/Xamarin.GooglePlayServices*.dll")
+					.Concat(GetFiles ("./generated/**/bin/Release/" + TF_MONIKER + "/Xamarin.Firebase*.dll"));
 
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
 		.Select(g => g.FirstOrDefault())
-		.Where (g => !g.FullPath.Contains("Android.Support") && !g.FullPath.Contains("AndroidX") && !g.FullPath.Contains("Xamarin.Google.Android.Material"))
 		.ToList();
 
 	Information("Merging: \n {0}", string.Join("\n", mergeDlls));
@@ -361,6 +373,8 @@ Task ("merge")
 			"./output/dependencies/"
 		},
 	});
+
+	DeleteDirectory("./output/dependencies/", true);
 });
 
 Task ("ci-setup")
@@ -470,7 +484,8 @@ Task ("ci")
 	.IsDependentOn ("ci-setup")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("diff")
-	.IsDependentOn ("samples")
-	.IsDependentOn ("nuget-validation");
+	.IsDependentOn ("mastersample")
+	.IsDependentOn ("nuget-validation")
+	.IsDependentOn ("samples");
 
 RunTarget (TARGET);
