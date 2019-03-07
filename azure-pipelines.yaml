@@ -14,6 +14,7 @@ jobs:
 
   - job: build
     displayName: 'Build Libraries & NuGets (macOS)'
+    timeoutInMinutes: 240
     pool:
       vmImage: macos-10.13
     steps:
@@ -34,6 +35,7 @@ jobs:
 
   - job: build_windows
     displayName: 'Build Libraries & NuGets (Windows)'
+    timeoutInMinutes: 240
     pool:
       vmImage: vs2017-win2016
     steps:
