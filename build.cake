@@ -16,6 +16,9 @@
 using Mono.ApiTools;
 using NuGet.Packaging;
 using NuGet.Versioning;
+using System.Text.RegularExpressions;
+using System.Xml;
+using System.Xml.Linq;
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
@@ -42,7 +45,6 @@ var REF_PARAMNAMES_URL = "https://bosstoragemirror.blob.core.windows.net/android
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/60.1142.0/api-info.xml";
 
-
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
 if (IsRunningOnWindows ()) {
 	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin" });
@@ -59,6 +61,9 @@ if (IsRunningOnWindows ()) {
 	else
 		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
 }
+
+if (Argument("localTestPkg", "false") == "true")
+	Environment.SetEnvironmentVariable("LOCAL_TEST_PKG", "true");
 
 Information ("MONODROID_PATH: {0}", MONODROID_PATH);
 Information ("MSCORLIB_PATH: {0}", MSCORLIB_PATH);
@@ -217,6 +222,7 @@ Task("libs")
 Task("samples")
 	.IsDependentOn("libs")
 	.IsDependentOn("mergetargets")
+	.IsDependentOn("allbindingprojectrefs")
 	.Does(() =>
 {
 	var sampleSlns = GetFiles("./samples/**/*.sln");
@@ -230,20 +236,27 @@ Task("samples")
 	}
 });
 
-Task("mastersample")
-	.IsDependentOn("libs")
-	.IsDependentOn("mergetargets")
+Task("allbindingprojectrefs")
 	.Does(() =>
 {
-	var sampleSln = "./samples/all/BuildAll.sln";
+	Action<string,string> generateTargets = (string pattern, string file) => {
+		var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
+		var itemGroup = new XElement(xmlns + "ItemGroup");
+		foreach (var csproj in GetFiles(pattern)) {
+			var filename = nupkg.GetFilenameWithoutExtension();
+		var match = Regex.Match(filename.ToString(), @"(.+?)\.([\.\d+]+)");
+		itemGroup.Add(new XElement(xmlns + "PackageReference",
+			new XAttribute("Include", match.Groups[1]),
+			new XAttribute("Version", match.Groups[2])));
+		}
+		var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
+		xdoc.Save(file);
 
-	NuGetRestore(sampleSln, new NuGetRestoreSettings { });
-	MSBuild(sampleSln, c => {
-		c.Configuration = "Release";
-		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-	});
+	};
+
+	generateTargets("./output/*firebase*.nupkg", "./output/FirebasePackages.targets");
+	generateTargets("./output/*play-services*.nupkg", "./output/PlayServicesPackages.targets");
 });
-
 
 Task("nuget-restore")
 	.Does(() =>
@@ -300,7 +313,6 @@ Task("nuget-validation")
 			Information ("Metadata validation failed for: {0} \n\n", nupkgFile.GetFilename ());
 			Information (string.Join("\n    ", result.ErrorMessages));
 			throw new Exception ($"Invalid Metadata for: {nupkgFile.GetFilename ()}");
-
 		}
 		else
 		{
@@ -455,26 +467,18 @@ Task ("ci-setup")
 // 	CopyFile ("./support-v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
 // });
 
-// Task ("buildtasks")
-// 	.Does (() => 
-// {
-// 	NuGetRestore ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj");
-
-// 	MSBuild ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj", c => c.Configuration = BUILD_CONFIG);
-// });
 Task ("docs-api-diff")
     .Does (async () =>
 {
-	
 	var nupkgFiles = GetFiles ("./**/output/*.nupkg"); //get all of the nugets in the output
 
 	Information ("Found ({0}) Nuget's to Diff", nupkgFiles.Count ());
 
 	foreach (var nupkgFile in nupkgFiles)  //loop through each nuget that is found
 	{
+		Information("Diffing: {0}", nupkgFile);
 		await BuildApiDiff(nupkgFile);
 	}
-	
 });
 
 Task ("clean")
@@ -498,7 +502,7 @@ Task ("ci")
 	.IsDependentOn ("ci-setup")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("diff")
-	.IsDependentOn ("mastersample")
+	.IsDependentOn ("docs-api-diff")
 	.IsDependentOn ("nuget-validation")
 	.IsDependentOn ("samples");
 
