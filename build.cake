@@ -242,7 +242,7 @@ Task("allbindingprojectrefs")
 	Action<string,string> generateTargets = (string pattern, string file) => {
 		var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
 		var itemGroup = new XElement(xmlns + "ItemGroup");
-		foreach (var csproj in GetFiles(pattern)) {
+		foreach (var nupkg in GetFiles(pattern)) {
 			var filename = nupkg.GetFilenameWithoutExtension();
 		var match = Regex.Match(filename.ToString(), @"(.+?)\.([\.\d+]+)");
 		itemGroup.Add(new XElement(xmlns + "PackageReference",
