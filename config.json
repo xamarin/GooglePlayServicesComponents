@@ -623,29 +623,29 @@
 		{
 			"groupId" : "android.arch.core",
 			"artifactId" : "common",
-			"version" : "1.1.1",
-			"nugetId" : "Xamarin.Android.Support.Core",
+			"version" : "1.1.1.1",
+			"nugetId" : "Xamarin.Android.Arch.Core.Common",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "android.arch.core",
 			"artifactId" : "runtime",
-			"version" : "1.1.1",
-			"nugetId" : "Xamarin.Android.Support.Core",
+			"version" : "1.1.1.1",
+			"nugetId" : "Xamarin.Android.Arch.Core.Runtime",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "android.arch.lifecycle",
 			"artifactId" : "common",
-			"version" : "1.1.1",
-			"nugetId" : "Xamarin.Android.Support.Core",
+			"version" : "1.1.1.1",
+			"nugetId" : "Xamarin.Android.Arch.Lifecycle.Common",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "android.arch.lifecycle",
 			"artifactId" : "runtime",
-			"version" : "1.1.1",
-			"nugetId" : "Xamarin.Android.Support.Core",
+			"version" : "1.1.1.1",
+			"nugetId" : "Xamarin.Android.Lifecycle.Runtime",
 			"dependencyOnly" : true
 		},
 		{
