@@ -217,7 +217,7 @@ Task("libs")
 
 	MSBuild("./generated/GooglePlayServices.sln", c => {
 		c.Configuration = "Release";
-		c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute("./output/libs.binlog").FullPath };
+		c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/libs.binlog")).FullPath };
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
 	});
@@ -278,7 +278,7 @@ Task("nuget")
 
 	MSBuild ("./generated/GooglePlayServices.sln", c => {
 		c.Configuration = "Release";
-		c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute("./output/nuget.binlog").FullPath };
+		c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/nuget.binlog")).FullPath };
 		c.Targets.Clear();
 		c.Targets.Add("Pack");
 		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(outputPath).FullPath });
