@@ -38,6 +38,7 @@ var TF_MONIKER = "monoandroid90";
 var DOCAPI_CACHEPATH = "./externals/package_cache";
 
 var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/play-services-firebase.zip";
+var REF_METADATA_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/play-services-firebase-metadata.xml";
 
 // These are a bunch of parameter names in the txt format which binding projects can use
 var REF_PARAMNAMES_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/play-services-firebase-paramnames.txt";
@@ -135,6 +136,9 @@ Task("javadocs")
 
 	if (!FileExists("./externals/paramnames.txt"))
 		DownloadFile(REF_PARAMNAMES_URL, "./externals/paramnames.txt");
+
+	if (!FileExists("./externals/paramnames.xml"))
+		DownloadFile(REF_METADATA_URL, "./externals/paramnames.xml");
 
 	var astJar = new FilePath("./util/JavaASTParameterNames-1.0.jar");
 	var sourcesJars = GetFiles("./externals/**/*-sources.jar");

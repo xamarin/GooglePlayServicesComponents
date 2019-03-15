@@ -72,6 +72,7 @@
       @foreach (var art in @Model.MavenArtifacts) {
       <TransformFile Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml" Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml')" />
       }
+      <TransformFile Include="..\..\externals\paramnames.xml" Condition="Exists('..\..\externals\paramnames.xml')" />
   </ItemGroup>
 
   @*<ItemGroup>
@@ -80,10 +81,6 @@
     }   
   </ItemGroup>*@
 
-  <PropertyGroup>
-    <DroidDocPaths>..\..\externals\docs\android\reference</DroidDocPaths>
-  </PropertyGroup>
-    
   <ItemGroup>
     <_AndroidDocumentationPath Include="..\..\externals\paramnames.txt" Condition="Exists('..\..\externals\paramnames.txt')" />
     @foreach (var art in @Model.MavenArtifacts) {
