@@ -17,4 +17,25 @@
 
 	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ValueEventListener']/method[@name='onCancelled']" name="argsType">ValueEventArgs</attr>
 	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onCancelled']" name="argsType">ChildEventArgs</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildAdded']/parameter[1]" name="managedName">snapshot</attr>
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildAdded']/parameter[2]" name="managedName">previousChildName</attr>
+	
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildChanged']/parameter[1]" name="managedName">snapshot</attr>
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildChanged']/parameter[2]" name="managedName">previousChildName</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onCancelled']/parameter[1]" name="managedName">error</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildMoved']/parameter[1]" name="managedName">snapshot</attr>
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildMoved']/parameter[2]" name="managedName">previousChildName</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildRemoved']/parameter[1]" name="managedName">snapshot</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ValueEventListener']/method[@name='onCancelled']/parameter[1]" name="managedName">error</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ValueEventListener']/method[@name='onDataChange']/parameter[1]" name="managedName">snapshot</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='DatabaseReference.CompletionListener']/method[@name='onComplete']/parameter[1]" name="managedName">error</attr>
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='DatabaseReference.CompletionListener']/method[@name='onComplete']/parameter[1]" name="managedName">ref</attr>
+
 </metadata>

@@ -27,11 +27,14 @@
 	<attr path="/api/package[@name='com.google.firebase.firestore']/class[@name='Blob']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='com.google.firebase.firestore.Blob']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
 
 
-    <attr
-        path="/api/package[@name='com.google.firebase']"
-        name="managedName"
-        >
-        Firebase
-    </attr>
-    
+	<attr
+		path="/api/package[@name='com.google.firebase']"
+		name="managedName"
+		>
+		Firebase
+	</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.firestore']/interface[@name='EventListener']/method[@name='onEvent']/parameter[1]" name="managedName">obj</attr>
+	<attr path="/api/package[@name='com.google.firebase.firestore']/interface[@name='EventListener']/method[@name='onEvent']/parameter[2]" name="managedName">error</attr>
+
 </metadata>

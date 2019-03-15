@@ -15,8 +15,8 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
-<!--	<remove-node path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageTask']/method[@name='addOnProgressListener']" />-->
-
+	<attr path="/api/package[@name='com.google.firebase.storage']/interface[@name='OnPausedListener']/method[@name='onPaused']" name="managedName">snapshot</attr>
+	<attr path="/api/package[@name='com.google.firebase.storage']/interface[@name='OnProgressListener']/method[@name='onProgress']" name="managedName">snapshot</attr>
 
 	<attr path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageTask']/method[@name='addOnFailureListener']" name="managedReturn">Android.Gms.Tasks.Task</attr>
 	<attr path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageTask']/method[@name='addOnPausedListener']" name="managedReturn">Firebase.Storage.ControllableTask</attr>
