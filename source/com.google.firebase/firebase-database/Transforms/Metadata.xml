@@ -36,6 +36,6 @@
 	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ValueEventListener']/method[@name='onDataChange']/parameter[1]" name="managedName">snapshot</attr>
 
 	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='DatabaseReference.CompletionListener']/method[@name='onComplete']/parameter[1]" name="managedName">error</attr>
-	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='DatabaseReference.CompletionListener']/method[@name='onComplete']/parameter[1]" name="managedName">ref</attr>
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='DatabaseReference.CompletionListener']/method[@name='onComplete']/parameter[1]" name="managedName">@ref</attr>
 
 </metadata>
