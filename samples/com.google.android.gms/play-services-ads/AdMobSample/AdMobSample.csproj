@@ -90,7 +90,7 @@
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.Interpolator" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Ads" Version="71.1501.0" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Ads.Lite" Version="71.1501.0" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Ads" Version="71.1501.0-preview1" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Ads.Lite" Version="71.1501.0-preview1" />
   </ItemGroup>
 </Project>

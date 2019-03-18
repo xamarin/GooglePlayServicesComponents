@@ -57,7 +57,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.Palette" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Games" Version="71.1501.0" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Games" Version="71.1501.0-preview1" />
     <PackageReference Include="Xamarin.Build.Download">
       <Version>0.4.11</Version>
     </PackageReference>
