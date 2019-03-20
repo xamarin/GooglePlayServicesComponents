@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCMSample", "GCMSample\GCMSample.csproj", "{D16727E4-FD03-46F7-99C3-C1EC4D8F5016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCMSample.UITests", "GCMSample.UITests\GCMSample.UITests.csproj", "{6DAB2FE2-2B82-4943-BB72-A7470418C09D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DAB2FE2-2B82-4943-BB72-A7470418C09D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DAB2FE2-2B82-4943-BB72-A7470418C09D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DAB2FE2-2B82-4943-BB72-A7470418C09D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DAB2FE2-2B82-4943-BB72-A7470418C09D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D16727E4-FD03-46F7-99C3-C1EC4D8F5016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D16727E4-FD03-46F7-99C3-C1EC4D8F5016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D16727E4-FD03-46F7-99C3-C1EC4D8F5016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D16727E4-FD03-46F7-99C3-C1EC4D8F5016}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

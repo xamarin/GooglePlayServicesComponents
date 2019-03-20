@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!-- Unique key for cached download -->
+        <_XbdKey_playservicesappinvite>playservices-16.0.1/playservicesappinvite</_XbdKey_playservicesappinvite>
+        
+        <!-- Path to .aar file within the extracted contents of the cached download -->
+        <_XbdAarFile_playservicesappinvite>m2repository\com\google\android\gms\play-services-appinvite\16.0.1\play-services-appinvite-16.0.1.aar</_XbdAarFile_playservicesappinvite>
+        
+        <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdAarFileFullPath_playservicesappinvite>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesappinvite)\play-services-appinvite-16.0.1.aar</_XbdAarFileFullPath_playservicesappinvite>
+
+        <!-- Assembly name to embed .aar in -->
+        <_XbdAssemblyName_playservicesappinvite>Xamarin.GooglePlayServices.AppInvite</_XbdAssemblyName_playservicesappinvite>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesappinvite"/>
+    </ItemGroup>
+
+    <Target Name="_XbdRestoreItems_playservicesappinvite">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesappinvite)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesappinvite)')">
+            <Output PropertyName="_XbdAarFileFullPath_playservicesappinvite" TaskParameter="Value" />
+        </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownload Include="$(_XbdKey_playservicesappinvite)">
+                <Url>https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-appinvite/16.0.1/play-services-appinvite-16.0.1.aar</Url>
+                <ToFile>play-services-appinvite-16.0.1.aar</ToFile>
+                <Kind>Uncompressed</Kind>
+                <Md5>575bd942170637dfada27558dcbf4aef</Md5>
+            </XamarinBuildDownload>
+        </ItemGroup>
+
+        <ItemGroup>
+            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesappinvite)">
+                <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+                <AssemblyName>$(_XbdAssemblyName_playservicesappinvite)</AssemblyName>
+            </XamarinBuildDownloadRestoreAssemblyAar>
+        </ItemGroup>
+    </Target>
+</Project>

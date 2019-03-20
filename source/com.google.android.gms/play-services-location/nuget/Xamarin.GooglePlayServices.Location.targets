@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!-- Unique key for cached download -->
+        <_XbdKey_playserviceslocation>playservices-15.0.1/playserviceslocation</_XbdKey_playserviceslocation>
+        
+        <!-- Path to .aar file within the extracted contents of the cached download -->
+        <_XbdAarFile_playserviceslocation>m2repository\com\google\android\gms\play-services-location\15.0.1\play-services-location-15.0.1.aar</_XbdAarFile_playserviceslocation>
+        
+        <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdAarFileFullPath_playserviceslocation>$(XamarinBuildDownloadDir)$(_XbdKey_playserviceslocation)\play-services-location-15.0.1.aar</_XbdAarFileFullPath_playserviceslocation>
+
+        <!-- Assembly name to embed .aar in -->
+        <_XbdAssemblyName_playserviceslocation>Xamarin.GooglePlayServices.Location</_XbdAssemblyName_playserviceslocation>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <XamarinBuildRestoreResources Include="_XbdRestoreItems_playserviceslocation"/>
+    </ItemGroup>
+
+    <Target Name="_XbdRestoreItems_playserviceslocation">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playserviceslocation)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playserviceslocation)')">
+            <Output PropertyName="_XbdAarFileFullPath_playserviceslocation" TaskParameter="Value" />
+        </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownload Include="$(_XbdKey_playserviceslocation)">
+                <Url>https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-location/15.0.1/play-services-location-15.0.1.aar</Url>
+                <ToFile>play-services-location-15.0.1.aar</ToFile>
+                <Kind>Uncompressed</Kind>
+                <Md5>5f4da7b39ddde4d4f2b8a2a6256f46d7</Md5>
+            </XamarinBuildDownload>
+        </ItemGroup>
+
+        <ItemGroup>
+            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playserviceslocation)">
+                <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+                <AssemblyName>$(_XbdAssemblyName_playserviceslocation)</AssemblyName>
+            </XamarinBuildDownloadRestoreAssemblyAar>
+        </ItemGroup>
+    </Target>
+</Project>

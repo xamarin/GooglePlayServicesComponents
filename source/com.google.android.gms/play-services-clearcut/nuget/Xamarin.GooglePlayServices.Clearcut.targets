@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!-- Unique key for cached download -->
+        <_XbdKey_playservicesclearcut>playservices-15.0.1/playservicesclearcut</_XbdKey_playservicesclearcut>
+        
+        <!-- Path to .aar file within the extracted contents of the cached download -->
+        <_XbdAarFile_playservicesclearcut>m2repository\com\google\android\gms\play-services-clearcut\15.0.1\play-services-clearcut-15.0.1.aar</_XbdAarFile_playservicesclearcut>
+        
+        <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdAarFileFullPath_playservicesclearcut>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesclearcut)\play-services-clearcut-15.0.1.aar</_XbdAarFileFullPath_playservicesclearcut>
+
+        <!-- Assembly name to embed .aar in -->
+        <_XbdAssemblyName_playservicesclearcut>Xamarin.GooglePlayServices.Clearcut</_XbdAssemblyName_playservicesclearcut>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesclearcut"/>
+    </ItemGroup>
+
+    <Target Name="_XbdRestoreItems_playservicesclearcut">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesclearcut)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesclearcut)')">
+            <Output PropertyName="_XbdAarFileFullPath_playservicesclearcut" TaskParameter="Value" />
+        </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownload Include="$(_XbdKey_playservicesclearcut)">
+                <Url>https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-clearcut/15.0.1/play-services-clearcut-15.0.1.aar</Url>
+                <ToFile>play-services-clearcut-15.0.1.aar</ToFile>
+                <Kind>Uncompressed</Kind>
+                <Md5>44759124d79f49212f42679fe1ce2efc</Md5>
+            </XamarinBuildDownload>
+        </ItemGroup>
+
+        <ItemGroup>
+            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesclearcut)">
+                <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+                <AssemblyName>$(_XbdAssemblyName_playservicesclearcut)</AssemblyName>
+            </XamarinBuildDownloadRestoreAssemblyAar>
+        </ItemGroup>
+    </Target>
+</Project>

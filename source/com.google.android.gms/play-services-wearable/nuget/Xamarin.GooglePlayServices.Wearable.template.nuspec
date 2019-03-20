@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.Wearable</id>
+    <title>Xamarin Google Play Services - Wearable</title>
+    <version>$version$</version>
+    <authors>Microsoft</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - Wearable $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - Wearable $aar-version$
+
+      You may also want to install the Xamarin.Android.Wear package if you are installing this.
+    </description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865369</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-wearable_128x128.png</iconUrl>
+    <dependencies>
+      <group targetFramework="MonoAndroid80">
+<!-- dependencies -->
+        <dependency id="Xamarin.Android.Support.Compat" version="$support-version$" />
+        <dependency id="Xamarin.Android.Support.Core.UI" version="$support-version$" />
+        <dependency id="Xamarin.Android.Support.Core.Utils" version="$support-version$" />
+        <dependency id="Xamarin.Android.Support.Fragment" version="$support-version$" />
+        <dependency id="Xamarin.Android.Support.Media.Compat" version="$support-version$" />
+        <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="$support-version$" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.GooglePlayServices.Wearable.dll" target="lib/MonoAndroid80" />
+    <file src="wearable/nuget/Xamarin.GooglePlayServices.Wearable.targets" target="build/MonoAndroid80" />
+  </files>
+</package>

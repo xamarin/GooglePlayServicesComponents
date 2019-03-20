@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseAdmobQuickstart", "FirebaseAdmobQuickstart\FirebaseAdmobQuickstart.csproj", "{45F9F3D0-BBC1-4A43-9D67-40F40AD17A41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseAdmobQuickstart.UITests", "FirebaseAdmobQuickstart.UITests\FirebaseAdmobQuickstart.UITests.csproj", "{BF596B95-1220-43D0-B507-BEC78426338D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45F9F3D0-BBC1-4A43-9D67-40F40AD17A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45F9F3D0-BBC1-4A43-9D67-40F40AD17A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45F9F3D0-BBC1-4A43-9D67-40F40AD17A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45F9F3D0-BBC1-4A43-9D67-40F40AD17A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF596B95-1220-43D0-B507-BEC78426338D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF596B95-1220-43D0-B507-BEC78426338D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF596B95-1220-43D0-B507-BEC78426338D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF596B95-1220-43D0-B507-BEC78426338D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppInviteSample", "AppInviteSample\AppInviteSample.csproj", "{0D1C857A-9314-4668-8C66-FD32BC4FED5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppInviteSample.UITests", "AppInviteSample.UITests\AppInviteSample.UITests.csproj", "{DF69BD26-A581-41A9-8889-289786B2F7BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D1C857A-9314-4668-8C66-FD32BC4FED5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1C857A-9314-4668-8C66-FD32BC4FED5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1C857A-9314-4668-8C66-FD32BC4FED5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1C857A-9314-4668-8C66-FD32BC4FED5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF69BD26-A581-41A9-8889-289786B2F7BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF69BD26-A581-41A9-8889-289786B2F7BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF69BD26-A581-41A9-8889-289786B2F7BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF69BD26-A581-41A9-8889-289786B2F7BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

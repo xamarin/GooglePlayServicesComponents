@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.Firebase.Config</id>
+    <title>Xamarin Firebase - Config</title>
+    <version>$version$</version>
+    <authors>Microsoft</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Firebase - Config $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Firebase - Config $aar-version$
+    </description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865383</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865377</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/firebase-config_128x128.png</iconUrl>
+    <dependencies>
+      <group targetFramework="MonoAndroid80">
+<!-- dependencies -->
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.Firebase.Config.dll" target="lib/MonoAndroid80" />
+    <file src="firebase-config/nuget/Xamarin.Firebase.Config.targets" target="build/MonoAndroid80" />
+  </files>
+</package>

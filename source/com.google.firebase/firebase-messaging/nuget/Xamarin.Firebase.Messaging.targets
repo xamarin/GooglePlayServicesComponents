@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!-- Unique key for cached download -->
+        <_XbdKey_firebasemessaging>firebase-17.1.0/firebasemessaging</_XbdKey_firebasemessaging>
+        
+        <!-- Path to .aar file within the extracted contents of the cached download -->
+        <_XbdAarFile_firebasemessaging>m2repository\com\google\firebase\firebase-messaging\17.1.0\firebase-messaging-17.1.0.aar</_XbdAarFile_firebasemessaging>
+        
+        <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdAarFileFullPath_firebasemessaging>$(XamarinBuildDownloadDir)$(_XbdKey_firebasemessaging)\firebase-messaging-17.1.0.aar</_XbdAarFileFullPath_firebasemessaging>
+
+        <!-- Assembly name to embed .aar in -->
+        <_XbdAssemblyName_firebasemessaging>Xamarin.Firebase.Messaging</_XbdAssemblyName_firebasemessaging>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebasemessaging"/>
+    </ItemGroup>
+
+    <Target Name="_XbdRestoreItems_firebasemessaging">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasemessaging)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasemessaging)')">
+            <Output PropertyName="_XbdAarFileFullPath_firebasemessaging" TaskParameter="Value" />
+        </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownload Include="$(_XbdKey_firebasemessaging)">
+                <Url>https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-messaging/17.1.0/firebase-messaging-17.1.0.aar</Url>
+                <ToFile>firebase-messaging-17.1.0.aar</ToFile>
+                <Kind>Uncompressed</Kind>
+                <Md5>3bc225fdb37d5230601bcb9c351cee88</Md5>
+            </XamarinBuildDownload>
+        </ItemGroup>
+
+        <ItemGroup>
+            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebasemessaging)">
+                <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+                <AssemblyName>$(_XbdAssemblyName_firebasemessaging)</AssemblyName>
+            </XamarinBuildDownloadRestoreAssemblyAar>
+        </ItemGroup>
+    </Target>
+</Project>

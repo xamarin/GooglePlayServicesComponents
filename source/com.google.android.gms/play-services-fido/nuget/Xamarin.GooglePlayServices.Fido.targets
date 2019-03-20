@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!-- Unique key for cached download -->
+        <_XbdKey_playservicesfido>playservices-15.0.1/playservicesfido</_XbdKey_playservicesfido>
+        
+        <!-- Path to .aar file within the extracted contents of the cached download -->
+        <_XbdAarFile_playservicesfido>m2repository\com\google\android\gms\play-services-fido\15.0.1\play-services-fido-15.0.1.aar</_XbdAarFile_playservicesfido>
+        
+        <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdAarFileFullPath_playservicesfido>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesfido)\play-services-fido-15.0.1.aar</_XbdAarFileFullPath_playservicesfido>
+
+        <!-- Assembly name to embed .aar in -->
+        <_XbdAssemblyName_playservicesfido>Xamarin.GooglePlayServices.Fido</_XbdAssemblyName_playservicesfido>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesfido"/>
+    </ItemGroup>
+
+    <Target Name="_XbdRestoreItems_playservicesfido">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesfido)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesfido)')">
+            <Output PropertyName="_XbdAarFileFullPath_playservicesfido" TaskParameter="Value" />
+        </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownload Include="$(_XbdKey_playservicesfido)">
+                <Url>https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-fido/15.0.1/play-services-fido-15.0.1.aar</Url>
+                <ToFile>play-services-fido-15.0.1.aar</ToFile>
+                <Kind>Uncompressed</Kind>
+                <Md5>433003e1830dd5499c3cde0fed8800a6</Md5>
+            </XamarinBuildDownload>
+        </ItemGroup>
+
+        <ItemGroup>
+            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesfido)">
+                <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+                <AssemblyName>$(_XbdAssemblyName_playservicesfido)</AssemblyName>
+            </XamarinBuildDownloadRestoreAssemblyAar>
+        </ItemGroup>
+    </Target>
+</Project>

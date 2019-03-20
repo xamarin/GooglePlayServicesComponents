@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!-- Unique key for cached download -->
+        <_XbdKey_firebaseiid>firebase-16.2.0/firebaseiid</_XbdKey_firebaseiid>
+        
+        <!-- Path to .aar file within the extracted contents of the cached download -->
+        <_XbdAarFile_firebaseiid>m2repository\com\google\firebase\firebase-iid\16.2.0\firebase-iid-16.2.0.aar</_XbdAarFile_firebaseiid>
+        
+        <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdAarFileFullPath_firebaseiid>$(XamarinBuildDownloadDir)$(_XbdKey_firebaseiid)\firebase-iid-16.2.0.aar</_XbdAarFileFullPath_firebaseiid>
+
+        <!-- Assembly name to embed .aar in -->
+        <_XbdAssemblyName_firebaseiid>Xamarin.Firebase.Iid</_XbdAssemblyName_firebaseiid>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebaseiid"/>
+    </ItemGroup>
+
+    <Target Name="_XbdRestoreItems_firebaseiid">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseiid)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseiid)')">
+            <Output PropertyName="_XbdAarFileFullPath_firebaseiid" TaskParameter="Value" />
+        </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownload Include="$(_XbdKey_firebaseiid)">
+                <Url>https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-iid/16.2.0/firebase-iid-16.2.0.aar</Url>
+                <ToFile>firebase-iid-16.2.0.aar</ToFile>
+                <Kind>Uncompressed</Kind>
+                <Md5>6359c61bc26d6b832d1f2051968eaa94</Md5>
+            </XamarinBuildDownload>
+        </ItemGroup>
+
+        <ItemGroup>
+            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebaseiid)">
+                <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+                <AssemblyName>$(_XbdAssemblyName_firebaseiid)</AssemblyName>
+            </XamarinBuildDownloadRestoreAssemblyAar>
+        </ItemGroup>
+    </Target>
+</Project>

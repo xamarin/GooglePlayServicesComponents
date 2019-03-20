@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.Firebase.AppIndexing</id>
+    <title>Xamarin Firebase - AppIndexing</title>
+    <version>$version$</version>
+    <authors>Microsoft</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Firebase - AppIndexing $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Firebase - AppIndexing $aar-version$
+    </description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865375</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865377</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/firebase-appindexing_128x128.png</iconUrl>
+    <dependencies>
+      <group targetFramework="MonoAndroid80">
+<!-- dependencies -->
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.Firebase.AppIndexing.dll" target="lib/MonoAndroid80" />
+    <file src="firebase-appindexing/nuget/Xamarin.Firebase.AppIndexing.targets" target="build/MonoAndroid80" />
+  </files>
+</package>

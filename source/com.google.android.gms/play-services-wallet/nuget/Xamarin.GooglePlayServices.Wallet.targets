@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!-- Unique key for cached download -->
+        <_XbdKey_playserviceswallet>playservices-15.0.1/playserviceswallet</_XbdKey_playserviceswallet>
+        
+        <!-- Path to .aar file within the extracted contents of the cached download -->
+        <_XbdAarFile_playserviceswallet>m2repository\com\google\android\gms\play-services-wallet\15.0.1\play-services-wallet-15.0.1.aar</_XbdAarFile_playserviceswallet>
+        
+        <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdAarFileFullPath_playserviceswallet>$(XamarinBuildDownloadDir)$(_XbdKey_playserviceswallet)\play-services-wallet-15.0.1.aar</_XbdAarFileFullPath_playserviceswallet>
+
+        <!-- Assembly name to embed .aar in -->
+        <_XbdAssemblyName_playserviceswallet>Xamarin.GooglePlayServices.Wallet</_XbdAssemblyName_playserviceswallet>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <XamarinBuildRestoreResources Include="_XbdRestoreItems_playserviceswallet"/>
+    </ItemGroup>
+
+    <Target Name="_XbdRestoreItems_playserviceswallet">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playserviceswallet)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playserviceswallet)')">
+            <Output PropertyName="_XbdAarFileFullPath_playserviceswallet" TaskParameter="Value" />
+        </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownload Include="$(_XbdKey_playserviceswallet)">
+                <Url>https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-wallet/15.0.1/play-services-wallet-15.0.1.aar</Url>
+                <ToFile>play-services-wallet-15.0.1.aar</ToFile>
+                <Kind>Uncompressed</Kind>
+                <Md5>8a1887a18e5dfec1d0c5216327a8651f</Md5>
+            </XamarinBuildDownload>
+        </ItemGroup>
+
+        <ItemGroup>
+            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playserviceswallet)">
+                <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+                <AssemblyName>$(_XbdAssemblyName_playserviceswallet)</AssemblyName>
+            </XamarinBuildDownloadRestoreAssemblyAar>
+        </ItemGroup>
+    </Target>
+</Project>

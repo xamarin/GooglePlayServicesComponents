@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.Wallet</id>
+    <title>Xamarin Google Play Services - Wallet</title>
+    <version>$version$</version>
+    <authors>Microsoft</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - Wallet $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - Wallet $aar-version$
+
+      Android Pay enables simple and secure purchases of physical goods and services in Android apps, and eliminates the need to manually enter payment and shipping information. Integrate Android Pay to reach millions of signed-in Android users and drive higher conversions.
+    </description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865365</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-wallet_128x128.png</iconUrl>
+    <dependencies>
+      <group targetFramework="MonoAndroid80">
+<!-- dependencies -->
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.GooglePlayServices.Wallet.dll" target="lib/MonoAndroid80" />
+    <file src="wallet/nuget/Xamarin.GooglePlayServices.Wallet.targets" target="build/MonoAndroid80" />
+  </files>
+</package>

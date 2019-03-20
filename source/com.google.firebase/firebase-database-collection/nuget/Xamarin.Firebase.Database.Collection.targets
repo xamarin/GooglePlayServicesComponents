@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!-- Unique key for cached download -->
+        <_XbdKey_firebasedatabasecollection>firebase-15.0.1/firebasedatabasecollection</_XbdKey_firebasedatabasecollection>
+        
+        <!-- Path to .aar file within the extracted contents of the cached download -->
+        <_XbdAarFile_firebasedatabasecollection>m2repository\com\google\firebase\firebase-database-collection\15.0.1\firebase-database-collection-15.0.1.aar</_XbdAarFile_firebasedatabasecollection>
+        
+        <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdAarFileFullPath_firebasedatabasecollection>$(XamarinBuildDownloadDir)$(_XbdKey_firebasedatabasecollection)\firebase-database-collection-15.0.1.aar</_XbdAarFileFullPath_firebasedatabasecollection>
+
+        <!-- Assembly name to embed .aar in -->
+        <_XbdAssemblyName_firebasedatabasecollection>Xamarin.Firebase.Database.Collection</_XbdAssemblyName_firebasedatabasecollection>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebasedatabasecollection"/>
+    </ItemGroup>
+
+    <Target Name="_XbdRestoreItems_firebasedatabasecollection">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasedatabasecollection)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebasedatabasecollection)')">
+            <Output PropertyName="_XbdAarFileFullPath_firebasedatabasecollection" TaskParameter="Value" />
+        </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownload Include="$(_XbdKey_firebasedatabasecollection)">
+                <Url>https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-database-collection/15.0.1/firebase-database-collection-15.0.1.aar</Url>
+                <ToFile>firebase-database-collection-15.0.1.aar</ToFile>
+                <Kind>Uncompressed</Kind>
+                <Md5>745ad52d3e26f0797855a96b52926332</Md5>
+            </XamarinBuildDownload>
+        </ItemGroup>
+
+        <ItemGroup>
+            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebasedatabasecollection)">
+                <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+                <AssemblyName>$(_XbdAssemblyName_firebasedatabasecollection)</AssemblyName>
+            </XamarinBuildDownloadRestoreAssemblyAar>
+        </ItemGroup>
+    </Target>
+</Project>

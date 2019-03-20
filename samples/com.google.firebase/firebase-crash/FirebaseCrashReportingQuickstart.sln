@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseCrashReportingQuickstart", "FirebaseCrashReportingQuickstart\FirebaseCrashReportingQuickstart.csproj", "{76D81BCF-1EFB-4AD8-8A72-6491522A6086}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseCrashReportingQuickstart.UITests", "FirebaseCrashReportingQuickstart.UITests\FirebaseCrashReportingQuickstart.UITests.csproj", "{CC7EE1D3-A8BB-4135-AF99-3CC190A006AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76D81BCF-1EFB-4AD8-8A72-6491522A6086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D81BCF-1EFB-4AD8-8A72-6491522A6086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D81BCF-1EFB-4AD8-8A72-6491522A6086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D81BCF-1EFB-4AD8-8A72-6491522A6086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC7EE1D3-A8BB-4135-AF99-3CC190A006AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC7EE1D3-A8BB-4135-AF99-3CC190A006AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC7EE1D3-A8BB-4135-AF99-3CC190A006AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC7EE1D3-A8BB-4135-AF99-3CC190A006AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

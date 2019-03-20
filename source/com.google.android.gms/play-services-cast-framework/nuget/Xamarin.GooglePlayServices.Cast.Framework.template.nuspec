@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.GooglePlayServices.Cast.Framework</id>
+    <title>Xamarin Google Play Services - Cast Framework</title>
+    <version>$version$</version>
+    <authors>Microsoft</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Xamarin.Android Bindings for Google Play Services - Cast Framework $aar-version$</summary>
+    <description>
+      Xamarin.Android Bindings for Google Play Services - Cast Framework $aar-version$
+    </description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865435</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-cast-framework_128x128.png</iconUrl>
+    <dependencies>
+      <group targetFramework="MonoAndroid80">
+<!-- dependencies -->
+        <dependency id="Xamarin.Android.Support.v7.MediaRouter" version="$support-version$" />
+        <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="$support-version$" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.GooglePlayServices.Cast.Framework.dll" target="lib/MonoAndroid80" />
+    <file src="cast-framework/nuget/Xamarin.GooglePlayServices.Cast.Framework.targets" target="build/MonoAndroid80" />
+  </files>
+</package>

@@ -1,0 +1,8 @@
+<metadata>
+    
+    <remove-node 
+        path="/api/package[@name='com.google.firebase.appindexing']/interface[@name='Indexable']"
+        />
+
+    
+</metadata>

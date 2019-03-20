@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationSample", "LocationSample\LocationSample.csproj", "{932C429C-CDF8-4AE8-82D0-54756054EA1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationSample.UITests", "LocationSample.UITests\LocationSample.UITests.csproj", "{50E0F240-5771-47BC-B6EF-AB1BBD205105}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{932C429C-CDF8-4AE8-82D0-54756054EA1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{932C429C-CDF8-4AE8-82D0-54756054EA1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{932C429C-CDF8-4AE8-82D0-54756054EA1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{932C429C-CDF8-4AE8-82D0-54756054EA1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50E0F240-5771-47BC-B6EF-AB1BBD205105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E0F240-5771-47BC-B6EF-AB1BBD205105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E0F240-5771-47BC-B6EF-AB1BBD205105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E0F240-5771-47BC-B6EF-AB1BBD205105}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F545413-3269-492B-AE0C-FFA72E7CF301}
+	EndGlobalSection
+EndGlobal

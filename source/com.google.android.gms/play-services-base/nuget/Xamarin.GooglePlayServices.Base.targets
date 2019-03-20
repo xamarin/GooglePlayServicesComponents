@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!-- Unique key for cached download -->
+        <_XbdKey_playservicesbase>playservices-15.0.1/playservicesbase</_XbdKey_playservicesbase>
+        
+        <!-- Path to .aar file within the extracted contents of the cached download -->
+        <_XbdAarFile_playservicesbase>m2repository\com\google\android\gms\play-services-base\15.0.1\play-services-base-15.0.1.aar</_XbdAarFile_playservicesbase>
+        
+        <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdAarFileFullPath_playservicesbase>$(XamarinBuildDownloadDir)$(_XbdKey_playservicesbase)\play-services-base-15.0.1.aar</_XbdAarFileFullPath_playservicesbase>
+
+        <!-- Assembly name to embed .aar in -->
+        <_XbdAssemblyName_playservicesbase>Xamarin.GooglePlayServices.Base</_XbdAssemblyName_playservicesbase>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <XamarinBuildRestoreResources Include="_XbdRestoreItems_playservicesbase"/>
+    </ItemGroup>
+
+    <Target Name="_XbdRestoreItems_playservicesbase">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesbase)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_playservicesbase)')">
+            <Output PropertyName="_XbdAarFileFullPath_playservicesbase" TaskParameter="Value" />
+        </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownload Include="$(_XbdKey_playservicesbase)">
+                <Url>https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-base/15.0.1/play-services-base-15.0.1.aar</Url>
+                <ToFile>play-services-base-15.0.1.aar</ToFile>
+                <Kind>Uncompressed</Kind>
+                <Md5>c1f9e95604519c08bac707b93c34912c</Md5>
+            </XamarinBuildDownload>
+        </ItemGroup>
+
+        <ItemGroup>
+            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_playservicesbase)">
+                <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+                <AssemblyName>$(_XbdAssemblyName_playservicesbase)</AssemblyName>
+            </XamarinBuildDownloadRestoreAssemblyAar>
+        </ItemGroup>
+    </Target>
+</Project>

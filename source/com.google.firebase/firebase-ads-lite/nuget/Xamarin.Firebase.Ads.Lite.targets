@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!-- Unique key for cached download -->
+        <_XbdKey_firebaseadslite>firebase-15.0.1/firebaseadslite</_XbdKey_firebaseadslite>
+        
+        <!-- Path to .aar file within the extracted contents of the cached download -->
+        <_XbdAarFile_firebaseadslite>m2repository\com\google\firebase\firebase-ads-lite\15.0.1\firebase-ads-lite-15.0.1.aar</_XbdAarFile_firebaseadslite>
+        
+        <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdAarFileFullPath_firebaseadslite>$(XamarinBuildDownloadDir)$(_XbdKey_firebaseadslite)\firebase-ads-lite-15.0.1.aar</_XbdAarFileFullPath_firebaseadslite>
+
+        <!-- Assembly name to embed .aar in -->
+        <_XbdAssemblyName_firebaseadslite>Xamarin.Firebase.Ads.Lite</_XbdAssemblyName_firebaseadslite>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <XamarinBuildRestoreResources Include="_XbdRestoreItems_firebaseadslite"/>
+    </ItemGroup>
+
+    <Target Name="_XbdRestoreItems_firebaseadslite">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseadslite)" Condition="Exists('$(AndroidSdkDirectory)\extras\google\$(_XbdAarFile_firebaseadslite)')">
+            <Output PropertyName="_XbdAarFileFullPath_firebaseadslite" TaskParameter="Value" />
+        </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownload Include="$(_XbdKey_firebaseadslite)">
+                <Url>https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-ads-lite/15.0.1/firebase-ads-lite-15.0.1.aar</Url>
+                <ToFile>firebase-ads-lite-15.0.1.aar</ToFile>
+                <Kind>Uncompressed</Kind>
+                <Md5>61696d923857b4bbd600e386b9c4754c</Md5>
+            </XamarinBuildDownload>
+        </ItemGroup>
+
+        <ItemGroup>
+            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_firebaseadslite)">
+                <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+                <AssemblyName>$(_XbdAssemblyName_firebaseadslite)</AssemblyName>
+            </XamarinBuildDownloadRestoreAssemblyAar>
+        </ItemGroup>
+    </Target>
+</Project>

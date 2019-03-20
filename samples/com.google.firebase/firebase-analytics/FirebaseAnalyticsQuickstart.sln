@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseAnalyticsQuickstart", "FirebaseAnalyticsQuickstart\FirebaseAnalyticsQuickstart.csproj", "{64ADFD05-882E-41D9-B045-935CD0D08CD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseAnalyticsQuickstart.UITests", "FirebaseAnalyticsQuickstart.UITests\FirebaseAnalyticsQuickstart.UITests.csproj", "{5BEAE52C-A71D-487A-8449-62218BC74E68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64ADFD05-882E-41D9-B045-935CD0D08CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64ADFD05-882E-41D9-B045-935CD0D08CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64ADFD05-882E-41D9-B045-935CD0D08CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64ADFD05-882E-41D9-B045-935CD0D08CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BEAE52C-A71D-487A-8449-62218BC74E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BEAE52C-A71D-487A-8449-62218BC74E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BEAE52C-A71D-487A-8449-62218BC74E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BEAE52C-A71D-487A-8449-62218BC74E68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

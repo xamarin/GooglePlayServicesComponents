@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <fragment
+            android:id="@+id/checkout_cart_detail_fragment"
+            android:name="androidpayquickstart.CartDetailFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <include
+            layout="@layout/horizontal_divider" />
+    <!--
+            This FrameLayout is a placeholder for the Google Wallet button and will be provided
+            by a fragment at runtime.
+        -->
+        <FrameLayout
+            android:id="@+id/dynamic_wallet_button_fragment"
+            android:layout_height="@dimen/buy_button_height"
+            android:layout_width="@dimen/buy_button_width"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_xlarge" />
+        <CheckBox
+            android:id="@+id/checkbox_stripe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_xlarge"
+            android:text="@string/stripe_checkbox_text"
+            android:checked="false"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:id="@+id/button_regular_checkout"
+            android:layout_width="@dimen/buy_button_width"
+            android:layout_height="wrap_content"
+            android:text="@string/continue_checkout"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/padding_large" />
+        <Button
+            android:id="@+id/button_return_to_shopping"
+            android:layout_width="@dimen/buy_button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding_large"
+            android:text="@string/return_to_shopping" />
+    </LinearLayout>
+</ScrollView>

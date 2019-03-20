@@ -9,6 +9,7 @@ output/
 *.xam
 *.DS_Store
 *.pidb
+*.user
 *.userprefs
 *.dotSettings
 *.suo
@@ -29,3 +30,10 @@ generated.targets
 .droidres
 cake.sh
 cake.sh.commit
+/.vs
+.vs/
+tools/
+.vscode/
+generated
+binderator
+models.json

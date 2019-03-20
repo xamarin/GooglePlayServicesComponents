@@ -1,0 +1,88 @@
+﻿@using System.Linq
+@using System.IO
+@using System.Xml.Linq
+@{
+  var targetFrameworkMoniker = "MonoAndroid90";
+}
+<?xml version="1.0" encoding="utf-8"?>
+@functions {
+  public static void RemoveXmlns(XElement e)
+  {
+    e.Name = e.Name.LocalName;
+
+    foreach (var node in e.DescendantNodes())
+    {
+      var n = node as XElement;
+      if (n != null)
+        RemoveXmlns(n);
+    }
+  }
+}
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  @if (@Model.MavenArtifacts.Count > 0) {
+  <ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) {
+      if (art.ProguardFile != null) {
+    <ProguardConfiguration Include="$(MSBuildThisFileDirectory)..\..\proguard\@(targetFrameworkMoniker)\proguard.txt" />
+      }
+    }
+  </ItemGroup>
+  }
+
+  <ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) {
+      if (1==2 && art.MavenArtifactPackaging == "aar") {
+    <AndroidAarLibrary Include="$(MSBuildThisFileDirectory)..\..\aar\@(targetFrameworkMoniker)\@(art.MavenArtifactId).aar" />
+      }
+    }
+  </ItemGroup>
+
+  @foreach (var art in @Model.MavenArtifacts) {
+      if (art.MavenArtifactPackaging == "aar") {
+        var friendlyGroupId = art.MavenGroupId.Contains("firebase") ? "googlefb" : "googlegps";
+        var friendlyArtifactId = art.MavenArtifactId.Replace("-", "");
+        var friendlyId = friendlyGroupId + "_" + friendlyArtifactId;
+        var url = "https://dl.google.com/dl/android/maven2/" + art.MavenGroupId.Replace(".", "/") + "/" + art.MavenArtifactId + "/" + art.MavenArtifactVersion + "/" + art.MavenArtifactId + "-" + art.MavenArtifactVersion + ".aar";
+        var xbdKey = friendlyGroupId + "-" + art.MavenArtifactVersion + "/" + friendlyArtifactId;
+        var xbdAarFile = friendlyArtifactId + "-" + art.MavenArtifactVersion + ".aar";
+        var xbdAarPath = xbdKey.Replace("/", "\\") + "\\" + xbdAarFile;
+        var xbdAsmName = string.IsNullOrEmpty(Model.AssemblyName) ? Model.NuGetPackageId : Model.AssemblyName;
+        var xbdMd5 = art.MavenArtifactMd5;
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_@(friendlyId)" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_@(friendlyId)">
+    <ItemGroup>
+      <XamarinBuildDownload Include="@(xbdKey)">
+        <Url>@(url)</Url>
+        <ToFile>@(xbdAarFile)</ToFile>
+        <Kind>Uncompressed</Kind>
+        @if (!string.IsNullOrEmpty(xbdMd5)) {
+        <Md5>@(xbdMd5)</Md5>
+        }
+      </XamarinBuildDownload>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(XamarinBuildDownloadDir)@(xbdAarPath)">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>@(xbdAsmName)</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+      }
+    }
+
+@{
+  string mergeTargets = Path.Combine(Model.Config.BasePath, "source", Model.MavenGroupId, Model.Name, "merge.targets");
+  if (File.Exists(mergeTargets)) {
+    XDocument xmlTargets = XDocument.Load(mergeTargets);
+    XNamespace nsChild = xmlTargets.Root.Name.Namespace;
+    @Raw("\r\n\r\n");
+    foreach (var xelem in xmlTargets.Element (nsChild + "Project").Elements ()) {
+      RemoveXmlns(xelem);
+      @Raw("\r\n" + xelem.ToString());
+    }
+    @Raw("\r\n\r\n");
+  }
+}
+</Project>
