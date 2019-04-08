@@ -14,4 +14,17 @@
 	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+    
+    
+    <add-node path="/api/package[@name='com.google.firebase.messaging']/class[@name='FirebaseMessagingService']">
+      <method 
+            visibility="public" static="false"  abstract="false" return="void" name="onNewToken" 
+            jni-signature="(Ljava/lang/String;Ljava/lang/Exception;)V" jni-return="V" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synthetic="false" synchronized="false" 
+            >
+            <parameter name="p0" type="java.lang.String" jni-type="Ljava/lang/String;">
+            </parameter>
+      </method>
+    </add-node>
+    
 </metadata>
