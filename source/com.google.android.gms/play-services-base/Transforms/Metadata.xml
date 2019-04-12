@@ -175,7 +175,7 @@
         <method 
             abstract="false" deprecated="not deprecated" final="false" name="createFailedResult" native="false" 
             return="Java.Lang.Object" static="false" synchronized="false" visibility="protected">
-            <parameter name="p0" type="com.google.android.gms.common.api.Status">
+            <parameter name="status" type="com.google.android.gms.common.api.Status">
             </parameter>
         </method>       
     </add-node>   
@@ -186,6 +186,106 @@
         >
         public
     </attr>
-
     
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zab']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zai']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='zad']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='zab']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zak']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='GoogleApiManager.zaa']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']/class[@name='zaa']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.images']/class[@name='zac']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.images']/class[@name='zad']"        
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.images']/class[@name='zae']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zac']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zaa']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='zab']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='zac']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='zad']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zaa']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zaa.zaa']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zai']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zaj']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server']/class[@name='zaa']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zan']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zao']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zap']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='StringToIntConverter']/method[@name='zack' and count(parameter)=0]"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='StringToIntConverter']/implements[@name='com.google.android.gms.common.server.response.FastJsonResponse.FieldConverter']"
+        >        
+    </remove-node>
+
 </metadata>

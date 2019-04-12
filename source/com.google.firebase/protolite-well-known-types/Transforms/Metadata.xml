@@ -1,9 +1,78 @@
 ﻿<metadata>
-	<!-- Fix Namespaces -->
-	<attr path="/api/package[@name='com.google.protobuf']" name="managedName">Google.Protobuf</attr>
-
+	<!-- Fix Namespaces -->    
+    <attr
+        path="/api/package[@name='com.google.protobuf']"
+        name="managedName"
+        >
+        Google.Protobuf
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.api']"
+        name="managedName"
+        >
+        Google.Api
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.cloud.audit']"
+        name="managedName"
+        >
+        Google.Cloud.Audit
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.logging.type']"
+        name="managedName"
+        >
+        Google.Logging.Type
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.longrunning']"
+        name="managedName"
+        >
+        Google.Longrunning
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf.compiler']"
+        name="managedName"
+        >
+        Google.Protobuf.Compiler
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.rpc']"
+        name="managedName"
+        >
+        Google.Rpc
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.type']"
+        name="managedName"
+        >
+        Google.Type
+    </attr>
+    <attr
+        path="/api/package[@name='firebase.com.protolitewrapper']"
+        name="managedName"
+        >
+        Firebase.ProtoliteWrapper
+    </attr>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.UninterpretedOption.NamePart']/implements[@name='com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePartOrBuilder']"
         />
+    
+    <remove-node
+        path="/api/package[@name='com.google.api']/class[@name='Distribution']/implements[@name='com.google.api.DistributionOrBuilder']"
+        >
+    </remove-node>
 </metadata>
