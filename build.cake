@@ -20,6 +20,9 @@ using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
 
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
 
@@ -156,6 +159,7 @@ Task("javadocs")
 
 Task("binderate")
 	.IsDependentOn("javadocs")
+	.IsDependentOn("binderate-config-verify")
 	.Does(() =>
 {
 	if (!DirectoryExists("./util/binderator"))
@@ -171,6 +175,44 @@ Task("binderate")
 		+ MakeAbsolute(configFile).FullPath + "\" --basepath=\"" + MakeAbsolute(basePath).FullPath + "\"");
 });
 
+Task("binderate-config-verify")
+	.Does
+	(
+		() =>
+		{
+			using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+			{
+				JsonTextReader jtr = new JsonTextReader(reader);
+				JArray ja = (JArray)JToken.ReadFrom(jtr);
+				
+				Information("config.json");
+				//Information($"{ja}");
+				foreach(JObject jo in ja[0]["artifacts"])
+				{
+					string version       = (string) jo["version"];
+					string nuget_version = (string) jo["nugetVersion"];
+					Information($"groupId       = {jo["groupId"]}");
+					Information($"artifactId    = {jo["artifactId"]}");
+					Information($"version       = {version}");
+					Information($"nuget_version = {nuget_version}");
+					Information($"nugetId       = {jo["nugetId"]}");
+					
+					string version_compressed = version.Replace(".", "");
+					if( nuget_version?.Contains(version_compressed) == false)
+					{
+						Error("check config.json for nuget id");
+						Error($"		groupId       = {jo["groupId"]}");
+						Error($"		artifactId    = {jo["artifactId"]}");
+						Error($"		version       = {version}");
+						Error($"		nuget_version = {nuget_version}");
+						Error($"		nugetId       = {jo["nugetId"]}");
+
+						throw new Exception("check config.json for nuget id");
+					}
+				}
+			}
+		}
+	);
 
 Task("mergetargets")
 	.Does(() =>
