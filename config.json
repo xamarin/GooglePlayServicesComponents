@@ -87,7 +87,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-auth-api-phone",
 			"version" : "16.0.0",
-			"nugetVersion" : "71.1501.0-preview3",
+			"nugetVersion" : "71.1600.0-preview3",
 			"nugetId" : "Xamarin.GooglePlayServices.Auth.Api.Phone"
 		},
 		{
