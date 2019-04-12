@@ -1,6 +1,0 @@
-﻿<metadata>
-	
-	<!-- Rename Namespaces -->
-	<attr path="/api/package[@name='com.google.firebase.auth']" name="managedName">Firebase.Auth</attr>
-    
-</metadata>

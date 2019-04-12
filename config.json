@@ -417,20 +417,6 @@
 		},
 		{
 			"groupId" : "com.google.firebase",
-			"artifactId" : "firebase-auth-common",
-			"version" : "9.8.0",
-			"nugetVersion" : "71.980.0-preview3",
-			"nugetId" : "Xamarin.Firebase.Auth.Common"
-		},
-		{
-			"groupId" : "com.google.firebase",
-			"artifactId" : "firebase-auth-module",
-			"version" : "9.8.0",
-			"nugetVersion" : "71.980.0-preview3",
-			"nugetId" : "Xamarin.Firebase.Auth.Module"
-		},
-		{
-			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-auth-impl",
 			"version" : "16.1.0",
 			"nugetVersion" : "71.1610.0-preview3",
