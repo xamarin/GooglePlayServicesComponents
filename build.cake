@@ -175,6 +175,8 @@ Task("binderate")
 		+ MakeAbsolute(configFile).FullPath + "\" --basepath=\"" + MakeAbsolute(basePath).FullPath + "\"");
 });
 
+string nuget_version_template = "71.vvvv.0-preview3";
+
 Task("binderate-config-verify")
 	.Does
 	(
@@ -201,12 +203,15 @@ Task("binderate-config-verify")
 					if( nuget_version?.Contains(version_compressed) == false)
 					{
 						Error("check config.json for nuget id");
-						Error($"		groupId       = {jo["groupId"]}");
-						Error($"		artifactId    = {jo["artifactId"]}");
-						Error($"		version       = {version}");
-						Error($"		nuget_version = {nuget_version}");
-						Error($"		nugetId       = {jo["nugetId"]}");
+						Error  ($"		groupId       = {jo["groupId"]}");
+						Error  ($"		artifactId    = {jo["artifactId"]}");
+						Error  ($"		version       = {version}");
+						Error  ($"		nuget_version = {nuget_version}");
+						Error  ($"		nugetId       = {jo["nugetId"]}");
 
+						string nuget_version_new = nuget_version_template.Replace("vvvv", version_compressed);
+						Warning($"	expected : ");
+						Warning($"		nuget_version = {nuget_version_new}");
 						throw new Exception("check config.json for nuget id");
 					}
 				}
