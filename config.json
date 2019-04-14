@@ -23,15 +23,15 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-ads",
-			"version" : "16.0.0",
-			"nugetVersion" : "71.1600.0-preview3",
+			"version" : "17.2.0",
+			"nugetVersion" : "71.1720.0-preview3",
 			"nugetId" : "Xamarin.GooglePlayServices.Ads"
 		},
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-ads-base",
-			"version" : "16.0.0",
-			"nugetVersion" : "71.1600.0-preview3",
+			"version" : "17.2.0",
+			"nugetVersion" : "71.1720.0-preview3",
 			"nugetId" : "Xamarin.GooglePlayServices.Ads.Base"
 		},
 		{
@@ -44,8 +44,8 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-ads-lite",
-			"version" : "16.0.0",
-			"nugetVersion" : "71.1600.0-preview3",
+			"version" : "17.2.0",
+			"nugetVersion" : "71.1720.0-preview3",
 			"nugetId" : "Xamarin.GooglePlayServices.Ads.Lite"
 		},
 		{
@@ -177,8 +177,8 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-gass",
-			"version" : "16.0.0",
-			"nugetVersion" : "71.1600.0-preview3",
+			"version" : "17.2.0",
+			"nugetVersion" : "71.1720.0-preview3",
 			"nugetId" : "Xamarin.GooglePlayServices.Gass"
 		},
 		{
@@ -236,6 +236,13 @@
 			"version" : "16.3.0",
 			"nugetVersion" : "71.1630.0-preview3",
 			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Api"
+		},
+		{
+			"groupId" : "com.google.android.gms",
+			"artifactId" : "play-services-measurement-sdk-api",
+			"version" : "16.3.0",
+			"nugetVersion" : "71.1630.0-preview3",
+			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Sdk.Api"
 		},
 		{
 			"groupId" : "com.google.android.gms",
