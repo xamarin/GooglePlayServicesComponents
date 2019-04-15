@@ -3,4 +3,23 @@
 	<!-- Rename Namespaces -->
 	<attr path="/api/package[@name='com.google.firebase.auth']" name="managedName">Firebase.Auth</attr>
     
+    <auth
+        path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.firebase.auth']"
+        name="managedName"
+        >
+        Android.Gms.Dynamite.Firebase.Auth
+    </auth>
+    <attr
+        path="/api/package[@name='com.google.firebase.auth.api.internal']"
+        name="managedName"
+        >
+        Firebase.Auth.Api.Internal
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.auth.api.fallback.service']"
+        name="managedName"
+        >
+        Firebase.Auth.Api.Fallback.Service
+    </attr>
+       
 </metadata>

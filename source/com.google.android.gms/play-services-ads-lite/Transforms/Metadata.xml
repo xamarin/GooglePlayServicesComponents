@@ -193,6 +193,24 @@
         networkExtras
     </attr>
 
-
-
+    
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.rewarded']"
+        name="managedName"
+        >
+        Android.Gms.Ads.Rewarded
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.mediation.rtb']"
+        name="managedName"
+        >
+        Android.Gms.Ads.Mediation.Rtb
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.initialization']"
+        name="managedName"
+        >
+        Android.Gms.Ads.Initialization
+    </attr>
+    
 </metadata>

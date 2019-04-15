@@ -7,6 +7,8 @@
 	<attr path="/api/package[@name='com.google.firebase.perf.network']" name="managedName">Firebase.Perf.Network</attr>
 	<attr path="/api/package[@name='com.google.firebase.perf.provider']" name="managedName">Firebase.Perf.Provider</attr>
     <attr path="/api/package[@name='com.google.firebase.perf.component']" name="managedName">Firebase.Perf.Component</attr>
+    <attr path="/api/package[@name='com.google.firebase.perf.internal']" name="managedName">Firebase.Perf.Internal</attr>
+    
     <attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.firebase.perf']" name="managedName">Firebase.Perf.Provider</attr>
 
     

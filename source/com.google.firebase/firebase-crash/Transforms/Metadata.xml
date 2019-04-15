@@ -22,4 +22,11 @@
 
 	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[starts-with(@name, 'm')]" />
 	<remove-node path="/api/package[@name='com.google.android.gms.internal']/interface[starts-with(@name, 'm')]" />
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.crash.component']"
+        name="managedName"
+        >
+        Firebase.Crash.Component
+    </attr>
 </metadata>

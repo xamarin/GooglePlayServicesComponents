@@ -5,7 +5,7 @@
 	<attr path="/api/package[@name='com.google.firebase.auth']" name="managedName">Firebase.Auth</attr>
     <attr path="/api/package[@name='com.google.firebase.events']" name="managedName">Firebase.Events</attr>
 	<attr path="/api/package[@name='com.google.firebase.provider']" name="managedName">Firebase.Provider</attr>
-    <attr path="/api/package[@name='com.google.firebase.components']" name="managedName">Firebase.Componentsw</attr>
+    <attr path="/api/package[@name='com.google.firebase.components']" name="managedName">Firebase.Components</attr>
     <attr path="/api/package[@name='com.google.firebase.inject']" name="managedName">Firebase.Inject</attr>
     <attr path="/api/package[@name='com.google.firebase.internal']" name="managedName">Firebase.Internal</attr>
     <attr path="/api/package[@name='com.google.firebase.internal.api']" name="managedName">Firebase.Internal.Api</attr>
@@ -23,4 +23,12 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
 	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.annotations']"
+        name="managedName"
+        >
+        Firebase.Annotations
+    </attr>
+    
 </metadata>
