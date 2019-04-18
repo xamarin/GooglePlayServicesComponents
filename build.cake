@@ -284,7 +284,7 @@ Task("samples")
 		MSBuild(sampleSln, c => {
 			c.Configuration = "Release";
 			c.Properties.Add("DesignTimeBuild", new [] { "false" });
-			c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/libs.binlog")).FullPath };
+			c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/samples.binlog")).FullPath };
 		});
 	}
 });
