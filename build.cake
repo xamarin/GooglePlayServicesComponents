@@ -282,13 +282,14 @@ Task("samples")
 	foreach (var sampleSln in sampleSlns) {
 		NuGetRestore(sampleSln, new NuGetRestoreSettings { });
 		string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
+		Information($"Solution: {filename_sln}");
 		MSBuild(sampleSln, c => {
 			c.Configuration = "Release";
 			c.Properties.Add("DesignTimeBuild", new [] { "false" });
 			c.BinaryLogger = new MSBuildBinaryLogSettings 
 			{
 				Enabled = true, 
-				FileName = MakeAbsolute(new FilePath($"./output/{sampleSln}.sample.binlog")).FullPath 
+				FileName = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath 
 			};
 		});
 	}
