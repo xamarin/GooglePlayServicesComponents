@@ -345,15 +345,15 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-vision-common",
-			"version" : "16.2.0",
-			"nugetVersion" : "71.1620.0-preview3",
+			"version" : "17.0.2",
+			"nugetVersion" : "71.1702.0-preview3",
 			"nugetId" : "Xamarin.GooglePlayServices.Vision.Common"
 		},
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-vision-image-label",
-			"version" : "16.2.0",
-			"nugetVersion" : "71.1620.0-preview3",
+			"version" : "17.0.2",
+			"nugetVersion" : "71.1702.0-preview3",
 			"nugetId" : "Xamarin.GooglePlayServices.Vision.ImageLabel"
 		},
 		{
@@ -551,29 +551,29 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-common",
-			"version" : "16.0.0",
-			"nugetVersion" : "71.1600.0-preview3",
+			"version" : "16.1.2",
+			"nugetVersion" : "71.1612.0-preview3",
 			"nugetId" : "Xamarin.Firebase.ML.Common"
 		},
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-model-interpreter",
-			"version" : "16.0.0",
-			"nugetVersion" : "71.1600.0-preview3",
+			"version" : "16.2.0",
+			"nugetVersion" : "71.1620.0-preview3",
 			"nugetId" : "Xamarin.Firebase.ML.Model.Interpreter"
 		},
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-vision",
-			"version" : "16.0.0",
-			"nugetVersion" : "71.1600.0-preview3",
+			"version" : "17.0.0",
+			"nugetVersion" : "71.1700.0-preview3",
 			"nugetId" : "Xamarin.Firebase.ML.Vision"
 		},
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-vision-image-label-model",
-			"version" : "16.2.0",
-			"nugetVersion" : "71.1620.0-preview3",
+			"version" : "17.0.2",
+			"nugetVersion" : "71.1702.0-preview3",
 			"nugetId" : "Xamarin.Firebase.ML.Vision.Image.Label.Model"
 		},
 		{
