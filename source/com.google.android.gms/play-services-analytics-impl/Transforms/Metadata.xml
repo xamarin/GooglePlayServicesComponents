@@ -108,4 +108,8 @@
 	<attr path="/api/package[@name='com.google.android.gms.tagmanager']/class[@name='InstallReferrerService']" name="extends">mono.android.app.IntentService</attr>
 	<attr path="/api/package[@name='com.google.android.gms.tagmanager']/class[@name='InstallReferrerService']/method[@name='onHandleIntent']" name="visibility">protected</attr>
 -->
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.internal.measurement']"
+        >        
+    </remove-node>
 </metadata>
