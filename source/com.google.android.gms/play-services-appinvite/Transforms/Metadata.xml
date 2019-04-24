@@ -26,4 +26,9 @@
 	<attr path="/api/package[@name='com.google.android.gms.appinvite']/class[@name='AppInvite']/field[@name='API']" name="managedName">API</attr>
 
 	<attr path="/api/package[@name='com.google.android.gms.people.protomodel']/class[@name='FetchBackUpDeviceContactInfoResponseEntity']" name="extends">Java.Lang.Object</attr>
+    
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.internal.measurement']"
+        >        
+    </remove-node>    
 </metadata>
