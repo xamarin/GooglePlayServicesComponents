@@ -14,5 +14,10 @@
         >
         Android.Gms.Measurement.Api
     </attr>
+    
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.internal.measurement']"
+        >        
+    </remove-node>
 	
 </metadata>

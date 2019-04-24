@@ -18,4 +18,10 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
 	<attr path="/api/package[@name='com.google.android.gms.tagmanager']/class[@name='TagManager']" name="managedName">TagManagerClass</attr>
+
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.internal.measurement']"
+        >        
+    </remove-node>
+    
 </metadata>
