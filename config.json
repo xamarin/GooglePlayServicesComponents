@@ -65,8 +65,8 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-appinvite",
-			"version" : "16.0.4",
-			"nugetVersion" : "71.1604.0-preview3",
+			"version" : "16.0.7",
+			"nugetVersion" : "71.1607.0-preview3",
 			"nugetId" : "Xamarin.GooglePlayServices.AppInvite"
 		},
 		{
@@ -488,8 +488,8 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-dynamic-links",
-			"version" : "16.1.2",
-			"nugetVersion" : "71.1612.0-preview3",
+			"version" : "16.1.5",
+			"nugetVersion" : "71.1615.0-preview3",
 			"nugetId" : "Xamarin.Firebase.Dynamic.Links"
 		},
 		{
