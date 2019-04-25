@@ -232,5 +232,5 @@ $cakeArguments += $ScriptArgs
 # Start Cake
 Write-Host "Running build script..."
 # & $CAKE_EXE $cakeArguments
-Invoke-Expression "& `"$CAKE_EXE`" `"$Script`" $cakeArguments"
+Invoke-Expression "& `"$CAKE_EXE`" $cakeArguments"
 exit $LASTEXITCODE
