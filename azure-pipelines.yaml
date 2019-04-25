@@ -26,6 +26,7 @@ jobs:
       # Build the libraries and packages
       - bash: sh build.sh --target=ci --settings_skipverification=true --verbosity=$(VERBOSITY)
         displayName: 'Build NuGets'
+        workingDirectory: '$(Build.SourcesDirectory)' #
       # Publish the artifacts
       - task: PublishBuildArtifacts@1
         displayName: 'Publish Unsigned NuGets'
@@ -42,6 +43,7 @@ jobs:
       - powershell: .\build.ps1 --target=ci --settings_skipverification=true --verbosity=$(VERBOSITY)
       # Build the libraries and packages
         displayName: 'Build VS4W2017 everything'
+        workingDirectory: '$(Build.SourcesDirectory)' #
 
   - job: build_windows_vs2019
     displayName: 'Build Libraries & NuGets (Windows)'
@@ -54,8 +56,9 @@ jobs:
           dotnet --version
           dotnet tool install --tool-path ./tools --version 0.33.0 Cake.Tool
           ./tools/dotnet-cake --version
-          powershell ./build.ps1 --target=ci --settings_skipverification=true --verbosity=$(VERBOSITY)
+          ./build.ps1 --target=ci --settings_skipverification=true --verbosity=$(VERBOSITY)
         displayName: 'Build VS4W2019 everything'
+        workingDirectory: '$(Build.SourcesDirectory)' #
 
   # only sign the packages when running on Windows, and using the private server which has the certificates
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
