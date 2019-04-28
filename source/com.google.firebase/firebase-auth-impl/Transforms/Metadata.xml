@@ -21,5 +21,13 @@
         >
         Firebase.Auth.Api.Fallback.Service
     </attr>
-       
+
+    
+    <attr
+        path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.firebase.auth']"
+        name="managedName"
+        >
+        Android.Gms.Dynamite.Firebase.Auth
+    </attr>
+
 </metadata>

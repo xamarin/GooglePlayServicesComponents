@@ -1,6 +1,6 @@
 ﻿<metadata>
-	<!-- Rename Namespaces -->
-	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
+    <!-- Rename Namespaces -->
+    <attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
 
     <attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.vision.dynamite.imagelabel']" name="managedName">Android.Gms.Stats.Internal</attr>
     <attr path="/api/package[@name='com.google.android.gms.internal.vision']" name="managedName">Android.Gms.Stats.Internal.Vision</attr>
@@ -9,5 +9,9 @@
     
     <remove-node path="/api/package[@name='com.google.android.libraries.vision.visionkit.recognition.classifier']" ></remove-node>
 
+    <remove-node
+        path="/api/package[@name='com.google.android.libraries.vision.visionkit.recognition.mognet.classifier']"
+        >
+    </remove-node>
     
 </metadata>
