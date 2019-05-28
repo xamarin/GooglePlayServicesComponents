@@ -19,27 +19,29 @@ namespace Analytics
 
         static Dictionary<TrackerName, Tracker> trackers = new Dictionary<TrackerName, Tracker> ();
 
-        public static Tracker GetTracker (TrackerName trackerId) 
+        public static Tracker GetTracker (TrackerName trackerId)
         {
-            if (!trackers.ContainsKey (trackerId)) {
-                var analytics = GoogleAnalytics.GetInstance (Application.Context);
+            if (!trackers.ContainsKey(trackerId))
+            {
+                var analytics = GoogleAnalytics.GetInstance(Application.Context);
                 analytics.Logger.LogLevel = LoggerLogLevel.Verbose;
 
                 Tracker t;
 
                 if (trackerId == TrackerName.AppTracker)
-                    t = analytics.NewTracker (PROPERTY_ID);
+                    t = analytics.NewTracker(PROPERTY_ID);
                 else if (trackerId == TrackerName.GlobalTracker)
-                    t = analytics.NewTracker (Resource.Xml.global_tracker);
+                    t = analytics.NewTracker(Resource.Xml.global_tracker);
                 else
-                    t = analytics.NewTracker (Resource.Xml.ecommerce_tracker);
+                    t = analytics.NewTracker(Resource.Xml.ecommerce_tracker);
 
-                t.EnableAdvertisingIdCollection (true);
+                t.EnableAdvertisingIdCollection(true);
 
-                trackers.Add (trackerId, t);
+                trackers.Add(trackerId, t);
             }
 
-            return trackers [trackerId];
+
+            return trackers[trackerId];
         }
     }
 }
