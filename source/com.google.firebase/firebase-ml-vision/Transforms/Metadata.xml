@@ -153,10 +153,6 @@
     
             
     <remove-node
-        path="/api/package[@name='com.google.firebase.ml.barcode']/class[@name='FirebaseVisionBarcodeDetector']/implements"
-        >
-    </remove-node>
-    <remove-node
         path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzis']/typeParameters"
      >        
     </remove-node>
