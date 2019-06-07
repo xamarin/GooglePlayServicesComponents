@@ -150,15 +150,20 @@
         path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBlock']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
         >        
     </remove-node>    
-    
-            
+
+    <add-node path="/api/package[@name='com.google.android.gms.internal.firebase_ml']">
+      <class 
+        abstract="false" static="true" visibility="public" name="zzsi" extends="java.lang.Object"
+        deprecated="not deprecated" final="false" >
+      </class>
+    </add-node> 
     <remove-node
-        path="/api/package[@name='com.google.firebase.ml.barcode']/class[@name='FirebaseVisionBarcodeDetector']/implements"
+        path="/api/package[@name='com.google.firebase.ml.barcode']/class[@name='FirebaseVisionBarcodeDetector']/implements[@name='java.io.Closeable']"
         >
     </remove-node>
     <remove-node
-        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzis']/typeParameters"
-     >        
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']"
+        >
     </remove-node>
     
 </metadata>
