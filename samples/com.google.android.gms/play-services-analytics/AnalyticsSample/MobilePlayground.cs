@@ -49,6 +49,9 @@ namespace Analytics
 
             bar.AddTab (bar.NewTab ().SetText (Resource.String.ecommerceTabName).SetTabListener (
                 new TabListener<EcommerceFragment> (this, "ecommerce")));
+
+            bar.AddTab (bar.NewTab ().SetText (Resource.String.ecommerceTabName).SetTabListener (
+                new TabListener<IssuesFragment> (this, "issues")));
         }
 
         class TabListener<TFragment> : Java.Lang.Object, Android.Support.V7.App.ActionBar.ITabListener 

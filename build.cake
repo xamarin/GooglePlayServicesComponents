@@ -474,7 +474,7 @@ Task ("ci-setup")
 	if (BuildSystem.IsRunningOnJenkins) {
 		buildNumber = BuildSystem.Jenkins.Environment.Build.BuildTag;
 		buildCommit = EnvironmentVariable("GIT_COMMIT") ?? buildCommit;
-	} else if (BuildSystem.IsRunningOnVSTS) {
+	} else if (BuildSystem.IsRunningOnAzurePipelinesHosted) {
 		buildNumber = BuildSystem.TFBuild.Environment.Build.Number;
 		buildCommit = BuildSystem.TFBuild.Environment.Repository.SourceVersion;
 	}

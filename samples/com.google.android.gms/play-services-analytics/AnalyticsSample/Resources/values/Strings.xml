@@ -89,4 +89,10 @@
     <string name="timingSend">Send Timing</string>
     <string name="currencyCode">Currency Code</string>
     <string name="currencyCodeDefault">USD</string>
+    
+    <!--  Timing -->
+    <string name="issuesTabName">Github Issues</string>
+    <string name="buttonIssue213">#213</string>
+    
+    
 </resources>
