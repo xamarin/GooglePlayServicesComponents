@@ -51,15 +51,15 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-analytics",
-			"version" : "16.0.4",
-			"nugetVersion" : "71.1604.0-preview7",
+			"version" : "16.0.8",
+			"nugetVersion" : "71.1608.0-preview7",
 			"nugetId" : "Xamarin.GooglePlayServices.Analytics"
 		},
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-analytics-impl",
-			"version" : "16.0.4",
-			"nugetVersion" : "71.1604.0-preview7",
+			"version" : "16.0.8",
+			"nugetVersion" : "71.1608.0-preview7",
 			"nugetId" : "Xamarin.GooglePlayServices.Analytics.Impl"
 		},
 		{
@@ -324,8 +324,8 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-tagmanager-v4-impl",
-			"version" : "16.0.4",
-			"nugetVersion" : "71.1604.0-preview7",
+			"version" : "16.0.8",
+			"nugetVersion" : "71.1608.0-preview7",
 			"nugetId" : "Xamarin.GooglePlayServices.TagManager.V4.Impl"
 		},
 		{
