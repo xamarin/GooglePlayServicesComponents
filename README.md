@@ -34,36 +34,6 @@ Xamarin creates and maintains Xamarin.Android bindings for the Google Play Servi
 
 The build script for this project uses [Cake](http://cakebuild.net).  To run the build, you can use one of the bootstrapper files either for Mac or Windows (experimental support only):
 
-**Mac**:
-
-```
-sh ./build.sh --target=binderate && sh ./build.sh --target=libs && sh ./build.sh --target=nuget
-```
-
-Optionally run:
-
-```
-sh ./build.sh --target=clean
-```
-
-before the build.
-
-**Windows:**
-
-```
-./build.ps1 --target=binderate && ./build.ps1 --target=libs && ./build.ps1 --target=nuget
-```
-
-Optionally run:
-
-```
-./build.ps1 --target=clean
-```
-
-before the build.
-
-
-
 The bootstrapper script will automatically download Cake.exe and all the required tools and files into the `./tools/` folder.
 
 The following targets can be specified:
@@ -79,6 +49,47 @@ The following targets can be specified:
 
 You may want to consider passing `--verbosity diagnostic` (or `-Verbosity diagnostic` on Windows) to the bootstrapper to enable more verbose output, including downloading progress.
 
+**Mac**:
+
+```
+sh ./build.sh --target=binderate && sh ./build.sh --target=libs
+```
+
+Optionally run:
+
+```
+sh ./build.sh --target=clean
+```
+
+before the build.
+
+**Windows:**
+
+```
+./build.ps1 --target=binderate ; ./build.ps1 --target=libs
+```
+
+Optionally run:
+
+```
+./build.ps1 --target=clean
+```
+
+before the build.
+
+To build nuget packages, samples and API diff:
+
+**Mac**:
+
+```
+sh ./build.sh --target=nuget && sh ./build.sh --target=samples && sh ./build.sh --target=diff
+```
+
+**Windows:**
+
+```
+./build.ps1 --target=nuget ; ./build.ps1 --target=samples ; ./build.ps1 --target=diff
+```
 
 ### Working in Visual Studio / Xamarin Studio
 
