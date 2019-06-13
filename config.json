@@ -509,8 +509,8 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-iid",
-			"version" : "17.0.4",
-			"nugetVersion" : "71.1704.0-preview7",
+			"version" : "17.1.0",
+			"nugetVersion" : "71.1710.0-preview7",
 			"nugetId" : "Xamarin.Firebase.Iid"
 		},
 		{
@@ -544,8 +544,8 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-messaging",
-			"version" : "17.3.4",
-			"nugetVersion" : "71.1734.0-preview7",
+			"version" : "17.4.0",
+			"nugetVersion" : "71.1740.0-preview7",
 			"nugetId" : "Xamarin.Firebase.Messaging"
 		},
 		{
