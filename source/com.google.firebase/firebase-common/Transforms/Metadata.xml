@@ -30,5 +30,23 @@
         >
         Firebase.Annotations
     </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.platforminfo']"
+        name="managedName"
+        >
+        Firebase.PlatformInfo
+    </attr>
+
+    <!--
+    TODO: not ideal solution
+    -->    
+    <remove-node
+        path="/api/package[@name='com.google.firebase.components']/class[@name='ComponentRuntime']/method[@name='get' and count(parameter)=1 and parameter[1][@type='java.lang.Class']]"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.firebase.components']/class[@name='AbstractComponentContainer']/method[@name='setOf' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;T&gt;']]"
+        >        
+    </remove-node>
     
 </metadata>
