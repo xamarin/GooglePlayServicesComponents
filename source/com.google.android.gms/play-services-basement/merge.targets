@@ -43,8 +43,7 @@
   <!-- the build tasks -->
   <Target
     Name="SetupGoogleServicesJson"
-    Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True'"
-    BeforeTargets="ProcessGoogleServicesJson">
+    Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True'">
       
     <ConvertToAbsolutePath Paths="$(ProcessGoogleServicesJsonResDirPath)">
       <Output TaskParameter="AbsolutePaths" PropertyName="ProcessGoogleServicesJsonResDirPathAbs"/>
@@ -59,7 +58,7 @@
   <Target
     Name="ProcessGoogleServicesJson" 
     Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True'"
-    BeforeTargets="_GenerateAndroidResourceDir"
+    BeforeTargets="_CollectLibraryResourceDirectories"
     DependsOnTargets="SetupGoogleServicesJson"
     Inputs="@(GoogleServicesJson)"
     Outputs="$(IntermediateOutputPath)googsvcsjson.stamp">
