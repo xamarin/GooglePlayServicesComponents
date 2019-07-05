@@ -170,8 +170,8 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-games",
-			"version" : "16.0.0",
-			"nugetVersion" : "71.1600.0-preview9",
+			"version" : "17.0.0",
+			"nugetVersion" : "71.1700.0-preview9",
 			"nugetId" : "Xamarin.GooglePlayServices.Games"
 		},
 		{

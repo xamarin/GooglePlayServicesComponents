@@ -456,5 +456,41 @@
         Java.Lang.Object
     </attr>     
     
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.quest']/class[@name='MilestoneEntity']"
+        >
+        <method 
+            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+        </method>        
+    </add-node>    
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardVariantEntity']"
+        >
+        <method 
+            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+        </method>        
+    </add-node>    
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.stats']/class[@name='PlayerStatsEntity']"
+        >
+        <method 
+            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+        </method>        
+    </add-node>    
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.request']/class[@name='GameRequestEntity']"
+        >
+        <method 
+            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+        </method>        
+    </add-node>    
     
 </metadata>
