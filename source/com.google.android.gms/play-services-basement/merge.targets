@@ -58,7 +58,7 @@
   <Target
     Name="ProcessGoogleServicesJson" 
     Condition=" '@(GoogleServicesJson)' != '' AND '$(AndroidApplication)' == 'True'"
-    BeforeTargets="_CollectLibraryResourceDirectories"
+    AfterTargets="_ValidateAndroidPackageProperties"
     DependsOnTargets="SetupGoogleServicesJson"
     Inputs="@(GoogleServicesJson)"
     Outputs="$(IntermediateOutputPath)googsvcsjson.stamp">
