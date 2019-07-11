@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "190841769977",
+    "firebase_url": "https://fir-perftest-b2bed.firebaseio.com",
+    "project_id": "fir-perftest-b2bed",
+    "storage_bucket": "fir-perftest-b2bed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190841769977:android:43e449bb7d478732",
+        "android_client_info": {
+          "package_name": "com.jldubz.firebaseperftest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "190841769977-v34hpsptofbi4kas3homm0nftf80gba7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgWzKLmu9Wwa1GwctgfCAQY89sqpJ2U2U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
