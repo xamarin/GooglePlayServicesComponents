@@ -29,13 +29,13 @@
     </Page>
   </ItemGroup>
 	<ItemGroup>
-		<Content Include="$(MSBuildThisFileDirectory)Assets\LockScreenLogo.scale-200.png" />
-		<Content Include="$(MSBuildThisFileDirectory)Assets\SplashScreen.scale-200.png" />
-		<Content Include="$(MSBuildThisFileDirectory)Assets\Square150x150Logo.scale-200.png" />
-		<Content Include="$(MSBuildThisFileDirectory)Assets\Square44x44Logo.scale-200.png" />
-		<Content Include="$(MSBuildThisFileDirectory)Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+		<Content Include="$(MSBuildThisFileDirectory)Assets\LockScreenLogo_scale_200.png" />
+		<Content Include="$(MSBuildThisFileDirectory)Assets\SplashScreen_scale_200.png" />
+		<Content Include="$(MSBuildThisFileDirectory)Assets\Square150x150Logo_scale_200.png" />
+		<Content Include="$(MSBuildThisFileDirectory)Assets\Square44x44Logo_scale_200.png" />
+		<Content Include="$(MSBuildThisFileDirectory)Assets\Square44x44Logo_targetsize_24_altform_unplated.png" />
 		<Content Include="$(MSBuildThisFileDirectory)Assets\StoreLogo.png" />
-		<Content Include="$(MSBuildThisFileDirectory)Assets\Wide310x150Logo.scale-200.png" />
+		<Content Include="$(MSBuildThisFileDirectory)Assets\Wide310x150Logo_scale_200.png" />
 	</ItemGroup>
 	<ItemGroup>
 		<PRIResource Include="$(MSBuildThisFileDirectory)Strings\en\Resources.resw" />
