@@ -147,6 +147,5 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup />
-  <Import Project="..\firebaseperfunoexperiment.Shared\firebaseperfunoexperiment.Shared.projitems" Label="Shared" Condition="Exists('..\firebaseperfunoexperiment.Shared\firebaseperfunoexperiment.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
