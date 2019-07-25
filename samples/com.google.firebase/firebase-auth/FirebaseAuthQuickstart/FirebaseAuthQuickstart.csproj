@@ -55,9 +55,9 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.Palette" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Firebase.Auth" Version="71.1510.0-preview1" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Auth" Version="71.1600.0-preview1" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Basement" Version="71.1501.0-preview1" />
+    <PackageReference Include="Xamarin.Firebase.Auth" Version="71.1605.0" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Auth" Version="71.1600.0" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Basement" Version="71.1620.0" />
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
   </ItemGroup>
   <ItemGroup>
