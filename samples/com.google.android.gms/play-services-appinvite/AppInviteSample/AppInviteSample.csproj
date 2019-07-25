@@ -54,7 +54,7 @@
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.Interpolator" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.GooglePlayServices.AppInvite" Version="71.1502.0-preview1" />
+    <PackageReference Include="Xamarin.GooglePlayServices.AppInvite" Version="71.1607.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
