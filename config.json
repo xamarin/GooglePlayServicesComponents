@@ -45,7 +45,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-ads-lite",
 			"version" : "17.1.2",
-			"nugetVersion" : "71.1712.0",
+			"nugetVersion" : "71.1712.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Ads.Lite"
 		},
 		{

@@ -133,18 +133,19 @@
 		</method>
 	</add-node>
     <!--
-    <add-node path="/api/package[@name='com.google.android.gms.ads.reward.mediation']/interface[@name='MediationRewardedVideoAdListener']">
-        <method abstract="true" deprecated="not deprecated" final="true" name="zzc" native="false" return="void" static="false" synchronized="false" visibility="public">
-            <parameter name="bundle" type="android.os.Bundle"></parameter>
-        </method>
-    </add-node>
-    -->
+    zzc is in api.xml ...?
     <attr
         path="/api/package[@name='com.google.android.gms.ads.reward.mediation']/interface[@name='MediationRewardedVideoAdListener']/method[name='zzc']"
         name="obfuscated"
         >
         false
     </attr>
+    -->
+    <add-node path="/api/package[@name='com.google.android.gms.ads.reward.mediation']/interface[@name='MediationRewardedVideoAdListener']">
+        <method abstract="true" deprecated="not deprecated" final="true" name="zzc" native="false" return="void" static="false" synchronized="false" visibility="public">
+            <parameter name="bundle" type="android.os.Bundle"></parameter>
+        </method>
+    </add-node>
     
     
     <attr
