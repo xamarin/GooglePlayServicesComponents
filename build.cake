@@ -25,8 +25,7 @@ using Newtonsoft.Json.Linq;
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
-var CPUS = Int.Parse(Argument("maxcpucount", "-1"));
-int? MAX_CPU_COUNT = CPUS < 0 ? (int?)null : (int?)CPUS;
+var MAX_CPU_COUNT = Int.Parse("maxcpucount", "0");
 
 // Lists all the artifacts and their versions for com.android.support.*
 // https://dl.google.com/dl/android/maven2/com/android/support/group-index.xml
