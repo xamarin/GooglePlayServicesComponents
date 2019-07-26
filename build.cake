@@ -25,6 +25,8 @@ using Newtonsoft.Json.Linq;
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
+var CPUS = Int.Parse(Argument("maxcpucount", "-1"));
+int? MAX_CPU_COUNT = CPUS < 0 ? (int?)null : (int?)CPUS;
 
 // Lists all the artifacts and their versions for com.android.support.*
 // https://dl.google.com/dl/android/maven2/com/android/support/group-index.xml
@@ -264,6 +266,7 @@ Task("libs")
 
 	MSBuild("./generated/GooglePlayServices.sln", c => {
 		c.Configuration = "Release";
+		c.MaxCpuCount = MAX_CPU_COUNT;
 		c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/libs.binlog")).FullPath };
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
@@ -332,6 +335,7 @@ Task("nuget")
 
 	MSBuild ("./generated/GooglePlayServices.sln", c => {
 		c.Configuration = "Release";
+		c.MaxCpuCount = MAX_CPU_COUNT;
 		c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/nuget.binlog")).FullPath };
 		c.Targets.Clear();
 		c.Targets.Add("Pack");
