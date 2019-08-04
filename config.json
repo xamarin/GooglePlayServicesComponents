@@ -617,14 +617,14 @@
 		{
 			"groupId" : "androidx.core",
 			"artifactId" : "core",
-			"version" : "1.0.0",
+			"version" : "1.0.1-preview01",
 			"nugetId" : "Xamarin.AndroidX.Core",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "androidx.fragment",
 			"artifactId" : "fragment",
-			"version" : "1.0.0",
+			"version" : "1.0.0-preview02",
 			"nugetId" : "Xamarin.AndroidX.Fragment",
 			"dependencyOnly" : true
 		},
@@ -638,7 +638,7 @@
 		{
 			"groupId" : "androidx.mediarouter",
 			"artifactId" : "mediarouter",
-			"version" : "1.0.0",
+			"version" : "1.0.0-preview02",
 			"nugetId" : "Xamarin.AndroidX.MediaRouter",
 			"dependencyOnly" : true
 		},
@@ -659,42 +659,42 @@
 		{
 			"groupId" : "androidx.legacy",
 			"artifactId" : "legacy-support-core-utils",
-			"version" : "1.0.0",
+			"version" : "1.0.0-preview02",
 			"nugetId" : "Xamarin.AndroidX.Legacy.Support.Core.Utils",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "androidx.annotation",
 			"artifactId" : "annotation",
-			"version" : "1.0.0",
+			"version" : "1.0.2-preview01",
 			"nugetId" : "Xamarin.AndroidX.Annotation",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "androidx.browser",
 			"artifactId" : "browser",
-			"version" : "1.0.0",
+			"version" : "1.0.0-preview02",
 			"nugetId" : "Xamarin.AndroidX.Browser",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "androidx.collection",
 			"artifactId" : "collection",
-			"version" : "1.0.0",
+			"version" : "1.0.0-preview02",
 			"nugetId" : "Xamarin.AndroidX.Collection",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "androidx.localbroadcastmanager",
 			"artifactId" : "localbroadcastmanager",
-			"version" : "1.0.0",
+			"version" : "1.0.0-preview02",
 			"nugetId" : "Xamarin.AndroidX.LocalBroadcastManager",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "androidx.exifinterface",
 			"artifactId" : "exifinterface",
-			"version" : "1.0.0",
+			"version" : "1.0.0-preview02",
 			"nugetId" : "Xamarin.AndroidX.ExifInterface",
 			"dependencyOnly" : true
 		},
