@@ -177,7 +177,11 @@ Task("binderate")
 		+ MakeAbsolute(configFile).FullPath + "\" --basepath=\"" + MakeAbsolute(basePath).FullPath + "\"");
 });
 
-string nuget_version_template = "71.vvvv.0-preview3";
+string nuget_version_template = 
+									// "71.vvvv.0-preview3" 	// pre AndroidX version
+									"1xx.yy.zz-suffix"			// AndroidX version
+									;
+string nuget_version_suffix = "preview01";
 
 Task("binderate-config-verify")
 	.Does
@@ -200,22 +204,32 @@ Task("binderate-config-verify")
 					Information($"version       = {version}");
 					Information($"nuget_version = {nuget_version}");
 					Information($"nugetId       = {jo["nugetId"]}");
-					
-					string version_compressed = version.Replace(".", "");
-					if( nuget_version?.Contains(version_compressed) == false)
+
+					string[] version_parsed = version.Split(new string[] {"."}, StringSplitOptions.None);
+					string nuget_version_new = nuget_version_template;
+					nuget_version_new = nuget_version_new.Replace("xx", version_parsed[0]);
+					nuget_version_new = nuget_version_new.Replace("yy", version_parsed[1]);
+					nuget_version_new = nuget_version_new.Replace("zz", version_parsed[2]);
+					nuget_version_new = nuget_version_new.Replace("suffix", nuget_version_suffix);
+
+					if( nuget_version?.Contains($"1{version}") == false)
 					{
-						Error("check config.json for nuget id");
+						// AndroidX version
+						// // pre AndroidX version
+						Error("check config.json for nuget id - pre AndroidX version");
 						Error  ($"		groupId       = {jo["groupId"]}");
 						Error  ($"		artifactId    = {jo["artifactId"]}");
 						Error  ($"		version       = {version}");
 						Error  ($"		nuget_version = {nuget_version}");
 						Error  ($"		nugetId       = {jo["nugetId"]}");
 
-						string nuget_version_new = nuget_version_template.Replace("vvvv", version_compressed);
 						Warning($"	expected : ");
 						Warning($"		nuget_version = {nuget_version_new}");
 						throw new Exception("check config.json for nuget id");
+
+						return;
 					}
+					
 				}
 			}
 		}
