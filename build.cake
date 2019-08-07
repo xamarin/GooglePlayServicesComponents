@@ -2,14 +2,15 @@
 #tool nuget:?package=ILRepack&version=2.0.13
 #tool nuget:?package=Cake.MonoApiTools&version=3.0.1
 //#tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
-#tool nuget:?package=vswhere
+#tool nuget:?package=vswhere&version=2.7.1
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=3.1.0
-#addin nuget:?package=Cake.Compression&version=0.1.6
+#addin nuget:?package=Cake.FileHelpers&version=3.2.0
+#addin nuget:?package=Cake.Compression&version=0.2.3
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.1
 #addin nuget:?package=Xamarin.Nuget.Validator&version=1.1.1
 #addin nuget:?package=Mono.ApiTools.NuGetDiff&version=1.0.1&loaddependencies=true
+//#addin nuget:?package=Xamarin.AndroidBinderator&version=2.0.0-preview&loaddependencies=true
 
 // From Cake.Xamarin.Build, dumps out versions of things
 //LogSystemInfo ();
@@ -170,11 +171,27 @@ Task("binderate")
 		Unzip ("./util/binderator.zip", "./util/binderator");
 	}
 
-	var configFile = new FilePath("./config.json");
-	var basePath = new DirectoryPath ("./");
+	var configFile = MakeAbsolute(new FilePath("./config.json")).FullPath;
+	var basePath = MakeAbsolute(new DirectoryPath ("./")).FullPath;
 
-	StartProcess("dotnet", "./util/binderator/android-binderator.dll --config=\""
-		+ MakeAbsolute(configFile).FullPath + "\" --basepath=\"" + MakeAbsolute(basePath).FullPath + "\"");
+	IEnumerable<string> procOut;
+	
+	// Check for existing tool
+	StartProcess("dotnet", new ProcessSettings {
+		Arguments = $"tool list -g", RedirectStandardOutput = true, RedirectStandardError = true }, out procOut);
+	
+	// Install if it doesn't exist
+	if (!procOut.Any(l => l.Contains("xamarin-android-binderator"))) {
+		StartProcess("dotnet", new ProcessSettings {
+			Arguments = $"tool install Xamarin.AndroidBinderator.Tool -g", RedirectStandardOutput = true, RedirectStandardError = true }, out procOut);
+	} else { // Otherwise just update
+		StartProcess("dotnet", new ProcessSettings {
+			Arguments = $"tool update Xamarin.AndroidBinderator.Tool -g", RedirectStandardOutput = true, RedirectStandardError = true }, out procOut);
+	}
+	
+	// Run the dotnet tool for binderator
+	StartProcess("xamarin-android-binderator",
+		$"--config=\"{configFile}\" --basepath=\"{basePath}\"");
 });
 
 string nuget_version_template = "71.vvvv.0-preview3";
