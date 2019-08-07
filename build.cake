@@ -165,12 +165,6 @@ Task("binderate")
 	.IsDependentOn("binderate-config-verify")
 	.Does(() =>
 {
-	if (!DirectoryExists("./util/binderator"))
-	{
-		EnsureDirectoryExists("./util/binderator");
-		Unzip ("./util/binderator.zip", "./util/binderator");
-	}
-
 	var configFile = MakeAbsolute(new FilePath("./config.json")).FullPath;
 	var basePath = MakeAbsolute(new DirectoryPath ("./")).FullPath;
 
