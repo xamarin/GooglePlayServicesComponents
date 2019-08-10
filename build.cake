@@ -192,11 +192,16 @@ Task("binderate-config-verify")
 			{
 				JsonTextReader jtr = new JsonTextReader(reader);
 				JArray ja = (JArray)JToken.ReadFrom(jtr);
-				
+
 				Information("config.json");
 				//Information($"{ja}");
 				foreach(JObject jo in ja[0]["artifacts"])
 				{
+					bool? dependency_only = (bool?) jo["dependencyOnly"];
+					if ( dependency_only == true)
+					{
+						continue;
+					}
 					string version       = (string) jo["version"];
 					string nuget_version = (string) jo["nugetVersion"];
 					Information($"groupId       = {jo["groupId"]}");

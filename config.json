@@ -615,17 +615,51 @@
 
 
 		{
+			"groupId" : "androidx.annotation",
+			"artifactId" : "annotation",
+			"version" : "1.1.0",
+			"nugetId" : "Xamarin.AndroidX.Annotation",
+			"nugetVersion": "1.0.2-preview02",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "androidx.browser",
+			"artifactId" : "browser",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Browser",
+			"nugetVersion": "1.0.0-preview02",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "androidx.collection",
+			"artifactId" : "collection",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Collection",
+			"nugetVersion": "1.0.0-preview02",
+			"dependencyOnly" : true
+		},
+		{
 			"groupId" : "androidx.core",
 			"artifactId" : "core",
-			"version" : "1.0.1-preview01",
+			"version" : "1.0.1",
 			"nugetId" : "Xamarin.AndroidX.Core",
+			"nugetVersion": "1.0.1-preview02",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "androidx.fragment",
 			"artifactId" : "fragment",
-			"version" : "1.0.0-preview02",
+			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.Fragment",
+			"nugetVersion": "1.0.0-preview02",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "androidx.legacy",
+			"artifactId" : "legacy-support-core-utils",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Legacy.Support.Core.Utils",
+			"nugetVersion": "1.0.0-preview02",
 			"dependencyOnly" : true
 		},
 		{
@@ -633,20 +667,23 @@
 			"artifactId" : "loader",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.Loader",
+			"nugetVersion": "1.0.0-preview02",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "androidx.mediarouter",
 			"artifactId" : "mediarouter",
-			"version" : "1.0.0-preview02",
+			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.MediaRouter",
+			"nugetVersion": "1.0.1-preview02",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "androidx.media",
 			"artifactId" : "media",
-			"version" : "1.0.0",
+			"version" : "1.0.1",
 			"nugetId" : "Xamarin.AndroidX.Media",
+			"nugetVersion": "1.0.1-preview02",
 			"dependencyOnly" : true
 		},
 		{
@@ -654,48 +691,23 @@
 			"artifactId" : "recyclerview",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.RecyclerView",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "androidx.legacy",
-			"artifactId" : "legacy-support-core-utils",
-			"version" : "1.0.0-preview02",
-			"nugetId" : "Xamarin.AndroidX.Legacy.Support.Core.Utils",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "androidx.annotation",
-			"artifactId" : "annotation",
-			"version" : "1.0.2-preview01",
-			"nugetId" : "Xamarin.AndroidX.Annotation",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "androidx.browser",
-			"artifactId" : "browser",
-			"version" : "1.0.0-preview02",
-			"nugetId" : "Xamarin.AndroidX.Browser",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "androidx.collection",
-			"artifactId" : "collection",
-			"version" : "1.0.0-preview02",
-			"nugetId" : "Xamarin.AndroidX.Collection",
+			"nugetVersion": "1.0.0-preview02",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "androidx.localbroadcastmanager",
 			"artifactId" : "localbroadcastmanager",
-			"version" : "1.0.0-preview02",
+			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.LocalBroadcastManager",
+			"nugetVersion": "1.0.0-preview02",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "androidx.exifinterface",
 			"artifactId" : "exifinterface",
-			"version" : "1.0.0-preview02",
+			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.ExifInterface",
+			"nugetVersion": "1.0.0-preview02",
 			"dependencyOnly" : true
 		},
 
@@ -705,6 +717,7 @@
 			"artifactId" : "okhttp",
 			"version" : "2.7.5",
 			"nugetId" : "Square.OkHttp",
+			"nugetVersion": "2.7.5.1",
 			"dependencyOnly" : true
 		},
 		{
@@ -766,8 +779,8 @@
 		{
 			"groupId" : "com.squareup.okhttp3",
 			"artifactId" : "okhttp",
-			"version" : "3.8.1",
-			"nugetId" : "Square.OkHttp",
+			"version" : "3.12.3",
+			"nugetId" : "Square.OkHttp3",
 			"dependencyOnly" : true
 		},
 
