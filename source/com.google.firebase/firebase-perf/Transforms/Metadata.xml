@@ -27,6 +27,5 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
     
     <attr path="/api/package/*[@extends='com.google.android.gms.internal.zzekz']" name="extends">java.lang.Object</attr>
-    <attr path="/api/package/*[@extends='com.google.android.gms.internal.firebase-perf.zze']" name="extends">java.lang.Object</attr>
-    
+    <attr path="/api/package/*[@extends='com.google.firebase.perf.internal.zzb']" name="extends">java.lang.Object</attr>
 </metadata>
