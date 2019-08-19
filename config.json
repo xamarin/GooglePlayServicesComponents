@@ -24,7 +24,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-ads",
 			"version" : "17.2.0",
-			"nugetVersion" : "71.1720.0",
+			"nugetVersion" : "71.1720.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Ads"
 		},
 		{
@@ -45,7 +45,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-ads-lite",
 			"version" : "17.2.0",
-			"nugetVersion" : "71.1720.0",
+			"nugetVersion" : "71.1720.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Ads.Lite"
 		},
 		{
@@ -580,7 +580,7 @@
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-perf",
 			"version" : "16.2.0",
-			"nugetVersion" : "71.1620.0",
+			"nugetVersion" : "71.1620.1",
 			"nugetId" : "Xamarin.Firebase.Perf"
 		},
 		{
