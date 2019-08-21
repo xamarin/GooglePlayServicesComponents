@@ -219,8 +219,8 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-maps",
-			"version" : "16.0.0",
-			"nugetVersion" : "71.1600.0",
+			"version" : "16.1.0",
+			"nugetVersion" : "71.1610.0",
 			"nugetId" : "Xamarin.GooglePlayServices.Maps"
 		},
 		{
