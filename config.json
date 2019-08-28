@@ -100,22 +100,22 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-awareness",
-			"version" : "17.0.0",
-			"nugetVersion" : "117.0.0",
+			"version" : "17.1.0",
+			"nugetVersion" : "117.1.0",
 			"nugetId" : "Xamarin.GooglePlayServices.Awareness"
 		},
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-base",
-			"version" : "17.0.0",
-			"nugetVersion" : "117.0.0",
+			"version" : "17.1.0",
+			"nugetVersion" : "117.1.0",
 			"nugetId" : "Xamarin.GooglePlayServices.Base"
 		},
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-basement",
-			"version" : "17.0.0",
-			"nugetVersion" : "117.0.0",
+			"version" : "17.1.0",
+			"nugetVersion" : "117.1.0",
 			"nugetId" : "Xamarin.GooglePlayServices.Basement"
 		},
 		{
@@ -425,8 +425,8 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-analytics-impl",
-			"version" : "16.2.2",
-			"nugetVersion" : "116.2.2",
+			"version" : "16.3.0",
+			"nugetVersion" : "116.3.0",
 			"nugetId" : "Xamarin.Firebase.Analytics.Impl"
 		},
 		{
@@ -481,8 +481,8 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-database",
-			"version" : "18.0.0",
-			"nugetVersion" : "118.0.0",
+			"version" : "18.0.1",
+			"nugetVersion" : "118.0.1",
 			"nugetId" : "Xamarin.Firebase.Database"
 		},
 		{
@@ -501,6 +501,13 @@
 		},
 		{
 			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-datatransport",
+			"version" : "17.0.1",
+			"nugetVersion" : "117.0.1",
+			"nugetId" : "Xamarin.Firebase.Datatransport"
+		},
+		{
+			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-dynamic-links",
 			"version" : "18.0.0",
 			"nugetVersion" : "118.0.0",
@@ -509,15 +516,15 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-firestore",
-			"version" : "17.0.5",
-			"nugetVersion" : "117.0.5",
+			"version" : "20.2.0",
+			"nugetVersion" : "120.2.0",
 			"nugetId" : "Xamarin.Firebase.Firestore"
 		},
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-functions",
-			"version" : "16.2.0",
-			"nugetVersion" : "116.2.0",
+			"version" : "18.1.0",
+			"nugetVersion" : "118.1.0",
 			"nugetId" : "Xamarin.Firebase.Functions"
 		},
 		{
@@ -536,6 +543,20 @@
 		},
 		{
 			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-inappmessaging",
+			"version" : "18.0.2",
+			"nugetVersion" : "118.0.2",
+			"nugetId" : "Xamarin.Firebase.InAppMessaging"
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-inappmessaging-display",
+			"version" : "18.0.2",
+			"nugetVersion" : "118.0.2",
+			"nugetId" : "Xamarin.Firebase.InAppMessaging"
+		},
+		{
+			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-invites",
 			"version" : "17.0.0",
 			"nugetVersion" : "117.0.0",
@@ -550,6 +571,13 @@
 		},
 		{
 			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-measurement-connector-impl",
+			"version" : "17.0.5",
+			"nugetVersion" : "117.0.5",
+			"nugetId" : "Xamarin.Firebase.Measurement.Connector.Impl"
+		},
+		{
+			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-messaging",
 			"version" : "19.0.1",
 			"nugetVersion" : "119.0.1",
@@ -558,22 +586,65 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-common",
-			"version" : "17.0.0",
-			"nugetVersion" : "117.0.0",
+			"version" : "20.0.1",
+			"nugetVersion" : "120.0.1",
 			"nugetId" : "Xamarin.Firebase.ML.Common"
 		},
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-model-interpreter",
-			"version" : "18.0.0",
-			"nugetVersion" : "118.0.0",
+			"version" : "20.0.1",
+			"nugetVersion" : "120.0.1",
 			"nugetId" : "Xamarin.Firebase.ML.Model.Interpreter"
+		},
+
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-ml-natural-language",
+			"version" : "20.0.2",
+			"nugetVersion" : "120.0.2",
+			"nugetId" : "Xamarin.Firebase.ML.Natural.Language"
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-ml-natural-language-language-id-model",
+			"version" : "20.0.2",
+			"nugetVersion" : "120.0.2",
+			"nugetId" : "Xamarin.Firebase.ML.Natural.Language.Id.Model"
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-ml-natural-language-smart-reply",
+			"version" : "18.0.2",
+			"nugetVersion" : "118.0.2",
+			"nugetId" : "Xamarin.Firebase.ML.Natural.Language.Smart.Reply"
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-ml-natural-language-smart-reply-model",
+			"version" : "20.0.2",
+			"nugetVersion" : "120.0.2",
+			"nugetId" : "Xamarin.Firebase.ML.Natural.Language.Smart.Reply.Model"
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-ml-natural-language-translate",
+			"version" : "20.0.2",
+			"nugetVersion" : "120.0.2",
+			"nugetId" : "Xamarin.Firebase.ML.Natural.Language.Translate"
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-ml-natural-language-translate-model",
+			"version" : "20.0.2",
+			"nugetVersion" : "120.0.2",
+			"nugetId" : "Xamarin.Firebase.ML.Natural.Language.Model"
 		},
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-vision",
-			"version" : "19.0.3",
-			"nugetVersion" : "119.0.3",
+			"version" : "22.0.0",
+			"nugetVersion" : "122.0.0",
 			"nugetId" : "Xamarin.Firebase.ML.Vision"
 		},
 		{
@@ -585,6 +656,27 @@
 		},
 		{
 			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-ml-vision-automl",
+			"version" : "18.0.0",
+			"nugetVersion" : "118.0.0",
+			"nugetId" : "Xamarin.Firebase.ML.Vision].AutoML"
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-ml-vision-face-model",
+			"version" : "18.0.0",
+			"nugetVersion" : "118.0.0",
+			"nugetId" : "Xamarin.Firebase.ML.Vision].Face.Model"
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-ml-vision-object-detection-model",
+			"version" : "18.0.0",
+			"nugetVersion" : "118.0.0",
+			"nugetId" : "Xamarin.Firebase.ML.Vision].Object.Detection.Model"
+		},
+		{
+			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-perf",
 			"version" : "18.0.1",
 			"nugetVersion" : "118.0.1",
@@ -593,8 +685,8 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-storage",
-			"version" : "18.0.0",
-			"nugetVersion" : "118.0.0",
+			"version" : "18.1.0",
+			"nugetVersion" : "118.1.0",
 			"nugetId" : "Xamarin.Firebase.Storage"
 		},
 		{
