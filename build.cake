@@ -1,21 +1,10 @@
 // Tools needed by cake addins
-#tool nuget:?package=ILRepack&version=2.0.13
-#tool nuget:?package=Cake.MonoApiTools&version=3.0.1
-//#tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
-#tool nuget:?package=vswhere
+#tool nuget:?package=vswhere&version=2.7.1
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=3.1.0
-#addin nuget:?package=Cake.Compression&version=0.1.6
-#addin nuget:?package=Cake.MonoApiTools&version=3.0.1
-#addin nuget:?package=Xamarin.Nuget.Validator&version=1.1.1
-#addin nuget:?package=Mono.ApiTools.NuGetDiff&version=1.0.1&loaddependencies=true
+#addin nuget:?package=Cake.FileHelpers&version=3.2.1
+#addin nuget:?package=Newtonsoft.Json&version=11.0.2
 
-// From Cake.Xamarin.Build, dumps out versions of things
-//LogSystemInfo ();
-using Mono.ApiTools;
-using NuGet.Packaging;
-using NuGet.Versioning;
 using System;
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -26,21 +15,12 @@ using Newtonsoft.Json.Linq;
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
-var MAX_CPU_COUNT = Int32.Parse(Argument("maxcpucount", "0"));
+var MAX_CPU_COUNT = Argument("maxcpucount", 0);
 
 // Lists all the artifacts and their versions for com.android.support.*
 // https://dl.google.com/dl/android/maven2/com/android/support/group-index.xml
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
-
-var NUGET_PRE = "";
-
-// FROM: https://dl.google.com/android/repository/addon2-1.xml
-var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r28-macosx.zip";
-var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v9.0" : "android-28";
-var RENDERSCRIPT_FOLDER = "android-8.1.0";
-var TF_MONIKER = "monoandroid90";
-var DOCAPI_CACHEPATH = "./externals/package_cache";
 
 var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/play-services-firebase.zip";
 var REF_METADATA_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/play-services-firebase-metadata.xml";
@@ -48,85 +28,62 @@ var REF_METADATA_URL = "https://bosstoragemirror.blob.core.windows.net/android-d
 // These are a bunch of parameter names in the txt format which binding projects can use
 var REF_PARAMNAMES_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/play-services-firebase-paramnames.txt";
 
-// We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/60.1142.0/api-info.xml";
-
-var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
-if (IsRunningOnWindows ()) {
-	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin" });
-	MONODROID_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION).FullPath;
-}
-
-var MSCORLIB_PATH = "/Library/Frameworks/Xamarin.Android.framework/Libraries/mono/2.1/";
-if (IsRunningOnWindows ()) {
-
-	var DOTNETDIR = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.Windows)).Combine ("Microsoft.NET/");
-
-	if (DirectoryExists (DOTNETDIR.Combine ("Framework64")))
-		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework64/v4.0.30319/")).FullPath;
-	else
-		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
-}
-
-if (Argument("localTestPkg", "false") == "true")
-	Environment.SetEnvironmentVariable("LOCAL_TEST_PKG", "true");
-
-Information ("MONODROID_PATH: {0}", MONODROID_PATH);
-Information ("MSCORLIB_PATH: {0}", MSCORLIB_PATH);
-
-//set the function to download and compare the previous version of the nugets
-async Task BuildApiDiff (FilePath nupkg)
-{
-	var baseDir = nupkg.GetDirectory(); //get the parent directory of the packge file
-
-	using (var reader = new PackageArchiveReader (nupkg.FullPath)) 
-	{
-		//get the id from the package and the version number
-		 var packageId = reader.GetIdentity ().Id;
-		var currentVersionNo = reader.GetIdentity ().Version.ToNormalizedString();
-
-		//calculate the diff storage path from the location of the nuget
-		var diffRoot = $"{baseDir}/api-diff/{packageId}";
-		CleanDirectories (diffRoot);
-
-		// get the latest version of this package - if any
-		var latestVersion = (await NuGetVersions.GetLatestAsync (packageId))?.ToNormalizedString ();
-
-		// log what is going to happen
-		if (string.IsNullOrEmpty (latestVersion))
-			Information ($"Running a diff on a new package '{packageId}'...");
+// Resolve Xamarin.Android installation
+var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
+var ANDROID_SDK_BASE_VERSION = "v1.0";
+var ANDROID_SDK_VERSION = "v9.0";
+if (string.IsNullOrEmpty(XAMARIN_ANDROID_PATH)) {
+	if (IsRunningOnWindows()) {
+		var vsInstallPath = VSWhereLatest(new VSWhereLatestSettings { Requires = "Component.Xamarin" });
+		XAMARIN_ANDROID_PATH = vsInstallPath.Combine("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid").FullPath;
+	} else {
+		if (DirectoryExists("/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xamarin.android/xbuild-frameworks/MonoAndroid"))
+			XAMARIN_ANDROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xamarin.android/xbuild-frameworks/MonoAndroid";
 		else
-			Information ($"Running a diff on '{latestVersion}' vs '{currentVersionNo}' of '{packageId}'...");
-
-		// create comparer
-		var comparer = new NuGetDiff ();
-		comparer.PackageCache = DOCAPI_CACHEPATH;  // Cache path
-		comparer.SaveAssemblyApiInfo = true;       // we don't keep this, but it lets us know if there were no changes
-		comparer.SaveAssemblyMarkdownDiff = true;  // we want markdown
-		comparer.IgnoreResolutionErrors = true;    // we don't care if frameowrk/platform types can't be found
-
-		await comparer.SaveCompleteDiffToDirectoryAsync (packageId, latestVersion, reader, diffRoot);
-
-		// run the diff with just the breaking changes
-		comparer.MarkdownDiffFileExtension = ".breaking.md";
-		comparer.IgnoreNonBreakingChanges = true;
-		await comparer.SaveCompleteDiffToDirectoryAsync (packageId, latestVersion, reader, diffRoot);
-
-		// TODO: there are two bugs in this version of mono-api-html
-		var mdFiles = $"{diffRoot}/*.*.md";
-		// 1. the <h4> doesn't look pretty in the markdown
-		ReplaceTextInFiles (mdFiles, "<h4>", "> ");
-		ReplaceTextInFiles (mdFiles, "</h4>", Environment.NewLine); 
-		// 2. newlines are inccorect on Windows: https://github.com/mono/mono/pull/9918
-		ReplaceTextInFiles (mdFiles, "\r\r", "\r");
-
-		// we are done
-		Information ($"Diff complete of '{packageId}'.");
+			XAMARIN_ANDROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xbuild-frameworks/MonoAndroid";
 	}
 }
+if (!DirectoryExists($"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_VERSION}"))
+	throw new Exception($"Unable to find Xamarin.Android {ANDROID_SDK_VERSION} at {XAMARIN_ANDROID_PATH}.");
+
+// Load all the git variables
+var BUILD_COMMIT = EnvironmentVariable("BUILD_COMMIT") ?? "DEV";
+var BUILD_NUMBER = EnvironmentVariable("BUILD_NUMBER") ?? "DEBUG";
+var BUILD_TIMESTAMP = DateTime.UtcNow.ToString();
+
+var REQUIRED_DOTNET_TOOLS = new [] {
+	"xamarin-android-binderator",
+	"xamarin.androidx.migration.tool"
+};
+
+// Log some variables
+Information ("XAMARIN_ANDROID_PATH: {0}", XAMARIN_ANDROID_PATH);
+Information ("ANDROID_SDK_VERSION:  {0}", ANDROID_SDK_VERSION);
+Information ("BUILD_COMMIT:         {0}", BUILD_COMMIT);
+Information ("BUILD_NUMBER:         {0}", BUILD_NUMBER);
+Information ("BUILD_TIMESTAMP:      {0}", BUILD_TIMESTAMP);
 
 // You shouldn't have to configure anything below here
 // ######################################################
+
+void RunProcess(FilePath fileName, string processArguments)
+{
+	var exitCode = StartProcess(fileName, processArguments);
+	if (exitCode != 0)
+		throw new Exception ($"Process {fileName} exited with code {exitCode}.");
+}
+
+string[] RunProcessWithOutput(FilePath fileName, string processArguments)
+{
+	var exitCode = StartProcess(fileName, new ProcessSettings {
+		Arguments = processArguments,
+		RedirectStandardOutput = true,
+		RedirectStandardError = true
+	}, out var procOut);
+	if (exitCode != 0)
+		throw new Exception ($"Process {fileName} exited with code {exitCode}.");
+	return procOut.ToArray();;
+}
 
 Task("javadocs")
 	.Does(() =>
@@ -158,23 +115,26 @@ Task("javadocs")
 	}
 });
 
+Task("check-tools")
+	.Does(() =>
+{
+	var installedTools = RunProcessWithOutput("dotnet", "tool list -g");
+	foreach (var toolName in REQUIRED_DOTNET_TOOLS) {
+		if (installedTools.All(l => l.IndexOf(toolName, StringComparison.OrdinalIgnoreCase) == -1))
+			throw new Exception ($"Missing dotnet tool: {toolName}");
+	}
+});
 
 Task("binderate")
 	.IsDependentOn("javadocs")
 	.IsDependentOn("binderate-config-verify")
 	.Does(() =>
 {
-	if (!DirectoryExists("./util/binderator"))
-	{
-		EnsureDirectoryExists("./util/binderator");
-		Unzip ("./util/binderator.zip", "./util/binderator");
-	}
+	var configFile = MakeAbsolute(new FilePath("./config.json")).FullPath;
+	var basePath = MakeAbsolute(new DirectoryPath ("./")).FullPath;
 
-	var configFile = new FilePath("./config.json");
-	var basePath = new DirectoryPath ("./");
-
-	StartProcess("dotnet", "./util/binderator/android-binderator.dll --config=\""
-		+ MakeAbsolute(configFile).FullPath + "\" --basepath=\"" + MakeAbsolute(basePath).FullPath + "\"");
+	RunProcess("xamarin-android-binderator",
+		$"--config=\"{configFile}\" --basepath=\"{basePath}\"");
 });
 
 string nuget_version_template = "71.vvvv.0-preview3";
@@ -346,203 +306,37 @@ Task("nuget")
     });
 });
 
-Task("nuget-validation")
-    .IsDependentOn("nuget")
-	.Does(()=>
-{
-	//setup validation options
-	var options = new Xamarin.Nuget.Validator.NugetValidatorOptions()
-	{
-		Copyright = "© Microsoft Corporation. All rights reserved.",
-		Author = "Microsoft",
-		Owner = "Microsoft",
-		NeedsProjectUrl = true,
-		NeedsLicenseUrl = true,
-		ValidateRequireLicenseAcceptance = true,
-		ValidPackageNamespace = new [] { "Xamarin" },
-	};
-
-	var nupkgFiles = GetFiles ("./output/*.nupkg");
-
-	Information ("Found ({0}) Nuget's to validate", nupkgFiles.Count ());
-
-	foreach (var nupkgFile in nupkgFiles)
-	{
-		Information ("Verifiying Metadata of {0}", nupkgFile.GetFilename ());
-
-		var result = Xamarin.Nuget.Validator.NugetValidator.Validate(MakeAbsolute(nupkgFile).FullPath, options);
-
-		if (!result.Success)
-		{
-			Information ("Metadata validation failed for: {0} \n\n", nupkgFile.GetFilename ());
-			Information (string.Join("\n    ", result.ErrorMessages));
-			throw new Exception ($"Invalid Metadata for: {nupkgFile.GetFilename ()}");
-		}
-		else
-		{
-			Information ("Metadata validation passed for: {0}", nupkgFile.GetFilename ());
-		}
-	}
-});
-
-Task ("diff")
-	.WithCriteria (!IsRunningOnWindows ())
-	.IsDependentOn ("merge")
-	.Does (() =>
-{
-	if (DirectoryExists("./output/dependencies"))
-		DeleteDirectory("./output/dependencies", true);
-	EnsureDirectoryExists("./output/dependencies/");
-
-	// Copy all the dependencies into one spot to reference from MonoApiTools
-	CopyFiles("./generated/**/bin/Release/" + TF_MONIKER + "/*.dll", "./output/dependencies/");
-
-	var SEARCH_DIRS = new DirectoryPath [] {
-		MONODROID_PATH,
-		"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xbuild-frameworks/MonoAndroid/v1.0/",
-		"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mono/2.1/",
-		"./output/dependencies/"
-	};
-
-	MonoApiInfo ("./output/GooglePlayServices.Merged.dll",
-		"./output/GooglePlayServices.api-info.xml",
-		new MonoApiInfoToolSettings { SearchPaths = SEARCH_DIRS });
-
-	// Grab the last public release's api-info.xml to use as a base to compare and make an API diff
-	DownloadFile (BASE_API_INFO_URL, "./output/GooglePlayServices.api-info.previous.xml");
-
-	// Now diff against current release'd api info
-	// eg: mono mono-api-diff.exe ./gps.r26.xml ./gps.r27.xml > gps.diff.xml
-	MonoApiDiff ("./output/GooglePlayServices.api-info.previous.xml",
-		"./output/GooglePlayServices.api-info.xml",
-		"./output/GooglePlayServices.api-diff.xml");
-
-	// Now let's make a purty html file
-	// eg: mono mono-api-html.exe -c -x ./gps.previous.info.xml ./gps.current.info.xml > gps.diff.html
-	MonoApiHtml ("./output/GooglePlayServices.api-info.previous.xml",
-		"./output/GooglePlayServices.api-info.xml",
-		"./output/GooglePlayServices.api-diff.html");
-
-	if (DirectoryExists("./output/dependencies"))
-		DeleteDirectory("./output/dependencies", true);
-});
-
 Task ("merge")
 	.IsDependentOn ("libs")
 	.Does (() =>
 {
-	EnsureDirectoryExists("./output/");
-	if (DirectoryExists("./output/dependencies"))
-		DeleteDirectory("./output/dependencies", true);
-	EnsureDirectoryExists("./output/dependencies/");
-
-	// Copy all the dependencies into one spot to reference from ILRepack
-	CopyFiles("./generated/**/bin/Release/" + TF_MONIKER + "/*.dll", "./output/dependencies/");
-
-	if (FileExists ("./output/GooglePlayServices.Merged.dll"))
-		DeleteFile ("./output/GooglePlayServices.Merged.dll");
-
-	var allDlls = GetFiles ("./generated/**/bin/Release/" + TF_MONIKER + "/Xamarin.GooglePlayServices*.dll")
-					.Concat(GetFiles ("./generated/**/bin/Release/" + TF_MONIKER + "/Xamarin.Firebase*.dll"));
-
+	var allDlls = 
+		GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/monoandroid*/Xamarin.GooglePlayServices.*.dll") +
+		GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/monoandroid*/Xamarin.Firebase.*.dll");
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
 		.Select(g => g.FirstOrDefault())
 		.ToList();
 
-	Information("Merging: \n {0}", string.Join("\n", mergeDlls));
-
-	// Wait for ILRepack support in cake-0.5.2
-	ILRepack ("./output/GooglePlayServices.Merged.dll", mergeDlls.First(), mergeDlls.Skip(1), new ILRepackSettings {
-		CopyAttrs = true,
-		AllowMultiple = true,
-		//TargetKind = ILRepack.TargetKind.Dll,
-		Libs = new List<DirectoryPath> {
-			MONODROID_PATH,
-			"./output/dependencies/"
-		},
-	});
-
-	if (DirectoryExists("./output/dependencies"))
-		DeleteDirectory("./output/dependencies", true);
+	EnsureDirectoryExists("./output/");
+	RunProcess("androidx-migrator",
+		$"merge" +
+		$"  --assembly " + string.Join(" --assembly ", mergeDlls) +
+		$"  --output ./output/GooglePlayServices.Merged.dll" +
+		$"  --search \"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_VERSION}\" " +
+		$"  --search \"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_BASE_VERSION}\" " +
+		$"  --inject-assemblyname");
 });
 
-Task ("ci-setup")
-	.WithCriteria (!BuildSystem.IsLocalBuild)
-	.Does (() => 
+Task("inject-variables")
+	.WithCriteria(!BuildSystem.IsLocalBuild)
+	.Does(() =>
 {
-	var buildCommit = "DEV";
-	var buildNumber = "DEBUG";
-	var buildTimestamp = DateTime.UtcNow.ToString ();
-
-	if (BuildSystem.IsRunningOnJenkins) {
-		buildNumber = BuildSystem.Jenkins.Environment.Build.BuildTag;
-		buildCommit = EnvironmentVariable("GIT_COMMIT") ?? buildCommit;
-	} else if (BuildSystem.IsRunningOnAzurePipelinesHosted) {
-		buildNumber = BuildSystem.TFBuild.Environment.Build.Number;
-		buildCommit = BuildSystem.TFBuild.Environment.Repository.SourceVersion;
-	}
-
 	var glob = "./source/AssemblyInfo.cs";
 
-	ReplaceTextInFiles(glob, "{BUILD_COMMIT}", buildCommit);
-	ReplaceTextInFiles(glob, "{BUILD_NUMBER}", buildNumber);
-	ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", buildTimestamp);
-});
-
-// Task ("genapi")
-// 	.IsDependentOn ("libs")
-// 	.Does (() => 
-// {
-// 	var GenApiToolPath = GetFiles ("./tools/**/GenAPI.exe").FirstOrDefault ();
-
-// 	// For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
-// 	// GenAPI.exe -libPath:$(MONOANDROID) -out:Some.generated.cs -w:TypeForwards ./relative/path/to/Assembly.dll
-// 	var libDirPrefix = IsRunningOnWindows () ? "output/" : "";
-
-// 	var libs = new FilePath [] {
-// 		"./" + libDirPrefix + "Xamarin.Android.Support.Compat.dll",
-// 		"./" + libDirPrefix + "Xamarin.Android.Support.Core.UI.dll",
-// 		"./" + libDirPrefix + "Xamarin.Android.Support.Core.Utils.dll",
-// 		"./" + libDirPrefix + "Xamarin.Android.Support.Fragment.dll",
-// 		"./" + libDirPrefix + "Xamarin.Android.Support.Media.Compat.dll",
-// 	};
-
-// 	foreach (var lib in libs) {
-// 		var genName = lib.GetFilename () + ".generated.cs";
-
-// 		var libPath = IsRunningOnWindows () ? MakeAbsolute (lib).FullPath : lib.FullPath;
-// 		var monoDroidPath = IsRunningOnWindows () ? "\"" + MONODROID_PATH + "\"" : MONODROID_PATH;
-
-// 		Information ("GenAPI: {0}", lib.FullPath);
-
-// 		StartProcess (GenApiToolPath, new ProcessSettings {
-// 			Arguments = string.Format("-libPath:{0} -out:{1}{2} -w:TypeForwards {3}",
-// 							monoDroidPath + "," + MSCORLIB_PATH,
-// 							IsRunningOnWindows () ? "" : "./",
-// 							genName,
-// 							libPath),
-// 			WorkingDirectory = "./output/",
-// 		});
-// 	}
-
-// 	MSBuild ("./GooglePlayServices.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
-
-// 	CopyFile ("./support-v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
-// });
-
-Task ("docs-api-diff")
-    .Does (async () =>
-{
-	var nupkgFiles = GetFiles ("./**/output/*.nupkg"); //get all of the nugets in the output
-
-	Information ("Found ({0}) Nuget's to Diff", nupkgFiles.Count ());
-
-	foreach (var nupkgFile in nupkgFiles)  //loop through each nuget that is found
-	{
-		Information("Diffing: {0}", nupkgFile);
-		await BuildApiDiff(nupkgFile);
-	}
+	ReplaceTextInFiles(glob, "{BUILD_COMMIT}", BUILD_COMMIT);
+	ReplaceTextInFiles(glob, "{BUILD_NUMBER}", BUILD_NUMBER);
+	ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", BUILD_TIMESTAMP);
 });
 
 Task ("clean")
@@ -554,20 +348,17 @@ Task ("clean")
 	if (DirectoryExists ("./generated"))
 		DeleteDirectory ("./generated", true);
 
-	if (DirectoryExists ("./util/binderator"))
-		DeleteDirectory ("./util/binderator", true);
-
 	CleanDirectories ("./**/packages");
 	CleanDirectories("./**/bin");
 	CleanDirectories("./**/obj");
 });
 
 Task ("ci")
-	.IsDependentOn ("ci-setup")
+	.IsDependentOn ("check-tools")
+	.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
-	.IsDependentOn ("diff")
-	.IsDependentOn ("docs-api-diff")
-	.IsDependentOn ("nuget-validation")
+	.IsDependentOn ("nuget")
+	.IsDependentOn ("merge")
 	.IsDependentOn ("samples");
 
 RunTarget (TARGET);
