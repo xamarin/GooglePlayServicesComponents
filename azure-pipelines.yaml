@@ -17,15 +17,10 @@ resources:
       type: github
       name: xamarin/XamarinComponents
       endpoint: xamarin
-      ref: refs/heads/dev/templating
 
 jobs:
-  - template: .ci/prepare.yml@components
-    parameters:
-      buildType: 'basic'
   - template: .ci/build.yml@components
     parameters:
-      cakeTemplatesBranch: 'dev/templating'
       timeoutInMinutes: 180
       tools:
         - 'xamarin.androidbinderator.tool': '0.4.0'
