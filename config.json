@@ -701,21 +701,21 @@
 		{
 			"groupId" : "io.grpc",
 			"artifactId" : "grpc-protobuf-lite",
-			"version" : "1.14.0",
+			"version" : "1.14.0.2",
 			"nugetId" : "Xamarin.Grpc.Protobuf.Lite",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "io.grpc",
 			"artifactId" : "grpc-stub",
-			"version" : "1.14.0",
+			"version" : "1.14.0.2",
 			"nugetId" : "Xamarin.Grpc.Stub",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "io.grpc",
 			"artifactId" : "grpc-okhttp",
-			"version" : "1.14.0",
+			"version" : "1.14.0.2",
 			"nugetId" : "Xamarin.Grpc.OkHttp",
 			"dependencyOnly" : true
 		},
