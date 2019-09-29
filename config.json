@@ -171,7 +171,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-games",
 			"version" : "17.0.0",
-			"nugetVersion" : "71.1700.0",
+			"nugetVersion" : "71.1700.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Games"
 		},
 		{
@@ -496,7 +496,7 @@
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-firestore",
 			"version" : "17.0.5",
-			"nugetVersion" : "71.1705.0",
+			"nugetVersion" : "71.1705.1",
 			"nugetId" : "Xamarin.Firebase.Firestore"
 		},
 		{
