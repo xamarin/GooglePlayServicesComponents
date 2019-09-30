@@ -339,7 +339,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-vision",
 			"version" : "17.0.2",
-			"nugetVersion" : "71.1702.0",
+			"nugetVersion" : "71.1702.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Vision"
 		},
 		{
