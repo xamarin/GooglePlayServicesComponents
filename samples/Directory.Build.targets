@@ -21,7 +21,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Fido" Version="71.1700.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Fitness" Version="71.1601.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Flags" Version="71.1601.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Games" Version="71.1700.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Games" Version="71.1700.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Gass" Version="71.1720.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Gcm" Version="71.1600.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Identity" Version="71.1600.0" />
@@ -45,7 +45,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager.Api" Version="71.1604.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager.V4.Impl" Version="71.1608.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Tasks" Version="71.1601.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Vision" Version="71.1702.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Vision" Version="71.1702.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Vision.Common" Version="71.1702.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Vision.ImageLabel" Version="71.1702.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Wallet" Version="71.1600.0" />
@@ -67,7 +67,7 @@
     <PackageReference Update="Xamarin.Firebase.Database.Collection" Version="71.1601.0" />
     <PackageReference Update="Xamarin.Firebase.Database.Connection" Version="71.1601.0" />
     <PackageReference Update="Xamarin.Firebase.Dynamic.Links" Version="71.1615.0" />
-    <PackageReference Update="Xamarin.Firebase.Firestore" Version="71.1705.0" />
+    <PackageReference Update="Xamarin.Firebase.Firestore" Version="71.1705.1" />
     <PackageReference Update="Xamarin.Firebase.Functions" Version="71.1601.0" />
     <PackageReference Update="Xamarin.Firebase.Iid" Version="71.1710.0" />
     <PackageReference Update="Xamarin.Firebase.Iid.Interop" Version="71.1601.0" />
