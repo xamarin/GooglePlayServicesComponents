@@ -185,6 +185,10 @@
     {
       <PackageReference Include="System.Json" Version="4.5.0" />
     }
+    @if (@Model.NuGetPackageId == "Xamarin.Firebase.Firestore")
+    {
+      <PackageReference Include="Xamarin.Google.Guava" Version="27.1.0" />
+    }
 
   </ItemGroup>
 
