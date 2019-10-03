@@ -496,7 +496,7 @@
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-firestore",
 			"version" : "17.0.5",
-			"nugetVersion" : "71.1705.1",
+			"nugetVersion" : "71.1705.2",
 			"nugetId" : "Xamarin.Firebase.Firestore"
 		},
 		{
