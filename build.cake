@@ -13,7 +13,7 @@ using System.Xml.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-var TARGET = Argument ("t", Argument ("target", "Default"));
+var TARGET = Argument ("t", Argument ("target", "ci"));
 var BUILD_CONFIG = Argument ("config", "Release");
 var MAX_CPU_COUNT = Argument("maxcpucount", 0);
 
@@ -504,8 +504,7 @@ Task ("clean")
 });
 
 Task ("ci")
-	.IsDependentOn ("check-tools")
-	.IsDependentOn ("inject-variables")
+	.IsDependentOn ("ci-setup")
 	//.IsDependentOn ("check-tools")
 	//.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
