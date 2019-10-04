@@ -171,7 +171,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-games",
 			"version" : "17.0.0",
-			"nugetVersion" : "71.1700.0",
+			"nugetVersion" : "71.1700.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Games"
 		},
 		{
@@ -339,7 +339,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-vision",
 			"version" : "17.0.2",
-			"nugetVersion" : "71.1702.0",
+			"nugetVersion" : "71.1702.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Vision"
 		},
 		{
@@ -496,7 +496,7 @@
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-firestore",
 			"version" : "17.0.5",
-			"nugetVersion" : "71.1705.0",
+			"nugetVersion" : "71.1705.2",
 			"nugetId" : "Xamarin.Firebase.Firestore"
 		},
 		{
@@ -610,63 +610,63 @@
 		{
 			"groupId" : "com.android.support",
 			"artifactId" : "support-v4",
-			"version" : "28.0.0.1",
+			"version" : "28.0.0.3",
 			"nugetId" : "Xamarin.Android.Support.v4",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.android.support",
 			"artifactId" : "mediarouter-v7",
-			"version" : "28.0.0.1",
+			"version" : "28.0.0.3",
 			"nugetId" : "Xamarin.Android.Support.v7.MediaRouter",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.android.support",
 			"artifactId" : "recyclerview-v7",
-			"version" : "28.0.0.1",
+			"version" : "28.0.0.3",
 			"nugetId" : "Xamarin.Android.Support.v7.RecyclerView",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.android.support",
 			"artifactId" : "appcompat-v7",
-			"version" : "28.0.0.1",
+			"version" : "28.0.0.3",
 			"nugetId" : "Xamarin.Android.Support.v7.AppCompat",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.android.support",
 			"artifactId" : "customtabs",
-			"version" : "28.0.0.1",
+			"version" : "28.0.0.3",
 			"nugetId" : "Xamarin.Android.Support.CustomTabs",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "android.arch.core",
 			"artifactId" : "common",
-			"version" : "1.1.1.1",
+			"version" : "1.1.1.3",
 			"nugetId" : "Xamarin.Android.Arch.Core.Common",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "android.arch.core",
 			"artifactId" : "runtime",
-			"version" : "1.1.1.1",
+			"version" : "1.1.1.3",
 			"nugetId" : "Xamarin.Android.Arch.Core.Runtime",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "android.arch.lifecycle",
 			"artifactId" : "common",
-			"version" : "1.1.1.1",
+			"version" : "1.1.1.3",
 			"nugetId" : "Xamarin.Android.Arch.Lifecycle.Common",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "android.arch.lifecycle",
 			"artifactId" : "runtime",
-			"version" : "1.1.1.1",
+			"version" : "1.1.1.3",
 			"nugetId" : "Xamarin.Android.Arch.Lifecycle.Runtime",
 			"dependencyOnly" : true
 		},
@@ -701,21 +701,21 @@
 		{
 			"groupId" : "io.grpc",
 			"artifactId" : "grpc-protobuf-lite",
-			"version" : "1.14.0",
+			"version" : "1.14.0.2",
 			"nugetId" : "Xamarin.Grpc.Protobuf.Lite",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "io.grpc",
 			"artifactId" : "grpc-stub",
-			"version" : "1.14.0",
+			"version" : "1.14.0.2",
 			"nugetId" : "Xamarin.Grpc.Stub",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "io.grpc",
 			"artifactId" : "grpc-okhttp",
-			"version" : "1.14.0",
+			"version" : "1.14.0.2",
 			"nugetId" : "Xamarin.Grpc.OkHttp",
 			"dependencyOnly" : true
 		},

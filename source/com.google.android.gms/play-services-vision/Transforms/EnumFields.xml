@@ -16,6 +16,7 @@
   -->
 
   <mapping clr-enum-type="Android.Gms.Vision.Barcodes.BarcodeFormat" jni-class="com/google/android/gms/vision/barcode/Barcode">    
+    <field clr-name="AllFormats" jni-name="ALL_FORMATS" value="0" />
     <field clr-name="Code128" jni-name="CODE_128" value="1" />
     <field clr-name="Code39" jni-name="CODE_39" value="2" />
     <field clr-name="Code93" jni-name="CODE_93" value="4" />
@@ -28,6 +29,7 @@
     <field clr-name="UpcA" jni-name="UPC_A" value="512" />
     <field clr-name="UpcE" jni-name="UPC_E" value="1024" />
     <field clr-name="Pdf417" jni-name="PDF417" value="2048" />
+    <field clr-name="Aztec" jni-name="AZTEC" value="4096" />
   </mapping>
 
   <mapping clr-enum-type="Android.Gms.Vision.Barcodes.BarcodeValueFormat" jni-class="com/google/android/gms/vision/barcode/Barcode">    

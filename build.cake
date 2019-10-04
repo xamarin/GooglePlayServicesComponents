@@ -75,14 +75,52 @@ void RunProcess(FilePath fileName, string processArguments)
 
 string[] RunProcessWithOutput(FilePath fileName, string processArguments)
 {
-	var exitCode = StartProcess(fileName, new ProcessSettings {
-		Arguments = processArguments,
-		RedirectStandardOutput = true,
-		RedirectStandardError = true
-	}, out var procOut);
-	if (exitCode != 0)
-		throw new Exception ($"Process {fileName} exited with code {exitCode}.");
-	return procOut.ToArray();;
+	var baseDir = nupkg.GetDirectory(); //get the parent directory of the packge file
+
+	using (var reader = new PackageArchiveReader (nupkg.FullPath))
+	{
+		//get the id from the package and the version number
+		 var packageId = reader.GetIdentity ().Id;
+		var currentVersionNo = reader.GetIdentity ().Version.ToNormalizedString();
+
+		//calculate the diff storage path from the location of the nuget
+		var diffRoot = $"{baseDir}/api-diff/{packageId}";
+		CleanDirectories (diffRoot);
+
+		// get the latest version of this package - if any
+		var latestVersion = (await NuGetVersions.GetLatestAsync (packageId))?.ToNormalizedString ();
+
+		// log what is going to happen
+		if (string.IsNullOrEmpty (latestVersion))
+			Information ($"Running a diff on a new package '{packageId}'...");
+		else
+			Information ($"Running a diff on '{latestVersion}' vs '{currentVersionNo}' of '{packageId}'...");
+
+		// create comparer
+		var comparer = new NuGetDiff ();
+		comparer.PackageCache = DOCAPI_CACHEPATH;  // Cache path
+		comparer.SaveAssemblyApiInfo = true;       // we don't keep this, but it lets us know if there were no changes
+		comparer.SaveAssemblyMarkdownDiff = true;  // we want markdown
+		comparer.IgnoreResolutionErrors = true;    // we don't care if frameowrk/platform types can't be found
+
+		await comparer.SaveCompleteDiffToDirectoryAsync (packageId, latestVersion, reader, diffRoot);
+
+		// run the diff with just the breaking changes
+		comparer.MarkdownDiffFileExtension = ".breaking.md";
+		comparer.IgnoreNonBreakingChanges = true;
+		await comparer.SaveCompleteDiffToDirectoryAsync (packageId, latestVersion, reader, diffRoot);
+
+		// TODO: there are two bugs in this version of mono-api-html
+		var mdFiles = $"{diffRoot}/*.*.md";
+		// 1. the <h4> doesn't look pretty in the markdown
+		ReplaceTextInFiles (mdFiles, "<h4>", "> ");
+		ReplaceTextInFiles (mdFiles, "</h4>", Environment.NewLine);
+		// 2. newlines are inccorect on Windows: https://github.com/mono/mono/pull/9918
+		ReplaceTextInFiles (mdFiles, "\r\r", "\r");
+
+		// we are done
+		Information ($"Diff complete of '{packageId}'.");
+	}
 }
 
 Task("javadocs")
@@ -138,6 +176,7 @@ Task("binderate")
 });
 
 string nuget_version_template = "71.vvvv.0-preview3";
+JArray binderator_json_array = null;
 
 Task("binderate-config-verify")
 	.Does
@@ -147,37 +186,38 @@ Task("binderate-config-verify")
 			using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
 			{
 				JsonTextReader jtr = new JsonTextReader(reader);
-				JArray ja = (JArray)JToken.ReadFrom(jtr);
-				
-				Information("config.json");
-				//Information($"{ja}");
-				foreach(JObject jo in ja[0]["artifacts"])
-				{
-					string version       = (string) jo["version"];
-					string nuget_version = (string) jo["nugetVersion"];
-					Information($"groupId       = {jo["groupId"]}");
-					Information($"artifactId    = {jo["artifactId"]}");
-					Information($"version       = {version}");
-					Information($"nuget_version = {nuget_version}");
-					Information($"nugetId       = {jo["nugetId"]}");
-					
-					string version_compressed = version.Replace(".", "");
-					if( nuget_version?.Contains(version_compressed) == false)
-					{
-						Error("check config.json for nuget id");
-						Error  ($"		groupId       = {jo["groupId"]}");
-						Error  ($"		artifactId    = {jo["artifactId"]}");
-						Error  ($"		version       = {version}");
-						Error  ($"		nuget_version = {nuget_version}");
-						Error  ($"		nugetId       = {jo["nugetId"]}");
+				binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+			}
 
-						string nuget_version_new = nuget_version_template.Replace("vvvv", version_compressed);
-						Warning($"	expected : ");
-						Warning($"		nuget_version = {nuget_version_new}");
-						throw new Exception("check config.json for nuget id");
-					}
+			Information("config.json verification...");
+			foreach(JObject jo in binderator_json_array[0]["artifacts"])
+			{
+				string version       = (string) jo["version"];
+				string nuget_version = (string) jo["nugetVersion"];
+				Information($"groupId       = {jo["groupId"]}");
+				Information($"artifactId    = {jo["artifactId"]}");
+				Information($"version       = {version}");
+				Information($"nuget_version = {nuget_version}");
+				Information($"nugetId       = {jo["nugetId"]}");
+
+				string version_compressed = version.Replace(".", "");
+				if( nuget_version?.Contains(version_compressed) == false)
+				{
+					Error("check config.json for nuget id");
+					Error  ($"		groupId       = {jo["groupId"]}");
+					Error  ($"		artifactId    = {jo["artifactId"]}");
+					Error  ($"		version       = {version}");
+					Error  ($"		nuget_version = {nuget_version}");
+					Error  ($"		nugetId       = {jo["nugetId"]}");
+
+					string nuget_version_new = nuget_version_template.Replace("vvvv", version_compressed);
+					Warning($"	expected : ");
+					Warning($"		nuget_version = {nuget_version_new}");
+					throw new Exception("check config.json for nuget id");
 				}
 			}
+
+			return;
 		}
 	);
 
@@ -233,9 +273,64 @@ Task("libs")
 	});
 });
 
+Task("samples-directory-build-targets")
+	.Does
+	(
+		() =>
+		{
+			Information("samples Director.Build.targets from config.json ...");
+			using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+			{
+				JsonTextReader jtr = new JsonTextReader(reader);
+				binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+			}
+
+			foreach(JObject jo in binderator_json_array[0]["artifacts"])
+			{
+				string version       = (string) jo["version"];
+				string nuget_version = (string) jo["nugetVersion"];
+				Information($"groupId       = {jo["groupId"]}");
+				Information($"artifactId    = {jo["artifactId"]}");
+				Information($"version       = {version}");
+				Information($"nuget_version = {nuget_version}");
+				Information($"nugetId       = {jo["nugetId"]}");
+			}
+
+	        XmlDocument doc = new XmlDocument();
+	        XmlElement element_p = doc.CreateElement( string.Empty, "Project", string.Empty );
+        	doc.AppendChild( element_p );
+	       	XmlElement element_ig = doc.CreateElement( string.Empty, "ItemGroup", string.Empty );
+        	element_p.AppendChild(element_ig);
+
+			foreach(JObject jo in binderator_json_array[0]["artifacts"])
+			{
+				string version       = (string) jo["version"];
+				string nuget_version = (string) jo["nugetVersion"];
+				Information($"groupId       = {jo["groupId"]}");
+				Information($"artifactId    = {jo["artifactId"]}");
+				Information($"version       = {version}");
+				Information($"nuget_version = {nuget_version}");
+				Information($"nugetId       = {jo["nugetId"]}");
+
+				XmlElement element_pr = doc.CreateElement( string.Empty, "PackageReference", string.Empty );
+	        	element_ig.AppendChild(element_pr);
+				XmlAttribute attr_update = doc.CreateAttribute("Update");
+				attr_update.Value = (string) jo["nugetId"];
+				element_pr.Attributes.Append(attr_update);
+				XmlAttribute attr_version = doc.CreateAttribute("Version");
+				attr_version.Value = nuget_version;
+				element_pr.Attributes.Append(attr_version);
+			}
+
+			doc.Save( System.IO.Path.Combine("samples", "Directory.Build.targets" ));
+
+			return;
+		}
+	);
 
 Task("samples")
 	.IsDependentOn("libs")
+	.IsDependentOn("samples-directory-build-targets")
 	.IsDependentOn("mergetargets")
 	.IsDependentOn("allbindingprojectrefs")
 	.Does(() =>
@@ -249,10 +344,10 @@ Task("samples")
 		MSBuild(sampleSln, c => {
 			c.Configuration = "Release";
 			c.Properties.Add("DesignTimeBuild", new [] { "false" });
-			c.BinaryLogger = new MSBuildBinaryLogSettings 
+			c.BinaryLogger = new MSBuildBinaryLogSettings
 			{
-				Enabled = true, 
-				FileName = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath 
+				Enabled = true,
+				FileName = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath
 			};
 		});
 	}
@@ -328,15 +423,70 @@ Task ("merge")
 		$"  --inject-assemblyname");
 });
 
-Task("inject-variables")
-	.WithCriteria(!BuildSystem.IsLocalBuild)
-	.Does(() =>
+Task ("ci-setup")
+	.WithCriteria (!BuildSystem.IsLocalBuild)
+	.Does (() =>
 {
 	var glob = "./source/AssemblyInfo.cs";
 
-	ReplaceTextInFiles(glob, "{BUILD_COMMIT}", BUILD_COMMIT);
-	ReplaceTextInFiles(glob, "{BUILD_NUMBER}", BUILD_NUMBER);
-	ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", BUILD_TIMESTAMP);
+	ReplaceTextInFiles(glob, "{BUILD_COMMIT}", buildCommit);
+	ReplaceTextInFiles(glob, "{BUILD_NUMBER}", buildNumber);
+	ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", buildTimestamp);
+});
+
+// Task ("genapi")
+// 	.IsDependentOn ("libs")
+// 	.Does (() =>
+// {
+// 	var GenApiToolPath = GetFiles ("./tools/**/GenAPI.exe").FirstOrDefault ();
+
+// 	// For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
+// 	// GenAPI.exe -libPath:$(MONOANDROID) -out:Some.generated.cs -w:TypeForwards ./relative/path/to/Assembly.dll
+// 	var libDirPrefix = IsRunningOnWindows () ? "output/" : "";
+
+// 	var libs = new FilePath [] {
+// 		"./" + libDirPrefix + "Xamarin.Android.Support.Compat.dll",
+// 		"./" + libDirPrefix + "Xamarin.Android.Support.Core.UI.dll",
+// 		"./" + libDirPrefix + "Xamarin.Android.Support.Core.Utils.dll",
+// 		"./" + libDirPrefix + "Xamarin.Android.Support.Fragment.dll",
+// 		"./" + libDirPrefix + "Xamarin.Android.Support.Media.Compat.dll",
+// 	};
+
+// 	foreach (var lib in libs) {
+// 		var genName = lib.GetFilename () + ".generated.cs";
+
+// 		var libPath = IsRunningOnWindows () ? MakeAbsolute (lib).FullPath : lib.FullPath;
+// 		var monoDroidPath = IsRunningOnWindows () ? "\"" + MONODROID_PATH + "\"" : MONODROID_PATH;
+
+// 		Information ("GenAPI: {0}", lib.FullPath);
+
+// 		StartProcess (GenApiToolPath, new ProcessSettings {
+// 			Arguments = string.Format("-libPath:{0} -out:{1}{2} -w:TypeForwards {3}",
+// 							monoDroidPath + "," + MSCORLIB_PATH,
+// 							IsRunningOnWindows () ? "" : "./",
+// 							genName,
+// 							libPath),
+// 			WorkingDirectory = "./output/",
+// 		});
+// 	}
+
+// 	MSBuild ("./GooglePlayServices.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
+
+// 	CopyFile ("./support-v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
+// });
+
+Task ("docs-api-diff")
+    .Does (async () =>
+{
+	var nupkgFiles = GetFiles ("./**/output/*.nupkg"); //get all of the nugets in the output
+
+	Information ("Found ({0}) Nuget's to Diff", nupkgFiles.Count ());
+
+	foreach (var nupkgFile in nupkgFiles)  //loop through each nuget that is found
+	{
+		Information("Diffing: {0}", nupkgFile);
+		await BuildApiDiff(nupkgFile);
+	}
 });
 
 Task ("clean")
