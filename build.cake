@@ -475,19 +475,19 @@ Task ("ci-setup")
 // 	CopyFile ("./support-v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
 // });
 
-Task ("docs-api-diff")
-    .Does (async () =>
-{
-	var nupkgFiles = GetFiles ("./**/output/*.nupkg"); //get all of the nugets in the output
+// Task ("docs-api-diff")
+//     .Does (async () =>
+// {
+// 	var nupkgFiles = GetFiles ("./**/output/*.nupkg"); //get all of the nugets in the output
 
-	Information ("Found ({0}) Nuget's to Diff", nupkgFiles.Count ());
+// 	Information ("Found ({0}) Nuget's to Diff", nupkgFiles.Count ());
 
-	foreach (var nupkgFile in nupkgFiles)  //loop through each nuget that is found
-	{
-		Information("Diffing: {0}", nupkgFile);
-		await BuildApiDiff(nupkgFile);
-	}
-});
+// 	foreach (var nupkgFile in nupkgFiles)  //loop through each nuget that is found
+// 	{
+// 		Information("Diffing: {0}", nupkgFile);
+// 		await BuildApiDiff(nupkgFile);
+// 	}
+// });
 
 Task ("clean")
 	.Does (() =>
