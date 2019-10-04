@@ -153,15 +153,15 @@ Task("javadocs")
 	}
 });
 
-Task("check-tools")
-	.Does(() =>
-{
-	var installedTools = RunProcessWithOutput("dotnet", "tool list -g");
-	foreach (var toolName in REQUIRED_DOTNET_TOOLS) {
-		if (installedTools.All(l => l.IndexOf(toolName, StringComparison.OrdinalIgnoreCase) == -1))
-			throw new Exception ($"Missing dotnet tool: {toolName}");
-	}
-});
+// Task("check-tools")
+// 	.Does(() =>
+// {
+// 	var installedTools = RunProcessWithOutput("dotnet", "tool list -g");
+// 	foreach (var toolName in REQUIRED_DOTNET_TOOLS) {
+// 		if (installedTools.All(l => l.IndexOf(toolName, StringComparison.OrdinalIgnoreCase) == -1))
+// 			throw new Exception ($"Missing dotnet tool: {toolName}");
+// 	}
+// });
 
 Task("binderate")
 	.IsDependentOn("javadocs")
@@ -506,6 +506,8 @@ Task ("clean")
 Task ("ci")
 	.IsDependentOn ("check-tools")
 	.IsDependentOn ("inject-variables")
+	//.IsDependentOn ("check-tools")
+	//.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
 	.IsDependentOn ("merge")
