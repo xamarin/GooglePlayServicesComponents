@@ -604,6 +604,13 @@
 			"nugetVersion" : "71.1601.0",
 			"nugetId" : "Xamarin.Firebase.ProtoliteWellKnownTypes"
 		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-inappmessaging",
+			"version" : "17.0.0",
+			"nugetVersion" : "71.1700.0-preview0",
+			"nugetId" : "Xamarin.Firebase.Firebase.InAppMessaging"
+		},
 
 
 
@@ -724,6 +731,27 @@
 			"artifactId" : "auto-value-annotations",
 			"version" : "1.6.5",
 			"nugetId" : "Xamarin.Google.AutoValue.Annotations",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.dagger",
+			"artifactId" : "dagger",
+			"version" : "2.13.0",
+			"nugetId" : "Xamarin.Google.Dagger",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "io.reactivex.rxjava2",
+			"artifactId" : "rxandroid",
+			"version" : "2.1.1",
+			"nugetId" : "Xamarin.Android.ReactiveX.RxAndroid",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "io.reactivex.rxjava2",
+			"artifactId" : "rxjava",
+			"version" : "2.2.7",
+			"nugetId" : "Xamarin.Android.ReactiveX.RxJava",
 			"dependencyOnly" : true
 		}
 	]
