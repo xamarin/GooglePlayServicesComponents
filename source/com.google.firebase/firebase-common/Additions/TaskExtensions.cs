@@ -6,9 +6,9 @@ namespace Firebase
 {
 	public partial class FirebaseApp
 	{
-		public Task<Firebase.Auth.GetTokenResult> GetTokenAsync(bool flag)
-		{
-			return GetToken(flag).AsAsync<Firebase.Auth.GetTokenResult>();
-		}
+		//public Task<Firebase.Auth.GetTokenResult> GetTokenAsync(bool flag)
+		//{
+		//	return GetToken(flag).AsAsync<Firebase.Auth.GetTokenResult>();
+		//}
 	}
 }
