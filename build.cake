@@ -34,7 +34,11 @@ var ANDROID_SDK_BASE_VERSION = "v1.0";
 var ANDROID_SDK_VERSION = "v9.0";
 if (string.IsNullOrEmpty(XAMARIN_ANDROID_PATH)) {
 	if (IsRunningOnWindows()) {
-		var vsInstallPath = VSWhereLatest(new VSWhereLatestSettings { Requires = "Component.Xamarin" });
+		var vsInstallPath = VSWhereLatest(new VSWhereLatestSettings 
+		{ 
+			Requires = "Component.Xamarin",
+			IncludePrerelease = true
+		});
 		XAMARIN_ANDROID_PATH = vsInstallPath.Combine("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid").FullPath;
 	} else {
 		if (DirectoryExists("/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xamarin.android/xbuild-frameworks/MonoAndroid"))
