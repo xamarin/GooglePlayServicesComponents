@@ -1,4 +1,4 @@
-﻿@using System.Linq
+﻿﻿@using System.Linq
 @using System.IO
 @using System.Xml.Linq
 @{
@@ -39,15 +39,13 @@
 
   @foreach (var art in @Model.MavenArtifacts) {
       if (art.MavenArtifactPackaging == "aar") {
-        var friendlyGroupId = art.MavenGroupId.Contains("firebase") ? "googlefb" : "googlegps";
         var friendlyArtifactId = art.MavenArtifactId.Replace("-", "");
-        var friendlyId = friendlyGroupId + "_" + friendlyArtifactId;
+        var friendlyVersion = art.MavenArtifactVersion.Replace(".", "_").Replace("-", "_");
+        var friendlyId = friendlyArtifactId + "_" + friendlyVersion;
         var url = "https://dl.google.com/dl/android/maven2/" + art.MavenGroupId.Replace(".", "/") + "/" + art.MavenArtifactId + "/" + art.MavenArtifactVersion + "/" + art.MavenArtifactId + "-" + art.MavenArtifactVersion + ".aar";
-        var xbdKey = friendlyGroupId + "-" + art.MavenArtifactVersion + "/" + friendlyArtifactId;
+        var xbdKey = friendlyArtifactId + "-" + art.MavenArtifactVersion;
         var xbdAarFile = friendlyArtifactId + "-" + art.MavenArtifactVersion + ".aar";
-        var xbdAarPath = xbdKey.Replace("/", "\\") + "\\" + xbdAarFile;
-        var xbdAsmName = string.IsNullOrEmpty(Model.AssemblyName) ? Model.NuGetPackageId : Model.AssemblyName;
-        var xbdMd5 = art.MavenArtifactMd5;
+        var xbdAarPath = xbdKey + "\\" + xbdKey + ".aar";
   <ItemGroup>
     <XamarinBuildRestoreResources Include="_XbdRestoreItems_@(friendlyId)" />
   </ItemGroup>
@@ -57,16 +55,10 @@
         <Url>@(url)</Url>
         <ToFile>@(xbdAarFile)</ToFile>
         <Kind>Uncompressed</Kind>
-        @if (!string.IsNullOrEmpty(xbdMd5)) {
-        <Md5>@(xbdMd5)</Md5>
-        }
       </XamarinBuildDownload>
     </ItemGroup>
     <ItemGroup>
-      <XamarinBuildDownloadRestoreAssemblyAar Include="$(XamarinBuildDownloadDir)@(xbdAarPath)">
-        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
-        <AssemblyName>@(xbdAsmName)</AssemblyName>
-      </XamarinBuildDownloadRestoreAssemblyAar>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(XamarinBuildDownloadDir)@(xbdAarPath)" />
     </ItemGroup>
   </Target>
       }
