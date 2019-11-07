@@ -716,7 +716,7 @@
 			"artifactId" : "annotation",
 			"version" : "1.1.0",
 			"nugetId" : "Xamarin.AndroidX.Annotation",
-			"nugetVersion": "1.0.2-preview02",
+			"nugetVersion": "1.0.2-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -724,7 +724,7 @@
 			"artifactId" : "browser",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.Browser",
-			"nugetVersion": "1.0.0-preview02",
+			"nugetVersion": "1.0.0-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -732,7 +732,7 @@
 			"artifactId" : "collection",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.Collection",
-			"nugetVersion": "1.0.0-preview02",
+			"nugetVersion": "1.0.0-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -740,7 +740,7 @@
 			"artifactId" : "core",
 			"version" : "1.0.1",
 			"nugetId" : "Xamarin.AndroidX.Core",
-			"nugetVersion": "1.0.1-preview02",
+			"nugetVersion": "1.0.1-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -748,7 +748,7 @@
 			"artifactId" : "fragment",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.Fragment",
-			"nugetVersion": "1.0.0-preview02",
+			"nugetVersion": "1.0.0-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -756,7 +756,7 @@
 			"artifactId" : "legacy-support-core-utils",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.Legacy.Support.Core.Utils",
-			"nugetVersion": "1.0.0-preview02",
+			"nugetVersion": "1.0.0-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -764,7 +764,7 @@
 			"artifactId" : "loader",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.Loader",
-			"nugetVersion": "1.0.0-preview02",
+			"nugetVersion": "1.0.0-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -772,7 +772,7 @@
 			"artifactId" : "mediarouter",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.MediaRouter",
-			"nugetVersion": "1.0.1-preview02",
+			"nugetVersion": "1.0.1-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -780,7 +780,7 @@
 			"artifactId" : "media",
 			"version" : "1.0.1",
 			"nugetId" : "Xamarin.AndroidX.Media",
-			"nugetVersion": "1.0.1-preview02",
+			"nugetVersion": "1.0.1-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -788,7 +788,7 @@
 			"artifactId" : "recyclerview",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.RecyclerView",
-			"nugetVersion": "1.0.0-preview02",
+			"nugetVersion": "1.0.0-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -796,7 +796,7 @@
 			"artifactId" : "localbroadcastmanager",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.LocalBroadcastManager",
-			"nugetVersion": "1.0.0-preview02",
+			"nugetVersion": "1.0.0-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -804,7 +804,7 @@
 			"artifactId" : "exifinterface",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.ExifInterface",
-			"nugetVersion": "1.0.0-preview02",
+			"nugetVersion": "1.0.0-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -812,7 +812,7 @@
 			"artifactId" : "appcompat",
 			"version" : "1.0.2",
 			"nugetId" : "Xamarin.AndroidX.AppCompat",
-			"nugetVersion": "1.0.2-preview02",
+			"nugetVersion": "1.0.2-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -820,7 +820,7 @@
 			"artifactId" : "cardview",
 			"version" : "1.0.2",
 			"nugetId" : "Xamarin.AndroidX.CardView",
-			"nugetVersion": "1.0.2-preview02",
+			"nugetVersion": "1.0.2-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -828,7 +828,7 @@
 			"artifactId" : "constraintlayout",
 			"version" : "1.1.3",
 			"nugetId" : "Xamarin.AndroidX.ConstraintLayout",
-			"nugetVersion": "1.1.3-preview02",
+			"nugetVersion": "1.1.3-preview04",
 			"dependencyOnly" : true
 		},
 		{
@@ -836,7 +836,7 @@
 			"artifactId" : "legacy-support-v4",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.Legacy.Support.V4",
-			"nugetVersion": "1.0.0-preview02",
+			"nugetVersion": "1.0.0-preview04",
 			"dependencyOnly" : true
 		},
 
