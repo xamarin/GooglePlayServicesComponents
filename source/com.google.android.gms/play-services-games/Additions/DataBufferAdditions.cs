@@ -217,30 +217,30 @@ namespace Android.Gms.Games.Stats
 
 namespace Android.Gms.Games.Quest
 {
-    public partial class MilestoneBuffer : IEnumerable<IMilestone>, Java.Lang.IIterable
-	{
-        public IEnumerator<IMilestone> GetEnumerator()
-        {
-            return this.ToEnumerable<IMilestone> ().GetEnumerator();
-        }
+ //   public partial class MilestoneBuffer : IEnumerable<IMilestone>//, Java.Lang.IIterable
+	//{
+ //       public IEnumerator<IMilestone> GetEnumerator()
+ //       {
+ //           return this.ToEnumerable<IMilestone> ().GetEnumerator();
+ //       }
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
+ //       System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+ //       {
+ //           return this.GetEnumerator();
+ //       }
 
-        public IntPtr Handle => throw new NotImplementedException();
+ //       public IntPtr Handle => throw new NotImplementedException();
 
-        public IIterator Iterator()
-        {
-            throw new NotImplementedException();
-        }
+ //       public IIterator Iterator()
+ //       {
+ //           throw new NotImplementedException();
+ //       }
 
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-    }
+ //       public void Dispose()
+ //       {
+ //           throw new NotImplementedException();
+ //       }
+ //   }
 
     public partial class QuestBuffer : IEnumerable<IQuest>
     {

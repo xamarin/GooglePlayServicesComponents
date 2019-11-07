@@ -212,12 +212,23 @@ Task("binderate-config-verify")
 
 					string[] version_parsed = version.Split(new string[] {"."}, StringSplitOptions.None);
 					string nuget_version_new = nuget_version_template;
-					nuget_version_new = nuget_version_new.Replace("xx", version_parsed[0]);
+					string version_parsed_xx = version_parsed[0];
+
+					Information($"version_parsed_xx       = {version_parsed_xx}");
+					if ( jo["groupId"].ToString().Equals("com.google.android.datatransport") )
+					{
+						version_parsed_xx = string.Concat("0", version_parsed_xx);
+					}
+					Information($"version_parsed_xx       = {version_parsed_xx}");
+
+					nuget_version_new = nuget_version_new.Replace("xx", version_parsed_xx);
 					nuget_version_new = nuget_version_new.Replace("yy", version_parsed[1]);
 					nuget_version_new = nuget_version_new.Replace("zz", version_parsed[2]);
 					nuget_version_new = nuget_version_new.Replace("suffix", nuget_version_suffix);
 
-					if( nuget_version?.Contains($"1{version}") == false)
+					Information($"nuget_version_new       = {nuget_version_new}");
+					Information($"nuget_version           = {nuget_version}");
+					if( ! nuget_version_new.Contains($"{nuget_version}") )
 					{
 						// AndroidX version
 						// // pre AndroidX version
@@ -234,7 +245,6 @@ Task("binderate-config-verify")
 
 						return;
 					}
-					
 				}
 			}
 		}

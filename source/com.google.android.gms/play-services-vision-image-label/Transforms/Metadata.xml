@@ -9,4 +9,9 @@
     <attr
         path="/api/package[@name='com.google.android.gms.vision.label.internal.client']/interface[@name='INativeImageLabeler']/method[@name='zza']"
         name="obfuscated">false</attr>
+    
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.vision.label.internal.client']/class[@name='zze']"
+        />
+    
 </metadata>
