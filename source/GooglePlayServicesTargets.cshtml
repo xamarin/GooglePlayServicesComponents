@@ -29,14 +29,6 @@
   </ItemGroup>
   }
 
-  <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts) {
-      if (1==2 && art.MavenArtifactPackaging == "aar") {
-    <AndroidAarLibrary Include="$(MSBuildThisFileDirectory)..\..\aar\@(targetFrameworkMoniker)\@(art.MavenArtifactId).aar" />
-      }
-    }
-  </ItemGroup>
-
   @foreach (var art in @Model.MavenArtifacts) {
       if (art.MavenArtifactPackaging == "aar") {
         var friendlyArtifactId = art.MavenArtifactId.Replace("-", "");
