@@ -31,6 +31,8 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
+    <AndroidDexTool>d8</AndroidDexTool>
+    <AndroidLinkTool>r8</AndroidLinkTool>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -49,8 +51,8 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Build.Download" Version="0.7.0" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.7.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
