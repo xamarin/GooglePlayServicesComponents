@@ -15,7 +15,7 @@
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
     <AssemblyName>CastingCall</AssemblyName>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -167,7 +167,7 @@
       <HintPath>..\packages\Xamarin.GooglePlayServices.Cast.71.1602.0\lib\monoandroid90\Xamarin.GooglePlayServices.Cast.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Build.Framework">
-      <HintPath>..\packages\Microsoft.Build.Framework.16.0.461\lib\netstandard2.0\Microsoft.Build.Framework.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Build.Framework.16.3.0\lib\netstandard2.0\Microsoft.Build.Framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
