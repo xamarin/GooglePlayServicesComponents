@@ -553,13 +553,6 @@
 		},
 		{
 			"groupId" : "com.google.firebase",
-			"artifactId" : "firebase-measurement-connector-impl",
-			"version" : "17.0.5",
-			"nugetVersion" : "117.0.5-preview01",
-			"nugetId" : "Xamarin.Firebase.Measurement.Connector.Impl"
-		},
-		{
-			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-messaging",
 			"version" : "19.0.1",
 			"nugetVersion" : "119.0.1-preview01",
@@ -693,39 +686,6 @@
 			"nugetId" : "Xamarin.Firebase.ProtoliteWellKnownTypes"
 		},
 
-
-		{
-			"groupId" : "com.google.android.gms",
-			"artifactId" : "play-services-measurement-api",
-			"version" : "16.3.0",
-			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Api",
-			"nugetVersion": "71.1630.0",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "com.google.android.gms",
-			"artifactId" : "play-services-measurement-base",
-			"version" : "16.3.0",
-			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Base",
-			"nugetVersion": "71.1630.0",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "com.google.firebase",
-			"artifactId" : "firebase-analytics",
-			"version" : "16.3.0",
-			"nugetId" : "Xamarin.Firebase.Analytics",
-			"nugetVersion": "71.1630.0",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "com.google.firebase",
-			"artifactId" : "firebase-analytics-impl",
-			"version" : "16.3.0",
-			"nugetId" : "Xamarin.Firebase.Analytics.Impl",
-			"nugetVersion": "71.1630.0",
-			"dependencyOnly" : true
-		},
 
 
 
