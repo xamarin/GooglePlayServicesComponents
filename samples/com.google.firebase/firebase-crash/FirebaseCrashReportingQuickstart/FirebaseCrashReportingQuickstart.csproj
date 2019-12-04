@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>FirebaseCrashReportingQuickstart</RootNamespace>
     <AssemblyName>FirebaseCrashReportingQuickstart</AssemblyName>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
