@@ -281,4 +281,14 @@
         />    
     
 
+
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.local']/interface[@name='QueryEngine']"
+        name="visibility"
+        >
+        public
+    </attr>
+
+
+
 </metadata>
