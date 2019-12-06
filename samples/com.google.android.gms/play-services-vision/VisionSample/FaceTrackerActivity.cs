@@ -10,8 +10,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Gms.Vision.Faces;
-using Android.Gms.Vision;
 
 
 [assembly: MetaData ("com.google.android.gms.vision.DEPENDENCIES", Value="barcode,face")]

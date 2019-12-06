@@ -6,8 +6,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Iid;
-using Android.Gms.Gcm;
 
 // @PACKAGE_NAME@ will inject your own package name into the value
 [assembly: UsesPermission (Android.Manifest.Permission.GetAccounts)]

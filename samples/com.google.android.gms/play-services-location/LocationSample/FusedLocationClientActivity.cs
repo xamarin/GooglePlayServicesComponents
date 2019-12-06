@@ -7,8 +7,6 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.Threading.Tasks;
-using Android.Gms.Location;
-using Android.Gms.Tasks;
 using Java.Lang;
 
 namespace LocationSample

@@ -86,6 +86,7 @@
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.1.0-preview06" />
     <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.1.0-preview06" />
     <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0-preview06" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Ads" Version="118.1.1-preview01" />
     <PackageReference Include="Xamarin.Build.Download">
       <Version>0.7.1</Version>
     </PackageReference>

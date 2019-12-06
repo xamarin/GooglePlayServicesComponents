@@ -5,11 +5,7 @@ using System.Collections.Generic;
 using Android.OS;
 using Android.Views;
 using Android.Content;
-using Android.Gms.Plus;
-using Android.Gms.Common.Apis;
-using Android.Gms.Common;
 using Java.Interop;
-using Android.Gms.Plus.Model.People;
 
 namespace PlusSample
 {

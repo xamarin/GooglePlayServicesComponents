@@ -6,15 +6,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Common.Apis;
 using Android.Graphics;
-using Android.Gms.Games;
-using Android.Gms.Plus;
 using System.Threading.Tasks;
-using Android.Gms.Games.Request;
 using System.Collections.Generic;
 using System.Text;
-using Android.Gms.Common;
 
 
 [assembly: MetaData ("com.google.android.gms.games.APP_ID", Value="@string/app_id")]

@@ -93,7 +93,8 @@
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.1.0-preview06" />
     <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0-preview06" />
     <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.1.0-preview06" />				
-
+    <PackageReference Include="Xamarin.GooglePlayServices.Cast" Version="117.0.0-preview01" />
+        
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

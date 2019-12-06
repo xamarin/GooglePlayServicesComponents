@@ -2,9 +2,6 @@
 using System.Linq;
 using Android.Widget;
 using Android.Content;
-using Android.Gms.Common.Apis;
-using Android.Gms.Maps.Model;
-using Android.Gms.Location.Places;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Android.Runtime;

@@ -49,6 +49,8 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.1.0-preview06" />
     <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0-preview06" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Maps" Version="117.0.0-preview01" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Places" Version="117.0.0-preview01" />
 
     <PackageReference Include="Xamarin.AndroidX.Migration">
       <Version>1.0.0-preview06</Version>

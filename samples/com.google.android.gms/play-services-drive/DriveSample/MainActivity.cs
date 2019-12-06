@@ -7,10 +7,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Common.Apis;
-using Android.Gms.Drive;
-using Android.Gms.Common;
-using Android.Gms.Drive.Query;
 using System.Collections.Generic;
 
 namespace DriveSample

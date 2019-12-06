@@ -6,9 +6,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Common.Apis;
-using Android.Gms.Nearby;
-using Android.Gms.Nearby.Connection;
 using System.Collections.Generic;
 
 [assembly: MetaData ("com.google.android.gms.nearby.connection.SERVICE_ID", Value="@string/service_id")]

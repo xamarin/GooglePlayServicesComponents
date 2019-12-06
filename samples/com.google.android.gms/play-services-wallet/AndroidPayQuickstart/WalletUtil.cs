@@ -1,5 +1,4 @@
 ﻿using System;
-using Android.Gms.Wallet;
 using System.Collections.Generic;
 using Java.Math;
 

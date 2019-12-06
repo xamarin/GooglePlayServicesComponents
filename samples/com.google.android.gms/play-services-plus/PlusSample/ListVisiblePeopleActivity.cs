@@ -10,10 +10,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Gms.Plus;
-using Android.Gms.Common.Apis;
-using Android.Gms.Common;
-using Android.Gms.Plus.Model.People;
 
 namespace PlusSample
 {

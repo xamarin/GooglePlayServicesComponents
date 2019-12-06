@@ -12,7 +12,6 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Android.Gms.Analytics;
-using Fragment = Android.Support.V4.App.Fragment;
 
 namespace Analytics
 {

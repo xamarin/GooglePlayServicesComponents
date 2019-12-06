@@ -1,7 +1,5 @@
 ﻿using System;
 
-using Android.Gms.AppInvite;
-using Android.Support.V4.Content;
 using Android.Content;
 
 namespace AppInviteSample

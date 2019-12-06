@@ -1,7 +1,5 @@
 ﻿using System;
 using Android.App;
-using Android.Gms.Location.Places;
-using Android.Gms.Common.Apis;
 using System.Linq;
 using Android.Widget;
 using System.Text;

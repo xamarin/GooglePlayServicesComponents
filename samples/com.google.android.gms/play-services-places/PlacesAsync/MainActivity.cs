@@ -6,9 +6,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Common.Apis;
-using Android.Gms.Location.Places;
-using Android.Gms.Maps.Model;
 
 // USE YOUR OWN KEY HERE, THIS ONE WILL NOT WORK
 [assembly: MetaData ("com.google.android.geo.API_KEY", Value="AIzaSyB9GNnotNlDk0PtxI6LhPCwAs-k4aN-gpA")]

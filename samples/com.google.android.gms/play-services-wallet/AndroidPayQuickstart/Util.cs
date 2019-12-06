@@ -1,5 +1,4 @@
 ﻿using System;
-using Android.Gms.Wallet;
 using Android.Content;
 
 namespace AndroidPayQuickstart

@@ -1,12 +1,8 @@
 ﻿using System;
-using Android.Support.V4.App;
-using Android.Gms.Common;
 using Android.App;
 using Android.Widget;
-using Android.Gms.Wallet;
 using Android.Content;
 using Android.Runtime;
-using Android.Gms.Common.Apis;
 using Android.OS;
 
 namespace AndroidPayQuickstart

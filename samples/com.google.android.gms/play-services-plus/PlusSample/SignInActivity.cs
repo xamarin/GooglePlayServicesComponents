@@ -10,9 +10,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Gms.Common;
-using Android.Gms.Common.Apis;
-using Android.Gms.Plus;
 //using CheckResult = Android.Gms.Common.Apis.GoogleApiClient.ServerAuthCodeCallbacksCheckResult;
 
 namespace PlusSample

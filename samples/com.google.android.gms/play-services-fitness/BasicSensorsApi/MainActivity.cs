@@ -6,14 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Common.Apis;
-using Android.Gms.Common;
-using Android.Gms.Fitness;
-using Android.Support.V7.App;
-using Android.Gms.Fitness.Request;
-using Android.Gms.Fitness.Data;
-using Android.Gms.Fitness.Result;
 using System.Threading.Tasks;
+using AndroidX.AppCompat.App;
 
 namespace BasicSensorsApi
 {

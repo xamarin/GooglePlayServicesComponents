@@ -6,9 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V7.Media;
-using Android.Gms.Cast;
-using Android.Gms.Common.Apis;
+using AndroidX.MediaRouter.Media;
 
 namespace CastingCall
 {

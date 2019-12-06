@@ -1,7 +1,5 @@
 ﻿using System;
-using Android.Gms.Wallet;
 using Android.Widget;
-using Android.Gms.Wallet.Fragment;
 using Android.Content;
 using Android.Runtime;
 using Android.OS;

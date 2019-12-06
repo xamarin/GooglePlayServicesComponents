@@ -1,7 +1,5 @@
 ﻿using System;
-using Android.Support.V4.App;
 using Android.Content;
-using Android.Gms.Wallet;
 using Android.Widget;
 
 namespace AndroidPayQuickstart

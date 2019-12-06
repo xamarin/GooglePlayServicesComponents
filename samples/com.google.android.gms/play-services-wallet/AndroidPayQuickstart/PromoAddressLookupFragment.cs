@@ -1,12 +1,7 @@
 ﻿using System;
-using Android.Gms.Common.Apis;
-using Android.Gms.Common;
 using Android.App;
-using Android.Gms.Wallet;
-using Android.Gms.Identity.Intents.Model;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Identity.Intents;
 using System.Text;
 
 namespace AndroidPayQuickstart
