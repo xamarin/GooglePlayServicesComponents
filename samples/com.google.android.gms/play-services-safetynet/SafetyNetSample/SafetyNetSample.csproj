@@ -51,15 +51,16 @@
     <PackageReference Include="System.Json">
       <Version>4.7.0</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.v4">
-      <Version>28.0.0.3</Version>
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.1.0-preview06" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0-preview06" />
+
+    <PackageReference Include="Xamarin.AndroidX.Migration">
+      <Version>1.0.0-preview06</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Build.Download">
-      <Version>0.7.0</Version>
+      <Version>0.7.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.GooglePlayServices.SafetyNet">
-      <Version>71.1600.0</Version>
-    </PackageReference>
+
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
