@@ -2,9 +2,9 @@
 using Android.App;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V7.App;
 using Firebase.Crash;
 using Android.Util;
+using AndroidX.AppCompat.App;
 
 namespace FirebaseCrashReportingQuickstart
 {

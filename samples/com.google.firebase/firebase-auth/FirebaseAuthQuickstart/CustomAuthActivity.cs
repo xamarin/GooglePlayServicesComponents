@@ -1,11 +1,9 @@
-﻿using System;
+﻿using System.Threading.Tasks;
 using Android.OS;
-using Android.Support.V7.App;
-using Firebase.Auth;
-using System.Threading.Tasks;
-using Android.Gms.Extensions;
 using Android.Widget;
 using Android.App;
+using AndroidX.AppCompat.App;
+using Firebase.Auth;
 
 namespace FirebaseAuthQuickstart
 {

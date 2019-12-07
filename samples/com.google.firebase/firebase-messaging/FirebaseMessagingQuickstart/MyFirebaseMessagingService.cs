@@ -2,7 +2,6 @@
 using Android.App;
 using Android.Content;
 using Android.Media;
-using Android.Support.V4.App;
 using Firebase.Messaging;
 
 namespace FirebaseMessagingQuickstart

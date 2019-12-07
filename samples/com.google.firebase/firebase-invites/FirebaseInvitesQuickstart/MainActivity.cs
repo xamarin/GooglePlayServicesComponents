@@ -5,9 +5,9 @@ using Android.Gms.AppInvite;
 using Android.Gms.Common;
 using Android.Gms.Common.Apis;
 using Android.OS;
-using Android.Support.Design.Widget;
-using Android.Support.V7.App;
 using Android.Views;
+using AndroidX.AppCompat.App;
+using Google.Android.Material.Snackbar;
 using Uri = Android.Net.Uri;
 
 
