@@ -31,7 +31,7 @@
 
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
-      if (1==2 && art.MavenArtifactPackaging == "aar") {
+      if (art.MavenArtifactPackaging == "aar") {
     <AndroidAarLibrary Include="$(MSBuildThisFileDirectory)..\..\aar\@(targetFrameworkMoniker)\@(art.MavenArtifactId).aar" />
       }
     }
@@ -46,6 +46,7 @@
         var xbdKey = friendlyArtifactId + "-" + art.MavenArtifactVersion;
         var xbdAarFile = friendlyArtifactId + "-" + art.MavenArtifactVersion + ".aar";
         var xbdAarPath = xbdKey + "\\" + xbdKey + ".aar";
+        var xbdSha256 = art.MavenArtifactSha256;
   <ItemGroup>
     <XamarinBuildRestoreResources Include="_XbdRestoreItems_@(friendlyId)" />
   </ItemGroup>
@@ -55,10 +56,11 @@
         <Url>@(url)</Url>
         <ToFile>@(xbdAarFile)</ToFile>
         <Kind>Uncompressed</Kind>
+        <Sha256>@(xbdSha256)</Sha256>
       </XamarinBuildDownload>
     </ItemGroup>
     <ItemGroup>
-      <XamarinBuildDownloadRestoreAssemblyAar Include="$(XamarinBuildDownloadDir)@(xbdAarPath)" />
+      <XamarinBuildDownloadAndroidAarLibrary Include="$(XamarinBuildDownloadDir)@(xbdAarPath)" />
     </ItemGroup>
   </Target>
       }
