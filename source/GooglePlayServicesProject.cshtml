@@ -130,30 +130,16 @@
     </TransformFile>
   </ItemGroup>
 
-  <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts) {
-      if (1==2 && art.MavenArtifactPackaging == "aar") {
-    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar\@(targetFrameworkMoniker)" />
-      }
-    }
-  </ItemGroup>
-
-
   @if (@Model.MavenArtifacts.Count > 0) {
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.MavenArtifactPackaging == "aar") {
-        if ((System.Environment.GetEnvironmentVariable("LOCAL_TEST_PKG") ?? "") == "true") {
-    <LibraryProjectZip Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" />
-    
-        } else {
     <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
     <!-- For those artifacts with lib/ folder -->
     <InputJar
       Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\')"
       Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\*.jar" 
       />
-        }
       } else {
     <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
       }
@@ -194,7 +180,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" Version="0.6.0-rc1" />
+    <PackageReference Include="Xamarin.Build.Download" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
