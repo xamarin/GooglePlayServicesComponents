@@ -67,7 +67,7 @@
     <PackageReference Update="Xamarin.Firebase.Database.Collection" Version="71.1601.0" />
     <PackageReference Update="Xamarin.Firebase.Database.Connection" Version="71.1601.0" />
     <PackageReference Update="Xamarin.Firebase.Dynamic.Links" Version="71.1615.0" />
-    <PackageReference Update="Xamarin.Firebase.Firestore" Version="71.1705.1" />
+    <PackageReference Update="Xamarin.Firebase.Firestore" Version="71.1705.2" />
     <PackageReference Update="Xamarin.Firebase.Functions" Version="71.1601.0" />
     <PackageReference Update="Xamarin.Firebase.Iid" Version="71.1710.0" />
     <PackageReference Update="Xamarin.Firebase.Iid.Interop" Version="71.1601.0" />
