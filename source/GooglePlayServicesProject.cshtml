@@ -4,9 +4,10 @@
 @{
   var targetFrameworkMoniker = "MonoAndroid90";
 }
+
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
   <PropertyGroup>
-    <TargetFramework>@(targetFrameworkMoniker)</TargetFramework>
+    <TargetFrameworks>@(targetFrameworkMoniker)</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     @if (!string.IsNullOrEmpty(Model.AssemblyName)) {
     <AssemblyName>@(Model.AssemblyName)</AssemblyName>
@@ -183,14 +184,19 @@
     {
       <PackageReference Include="System.Json" Version="4.5.0" />
     }
+    @if (@Model.NuGetPackageId == "Xamarin.Firebase.Firestore")
+    {
+      <PackageReference Include="Xamarin.Google.Guava" Version="27.1.0" />
+    }
 
   </ItemGroup>
 
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" Version="0.7.1" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.8.0" />
   </ItemGroup>
 
+  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
 
 </Project>
 
