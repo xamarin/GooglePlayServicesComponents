@@ -5,11 +5,11 @@
 #tool nuget:?package=vswhere
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=3.1.0
-#addin nuget:?package=Cake.Compression&version=0.1.6
+#addin nuget:?package=Cake.FileHelpers&version=3.2.1
+#addin nuget:?package=Cake.Compression&version=0.2.4
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.1
 #addin nuget:?package=Xamarin.Nuget.Validator&version=1.1.1
-#addin nuget:?package=Mono.ApiTools.NuGetDiff&version=1.0.1&loaddependencies=true
+#addin nuget:?package=Mono.ApiTools.NuGetDiff&version=1.3.1&loaddependencies=true
 
 // From Cake.Xamarin.Build, dumps out versions of things
 //LogSystemInfo ();
