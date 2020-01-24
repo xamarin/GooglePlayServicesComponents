@@ -28,4 +28,11 @@
       </method>
     </add-node>
     -->    
+    <attr
+        path="/api/package[@name='com.google.firebase.messaging']/class[@name='FirebaseMessagingService']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+        
 </metadata>
