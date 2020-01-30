@@ -15,6 +15,7 @@ jobs:
   - job: build
     displayName: 'Build Libraries & NuGets (macOS)'
     timeoutInMinutes: 240
+    areaPath: 'DevDiv\Xamarin SDK\Android'
     pool:
       vmImage: macos-10.13
     steps:
@@ -37,6 +38,7 @@ jobs:
   - job: build_windows_vs2017
     displayName: 'Build Libraries & NuGets (Windows)'
     timeoutInMinutes: 240
+    areaPath: 'DevDiv\Xamarin SDK\Android'
     pool:
       vmImage: vs2017-win2016
     steps:
