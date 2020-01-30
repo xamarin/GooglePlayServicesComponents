@@ -21,10 +21,11 @@ resources:
 jobs:
   - template: .ci/build.yml@components
     parameters:
-      timeoutInMinutes: 180
+      timeoutInMinutes: 240
+      areaPath: 'DevDiv\Xamarin SDK\Android'
       tools:
-        - 'xamarin.androidbinderator.tool': '0.4.1'
-        - 'xamarin.androidx.migration.tool': '1.0.0-preview05'
+        - 'xamarin.androidbinderator.tool': '0.4.2'
+        - 'xamarin.androidx.migration.tool': '1.0.0-rc1'
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v1.yml@internal-templates
       parameters:
