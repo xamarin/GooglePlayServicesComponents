@@ -33,6 +33,7 @@
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -43,9 +44,9 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <ConsolePause>false</ConsolePause>
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -54,26 +55,10 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3"/>
-    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.3"/>
-    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="28.0.0.3"/>
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3"/>
-    <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.3"/>
-    <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.1.1.3"/>
-    <PackageReference Include="Xamarin.Android.Arch.Core.Runtime" Version="1.1.1.3"/>
-    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Common" Version="1.1.1.3"/>
-    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.1.1.3"/>
-    <PackageReference Include="Xamarin.TensorFlow.Lite" Version="1.14.0"/>
-    <PackageReference Include="Xamarin.Protobuf.Lite" Version="3.0.1"/>
-    <PackageReference Include="Square.OkHttp"  Version="2.7.5.1"/>
-    <PackageReference Include="Square.Retrofit" Version="1.9.0.1"/>
-    <PackageReference Include="Xamarin.Grpc.Protobuf.Lite" Version="1.24.0"/>
-    <PackageReference Include="Xamarin.Grpc.Stub"  Version="1.24.0 "/>
-    <PackageReference Include="Xamarin.Grpc.OkHttp"  Version="1.24.0"/>
-    <PackageReference Include="Xamarin.Google.AutoValue.Annotations" Version="1.6.5"/>
-
     <PackageReference Include="Xamarin.Build.Download" Version="0.8.0" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
+      <Version></Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
