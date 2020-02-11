@@ -1,8 +1,8 @@
 // Tools needed by cake addins
-#tool nuget:?package=ILRepack&version=2.0.13
+#tool nuget:?package=ILRepack&version=2.0.18
 #tool nuget:?package=Cake.MonoApiTools&version=3.0.1
 //#tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
-#tool nuget:?package=vswhere
+#tool nuget:?package=vswhere&version=2.8.4
 
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
@@ -41,6 +41,7 @@ var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v9.0" : "android-28";
 var RENDERSCRIPT_FOLDER = "android-8.1.0";
 var TF_MONIKER = "monoandroid90";
 var DOCAPI_CACHEPATH = "./externals/package_cache";
+string AndroidSdkBuildTools = $"29.0.2";
 
 var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/play-services-firebase.zip";
 var REF_METADATA_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/play-services-firebase-metadata.xml";
@@ -52,8 +53,9 @@ var REF_PARAMNAMES_URL = "https://bosstoragemirror.blob.core.windows.net/android
 var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/GooglePlayServicesComponents/releases/download/60.1142.0/api-info.xml";
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
-if (IsRunningOnWindows ()) {
-	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin" });
+if (IsRunningOnWindows ()) 
+{
+	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin", IncludePrerelease = true });
 	MONODROID_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION).FullPath;
 }
 
@@ -71,8 +73,16 @@ if (IsRunningOnWindows ()) {
 if (Argument("localTestPkg", "false") == "true")
 	Environment.SetEnvironmentVariable("LOCAL_TEST_PKG", "true");
 
-Information ("MONODROID_PATH: {0}", MONODROID_PATH);
-Information ("MSCORLIB_PATH: {0}", MSCORLIB_PATH);
+string JAVA_HOME = EnvironmentVariable ("JAVA_HOME") ?? Argument ("java_home", "");
+string ANDROID_HOME = EnvironmentVariable ("ANDROID_HOME") ?? Argument ("android_home", "");
+string ANDROID_SDK_ROOT = EnvironmentVariable ("ANDROID_SDK_ROOT") ?? Argument ("android_sdk_root", "");
+
+// Log some variables
+Information ($"JAVA_HOME            : {JAVA_HOME}");
+Information ($"ANDROID_HOME         : {ANDROID_HOME}");
+Information ($"ANDROID_SDK_ROOT     : {ANDROID_SDK_ROOT}");
+Information ($"MONODROID_PATH       : {MONODROID_PATH}");
+Information ($"MSCORLIB_PATH        : {MSCORLIB_PATH}");
 
 //set the function to download and compare the previous version of the nugets
 async Task BuildApiDiff (FilePath nupkg)
@@ -298,14 +308,46 @@ Task("libs")
 		c.MaxCpuCount = MAX_CPU_COUNT;
 		c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/libs.binlog")).FullPath };
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
+		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { $"{AndroidSdkBuildTools}" });
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+		}
 	});
 });
 
+Task("samples-generate-all-targets")
+	.Does
+	(
+		() =>
+		{
+			// make a big .targets file that pulls in everything
+			var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
+			var itemGroup = new XElement(xmlns + "ItemGroup");
+			foreach (var nupkg in GetFiles("./output/*.nupkg")) {
+				// Skip Wear as it has special implications requiring more packages to be used properly in an app
+				if (nupkg.FullPath.Contains(".Wear."))
+					continue;
+				// Skip the migration packages as that is not meant forto be used here
+				if (nupkg.FullPath.Contains("Xamarin.AndroidX.Migration"))
+					continue;
+				var filename = nupkg.GetFilenameWithoutExtension();
+				var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
+				itemGroup.Add(new XElement(xmlns + "PackageReference",
+					new XAttribute("Include", match.Groups[1]),
+					new XAttribute("Version", match.Groups[2])));
+			}
+			var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
+			xdoc.Save("./output/AllPackages.targets");
+
+			return;
+		}
+	);
 
 Task("samples")
 	.IsDependentOn("libs")
 	.IsDependentOn("mergetargets")
+	.IsDependentOn("samples-generate-all-targets")
 	.IsDependentOn("allbindingprojectrefs")
 	.Does(() =>
 {
@@ -323,6 +365,11 @@ Task("samples")
 				Enabled = true, 
 				FileName = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath 
 			};
+			if (! string.IsNullOrEmpty(ANDROID_HOME))
+			{
+				c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+			}
+
 		});
 	}
 });
@@ -371,7 +418,11 @@ Task("nuget")
 		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(outputPath).FullPath });
 		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
+		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { $"{AndroidSdkBuildTools}" });
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+		}
     });
 });
 
@@ -420,7 +471,8 @@ Task ("diff")
 	.Does (() =>
 {
 	if (DirectoryExists("./output/dependencies"))
-		DeleteDirectory("./output/dependencies", true);
+		DeleteDirectory ("./output/dependencies", new DeleteDirectorySettings { Recursive = true, Force = true });
+
 	EnsureDirectoryExists("./output/dependencies/");
 
 	// Copy all the dependencies into one spot to reference from MonoApiTools
@@ -453,7 +505,7 @@ Task ("diff")
 		"./output/GooglePlayServices.api-diff.html");
 
 	if (DirectoryExists("./output/dependencies"))
-		DeleteDirectory("./output/dependencies", true);
+		DeleteDirectory ("./output/dependencies", new DeleteDirectorySettings { Recursive = true, Force = true });
 });
 
 Task ("merge")
@@ -462,7 +514,7 @@ Task ("merge")
 {
 	EnsureDirectoryExists("./output/");
 	if (DirectoryExists("./output/dependencies"))
-		DeleteDirectory("./output/dependencies", true);
+		DeleteDirectory ("./output/dependencies", new DeleteDirectorySettings { Recursive = true, Force = true });
 	EnsureDirectoryExists("./output/dependencies/");
 
 	// Copy all the dependencies into one spot to reference from ILRepack
@@ -493,7 +545,7 @@ Task ("merge")
 	});
 
 	if (DirectoryExists("./output/dependencies"))
-		DeleteDirectory("./output/dependencies", true);
+		DeleteDirectory ("./output/dependencies", new DeleteDirectorySettings { Recursive = true, Force = true });
 });
 
 Task ("ci-setup")
@@ -578,13 +630,13 @@ Task ("clean")
 	.Does (() =>
 {
 	if (DirectoryExists ("./externals"))
-		DeleteDirectory ("./externals", true);
+		DeleteDirectory ("./externals", new DeleteDirectorySettings { Recursive = true, Force = true });
 
 	if (DirectoryExists ("./generated"))
-		DeleteDirectory ("./generated", true);
+		DeleteDirectory ("./generated", new DeleteDirectorySettings { Recursive = true, Force = true });
 
 	if (DirectoryExists ("./util/binderator"))
-		DeleteDirectory ("./util/binderator", true);
+		DeleteDirectory ("./util/binderator", new DeleteDirectorySettings { Recursive = true, Force = true });
 
 	CleanDirectories ("./**/packages");
 	CleanDirectories("./**/bin");
