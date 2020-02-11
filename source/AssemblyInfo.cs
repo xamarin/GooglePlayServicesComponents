@@ -7,3 +7,5 @@ using Android.App;
 [assembly: AssemblyMetadata ("BUILD_TIMESTAMP", "{BUILD_TIMESTAMP}")]
 
 [assembly: Android.LinkerSafe]
+
+[assembly: Android.App.UsesLibrary("org.apache.http.legacy", Required=false)]
