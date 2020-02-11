@@ -32,6 +32,8 @@ var REF_PARAMNAMES_URL = "https://bosstoragemirror.blob.core.windows.net/android
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
 var ANDROID_SDK_BASE_VERSION = "v1.0";
 var ANDROID_SDK_VERSION = "v9.0";
+string AndroidSdkBuildTools = $"29.0.2";
+
 if (string.IsNullOrEmpty(XAMARIN_ANDROID_PATH)) {
 	if (IsRunningOnWindows()) {
 		var vsInstallPath = VSWhereLatest(new VSWhereLatestSettings { Requires = "Component.Xamarin" });
@@ -56,12 +58,40 @@ var REQUIRED_DOTNET_TOOLS = new [] {
 	"xamarin.androidx.migration.tool"
 };
 
+var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
+if (IsRunningOnWindows ()) 
+{
+	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin", IncludePrerelease = true });
+	MONODROID_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION).FullPath;
+}
+
+var MSCORLIB_PATH = "/Library/Frameworks/Xamarin.Android.framework/Libraries/mono/2.1/";
+if (IsRunningOnWindows ()) {
+
+	var DOTNETDIR = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.Windows)).Combine ("Microsoft.NET/");
+
+	if (DirectoryExists (DOTNETDIR.Combine ("Framework64")))
+		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework64/v4.0.30319/")).FullPath;
+	else
+		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
+}
+
+
+string JAVA_HOME = EnvironmentVariable ("JAVA_HOME") ?? Argument ("java_home", "");
+string ANDROID_HOME = EnvironmentVariable ("ANDROID_HOME") ?? Argument ("android_home", "");
+string ANDROID_SDK_ROOT = EnvironmentVariable ("ANDROID_SDK_ROOT") ?? Argument ("android_sdk_root", "");
+
 // Log some variables
-Information ("XAMARIN_ANDROID_PATH: {0}", XAMARIN_ANDROID_PATH);
-Information ("ANDROID_SDK_VERSION:  {0}", ANDROID_SDK_VERSION);
-Information ("BUILD_COMMIT:         {0}", BUILD_COMMIT);
-Information ("BUILD_NUMBER:         {0}", BUILD_NUMBER);
-Information ("BUILD_TIMESTAMP:      {0}", BUILD_TIMESTAMP);
+Information ($"JAVA_HOME            : {JAVA_HOME}");
+Information ($"ANDROID_HOME         : {ANDROID_HOME}");
+Information ($"ANDROID_SDK_ROOT     : {ANDROID_SDK_ROOT}");
+Information ($"MONODROID_PATH       : {MONODROID_PATH}");
+Information ($"MSCORLIB_PATH        : {MSCORLIB_PATH}");
+Information ($"XAMARIN_ANDROID_PATH : {XAMARIN_ANDROID_PATH}");
+Information ($"ANDROID_SDK_VERSION  : {ANDROID_SDK_VERSION}");
+Information ($"BUILD_COMMIT:        : {BUILD_COMMIT}");
+Information ($"BUILD_NUMBER:        : {BUILD_NUMBER}");
+Information ($"BUILD_TIMESTAMP:     : {BUILD_TIMESTAMP}");
 
 // You shouldn't have to configure anything below here
 // ######################################################
@@ -269,7 +299,11 @@ Task("libs")
 		c.MaxCpuCount = MAX_CPU_COUNT;
 		c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/libs.binlog")).FullPath };
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
+		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "29.0.2" });
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+		}
 	});
 });
 
@@ -349,6 +383,10 @@ Task("samples")
 				Enabled = true,
 				FileName = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath
 			};
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+		}
 		});
 	}
 });
@@ -397,7 +435,7 @@ Task("nuget")
 		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(outputPath).FullPath });
 		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
+		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { $"{AndroidSdkBuildTools}" });
     });
 });
 
