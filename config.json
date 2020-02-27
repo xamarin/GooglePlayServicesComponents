@@ -610,119 +610,119 @@
 		{
 			"groupId" : "com.android.support",
 			"artifactId" : "support-v4",
-			"version" : "28.0.0.3",
+			"nugetVersion" : "28.0.0.3",
 			"nugetId" : "Xamarin.Android.Support.v4",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.android.support",
 			"artifactId" : "mediarouter-v7",
-			"version" : "28.0.0.3",
+			"nugetVersion" : "28.0.0.3",
 			"nugetId" : "Xamarin.Android.Support.v7.MediaRouter",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.android.support",
 			"artifactId" : "recyclerview-v7",
-			"version" : "28.0.0.3",
+			"nugetVersion" : "28.0.0.3",
 			"nugetId" : "Xamarin.Android.Support.v7.RecyclerView",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.android.support",
 			"artifactId" : "appcompat-v7",
-			"version" : "28.0.0.3",
+			"nugetVersion" : "28.0.0.3",
 			"nugetId" : "Xamarin.Android.Support.v7.AppCompat",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.android.support",
 			"artifactId" : "customtabs",
-			"version" : "28.0.0.3",
+			"nugetVersion" : "28.0.0.3",
 			"nugetId" : "Xamarin.Android.Support.CustomTabs",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "android.arch.core",
 			"artifactId" : "common",
-			"version" : "1.1.1.3",
+			"nugetVersion" : "1.1.1.3",
 			"nugetId" : "Xamarin.Android.Arch.Core.Common",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "android.arch.core",
 			"artifactId" : "runtime",
-			"version" : "1.1.1.3",
+			"nugetVersion" : "1.1.1.3",
 			"nugetId" : "Xamarin.Android.Arch.Core.Runtime",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "android.arch.lifecycle",
 			"artifactId" : "common",
-			"version" : "1.1.1.3",
+			"nugetVersion" : "1.1.1.3",
 			"nugetId" : "Xamarin.Android.Arch.Lifecycle.Common",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "android.arch.lifecycle",
 			"artifactId" : "runtime",
-			"version" : "1.1.1.3",
+			"nugetVersion" : "1.1.1.3",
 			"nugetId" : "Xamarin.Android.Arch.Lifecycle.Runtime",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.squareup.okhttp",
 			"artifactId" : "okhttp",
-			"version" : "2.7.2",
+			"nugetVersion" : "2.7.2",
 			"nugetId" : "Square.OkHttp",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "org.tensorflow",
 			"artifactId" : "tensorflow-lite",
-			"version" : "0.1.7",
+			"nugetVersion" : "0.1.7",
 			"nugetId" : "Xamarin.TensorFlow.Lite",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.google.protobuf",
 			"artifactId" : "protobuf-lite",
-			"version" : "3.0.1",
+			"nugetVersion" : "3.0.1",
 			"nugetId" : "Xamarin.Protobuf.Lite",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.squareup.retrofit",
 			"artifactId" : "retrofit",
-			"version" : "1.9.0",
+			"nugetVersion" : "1.9.0",
 			"nugetId" : "Square.Retrofit",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "io.grpc",
 			"artifactId" : "grpc-protobuf-lite",
-			"version" : "1.14.0.2",
+			"nugetVersion" : "1.14.0.2",
 			"nugetId" : "Xamarin.Grpc.Protobuf.Lite",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "io.grpc",
 			"artifactId" : "grpc-stub",
-			"version" : "1.14.0.2",
+			"nugetVersion" : "1.14.0.2",
 			"nugetId" : "Xamarin.Grpc.Stub",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "io.grpc",
 			"artifactId" : "grpc-okhttp",
-			"version" : "1.14.0.2",
+			"nugetVersion" : "1.14.0.2",
 			"nugetId" : "Xamarin.Grpc.OkHttp",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.google.auto.value",
 			"artifactId" : "auto-value-annotations",
-			"version" : "1.6.5",
+			"nugetVersion" : "1.6.5",
 			"nugetId" : "Xamarin.Google.AutoValue.Annotations",
 			"dependencyOnly" : true
 		}
