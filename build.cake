@@ -222,6 +222,11 @@ Task("binderate-config-verify")
 			Information("config.json verification...");
 			foreach(JObject jo in binderator_json_array[0]["artifacts"])
 			{
+				bool? dependency_only = (bool?) jo["dependencyOnly"];
+				if ( dependency_only == true)
+				{
+					continue;
+				}
 				string version       = (string) jo["version"];
 				string nuget_version = (string) jo["nugetVersion"];
 				Information($"groupId       = {jo["groupId"]}");
@@ -409,8 +414,8 @@ Task("allbindingprojectrefs")
 
 	};
 
-	generateTargets("./output/*firebase*.nupkg", "./output/FirebasePackages.targets");
-	generateTargets("./output/*play-services*.nupkg", "./output/PlayServicesPackages.targets");
+	generateTargets("./output/Xamarin.Firebase.*.nupkg", "./output/FirebasePackages.targets");
+	generateTargets("./output/Xamarin.GooglePlayServices.*.nupkg", "./output/PlayServicesPackages.targets");
 });
 
 Task("nuget-restore")
