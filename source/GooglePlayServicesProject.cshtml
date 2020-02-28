@@ -5,7 +5,7 @@
   var targetFrameworkMoniker = "MonoAndroid90";
 }
 
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
 
   <PropertyGroup>
     <TargetFrameworks>@(targetFrameworkMoniker)</TargetFrameworks>
@@ -201,8 +201,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="MSBuild.Sdk.Extras" Version="1.4.0" PrivateAssets="All" />
-    <PackageReference Include="Xamarin.Build.Download" Version="0.7.1" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.8.0" />
   </ItemGroup>
 
   <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
