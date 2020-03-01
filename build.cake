@@ -206,6 +206,7 @@ Task("binderate")
 });
 
 string nuget_version_template = "71.vvvv.0-preview3";
+string nuget_version_suffix = "preview03";
 JArray binderator_json_array = null;
 
 Task("binderate-config-verify")
