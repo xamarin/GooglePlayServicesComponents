@@ -209,9 +209,9 @@ string nuget_version_template =
 							// "71.vvvv.0-preview3" 	// pre AndroidX version
 							"1xx.yy.zz-suffix"			// AndroidX version
 							;
+string nuget_version_suffix = "preview01";
 JArray binderator_json_array = null;
 
-string nuget_version_suffix = "preview01";
 
 Task("binderate-config-verify")
 	.Does
@@ -500,6 +500,15 @@ Task ("ci-setup")
 	ReplaceTextInFiles(glob, "{BUILD_NUMBER}", BUILD_NUMBER);
 	ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", BUILD_TIMESTAMP);
 });
+
+Task("nuget-dependecies")
+	.Does
+	(
+		() =>
+		{
+			string icanhasdotnet = "https://icanhasdot.net/Downloads/ICanHasDotnetCore.zip";
+		}
+	);
 
 // Task ("genapi")
 // 	.IsDependentOn ("libs")
