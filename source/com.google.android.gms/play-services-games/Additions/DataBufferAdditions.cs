@@ -217,12 +217,12 @@ namespace Android.Gms.Games.Stats
 
 namespace Android.Gms.Games.Quest
 {
- //   public partial class MilestoneBuffer : IEnumerable<IMilestone>//, Java.Lang.IIterable
-	//{
- //       public IEnumerator<IMilestone> GetEnumerator()
- //       {
- //           return this.ToEnumerable<IMilestone> ().GetEnumerator();
- //       }
+    public partial class MilestoneBuffer : Java.Lang.Object, IEnumerable<IMilestone>, Java.Lang.IIterable
+	{
+        public IEnumerator<IMilestone> GetEnumerator()
+        {
+            return this.ToEnumerable<IMilestone> ().GetEnumerator();
+        }
 
  //       System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
  //       {

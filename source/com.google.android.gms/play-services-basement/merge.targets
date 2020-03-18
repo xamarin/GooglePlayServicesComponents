@@ -48,10 +48,6 @@
     <ConvertToAbsolutePath Paths="$(ProcessGoogleServicesJsonResDirPath)">
       <Output TaskParameter="AbsolutePaths" PropertyName="ProcessGoogleServicesJsonResDirPathAbs"/>
     </ConvertToAbsolutePath>
-
-    <ItemGroup>
-        <LibraryResourceDirectories Condition="Exists ('$(ProcessGoogleServicesJsonResDirPathAbs)')" Include="$(ProcessGoogleServicesJsonResDirPathAbs)" />
-    </ItemGroup>
   </Target>
 
 
@@ -74,6 +70,9 @@
     </ProcessGoogleServicesJson>
 
     <ItemGroup>
+        <LibraryResourceDirectories Condition="Exists ('$(ProcessGoogleServicesJsonResDirPathAbs)')" Include="$(ProcessGoogleServicesJsonResDirPathAbs)">
+            <StampFile>$(IntermediateOutputPath)googsvcsjson.stamp</StampFile>
+        </LibraryResourceDirectories>
         <FileWrites Condition="Exists ('$(ProcessGoogleServicesJsonResStringsPath)')" Include="$(ProcessGoogleServicesJsonResStringsPath)" />
         <FileWrites Condition="Exists ('$(ProcessGoogleServicesJsonResXmlPath)')" Include="$(ProcessGoogleServicesJsonResXmlPath)" />
     </ItemGroup>
@@ -83,5 +82,4 @@
     <RemoveDir Directories="$(ProcessGoogleServicesJsonResDirPath)" Condition="Exists ('$(ProcessGoogleServicesJsonResDirPath)' )" />
     <Delete Files="$(ProcessGoogleServicesJsonStampPath)" />
   </Target>
-	
 </Project>
