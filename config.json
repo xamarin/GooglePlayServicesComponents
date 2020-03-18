@@ -812,8 +812,8 @@
 		{
 			"groupId" : "androidx.browser",
 			"artifactId" : "browser",
-			"version" : "1.1.0",
-			"nugetVersion": "1.1.0",
+			"version" : "1.2.0",
+			"nugetVersion": "1.2.0",
 			"nugetId" : "Xamarin.AndroidX.Browser",
 			"dependencyOnly" : true
 		},
@@ -828,8 +828,8 @@
 		{
 			"groupId" : "androidx.core",
 			"artifactId" : "core",
-			"version" : "1.1.0",
-			"nugetVersion": "1.1.0",
+			"version" : "1.2.0",
+			"nugetVersion": "1.2.0",
 			"nugetId" : "Xamarin.AndroidX.Core",
 			"dependencyOnly" : true
 		},
