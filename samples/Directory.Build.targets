@@ -97,9 +97,9 @@
     <PackageReference Update="Xamarin.Google.Guava" Version="" />
     <PackageReference Update="Xamarin.Google.Guava.ListenableFuture" Version="1.0.0.2" />
     <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.1.0" />
-    <PackageReference Update="Xamarin.AndroidX.Browser" Version="1.0.0" />
+    <PackageReference Update="Xamarin.AndroidX.Browser" Version="1.2.0" />
     <PackageReference Update="Xamarin.AndroidX.Collection" Version="1.1.0" />
-    <PackageReference Update="Xamarin.AndroidX.Core" Version="1.1.0" />
+    <PackageReference Update="Xamarin.AndroidX.Core" Version="1.2.0" />
     <PackageReference Update="Xamarin.AndroidX.Fragment" Version="1.1.0" />
     <PackageReference Update="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0" />
     <PackageReference Update="Xamarin.AndroidX.Loader" Version="1.1.0" />
@@ -113,17 +113,17 @@
     <PackageReference Update="Xamarin.AndroidX.ConstraintLayout" Version="1.1.3" />
     <PackageReference Update="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.1" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite" Version="" />
-    <PackageReference Update="Xamarin.Protobuf.Lite" Version="" />
-    <PackageReference Update="Square.Retrofit" Version="" />
-    <PackageReference Update="Xamarin.Grpc.Protobuf.Lite" Version="" />
-    <PackageReference Update="Xamarin.Grpc.Stub" Version="" />
-    <PackageReference Update="Xamarin.Grpc.OkHttp" Version="" />
-    <PackageReference Update="Xamarin.Grpc.Android" Version="" />
-    <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="" />
-    <PackageReference Update="Square.OkHttp3" Version="" />
-    <PackageReference Update="Xamarin.Google.Dagger" Version="" />
-    <PackageReference Update="Xamarin.Android.Arch.Lifecycle.Common" Version="" />
-    <PackageReference Update="Xamarin.Android.Arch.Lifecycle.Runtime" Version="" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite" Version="1.14.0" />
+    <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1" />
+    <PackageReference Update="Square.Retrofit" Version="1.9.0" />
+    <PackageReference Update="Xamarin.Grpc.Protobuf.Lite" Version="1.21.1" />
+    <PackageReference Update="Xamarin.Grpc.Stub" Version="1.21.1" />
+    <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.21.1" />
+    <PackageReference Update="Xamarin.Grpc.Android" Version="1.21.1" />
+    <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.6.5" />
+    <PackageReference Update="Square.OkHttp3" Version="3.12.3" />
+    <PackageReference Update="Xamarin.Google.Dagger" Version="2.22" />
+    <PackageReference Update="Xamarin.Android.Arch.Lifecycle.Common" Version="1.1.1.1" />
+    <PackageReference Update="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.1.1.1" />
   </ItemGroup>
 </Project>
