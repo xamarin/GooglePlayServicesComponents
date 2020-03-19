@@ -465,6 +465,11 @@ Task("nuget")
 		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { $"{AndroidSdkBuildTools}" });
+
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			c.Properties.Add("AndroidSdkDirectory", new[] { $"{ANDROID_HOME}" });
+		}
     });
 });
 
