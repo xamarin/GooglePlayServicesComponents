@@ -224,25 +224,25 @@ namespace Android.Gms.Games.Quest
             return this.ToEnumerable<IMilestone> ().GetEnumerator();
         }
 
- //       System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
- //       {
- //           return this.GetEnumerator();
- //       }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
 
- //       public IntPtr Handle => throw new NotImplementedException();
+        public IntPtr Handle => throw new NotImplementedException();
 
- //       public IIterator Iterator()
- //       {
- //           throw new NotImplementedException();
- //       }
+        public IIterator Iterator()
+        {
+            throw new NotImplementedException();
+        }
 
- //       public void Dispose()
- //       {
- //           throw new NotImplementedException();
- //       }
- //   }
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+    }
 
-    public partial class QuestBuffer : IEnumerable<IQuest>
+	public partial class QuestBuffer : IEnumerable<IQuest>
     {
         public IEnumerator<IQuest> GetEnumerator()
         {
@@ -256,18 +256,18 @@ namespace Android.Gms.Games.Quest
     }
 }
 
-//namespace Android.Gms.Games.Video
-//{
-//    public partial class VideoBuffer : IEnumerable<IVideo>
-//    {
-//        public IEnumerator<IVideo> GetEnumerator()
-//        {
-//            return this.ToEnumerable<IVideo> ().GetEnumerator();
-//        }
+namespace Android.Gms.Games.Video
+{
+    //public partial class VideoBuffer : IEnumerable<IVideo>
+    //{
+    //    public IEnumerator<IVideo> GetEnumerator()
+    //    {
+    //        return this.ToEnumerable<IVideo>().GetEnumerator();
+    //    }
 
-//        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-//        {
-//            return this.GetEnumerator();
-//        }
-//    }
-//}
+    //    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+    //    {
+    //        return this.GetEnumerator();
+    //    }
+    //}
+}
