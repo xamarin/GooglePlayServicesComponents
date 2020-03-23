@@ -477,22 +477,39 @@ Task ("merge")
 	.IsDependentOn ("libs")
 	.Does (() =>
 {
-	var allDlls = 
-		GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/monoandroid*/Xamarin.GooglePlayServices.*.dll") +
-		GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/monoandroid*/Xamarin.Firebase.*.dll");
-	var mergeDlls = allDlls
-		.GroupBy(d => new FileInfo(d.FullPath).Name)
-		.Select(g => g.FirstOrDefault())
-		.ToList();
+	FilePathCollection dlls_gps = GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/monoandroid*/Xamarin.GooglePlayServices.*.dll");
+	FilePathCollection dlls_fb = GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/monoandroid*/Xamarin.Firebase.*.dll");
+	
+	var dlls_gps_merge = dlls_gps
+							.GroupBy(d => new FileInfo(d.FullPath).Name)
+							.Select(g => g.FirstOrDefault())
+							.ToList();
+	var dlls_fb_merge = dlls_fb
+							.GroupBy(d => new FileInfo(d.FullPath).Name)
+							.Select(g => g.FirstOrDefault())
+							.ToList();
 
 	EnsureDirectoryExists("./output/");
-	RunProcess("androidx-migrator",
-		$"merge" +
-		$"  --assembly " + string.Join(" --assembly ", mergeDlls) +
-		$"  --output ./output/GooglePlayServices.Merged.dll" +
-		$"  --search \"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_VERSION}\" " +
-		$"  --search \"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_BASE_VERSION}\" " +
-		$"  --inject-assemblyname");
+	RunProcess
+		(
+			"androidx-migrator",
+			$"merge" +
+			$"  --assembly " + string.Join(" --assembly ", dlls_gps_merge) +
+			$"  --output ./output/GooglePlayServices.Merged.dll" +
+			$"  --search \"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_VERSION}\" " +
+			$"  --search \"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_BASE_VERSION}\" " +
+			$"  --inject-assemblyname"
+		);
+	RunProcess
+		(
+			"androidx-migrator",
+			$"merge" +
+			$"  --assembly " + string.Join(" --assembly ", dlls_fb_merge) +
+			$"  --output ./output/GooglePlayServices.Merged.dll" +
+			$"  --search \"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_VERSION}\" " +
+			$"  --search \"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_BASE_VERSION}\" " +
+			$"  --inject-assemblyname"
+		);
 });
 
 Task ("ci-setup")
