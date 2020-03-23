@@ -8,29 +8,28 @@
 	<!--
 	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
 	-->
-	<attr
-        path="/api/package[@name='com.google.android.gms.measurement.api']"
-        name="managedName"        
-        >
-        Android.Gms.Measurement.Api
-    </attr>
     <attr
-        path="/api/package[@name='com.google.firebase.analytics']"
+        path="/api/package[@name='com.google.android.gms.measurement']"
         name="managedName"
         >
-        Firebase.Analytics
+        Android.Gms.Measurement
     </attr>
     <attr
-        path="/api/package[@name='com.google.firebase.analytics.connector']"
+        path="/api/package[@name='com.google.android.gms.internal.measurement']"
         name="managedName"
         >
-        Firebase.Analytics.Connector
+        Android.Gms.Internal.Measurement
     </attr>
     <attr
-        path="/api/package[@name='com.google.firebase.analytics.connector.internal']"
+        path="/api/package[@name='com.google.android.gms.measurement.internal']"
         name="managedName"
         >
-        Firebase.Analytics.Connector.Internal
+        Android.Gms.Measurement.Internal
     </attr>
-    
+    <attr
+        path="/api/package[@name='com.google.android.gms.measurement.module']"
+        name="managedName"
+        >
+        Android.Gms.Measurement.Module
+    </attr>
 </metadata>

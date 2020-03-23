@@ -19,6 +19,37 @@
         >
         Firebase.ML.Vision.Document
     </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.automl']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.AutoML
+    </attr>    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.automl.internal']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.AutoML.Internal
+    </attr>    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.barcode.internal']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.Barcode.Internal
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.objects']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.Objects
+    </attr>    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.objects.internal']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.Objects.Internal
+    </attr>
     
     <!--
     generated code copied/moved to Additions.cs and node removed

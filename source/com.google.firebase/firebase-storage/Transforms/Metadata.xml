@@ -40,4 +40,34 @@
         </method>
     </add-node>
         
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.storage']" 
+        name="managedName"
+        >   
+        Firebase.Storage
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.storage.internal']" 
+        name="managedName"
+        >   
+        Firebase.Storage.Internal
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.storage.network']" 
+        name="managedName"
+        >   
+        Firebase.Storage.Network
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.storage.network.connection']" 
+        name="managedName"
+        >   
+        Firebase.Storage.Network.Connection
+    </attr>
+    
+    
+    
+    
+    
 </metadata>
