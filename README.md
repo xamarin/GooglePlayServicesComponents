@@ -54,9 +54,9 @@ Execute the following commands to install the necessary tools:
 ```
 dotnet tool install --global Cake.Tool
 dotnet tool install -g Xamarin.AndroidBinderator.Tool
-dotnet tool install -g "xamarin.androidx.migration.tool
+dotnet tool install -g xamarin.androidx.migration.tool
 ```
-Then you can use the the scripts to generate the buidings
+Then you can use the scripts to generate buidings
 
 **Mac**:
 
