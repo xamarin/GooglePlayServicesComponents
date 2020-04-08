@@ -23,16 +23,16 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-ads",
-			"version" : "17.2.0",
-			"nugetVersion" : "71.1720.1",
+			"version" : "17.2.1",
+			"nugetVersion" : "71.1721.0",
 			"nugetId" : "Xamarin.GooglePlayServices.Ads",
 			"dependencyOnly" : false
 		},
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-ads-base",
-			"version" : "17.2.0",
-			"nugetVersion" : "71.1720.0",
+			"version" : "17.2.1",
+			"nugetVersion" : "71.1721.0",
 			"nugetId" : "Xamarin.GooglePlayServices.Ads.Base",
 			"dependencyOnly" : false
 		},
@@ -47,8 +47,8 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-ads-lite",
-			"version" : "17.2.0",
-			"nugetVersion" : "71.1720.1",
+			"version" : "17.2.1",
+			"nugetVersion" : "71.1721.0",
 			"nugetId" : "Xamarin.GooglePlayServices.Ads.Lite",
 			"dependencyOnly" : false
 		},
@@ -199,8 +199,8 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-gass",
-			"version" : "17.2.0",
-			"nugetVersion" : "71.1720.0",
+			"version" : "17.2.1",
+			"nugetVersion" : "71.1721.0",
 			"nugetId" : "Xamarin.GooglePlayServices.Gass",
 			"dependencyOnly" : false
 		},
@@ -450,8 +450,8 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-abt",
-			"version" : "16.0.1",
-			"nugetVersion" : "71.1601.0",
+			"version" : "17.1.1",
+			"nugetVersion" : "71.1711.0",
 			"nugetId" : "Xamarin.Firebase.Abt",
 			"dependencyOnly" : false
 		},
@@ -522,8 +522,8 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-common",
-			"version" : "16.1.0",
-			"nugetVersion" : "71.1610.0",
+			"version" : "17.1.0",
+			"nugetVersion" : "71.1710.0",
 			"nugetId" : "Xamarin.Firebase.Common",
 			"dependencyOnly" : false
 		},
