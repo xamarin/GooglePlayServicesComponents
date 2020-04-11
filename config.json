@@ -24,7 +24,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-ads",
 			"version" : "17.2.0",
-			"nugetVersion" : "71.1720.1",
+			"nugetVersion" : "71.1720.2",
 			"nugetId" : "Xamarin.GooglePlayServices.Ads",
 			"dependencyOnly" : false
 		},
@@ -128,7 +128,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-basement",
 			"version" : "16.2.0",
-			"nugetVersion" : "71.1620.0",
+			"nugetVersion" : "71.1620.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Basement",
 			"dependencyOnly" : false
 		},
@@ -136,7 +136,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-cast",
 			"version" : "16.0.2",
-			"nugetVersion" : "71.1602.0",
+			"nugetVersion" : "71.1602.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Cast",
 			"dependencyOnly" : false
 		},
@@ -144,7 +144,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-cast-framework",
 			"version" : "16.0.2",
-			"nugetVersion" : "71.1602.0",
+			"nugetVersion" : "71.1602.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Cast.Framework",
 			"dependencyOnly" : false
 		},
@@ -288,7 +288,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-oss-licenses",
 			"version" : "16.0.0",
-			"nugetVersion" : "71.1600.0",
+			"nugetVersion" : "71.1600.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Oss.Licenses",
 			"dependencyOnly" : false
 		},
