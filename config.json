@@ -643,7 +643,7 @@
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-vision",
 			"version" : "17.0.0",
-			"nugetVersion" : "71.1700.0",
+			"nugetVersion" : "71.1700.1",
 			"nugetId" : "Xamarin.Firebase.ML.Vision",
 			"dependencyOnly" : false
 		},
