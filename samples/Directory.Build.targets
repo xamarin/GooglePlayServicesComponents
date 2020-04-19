@@ -1,6 +1,6 @@
 <Project>
   <ItemGroup>
-    <PackageReference Update="Xamarin.GooglePlayServices.Ads" Version="71.1720.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Ads" Version="71.1720.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="71.1720.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Identifier" Version="71.1600.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="71.1720.1" />
@@ -13,9 +13,9 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Auth.Base" Version="71.1600.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Awareness" Version="71.1600.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Base" Version="71.1610.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Basement" Version="71.1620.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Cast" Version="71.1602.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Cast.Framework" Version="71.1602.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Basement" Version="71.1620.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Cast" Version="71.1602.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Cast.Framework" Version="71.1602.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Clearcut" Version="71.1600.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Drive" Version="71.1600.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Fido" Version="71.1700.0" />
@@ -33,7 +33,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="71.1630.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk.Api" Version="71.1630.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Nearby" Version="71.1600.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Oss.Licenses" Version="71.1600.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Oss.Licenses" Version="71.1600.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Panorama" Version="71.1600.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Phenotype" Version="71.1600.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Places" Version="71.1600.0" />
@@ -77,7 +77,7 @@
     <PackageReference Update="Xamarin.Firebase.Messaging" Version="71.1740.0" />
     <PackageReference Update="Xamarin.Firebase.ML.Common" Version="71.1612.0" />
     <PackageReference Update="Xamarin.Firebase.ML.Model.Interpreter" Version="71.1620.0" />
-    <PackageReference Update="Xamarin.Firebase.ML.Vision" Version="71.1700.0" />
+    <PackageReference Update="Xamarin.Firebase.ML.Vision" Version="71.1700.1" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Image.Label.Model" Version="71.1702.0" />
     <PackageReference Update="Xamarin.Firebase.Perf" Version="71.1620.1" />
     <PackageReference Update="Xamarin.Firebase.Storage" Version="71.1602.0" />

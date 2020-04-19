@@ -39,4 +39,9 @@
         name="managedName">
         auth
     </attr>
+    
+    <remove-node
+        path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth']/implements"
+        />
+    
 </metadata>
