@@ -219,4 +219,19 @@
         >
     </remove-node>
  
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.DocumentTextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
+    
  </metadata>
