@@ -58,6 +58,13 @@ var REQUIRED_DOTNET_TOOLS = new [] {
 	"xamarin.androidx.migration.tool"
 };
 
+string[] Configs = new []
+{
+	"Debug",
+	"Release"
+};
+
+
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
 if (IsRunningOnWindows ()) 
 {
@@ -323,17 +330,22 @@ Task("libs")
 {
 	NuGetRestore("./generated/GooglePlayServices.sln", new NuGetRestoreSettings { });
 
-	MSBuild("./generated/GooglePlayServices.sln", c => {
-		c.Configuration = "Release";
-		c.MaxCpuCount = MAX_CPU_COUNT;
-		c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/libs.binlog")).FullPath };
-		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "29.0.2" });
-		if (! string.IsNullOrEmpty(ANDROID_HOME))
-		{
-			c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
-		}
-	});
+	Configs = new string[] { "Release" };
+
+	foreach(string config in Configs)
+	{
+		MSBuild("./generated/GooglePlayServices.sln", c => {
+			c.Configuration = config;
+			c.MaxCpuCount = MAX_CPU_COUNT;
+			c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/libs.binlog")).FullPath };
+			c.Properties.Add("DesignTimeBuild", new [] { "false" });
+			c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { AndroidSdkBuildTools });
+			if (! string.IsNullOrEmpty(ANDROID_HOME))
+			{
+				c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+			}
+		});
+	}
 });
 
 Task("samples-directory-build-targets")
@@ -398,26 +410,50 @@ Task("samples")
 	.IsDependentOn("allbindingprojectrefs")
 	.Does(() =>
 {
+	Configs = new string[] { "Debug", "Release" };
+
+	DeleteDirectories(GetDirectories("./samples/**/bin/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
+	DeleteDirectories(GetDirectories("./samples/**/obj/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
+
+	
 	var sampleSlns = GetFiles("./samples/**/*.sln");
 
-	foreach (var sampleSln in sampleSlns) {
-		NuGetRestore(sampleSln, new NuGetRestoreSettings { });
-		string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
-		Information($"Solution: {filename_sln}");
-		MSBuild(sampleSln, c => {
-			c.Configuration = "Release";
-			c.Properties.Add("DesignTimeBuild", new [] { "false" });
-			c.BinaryLogger = new MSBuildBinaryLogSettings
-			{
-				Enabled = true,
-				FileName = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath
-			};
-		if (! string.IsNullOrEmpty(ANDROID_HOME))
+	foreach(string config in Configs)
+	{
+		foreach (var sampleSln in sampleSlns) 
 		{
-			c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+			string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
+
+			if 
+				(
+					sampleSln.ToString().Contains("FirebaseStorageQuickstart") 
+					||
+					sampleSln.ToString().Contains("RepoSample.Issue.213")
+				)
+			{
+				continue;
+			}
+			if ( ! filename_sln.Contains("BuildAll") )
+			{
+				NuGetRestore(sampleSln, new NuGetRestoreSettings { }); // R8 errors
+			}
+			Information($"Solution: {filename_sln}");
+			MSBuild(sampleSln, c => {
+				c.Configuration = config;
+				c.Properties.Add("DesignTimeBuild", new [] { "false" });
+				c.BinaryLogger = new MSBuildBinaryLogSettings
+				{
+					Enabled = true,
+					FileName = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath
+				};
+				if (! string.IsNullOrEmpty(ANDROID_HOME))
+				{
+					c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+				}
+			});
 		}
-		});
 	}
+
 });
 
 Task("allbindingprojectrefs")
