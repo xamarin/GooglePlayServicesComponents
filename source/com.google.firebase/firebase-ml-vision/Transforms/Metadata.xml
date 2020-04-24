@@ -60,8 +60,7 @@
     </add-node> 
     -->
     <remove-node
-        path="/api/package[@name='com.google.firebase.ml.barcode']/class[@name='FirebaseVisionBarcodeDetector']/implements[@name='java.io.Closeable']"
-        >
+        path="/api/package[@name='com.google.firebase.ml.barcode']/class[@name='FirebaseVisionBarcodeDetector']/implements[@name='java.io.Closeable']"        >
     </remove-node>
 
     <attr
@@ -176,5 +175,20 @@
         >
         java.util.List        
     </attr>
+    
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.DocumentTextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
     
  </metadata>
