@@ -38,7 +38,7 @@ namespace FirebaseMessagingQuickstart
             var pendingIntent = PendingIntent.GetActivity (this, 0 /* Request code */, intent, PendingIntentFlags.OneShot);
 
             var defaultSoundUri = RingtoneManager.GetDefaultUri (RingtoneType.Notification);
-            var notificationBuilder = new NotificationCompat.Builder (this)
+            var notificationBuilder = new AndroidX.Core.App.NotificationCompat.Builder (this)
                 .SetSmallIcon (Resource.Drawable.ic_stat_ic_notification)
                 .SetContentTitle ("FCM Message")
                 .SetContentText (messageBody)

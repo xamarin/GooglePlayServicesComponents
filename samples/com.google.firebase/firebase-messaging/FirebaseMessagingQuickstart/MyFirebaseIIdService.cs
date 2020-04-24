@@ -6,7 +6,7 @@ namespace FirebaseMessagingQuickstart
 {
     [Service]
     [IntentFilter (new [] { "com.google.firebase.INSTANCE_ID_EVENT" })]
-    public class MyFirebaseIIDService : FirebaseMessagingService
+    public class MyFirebaseIIDService : Firebase.Messaging.FirebaseMessagingService
     {
         const string TAG = "MyFirebaseIIDService";
 

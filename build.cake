@@ -14,7 +14,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 var TARGET = Argument ("t", Argument ("target", "ci"));
-var BUILD_CONFIG = Argument ("config", "Release");
 var MAX_CPU_COUNT = Argument("maxcpucount", 0);
 
 // Lists all the artifacts and their versions for com.android.support.*
@@ -58,12 +57,12 @@ var REQUIRED_DOTNET_TOOLS = new [] {
 	"xamarin.androidx.migration.tool"
 };
 
+
 string[] Configs = new []
 {
 	"Debug",
 	"Release"
 };
-
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
 if (IsRunningOnWindows ()) 
@@ -210,6 +209,42 @@ Task("binderate")
 
 	RunProcess("xamarin-android-binderator",
 		$"--config=\"{configFile}\" --basepath=\"{basePath}\"");
+
+	// needed for offline builds 28.0.0.1 to 28.0.0.3
+	EnsureDirectoryExists("./output/");
+
+	FilePathCollection files = GetFiles("./samples/**/packages.config");
+	foreach(FilePath file in files)
+	{
+		Information($"File: {file}");
+
+		XmlDocument xml = new XmlDocument();
+		xml.Load($"{file}");
+		XmlNodeList list = xml.SelectNodes("/packages/package");
+		foreach (XmlNode xn in list)
+		{
+			string id = xn.Attributes["id"].Value; //Get attribute-id 
+			//string text = xn["Text"].InnerText; //Get Text Node
+			string v = xn.Attributes["version"].Value; //Get attribute-id 
+
+			Information($"		id	   : {id}");
+			Information($"		version: {v}");
+
+			string url = $"https://www.nuget.org/api/v2/package/{id}/{v}";
+			string file1 = $"./output/{id.ToLower()}.{v}.nupkg";
+			try
+			{
+				if ( ! FileExists(file1) )
+				{
+					DownloadFile(url, file1);
+				}
+			}
+			catch (System.Exception)
+			{
+				Error($"Unable to download {url}");
+			}
+		}
+	}
 });
 
 string nuget_version_template = 
@@ -627,10 +662,10 @@ Task ("clean")
 	.Does (() =>
 {
 	if (DirectoryExists ("./externals"))
-		DeleteDirectory ("./externals", true);
+		DeleteDirectory ("./externals", new DeleteDirectorySettings { Recursive = true, Force = true });
 
 	if (DirectoryExists ("./generated"))
-		DeleteDirectory ("./generated", true);
+		DeleteDirectory ("./generated", new DeleteDirectorySettings { Recursive = true, Force = true });
 
 	CleanDirectories ("./**/packages");
 	CleanDirectories("./**/bin");
