@@ -451,7 +451,7 @@ Task("samples")
 	DeleteDirectories(GetDirectories("./samples/**/obj/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
 
 	
-	var sampleSlns = GetFiles("./samples/**/*.sln");
+	var sampleSlns = GetFiles("./samples/all/**/*.sln");
 
 	foreach(string config in Configs)
 	{
@@ -661,7 +661,7 @@ Task ("ci")
 	//.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
-	.IsDependentOn ("merge")
+	//.IsDependentOn ("merge")
 	.IsDependentOn ("samples");
 
 RunTarget (TARGET);
