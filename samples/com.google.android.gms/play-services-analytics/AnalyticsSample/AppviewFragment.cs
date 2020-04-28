@@ -15,7 +15,7 @@ using Android.Gms.Analytics;
 
 namespace Analytics
 {
-    public class AppviewFragment : Fragment
+    public class AppviewFragment : AndroidX.Fragment.App.Fragment
     {
         public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
