@@ -212,6 +212,7 @@ Task("binderate")
 
 	// needed for offline builds 28.0.0.1 to 28.0.0.3
 	EnsureDirectoryExists("./output/");
+	EnsureDirectoryExists("./externals/");
 
 	FilePathCollection files = GetFiles("./samples/**/packages.config");
 	foreach(FilePath file in files)
@@ -231,7 +232,7 @@ Task("binderate")
 			Information($"		version: {v}");
 
 			string url = $"https://www.nuget.org/api/v2/package/{id}/{v}";
-			string file1 = $"./output/{id.ToLower()}.{v}.nupkg";
+			string file1 = $"./externals/{id.ToLower()}.{v}.nupkg";
 			try
 			{
 				if ( ! FileExists(file1) )
