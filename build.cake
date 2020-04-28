@@ -489,6 +489,12 @@ Task("samples")
 		}
 	}
 
+	DeleteFiles(".output/system.*/nupkg");
+	DeleteFiles(".output/microsoft.*/nupkg");
+	DeleteFiles(".output/xamarin.android.support.*/nupkg");
+	DeleteFiles(".output/xamarin.android.arch.*/nupkg");
+	DeleteFiles(".output/xamarin.build.download.*/nupkg");
+
 });
 
 Task("allbindingprojectrefs")
