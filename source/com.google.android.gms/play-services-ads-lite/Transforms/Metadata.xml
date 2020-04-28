@@ -222,4 +222,11 @@
         Android.Gms.Ads.Initialization
     </attr>
     
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads']/class[@name='AdActivity']"
+        name="final"
+        >
+        false
+    </attr>
+    
 </metadata>
