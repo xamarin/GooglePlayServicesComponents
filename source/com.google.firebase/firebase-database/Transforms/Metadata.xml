@@ -275,4 +275,16 @@
         OnNamedTokenChange
     </attr>
     
+    <attr
+        path="/api/package[@name='com.google.firebase.database']/interface[@name='DatabaseReference.CompletionListener']/method[@name='onComplete' and count(parameter)=2 and parameter[1][@type='com.google.firebase.database.DatabaseError'] and parameter[2][@type='com.google.firebase.database.DatabaseReference']]/parameter[1]"
+        name="managedName"
+        >        
+        error
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.database']/interface[@name='DatabaseReference.CompletionListener']/method[@name='onComplete' and count(parameter)=2 and parameter[1][@type='com.google.firebase.database.DatabaseError'] and parameter[2][@type='com.google.firebase.database.DatabaseReference']]/parameter[2]"
+        name="managedName"
+        >        
+        reference
+    </attr>
 </metadata>

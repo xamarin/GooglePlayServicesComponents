@@ -28,5 +28,30 @@
 	<attr path="/api/package[@name='com.google.android.gms.appindexing']/class[@name='AppIndex']/field[@name='APP_INDEX_API']" name="managedName">APP_INDEX_API</attr>
 	<attr path="/api/package[@name='com.google.android.gms.appindexing']/class[@name='AppIndex']/field[@name='API']" name="managedName">API</attr>
 	<attr path="/api/package[@name='com.google.android.gms.search']/class[@name='SearchAuth']/field[@name='API']" name="managedName">API</attr>
-
+    
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.icing']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.Icing
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.libs.punchclock.threads']" 
+        name="managedName"
+        >
+        Android.Gms.Libs.Punchlock.Threads
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.search']" 
+        name="managedName"
+        >
+        Android.Gms.Search
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.icing']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.Icing
+    </attr>
+        
 </metadata>

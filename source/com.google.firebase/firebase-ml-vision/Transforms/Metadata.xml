@@ -19,137 +19,38 @@
         >
         Firebase.ML.Vision.Document
     </attr>
-    
-    <!--
-    generated code copied/moved to Additions.cs and node removed
-    
-    replacing
-        cb_getRecognizedLanguages 
-    with
-        cb_FirebaseVisionDocumentText_Block_getRecognizedLanguages 
-    -->
-    <!--
     <attr
-        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Block']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        path="/api/package[@name='com.google.firebase.ml.vision.automl']"
         name="managedName"
         >
-        RecognizedLanguagesForBlock
-    </attr>
-    -->
-    <remove-node
-        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Block']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
-        >
-    </remove-node>
-    
-    <!--
-    Appears 3 times in MCW generated code?????
-    
-    // Metadata.xml XPath method reference: path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']/method[@name='getRecognizedLanguages' and count(parameter)=0]"    
-    -->    
-    <!--
+        Firebase.ML.Vision.AutoML
+    </attr>    
     <attr
-        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.DocumentTextBase']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        path="/api/package[@name='com.google.firebase.ml.vision.automl.internal']"
         name="managedName"
         >
-        RecognizedLanguagesForDocumentTextBase
-    </attr>
-    -->
-    <remove-node
-        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.DocumentTextBase']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
-        >
-    </remove-node>
-    
-    <!--
+        Firebase.ML.Vision.AutoML.Internal
+    </attr>    
     <attr
-        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Word']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        path="/api/package[@name='com.google.firebase.ml.vision.barcode.internal']"
         name="managedName"
         >
-        RecognizedLanguagesForWord
+        Firebase.ML.Vision.Barcode.Internal
     </attr>
-    -->
-    <remove-node
-        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Word']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
-        >
-    </remove-node>
     
-    <!--
     <attr
-        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Paragraph']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        path="/api/package[@name='com.google.firebase.ml.vision.objects']"
         name="managedName"
         >
-        RecognizedLanguagesForParagraph
-    </attr>
-    -->
-    <remove-node
-        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Paragraph']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
-        >
-    </remove-node>
-    
-    <!--
+        Firebase.ML.Vision.Objects
+    </attr>    
     <attr
-        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Symbol']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        path="/api/package[@name='com.google.firebase.ml.vision.objects.internal']"
         name="managedName"
         >
-        RecognizedLanguagesForSymbol
+        Firebase.ML.Vision.Objects.Internal
     </attr>
-    -->
-    <remove-node
-        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Symbol']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
-        >
-    </remove-node>
     
-    
-    
-    
-    <!--    
-    <attr
-        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.Element']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
-        name="managedName"
-        >
-        RecognizedLanguagesForElement
-    </attr>
-    -->
-    <remove-node
-        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.Element']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
-        >        
-    </remove-node>
-    <!--
-    <attr
-        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']/method[@name='getRecognizedLanguages' and count(parameter)=0]"    
-        name="managedName"
-        >
-        RecognizedLanguagesForTextBase
-    </attr>
-    -->
-    <remove-node
-        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']/method[@name='getRecognizedLanguages' and count(parameter)=0]"    
-        >        
-    </remove-node>    
-    <!--    
-    <attr
-        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.Line']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
-        name="managedName"
-        >
-        RecognizedLanguagesForLine
-    </attr>
-    -->
-    <remove-node
-        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.Line']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
-        >        
-    </remove-node>    
-
-    <!--    
-    <attr
-        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBlock']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
-        name="managedName"
-        >
-        RecognizedLanguagesForTextBlock
-    </attr>
-    -->
-    <remove-node
-        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBlock']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
-        >        
-    </remove-node>    
     <!--
     <add-node path="/api/package[@name='com.google.android.gms.internal.firebase_ml']">
       <class 
@@ -159,8 +60,7 @@
     </add-node> 
     -->
     <remove-node
-        path="/api/package[@name='com.google.firebase.ml.barcode']/class[@name='FirebaseVisionBarcodeDetector']/implements[@name='java.io.Closeable']"
-        >
+        path="/api/package[@name='com.google.firebase.ml.barcode']/class[@name='FirebaseVisionBarcodeDetector']/implements[@name='java.io.Closeable']"        >
     </remove-node>
 
     <attr
@@ -188,4 +88,107 @@
         >
     </remove-node>
  
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.DocumentTextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Block']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.Element']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.Element']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.Line']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBlock']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Paragraph']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Symbol']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Word']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.DocumentTextBase']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="return"
+        >
+        java.util.List        
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.DocumentTextBase']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="return"
+        >
+        java.util.List        
+    </attr>
+    
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.DocumentTextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
+    
  </metadata>

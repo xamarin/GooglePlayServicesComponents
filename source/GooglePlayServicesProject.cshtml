@@ -24,7 +24,6 @@
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidEnableDesugar>true</AndroidEnableDesugar>
   </PropertyGroup>
 
   @{
@@ -66,6 +65,8 @@
     <PackageIconUrl>@(icon_url)</PackageIconUrl>
     <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <!-- Include symbol files (*.pdb) in the built .nupkg -->
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -200,7 +201,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" Version="0.8.0" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.10.0" />
   </ItemGroup>
 
   <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
