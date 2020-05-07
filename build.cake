@@ -239,9 +239,10 @@ Task("binderate")
 					DownloadFile(url, file1);
 				}
 			}
-			catch (System.Exception)
+			catch (System.Exception exc)
 			{
-				Error($"Unable to download {url}");
+				Error($"Unable to download: {url}");
+				Error($"             error: {exc.Message}");
 			}
 		}
 	}
