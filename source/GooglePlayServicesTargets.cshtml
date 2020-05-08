@@ -1,4 +1,4 @@
-﻿﻿@using System.Linq
+@using System.Linq
 @using System.IO
 @using System.Xml.Linq
 @{
@@ -19,6 +19,11 @@
   }
 }
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <AndroidManifestMerger>manifestmerger.jar</AndroidManifestMerger>
+  </PropertyGroup>  
+  
   @if (@Model.MavenArtifacts.Count > 0) {
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
@@ -38,6 +43,7 @@
         var xbdKey = friendlyArtifactId + "-" + art.MavenArtifactVersion;
         var xbdAarFile = friendlyArtifactId + "-" + art.MavenArtifactVersion + ".aar";
         var xbdAarPath = xbdKey + "\\" + xbdKey + ".aar";
+        var xbdSha256 = art.MavenArtifactSha256;
   <ItemGroup>
     <XamarinBuildRestoreResources Include="_XbdRestoreItems_@(friendlyId)" />
   </ItemGroup>
@@ -47,10 +53,11 @@
         <Url>@(url)</Url>
         <ToFile>@(xbdAarFile)</ToFile>
         <Kind>Uncompressed</Kind>
+        <Sha256>@(xbdSha256)</Sha256>
       </XamarinBuildDownload>
     </ItemGroup>
     <ItemGroup>
-      <XamarinBuildDownloadRestoreAssemblyAar Include="$(XamarinBuildDownloadDir)@(xbdAarPath)" />
+     <XamarinBuildDownloadAndroidAarLibrary Include="$(XamarinBuildDownloadDir)@(xbdAarPath)" />
     </ItemGroup>
   </Target>
       }
