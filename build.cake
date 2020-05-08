@@ -14,7 +14,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 var TARGET = Argument ("t", Argument ("target", "ci"));
-var BUILD_CONFIG = Argument ("config", "Release");
 var MAX_CPU_COUNT = Argument("maxcpucount", 0);
 
 // Lists all the artifacts and their versions for com.android.support.*
@@ -32,9 +31,11 @@ var REF_PARAMNAMES_URL = "https://bosstoragemirror.blob.core.windows.net/android
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
 var ANDROID_SDK_BASE_VERSION = "v1.0";
 var ANDROID_SDK_VERSION = "v9.0";
+string AndroidSdkBuildTools = $"29.0.2";
+
 if (string.IsNullOrEmpty(XAMARIN_ANDROID_PATH)) {
 	if (IsRunningOnWindows()) {
-		var vsInstallPath = VSWhereLatest(new VSWhereLatestSettings { Requires = "Component.Xamarin" });
+		var vsInstallPath = VSWhereLatest(new VSWhereLatestSettings { Requires = "Component.Xamarin", IncludePrerelease = true });
 		XAMARIN_ANDROID_PATH = vsInstallPath.Combine("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid").FullPath;
 	} else {
 		if (DirectoryExists("/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xamarin.android/xbuild-frameworks/MonoAndroid"))
@@ -56,12 +57,47 @@ var REQUIRED_DOTNET_TOOLS = new [] {
 	"xamarin.androidx.migration.tool"
 };
 
+
+string[] Configs = new []
+{
+	"Debug",
+	"Release"
+};
+
+var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
+if (IsRunningOnWindows ()) 
+{
+	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin", IncludePrerelease = true });
+	MONODROID_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION).FullPath;
+}
+
+var MSCORLIB_PATH = "/Library/Frameworks/Xamarin.Android.framework/Libraries/mono/2.1/";
+if (IsRunningOnWindows ()) {
+
+	var DOTNETDIR = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.Windows)).Combine ("Microsoft.NET/");
+
+	if (DirectoryExists (DOTNETDIR.Combine ("Framework64")))
+		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework64/v4.0.30319/")).FullPath;
+	else
+		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
+}
+
+
+string JAVA_HOME = EnvironmentVariable ("JAVA_HOME") ?? Argument ("java_home", "");
+string ANDROID_HOME = EnvironmentVariable ("ANDROID_HOME") ?? Argument ("android_home", "");
+string ANDROID_SDK_ROOT = EnvironmentVariable ("ANDROID_SDK_ROOT") ?? Argument ("android_sdk_root", "");
+
 // Log some variables
-Information ("XAMARIN_ANDROID_PATH: {0}", XAMARIN_ANDROID_PATH);
-Information ("ANDROID_SDK_VERSION:  {0}", ANDROID_SDK_VERSION);
-Information ("BUILD_COMMIT:         {0}", BUILD_COMMIT);
-Information ("BUILD_NUMBER:         {0}", BUILD_NUMBER);
-Information ("BUILD_TIMESTAMP:      {0}", BUILD_TIMESTAMP);
+Information ($"JAVA_HOME            : {JAVA_HOME}");
+Information ($"ANDROID_HOME         : {ANDROID_HOME}");
+Information ($"ANDROID_SDK_ROOT     : {ANDROID_SDK_ROOT}");
+Information ($"MONODROID_PATH       : {MONODROID_PATH}");
+Information ($"MSCORLIB_PATH        : {MSCORLIB_PATH}");
+Information ($"XAMARIN_ANDROID_PATH : {XAMARIN_ANDROID_PATH}");
+Information ($"ANDROID_SDK_VERSION  : {ANDROID_SDK_VERSION}");
+Information ($"BUILD_COMMIT:        : {BUILD_COMMIT}");
+Information ($"BUILD_NUMBER:        : {BUILD_NUMBER}");
+Information ($"BUILD_TIMESTAMP:     : {BUILD_TIMESTAMP}");
 
 // You shouldn't have to configure anything below here
 // ######################################################
@@ -173,9 +209,47 @@ Task("binderate")
 
 	RunProcess("xamarin-android-binderator",
 		$"--config=\"{configFile}\" --basepath=\"{basePath}\"");
+
+	// needed for offline builds 28.0.0.1 to 28.0.0.3
+	EnsureDirectoryExists("./output/");
+
+	FilePathCollection files = GetFiles("./samples/**/packages.config");
+	foreach(FilePath file in files)
+	{
+		Information($"File: {file}");
+
+		XmlDocument xml = new XmlDocument();
+		xml.Load($"{file}");
+		XmlNodeList list = xml.SelectNodes("/packages/package");
+		foreach (XmlNode xn in list)
+		{
+			string id = xn.Attributes["id"].Value; //Get attribute-id 
+			//string text = xn["Text"].InnerText; //Get Text Node
+			string v = xn.Attributes["version"].Value; //Get attribute-id 
+
+			Information($"		id	   : {id}");
+			Information($"		version: {v}");
+
+			string url = $"https://www.nuget.org/api/v2/package/{id}/{v}";
+			string file1 = $"./output/{id.ToLower()}.{v}.nupkg";
+			try
+			{
+				if ( ! FileExists(file1) )
+				{
+					DownloadFile(url, file1);
+				}
+			}
+			catch (System.Exception exc)
+			{
+				Error($"Unable to download: {url}");
+				Error($"             error: {exc.Message}");
+			}
+		}
+	}
 });
 
 string nuget_version_template = "71.vvvv.0-preview3";
+string nuget_version_suffix = "preview03";
 JArray binderator_json_array = null;
 
 Task("binderate-config-verify")
@@ -192,6 +266,11 @@ Task("binderate-config-verify")
 			Information("config.json verification...");
 			foreach(JObject jo in binderator_json_array[0]["artifacts"])
 			{
+				bool? dependency_only = (bool?) jo["dependencyOnly"];
+				if ( dependency_only == true)
+				{
+					continue;
+				}
 				string version       = (string) jo["version"];
 				string nuget_version = (string) jo["nugetVersion"];
 				Information($"groupId       = {jo["groupId"]}");
@@ -264,13 +343,22 @@ Task("libs")
 {
 	NuGetRestore("./generated/GooglePlayServices.sln", new NuGetRestoreSettings { });
 
-	MSBuild("./generated/GooglePlayServices.sln", c => {
-		c.Configuration = "Release";
-		c.MaxCpuCount = MAX_CPU_COUNT;
-		c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/libs.binlog")).FullPath };
-		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
-	});
+	Configs = new string[] { "Release" };
+
+	foreach(string config in Configs)
+	{
+		MSBuild("./generated/GooglePlayServices.sln", c => {
+			c.Configuration = config;
+			c.MaxCpuCount = MAX_CPU_COUNT;
+			c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/libs.binlog")).FullPath };
+			c.Properties.Add("DesignTimeBuild", new [] { "false" });
+			c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { AndroidSdkBuildTools });
+			if (! string.IsNullOrEmpty(ANDROID_HOME))
+			{
+				c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+			}
+		});
+	}
 });
 
 Task("samples-directory-build-targets")
@@ -335,22 +423,50 @@ Task("samples")
 	.IsDependentOn("allbindingprojectrefs")
 	.Does(() =>
 {
+	Configs = new string[] { "Debug", "Release" };
+
+	DeleteDirectories(GetDirectories("./samples/**/bin/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
+	DeleteDirectories(GetDirectories("./samples/**/obj/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
+
+	
 	var sampleSlns = GetFiles("./samples/**/*.sln");
 
-	foreach (var sampleSln in sampleSlns) {
-		NuGetRestore(sampleSln, new NuGetRestoreSettings { });
-		string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
-		Information($"Solution: {filename_sln}");
-		MSBuild(sampleSln, c => {
-			c.Configuration = "Release";
-			c.Properties.Add("DesignTimeBuild", new [] { "false" });
-			c.BinaryLogger = new MSBuildBinaryLogSettings
+	foreach(string config in Configs)
+	{
+		foreach (var sampleSln in sampleSlns) 
+		{
+			string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
+
+			if 
+				(
+					sampleSln.ToString().Contains("FirebaseStorageQuickstart") 
+					||
+					sampleSln.ToString().Contains("RepoSample.Issue.213")
+				)
 			{
-				Enabled = true,
-				FileName = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath
-			};
-		});
+				continue;
+			}
+			if ( ! filename_sln.Contains("BuildAll") )
+			{
+				NuGetRestore(sampleSln, new NuGetRestoreSettings { }); // R8 errors
+			}
+			Information($"Solution: {filename_sln}");
+			MSBuild(sampleSln, c => {
+				c.Configuration = config;
+				c.Properties.Add("DesignTimeBuild", new [] { "false" });
+				c.BinaryLogger = new MSBuildBinaryLogSettings
+				{
+					Enabled = true,
+					FileName = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath
+				};
+				if (! string.IsNullOrEmpty(ANDROID_HOME))
+				{
+					c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+				}
+			});
+		}
 	}
+
 });
 
 Task("allbindingprojectrefs")
@@ -371,8 +487,8 @@ Task("allbindingprojectrefs")
 
 	};
 
-	generateTargets("./output/*firebase*.nupkg", "./output/FirebasePackages.targets");
-	generateTargets("./output/*play-services*.nupkg", "./output/PlayServicesPackages.targets");
+	generateTargets("./output/Xamarin.Firebase.*.nupkg", "./output/FirebasePackages.targets");
+	generateTargets("./output/Xamarin.GooglePlayServices.*.nupkg", "./output/PlayServicesPackages.targets");
 });
 
 Task("nuget-restore")
@@ -397,7 +513,7 @@ Task("nuget")
 		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(outputPath).FullPath });
 		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
+		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { $"{AndroidSdkBuildTools}" });
     });
 });
 
@@ -406,8 +522,8 @@ Task ("merge")
 	.Does (() =>
 {
 	var allDlls = 
-		GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/monoandroid*/Xamarin.GooglePlayServices.*.dll") +
-		GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/monoandroid*/Xamarin.Firebase.*.dll");
+		GetFiles ($"./generated/*/bin/Release/monoandroid*/Xamarin.GooglePlayServices.*.dll") +
+		GetFiles ($"./generated/*/bin/Release/monoandroid*/Xamarin.Firebase.*.dll");
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
 		.Select(g => g.FirstOrDefault())
@@ -493,10 +609,10 @@ Task ("clean")
 	.Does (() =>
 {
 	if (DirectoryExists ("./externals"))
-		DeleteDirectory ("./externals", true);
+		DeleteDirectory ("./externals", new DeleteDirectorySettings { Recursive = true, Force = true });
 
 	if (DirectoryExists ("./generated"))
-		DeleteDirectory ("./generated", true);
+		DeleteDirectory ("./generated", new DeleteDirectorySettings { Recursive = true, Force = true });
 
 	CleanDirectories ("./**/packages");
 	CleanDirectories("./**/bin");

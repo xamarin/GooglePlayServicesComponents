@@ -83,23 +83,4 @@
     <Delete Files="$(ProcessGoogleServicesJsonStampPath)" />
   </Target>
 
-	
-  <!-- If set to False, here, or elsewhere, we won't try to add this optional library to proguard invocations -->
-  <PropertyGroup Condition=" $(IncludeOrgApacheHttpLegacyJarInProguard) == '' ">
-    <IncludeOrgApacheHttpLegacyJarInProguard>True</IncludeOrgApacheHttpLegacyJarInProguard>
-  </PropertyGroup>
-
-  <!-- 
-  Play Services still references org.apache.http.legacy.jar, however this lib is optional and not included in the proguard
-  call by default.  This target will add this external library, if it exists in the ANDROID_HOME/platform/android-ZZ/optional/ folder
-  For the given api level (ZZ) unless the property is explicitly set to override this behaviour
-  -->
-  <Target Name="AddOrgApacheHttpLegacyJarInProguardExternalJavaLibs"
-      DependsOnTargets="_ResolveMonoAndroidSdks;_ValidateAndroidPackageProperties"
-      BeforeTargets="_CompileDex"
-      Condition="$(IncludeOrgApacheHttpLegacyJarInProguard) == 'True' and Exists ('$(AndroidSdkDirectory)/platforms/android-$(_AndroidTargetSdkVersion)/optional/org.apache.http.legacy.jar')">
-    <ItemGroup>
-      <AndroidExternalJavaLibrary Include="$(AndroidSdkDirectory)/platforms/android-$(_AndroidTargetSdkVersion)/optional/org.apache.http.legacy.jar" />
-    </ItemGroup>
-  </Target>
-</Project>
+	</Project>
