@@ -124,7 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\source\AssemblyInfo.cs" />
-    <Compile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\additions\*.cs">
+    <Compile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Additions\*.cs">
         <Link>Additions/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </Compile>
   </ItemGroup>
@@ -133,7 +133,7 @@
     <TransformFile Include="..\..\source\Metadata.Common.xml" >
       <Link>Transforms/Metadata.Common.xml</Link>
     </TransformFile>
-    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\transforms\*.xml">
+    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.xml">
         <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </TransformFile>
   </ItemGroup>
