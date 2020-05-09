@@ -130,8 +130,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TransformFile Include="..\..\source\Metadata.common.xml" >
-      <Link>Transforms/Metadata.common.xml</Link>
+    <TransformFile Include="..\..\source\Metadata.Common.xml" >
+      <Link>Transforms/Metadata.Common.xml</Link>
     </TransformFile>
     <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\transforms\*.xml">
         <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
