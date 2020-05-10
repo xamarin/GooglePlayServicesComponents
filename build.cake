@@ -199,6 +199,29 @@ Task("javadocs")
 // 	}
 // });
 
+Task("tools-update")
+    .Does
+    (
+        () =>
+        {
+            /*
+            dotnet tool uninstall   -g Cake.Tool
+            dotnet tool install     -g Cake.Tool
+            dotnet tool uninstall   -g xamarin.androidbinderator.tool
+            dotnet tool install     -g xamarin.androidbinderator.tool
+            dotnet tool uninstall   -g xamarin.androidx.migration.tool
+            dotnet tool install     -g xamarin.androidx.migration.tool
+
+            StartProcess("dotnet", "tool uninstall   -g Cake.Tool");
+            StartProcess("dotnet", "tool install     -g Cake.Tool");
+            */
+            StartProcess("dotnet", "tool uninstall   -g xamarin.androidbinderator.tool");
+            StartProcess("dotnet", "tool install     -g xamarin.androidbinderator.tool");
+            StartProcess("dotnet", "tool uninstall   -g xamarin.androidx.migration.tool");
+            StartProcess("dotnet", "tool install     -g xamarin.androidx.migration.tool");
+        }
+    );
+
 Task("binderate")
 	.IsDependentOn("javadocs")
 	.IsDependentOn("binderate-config-verify")
@@ -211,7 +234,7 @@ Task("binderate")
 		$"--config=\"{configFile}\" --basepath=\"{basePath}\"");
 
 	// needed for offline builds 28.0.0.1 to 28.0.0.3
-	EnsureDirectoryExists("./output/");
+	EnsureDirectoryExists("./externals/nuget-local-feed/");
 
 	FilePathCollection files = GetFiles("./samples/**/packages.config");
 	foreach(FilePath file in files)
@@ -231,7 +254,7 @@ Task("binderate")
 			Information($"		version: {v}");
 
 			string url = $"https://www.nuget.org/api/v2/package/{id}/{v}";
-			string file1 = $"./output/{id.ToLower()}.{v}.nupkg";
+			string file1 = $"./externals/nuget-local-feed/{id.ToLower()}.{v}.nupkg";
 			try
 			{
 				if ( ! FileExists(file1) )
