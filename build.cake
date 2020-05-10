@@ -236,22 +236,37 @@ Task("binderate")
 	// needed for offline builds 28.0.0.1 to 28.0.0.3
 	EnsureDirectoryExists("./externals/nuget-local-feed/");
 
-	FilePathCollection files = GetFiles("./samples/**/packages.config");
+	FilePathCollection files = GetFiles("./samples/**/*.csproj");
 	foreach(FilePath file in files)
 	{
 		Information($"File: {file}");
 
 		XmlDocument xml = new XmlDocument();
 		xml.Load($"{file}");
-		XmlNodeList list = xml.SelectNodes("/packages/package");
+        XmlNamespaceManager mgr = new XmlNamespaceManager(xml.NameTable);
+        mgr.AddNamespace("x", xml.DocumentElement.NamespaceURI);
+	    // XmlNodeList list = xml.SelectNodes("/packages/package/");
+	    XmlNodeList list = xml.SelectNodes("//x:PackageReference[@Include]", mgr);	
+		Information($"{list.Count}");	
 		foreach (XmlNode xn in list)
 		{
-			string id = xn.Attributes["id"].Value; //Get attribute-id 
-			//string text = xn["Text"].InnerText; //Get Text Node
-			string v = xn.Attributes["version"].Value; //Get attribute-id 
+			string id = xn.Attributes["Include"].Value;  	// .Attributes["id"].Value; // attribute id packages.config
+			//string text = xn["Text"].InnerText; 			// Text Node
+			string v = xn.Attributes["Version"]?.Value; 	// attribute version 
 
 			Information($"		id	   : {id}");
+
+			if ( v is null)
+			{
+				v = xn.InnerText; //SelectSingleNode("Version", mgr).Value;
+			}
 			Information($"		version: {v}");
+
+			if ( id.Contains("GooglePlayServices") || id.Contains("Firebase") )
+			{
+				Information($"		skipping download of {id}");
+				continue;
+			}
 
 			string url = $"https://www.nuget.org/api/v2/package/{id}/{v}";
 			string file1 = $"./externals/nuget-local-feed/{id.ToLower()}.{v}.nupkg";
@@ -259,6 +274,7 @@ Task("binderate")
 			{
 				if ( ! FileExists(file1) )
 				{
+					Information($"		download of {id}");
 					DownloadFile(url, file1);
 				}
 			}
