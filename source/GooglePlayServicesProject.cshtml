@@ -201,11 +201,18 @@
   </ItemGroup>
 
 
+  @*
   <!--
-    NOTE: Version of Xamarin.Build.Download is important for attributes in GooglePlaySericestargets.cshtml template    
+  NOTE: 
+  Xamarin.Build.Download version set in GooglePlaySericesProjects.cshtml template is 
+  important for attributes in GooglePlaySericesTargets.cshtml template
+  
+  XamarinBuildDownloadAndroidAarLibrary   v >=  0.10.0
+  XamarinBuildDownloadRestoreAssemblyAar  v <   0.10.0
   -->
+  *@
   <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" Version="0.8.0" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.7.0" />
   </ItemGroup>
   
 
