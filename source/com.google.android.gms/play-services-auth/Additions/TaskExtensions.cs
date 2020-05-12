@@ -11,11 +11,6 @@ namespace Android.Gms.Auth.Api.SignIn
         {
             return GetSignedInAccountFromIntent (intent).AsAsync<GoogleSignInAccount>();
         }
-
-        public Task<GoogleSignInAccount> GetSignedInAccountFromIntentAsync (Intent intent)
-        {
-            return GetSignedInAccountFromIntent (intent).AsAsync<GoogleSignInAccount>();
-        }
     }
 
     public partial class GoogleSignInClient
