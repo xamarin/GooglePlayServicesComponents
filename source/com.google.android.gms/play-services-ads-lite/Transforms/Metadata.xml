@@ -228,5 +228,26 @@
         >
         false
     </attr>
+
+
+
+	<attr
+		path="/api/package[@name='com.google.android.gms.ads.appopen']"
+        name="managedName"
+		>
+		Android.Gms.Ads.AppOpen
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.ads.instream']"
+        name="managedName"
+		>
+		Android.Gms.Ads.InStream
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.ads.query']"
+        name="managedName"
+		>
+		Android.Gms.Ads.Query
+	</attr>
     
 </metadata>

@@ -1,0 +1,16 @@
+﻿<metadata>
+	
+    <attr
+        path="/api/package[@name='com.google.android.gms.config.proto']" 
+        name="managedName"
+        >
+        Android.Gms.Config.Proto
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.remoteconfig.internal']" 
+        name="managedName"
+        >
+        Firebase.RemoteConfig.Internal
+    </attr>
+    
+</metadata>
