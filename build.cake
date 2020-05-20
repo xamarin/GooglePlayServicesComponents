@@ -275,7 +275,7 @@ string nuget_version_template =
 							// "71.vvvv.0-preview3" 	// pre AndroidX version
 							"1xx.yy.zz-suffix"			// AndroidX version
 							;
-string nuget_version_suffix = "preview02";
+string nuget_version_suffix = "preview03";
 JArray binderator_json_array = null;
 
 
