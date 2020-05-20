@@ -21,4 +21,10 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
+	<attr
+		path="/api/package[@name='com.google.android.gms.cast.framework.media.internal']"
+		name="managedName"
+		>
+		Android.Gms.Cast.Framework.Media.Internal
+	</attr>
 </metadata>
