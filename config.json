@@ -273,7 +273,7 @@
 			"artifactId" : "play-services-measurement-api",
 			"version" : "17.4.1",
 			"nugetVersion" : "117.4.1-preview01",
-			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Api",
+			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Api",      
 			"dependencyOnly" : false
 		},
 		{
@@ -450,7 +450,7 @@
 			"artifactId" : "play-services-vision-image-labeling-internal",
 			"version" : "16.0.0",
 			"nugetVersion" : "116.0.0-preview01",
-			"nugetId" : "Xamarin.GooglePlayServices.Vision.ImageLabel",
+			"nugetId" : "Xamarin.GooglePlayServices.Vision.ImageLabelingIntetrnal",
 			"dependencyOnly" : false
 		},
 		{

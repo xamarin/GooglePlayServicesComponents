@@ -276,6 +276,7 @@ string nuget_version_template =
 							"1xx.yy.zz-suffix"			// AndroidX version
 							;
 string nuget_version_suffix = "preview01";
+string nuget_version_suffix = "preview03";
 JArray binderator_json_array = null;
 
 
