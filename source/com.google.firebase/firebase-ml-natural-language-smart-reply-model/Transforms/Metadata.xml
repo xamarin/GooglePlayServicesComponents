@@ -17,5 +17,12 @@
         >
         Android.Gms.PredictOnDevice.Jni
     </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.predictondevice.component']"
+        name="managedName"
+        >
+        Android.Gms.PredictOnDevice.Component
+    </attr>
+    
     
 </metadata>

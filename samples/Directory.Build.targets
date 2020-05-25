@@ -2,7 +2,7 @@
   <ItemGroup>
     <PackageReference Update="Xamarin.GooglePlayServices.Ads" Version="118.1.1-preview03" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="118.1.1-preview03" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Identifier" Version="117.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Identifier" Version="117.0.0-preview03" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="118.1.1-preview03" />
     <PackageReference Update="Xamarin.GooglePlayServices.Analytics" Version="117.0.0-preview03" />
     <PackageReference Update="Xamarin.GooglePlayServices.Analytics.Impl" Version="117.0.0-preview03" />
