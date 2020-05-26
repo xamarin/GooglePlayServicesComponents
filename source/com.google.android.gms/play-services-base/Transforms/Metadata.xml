@@ -309,4 +309,17 @@
         >                
     </remove-node>
     
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zal']/implements"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.images']/class[@name='zab']"    
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zam']/implements"
+        >        
+    </remove-node>
+    
 </metadata>
