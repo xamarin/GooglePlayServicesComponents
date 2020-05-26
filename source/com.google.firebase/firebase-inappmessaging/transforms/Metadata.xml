@@ -1,2 +1,12 @@
 ﻿<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='StubAnalyticsConnector']"
+        >
+    </remove-node>
+
+    <remove-node
+        path="/api/package[@name='com.google.firebase.inappmessaging']/class[@name='MessagesProto.Text']/implements"    
+        >
+    </remove-node>
+    
 </metadata>
