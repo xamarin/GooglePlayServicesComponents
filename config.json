@@ -1021,8 +1021,8 @@
 		{
 			"groupId" : "androidx.cardview",
 			"artifactId" : "cardview",
-			"version" : "1.0.2",
-			"nugetVersion": "1.0.2",
+			"version" : "1.0.0",
+			"nugetVersion": "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.CardView",
 			"dependencyOnly" : true
 		},
