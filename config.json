@@ -1203,7 +1203,7 @@
 			"artifactId" : "transport-api",
 			"version" : "2.2.0",
 			"nugetVersion" : "2.2.0",
-			"nugetId" : "amarin.Google.Android.DataTransport.TransportApi",
+			"nugetId" : "Xamarin.Google.Android.DataTransport.TransportApi",
 			"dependencyOnly" : true
 		},
 		{
@@ -1227,7 +1227,7 @@
 			"artifactId" : "transport-api",
 			"version" : "2.2.0",
 			"nugetVersion" : "2.2.0",
-			"nugetId" : "amarin.Google.Android.DataTransport.TransportApi",
+			"nugetId" : "Xamarin.Google.Android.DataTransport.TransportApi",
 			"dependencyOnly" : true
 		},
 		{
@@ -1285,8 +1285,7 @@
 			"nugetVersion" : "71.1630.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Api",      
 			"dependencyOnly" : true
-		}
-		,
+		},
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-analytics",
