@@ -1205,6 +1205,95 @@
 			"nugetVersion" : "2.2.0",
 			"nugetId" : "amarin.Google.Android.DataTransport.TransportApi",
 			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.android.datatransport",
+			"artifactId" : "transport-runtime",
+			"version" : "2.2.1",
+			"nugetVersion" : "2.2.1",
+			"nugetId" : "Xamarin.Google.Android.DataTransport.TransportRuntime",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.android.datatransport",
+			"artifactId" : "transport-backend-cct",
+			"version" : "2.2.1",
+			"nugetVersion" : "2.2.1",
+			"nugetId" : "Xamarin.Google.Android.DataTransport.TransportBackendCct",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.android.datatransport",
+			"artifactId" : "transport-api",
+			"version" : "2.2.0",
+			"nugetVersion" : "2.2.0",
+			"nugetId" : "amarin.Google.Android.DataTransport.TransportApi",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.android.datatransport",
+			"artifactId" : "transport-runtime",
+			"version" : "2.2.2",
+			"nugetVersion" : "2.2.2",
+			"nugetId" : "Xamarin.Google.Android.DataTransport.TransportRuntime",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.android.datatransport",
+			"artifactId" : "transport-backend-cct",
+			"version" : "2.2.2",
+			"nugetVersion" : "2.2.2",
+			"nugetId" : "Xamarin.Google.Android.DataTransport.TransportBackendCct",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.dagger",
+			"artifactId" : "dagger",
+			"version" : "2.24",
+			"nugetVersion" : "2.24",
+			"nugetId" : "Xamarin.Google.Dagger",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "io.reactivex.rxjava2",
+			"artifactId" : "rxandroid",
+			"version" : "2.1.1",
+			"nugetVersion" : "2.1.1",
+			"nugetId" : "Xamarin.Android.ReactiveX.RxAndroid",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "io.reactivex.rxjava2",
+			"artifactId" : "rxjava",
+			"version" : "2.2.7",
+			"nugetVersion" : "2.2.7",
+			"nugetId" : "Xamarin.Android.ReactiveX.RxJava",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.squareup.picasso",
+			"artifactId" : "picasso",
+			"version" : "2.71828",
+			"nugetVersion" : "2.71828",
+			"nugetId" : "Square.Picasso",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.android.gms",
+			"artifactId" : "play-services-measurement-api",
+			"version" : "16.3.0",
+			"nugetVersion" : "71.1630.1",
+			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Api",      
+			"dependencyOnly" : true
+		}
+		,
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-analytics",
+			"version" : "16.3.0",
+			"nugetVersion" : "71.1630.1",
+			"nugetId" : "Xamarin.Firebase.Analytics",      
+			"dependencyOnly" : true
 		}
 
 	]
