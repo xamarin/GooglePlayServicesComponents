@@ -13,5 +13,17 @@
         >
         Firebase.Components
     </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.events']" 
+        name="managedName"
+        >
+        Firebase.Events
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.inject']" 
+        name="managedName"
+        >
+        Firebase.Inject
+    </attr>
     
 </metadata>
