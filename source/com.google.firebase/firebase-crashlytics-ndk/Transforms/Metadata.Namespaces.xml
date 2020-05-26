@@ -8,10 +8,10 @@
         Firebase
     </attr>
     <attr
-        path="/api/package[@name='com.google.firebase.components']" 
+        path="/api/package[@name='com.google.firebase.crashlytics.ndk']" 
         name="managedName"
         >
-        Firebase.Components
+        Firebase.Chrashlytics.Ndk
     </attr>
     
 </metadata>
