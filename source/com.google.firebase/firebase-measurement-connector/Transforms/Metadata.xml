@@ -18,4 +18,11 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
 	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.analytics.connector']/interface[@name='AnalyticsConnector']/method[@name='registerAnalyticsConnectorListener' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='com.google.firebase.analytics.connector.AnalyticsConnector.AnalyticsConnectorListener']]"
+        name="returnType"
+        >
+        Java.Lang.Object
+    </attr>
 </metadata>
