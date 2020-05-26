@@ -225,54 +225,6 @@ namespace Android.Gms.Games.MultiPlayer.TurnBased
         }
     }
 }
-namespace Android.Gms.Games.Quest
-{
-    public static partial class IQuestsExtensions
-    {
-        public static async Task<IQuestsAcceptQuestResult> AcceptAsync (this IQuests api, GoogleApiClient apiClient, string questId)
-        {
-            return (await api.Accept (apiClient, questId)).JavaCast<IQuestsAcceptQuestResult> ();
-        }
-        public static async Task<IQuestsClaimMilestoneResult> ClaimAsync (this IQuests api, GoogleApiClient apiClient, string questId, string milestoneId)
-        {
-            return (await api.Claim (apiClient, questId, milestoneId)).JavaCast<IQuestsClaimMilestoneResult> ();
-        }
-        public static async Task<IQuestsLoadQuestsResult> LoadAsync (this IQuests api, GoogleApiClient apiClient, int [] questSelectors, int sortOrder, bool forceReload)
-        {
-            return (await api.Load (apiClient, questSelectors, sortOrder, forceReload)).JavaCast<IQuestsLoadQuestsResult> ();
-        }
-        public static async Task<IQuestsLoadQuestsResult> LoadByIdsAsync (this IQuests api, GoogleApiClient apiClient, bool forceReload, params string [] questIds)
-        {
-            return (await api.LoadByIds (apiClient, forceReload, questIds)).JavaCast<IQuestsLoadQuestsResult> ();
-        }
-    }
-}
-namespace Android.Gms.Games.Request
-{
-    public static partial class IRequestsExtensions
-    {
-        public static async Task<IRequestsUpdateRequestsResult> AcceptRequestAsync (this IRequests api, GoogleApiClient apiClient, string requestId)
-        {
-            return (await api.AcceptRequest (apiClient, requestId)).JavaCast<IRequestsUpdateRequestsResult> ();
-        }
-        public static async Task<IRequestsUpdateRequestsResult> AcceptRequestsAsync (this IRequests api, GoogleApiClient apiClient, IList<string> requestIds)
-        {
-            return (await api.AcceptRequests (apiClient, requestIds)).JavaCast<IRequestsUpdateRequestsResult> ();
-        }
-        public static async Task<IRequestsUpdateRequestsResult> DismissRequestAsync (this IRequests api, GoogleApiClient apiClient, string requestId)
-        {
-            return (await api.DismissRequest (apiClient, requestId)).JavaCast<IRequestsUpdateRequestsResult> ();
-        }
-        public static async Task<IRequestsUpdateRequestsResult> DismissRequestsAsync (this IRequests api, GoogleApiClient apiClient, IList<string> requestIds)
-        {
-            return (await api.DismissRequests (apiClient, requestIds)).JavaCast<IRequestsUpdateRequestsResult> ();
-        }
-        public static async Task<IRequestsLoadRequestsResult> LoadRequestsAsync (this IRequests api, GoogleApiClient apiClient, int requestDirection, int types, int sortOrder)
-        {
-            return (await api.LoadRequests (apiClient, requestDirection, types, sortOrder)).JavaCast<IRequestsLoadRequestsResult> ();
-        }
-    }
-}
 namespace Android.Gms.Games.Snapshot
 {
     public static partial class ISnapshotsExtensions

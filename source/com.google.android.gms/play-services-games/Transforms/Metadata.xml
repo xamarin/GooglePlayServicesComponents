@@ -103,10 +103,10 @@
 	<!-- Fix up inheritence from covariant types -->
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='GameBuffer']/method[@name='get']" name="visibility">public virtual</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='GameBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
-	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerBuffer']/method[@name='get']" name="visibility">public override</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerBuffer']/method[@name='get']" name="visibility">public</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
 
-	<attr path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementBuffer']/method[@name='get']" name="visibility">public override</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementBuffer']/method[@name='get']" name="visibility">public</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
 
 	<attr path="/api/package[@name='com.google.android.gms.games.event']/class[@name='EventBuffer']/method[@name='get']" name="visibility">public override</attr>
@@ -493,4 +493,15 @@
         </method>        
     </add-node>    
     
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='ParticipantRef']"
+        >
+      <method 
+            visibility="public" abstract="false" static="false" return="java.lang.Object" name="freeze"
+            deprecated="not deprecated" final="true" bridge="false" native="false" synchronized="false" synthetic="false" 
+            jni-signature="()Lcom/google/android/gms/games/Game;" rjni-return="Lcom/google/android/gms/games/Game;" 
+            >
+      </method>
+
+    </add-node>
 </metadata>

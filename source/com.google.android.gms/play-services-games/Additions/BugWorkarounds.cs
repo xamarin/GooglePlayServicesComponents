@@ -65,24 +65,6 @@ namespace Android.Gms.Games
 			return (Java.Lang.Object) global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallObjectMethod  (Handle, id_freeze), JniHandleOwnership.TransferLocalRef);
 		}
 	}
-
-	public partial class GameRef
-	{
-		IntPtr id_freeze;
-		public Java.Lang.Object Freeze ()
-		{
-			return FreezeMethodImplementor.Freeze (ref id_freeze, class_ref, Handle);
-		}
-	}
-
-	public partial class PlayerRef
-	{
-		IntPtr id_freeze;
-		public Java.Lang.Object Freeze()
-		{
-			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
-		}
-	}
 }
 
 namespace Android.Gms.Games.MultiPlayer
@@ -102,14 +84,6 @@ namespace Android.Gms.Games.MultiPlayer
 		}
 	}
 
-	public partial class ParticipantRef
-	{
-		IntPtr id_freeze;
-		public Java.Lang.Object Freeze()
-		{
-			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
-		}
-	}
 }
 
 //namespace Android.Gms.Games.AppContent
@@ -323,15 +297,6 @@ namespace Android.Gms.Games.Quest
 			if (id_freeze == IntPtr.Zero)
 				id_freeze = JNIEnv.GetMethodID(class_ref, "freeze", "()Ljava/lang/Object;");
 			return (Java.Lang.Object)global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(JNIEnv.CallObjectMethod(Handle, id_freeze), JniHandleOwnership.TransferLocalRef);
-		}
-	}
-
-	public partial class QuestRef
-	{
-		IntPtr id_freeze;
-		public Java.Lang.Object Freeze()
-		{
-			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
 		}
 	}
 }
