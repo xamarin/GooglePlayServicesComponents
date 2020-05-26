@@ -33,4 +33,11 @@
         Firebase.Analytics.Connector.Internal
     </attr>
     
+    <attr
+        path="/api/package[@name='com.google.android.gms.measurement']"
+        name="managedName"        
+        >
+        Android.Gms.Measurement
+    </attr>
+    
 </metadata>
