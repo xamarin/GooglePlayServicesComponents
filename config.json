@@ -552,14 +552,12 @@
 			"nugetId" : "Xamarin.Firebase.Components",
 			"dependencyOnly" : false
 		},
-		{
-			"groupId" : "com.google.firebase",
-			"artifactId" : "firebase-config",
-			"version" : "19.1.4",
-			"nugetVersion" : "119.1.4-preview01",
-			"nugetId" : "Xamarin.Firebase.Config",
-			"dependencyOnly" : false
-		},
+
+
+
+
+
+
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-core",
@@ -672,22 +670,18 @@
 			"nugetId" : "Xamarin.Firebase.Iid.Interop",
 			"dependencyOnly" : false
 		},
-		{
-			"groupId" : "com.google.firebase",
-			"artifactId" : "firebase-inappmessaging",
-			"version" : "19.0.6",
-			"nugetVersion" : "119.0.6-preview01",
-			"nugetId" : "Xamarin.Firebase.InAppMessaging",
-			"dependencyOnly" : false
-		},
-		{
-			"groupId" : "com.google.firebase",
-			"artifactId" : "firebase-inappmessaging-display",
-			"version" : "19.0.6",
-			"nugetVersion" : "119.0.6-preview01",
-			"nugetId" : "Xamarin.Firebase.InAppMessaging.Display",
-			"dependencyOnly" : false
-		},
+
+
+
+
+
+
+
+		
+
+
+
+
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-installations",
