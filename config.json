@@ -774,14 +774,11 @@
 			"nugetId" : "Xamarin.Firebase.ML.Natural.Language.Smart.Reply",
 			"dependencyOnly" : false
 		},
-		{
-			"groupId" : "com.google.firebase",
-			"artifactId" : "firebase-ml-natural-language-smart-reply-model",
-			"version" : "20.0.7",
-			"nugetVersion" : "120.0.7-preview01",
-			"nugetId" : "Xamarin.Firebase.ML.Natural.Language.Smart.Reply.Model",
-			"dependencyOnly" : false
-		},
+
+
+
+
+
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-natural-language-translate",
