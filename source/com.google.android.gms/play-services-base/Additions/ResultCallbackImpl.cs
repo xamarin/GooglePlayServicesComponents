@@ -23,14 +23,14 @@ namespace Android.Gms.Common.Apis
             return rc.AwaitAsync ();
         }
 
-        public static async Task AsAsync (this PendingResult pr)
-        {
-            var rc = new AwaitableResultCallback<Statuses> ();
+        //public static async Task AsAsync (this PendingResult pr)
+        //{
+        //    var rc = new AwaitableResultCallback<Statuses> ();
 
-            pr.SetResultCallback (rc);
+        //    pr.SetResultCallback (rc);
 
-            await rc.AwaitAsync ();
-        }
+        //    await rc.AwaitAsync ();
+        //}
 
         public static TaskAwaiter<TResult> GetAwaiter<TResult> (this PendingResult pr) where TResult : class, IResult
         {
