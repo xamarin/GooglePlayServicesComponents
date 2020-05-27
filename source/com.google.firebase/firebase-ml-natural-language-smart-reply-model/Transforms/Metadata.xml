@@ -6,7 +6,7 @@
         Android.Gms.Internal.FirebaseMLNaturalLanguage
     </attr>
     <attr
-        path="/api/package[@name='om.google.android.gms.predictondevice.component']"
+        path="/api/package[@name='com.google.android.gms.predictondevice.component']"
         name="managedName"
         >
         Android.Gms.PredictOnDevice.Component

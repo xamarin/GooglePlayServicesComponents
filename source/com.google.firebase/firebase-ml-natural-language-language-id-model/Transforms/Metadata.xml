@@ -5,5 +5,12 @@
         >
         Firebase.ML.Common
     </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.naturallanguage.languageid']"
+        name="managedName"
+        >
+        Firebase.ML.NaturalLanguage.LanguageId
+    </attr>
     
+   
 </metadata>

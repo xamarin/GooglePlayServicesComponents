@@ -56,7 +56,7 @@
         Firebase.Crashlytics.Internal.Network
     </attr>
     <attr
-        path="/api/package[@name='com.google.firebase.crashlytics.internal.Persistence']" 
+        path="/api/package[@name='com.google.firebase.crashlytics.internal.persistence']" 
         name="managedName"
         >
         Firebase.Crashlytics.Internal.Persistence

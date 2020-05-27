@@ -49,4 +49,11 @@
         >        
     </remove-node>
     
+    <attr
+        path="/api/package[@name='com.google.firebase.heartbeatinfo']"
+        name="managedName"
+        >
+        Firebase.HeartBeatInfo
+    </attr>
+    
 </metadata>

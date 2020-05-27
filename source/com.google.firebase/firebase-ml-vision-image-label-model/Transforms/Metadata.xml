@@ -21,6 +21,12 @@
         >
         Android.Gms.Dynamite.Vision.Ica
     </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.imagelabel']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.ImageLabel
+    </attr>
     
     
     
