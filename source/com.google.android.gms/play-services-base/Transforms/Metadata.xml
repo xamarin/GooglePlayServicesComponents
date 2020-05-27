@@ -168,18 +168,28 @@
     <remove-node
         path="/api/package[@name='com.google.android.gms.common.images.internal']/class[@name='CrossFadingDrawable']/method[@name='getChangingConfigurations' and count(parameter)=0]"
         />
-
+        
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='BasePendingResult']/method[@name='createFailedResult' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.common.api.Status']]"
+        name="abstract"
+        >
+        false
+    </attr>
+        
     <add-node
         path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='StatusPendingResult']"
         >
+        <!--
         <method 
-            abstract="false" deprecated="not deprecated" final="false" name="createFailedResult" native="false" 
-            return="Java.Lang.Object" static="false" synchronized="false" visibility="protected">
-            <parameter name="status" type="com.google.android.gms.common.api.Status">
+            visibility="protected" static="false" abstract="false" return="java.lang.Object" name="createFailedResultDummy" 
+            native="false" deprecated="not deprecated" final="false" synchronized="false" 
+            >
+            <parameter type="com.google.android.gms.common.api.Status" name="status" >
             </parameter>
         </method>       
+        -->
     </add-node>   
-        
+    
     <attr
         path="/api/package[@name='com.google.android.gms.common.images']/class[@name='ImageManager.ImageReceiver']"
         name="visibility"
