@@ -1,4 +1,4 @@
-﻿<metadata>
+﻿    <metadata>
 	
 	<!-- Rename Namespaces -->
 	<attr path="/api/package[@name='com.google.android.gms.actions']" name="managedName">Android.Gms.Actions</attr>
@@ -99,11 +99,11 @@
 	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzf']" name="managedName">Zzc</attr>
 	<!-- Base - GooglePlayServicesUtil -->
 	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzs']" name="managedName">Zze</attr>
-
-	<add-node path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Status']">
-		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
-	</add-node>
-
+    
+	<remove-node 
+        path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Status']/implements"
+        >
+	</remove-node>
 
 	<add-node path="/api/package[@name='com.google.android.gms.common']/class[@name='zzf']">
 		<implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
