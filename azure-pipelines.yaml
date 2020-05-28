@@ -4,6 +4,7 @@ trigger:
 
 pr:
   - master
+  - master_based_androidx*
   
 variables:
   BUILD_NUMBER: $(Build.BuildNumber)
