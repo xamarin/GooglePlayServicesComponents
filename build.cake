@@ -199,6 +199,29 @@ Task("javadocs")
 // 	}
 // });
 
+Task("tools-update")
+    .Does
+    (
+        () =>
+        {
+            /*
+            dotnet tool uninstall   -g Cake.Tool
+            dotnet tool install     -g Cake.Tool
+            dotnet tool uninstall   -g xamarin.androidbinderator.tool
+            dotnet tool install     -g xamarin.androidbinderator.tool
+            dotnet tool uninstall   -g xamarin.androidx.migration.tool
+            dotnet tool install     -g xamarin.androidx.migration.tool
+
+            StartProcess("dotnet", "tool uninstall   -g Cake.Tool");
+            StartProcess("dotnet", "tool install     -g Cake.Tool");
+            */
+            StartProcess("dotnet", "tool uninstall   -g xamarin.androidbinderator.tool");
+            StartProcess("dotnet", "tool install     -g xamarin.androidbinderator.tool");
+            StartProcess("dotnet", "tool uninstall   -g xamarin.androidx.migration.tool");
+            StartProcess("dotnet", "tool install     -g xamarin.androidx.migration.tool");
+        }
+    );
+
 Task("binderate")
 	.IsDependentOn("javadocs")
 	.IsDependentOn("binderate-config-verify")
@@ -252,7 +275,7 @@ string nuget_version_template =
 							// "71.vvvv.0-preview3" 	// pre AndroidX version
 							"1xx.yy.zz-suffix"			// AndroidX version
 							;
-string nuget_version_suffix = "preview01";
+string nuget_version_suffix = "preview03";
 JArray binderator_json_array = null;
 
 
