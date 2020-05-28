@@ -66,7 +66,6 @@
     <PackageReference Update="Xamarin.Firebase.Auth.Interop" Version="119.0.0-preview01" />
     <PackageReference Update="Xamarin.Firebase.Common" Version="119.3.0-preview01" />
     <PackageReference Update="Xamarin.Firebase.Components" Version="116.0.0-preview01" />
-    <PackageReference Update="Xamarin.Firebase.Config" Version="119.1.4-preview01" />
     <PackageReference Update="Xamarin.Firebase.Core" Version="117.4.1-preview01" />
     <PackageReference Update="Xamarin.Firebase.Crash" Version="116.2.1-preview01" />
     <PackageReference Update="Xamarin.Firebase.Crashlytics" Version="117.0.0-preview01" />
@@ -81,8 +80,6 @@
     <PackageReference Update="Xamarin.Firebase.Functions" Version="119.0.2-preview01" />
     <PackageReference Update="Xamarin.Firebase.Iid" Version="120.1.7-preview01" />
     <PackageReference Update="Xamarin.Firebase.Iid.Interop" Version="117.0.0-preview01" />
-    <PackageReference Update="Xamarin.Firebase.InAppMessaging" Version="119.0.6-preview01" />
-    <PackageReference Update="Xamarin.Firebase.InAppMessaging.Display" Version="119.0.6-preview01" />
     <PackageReference Update="Xamarin.Firebase.Installations" Version="116.3.0-preview01" />
     <PackageReference Update="Xamarin.Firebase.Installations.InterOp" Version="116.0.0-preview01" />
     <PackageReference Update="Xamarin.Firebase.Invites" Version="117.0.0-preview01" />
@@ -91,12 +88,6 @@
     <PackageReference Update="Xamarin.Firebase.Messaging" Version="120.1.7-preview01" />
     <PackageReference Update="Xamarin.Firebase.ML.Common" Version="122.1.1-preview01" />
     <PackageReference Update="Xamarin.Firebase.ML.Model.Interpreter" Version="122.0.3-preview01" />
-    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language" Version="122.0.0-preview01" />
-    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Id.Model" Version="120.0.7-preview01" />
-    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Smart.Reply" Version="118.0.7-preview01" />
-    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Smart.Reply.Model" Version="120.0.7-preview01" />
-    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Translate" Version="122.0.1-preview01" />
-    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Translate.Model" Version="120.0.8-preview01" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision" Version="124.0.3-preview01" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.AutoML" Version="118.0.5-preview01" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.BarCode.Model" Version="116.1.1-preview01" />
@@ -104,7 +95,6 @@
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Image.Label.Model" Version="120.0.1-preview01" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Internal.Vkp" Version="117.0.1-preview01" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Object.Detection.Model" Version="119.0.5-preview01" />
-    <PackageReference Update="Xamarin.Firebase.Perf" Version="119.0.7-preview01" />
     <PackageReference Update="Xamarin.Firebase.Storage" Version="119.1.1-preview01" />
     <PackageReference Update="Xamarin.Firebase.Storage.Common" Version="117.0.0-preview01" />
     <PackageReference Update="Xamarin.Firebase.ProtoliteWellKnownTypes" Version="117.0.0-preview01" />
