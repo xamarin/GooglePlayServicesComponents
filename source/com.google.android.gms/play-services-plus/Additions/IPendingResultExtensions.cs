@@ -15,25 +15,6 @@ namespace Android.Gms.Plus
         }
     }
 
-    //public static partial class IMomentsExtensions
-    //{
-    //    public static async Task<IMomentsLoadMomentsResult> LoadAsync (this IMoments api, GoogleApiClient googleApiClient)
-    //    {
-    //        return (await api.Load (googleApiClient)).JavaCast<IMomentsLoadMomentsResult> ();
-    //    }
-    //    public static async Task<IMomentsLoadMomentsResult> LoadAsync (this IMoments api, GoogleApiClient googleApiClient, int maxResults, string pageToken, Android.Net.Uri targetUrl, string type, string userId)
-    //    {
-    //        return (await api.Load (googleApiClient, maxResults, pageToken, targetUrl, type, userId)).JavaCast<IMomentsLoadMomentsResult> ();
-    //    }
-    //    public static async Task<Statuses> RemoveAsync (this IMoments api, GoogleApiClient googleApiClient, string momentId)
-    //    {
-    //        return (await api.Remove (googleApiClient, momentId)).JavaCast<Statuses> ();
-    //    }
-    //    public static async Task<Statuses> WriteAsync (this IMoments api, GoogleApiClient googleApiClient, Android.Gms.Plus.Model.Moments.IMoment moment)
-    //    {
-    //        return (await api.Write (googleApiClient, moment)).JavaCast<Statuses> ();
-    //    }
-    //}
 
     public static partial class IPeopleExtensions
     {

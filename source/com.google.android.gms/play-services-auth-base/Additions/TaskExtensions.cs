@@ -37,11 +37,6 @@ namespace Android.Gms.Auth.Api.AccountTransfer
 			return NotifyCompletion(accountType, completionStatus).AsAsync();
 		}
 
-		//public Task<byte[]> RetrieveDataAsync(string accountType)
-		//{
-		//	return RetrieveData(accountType).AsAsync<byte[]>();
-		//}
-
 		public Task SendDataAsync(string accountType, byte[] transferData)
 		{
 			return SendData(accountType, transferData).AsAsync();
