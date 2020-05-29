@@ -1,2 +1,243 @@
 ﻿<metadata>
+    
+    
+    <remove-node
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='StubAnalyticsConnector']"
+        >
+    </remove-node>
+
+    <remove-node
+        path="/api/package[@name='com.google.firebase.inappmessaging']/class[@name='MessagesProto.Text']/implements"    
+        >
+    </remove-node>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging']/class[@name='FirebaseInAppMessaging_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='Schedulers_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='DataCollectionHelper_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='CampaignCacheClient_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='RateLimiterClient_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='DisplayCallbacksFactory_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='SharedPreferencesUtils_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='InAppMessageStreamManager_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='GrpcClient_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='ProviderInstaller_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='TestDeviceHelper_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='ImpressionStorageClient_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='AnalyticsEventsModule_ProvidesAnalyticsEventsManagerFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ApiClientModule_ProvidesApiClientFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ApiClientModule_ProvidesDataCollectionHelperFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ApiClientModule_ProvidesFirebaseAppFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.time']/class[@name='SystemClock_Factory']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ApiClientModule_ProvidesFirebaseInstanceIdFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ApiClientModule_ProvidesSharedPreferencesUtilsFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ApiClientModule_ProvidesTestDeviceHelperFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.time']/class[@name='SystemClock_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ApplicationModule_ProvidesApplicationFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ApplicationModule_DeveloperListenerManagerFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ForegroundNotifierModule_ProvidesForegroundFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='GrpcChannelModule_ProvidesGrpcChannelFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='GrpcChannelModule_ProvidesServiceHostFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='AppMeasurementModule_ProvidesAnalyticsConnectorFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ProgrammaticContextualTriggerFlowableModule_ProvidesProgramaticContextualTriggersFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='GrpcClientModule_ProvidesApiKeyHeadersFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='GrpcClientModule_ProvidesInAppMessagingSdkServingStubFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ProtoStorageClientModule_ProvidesProtoStorageClientForCampaignFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ProtoStorageClientModule_ProvidesProtoStorageClientForImpressionStoreFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='SystemClockModule_ProvidesSystemClockModuleFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='TransportClientModule_ProvidesApiClientFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='AppMeasurementModule_ProvidesSubsriberFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ProtoStorageClientModule_ProvidesProtoStorageClientForLimiterStoreFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='RateLimitModule_ProvidesAppForegroundRateLimitFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.model']/class[@name='ProtoMarshallerClient_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    
 </metadata>
