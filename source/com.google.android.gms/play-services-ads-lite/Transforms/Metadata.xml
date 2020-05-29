@@ -305,12 +305,17 @@
         path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='zza' and count(parameter)=3 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='com.google.android.gms.ads.formats.NativeCustomTemplateAd'] and parameter[3][@type='java.lang.String']]"
         />
     
-    <attr
+    <!--
+    https://github.com/xamarin/GooglePlayServicesComponents/issues/334
+    
+    error: ShouldDelayBannerRenderingListenerImplementor is not abstract and does not override abstract method zzb(Runnable) in ShouldDelayBannerRenderingListener
+    -->
+    <remove-node
         path="/api/package[@name='com.google.android.gms.ads.formats']/interface[@name='ShouldDelayBannerRenderingListener']/method[@name='zzb']"
         name="abstract"
         >
         false
-    </attr>
+        />    
 
     <attr
         path="/api/package[@name='com.google.android.gms.ads']/class[@name='AdValue']/method[@name='getPrecisionType' and count(parameter)=0]"    
