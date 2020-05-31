@@ -8,8 +8,67 @@
     </attr>
     -->
     <attr 
-        path="/api/package[@name='androidx.savedstate']"
-        name="managedName">AndroidX.SavedState
+        path="/api/package[@name='com.google.firebase.inappmessaging.display']"
+        name="managedName"
         >
-        </attr>
+        Firebase.InAppMessaging.Display
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.inappmessaging.display.internal']"
+        name="managedName"
+        >
+        Firebase.InAppMessaging.Display.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.inappmessaging.display.internal']"
+        name="managedName"
+        >
+        Firebase.InAppMessaging.Display.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.inappmessaging.display.internal.bindingwrappers']"
+        name="managedName"
+        >
+        Firebase.InAppMessaging.Display.Internal.BindingWrappers
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.inappmessaging.display.internal.injection.components']"
+        name="managedName"
+        >
+        Firebase.InAppMessaging.Display.Internal.Injection.Components
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.inappmessaging.display.internal.injection.keys']"
+        name="managedName"
+        >
+        Firebase.InAppMessaging.Display.Internal.Injection.Keys
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.inappmessaging.display.internal.injection.modules']"
+        name="managedName"
+        >
+        Firebase.InAppMessaging.Display.Internal.Injection.Modules
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.inappmessaging.display.internal.injection.scopes']"
+        name="managedName"
+        >
+        Firebase.InAppMessaging.Display.Internal.Injection.Scopes
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.inappmessaging.display.internal.layout']"
+        name="managedName"
+        >
+        Firebase.InAppMessaging.Display.Internal.Layout
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.inappmessaging.display.internal.layout.util']"
+        name="managedName"
+        >
+        Firebase.InAppMessaging.Display.Internal.Layout.Util
+    </attr>
+    
+    
+    
+    
 </metadata>
