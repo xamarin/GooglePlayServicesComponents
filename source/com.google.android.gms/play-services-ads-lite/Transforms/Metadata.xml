@@ -313,8 +313,6 @@
     <remove-node
         path="/api/package[@name='com.google.android.gms.ads.formats']/interface[@name='ShouldDelayBannerRenderingListener']/method[@name='zzb']"
         name="abstract"
-        >
-        false
         />    
 
     <attr
