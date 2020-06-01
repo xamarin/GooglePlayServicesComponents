@@ -54,6 +54,14 @@
 		},
 		{
 			"groupId" : "com.google.android.gms",
+			"artifactId" : "play-services-afs-native",
+			"version" : "18.0.0",
+			"nugetVersion" : "118.0.0-preview01",
+			"nugetId" : "Xamarin.GooglePlayServices.AFS.Native",
+			"dependencyOnly" : false
+		},
+		{
+			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-analytics",
 			"version" : "17.0.0",
 			"nugetVersion" : "117.0.0-preview02",
@@ -1245,8 +1253,8 @@
 		{
 			"groupId" : "com.google.dagger",
 			"artifactId" : "dagger",
-			"version" : "2.24",
-			"nugetVersion" : "2.24",
+			"version" : "2.25.2",
+			"nugetVersion" : "2.25.2",
 			"nugetId" : "Xamarin.Google.Dagger",
 			"dependencyOnly" : true
 		},
