@@ -48,9 +48,9 @@ To update all tools:
 
 	```
 	dotnet tool uninstall 	-g Cake.Tool
-	dotnet tool install 	  -g Cake.Tool	
+	dotnet tool install 	-g Cake.Tool	
 	dotnet tool uninstall 	-g Xamarin.AndroidBinderator.Tool
-	dotnet tool install 	  -g Xamarin.AndroidBinderator.Tool
+	dotnet tool install 	-g Xamarin.AndroidBinderator.Tool
 	```
 
 The following targets can be specified:
