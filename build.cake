@@ -249,12 +249,6 @@ Task("binderate-prepare-dependencies-samples-packages-config")
 		}
 	);
 
-string nuget_version_template = 
-							// "71.vvvv.0-preview3" 	// pre AndroidX version
-							"1xx.yy.zz-suffix"			// AndroidX version
-							;
-string nuget_version_suffix = "preview01";
-
 JArray binderator_json_array = null;
 
 Task("binderate-config-verify")
