@@ -56,7 +56,7 @@
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-afs-native",
 			"version" : "18.0.0",
-			"nugetVersion" : "118.0.0-preview01",
+			"nugetVersion" : "118.0.0-preview02",
 			"nugetId" : "Xamarin.GooglePlayServices.AFS.Native",
 			"dependencyOnly" : false
 		},
