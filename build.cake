@@ -250,7 +250,6 @@ Task("binderate-prepare-dependencies-samples-packages-config")
 
 JArray binderator_json_array = null;
 
-
 Task("binderate-config-verify")
 	.Does
 	(
