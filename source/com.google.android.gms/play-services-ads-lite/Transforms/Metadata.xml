@@ -408,4 +408,13 @@
         true
     </attr>
     
+    <!--
+    https://github.com/xamarin/GooglePlayServicesComponents/issues/334
+    
+    error: ShouldDelayBannerRenderingListenerImplementor is not abstract and does not override abstract method zzb(Runnable) in ShouldDelayBannerRenderingListener
+    -->
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.ads.formats']/interface[@name='ShouldDelayBannerRenderingListener']/method[@name='zzb']"
+        />    
+    
 </metadata>

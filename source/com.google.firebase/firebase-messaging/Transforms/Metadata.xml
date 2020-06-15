@@ -43,6 +43,12 @@
         false
     </attr>
     <attr
+        path="/api/package[@name='com.google.firebase.messaging']/class[@name='zzc']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
         path="/api/package[@name='com.google.android.gms.internal.firebase_messaging']"
         name="managedname"
         >
