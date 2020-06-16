@@ -417,4 +417,12 @@
         path="/api/package[@name='com.google.android.gms.ads.formats']/interface[@name='ShouldDelayBannerRenderingListener']/method[@name='zzb']"
         />    
     
+    
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.ads']"
+        name="managedName"
+        >
+        Android.Gms.Internal.Ads
+    </attr>
+    
 </metadata>
