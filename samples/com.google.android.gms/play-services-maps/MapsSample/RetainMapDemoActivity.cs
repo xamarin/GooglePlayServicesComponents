@@ -11,13 +11,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Gms.Maps;
-using Android.Support.V4.App;
 using Android.Gms.Maps.Model;
 
 namespace MapsSample
 {
     [Activity (Label = "Retain Map Demo")]			
-    public class RetainMapDemoActivity : FragmentActivity, IOnMapReadyCallback
+    public class RetainMapDemoActivity : AndroidX.Fragment.App.FragmentActivity, IOnMapReadyCallback
     {
         protected override void OnCreate (Bundle savedInstanceState) 
         {

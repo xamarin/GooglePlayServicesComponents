@@ -473,8 +473,12 @@ Task("samples")
 	DeleteDirectories(GetDirectories("./samples/**/bin/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
 	DeleteDirectories(GetDirectories("./samples/**/obj/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
 
+	EnsureDirectoryExists($@"./output/failed/");
 	
-	var sampleSlns = GetFiles("./samples/all/**/*.sln");
+	var sampleSlns = GetFiles("./samples/all/**/*.sln")
+						.Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
+						.Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
+						;
 
 	foreach(string config in Configs)
 	{
@@ -482,33 +486,40 @@ Task("samples")
 		{
 			string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
 
-			if 
-				(
-					sampleSln.ToString().Contains("FirebaseStorageQuickstart") 
-					||
-					sampleSln.ToString().Contains("RepoSample.Issue.213")
-				)
-			{
-				continue;
-			}
 			if ( ! filename_sln.Contains("BuildAll") )
 			{
 				NuGetRestore(sampleSln, new NuGetRestoreSettings { }); // R8 errors
 			}
 			Information($"Solution: {filename_sln}");
-			MSBuild(sampleSln, c => {
-				c.Configuration = config;
-				c.Properties.Add("DesignTimeBuild", new [] { "false" });
-				c.BinaryLogger = new MSBuildBinaryLogSettings
-				{
-					Enabled = true,
-					FileName = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath
-				};
-				if (! string.IsNullOrEmpty(ANDROID_HOME))
-				{
-					c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
-				}
-			});
+			string bl = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath;
+			try
+			{				
+				MSBuild
+					(
+						sampleSln, 
+						c => 
+						{
+							c.Configuration = config;
+							c.Properties.Add("DesignTimeBuild", new [] { "false" });
+							c.BinaryLogger = new MSBuildBinaryLogSettings
+													{
+														Enabled = true,
+														FileName = bl
+													};
+							if (! string.IsNullOrEmpty(ANDROID_HOME))
+							{
+								c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+							}
+						}
+					);
+			}
+			catch (Exception exc)
+			{
+				Error($"Error: 	{exc}");
+				Error($"   bl:	{bl}");
+				Error($"   bl:	{bl.Replace($@"output", $@"output/failed")}");
+				MoveFile(bl, bl.Replace($@"output", $@"output/failed"));
+			}
 		}
 	}
 

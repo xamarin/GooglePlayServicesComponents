@@ -6,7 +6,7 @@ using Android.Views;
 
 namespace AndroidPayQuickstart
 {
-    public class ItemListFragment : ListFragment
+    public class ItemListFragment : AndroidX.Fragment.App.ListFragment
     {
 
         public override void OnActivityCreated (Android.OS.Bundle savedInstanceState)

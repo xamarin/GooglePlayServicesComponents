@@ -30,8 +30,10 @@
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
+     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
-  </PropertyGroup>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+ </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
@@ -40,7 +42,9 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <ConsolePause>false</ConsolePause>
+    <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,19 +54,22 @@
     <Reference Include="Java.Interop" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.1.0-preview06" />
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0-preview06" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.2.0" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0" />
     <PackageReference Include="Xamarin.GooglePlayServices.Wallet" Version="117.0.0-preview01" />
     <PackageReference Include="Xamarin.GooglePlayServices.Maps" Version="117.0.0-preview01" />
     <PackageReference Include="Xamarin.GooglePlayServices.Plus" Version="117.0.0-preview01" />
 
     <PackageReference Include="Xamarin.AndroidX.Migration">
-      <Version>1.0.0-preview06</Version>
+      <Version>1.0.5</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Build.Download">
-      <Version>0.7.1</Version>
+      <Version>0.10.0</Version>
     </PackageReference>
     
+    <PackageReference Include="Xamarin.AndroidX.Fragment">
+      <Version>1.2.4</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -165,6 +172,9 @@
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\themes.xml" />
     <AndroidResource Include="Resources\values\strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProguardConfiguration Include="proguard.cfg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

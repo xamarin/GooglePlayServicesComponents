@@ -29,7 +29,10 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
@@ -38,7 +41,10 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

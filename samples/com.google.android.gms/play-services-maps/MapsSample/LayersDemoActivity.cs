@@ -11,13 +11,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Gms.Maps;
-using Android.Support.V4.App;
 using Java.Interop;
 
 namespace MapsSample
 {
     [Activity (Label = "Layers Demo")]			
-    public class LayersDemoActivity : FragmentActivity, IOnMapReadyCallback
+    public class LayersDemoActivity : AndroidX.Fragment.App.FragmentActivity, IOnMapReadyCallback
     {
         GoogleMap map;
 

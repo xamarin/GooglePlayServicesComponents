@@ -5,7 +5,7 @@ namespace AndroidPayQuickstart
     public class Constants
     {
         // Environment to use when creating an instance of Wallet.WalletOptions
-        public const int WALLET_ENVIRONMENT = WalletConstants.EnvironmentSandbox;
+        public const int WALLET_ENVIRONMENT = Android.Gms.Wallet.WalletConstants.EnvironmentSandbox;
 
         public const string MERCHANT_NAME = "Awesome Bike Store";
 
