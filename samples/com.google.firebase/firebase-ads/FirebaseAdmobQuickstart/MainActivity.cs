@@ -3,8 +3,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Widget;
-using Android.Support.V4.App;
-using Android.Support.V7.App;
+using AndroidX.AppCompat.App;
 // [SNIPPET load_banner_ad]
 // Load an ad into the AdView.
 // [START load_banner_ad]
