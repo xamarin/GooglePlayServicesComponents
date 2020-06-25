@@ -32,7 +32,6 @@
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
@@ -44,7 +43,6 @@
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -84,10 +82,10 @@
     <AndroidResource Include="Resources\values-w820dp\dimens.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.1.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.2.0.1" />
     <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.1" />
     <PackageReference Include="Xamarin.Google.Android.Material" Version="1.1.0.1-rc3" />
-    <PackageReference Include="Xamarin.Firebase.Crash" Version="116.2.1-preview01" />
+    <PackageReference Include="Xamarin.Firebase.Crash" Version="116.2.1-preview04" />
     
         
     <PackageReference Include="Xamarin.AndroidX.Migration">
