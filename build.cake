@@ -279,6 +279,7 @@ Task("binderate")
 JArray binderator_json_array = null;
 
 Task("binderate-config-verify")
+	.IsDependentOn("binderate-fix")
 	.Does
 	(
 		() =>
@@ -344,6 +345,53 @@ Task("binderate-config-verify")
 			}
 		}
 	);
+
+Task("binderate-fix")
+    .Does
+    (
+        () =>
+        {
+            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            {
+                JsonTextReader jtr = new JsonTextReader(reader);
+                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+            }
+
+            Warning("config.json fixing missing folder strucutre ...");
+            foreach(JObject jo in binderator_json_array[0]["artifacts"])
+            {
+                string groupId      = (string) jo["groupId"];
+                string artifactId   = (string) jo["artifactId"];
+
+                Information($"  Verifying files for     :");
+                Information($"              group       : {groupId}");
+                Information($"              artifact    : {artifactId}");
+
+                bool? dependency_only = (bool?) jo["dependencyOnly"];
+                if ( dependency_only == true)
+                {
+                    continue;
+                }
+
+
+                string dir_group = $"source/{groupId}";
+                if ( ! DirectoryExists(dir_group) )
+                {
+                    Warning($"  Creating {dir_group}");
+                    //CreateDirectory(dir_group);
+                }
+                string dir_artifact = $"{dir_group}/artifactId";
+                if ( ! DirectoryExists(dir_group) )
+                {
+                    Warning($"      Creating artifact folder : {dir_artifact}");
+                    //CreateDirectory(dir_group);
+                }
+
+            }
+
+            return;
+        }
+    );
 
 Task("mergetargets")
 	.Does(() =>
