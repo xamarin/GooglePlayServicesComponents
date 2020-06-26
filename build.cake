@@ -61,7 +61,7 @@ string nuget_version_template =
 							// "71.vvvv.0-preview3" 	// pre AndroidX version
 							"1xx.yy.zz-suffix"			// AndroidX version
 							;
-string nuget_version_suffix = "preview04";
+string nuget_version_suffix = "preview01";
 
 string[] Configs = new []
 {
@@ -310,7 +310,7 @@ Task("binderate-config-verify")
 					string version_parsed_xx = version_parsed[0];
 
 					Information($"version_parsed_xx       = {version_parsed_xx}");
-					if ( jo["groupId"].ToString().Equals("com.google.android.datatransport") )
+					if ( version_parsed_xx.Length == 1 )
 					{
 						version_parsed_xx = string.Concat("0", version_parsed_xx);
 					}
