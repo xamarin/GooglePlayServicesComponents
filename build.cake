@@ -57,7 +57,7 @@ var REQUIRED_DOTNET_TOOLS = new [] {
 	"xamarin.androidx.migration.tool"
 };
 
-string nuget_version_template = 
+string nuget_version_template =
 							// "71.vvvv.0-preview3" 	// pre AndroidX version
 							"1xx.yy.zz-suffix"			// AndroidX version
 							;
@@ -70,7 +70,7 @@ string[] Configs = new []
 };
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
-if (IsRunningOnWindows ()) 
+if (IsRunningOnWindows ())
 {
 	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin", IncludePrerelease = true });
 	MONODROID_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION).FullPath;
@@ -252,9 +252,9 @@ Task("binderate")
 		XmlNodeList list = xml.SelectNodes("/packages/package");
 		foreach (XmlNode xn in list)
 		{
-			string id = xn.Attributes["id"].Value; //Get attribute-id 
+			string id = xn.Attributes["id"].Value; //Get attribute-id
 			//string text = xn["Text"].InnerText; //Get Text Node
-			string v = xn.Attributes["version"].Value; //Get attribute-id 
+			string v = xn.Attributes["version"].Value; //Get attribute-id
 
 			Information($"		id	   : {id}");
 			Information($"		version: {v}");
@@ -279,6 +279,7 @@ Task("binderate")
 JArray binderator_json_array = null;
 
 Task("binderate-config-verify")
+	.IsDependentOn("binderate-fix")
 	.Does
 	(
 		() =>
@@ -344,6 +345,53 @@ Task("binderate-config-verify")
 			}
 		}
 	);
+
+Task("binderate-fix")
+    .Does
+    (
+        () =>
+        {
+            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            {
+                JsonTextReader jtr = new JsonTextReader(reader);
+                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+            }
+
+            Warning("config.json fixing missing folder strucutre ...");
+            foreach(JObject jo in binderator_json_array[0]["artifacts"])
+            {
+                string groupId      = (string) jo["groupId"];
+                string artifactId   = (string) jo["artifactId"];
+
+                Information($"		Verifying files for     :");
+                Information($"              group       : {groupId}");
+                Information($"              artifact    : {artifactId}");
+
+                bool? dependency_only = (bool?) jo["dependencyOnly"];
+                if ( dependency_only == true)
+                {
+                    continue;
+                }
+
+
+                string dir_group = $"source/{groupId}";
+                if ( ! DirectoryExists(dir_group) )
+                {
+                    Warning($"  		Creating {dir_group}");
+                    //CreateDirectory(dir_group);
+                }
+                string dir_artifact = $"{dir_group}/{artifactId}";
+                if ( ! DirectoryExists(dir_group) )
+                {
+                    Warning($"     			Creating artifact folder : {dir_artifact}");
+                    //CreateDirectory(dir_group);
+                }
+
+            }
+
+            return;
+        }
+    );
 
 Task("mergetargets")
 	.Does(() =>
@@ -474,7 +522,7 @@ Task("samples")
 	DeleteDirectories(GetDirectories("./samples/**/obj/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
 
 	EnsureDirectoryExists($@"./output/failed/");
-	
+
 	var sampleSlns = GetFiles("./samples/all/**/*.sln")
 						.Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
 						.Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
@@ -482,7 +530,7 @@ Task("samples")
 
 	foreach(string config in Configs)
 	{
-		foreach (var sampleSln in sampleSlns) 
+		foreach (var sampleSln in sampleSlns)
 		{
 			string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
 
@@ -490,14 +538,34 @@ Task("samples")
 			{
 				NuGetRestore(sampleSln, new NuGetRestoreSettings { }); // R8 errors
 			}
+			if
+			(
+				sampleSln.ToString().Contains("com.google.android.gms/play-services-plus/PlusSample.sln")
+				||
+				sampleSln.ToString().Contains("com.google.android.gms/play-services-ads-lite/AdsLiteSample.sln")
+				||
+				sampleSln.ToString().Contains("com.google.android.gms/play-services-fitness/BasicSensorsApi.sln")
+				||
+				sampleSln.ToString().Contains("com.google.android.gms/play-services-wallet/AndroidPayQuickstart.sln")
+				||
+				sampleSln.ToString().Contains("com.google.android.gms/play-services-cast/CastingCall.sln")
+				||
+				sampleSln.ToString().Contains("com.google.firebase/firebase-appindexing/AppIndexingSample.sln")
+				// ||
+				// sampleSln.ToString().Contains("")
+			)
+			{
+				// skip problematic samples for now
+				continue;
+			}
 			Information($"Solution: {filename_sln}");
-			string bl = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath;
+			string bl = MakeAbsolute(new FilePath($"./output/{filename_sln}{config}.sample.binlog")).FullPath;
 			try
-			{				
+			{
 				MSBuild
 					(
-						sampleSln, 
-						c => 
+						sampleSln,
+						c =>
 						{
 							c.Configuration = config;
 							c.Properties.Add("DesignTimeBuild", new [] { "false" });
@@ -518,6 +586,10 @@ Task("samples")
 				Error($"Error: 	{exc}");
 				Error($"   bl:	{bl}");
 				Error($"   bl:	{bl.Replace($@"output", $@"output/failed")}");
+				if ( FileExists(bl) )
+				{
+					DeleteFile(bl);
+				}
 				MoveFile(bl, bl.Replace($@"output", $@"output/failed"));
 			}
 		}
@@ -588,7 +660,7 @@ Task ("merge")
 	.IsDependentOn ("libs")
 	.Does (() =>
 {
-	var allDlls = 
+	var allDlls =
 		GetFiles ($"./generated/*/bin/Release/monoandroid*/Xamarin.GooglePlayServices.*.dll") +
 		GetFiles ($"./generated/*/bin/Release/monoandroid*/Xamarin.Firebase.*.dll");
 	var mergeDlls = allDlls
