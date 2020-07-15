@@ -472,8 +472,8 @@ Task("samples")
 		EnsureDirectoryExists($@"./output/failed/");
 		
 		var sampleSlns = GetFiles("./samples/all/**/*.sln")
-							.Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
-							.Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
+							// .Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
+							// .Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
 							;
 
 		foreach(string config in Configs)
