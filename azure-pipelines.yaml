@@ -4,6 +4,7 @@ trigger:
 
 pr:
   - master
+  - master_based_androidx*
   
 variables:
   BUILD_NUMBER: $(Build.BuildNumber)
@@ -31,10 +32,6 @@ jobs:
             dotnet tool install --global boots
             boots https://aka.ms/xamarin-android-commercial-d16-7-macos
           condition: eq(variables['System.JobName'], 'macos')
-        - pwsh: |
-            dotnet tool install --global boots
-            boots https://aka.ms/xamarin-android-commercial-d16-7-windows
-          condition: eq(variables['System.JobName'], 'windows')
       tools:
         - 'xamarin.androidbinderator.tool': '0.4.2'
         - 'xamarin.androidx.migration.tool': '1.0.6.1'
