@@ -242,38 +242,55 @@ Task("binderate")
 	EnsureDirectoryExists("./output/");
 	EnsureDirectoryExists("./externals/");
 
-	FilePathCollection files = GetFiles("./samples/**/packages.config");
-	foreach(FilePath file in files)
-	{
-		Information($"File: {file}");
+	// FilePathCollection files = GetFiles("./samples/**/*.csproj");
+	// foreach(FilePath file in files)
+	// {
+	// 	Information($"File: {file}");
 
-		XmlDocument xml = new XmlDocument();
-		xml.Load($"{file}");
-		XmlNodeList list = xml.SelectNodes("/packages/package");
-		foreach (XmlNode xn in list)
-		{
-			string id = xn.Attributes["id"].Value; //Get attribute-id
-			//string text = xn["Text"].InnerText; //Get Text Node
-			string v = xn.Attributes["version"].Value; //Get attribute-id
+	// 	XmlDocument xml = new XmlDocument();
+	// 	xml.Load($"{file}");
+    //     XmlNamespaceManager mgr = new XmlNamespaceManager(xml.NameTable);
+    //     mgr.AddNamespace("x", xml.DocumentElement.NamespaceURI);
+	//     // XmlNodeList list = xml.SelectNodes("/packages/package/");
+	//     XmlNodeList list = xml.SelectNodes("//x:PackageReference[@Include]", mgr);	
+	// 	Information($"{list.Count}");	
+	// 	foreach (XmlNode xn in list)
+	// 	{
+	// 		string id = xn.Attributes["id"].Value; //Get attribute-id
+	// 		//string text = xn["Text"].InnerText; //Get Text Node
+	// 		string v = xn.Attributes["version"].Value; //Get attribute-id
 
-			Information($"		id	   : {id}");
-			Information($"		version: {v}");
+	// 		Information($"		id	   : {id}");
 
-			string url = $"https://www.nuget.org/api/v2/package/{id}/{v}";
-			string file1 = $"./externals/{id.ToLower()}.{v}.nupkg";
-			try
-			{
-				if ( ! FileExists(file1) )
-				{
-					DownloadFile(url, file1);
-				}
-			}
-			catch (System.Exception)
-			{
-				Error($"Unable to download {url}");
-			}
-		}
-	}
+	// 		if ( v is null)
+	// 		{
+	// 			v = xn.InnerText; //SelectSingleNode("Version", mgr).Value;
+	// 		}
+	// 		Information($"		version: {v}");
+
+	// 		if ( id.Contains("GooglePlayServices") || id.Contains("Firebase") )
+	// 		{
+	// 			Information($"		skipping download of {id}");
+	// 			continue;
+	// 		}
+
+	// 		string url = $"https://www.nuget.org/api/v2/package/{id}/{v}";
+	// 		string file1 = $"./externals/{id.ToLower()}.{v}.nupkg";
+	// 		try
+	// 		{
+	// 			if ( ! FileExists(file1) )
+	// 			{
+	// 				Information($"		download of {id}");
+	// 				DownloadFile(url, file1);
+	// 			}
+	// 		}
+	// 		catch (System.Exception exc)
+	// 		{
+	// 			Error($"Unable to download: {url}");
+	// 			Error($"             error: {exc.Message}");
+	// 		}
+	// 	}
+	// }
 });
 
 JArray binderator_json_array = null;
@@ -514,93 +531,94 @@ Task("samples")
 	.IsDependentOn("samples-directory-build-targets")
 	.IsDependentOn("mergetargets")
 	.IsDependentOn("allbindingprojectrefs")
-	.Does(() =>
-{
-	Configs = new string[] { "Debug", "Release" };
-
-	DeleteDirectories(GetDirectories("./samples/**/bin/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
-	DeleteDirectories(GetDirectories("./samples/**/obj/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
-
-	EnsureDirectoryExists($@"./output/failed/");
-
-	var sampleSlns = GetFiles("./samples/all/**/*.sln")
-						.Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
-						.Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
-						;
-
-	foreach(string config in Configs)
+	.Does
+(
+	() =>
 	{
-		foreach (var sampleSln in sampleSlns)
-		{
-			string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
+		Configs = new string[] { "Debug", "Release" };
 
-			if ( ! filename_sln.Contains("BuildAll") )
+		DeleteDirectories(GetDirectories("./samples/**/bin/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
+		DeleteDirectories(GetDirectories("./samples/**/obj/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
+
+		EnsureDirectoryExists($@"./output/failed/");
+
+		var sampleSlns = GetFiles("./samples/all/**/*.sln")
+							.Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
+							.Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
+							;
+
+		foreach(string config in Configs)
+		{
+			foreach (var sampleSln in sampleSlns)
 			{
-				NuGetRestore(sampleSln, new NuGetRestoreSettings { }); // R8 errors
-			}
-			if
-			(
-				sampleSln.ToString().Contains("com.google.android.gms/play-services-plus/PlusSample.sln")
-				||
-				sampleSln.ToString().Contains("com.google.android.gms/play-services-ads-lite/AdsLiteSample.sln")
-				||
-				sampleSln.ToString().Contains("com.google.android.gms/play-services-fitness/BasicSensorsApi.sln")
-				||
-				sampleSln.ToString().Contains("com.google.android.gms/play-services-wallet/AndroidPayQuickstart.sln")
-				||
-				sampleSln.ToString().Contains("com.google.android.gms/play-services-cast/CastingCall.sln")
-				||
-				sampleSln.ToString().Contains("com.google.firebase/firebase-appindexing/AppIndexingSample.sln")
-				// ||
-				// sampleSln.ToString().Contains("")
-			)
-			{
-				// skip problematic samples for now
-				continue;
-			}
-			Information($"Solution: {filename_sln}");
-			string bl = MakeAbsolute(new FilePath($"./output/{filename_sln}{config}.sample.binlog")).FullPath;
-			try
-			{
-				MSBuild
-					(
-						sampleSln,
-						c =>
-						{
-							c.Configuration = config;
-							c.Properties.Add("DesignTimeBuild", new [] { "false" });
-							c.BinaryLogger = new MSBuildBinaryLogSettings
-													{
-														Enabled = true,
-														FileName = bl
-													};
-							if (! string.IsNullOrEmpty(ANDROID_HOME))
-							{
-								c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
-							}
-						}
-					);
-			}
-			catch (Exception exc)
-			{
-				Error($"Error: 	{exc}");
-				Error($"   bl:	{bl}");
-				Error($"   bl:	{bl.Replace($@"output", $@"output/failed")}");
-				if ( FileExists(bl) )
+				string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
+
+				if ( ! filename_sln.Contains("BuildAll") )
 				{
-					DeleteFile(bl);
+					NuGetRestore(sampleSln, new NuGetRestoreSettings { }); // R8 errors
 				}
-				MoveFile(bl, bl.Replace($@"output", $@"output/failed"));
+				if
+				(
+					sampleSln.ToString().Contains("com.google.android.gms/play-services-plus/PlusSample.sln")
+					||
+					sampleSln.ToString().Contains("com.google.android.gms/play-services-ads-lite/AdsLiteSample.sln")
+					||
+					sampleSln.ToString().Contains("com.google.android.gms/play-services-fitness/BasicSensorsApi.sln")
+					||
+					sampleSln.ToString().Contains("com.google.android.gms/play-services-wallet/AndroidPayQuickstart.sln")
+					||
+					sampleSln.ToString().Contains("com.google.android.gms/play-services-cast/CastingCall.sln")
+					||
+					sampleSln.ToString().Contains("com.google.firebase/firebase-appindexing/AppIndexingSample.sln")
+					// ||
+					// sampleSln.ToString().Contains("")
+				)
+				{
+					// skip problematic samples for now
+					continue;
+				}
+				Information($"Solution: {filename_sln}");
+				string bl = MakeAbsolute(new FilePath($"./output/{filename_sln}{config}.sample.binlog")).FullPath;
+				try
+				{
+					MSBuild
+						(
+							sampleSln,
+							c =>
+							{
+								c.Configuration = config;
+								c.Properties.Add("DesignTimeBuild", new [] { "false" });
+								c.BinaryLogger = new MSBuildBinaryLogSettings
+														{
+															Enabled = true,
+															FileName = bl
+														};
+								if (! string.IsNullOrEmpty(ANDROID_HOME))
+								{
+									c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+								}
+							}
+						);
+				}
+				catch (Exception exc)
+				{
+					Error($"Error: 	{exc}");
+					Error($"   bl:	{bl}");
+					Error($"   bl:	{bl.Replace($@"output", $@"output/failed")}");
+					if ( FileExists(bl) )
+					{
+						DeleteFile(bl);
+					}
+					MoveFile(bl, bl.Replace($@"output", $@"output/failed"));
+				}
 			}
 		}
-	}
 
-	DeleteFiles(".output/system.*/nupkg");
-	DeleteFiles(".output/microsoft.*/nupkg");
-	DeleteFiles(".output/xamarin.android.support.*/nupkg");
-	DeleteFiles(".output/xamarin.android.arch.*/nupkg");
-	DeleteFiles(".output/xamarin.build.download.*/nupkg");
-
+		DeleteFiles(".output/system.*/nupkg");
+		DeleteFiles(".output/microsoft.*/nupkg");
+		DeleteFiles(".output/xamarin.android.support.*/nupkg");
+		DeleteFiles(".output/xamarin.android.arch.*/nupkg");
+		DeleteFiles(".output/xamarin.build.download.*/nupkg");
 });
 
 Task("allbindingprojectrefs")

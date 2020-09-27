@@ -57,8 +57,7 @@
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.2.0" />
     <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0" />
     <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.1.0" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Fitness" Version="117.0.0-preview01" />
-        
+    <PackageReference Include="Xamarin.GooglePlayServices.Fitness" Version="117.0.0-preview01" />        
     <PackageReference Include="Xamarin.AndroidX.Migration">
       <Version>1.0.5</Version>
     </PackageReference>
@@ -77,7 +76,7 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
