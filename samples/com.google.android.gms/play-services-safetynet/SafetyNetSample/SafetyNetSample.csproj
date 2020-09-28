@@ -63,7 +63,7 @@
     <PackageReference Include="Xamarin.GooglePlayServices.SafetyNet" Version="117.0.0-preview01" />
 
     <PackageReference Include="Xamarin.AndroidX.Migration">
-      <Version>1.0.5</Version>
+      <Version>1.0.6.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Build.Download">
       <Version>0.10.0</Version>
