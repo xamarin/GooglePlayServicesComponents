@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using Android.App;
 using Android.Widget;
-using System.Collections.Generic;
 using Android.OS;
 using Android.Views;
 using Android.Content;
 using Java.Interop;
+
+using Android.Gms.Common.Apis;
+using Android.Gms.Plus.Model.People;
 
 namespace PlusSample
 {
