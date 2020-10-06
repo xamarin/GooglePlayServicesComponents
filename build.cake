@@ -559,17 +559,9 @@ Task("samples")
 				}
 				if
 				(
-					sampleSln.ToString().Contains("com.google.android.gms/play-services-plus/PlusSample.sln")
-					||
-					sampleSln.ToString().Contains("com.google.android.gms/play-services-ads-lite/AdsLiteSample.sln")
-					||
-					sampleSln.ToString().Contains("com.google.android.gms/play-services-fitness/BasicSensorsApi.sln")
-					||
-					sampleSln.ToString().Contains("com.google.android.gms/play-services-wallet/AndroidPayQuickstart.sln")
-					||
 					sampleSln.ToString().Contains("com.google.android.gms/play-services-cast/CastingCall.sln")
-					||
-					sampleSln.ToString().Contains("com.google.firebase/firebase-appindexing/AppIndexingSample.sln")
+					// ||
+					// sampleSln.ToString().Contains("com.google.firebase/firebase-appindexing/AppIndexingSample.sln")
 					// ||
 					// sampleSln.ToString().Contains("")
 				)
