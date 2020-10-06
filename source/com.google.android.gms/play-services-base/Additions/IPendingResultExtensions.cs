@@ -28,15 +28,3 @@ using Android.Runtime;
 //        }
 //    }
 //}
-
-// IProxyApiProxyResult not found
-//namespace Android.Gms.Auth.Api.Proxy
-//{
-//    public static partial class IProxyApiExtensions
-//    {
-//        public static async Task<IProxyApiProxyResult> PerformProxyRequestAsync(this IProxyApi api, IGoogleApiClient client, Android.Gms.Auth.Api.Proxy.ProxyRequest request)
-//        {
-//            return (await api.PerformProxyRequest(client, request)).JavaCast<IProxyApiProxyResult>();
-//        }
-//    }
-//}
