@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdMobSample", "AdMobSample\AdMobSample.csproj", "{BCFE5769-5799-42B3-925D-0302CF08F30C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdMobSample.UITests", "AdMobSample.UITests\AdMobSample.UITests.csproj", "{34C2F5ED-29E6-41F7-8898-6C17653AD59D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,10 +16,6 @@ Global
 		{BCFE5769-5799-42B3-925D-0302CF08F30C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{BCFE5769-5799-42B3-925D-0302CF08F30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCFE5769-5799-42B3-925D-0302CF08F30C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{34C2F5ED-29E6-41F7-8898-6C17653AD59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{34C2F5ED-29E6-41F7-8898-6C17653AD59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{34C2F5ED-29E6-41F7-8898-6C17653AD59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{34C2F5ED-29E6-41F7-8898-6C17653AD59D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

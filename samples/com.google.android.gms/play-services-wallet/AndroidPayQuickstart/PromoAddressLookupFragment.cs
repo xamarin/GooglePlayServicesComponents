@@ -3,17 +3,18 @@ using Android.App;
 using Android.Widget;
 using Android.OS;
 using System.Text;
+using Android.Gms.Common;
 
 namespace AndroidPayQuickstart
 {
-    public class PromoAddressLookupFragment : Android.Support.V4.App.Fragment, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
+    public class PromoAddressLookupFragment : AndroidX.Fragment.App.Fragment, Android.Gms.Common.Apis.GoogleApiClient.IConnectionCallbacks, Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener
     {
         public const int REQUEST_CODE_RESOLVE_ADDRESS_LOOKUP = 1006;
         public const int REQUEST_CODE_RESOLVE_ERR = 1007;
         const string KEY_PROMO_CLICKED = "KEY_PROMO_CLICKED";
 
         ProgressDialog mProgressDialog;
-        GoogleApiClient mGoogleApiClient;
+        Android.Gms.Common.Apis.GoogleApiClient mGoogleApiClient;
         ConnectionResult mConnectionResult;
         bool mPromoWasSelected = false;
 
@@ -24,8 +25,8 @@ namespace AndroidPayQuickstart
                 mPromoWasSelected = savedInstanceState.GetBoolean (KEY_PROMO_CLICKED);
             
             var accountName = ((BikestoreApplication) Activity.Application).AccountName;
-            var options = new Android.Gms.Identity.Intents.Address.AddressOptions (WalletConstants.ThemeLight);
-            mGoogleApiClient = new GoogleApiClient.Builder (Activity)
+            var options = new Android.Gms.Identity.Intents.Address.AddressOptions (Android.Gms.Wallet.WalletConstants.ThemeLight);
+            mGoogleApiClient = new Android.Gms.Common.Apis.GoogleApiClient.Builder (Activity)
                 .AddApi (Android.Gms.Identity.Intents.Address.Api, options)
                 .SetAccountName (accountName)
                 .AddConnectionCallbacks (this)
@@ -92,7 +93,7 @@ namespace AndroidPayQuickstart
                 switch (resultCode) {
                 case (int)Result.Ok:
                     ((BikestoreApplication)Activity.Application).IsAddressValidForPromo = true;
-                    var userAddress = UserAddress.FromIntent (data);
+                    var userAddress = Android.Gms.Identity.Intents.Model.UserAddress.FromIntent (data);
                     
                     Toast.MakeText (Activity, GetString (Resource.String.promo_eligible, FormatUsAddress (userAddress)), ToastLength.Long).Show ();
                     break;
@@ -147,7 +148,7 @@ namespace AndroidPayQuickstart
         {
             if (mGoogleApiClient.IsConnected ) {
                 showProgressDialog();
-                var request = UserAddressRequest.NewBuilder ().Build();
+                var request = Android.Gms.Identity.Intents.UserAddressRequest.NewBuilder ().Build();
                 Android.Gms.Identity.Intents.Address.RequestUserAddress (mGoogleApiClient, request, REQUEST_CODE_RESOLVE_ADDRESS_LOOKUP);
             } else {
                 if (!mGoogleApiClient.IsConnecting)
@@ -179,7 +180,7 @@ namespace AndroidPayQuickstart
 
         // Address formatting specific to the US, depending upon the countries supported you may
         // have different address formatting
-        static string FormatUsAddress (UserAddress address)
+        static string FormatUsAddress (Android.Gms.Identity.Intents.Model.UserAddress address)
         {
             var builder = new StringBuilder ();
             builder.Append ("\n");
@@ -196,6 +197,7 @@ namespace AndroidPayQuickstart
         
             return builder.ToString ();
         }
+
     }
 }
 

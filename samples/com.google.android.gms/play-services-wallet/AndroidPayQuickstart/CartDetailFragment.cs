@@ -1,10 +1,9 @@
 ﻿using System;
-using Android.Support.V4.App;
 using Android.Widget;
 
 namespace AndroidPayQuickstart
 {
-    public class CartDetailFragment : Fragment
+    public class CartDetailFragment : AndroidX.Fragment.App.Fragment
     {
         private int mItemId;
 

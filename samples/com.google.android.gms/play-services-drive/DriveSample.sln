@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveSample", "DriveSample\DriveSample.csproj", "{669648B5-F13A-4F47-8BC6-821A566FD6C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveSample.UITests", "DriveSample.UITests\DriveSample.UITests.csproj", "{929B6BAA-0E43-45BE-AC1A-3D9648887078}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +13,5 @@ Global
 		{669648B5-F13A-4F47-8BC6-821A566FD6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{669648B5-F13A-4F47-8BC6-821A566FD6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{669648B5-F13A-4F47-8BC6-821A566FD6C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{929B6BAA-0E43-45BE-AC1A-3D9648887078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{929B6BAA-0E43-45BE-AC1A-3D9648887078}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{929B6BAA-0E43-45BE-AC1A-3D9648887078}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{929B6BAA-0E43-45BE-AC1A-3D9648887078}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

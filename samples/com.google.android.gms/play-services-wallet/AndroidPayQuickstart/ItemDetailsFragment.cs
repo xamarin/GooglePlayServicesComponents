@@ -1,8 +1,8 @@
 ﻿using System;
-using Android.Support.V4.App;
 using Android.Views;
 using Android.Widget;
 using Android.Content;
+using AndroidX.Fragment.App;
 
 namespace AndroidPayQuickstart
 {

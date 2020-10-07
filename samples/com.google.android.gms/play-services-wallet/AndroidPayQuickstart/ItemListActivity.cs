@@ -31,10 +31,10 @@ namespace AndroidPayQuickstart
         protected override void OnResume ()
         {
             base.OnResume ();
-            ActivityCompat.InvalidateOptionsMenu (this);
+            AndroidX.Core.App.ActivityCompat.InvalidateOptionsMenu (this);
         }
 
-        protected override Android.Support.V4.App.Fragment ResultTargetFragment {
+        protected override AndroidX.Fragment.App.Fragment ResultTargetFragment {
             get { return SupportFragmentManager.FindFragmentById (Resource.Id.promo_fragment); }
         }
 

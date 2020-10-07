@@ -11,8 +11,8 @@ namespace PlacesAsync
 {
     public class PlacesAutocompleteAdapter : BaseAdapter<PlaceInfo>, IFilterable
     {
-        public PlacesAutocompleteAdapter (Context context, GoogleApiClient googleApiClient,
-            LatLngBounds bounds, AutocompleteFilter filter)
+        public PlacesAutocompleteAdapter (Context context, Android.Gms.Common.Apis.GoogleApiClient googleApiClient,
+            Android.Gms.Maps.Model.LatLngBounds bounds, Android.Gms.Location.Places.AutocompleteFilter filter)
         {
             this.context = context;
             this.googleApiClient = googleApiClient;
@@ -22,9 +22,9 @@ namespace PlacesAsync
 
 
         internal Context context;
-        internal GoogleApiClient googleApiClient;
-        internal LatLngBounds bounds;
-        internal AutocompleteFilter autoCompleteFilter;
+        internal Android.Gms.Common.Apis.GoogleApiClient googleApiClient;
+        internal Android.Gms.Maps.Model.LatLngBounds bounds;
+        internal Android.Gms.Location.Places.AutocompleteFilter autoCompleteFilter;
         internal List<PlaceInfo> resultList = new List<PlaceInfo> ();
 
         PlacesFilter filter;
@@ -98,10 +98,20 @@ namespace PlacesAsync
             if (Adapter.googleApiClient.IsConnected) {
                 
                 // Submit the query to the autocomplete API and await the results when the query completes.
-                var autocompletePredictions = await PlacesClass.GeoDataApi.GetAutocompletePredictionsAsync (
-                    Adapter.googleApiClient, constraint.ToString (), Adapter.bounds, Adapter.autoCompleteFilter);
+                var autocompletePredictions =
+                    // TODO: asyncify
+                    //await
+                    Android.Gms.Location.Places.PlacesClass.GeoDataApi
+                        //.GetAutocompletePredictionsAsync
+                        .GetAutocompletePredictions
+                        (
+                            Adapter.googleApiClient, constraint.ToString (),
+                            Adapter.bounds, Adapter.autoCompleteFilter
+                        );
+
 
                 // Confirm that the query completed successfully, otherwise return null
+                /*
                 if (!autocompletePredictions.Status.IsSuccess) {                    
                     autocompletePredictions.Release ();
                     return new List<PlaceInfo> ();
@@ -115,6 +125,8 @@ namespace PlacesAsync
                 autocompletePredictions.Release();
 
                 return list;
+                */
+                return null;
             }
 
             return new List<PlaceInfo> ();

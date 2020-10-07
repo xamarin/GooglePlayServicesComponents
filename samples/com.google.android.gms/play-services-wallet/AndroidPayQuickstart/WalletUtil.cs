@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Android.Gms.Wallet;
 using Java.Math;
 
 namespace AndroidPayQuickstart
@@ -15,7 +16,7 @@ namespace AndroidPayQuickstart
      *                 of an item.
      * @return {@link MaskedWalletRequest} instance
      */
-        public static MaskedWalletRequest CreateMaskedWalletRequest (ItemInfo itemInfo) 
+        public static Android.Gms.Wallet.MaskedWalletRequest CreateMaskedWalletRequest (ItemInfo itemInfo) 
         {
             return CreateMaskedWalletRequest (itemInfo, null);
         }

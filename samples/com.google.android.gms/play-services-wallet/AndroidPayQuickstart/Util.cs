@@ -11,7 +11,7 @@ namespace AndroidPayQuickstart
      * @param maskedWallet The wallet that contains the payment descriptions.
      * @return The payment descriptions in a format suitable for display to the user.
      */
-        public static string FormatPaymentDescriptions (MaskedWallet maskedWallet) 
+        public static string FormatPaymentDescriptions (Android.Gms.Wallet.MaskedWallet maskedWallet) 
         {
             return string.Join ("\n", maskedWallet.GetPaymentDescriptions ());
         }

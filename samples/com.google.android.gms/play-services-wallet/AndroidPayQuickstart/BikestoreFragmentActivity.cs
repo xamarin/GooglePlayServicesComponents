@@ -1,6 +1,7 @@
 ﻿using System;
 using Android.Content;
 using Android.Widget;
+using AndroidX.Fragment.App;
 
 namespace AndroidPayQuickstart
 {
@@ -36,7 +37,7 @@ namespace AndroidPayQuickstart
                 break;
             case REQUEST_USER_LOGIN:
                 if (resultCode == Android.App.Result.Ok)
-                    ActivityCompat.InvalidateOptionsMenu (this);
+                        AndroidX.Core.App.ActivityCompat.InvalidateOptionsMenu (this);
                 break;
             default:
                 base.OnActivityResult (requestCode, resultCode, data);
@@ -76,17 +77,17 @@ namespace AndroidPayQuickstart
 
         protected void HandleError(int errorCode) {
             switch (errorCode) {
-            case WalletConstants.ErrorCodeSpendingLimitExceeded:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeSpendingLimitExceeded:
                 Toast.MakeText (this, GetString (Resource.String.spending_limit_exceeded, errorCode),
                     ToastLength.Long).Show ();
                 break;
-            case WalletConstants.ErrorCodeInvalidParameters:
-            case WalletConstants.ErrorCodeAuthenticationFailure:
-            case WalletConstants.ErrorCodeBuyerAccountError:
-            case WalletConstants.ErrorCodeMerchantAccountError:
-            case WalletConstants.ErrorCodeServiceUnavailable:
-            case WalletConstants.ErrorCodeUnsupportedApiVersion:
-            case WalletConstants.ErrorCodeUnknown:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeInvalidParameters:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeAuthenticationFailure:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeBuyerAccountError:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeMerchantAccountError:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeServiceUnavailable:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeUnsupportedApiVersion:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeUnknown:
             default:
                 // unrecoverable error
                 String errorMessage = GetString (Resource.String.google_wallet_unavailable) + "\n" +
