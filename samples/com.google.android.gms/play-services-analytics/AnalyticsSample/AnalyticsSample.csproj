@@ -20,6 +20,7 @@
     <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,10 +32,9 @@
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -44,10 +44,9 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <ConsolePause>false</ConsolePause>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -92,131 +91,24 @@
     <AndroidResource Include="Resources\layout\issues.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Arch.Core.Common">
-      <Version>1.1.1.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Arch.Core.Runtime">
-      <Version>1.1.1.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Common">
-      <Version>1.1.1.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.LiveData">
-      <Version>1.1.1.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.LiveData.Core">
-      <Version>1.1.1.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Runtime">
-      <Version>1.1.1.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.ViewModel">
-      <Version>1.1.1.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Annotations">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.AsyncLayoutInflater">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Collections">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Compat">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.CoordinaterLayout">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Core.UI">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Core.Utils">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.CursorAdapter">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.CustomView">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.DocumentFile">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.DrawerLayout">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Fragment">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Interpolator">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Loader">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.LocalBroadcastManager">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Media.Compat">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Print">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.SlidingPaneLayout">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.SwipeRefreshLayout">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.v4">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.VersionedParcelable">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.ViewPager">
-      <Version>28.0.0.3</Version>
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.1.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.1.0.1" />
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.0.0.1" /> 
+    <PackageReference Include="Xamarin.AndroidX.Migration">
+      <Version>1.0.6.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Build.Download">
       <Version>0.10.0</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier">
-      <Version>71.1600.0</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Analytics">
-      <Version>71.1608.0</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.GooglePlayServices.Analytics.Impl">
-      <Version>71.1608.0</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.GooglePlayServices.Base">
-      <Version>71.1610.0</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.GooglePlayServices.Basement">
-      <Version>71.1620.0</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.GooglePlayServices.Stats">
-      <Version>71.1601.0</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.GooglePlayServices.TagManager.V4.Impl">
-      <Version>71.1608.0</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.GooglePlayServices.Tasks">
-      <Version>71.1601.0</Version>
+      <Version>117.0.0-preview01</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProguardConfiguration Include="proguard.cfg" />
   </ItemGroup>
 </Project>

@@ -3,10 +3,10 @@ using Android.App;
 using Android.Gms.Ads;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.Design.Widget;
-using Android.Support.V7.App;
 using Android.Views;
-using Android.Widget;
+using AndroidX.AppCompat.Widget;
+using Google.Android.Material.FloatingActionButton;
+using Google.Android.Material.Snackbar;
 
 [assembly: UsesPermission (Android.Manifest.Permission.Internet)]
 [assembly: UsesPermission (Android.Manifest.Permission.AccessNetworkState)]
@@ -15,8 +15,9 @@ using Android.Widget;
 namespace AdsLiteSample
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AdActivity
+    public class MainActivity : Activity // AdActivity (final in AndroidX)
     {
+        AdActivity adActivity = new AdActivity();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -24,7 +25,7 @@ namespace AdsLiteSample
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
-            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             //SetSupportActionBar(toolbar);
 
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);

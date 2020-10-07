@@ -6,14 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Common.Apis;
-using Android.Gms.Common;
-using Android.Gms.Fitness;
-using Android.Support.V7.App;
-using Android.Gms.Fitness.Request;
-using Android.Gms.Fitness.Data;
-using Android.Gms.Fitness.Result;
 using System.Threading.Tasks;
+using AndroidX.AppCompat.App;
 
 namespace BasicSensorsApi
 {
@@ -34,13 +28,13 @@ namespace BasicSensorsApi
 
         TextView logView;
 
-        GoogleApiClient mClient = null;
+        Android.Gms.Common.Apis.GoogleApiClient mClient = null;
         // [END auth_variable_references]
 
         // [START mListener_variable_reference]
         // Need to hold a reference to this listener, as it's passed into the "unregister"
         // method in order to stop all sensors from sending data to this listener.
-        IOnDataPointListener mListener;
+        Android.Gms.Fitness.Request.IOnDataPointListener mListener;
         // [END mListener_variable_reference]
 
 
@@ -78,9 +72,9 @@ namespace BasicSensorsApi
         void buildFitnessClient() 
         {
             // Create the Google API Client
-            mClient = new GoogleApiClient.Builder (this)
-                .AddApi(FitnessClass.SENSORS_API)
-                .AddScope(new Scope (Scopes.FitnessLocationRead))
+            mClient = new Android.Gms.Common.Apis.GoogleApiClient.Builder (this)
+                .AddApi(Android.Gms.Fitness.FitnessClass.SENSORS_API)
+                .AddScope(new Android.Gms.Common.Apis.Scope(Android.Gms.Common.Scopes.FitnessLocationRead))
                 .AddConnectionCallbacks(
                     bundle => {
                         Log (TAG, "Connected!!!");
@@ -95,9 +89,9 @@ namespace BasicSensorsApi
                     i => {
                         // If your connection to the sensor gets lost at some point,
                         // you'll be able to determine the reason and react to it here.
-                        if (i == GoogleApiClient.ConnectionCallbacks.CauseNetworkLost)
+                        if (i == Android.Gms.Common.Apis.GoogleApiClient.ConnectionCallbacks.CauseNetworkLost)
                             Log (TAG, "Connection lost.  Cause: Network Lost.");
-                        else if (i == GoogleApiClient.ConnectionCallbacks.CauseServiceDisconnected)
+                        else if (i == Android.Gms.Common.Apis.GoogleApiClient.ConnectionCallbacks.CauseServiceDisconnected)
                             Log (TAG, "Connection lost.  Reason: Service Disconnected");
                     })            
                 .AddOnConnectionFailedListener (
@@ -105,7 +99,7 @@ namespace BasicSensorsApi
                         Log (TAG, "Connection failed. Cause: " + result);
                         if (!result.HasResolution) {
                             // Show the localized error dialog
-                            GooglePlayServicesUtil.GetErrorDialog (result.ErrorCode, this, 0).Show ();
+                            Android.Gms.Common.GooglePlayServicesUtil.GetErrorDialog (result.ErrorCode, this, 0).Show ();
                             return;
                         }
                         // The failure has a resolution. Resolve it.
@@ -170,25 +164,34 @@ namespace BasicSensorsApi
      */
         async Task findFitnessDataSources() {
             // [START find_data_sources]
-            var dataSourcesResult = await FitnessClass.SensorsApi.FindDataSourcesAsync (mClient, new DataSourcesRequest.Builder ()
+            var dataSourcesResult =
+                // await
+                    Android.Gms.Fitness.FitnessClass.SensorsApi
+                    //.FindDataSourcesAsync (mClient, new DataSourcesRequest.Builder ()
+                    .FindDataSources (mClient, new Android.Gms.Fitness.Request.DataSourcesRequest.Builder ()
+
                 // At least one datatype must be specified.
-                .SetDataTypes (DataType.TypeLocationSample)
+                .SetDataTypes (Android.Gms.Fitness.Data.DataType.TypeLocationSample)
                 // Can specify whether data type is raw or derived.
-                .SetDataSourceTypes (DataSource.TypeRaw)
+                .SetDataSourceTypes (Android.Gms.Fitness.Data.DataSource.TypeRaw)
                 .Build ());
-            
+
+            /*
+             * TODO: asyncify
             Log (TAG, "Result: " + dataSourcesResult.Status);
             foreach (var dataSource in dataSourcesResult.DataSources) {
                 Log (TAG, "Data source found: " + dataSource);
                 Log (TAG, "Data Source type: " + dataSource.DataType.Name);
 
                 //Let's register a listener to receive Activity data!
-                if (dataSource.DataType.Name.Equals (DataType.TypeLocationSample.Name) && mListener == null) {
+                if (dataSource.DataType.Name.Equals (Android.Gms.Fitness.Data.DataType.TypeLocationSample.Name) && mListener == null) {
                     Log (TAG, "Data source for LOCATION_SAMPLE found!  Registering.");
-                    await registerFitnessDataListener (dataSource, DataType.TypeLocationSample);
+                    await registerFitnessDataListener (dataSource, Android.Gms.Fitness.Data.DataType.TypeLocationSample);
                 }
             }
-        
+            */
+
+
             // [END find_data_sources]
         }
 
@@ -196,7 +199,7 @@ namespace BasicSensorsApi
      * Register a listener with the Sensors API for the provided {@link DataSource} and
      * {@link DataType} combo.
      */
-        async Task registerFitnessDataListener (DataSource dataSource, DataType dataType) {
+        async Task registerFitnessDataListener (Android.Gms.Fitness.Data.DataSource dataSource, Android.Gms.Fitness.Data.DataType dataType) {
             // [START register_data_listener]
             mListener = new DataPointListener (dataPoint => {
                 foreach (var field in dataPoint.DataType.Fields) {
@@ -206,27 +209,34 @@ namespace BasicSensorsApi
                 }
             });
 
-            var status = await FitnessClass.SensorsApi.AddAsync (
-                 mClient,
-                 new SensorRequest.Builder ()
-                .SetDataSource (dataSource) // Optional but recommended for custom data sets.
-                .SetDataType (dataType) // Can't be omitted.
-                .SetSamplingRate (10, Java.Util.Concurrent.TimeUnit.Seconds)
-                .Build (),
-                 mListener);
+            var status =
+                //await
+                Android.Gms.Fitness.FitnessClass.SensorsApi
+                        .Add(
+                        //.AddAsync (
+                                     mClient,
+                                     new Android.Gms.Fitness.Request.SensorRequest.Builder ()
+                                    .SetDataSource (dataSource) // Optional but recommended for custom data sets.
+                                    .SetDataType (dataType) // Can't be omitted.
+                                    .SetSamplingRate (10, Java.Util.Concurrent.TimeUnit.Seconds)
+                                    .Build (),
+                                     mListener);
 
-                
+
+            /*
+             * TODO: asyncify
             if (status.IsSuccess)
                 Log (TAG, "Listener registered!");
             else
                 Log (TAG, "Listener not registered.");                    
             // [END register_data_listener]
+            */
         }
 
         /**
      * Unregister the listener with the Sensors API.
      */
-        async Task unregisterFitnessDataListener() 
+            async Task unregisterFitnessDataListener() 
         {
             if (mListener == null) {
                 // This code only activates one listener at a time.  If there's no listener, there's
@@ -238,16 +248,22 @@ namespace BasicSensorsApi
             // Waiting isn't actually necessary as the unregister call will complete regardless,
             // even if called from within onStop, but a callback can still be added in order to
             // inspect the results.
-            var status = await FitnessClass.SensorsApi.RemoveAsync (
-                             mClient,
-                             mListener);
-            
+            // TODO: asyncify
+            var status =
+                // await
+                Android.Gms.Fitness.FitnessClass.SensorsApi
+                    //.RemoveAsync (
+                    .Remove(
+                            mClient,
+                            mListener);
+            /*
             if (status.IsSuccess)
                 Log (TAG, "Listener was removed!");
             else
                 Log (TAG, "Listener was not removed.");                    
    
             // [END unregister_data_listener]
+            */
         }
             
         public override bool OnCreateOptionsMenu (IMenu menu) 
@@ -276,16 +292,16 @@ namespace BasicSensorsApi
         }
     }
 
-    class DataPointListener : Java.Lang.Object, IOnDataPointListener
+    class DataPointListener : Java.Lang.Object, Android.Gms.Fitness.Request.IOnDataPointListener
     {
-        public DataPointListener (Action<DataPoint> dataPointHandler)
+        public DataPointListener (Action<Android.Gms.Fitness.Data.DataPoint> dataPointHandler)
         {
             DataPointHandler = dataPointHandler;
         }
 
-        public Action<DataPoint> DataPointHandler { get; private set; }
+        public Action<Android.Gms.Fitness.Data.DataPoint> DataPointHandler { get; private set; }
 
-        public void OnDataPoint (DataPoint dataPoint)
+        public void OnDataPoint (Android.Gms.Fitness.Data.DataPoint dataPoint)
         {
             var h = DataPointHandler;
             if (h != null)

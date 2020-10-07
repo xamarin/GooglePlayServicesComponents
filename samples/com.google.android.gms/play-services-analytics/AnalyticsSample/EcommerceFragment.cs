@@ -11,7 +11,7 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Fragment = Android.Support.V4.App.Fragment;
+using Fragment = AndroidX.Fragment.App.Fragment;
 using Android.Gms.Analytics;
 
 namespace Analytics

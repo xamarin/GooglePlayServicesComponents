@@ -12,11 +12,10 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Android.Gms.Analytics;
-using Fragment = Android.Support.V4.App.Fragment;
 
 namespace Analytics
 {
-    public class AppviewFragment : Fragment
+    public class AppviewFragment : AndroidX.Fragment.App.Fragment
     {
         public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {

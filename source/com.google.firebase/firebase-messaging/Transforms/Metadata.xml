@@ -4,7 +4,9 @@
 	<attr path="/api/package[@name='com.google.firebase.messaging']" name="managedName">Firebase.Messaging</attr>
 
 	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+    <!--
 	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+    -->
 	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
 	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
@@ -27,5 +29,25 @@
             </parameter>
       </method>
     </add-node>
-    -->    
+    -->
+    <attr
+        path="/api/package[@name='com.google.firebase.messaging']/class[@name='FirebaseMessagingService']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.messaging']/class[@name='zze']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.firebase_messaging']"
+        name="managedname"
+        >
+        Android.Gms.Internal.FirebaseMessaging
+    </attr>
+    
+    
 </metadata>

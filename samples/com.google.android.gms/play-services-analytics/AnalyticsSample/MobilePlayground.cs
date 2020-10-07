@@ -10,8 +10,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V7.App;
-using Fragment = Android.Support.V4.App.Fragment;
+using AndroidX.AppCompat.App;
+//using Fragment = Android.Support.V4.App.Fragment;
 
 namespace Analytics
 {
@@ -54,14 +54,14 @@ namespace Analytics
                 new TabListener<IssuesFragment> (this, "issues")));
         }
 
-        class TabListener<TFragment> : Java.Lang.Object, Android.Support.V7.App.ActionBar.ITabListener 
-            where TFragment : Fragment
+        class TabListener<TFragment> : Java.Lang.Object, AndroidX.AppCompat.App.ActionBar.ITabListener 
+            where TFragment : AndroidX.Fragment.App.Fragment
         {
             AppCompatActivity parent;
             string tag;
             Type fragmentType;
             Bundle args;
-            Fragment fragment;
+            AndroidX.Fragment.App.Fragment fragment;
 
             public TabListener (AppCompatActivity activity, string tag, Bundle args = null)
             {
@@ -80,17 +80,17 @@ namespace Analytics
 
             }
 
-            public void OnTabReselected (Android.Support.V7.App.ActionBar.Tab tab, Android.Support.V4.App.FragmentTransaction ft)
+            public void OnTabReselected(AndroidX.AppCompat.App.ActionBar.Tab tab, AndroidX.Fragment.App.FragmentTransaction ft)
             {
-                throw new NotImplementedException ();
+                throw new NotImplementedException();
             }
 
-            public void OnTabSelected (Android.Support.V7.App.ActionBar.Tab tab, Android.Support.V4.App.FragmentTransaction ft)
+            public void OnTabSelected (AndroidX.AppCompat.App.ActionBar.Tab tab, AndroidX.Fragment.App.FragmentTransaction ft)
             {
                 var className = Java.Lang.Class.FromType (fragmentType).Name;
 
                 if (fragment == null) {
-                    fragment = Fragment.Instantiate (parent, className, args);
+                    fragment = AndroidX.Fragment.App.Fragment.Instantiate (parent, className, args);
                     ft.Add (Android.Resource.Id.Content, fragment, tag);
                 } else {
                     ft.Attach (fragment);
@@ -99,7 +99,7 @@ namespace Analytics
                 // TODO: Add AutoTracking here once the autoTracking fixes make it into the SDK.
             }
 
-            public void OnTabUnselected (Android.Support.V7.App.ActionBar.Tab tab, Android.Support.V4.App.FragmentTransaction ft)
+            public void OnTabUnselected (AndroidX.AppCompat.App.ActionBar.Tab tab, AndroidX.Fragment.App.FragmentTransaction ft)
             {
                 if (fragment != null)
                     ft.Detach (fragment);
@@ -108,3 +108,4 @@ namespace Analytics
     }
 }
 
+    

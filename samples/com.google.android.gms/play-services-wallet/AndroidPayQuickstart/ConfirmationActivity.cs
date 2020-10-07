@@ -1,6 +1,4 @@
 ﻿using System;
-using Android.Gms.Wallet.Fragment;
-using Android.Gms.Wallet;
 using Android.Runtime;
 
 namespace AndroidPayQuickstart
@@ -10,14 +8,14 @@ namespace AndroidPayQuickstart
     {
         const int REQUEST_CODE_CHANGE_MASKED_WALLET = 1002;
 
-        SupportWalletFragment mWalletFragment;
-        MaskedWallet mMaskedWallet;
+        Android.Gms.Wallet.Fragment.SupportWalletFragment mWalletFragment;
+        Android.Gms.Wallet.MaskedWallet mMaskedWallet;
 
         protected override void OnCreate (Android.OS.Bundle savedInstanceState)
         {
             base.OnCreate (savedInstanceState);
         
-            mMaskedWallet = Intent.GetParcelableExtra (Constants.EXTRA_MASKED_WALLET).JavaCast<MaskedWallet> ();
+            mMaskedWallet = Intent.GetParcelableExtra (Constants.EXTRA_MASKED_WALLET).JavaCast<Android.Gms.Wallet.MaskedWallet> ();
             SetContentView (Resource.Layout.activity_confirmation);
 
             CreateAndAddWalletFragment();
@@ -30,7 +28,7 @@ namespace AndroidPayQuickstart
         }
 
         private void CreateAndAddWalletFragment() {
-            var walletFragmentStyle = new WalletFragmentStyle()
+            var walletFragmentStyle = new Android.Gms.Wallet.Fragment.WalletFragmentStyle()
                 .SetMaskedWalletDetailsTextAppearance (
                     Resource.Style.BikestoreWalletFragmentDetailsTextAppearance)
                 .SetMaskedWalletDetailsHeaderTextAppearance (
@@ -40,18 +38,18 @@ namespace AndroidPayQuickstart
                 .SetMaskedWalletDetailsButtonBackgroundResource(
                     Resource.Drawable.bikestore_btn_default_holo_light);
 
-            var walletFragmentOptions = WalletFragmentOptions.NewBuilder ()
+            var walletFragmentOptions = Android.Gms.Wallet.Fragment.WalletFragmentOptions.NewBuilder ()
                 .SetEnvironment (Constants.WALLET_ENVIRONMENT)
                 .SetFragmentStyle (walletFragmentStyle)
-                .SetTheme (WalletConstants.ThemeLight)
-                .SetMode (WalletFragmentMode.SelectionDetails)
+                .SetTheme (Android.Gms.Wallet.WalletConstants.ThemeLight)
+                .SetMode (Android.Gms.Wallet.Fragment.WalletFragmentMode.SelectionDetails)
                 .Build ();
-            mWalletFragment = SupportWalletFragment.NewInstance (walletFragmentOptions);
+            mWalletFragment = Android.Gms.Wallet.Fragment.SupportWalletFragment.NewInstance (walletFragmentOptions);
 
             // Now initialize the Wallet Fragment
             var accountName = ((BikestoreApplication) Application).AccountName;
 
-            var startParamsBuilder = WalletFragmentInitParams.NewBuilder ()
+            var startParamsBuilder = Android.Gms.Wallet.Fragment.WalletFragmentInitParams.NewBuilder ()
                 .SetMaskedWallet (mMaskedWallet)
                 .SetMaskedWalletRequestCode (REQUEST_CODE_CHANGE_MASKED_WALLET)
                 .SetAccountName (accountName);
@@ -68,16 +66,16 @@ namespace AndroidPayQuickstart
             switch (requestCode) {
             case REQUEST_CODE_CHANGE_MASKED_WALLET:
                 if (resultCode == Android.App.Result.Ok &&
-                    data.HasExtra (WalletConstants.ExtraMaskedWallet)) {
-                    mMaskedWallet = data.GetParcelableExtra (WalletConstants.ExtraMaskedWallet).JavaCast<MaskedWallet> ();
+                    data.HasExtra (Android.Gms.Wallet.WalletConstants.ExtraMaskedWallet)) {
+                    mMaskedWallet = data.GetParcelableExtra (Android.Gms.Wallet.WalletConstants.ExtraMaskedWallet).JavaCast<Android.Gms.Wallet.MaskedWallet> ();
                     ((FullWalletConfirmationButtonFragment) ResultTargetFragment)
                         .UpdateMaskedWallet (mMaskedWallet);
                 }
                 // you may also want to use the new masked wallet data here, say to recalculate
                 // shipping or taxes if shipping address changed
                 break;
-            case WalletConstants.ResultError:
-                int errorCode = data.GetIntExtra (WalletConstants.ExtraErrorCode, 0);
+            case Android.Gms.Wallet.WalletConstants.ResultError:
+                int errorCode = data.GetIntExtra (Android.Gms.Wallet.WalletConstants.ExtraErrorCode, 0);
                 HandleError (errorCode);
                 break;
             default:
@@ -86,7 +84,7 @@ namespace AndroidPayQuickstart
             }
         }
 
-        protected override Android.Support.V4.App.Fragment ResultTargetFragment {
+        protected override AndroidX.Fragment.App.Fragment ResultTargetFragment {
             get {
                 return SupportFragmentManager.FindFragmentById (Resource.Id.full_wallet_confirmation_button_fragment);
             }

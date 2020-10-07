@@ -2,11 +2,8 @@
 using Android.Content;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V7.App;
+using AndroidX.AppCompat.App;
 using Firebase.RemoteConfig;
-using Android.Gms.Tasks;
-using System;
-using System.Collections.Generic;
 
 namespace Config
 {

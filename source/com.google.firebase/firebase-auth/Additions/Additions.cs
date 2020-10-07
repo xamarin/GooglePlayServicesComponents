@@ -30,10 +30,10 @@ namespace Firebase.Auth
             return SignInWithEmailAndPassword (email, password).AsAsync<IAuthResult> ();
         }
 
-        public System.Threading.Tasks.Task<IProviderQueryResult> FetchProvidersForEmailAsync (string email)
-        {
-            return FetchProvidersForEmail (email).AsAsync<IProviderQueryResult> ();
-        }
+        //public System.Threading.Tasks.Task<IProviderQueryResult> FetchProvidersForEmailAsync (string email)
+        //{
+        //    return FetchProvidersForEmail (email).AsAsync<IProviderQueryResult> ();
+        //}
 
         public System.Threading.Tasks.Task SendPasswordResetEmailAsync (string email)
         {
@@ -87,10 +87,10 @@ namespace Firebase.Auth
         //    return GetToken (forceRefresh).AsAsync<GetTokenResult> ();
         //}
 
-		public System.Threading.Tasks.Task<GetTokenResult> GetIdTokenAsync(bool forceRefresh)
-		{
-			return GetIdToken(forceRefresh).AsAsync<GetTokenResult>();
-		}
+		//public System.Threading.Tasks.Task<GetTokenResult> GetIdTokenAsync(bool forceRefresh)
+		//{
+		//	return GetIdToken(forceRefresh).AsAsync<GetTokenResult>();
+		//}
 
         public System.Threading.Tasks.Task ReauthenticateAsync (AuthCredential credential)
         {

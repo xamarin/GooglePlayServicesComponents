@@ -1,22 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 using Android.App;
 using Android.Widget;
-using System.Collections.Generic;
 using Android.OS;
 using Android.Views;
 using Android.Content;
-using Android.Gms.Plus;
-using Android.Gms.Common.Apis;
-using Android.Gms.Common;
 using Java.Interop;
+
+using Android.Gms.Common.Apis;
 using Android.Gms.Plus.Model.People;
 
 namespace PlusSample
 {
     [Activity (Label = "Connected People")]
-    public class ListConnectedPeopleActivity : Activity, 
-        GoogleApiClient.IConnectionCallbacks, 
-        GoogleApiClient.IOnConnectionFailedListener, 
+    public class ListConnectedPeopleActivity : Activity,
+        Android.Gms.Common.Apis.GoogleApiClient.IConnectionCallbacks,
+        Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener, 
         IDialogInterfaceOnCancelListener
     {
         const string TAG = "ListConnectedPeople";
@@ -30,7 +29,7 @@ namespace PlusSample
         ArrayAdapter mListAdapter;
         ListView mPersonListView;
         List<String> mListItems;
-        GoogleApiClient mGoogleApiClient;
+        Android.Gms.Common.Apis.GoogleApiClient mGoogleApiClient;
         bool mResolvingError;
 
         protected override void OnCreate (Bundle savedInstanceState) 
@@ -41,11 +40,11 @@ namespace PlusSample
             //var options = new PlusClass.PlusOptions.Builder ()
             //    .AddActivityTypes (MomentUtil.ACTIONS).Build();
             
-            mGoogleApiClient = new GoogleApiClient.Builder (this)
+            mGoogleApiClient = new Android.Gms.Common.Apis.GoogleApiClient.Builder (this)
                 .AddConnectionCallbacks (this)
                 .AddOnConnectionFailedListener (this)
-                .AddApi (PlusClass.API)//, options)
-                .AddScope (PlusClass.ScopePlusLogin)
+                .AddApi (Android.Gms.Plus.PlusClass.API)//, options)
+                .AddScope (Android.Gms.Plus.PlusClass.ScopePlusLogin)
                 .Build();
 
             mListItems = new List<String>();
@@ -55,8 +54,8 @@ namespace PlusSample
             mResolvingError = savedInstanceState != null
                 && savedInstanceState.GetBoolean (STATE_RESOLVING_ERROR, false);
 
-            int available = GooglePlayServicesUtil.IsGooglePlayServicesAvailable (this);
-            if (available != CommonStatusCodes.Success)
+            int available = Android.Gms.Common.GooglePlayServicesUtil.IsGooglePlayServicesAvailable (this);
+            if (available != Android.Gms.Common.Apis.CommonStatusCodes.Success)
                 ShowDialog (DIALOG_GET_GOOGLE_PLAY_SERVICES);
 
             if (Build.VERSION.SdkInt >= BuildVersionCodes.Honeycomb)
@@ -69,12 +68,12 @@ namespace PlusSample
                 return base.OnCreateDialog (id);
             }
 
-            int available = GooglePlayServicesUtil.IsGooglePlayServicesAvailable(this);
-            if (available == CommonStatusCodes.Success)
+            int available = Android.Gms.Common.GooglePlayServicesUtil.IsGooglePlayServicesAvailable(this);
+            if (available == Android.Gms.Common.Apis.CommonStatusCodes.Success)
                 return null;
             
-            if (GooglePlayServicesUtil.IsUserRecoverableError (available)) {
-                return GooglePlayServicesUtil.GetErrorDialog (
+            if (Android.Gms.Common.GooglePlayServicesUtil.IsUserRecoverableError (available)) {
+                return Android.Gms.Common.GooglePlayServicesUtil.GetErrorDialog (
                     available, this, REQUEST_CODE_GET_GOOGLE_PLAY_SERVICES, this);
             }
             return new AlertDialog.Builder(this)
@@ -132,8 +131,8 @@ namespace PlusSample
         public void OnConnected (Bundle connectionHint) 
         {
             mPersonListView.Adapter = mListAdapter;
-            PlusClass.PeopleApi.LoadConnected (mGoogleApiClient)
-                .SetResultCallback<IPeopleLoadPeopleResult> (result => {
+            Android.Gms.Plus.PlusClass.PeopleApi.LoadConnected (mGoogleApiClient)
+                .SetResultCallback<Android.Gms.Plus.IPeopleLoadPeopleResult> (result => {
 
                     switch (result.Status.StatusCode) {
                     case CommonStatusCodes.Success:

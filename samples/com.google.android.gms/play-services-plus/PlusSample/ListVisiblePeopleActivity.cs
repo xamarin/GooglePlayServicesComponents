@@ -6,19 +6,17 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Gms.Common;
+using Android.Gms.Common.Apis;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Gms.Plus;
-using Android.Gms.Common.Apis;
-using Android.Gms.Common;
-using Android.Gms.Plus.Model.People;
 
 namespace PlusSample
 {
     [Activity (Label = "List Visible People")]			
-    public class ListVisiblePeopleActivity : Activity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener, IDialogInterfaceOnCancelListener
+    public class ListVisiblePeopleActivity : Activity, Android.Gms.Common.Apis.GoogleApiClient.IConnectionCallbacks, Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener, IDialogInterfaceOnCancelListener
     {
         const string TAG = "ListVisiblePeople";
 
@@ -32,7 +30,7 @@ namespace PlusSample
         private ArrayAdapter mListAdapter;
         private ListView mPersonListView;
         private List<string> mListItems;
-        private GoogleApiClient mGoogleApiClient;
+        private Android.Gms.Common.Apis.GoogleApiClient mGoogleApiClient;
         private bool mResolvingError;
 
         protected override void OnCreate (Bundle savedInstanceState) 
@@ -44,8 +42,8 @@ namespace PlusSample
             mGoogleApiClient = new GoogleApiClient.Builder (this)
                 .AddConnectionCallbacks (this)
                 .AddOnConnectionFailedListener (this)
-                .AddApi (PlusClass.API) // options)
-                .AddScope (PlusClass.ScopePlusLogin)
+                .AddApi (Android.Gms.Plus.PlusClass.API) // options)
+                .AddScope (Android.Gms.Plus.PlusClass.ScopePlusLogin)
                 .Build ();
 
             mListItems = new List<string>();
@@ -133,7 +131,8 @@ namespace PlusSample
         public void OnConnected (Bundle connectionHint) 
         {
             mPersonListView.Adapter = mListAdapter;
-            PlusClass.PeopleApi.LoadVisible (mGoogleApiClient, null).SetResultCallback<IPeopleLoadPeopleResult> (result => {
+            Android.Gms.Plus.PlusClass.PeopleApi.LoadVisible (mGoogleApiClient, null)
+                .SetResultCallback<Android.Gms.Plus.IPeopleLoadPeopleResult> (result => {
                 switch (result.Status.StatusCode) {
                 case CommonStatusCodes.Success:
                     mListItems.Clear ();
@@ -141,7 +140,7 @@ namespace PlusSample
                     try {
                         int count = personBuffer.Count;
                         for (int i = 0; i < count; i++) {
-                            var person = personBuffer.Get (i).JavaCast<IPerson> ();
+                            var person = personBuffer.Get (i).JavaCast<Android.Gms.Plus.Model.People.IPerson> ();
                             mListItems.Add (person.DisplayName);
                         }
                     } finally {
@@ -204,6 +203,7 @@ namespace PlusSample
                 return base.OnOptionsItemSelected (item);
             }
         }
+
     }
 }
 

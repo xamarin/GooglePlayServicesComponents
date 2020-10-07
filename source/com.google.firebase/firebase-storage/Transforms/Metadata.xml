@@ -28,4 +28,46 @@
 	<remove-node path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageException']/method[@name='getMessage' and count(parameter)=0]" />
 	
 	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
+    
+    <add-node 
+        path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageReference']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+        
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.storage']" 
+        name="managedName"
+        >   
+        Firebase.Storage
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.storage.internal']" 
+        name="managedName"
+        >   
+        Firebase.Storage.Internal
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.storage.network']" 
+        name="managedName"
+        >   
+        Firebase.Storage.Network
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.storage.network.connection']" 
+        name="managedName"
+        >   
+        Firebase.Storage.Network.Connection
+    </attr>
+    
+    
+    
+    
+    
 </metadata>

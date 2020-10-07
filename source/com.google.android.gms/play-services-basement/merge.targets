@@ -82,5 +82,4 @@
     <RemoveDir Directories="$(ProcessGoogleServicesJsonResDirPath)" Condition="Exists ('$(ProcessGoogleServicesJsonResDirPath)' )" />
     <Delete Files="$(ProcessGoogleServicesJsonStampPath)" />
   </Target>
-
-	</Project>
+</Project>

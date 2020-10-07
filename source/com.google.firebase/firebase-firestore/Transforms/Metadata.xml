@@ -26,15 +26,269 @@
 	<attr path="/api/package[@name='com.google.firebase.firestore']/class[@name='GeoPoint']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='com.google.firebase.firestore.GeoPoint']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
 	<attr path="/api/package[@name='com.google.firebase.firestore']/class[@name='Blob']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='com.google.firebase.firestore.Blob']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
 
-
-	<attr
-		path="/api/package[@name='com.google.firebase']"
-		name="managedName"
-		>
-		Firebase
-	</attr>
-
 	<attr path="/api/package[@name='com.google.firebase.firestore']/interface[@name='EventListener']/method[@name='onEvent']/parameter[1]" name="managedName">obj</attr>
 	<attr path="/api/package[@name='com.google.firebase.firestore']/interface[@name='EventListener']/method[@name='onEvent']/parameter[2]" name="managedName">error</attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase']"
+        name="managedName"
+        >
+        Firebase
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase']"
+        name="managedName"
+        >
+        Firebase
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.cloud.datastore.core.number']"
+        name="managedName"
+        >
+        Google.Cloud.Datastore.Core.Number
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.auth']"
+        name="managedName"
+        >
+        Firebase.Firestore.Auth
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.core']"
+        name="managedName"
+        >
+        Firebase.Firestore.Core
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.local']"
+        name="managedName"
+        >
+        Firebase.Firestore.Local
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.model']"
+        name="managedName"
+        >
+        Firebase.Firestore.Model
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.model.mutation']"
+        name="managedName"
+        >
+        Firebase.Firestore.Model.Mutation
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.model.value']"
+        name="managedName"
+        >
+        Firebase.Firestore.Model.Value
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.proto']"
+        name="managedName"
+        >
+        Firebase.Firestore.Proto
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.remote']"
+        name="managedName"
+        >
+        Firebase.Firestore.Remote
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.util']"
+        name="managedName"
+        >
+        Firebase.Firestore.Util
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']"
+        name="managedName"
+        >
+        Google.Firestore.V1
+    </attr>
+       
+        
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='BlobValue']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='BooleanValue']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='DoubleValue']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='ObjectValue']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='ArrayValue']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='GeoPointValue']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='IntegerValue']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='TimestampValue']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='ServerTimestampValue']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='ReferenceValue']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model']/class[@name='SnapshotVersion']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='StringValue']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='NullValue']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model']/class[@name='DocumentKey']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.firestore.model']/class[@name='DatabaseId']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    
+    
+    
+    
+    
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.model.mutation']/class[@name='NumericIncrementTransformOperation']/method[@name='computeBaseValue' and count(parameter)=1 and parameter[1][@type='com.google.firebase.firestore.model.value.FieldValue']]"
+        name="managedReturn"
+        >
+        Firebase.Firestore.Model.Value.FieldValue
+    </attr>
+        
+        
+    <remove-node
+        path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='FieldValue']/method[@name='value' and count(parameter)=0]"
+        />    
+    <remove-node
+        path="/api/package[@name='com.google.firestore.v1']/class[@name='TransactionOptions']/implements[@name='com.google.firestore.v1.TransactionOptionsOrBuilder']"
+        />    
+    
+
+
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.local']/interface[@name='QueryEngine']"
+        name="visibility"
+        >
+        public
+    </attr>
+
+
 
 </metadata>

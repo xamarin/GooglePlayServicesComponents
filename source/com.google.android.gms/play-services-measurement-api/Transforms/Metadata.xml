@@ -20,5 +20,17 @@
         >
         Firebase.Analytics
     </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.analytics.connector']"
+        name="managedName"
+        >
+        Firebase.Analytics.Connector
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.analytics.connector.internal']"
+        name="managedName"
+        >
+        Firebase.Analytics.Connector.Internal
+    </attr>
     
 </metadata>

@@ -6,9 +6,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Common.Apis;
-using Android.Gms.Location.Places;
-using Android.Gms.Maps.Model;
 
 // USE YOUR OWN KEY HERE, THIS ONE WILL NOT WORK
 [assembly: MetaData ("com.google.android.geo.API_KEY", Value="AIzaSyB9GNnotNlDk0PtxI6LhPCwAs-k4aN-gpA")]
@@ -16,13 +13,13 @@ using Android.Gms.Maps.Model;
 namespace PlacesAsync
 {
     [Activity (Label = "Places Async", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Android.Support.V4.App.FragmentActivity, GoogleApiClient.IOnConnectionFailedListener
+    public class MainActivity : AndroidX.Fragment.App.FragmentActivity, Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener
     {   
 
-        static readonly LatLngBounds BOUNDS_GREATER_SYDNEY = new LatLngBounds(
-            new LatLng(-34.041458, 150.790100), new LatLng(-33.682247, 151.383362));
-        
-        GoogleApiClient googleApiClient;
+        static readonly Android.Gms.Maps.Model.LatLngBounds BOUNDS_GREATER_SYDNEY = new Android.Gms.Maps.Model.LatLngBounds(
+            new Android.Gms.Maps.Model.LatLng(-34.041458, 150.790100), new Android.Gms.Maps.Model.LatLng(-33.682247, 151.383362));
+
+        Android.Gms.Common.Apis.GoogleApiClient googleApiClient;
 
 
         PlacesAutocompleteAdapter adapter;
@@ -39,9 +36,9 @@ namespace PlacesAsync
             listView = FindViewById<ListView> (Resource.Id.listView);
             textSearch = FindViewById<AutoCompleteTextView> (Resource.Id.textSearch);
 
-            googleApiClient = new GoogleApiClient.Builder (this)
+            googleApiClient = new Android.Gms.Common.Apis.GoogleApiClient.Builder (this)
                 .EnableAutoManage (this, 0, this)
-                .AddApi (PlacesClass.GEO_DATA_API)
+                .AddApi (Android.Gms.Location.Places.PlacesClass.GEO_DATA_API)
                 .Build ();
 
             adapter = new PlacesAutocompleteAdapter (this, googleApiClient, BOUNDS_GREATER_SYDNEY, null);

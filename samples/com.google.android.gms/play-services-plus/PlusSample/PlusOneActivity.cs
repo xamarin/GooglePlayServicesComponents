@@ -9,8 +9,6 @@ using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
-using Android.Widget;
-using Android.Gms.Plus;
 
 namespace PlusSample
 {
@@ -22,11 +20,11 @@ namespace PlusSample
         // The request code must be 0 or higher.
         const int PLUS_ONE_REQUEST_CODE = 0;
 
-        PlusOneButton mPlusOneSmallButton;
-        PlusOneButton mPlusOneMediumButton;
-        PlusOneButton mPlusOneTallButton;
-        PlusOneButton mPlusOneStandardButton;
-        PlusOneButton mPlusOneStandardButtonWithAnnotation;
+        Android.Gms.Plus.PlusOneButton mPlusOneSmallButton;
+        Android.Gms.Plus.PlusOneButton mPlusOneMediumButton;
+        Android.Gms.Plus.PlusOneButton mPlusOneTallButton;
+        Android.Gms.Plus.PlusOneButton mPlusOneStandardButton;
+        Android.Gms.Plus.PlusOneButton mPlusOneStandardButtonWithAnnotation;
 
         protected override void OnCreate (Bundle savedInstanceState) 
         {
@@ -42,11 +40,11 @@ namespace PlusSample
          * mPlusOneSmallButton.setAnnotation(PlusOneButton.ANNOTATION_INLINE);
          * mPlusOneSmallButton.setSize(PlusOneButton.SIZE_MEDIUM);
          */
-            mPlusOneSmallButton = FindViewById<PlusOneButton> (Resource.Id.plus_one_small_button);
-            mPlusOneMediumButton = FindViewById<PlusOneButton> (Resource.Id.plus_one_medium_button);
-            mPlusOneTallButton = FindViewById<PlusOneButton> (Resource.Id.plus_one_tall_button);
-            mPlusOneStandardButton = FindViewById<PlusOneButton> (Resource.Id.plus_one_standard_button);
-            mPlusOneStandardButtonWithAnnotation = FindViewById<PlusOneButton> (Resource.Id.plus_one_standard_ann_button);
+            mPlusOneSmallButton = FindViewById<Android.Gms.Plus.PlusOneButton> (Resource.Id.plus_one_small_button);
+            mPlusOneMediumButton = FindViewById<Android.Gms.Plus.PlusOneButton> (Resource.Id.plus_one_medium_button);
+            mPlusOneTallButton = FindViewById<Android.Gms.Plus.PlusOneButton> (Resource.Id.plus_one_tall_button);
+            mPlusOneStandardButton = FindViewById<Android.Gms.Plus.PlusOneButton> (Resource.Id.plus_one_standard_button);
+            mPlusOneStandardButtonWithAnnotation = FindViewById<Android.Gms.Plus.PlusOneButton> (Resource.Id.plus_one_standard_ann_button);
 
             if (Build.VERSION.SdkInt >= BuildVersionCodes.Honeycomb) {
                 ActionBar.SetDisplayHomeAsUpEnabled (true);

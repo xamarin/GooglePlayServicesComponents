@@ -1,4 +1,4 @@
-@using System.Linq
+﻿@using System.Linq
 @using System.Collections.Generic
 
 @{
@@ -6,9 +6,8 @@
 }
 
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
-
   <PropertyGroup>
-    <TargetFrameworks>@(targetFrameworkMoniker)</TargetFrameworks>
+    <TargetFramework>@(targetFrameworkMoniker)</TargetFramework>
     <IsBindingProject>true</IsBindingProject>
     @if (!string.IsNullOrEmpty(Model.AssemblyName)) {
     <AssemblyName>@(Model.AssemblyName)</AssemblyName>
@@ -79,6 +78,24 @@
   <PropertyGroup>
     <!--
       =================================================================================================================
+      CS warnings (from AndroidX)
+    -->
+    <!--
+      No warnings for:
+       - CS0618: 'member' is obsolete: 'text'
+       - CS0109: The member 'member' does not hide an inherited member. The new keyword is not required
+       - CS0114: 'function1' hides inherited member 'function2'. To make the current method override that implementation, add the override keyword. Otherwise add the new keyword.
+       - CS0628: 'member' : new protected member declared in sealed class
+       - CS0108: 'member1' hides inherited member 'member2'. Use the new keyword if hiding was intended.
+       - CS0809: Obsolete member 'member' overrides non-obsolete member 'member'
+    -->
+    <NoWarn>0618;0109;0114;0628;0108;0809</NoWarn>
+    <!--
+      CS warnings (from AndroidX)
+      =================================================================================================================
+    -->
+    <!--
+      =================================================================================================================
       Xamarin.Android Bindings specific warnings
     -->
     <!--
@@ -105,10 +122,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-      @foreach (var art in @Model.MavenArtifacts) {
+      @foreach (var art in @Model.MavenArtifacts) 
+      {
       <TransformFile Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml" Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml')" />
       }
+      @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.AdsLite")
+      {
       <TransformFile Include="..\..\externals\paramnames.xml" Condition="Exists('..\..\externals\paramnames.xml')" />
+      }
   </ItemGroup>
 
   @*<ItemGroup>
@@ -202,12 +223,22 @@
 
   <ItemGroup>
     <!-- ProjectReference -->
-    @foreach (var dep in @Model.NuGetDependencies) {
-      if (dep.IsProjectReference) {
+    @foreach (var dep in @Model.NuGetDependencies) 
+    {
+      if (dep.IsProjectReference) 
+      {
         <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" />
       }
     }
+
     <!-- some additional fixes -->
+    <!--
+      IProxyApi is moved to com.google.android.gms.play-services-auth-base, but reference causes dependency cycles
+    @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.Base")
+    {
+      <ProjectReference Include="..\..\generated\com.google.android.gms.play-services-auth-base\com.google.android.gms.play-services-auth-base.csproj" />
+    }
+    -->
   </ItemGroup>
 
   <ItemGroup>
@@ -226,6 +257,7 @@
       <PackageReference Include="Xamarin.Google.Guava" Version="27.1.0" />
     }
 
+
   </ItemGroup>
 
 
@@ -240,9 +272,10 @@
   -->
   *@
   <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" Version="0.7.0" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.10.0" />
   </ItemGroup>
-  
+
+  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
 
 </Project>
 

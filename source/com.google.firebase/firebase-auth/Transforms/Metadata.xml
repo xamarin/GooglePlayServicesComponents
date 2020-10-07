@@ -44,4 +44,8 @@
         path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth']/implements"
         />
     
+    <remove-node
+        path="/api/package[@name='com.google.firebase.auth']/class[@name='zzh']"
+        />
+    
 </metadata>

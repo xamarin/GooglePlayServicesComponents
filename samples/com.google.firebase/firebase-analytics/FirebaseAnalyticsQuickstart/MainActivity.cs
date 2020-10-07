@@ -1,14 +1,15 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V7.App;
-using Android.Support.V4.View;
 using Android.Preferences;
 using Android.Views;
 using Android.Content;
 using Java.Util;
 using Android.Support.V4.App;
 using Firebase.Analytics;
+using AndroidX.AppCompat.App;
+using AndroidX.ViewPager.Widget;
+using AndroidX.Fragment.App;
 
 namespace FirebaseAnalyticsQuickstart
 {
@@ -93,7 +94,7 @@ namespace FirebaseAnalyticsQuickstart
         void AskFavoriteFood ()
         {
             var choices = Resources.GetStringArray (Resource.Array.food_items);
-            var ad = new Android.Support.V7.App.AlertDialog.Builder (this)
+            var ad = new AndroidX.AppCompat.App.AlertDialog.Builder (this)
                 .SetCancelable (false)
                 .SetTitle (Resource.String.food_dialog_title)
                 .SetItems (choices, (sender, e) => {
@@ -210,13 +211,13 @@ namespace FirebaseAnalyticsQuickstart
 
             ImageInfo [] infos;
 
-            public ImagePagerAdapter (Android.Support.V4.App.FragmentManager fm, ImageInfo [] infos, Activity parent) : base (fm)
+            public ImagePagerAdapter (AndroidX.Fragment.App.FragmentManager fm, ImageInfo [] infos, Activity parent) : base (fm)
             {
                 this.infos = infos;
                 this.Parent = parent;
             }
 
-            public override Android.Support.V4.App.Fragment GetItem (int position)
+            public override AndroidX.Fragment.App.Fragment GetItem (int position)
             {
                 var info = infos [position];
                 return ImageFragment.NewInstance (info.Image);

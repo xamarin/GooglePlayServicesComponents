@@ -287,5 +287,26 @@
         path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='StringToIntConverter']/implements[@name='com.google.android.gms.common.server.response.FastJsonResponse.FieldConverter']"
         >        
     </remove-node>
-
+    
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zah']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='zaa']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zaj']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zaa']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zak']"
+        >                
+    </remove-node>
+    
 </metadata>

@@ -28,7 +28,7 @@ namespace AndroidPayQuickstart
             return false;
         }
 
-        protected override Android.Support.V4.App.Fragment ResultTargetFragment {
+        protected override AndroidX.Fragment.App.Fragment ResultTargetFragment {
             get {
                 return SupportFragmentManager.FindFragmentById (Resource.Id.login_fragment);
             }

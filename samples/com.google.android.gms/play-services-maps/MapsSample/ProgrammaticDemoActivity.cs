@@ -11,13 +11,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Gms.Maps;
-using Android.Support.V4.App;
 using Android.Gms.Maps.Model;
 
 namespace MapsSample
 {
     [Activity (Label = "Programmatic Demo")]			
-    public class ProgrammaticDemoActivity : FragmentActivity, IOnMapReadyCallback
+    public class ProgrammaticDemoActivity : AndroidX.Fragment.App.FragmentActivity, IOnMapReadyCallback
     {
         const string MAP_FRAGMENT_TAG = "map";
 

@@ -1,17 +1,15 @@
 ﻿using System;
-using Android.Support.V4.App;
-using Android.Gms.Common;
 using Android.App;
 using Android.Widget;
-using Android.Gms.Wallet;
 using Android.Content;
 using Android.Runtime;
-using Android.Gms.Common.Apis;
 using Android.OS;
+using Android.Gms.Common.Apis;
+using Android.Gms.Common;
 
 namespace AndroidPayQuickstart
 {
-    public class FullWalletConfirmationButtonFragment : Android.Support.V4.App.Fragment, IDialogInterfaceOnCancelListener, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
+    public class FullWalletConfirmationButtonFragment : AndroidX.Fragment.App.Fragment, IDialogInterfaceOnCancelListener, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
     {
         const string TAG = "FullWallet";
 
@@ -55,7 +53,7 @@ namespace AndroidPayQuickstart
 
         private ItemInfo mItemInfo;
         private Button mConfirmButton;
-        private MaskedWallet mMaskedWallet;
+        private Android.Gms.Wallet.MaskedWallet mMaskedWallet;
         private int mRetryLoadFullWalletCount = 0;
         private Intent mActivityLaunchIntent;
 
@@ -71,7 +69,7 @@ namespace AndroidPayQuickstart
             }
             mActivityLaunchIntent = Activity.Intent;
             mItemId = mActivityLaunchIntent.GetIntExtra (Constants.EXTRA_ITEM_ID, 0);
-            mMaskedWallet = mActivityLaunchIntent.GetParcelableExtra (Constants.EXTRA_MASKED_WALLET).JavaCast<MaskedWallet> ();
+            mMaskedWallet = mActivityLaunchIntent.GetParcelableExtra (Constants.EXTRA_MASKED_WALLET).JavaCast<Android.Gms.Wallet.MaskedWallet> ();
 
             var accountName = ((BikestoreApplication) Activity.Application).AccountName;
 
@@ -80,9 +78,9 @@ namespace AndroidPayQuickstart
                 .AddConnectionCallbacks (this)
                 .AddOnConnectionFailedListener (this)
                 .SetAccountName (accountName)
-                .AddApi (WalletClass.API, new WalletClass.WalletOptions.Builder ()
+                .AddApi (Android.Gms.Wallet.WalletClass.API, new Android.Gms.Wallet.WalletClass.WalletOptions.Builder ()
                     .SetEnvironment (Constants.WALLET_ENVIRONMENT)
-                    .SetTheme (WalletConstants.ThemeLight)
+                    .SetTheme (Android.Gms.Wallet.WalletConstants.ThemeLight)
                     .Build ())
                 .Build ();
 
@@ -206,7 +204,7 @@ namespace AndroidPayQuickstart
             // retrieve the error code, if available
             int errorCode = -1;
             if (data != null)
-                errorCode = data.GetIntExtra (WalletConstants.ExtraErrorCode, -1);
+                errorCode = data.GetIntExtra (Android.Gms.Wallet.WalletConstants.ExtraErrorCode, -1);
 
             switch (requestCode) {
             case REQUEST_CODE_RESOLVE_ERR:
@@ -219,16 +217,16 @@ namespace AndroidPayQuickstart
             case REQUEST_CODE_RESOLVE_LOAD_FULL_WALLET:
                 switch (resultCode) {
                 case (int)Result.Ok:
-                    if (data.HasExtra(WalletConstants.ExtraFullWallet)) {
-                        FullWallet fullWallet =
-                            data.GetParcelableExtra (WalletConstants.ExtraFullWallet).JavaCast<FullWallet> ();
+                    if (data.HasExtra(Android.Gms.Wallet.WalletConstants.ExtraFullWallet)) {
+                                Android.Gms.Wallet.FullWallet fullWallet =
+                            data.GetParcelableExtra (Android.Gms.Wallet.WalletConstants.ExtraFullWallet).JavaCast<Android.Gms.Wallet.FullWallet> ();
                         // the full wallet can now be used to process the customer's payment
                         // send the wallet info up to server to process, and to get the result
                         // for sending a transaction status
                         fetchTransactionStatus(fullWallet);
-                    } else if (data.HasExtra(WalletConstants.ExtraMaskedWallet)) {
+                    } else if (data.HasExtra(Android.Gms.Wallet.WalletConstants.ExtraMaskedWallet)) {
                         // re-launch the activity with new masked wallet information
-                        mMaskedWallet = data.GetParcelableExtra (WalletConstants.ExtraMaskedWallet).JavaCast<MaskedWallet> ();
+                        mMaskedWallet = data.GetParcelableExtra (Android.Gms.Wallet.WalletConstants.ExtraMaskedWallet).JavaCast<Android.Gms.Wallet.MaskedWallet> ();
                         mActivityLaunchIntent.PutExtra (Constants.EXTRA_MASKED_WALLET, mMaskedWallet.JavaCast<IParcelable>());
 
                         StartActivity(mActivityLaunchIntent);
@@ -245,7 +243,7 @@ namespace AndroidPayQuickstart
             }
         }
 
-        public void UpdateMaskedWallet (MaskedWallet maskedWallet)
+        public void UpdateMaskedWallet (Android.Gms.Wallet.MaskedWallet maskedWallet)
         {
             this.mMaskedWallet = maskedWallet;
         }
@@ -260,7 +258,7 @@ namespace AndroidPayQuickstart
                 mRetryHandler.SendMessageDelayed (m, delay);
                 mRetryCounter++;
             } else {
-                handleError(WalletConstants.ErrorCodeServiceUnavailable);
+                handleError(Android.Gms.Wallet.WalletConstants.ErrorCodeServiceUnavailable);
             }
         }
 
@@ -274,7 +272,7 @@ namespace AndroidPayQuickstart
         {
             Intent intent = new Intent (Activity, typeof (CheckoutActivity));
             intent.AddFlags (ActivityFlags.ClearTop);
-            intent.PutExtra (WalletConstants.ExtraErrorCode, errorCode);
+            intent.PutExtra (Android.Gms.Wallet.WalletConstants.ExtraErrorCode, errorCode);
             intent.PutExtra (Constants.EXTRA_ITEM_ID, mItemId);
             StartActivity (intent);
         }
@@ -286,16 +284,16 @@ namespace AndroidPayQuickstart
                 return;
             }
             switch (errorCode) {
-            case WalletConstants.ErrorCodeSpendingLimitExceeded:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeSpendingLimitExceeded:
                 // may be recoverable if the user tries to lower their charge
                 // take the user back to the checkout page to try to handle
-            case WalletConstants.ErrorCodeInvalidParameters:
-            case WalletConstants.ErrorCodeAuthenticationFailure:
-            case WalletConstants.ErrorCodeBuyerAccountError:
-            case WalletConstants.ErrorCodeMerchantAccountError:
-            case WalletConstants.ErrorCodeServiceUnavailable:
-            case WalletConstants.ErrorCodeUnsupportedApiVersion:
-            case WalletConstants.ErrorCodeUnknown:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeInvalidParameters:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeAuthenticationFailure:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeBuyerAccountError:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeMerchantAccountError:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeServiceUnavailable:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeUnsupportedApiVersion:
+            case Android.Gms.Wallet.WalletConstants.ErrorCodeUnknown:
             default:
                 // unrecoverable error
                 // take the user back to the checkout page to handle these errors
@@ -319,7 +317,7 @@ namespace AndroidPayQuickstart
 
         void getFullWallet() 
         {
-            WalletClass.Payments.LoadFullWallet (mGoogleApiClient,
+            Android.Gms.Wallet.WalletClass.Payments.LoadFullWallet (mGoogleApiClient,
                 WalletUtil.CreateFullWalletRequest (mItemInfo, mMaskedWallet.GoogleTransactionId),
                 REQUEST_CODE_RESOLVE_LOAD_FULL_WALLET);
         }
@@ -328,13 +326,13 @@ namespace AndroidPayQuickstart
      * Here the client should connect to their server, process the credit card/instrument
      * and get back a status indicating whether charging the card was successful or not
      */
-        void fetchTransactionStatus (FullWallet fullWallet) 
+        void fetchTransactionStatus (Android.Gms.Wallet.FullWallet fullWallet) 
         {
             if (mProgressDialog.IsShowing)
                 mProgressDialog.Dismiss();
 
             // Log Stripe payment method token, if it exists
-            PaymentMethodToken token = fullWallet.PaymentMethodToken;
+            Android.Gms.Wallet.PaymentMethodToken token = fullWallet.PaymentMethodToken;
             if (token != null) {
                 // getToken returns a JSON object as a String.  Replace newlines to make LogCat output
                 // nicer.  The 'id' field of the object contains the Stripe token we are interested in.
@@ -365,8 +363,8 @@ namespace AndroidPayQuickstart
      */
         bool checkAndRetryFullWallet (int errorCode) 
         {
-            if ((errorCode == WalletConstants.ErrorCodeServiceUnavailable ||
-                errorCode == WalletConstants.ErrorCodeUnknown) &&
+            if ((errorCode == Android.Gms.Wallet.WalletConstants.ErrorCodeServiceUnavailable ||
+                errorCode == Android.Gms.Wallet.WalletConstants.ErrorCodeUnknown) &&
                 mRetryLoadFullWalletCount < MAX_FULL_WALLET_RETRIES) {
                 mRetryLoadFullWalletCount++;
                 getFullWallet();

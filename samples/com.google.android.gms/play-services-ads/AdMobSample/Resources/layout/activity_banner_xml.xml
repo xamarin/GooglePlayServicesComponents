@@ -15,20 +15,9 @@
      limitations under the License.
 -->
 
-<!--
-moljac 20200508 XML namespaces removed in order to fix
-
-attribute adSize (aka com.xamarin.googleplayservices.admob.sample:adSize) not found.	AdMobSample	
-attribute adUnitId (aka com.xamarin.googleplayservices.admob.sample:adUnitId) not found.	AdMobSample
-
-from:
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-to:
-    xmlns:ads="http://schemas.android.com/apk/libs/com.google.ads"
--->
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/libs/com.google.ads"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">

@@ -6,19 +6,18 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Gms.Common;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Gms.Common;
-using Android.Gms.Common.Apis;
-using Android.Gms.Plus;
 //using CheckResult = Android.Gms.Common.Apis.GoogleApiClient.ServerAuthCodeCallbacksCheckResult;
 
 namespace PlusSample
 {
     [Activity (Label = "Sign In")]			
-    public class SignInActivity : Activity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener //, GoogleApiClient.IServerAuthCodeCallbacks
+    public class SignInActivity : Activity, Android.Gms.Common.Apis.GoogleApiClient.IConnectionCallbacks, Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener
+        // , Android.Gms.Common.Apis.GoogleApiClient.IServerAuthCodeCallbacks
     {
         const string TAG = "SignInActivity";
 
@@ -30,7 +29,7 @@ namespace PlusSample
         const string KEY_NEW_CODE_REQUIRED = "codeRequired";
 
         TextView mSignInStatus;
-        GoogleApiClient mGoogleApiClient;
+        Android.Gms.Common.Apis.GoogleApiClient mGoogleApiClient;
         SignInButton mSignInButton;
         View mSignOutButton;
         View mServerAuthCodeResetButton;
@@ -119,16 +118,23 @@ namespace PlusSample
             mRevokeAccessButton.Click += async delegate {
                 mServerAuthCodeRequired.Set (true);
                 if (mGoogleApiClient.IsConnected) {
-                    var result = await PlusClass.AccountApi.RevokeAccessAndDisconnectAsync (mGoogleApiClient);
+                    // TODO: asyncify
+                    var result =
+                            //await
+                                Android.Gms.Plus.PlusClass.AccountApi
+                                //.RevokeAccessAndDisconnectAsync (mGoogleApiClient);
+                                .RevokeAccessAndDisconnect(mGoogleApiClient);
 
+                    /*
                     if (result.IsSuccess) {
                         mSignInStatus.SetText (Resource.String.revoke_access_status);
                     } else {
                         mSignInStatus.SetText (Resource.String.revoke_access_error_status);
                     }
                     mGoogleApiClient.Reconnect ();
-                       
-                    updateButtons (false /* isSignedIn */);
+                    */
+
+                    updateButtons(false /* isSignedIn */);
                 }
             };
 
@@ -158,9 +164,9 @@ namespace PlusSample
             }
         }
 
-        GoogleApiClient buildGoogleApiClient (bool useProfileScope)
+        Android.Gms.Common.Apis.GoogleApiClient buildGoogleApiClient (bool useProfileScope)
         {
-            var builder = new GoogleApiClient.Builder (this)
+            var builder = new Android.Gms.Common.Apis.GoogleApiClient.Builder (this)
                 .AddConnectionCallbacks (this)
                 .AddOnConnectionFailedListener (this);
 
@@ -170,12 +176,12 @@ namespace PlusSample
             //    builder.RequestServerAuthCode (serverClientId, this);
 
             if (useProfileScope) {
-                builder.AddApi (PlusClass.API)
-                    .AddScope (PlusClass.ScopePlusProfile);
+                builder.AddApi (Android.Gms.Plus.PlusClass.API)
+                    .AddScope (Android.Gms.Plus.PlusClass.ScopePlusProfile);
             } else {
                 //var options = new PlusClass.PlusOptions.Builder ().AddActivityTypes (MomentUtil.ACTIONS).Build ();
-                builder.AddApi (PlusClass.API) //, options)
-                    .AddScope (PlusClass.ScopePlusLogin);
+                builder.AddApi (Android.Gms.Plus.PlusClass.API) //, options)
+                    .AddScope (Android.Gms.Plus.PlusClass.ScopePlusLogin);
             }
 
             return builder.Build ();
@@ -293,7 +299,7 @@ namespace PlusSample
         public void OnConnected (Bundle connectionHint)
         {
             logVerbose ("GoogleApiClient onConnected");
-            var person = PlusClass.PeopleApi.GetCurrentPerson (mGoogleApiClient);
+            var person = Android.Gms.Plus.PlusClass.PeopleApi.GetCurrentPerson (mGoogleApiClient);
             var currentPersonName = person != null
                 ? person.DisplayName
                 : GetString (Resource.String.unknown_person);

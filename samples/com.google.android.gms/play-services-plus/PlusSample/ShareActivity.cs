@@ -7,11 +7,8 @@ using System.Text;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Gms.Common;
-using Android.Gms.Plus;
 
 namespace PlusSample
 {
@@ -44,8 +41,8 @@ namespace PlusSample
             };
 
             mEditSendText = FindViewById<EditText> (Resource.Id.share_prefill_edit);
-            var available = GooglePlayServicesUtil.IsGooglePlayServicesAvailable (this);
-            if (available != ConnectionResult.Success)
+            var available = Android.Gms.Common.GooglePlayServicesUtil.IsGooglePlayServicesAvailable (this);
+            if (available != Android.Gms.Common.ConnectionResult.Success)
                 ShowDialog (DIALOG_GET_GOOGLE_PLAY_SERVICES);
 
             if (Build.VERSION.SdkInt >= BuildVersionCodes.Honeycomb)
@@ -57,12 +54,12 @@ namespace PlusSample
             if (id != DIALOG_GET_GOOGLE_PLAY_SERVICES)
                 return base.OnCreateDialog (id);
 
-            int available = GooglePlayServicesUtil.IsGooglePlayServicesAvailable (this);
-            if (available == ConnectionResult.Success)
+            int available = Android.Gms.Common.GooglePlayServicesUtil.IsGooglePlayServicesAvailable (this);
+            if (available == Android.Gms.Common.ConnectionResult.Success)
                 return null;
             
-            if (GooglePlayServicesUtil.IsUserRecoverableError (available)) {
-                return GooglePlayServicesUtil.GetErrorDialog (
+            if (Android.Gms.Common.GooglePlayServicesUtil.IsUserRecoverableError (available)) {
+                return Android.Gms.Common.GooglePlayServicesUtil.GetErrorDialog (
                     available, this, REQUEST_CODE_GET_GOOGLE_PLAY_SERVICES, this);
             }
 
@@ -103,7 +100,7 @@ namespace PlusSample
             var callToActionDeepLinkId = GetString (Resource.String.plus_example_deep_link_id) + action;
 
             // Create an interactive post builder.
-            var builder = new PlusShare.Builder(this);
+            var builder = new Android.Gms.Plus.PlusShare.Builder(this);
 
             // Set call-to-action metadata.
             builder.AddCallToAction (LABEL_VIEW_ITEM, callToActionUrl, callToActionDeepLinkId);

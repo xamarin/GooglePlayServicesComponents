@@ -242,7 +242,7 @@ namespace Android.Gms.Games.Quest
         }
     }
 
-    public partial class QuestBuffer : IEnumerable<IQuest>
+	public partial class QuestBuffer : IEnumerable<IQuest>
     {
         public IEnumerator<IQuest> GetEnumerator()
         {
@@ -256,18 +256,18 @@ namespace Android.Gms.Games.Quest
     }
 }
 
-//namespace Android.Gms.Games.Video
-//{
-//    public partial class VideoBuffer : IEnumerable<IVideo>
-//    {
-//        public IEnumerator<IVideo> GetEnumerator()
-//        {
-//            return this.ToEnumerable<IVideo> ().GetEnumerator();
-//        }
+namespace Android.Gms.Games.Video
+{
+    //public partial class VideoBuffer : IEnumerable<IVideo>
+    //{
+    //    public IEnumerator<IVideo> GetEnumerator()
+    //    {
+    //        return this.ToEnumerable<IVideo>().GetEnumerator();
+    //    }
 
-//        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-//        {
-//            return this.GetEnumerator();
-//        }
-//    }
-//}
+    //    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+    //    {
+    //        return this.GetEnumerator();
+    //    }
+    //}
+}

@@ -7,11 +7,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Common.Apis;
-using Android.Gms.Drive;
-using Android.Gms.Common;
-using Android.Gms.Drive.Query;
 using System.Collections.Generic;
+using Android.Gms.Common.Apis;
+using Android.Gms.Common;
 
 namespace DriveSample
 {
@@ -39,16 +37,16 @@ namespace DriveSample
             buttonCreate.Click += async delegate {
 
                 // Create the new file info
-                var metadataChangeSet = new MetadataChangeSet.Builder()
+                var metadataChangeSet = new Android.Gms.Drive.MetadataChangeSet.Builder()
                     .SetMimeType ("text/plain")
                     .SetTitle (editTextFilename.Text)
                     .Build();
                 
                 // Get our root folder
-                var rootFolder = DriveClass.DriveApi.GetRootFolder (googleApiClient);
+                var rootFolder = Android.Gms.Drive.DriveClass.DriveApi.GetRootFolder (googleApiClient);
 
                 // Create a blank file
-                await rootFolder.CreateFile (googleApiClient, metadataChangeSet, null).AsAsync<IDriveFolderDriveFileResult> ();
+                await rootFolder.CreateFile (googleApiClient, metadataChangeSet, null).AsAsync<Android.Gms.Drive.IDriveFolderDriveFileResult> ();
 
             };
 
@@ -58,21 +56,21 @@ namespace DriveSample
 
                 // Build a query to search for files of
                 // This will only return files that you created/opened through this app
-                var query = new QueryClass.Builder ()
-                    .AddFilter (Filters.Contains (SearchableField.Title, editTextFilename.Text))
+                var query = new Android.Gms.Drive.Query.QueryClass.Builder ()
+                    .AddFilter (Android.Gms.Drive.Query.Filters.Contains (Android.Gms.Drive.Query.SearchableField.Title, editTextFilename.Text))
                     .Build ();
 
                 // Execute search asynchronously
-                var results = await DriveClass.DriveApi.Query (googleApiClient, query).AsAsync<IDriveApiMetadataBufferResult> ();
+                var results = await Android.Gms.Drive.DriveClass.DriveApi.Query (googleApiClient, query).AsAsync<Android.Gms.Drive.IDriveApiMetadataBufferResult> ();
 
                 // Check for a successful result
                 if (results.Status.IsSuccess) {
 
-                    var files = new List<Metadata> ();
+                    var files = new List<Android.Gms.Drive.Metadata> ();
 
                     // Loop through the results
                     for (var i = 0; i < results.MetadataBuffer.Count; i++)
-                        files.Add (results.MetadataBuffer.Get (i).JavaCast<Metadata> ());
+                        files.Add (results.MetadataBuffer.Get (i).JavaCast<Android.Gms.Drive.Metadata> ());
 
                     listViewResults.Adapter = new ArrayAdapter<string> (
                         this, 
@@ -91,9 +89,9 @@ namespace DriveSample
             buttonSearch.Enabled = false;
 
             googleApiClient = new GoogleApiClient.Builder (this)
-                .AddApi (DriveClass.API)
-                .AddScope (DriveClass.ScopeFile)
-                .AddScope (DriveClass.ScopeAppfolder)
+                .AddApi (Android.Gms.Drive.DriveClass.API)
+                .AddScope (Android.Gms.Drive.DriveClass.ScopeFile)
+                .AddScope (Android.Gms.Drive.DriveClass.ScopeAppfolder)
                 .UseDefaultAccount ()
                 .AddConnectionCallbacks (this)
                 .AddOnConnectionFailedListener (this)
@@ -141,6 +139,7 @@ namespace DriveSample
                 break;
             }
         }
+
     }
 }
 

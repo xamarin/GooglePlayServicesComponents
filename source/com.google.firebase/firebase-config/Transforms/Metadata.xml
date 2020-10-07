@@ -17,4 +17,24 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
 	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
+    
+    <attr
+        path="/api/package[@name='com.google.android.gms.config.proto']" 
+        name="managedName"
+        >
+        Android.Gms.Config.Proto
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.remoteconfig.internal']" 
+        name="managedName"
+        >
+        Firebase.RemoteConfig.Internal
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.remoteconfig.proto']" 
+        name="managedName"
+        >
+        Firebase.RemoteConfig.Proto
+    </attr>
+    
 </metadata>

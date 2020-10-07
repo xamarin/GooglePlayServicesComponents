@@ -6,22 +6,20 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Common.Apis;
-using Android.Gms.Panorama;
 
 namespace PanoramaSample
 {
     [Activity (Label = "PanoramaSample", MainLauncher = true, Icon = "@drawable/icon")]
-    public class PanoramaSampleActivity : Activity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
-    {  
-        GoogleApiClient client;
+    public class PanoramaSampleActivity : Activity, Android.Gms.Common.Apis.GoogleApiClient.IConnectionCallbacks, Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener
+    {
+        Android.Gms.Common.Apis.GoogleApiClient client;
 
         protected override void OnCreate (Bundle savedInstanceState) 
         {
             base.OnCreate(savedInstanceState);
 
-            client = new GoogleApiClient.Builder (this, this, this)
-                .AddApi (PanoramaClass.API)
+            client = new Android.Gms.Common.Apis.GoogleApiClient.Builder (this, this, this)
+                .AddApi (Android.Gms.Panorama.PanoramaClass.API)
                 .Build ();
         }
             
@@ -36,8 +34,14 @@ namespace PanoramaSample
         {
             var uri = Android.Net.Uri.Parse ("android.resource://" + PackageName + "/" + Resource.Raw.pano1);
 
-            var result = await PanoramaClass.PanoramaApi.LoadPanoramaInfoAsync (client, uri);
-                
+            var result =
+                // TODO: asyncify
+                //await
+                    Android.Gms.Panorama.PanoramaClass.PanoramaApi
+                        //.LoadPanoramaInfoAsync (client, uri);
+                        .LoadPanoramaInfo (client, uri);
+
+            /*
             if (result.Status.IsSuccess) {
                 var viewerIntent = result.ViewerIntent;
 
@@ -48,7 +52,7 @@ namespace PanoramaSample
             } else {
                 Console.WriteLine ("error: " + result);
             }
-
+            */
         }
 
         public void OnConnectionSuspended (int cause) 

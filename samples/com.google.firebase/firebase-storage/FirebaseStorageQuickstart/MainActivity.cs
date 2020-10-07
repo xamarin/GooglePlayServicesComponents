@@ -2,21 +2,20 @@
 using Android.Widget;
 using Android.OS;
 using Android.Gms.Tasks;
-using Firebase.Auth;
-using Firebase.Storage;
-using Android.Support.V7.App;
 using Android.Views;
-using System;
 using Android.Content;
-using Android.Support.V4.Content;
 using Android.Util;
-using Java.Lang;
 using Android;
 using Java.IO;
 using Android.Provider;
 using Java.Util;
 using Uri = Android.Net.Uri;
-using AlertDialog = Android.Support.V7.App.AlertDialog;
+using AndroidX.AppCompat.App;
+using AlertDialog = AndroidX.AppCompat.App.AlertDialog;
+using Firebase.Auth;
+using Firebase.Storage;
+using AndroidX.LocalBroadcastManager.Content;
+using AndroidX.Core.Content;
 
 namespace FirebaseStorageQuickstart
 {

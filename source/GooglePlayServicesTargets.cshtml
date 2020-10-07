@@ -32,6 +32,13 @@
   </PropertyGroup>
   }
 
+  <PropertyGroup>
+    <AndroidManifestMerger>manifestmerger.jar</AndroidManifestMerger>
+  </PropertyGroup>  
+  <PropertyGroup>
+    <AndroidFragmentType>AndroidX.Fragment.App.Fragment</AndroidFragmentType>
+  </PropertyGroup>
+
   @foreach (var art in @Model.MavenArtifacts) {
       if (art.MavenArtifactPackaging == "aar") {
         var friendlyArtifactId = art.MavenArtifactId.Replace("-", "");
@@ -57,17 +64,17 @@
 
 
     <ItemGroup>
-        @*
-        <!--
-        NOTE: 
-        Xamarin.Build.Download version set in GooglePlaySericesProjects.cshtml template is 
-        important for attributes in GooglePlaySericesTargets.cshtml template
-        
-        XamarinBuildDownloadAndroidAarLibrary   v >=  0.10.0
-        XamarinBuildDownloadRestoreAssemblyAar  v <   0.10.0
-        -->
-        *@
-      <XamarinBuildDownloadRestoreAssemblyAar Include="$(XamarinBuildDownloadDir)@(xbdAarPath)" />
+      @*
+      <!--
+      NOTE: 
+      Xamarin.Build.Download version set in GooglePlaySericesProjects.cshtml template is 
+      important for attributes in GooglePlaySericesTargets.cshtml template
+      
+      XamarinBuildDownloadAndroidAarLibrary   v >=  0.10.0
+      XamarinBuildDownloadRestoreAssemblyAar  v <   0.10.0
+      -->
+      *@
+      <XamarinBuildDownloadAndroidAarLibrary Include="$(XamarinBuildDownloadDir)@(xbdAarPath)" />
     </ItemGroup>
   </Target>
       }

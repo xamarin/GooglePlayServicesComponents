@@ -6,7 +6,7 @@ namespace FirebaseMessagingQuickstart
 {
     [Service]
     [IntentFilter (new [] { "com.google.firebase.INSTANCE_ID_EVENT" })]
-    public class MyFirebaseIIDService : FirebaseInstanceIdService
+    public class MyFirebaseIIDService : Firebase.Messaging.FirebaseMessagingService
     {
         const string TAG = "MyFirebaseIIDService";
 
@@ -16,15 +16,15 @@ namespace FirebaseMessagingQuickstart
          * is initially generated so this is where you would retrieve the token.
          */
         // [START refresh_token]
-        public override void OnTokenRefresh ()
-        {
-            // Get updated InstanceID token.
-            var refreshedToken = FirebaseInstanceId.Instance.Token;
-            Android.Util.Log.Debug (TAG, "Refreshed token: " + refreshedToken);
+        //public override void OnTokenRefresh ()
+        //{
+        //    // Get updated InstanceID token.
+        //    var refreshedToken = FirebaseInstanceId.Instance.Token;
+        //    Android.Util.Log.Debug (TAG, "Refreshed token: " + refreshedToken);
 
-            // TODO: Implement this method to send any registration to your app's servers.
-            SendRegistrationToServer (refreshedToken);
-        }
+        //    // TODO: Implement this method to send any registration to your app's servers.
+        //    SendRegistrationToServer (refreshedToken);
+        //}
         // [END refresh_token]
 
         /**
@@ -36,6 +36,11 @@ namespace FirebaseMessagingQuickstart
         void SendRegistrationToServer (string token)
         {
             // Add custom implementation, as needed.
+        }
+
+        public override void OnNewToken(String s)
+        {
+            Android.Util.Log.Error("NEW_TOKEN", s);
         }
     }
 }

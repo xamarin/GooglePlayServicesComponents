@@ -6,20 +6,21 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V7.Media;
+using AndroidX.MediaRouter.Media;
+using AndroidX.Fragment.App;
 using Android.Gms.Cast;
 using Android.Gms.Common.Apis;
 
 namespace CastingCall
 {
     [Activity (Label = "Casting Call", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Android.Support.V4.App.FragmentActivity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
+    public class MainActivity : FragmentActivity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
     {
         const string APP_ID = "CC1AD845";
 
         GoogleApiClient googleApiClient;
 
-        Android.Support.V7.App.MediaRouteButton mediaRouteButton;
+        MediaRouteButton mediaRouteButton;
 
         MediaRouter mediaRouter;
         MediaRouteSelector mediaRouteSelector;
@@ -34,7 +35,7 @@ namespace CastingCall
             // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
 
-            mediaRouteButton = FindViewById<Android.Support.V7.App.MediaRouteButton> (Resource.Id.mediaRouteButton);
+            mediaRouteButton = FindViewById<MediaRouteButton> (Resource.Id.mediaRouteButton);
 
             Init ();
         }

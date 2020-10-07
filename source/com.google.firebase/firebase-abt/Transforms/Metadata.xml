@@ -19,5 +19,18 @@
 	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
     <remove-node path="/api/package[@name='com.google.android.gms.internal.firebase_abt']" />
 
+    <attr 
+        path="/api/package[@name='com.google.firebase.abt.component']" 
+        name="managedName"
+        >
+        Firebase.Abt.Component
+    </attr>
+    <attr 
+        path="/api/package[@name='developers.mobile.abt']" 
+        name="managedName"
+        >
+        Developers.Mobile.Abt
+    </attr>
+    
     
 </metadata>

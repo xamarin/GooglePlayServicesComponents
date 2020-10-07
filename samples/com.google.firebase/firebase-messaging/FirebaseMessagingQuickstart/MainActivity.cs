@@ -1,10 +1,9 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V7.App;
-using Firebase.Messaging;
+using AndroidX.AppCompat.App;
 using Firebase.Iid;
-using System.Threading.Tasks;
+using Firebase.Messaging;
 
 namespace FirebaseMessagingQuickstart
 {

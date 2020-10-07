@@ -10,7 +10,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Gms.Plus;
 
 namespace PlusSample
 {    
@@ -24,7 +23,7 @@ namespace PlusSample
         {
             base.OnCreate (savedInstanceState);
 
-            var deepLinkId = PlusShare.GetDeepLinkId (this.Intent);
+            var deepLinkId = Android.Gms.Plus.PlusShare.GetDeepLinkId (this.Intent);
             var target = processDeepLinkId(deepLinkId);
             if (target != null)
                 StartActivity (target);

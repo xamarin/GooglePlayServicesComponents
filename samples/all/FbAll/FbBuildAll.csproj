@@ -29,6 +29,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -45,7 +46,6 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <ConsolePause>false</ConsolePause>
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
@@ -59,9 +59,11 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Build.Download" Version="0.10.0" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
-      <Version>28.0.0.3</Version>
-    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.2.0" />
+    <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.2.0" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0" />
+    <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.1.0" />
+    <PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.7.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -88,4 +90,5 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\..\output\FirebasePackages.targets" />
+  <Import Project="..\..\..\output\PlayServicesPackages.targets" />
 </Project>

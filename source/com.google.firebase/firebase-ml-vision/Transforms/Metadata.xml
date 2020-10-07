@@ -19,6 +19,37 @@
         >
         Firebase.ML.Vision.Document
     </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.automl']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.AutoML
+    </attr>    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.automl.internal']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.AutoML.Internal
+    </attr>    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.barcode.internal']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.Barcode.Internal
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.objects']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.Objects
+    </attr>    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.objects.internal']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.Objects.Internal
+    </attr>
     
     <!--
     <add-node path="/api/package[@name='com.google.android.gms.internal.firebase_ml']">
@@ -29,8 +60,7 @@
     </add-node> 
     -->
     <remove-node
-        path="/api/package[@name='com.google.firebase.ml.barcode']/class[@name='FirebaseVisionBarcodeDetector']/implements[@name='java.io.Closeable']"
-        >
+        path="/api/package[@name='com.google.firebase.ml.barcode']/class[@name='FirebaseVisionBarcodeDetector']/implements[@name='java.io.Closeable']"        >
     </remove-node>
 
     <attr
@@ -145,5 +175,20 @@
         >
         java.util.List        
     </attr>
+    
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.DocumentTextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
     
  </metadata>

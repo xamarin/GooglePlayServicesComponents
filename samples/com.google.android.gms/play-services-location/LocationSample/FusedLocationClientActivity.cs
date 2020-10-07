@@ -7,8 +7,6 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.Threading.Tasks;
-using Android.Gms.Location;
-using Android.Gms.Tasks;
 using Java.Lang;
 
 namespace LocationSample
@@ -19,8 +17,8 @@ namespace LocationSample
 		TextView textLastLocation;
 		TextView textLocationUpdates;
 
-		LocationCallback locationCallback;
-		FusedLocationProviderClient fusedClient;
+        Android.Gms.Location.LocationCallback locationCallback;
+        Android.Gms.Location.FusedLocationProviderClient fusedClient;
 
 		protected override void OnCreate(Bundle bundle)
 		{
@@ -33,8 +31,8 @@ namespace LocationSample
 			textLocationUpdates = FindViewById<TextView>(Resource.Id.textLocationUpdates);
 
 			// Create our client and location callback
-			fusedClient = new FusedLocationProviderClient(this);
-			locationCallback = new LocationCallback();
+			fusedClient = new Android.Gms.Location.FusedLocationProviderClient(this);
+			locationCallback = new Android.Gms.Location.LocationCallback();
 		}
 
 		protected override async void OnResume()
@@ -45,10 +43,10 @@ namespace LocationSample
 			locationCallback.LocationResult += LocationCallback_LocationResult;
 
 			// Build our location request setting interval, priority, etc
-			var locationRequest = new LocationRequest()
+			var locationRequest = new Android.Gms.Location.LocationRequest()
 				.SetInterval(10000)
 				.SetFastestInterval(1000)
-				.SetPriority(LocationRequest.PriorityHighAccuracy);
+				.SetPriority(Android.Gms.Location.LocationRequest.PriorityHighAccuracy);
 
 			// Start receiving location updates
 			await fusedClient.RequestLocationUpdatesAsync(locationRequest, locationCallback);
@@ -74,7 +72,7 @@ namespace LocationSample
 			base.OnPause();
 		}
 
-		void LocationCallback_LocationResult(object sender, LocationCallbackResultEventArgs e)
+		void LocationCallback_LocationResult(object sender, Android.Gms.Location.LocationCallbackResultEventArgs e)
 		{
 			textLocationUpdates.Text = DescribeLocation(e.Result.LastLocation);
 		}

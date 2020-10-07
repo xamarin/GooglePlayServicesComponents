@@ -6,23 +6,19 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Gms.Common.Apis;
 using Android.Graphics;
-using Android.Gms.Games;
-using Android.Gms.Plus;
 using System.Threading.Tasks;
-using Android.Gms.Games.Request;
 using System.Collections.Generic;
 using System.Text;
 using Android.Gms.Common;
-
+using Android.Gms.Games.Request;
 
 [assembly: MetaData ("com.google.android.gms.games.APP_ID", Value="@string/app_id")]
 
 namespace BeGenerous
 {
     [Activity (Label = "BeGenerous", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener, IOnRequestReceivedListener
+    public class MainActivity : Activity, Android.Gms.Common.Apis.GoogleApiClient.IConnectionCallbacks, Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener, Android.Gms.Games.Request.IOnRequestReceivedListener
     {        
         const string TAG = "BeGenerous";
 
@@ -40,7 +36,7 @@ namespace BeGenerous
         const int RC_SIGN_IN = 9001;
 
         // Client used to interact with Google APIs.
-        GoogleApiClient mGoogleApiClient;
+        Android.Gms.Common.Apis.GoogleApiClient mGoogleApiClient;
 
         // Are we currently resolving a connection failure?
         bool mResolvingConnectionFailure = false;
@@ -67,18 +63,18 @@ namespace BeGenerous
             Log ("onCreate()");
 
             // Create the Google Api Client with access to Plus and Games
-            mGoogleApiClient = new GoogleApiClient.Builder (this)
+            mGoogleApiClient = new Android.Gms.Common.Apis.GoogleApiClient.Builder (this)
                 .AddConnectionCallbacks (this)
                 .AddOnConnectionFailedListener (this)
-                .AddApi (PlusClass.API).AddScope (PlusClass.ScopePlusLogin)
-                .AddApi (GamesClass.API).AddScope (GamesClass.ScopeGames)
+                .AddApi (Android.Gms.Plus.PlusClass.API).AddScope (Android.Gms.Plus.PlusClass.ScopePlusLogin)
+                .AddApi (Android.Gms.Games.GamesClass.API).AddScope (Android.Gms.Games.GamesClass.ScopeGames)
                 .Build ();
 
             // Set up click listeners
             FindViewById<ImageButton> (Resource.Id.button_open_inbox).Click += delegate {
                 // show inbox!
                 if (mGoogleApiClient != null && mGoogleApiClient.IsConnected)
-                    StartActivityForResult (GamesClass.Requests.GetInboxIntent (mGoogleApiClient), SHOW_INBOX);
+                    StartActivityForResult (Android.Gms.Games.GamesClass.Requests.GetInboxIntent (mGoogleApiClient), SHOW_INBOX);
             };
             FindViewById<ImageButton> (Resource.Id.button_send_gift).Click += delegate {
                 // send gift!
@@ -104,7 +100,7 @@ namespace BeGenerous
                 // sign out.
                 Log ("Sign-out button clicked");
                 mSignInClicked = false;
-                GamesClass.SignOut (mGoogleApiClient);
+                Android.Gms.Games.GamesClass.SignOut (mGoogleApiClient);
                 mGoogleApiClient.Disconnect ();
                 showSignInBar();
             };
@@ -128,7 +124,7 @@ namespace BeGenerous
             FindViewById (Resource.Id.sign_in_bar).Visibility = ViewStates.Gone;
             FindViewById (Resource.Id.sign_out_bar).Visibility = ViewStates.Visible;
 
-            var player = GamesClass.Players.GetCurrentPlayer (mGoogleApiClient);
+            var player = Android.Gms.Games.GamesClass.Players.GetCurrentPlayer (mGoogleApiClient);
             var url = player.IconImageUrl;
             FindViewById<TextView> (Resource.Id.playerName).Text = player.DisplayName;
             if (!string.IsNullOrEmpty (url)) {
@@ -148,7 +144,7 @@ namespace BeGenerous
                     }
                 });
             }
-            var email = PlusClass.AccountApi.GetAccountName (mGoogleApiClient);
+            var email = Android.Gms.Plus.PlusClass.AccountApi.GetAccountName (mGoogleApiClient);
 
             FindViewById<TextView> (Resource.Id.playerEmail).Text = email;
         }
@@ -185,7 +181,7 @@ namespace BeGenerous
         // Changes the numbers at the top of the layout
         async Task updateRequestCounts() 
         {
-            var result = await GamesClass.Requests.LoadRequestsAsync (mGoogleApiClient, 
+            var result = await Android.Gms.Games.GamesClass.Requests.LoadRequestsAsync (mGoogleApiClient, 
                              Requests.RequestDirectionInbound,
                              GameRequest.TypeAll,
                              Requests.SortOrderExpiringSoonFirst);
@@ -222,13 +218,13 @@ namespace BeGenerous
             showSignOutBar();
             // This is *NOT* required; if you do not register a handler for
             // request events, you will get standard notifications instead.
-            GamesClass.Requests.RegisterRequestListener (mGoogleApiClient, this);
+            Android.Gms.Games.GamesClass.Requests.RegisterRequestListener (mGoogleApiClient, this);
 
             if (connectionHint != null) {
 
                 //var requests = new List<GameRequest> ();
                 // Do we have any requests pending? (getGameRequestsFromBundle never returns null
-                var requests = GamesClass.Requests.GetGameRequestsFromBundle (connectionHint);
+                var requests = Android.Gms.Games.GamesClass.Requests.GetGameRequestsFromBundle (connectionHint);
 
                 if (requests.Count > 0) {
                     // We have requests in onConnected's connectionHint.
@@ -267,7 +263,7 @@ namespace BeGenerous
             showSignInBar();
         }
 
-        bool resolveConnectionFailure (Activity activity, GoogleApiClient client, ConnectionResult result, int requestCode, string fallbackErrorMessage) {
+        bool resolveConnectionFailure (Activity activity, Android.Gms.Common.Apis.GoogleApiClient client, ConnectionResult result, int requestCode, string fallbackErrorMessage) {
 
             if (result.HasResolution) {
                 try {
@@ -323,7 +319,7 @@ namespace BeGenerous
                 default:
                     return;
                 }
-                var intent = GamesClass.Requests.GetSendIntent (mGoogleApiClient, type,
+                var intent = Android.Gms.Games.GamesClass.Requests.GetSendIntent (mGoogleApiClient, type,
                     Encoding.ASCII.GetBytes (""), DEFAULT_LIFETIME, icon, description);
 
                 StartActivityForResult (intent, intentCode);
@@ -373,7 +369,7 @@ namespace BeGenerous
             }
 
             // Accept the requests.
-            var result = await GamesClass.Requests.AcceptRequestsAsync (mGoogleApiClient, requestIds);
+            var result = await Android.Gms.Games.GamesClass.Requests.AcceptRequestsAsync (mGoogleApiClient, requestIds);
 
             var numGifts = 0;
             var numRequests = 0;
@@ -439,16 +435,16 @@ namespace BeGenerous
         {
             switch (requestCode) {
             case SEND_REQUEST_CODE:
-                if ((int)resultCode == GamesActivityResultCodes.ResultSendRequestFailed)
+                if ((int)resultCode == Android.Gms.Games.GamesActivityResultCodes.ResultSendRequestFailed)
                     Toast.MakeText(this, "FAILED TO SEND REQUEST!", ToastLength.Long).Show();
                 break;
             case SEND_GIFT_CODE:
-                if ((int)resultCode == GamesActivityResultCodes.ResultSendRequestFailed)
+                if ((int)resultCode == Android.Gms.Games.GamesActivityResultCodes.ResultSendRequestFailed)
                     Toast.MakeText (this, "FAILED TO SEND GIFT!", ToastLength.Long).Show ();
                 break;
             case SHOW_INBOX:
                 if (resultCode == Result.Ok && data != null) {
-                    handleRequests(GamesClass.Requests.GetGameRequestsFromInboxResponse(data));
+                    handleRequests(Android.Gms.Games.GamesClass.Requests.GetGameRequestsFromInboxResponse(data));
                 } else {
                     Log ("Failed to process inbox result: resultCode = "
                         + resultCode + ", data = "
@@ -470,6 +466,7 @@ namespace BeGenerous
 
             base.OnActivityResult (requestCode, resultCode, data);
         }
+
     }
 }
 
