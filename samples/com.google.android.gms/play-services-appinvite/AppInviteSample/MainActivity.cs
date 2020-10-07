@@ -19,7 +19,7 @@ namespace AppInviteSample
         const int RESOLUTION_CODE = 102;
 
         LocalBroadcastReceiver deepLinkReceiver;
-        GoogleApiClient googleApiClient;
+        Android.Gms.Common.Apis.GoogleApiClient googleApiClient;
 
         protected override void OnCreate (Bundle bundle)
         {
@@ -33,11 +33,11 @@ namespace AppInviteSample
                 SendAppInvite ();
             };
 
-            googleApiClient = new GoogleApiClient.Builder (this)
-                .AddApi (AppInviteClass.API)
+            googleApiClient = new Android.Gms.Common.Apis.GoogleApiClient.Builder (this)
+                .AddApi (Android.Gms.AppInvite.AppInviteClass.API)
                 .AddConnectionCallbacks (async info => {
 
-                    if (AppInviteReferral.HasReferral (Intent))
+                    if (Android.Gms.AppInvite.AppInviteReferral.HasReferral (Intent))
                         await UpdateInvitationStatus (Intent);
                     
                 }, cause => Console.WriteLine ("Connection Suspended: {0}", cause))
@@ -57,7 +57,7 @@ namespace AppInviteSample
             if (bundle == null) {
                 // No savedInstanceState, so it is the first launch of this activity
 
-                if (AppInviteReferral.HasReferral (Intent)) {
+                if (Android.Gms.AppInvite.AppInviteReferral.HasReferral (Intent)) {
                     // In this case the referral data is in the intent launching the MainActivity,
                     // which means this user already had the app installed. We do not have to
                     // register the Broadcast Receiver to listen for Play Store Install information
@@ -86,7 +86,7 @@ namespace AppInviteSample
            
         void SendAppInvite ()
         {
-            var intent = new AppInviteInvitation.IntentBuilder ("Invite Your Friends!")
+            var intent = new Android.Gms.AppInvite.AppInviteInvitation.IntentBuilder ("Invite Your Friends!")
                 .SetMessage ("Check out this awesome app!")
                 .SetDeepLink(Android.Net.Uri.Parse (""))
                 .Build();
@@ -106,7 +106,7 @@ namespace AppInviteSample
                     // The ids array contains the unique invitation ids for each invitation sent
                     // (one for each contact select by the user). You can use these for analytics
                     // as the ID will be consistent on the sending and receiving devices.
-                    var ids = AppInviteInvitation.GetInvitationIds ((int)resultCode, data);
+                    var ids = Android.Gms.AppInvite.AppInviteInvitation.GetInvitationIds ((int)resultCode, data);
 
                     Log.Debug (TAG, string.Format ("You Sent {0} App Invitations!", ids.Length));
                 } else {
@@ -134,35 +134,41 @@ namespace AppInviteSample
             // is found
             deepLinkReceiver = new LocalBroadcastReceiver {
                 OnReceiveHandler = (context, intent) => {
-                    if (AppInviteReferral.HasReferral (intent))
+                    if (Android.Gms.AppInvite.AppInviteReferral.HasReferral (intent))
                         LaunchDeepLinkActivity (intent);
                 }
             };
 
             var intentFilter = new IntentFilter (GetString (Resource.String.action_deep_link));
 
-            LocalBroadcastManager.GetInstance (this).RegisterReceiver (deepLinkReceiver, intentFilter);
+            AndroidX.LocalBroadcastManager.Content.LocalBroadcastManager.GetInstance (this).RegisterReceiver (deepLinkReceiver, intentFilter);
         }
 
         void UnregisterDeepLinkReceiver ()
         {
             if (deepLinkReceiver != null)
-                LocalBroadcastManager.GetInstance (this).UnregisterReceiver (deepLinkReceiver);
+                AndroidX.LocalBroadcastManager.Content.LocalBroadcastManager.GetInstance (this).UnregisterReceiver (deepLinkReceiver);
         }
 
         async Task UpdateInvitationStatus (Intent intent) 
         {
-            var invitationId = AppInviteReferral.GetInvitationId(intent);
+            var invitationId = Android.Gms.AppInvite.AppInviteReferral.GetInvitationId(intent);
 
             // Note: these  calls return PendingResult(s), so one could also wait to see
             // if this succeeds instead of using fire-and-forget, as is shown here
-            if (AppInviteReferral.IsOpenedFromPlayStore (intent))
-                await AppInviteClass.AppInviteApi.UpdateInvitationOnInstallAsync (googleApiClient, invitationId);            
+            if (Android.Gms.AppInvite.AppInviteReferral.IsOpenedFromPlayStore (intent))
+                //await
+                    Android.Gms.AppInvite.AppInviteClass.AppInviteApi
+                    //.UpdateInvitationOnInstallAsync (googleApiClient, invitationId);            
+                    .UpdateInvitationOnInstall(googleApiClient, invitationId);
 
             // If your invitation contains deep link information such as a coupon code, you may
             // want to wait to call `convertInvitation` until the time when the user actually
             // uses the deep link data, rather than immediately upon receipt
-            await AppInviteClass.AppInviteApi.ConvertInvitationAsync (googleApiClient, invitationId);
+            //await
+                Android.Gms.AppInvite.AppInviteClass.AppInviteApi
+                    //.ConvertInvitationAsync (googleApiClient, invitationId);
+                    .ConvertInvitation(googleApiClient, invitationId);
         }
     }
 

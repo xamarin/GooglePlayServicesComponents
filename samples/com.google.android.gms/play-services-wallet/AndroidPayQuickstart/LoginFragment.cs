@@ -2,10 +2,11 @@
 using Android.OS;
 using Android.App;
 using Android.Widget;
+using Android.Gms.Common;
 
 namespace AndroidPayQuickstart
 {
-    public class LoginFragment : Android.Support.V4.App.Fragment, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
+    public class LoginFragment : AndroidX.Fragment.App.Fragment, Android.Gms.Common.Apis.GoogleApiClient.IConnectionCallbacks, Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener
     {
         public const int REQUEST_CODE_RESOLVE_ERR = 1005;
         const string KEY_SIGNIN_BUTTON_CLICKED = "KEY_SIGNIN_BUTTON_CLICKED";
@@ -14,7 +15,7 @@ namespace AndroidPayQuickstart
         ProgressDialog mProgressDialog;
         bool mSignInButtonClicked = false;
         bool mIsResolving = false;
-        GoogleApiClient mGoogleApiClient;
+        Android.Gms.Common.Apis.GoogleApiClient mGoogleApiClient;
         ConnectionResult mConnectionResult;
         int mLoginAction;
 
@@ -38,13 +39,13 @@ namespace AndroidPayQuickstart
             if (args != null)
                 mLoginAction = args.GetInt (LoginActivity.EXTRA_ACTION);
             
-            var options = new PlusClass.PlusOptions.Builder ().Build ();
-            mGoogleApiClient = new GoogleApiClient.Builder (Activity)
-                .AddApi (PlusClass.API, options)
+            var options = new Android.Gms.Plus.PlusClass.PlusOptions.Builder ().Build ();
+            mGoogleApiClient = new Android.Gms.Common.Apis.GoogleApiClient.Builder (Activity)
+                .AddApi (Android.Gms.Plus.PlusClass.API, options)
                 .AddConnectionCallbacks (this)
                 .AddOnConnectionFailedListener(this)
-                .AddScope (PlusClass.ScopePlusProfile)
-                .AddScope (new Scope (WALLET_SCOPE))
+                .AddScope (Android.Gms.Plus.PlusClass.ScopePlusProfile)
+                .AddScope (new Android.Gms.Common.Apis.Scope(WALLET_SCOPE))
                 .Build ();
         }
 
@@ -160,8 +161,8 @@ namespace AndroidPayQuickstart
         void logIn ()
         {
             if (mGoogleApiClient.IsConnected) {
-                var user = PlusClass.PeopleApi.GetCurrentPerson (mGoogleApiClient);
-                var accountName = PlusClass.AccountApi.GetAccountName (mGoogleApiClient);
+                var user = Android.Gms.Plus.PlusClass.PeopleApi.GetCurrentPerson (mGoogleApiClient);
+                var accountName = Android.Gms.Plus.PlusClass.AccountApi.GetAccountName (mGoogleApiClient);
                 if (user == null) {
                     Toast.MakeText (Activity, Resource.String.network_error, ToastLength.Long).Show ();
                 } else {
@@ -177,7 +178,7 @@ namespace AndroidPayQuickstart
         void logOut ()
         {
             if (mGoogleApiClient.IsConnected) {
-                PlusClass.AccountApi.ClearDefaultAccount (mGoogleApiClient);
+                Android.Gms.Plus.PlusClass.AccountApi.ClearDefaultAccount (mGoogleApiClient);
                 ((BikestoreApplication) Activity.Application).Logout ();
                 mGoogleApiClient.Disconnect ();
                 Toast.MakeText (Activity, GetString (Resource.String.logged_out), ToastLength.Long).Show();
@@ -205,6 +206,7 @@ namespace AndroidPayQuickstart
             if (mProgressDialog != null && mProgressDialog.IsShowing)
                 mProgressDialog.Dismiss();
         }
+
     }
 }
 

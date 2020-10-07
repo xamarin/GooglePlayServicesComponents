@@ -3,18 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanoramaSample", "PanoramaSample\PanoramaSample.csproj", "{AEBA328F-E4A7-4E7E-AAD3-2808A5118FCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanoramaSample.UITests", "PanoramaSample.UITests\PanoramaSample.UITests.csproj", "{1FDCA5DE-4823-4D1B-B477-1189AF6EAFDB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1FDCA5DE-4823-4D1B-B477-1189AF6EAFDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1FDCA5DE-4823-4D1B-B477-1189AF6EAFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1FDCA5DE-4823-4D1B-B477-1189AF6EAFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1FDCA5DE-4823-4D1B-B477-1189AF6EAFDB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AEBA328F-E4A7-4E7E-AAD3-2808A5118FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AEBA328F-E4A7-4E7E-AAD3-2808A5118FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEBA328F-E4A7-4E7E-AAD3-2808A5118FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU

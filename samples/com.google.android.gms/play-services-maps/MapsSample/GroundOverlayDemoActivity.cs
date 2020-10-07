@@ -10,7 +10,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V4.App;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Java.Interop;
@@ -18,7 +17,7 @@ using Java.Interop;
 namespace MapsSample
 {
     [Activity (Label = "Ground Overlay Demo")]			
-    public class GroundOverlayDemoActivity : FragmentActivity, IOnMapReadyCallback
+    public class GroundOverlayDemoActivity : AndroidX.Fragment.App.FragmentActivity, IOnMapReadyCallback
     {
         const int TRANSPARENCY_MAX = 100;
         static readonly LatLng NEWARK = new LatLng (40.714086, -74.228697);

@@ -10,16 +10,15 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V4.App;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 
 namespace MapsSample
 {
     [Activity (Label = "Lite List Demo")]			
-    public class LiteListDemoActivity : FragmentActivity
+    public class LiteListDemoActivity : AndroidX.Fragment.App.FragmentActivity
     {
-        Android.Support.V4.App.ListFragment list;
+        AndroidX.Fragment.App.ListFragment list;
         MapAdapter adapter;
 
         protected override void OnCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ namespace MapsSample
 
             // Set a custom list adapter for a list of locations
             adapter = new MapAdapter (this, LIST_LOCATIONS);
-            list = SupportFragmentManager.FindFragmentById (Resource.Id.list).JavaCast<Android.Support.V4.App.ListFragment> ();
+            list = SupportFragmentManager.FindFragmentById (Resource.Id.list).JavaCast<AndroidX.Fragment.App.ListFragment> ();
             list.ListAdapter = adapter;
 
             // Set a RecyclerListener to clean up MapView from ListView

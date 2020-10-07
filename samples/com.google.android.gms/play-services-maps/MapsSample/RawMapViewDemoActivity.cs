@@ -10,14 +10,13 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V4.App;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 
 namespace MapsSample
 {
     [Activity (Label = "Raw MapView Demo")]			
-    public class RawMapViewDemoActivity : FragmentActivity, IOnMapReadyCallback
+    public class RawMapViewDemoActivity : AndroidX.Fragment.App.FragmentActivity, IOnMapReadyCallback
     {
         private MapView mapView;
 

@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 namespace LocationSample
 {
 	[Activity(Label = "Fused Location Provider")]
-	public class FusedLocationProviderActivity : Activity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener, ILocationListener
-	{
+	public class FusedLocationProviderActivity : Activity, Android.Gms.Common.Apis.GoogleApiClient.IConnectionCallbacks, Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener, Android.Gms.Location.ILocationListener
+    {
 		TextView textLastLocation;
 		TextView textLocationUpdates;
 
-		GoogleApiClient googleApiClient;
+        Android.Gms.Common.Apis.GoogleApiClient googleApiClient;
 
 		protected override void OnCreate(Bundle bundle)
 		{
@@ -28,7 +28,7 @@ namespace LocationSample
 			textLastLocation = FindViewById<TextView>(Resource.Id.textLastLocation);
 			textLocationUpdates = FindViewById<TextView>(Resource.Id.textLocationUpdates);
 
-			googleApiClient = new GoogleApiClient.Builder(this)
+			googleApiClient = new Android.Gms.Common.Apis.GoogleApiClient.Builder(this)
 				.AddApi(Android.Gms.Location.LocationServices.API)
 				.AddConnectionCallbacks(this)
 				.AddOnConnectionFailedListener(this)
@@ -39,7 +39,7 @@ namespace LocationSample
 		public async void OnConnected(Bundle connectionHint)
 		{
 			// Get Last known location
-			var lastLocation = LocationServices.FusedLocationApi.GetLastLocation(googleApiClient);
+			var lastLocation = Android.Gms.Location.LocationServices.FusedLocationApi.GetLastLocation(googleApiClient);
 
 			textLastLocation.Text = lastLocation == null ? "NULL" : DescribeLocation(lastLocation);
 
@@ -49,45 +49,57 @@ namespace LocationSample
 		async Task RequestLocationUpdates()
 		{
 			// Describe our location request
-			var locationRequest = new LocationRequest()
+			var locationRequest = new Android.Gms.Location.LocationRequest()
 				.SetInterval(10000)
 				.SetFastestInterval(1000)
-				.SetPriority(LocationRequest.PriorityHighAccuracy);
+				.SetPriority(Android.Gms.Location.LocationRequest.PriorityHighAccuracy);
 
 			// Check to see if we can request updates first
 			if (await CheckLocationAvailability(locationRequest))
 			{
 
 				// Request updates
-				await LocationServices.FusedLocationApi.RequestLocationUpdates(googleApiClient,
-					locationRequest,
-					this);
+				//await
+					Android.Gms.Location.LocationServices.FusedLocationApi.RequestLocationUpdates
+					(
+						googleApiClient,
+						locationRequest,
+						this
+					);
 			}
 		}
 
-		async Task<bool> CheckLocationAvailability(LocationRequest locationRequest)
+		async Task<bool> CheckLocationAvailability(Android.Gms.Location.LocationRequest locationRequest)
 		{
 			// Build a new request with the given location request
-			var locationSettingsRequest = new LocationSettingsRequest.Builder()
+			var locationSettingsRequest = new Android.Gms.Location.LocationSettingsRequest.Builder()
 				.AddLocationRequest(locationRequest)
 				.Build();
 
+
+			//TODO: async issues
 			// Ask the Settings API if we can fulfill this request
-			var locationSettingsResult = await LocationServices.SettingsApi.CheckLocationSettingsAsync(googleApiClient, locationSettingsRequest);
+			var locationSettingsResult =
+				//await
+					Android.Gms.Location.LocationServices.SettingsApi
+						//.CheckLocationSettingsAsync(googleApiClient, locationSettingsRequest);
+						.CheckLocationSettings(googleApiClient, locationSettingsRequest);
 
 
 			// If false, we might be able to resolve it by showing the location settings 
 			// to the user and allowing them to change the settings
+			/*
 			if (!locationSettingsResult.Status.IsSuccess)
 			{
 
-				if (locationSettingsResult.Status.StatusCode == LocationSettingsStatusCodes.ResolutionRequired)
+				if (locationSettingsResult.Status.StatusCode == Android.Gms.Location.LocationSettingsStatusCodes.ResolutionRequired)
 					locationSettingsResult.Status.StartResolutionForResult(this, 101);
 				else
 					Toast.MakeText(this, "Location Services Not Available for the given request.", ToastLength.Long).Show();
 
 				return false;
 			}
+			*/
 
 			return true;
 		}
