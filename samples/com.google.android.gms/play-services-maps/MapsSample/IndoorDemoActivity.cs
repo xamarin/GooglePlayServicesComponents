@@ -18,7 +18,7 @@ using Java.Interop;
 namespace MapsSample
 {
     [Activity (Label = "Indoor Demo")]			
-    public class IndoorDemoActivity : FragmentActivity, IOnMapReadyCallback
+    public class IndoorDemoActivity : AndroidX.Fragment.App.FragmentActivity, IOnMapReadyCallback
     {
         GoogleMap map;
         bool showLevelPicker = true;

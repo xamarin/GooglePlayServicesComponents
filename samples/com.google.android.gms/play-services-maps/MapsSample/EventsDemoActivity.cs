@@ -10,13 +10,12 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V4.App;
 using Android.Gms.Maps;
 
 namespace MapsSample
 {
     [Activity (Label = "Events Demo")]			
-    public class EventsDemoActivity : FragmentActivity, IOnMapReadyCallback
+    public class EventsDemoActivity : AndroidX.Fragment.App.FragmentActivity, IOnMapReadyCallback
     {
         TextView tapTextView;
         TextView cameraTextView;

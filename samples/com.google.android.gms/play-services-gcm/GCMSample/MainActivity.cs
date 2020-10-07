@@ -67,7 +67,7 @@ namespace GCMSample
 
         bool SendUpstreamMessage (string msg)
         {
-            var gcm = GoogleCloudMessaging.GetInstance (this);
+            var gcm = Android.Gms.Gcm.GoogleCloudMessaging.GetInstance (this);
 
             try {
                 var data = new Bundle();
@@ -102,8 +102,8 @@ namespace GCMSample
         protected override void OnHandleIntent (Intent intent)
         {
             // Get the new token and send to the server
-            var instanceID = InstanceID.GetInstance (Application.Context);
-            var token = instanceID.GetToken (GCM_SENDER_ID, GoogleCloudMessaging.InstanceIdScope);
+            var instanceID = Android.Gms.Iid.InstanceID.GetInstance (Application.Context);
+            var token = instanceID.GetToken (GCM_SENDER_ID, Android.Gms.Gcm.GoogleCloudMessaging.InstanceIdScope);
 
             // Fire the event for any UI subscribed to it
             TokenRefreshed?.Invoke (token);
@@ -113,8 +113,8 @@ namespace GCMSample
     }
 
     [Service (Exported=false)]
-    [IntentFilter (new [] { InstanceID.IntentFilterAction })]
-    public class MyInstanceIDListenerService : InstanceIDListenerService
+    [IntentFilter (new [] { Android.Gms.Iid.InstanceID.IntentFilterAction })]
+    public class MyInstanceIDListenerService : Android.Gms.Iid.InstanceIDListenerService
     {
         public override void OnTokenRefresh ()
         {
@@ -123,8 +123,8 @@ namespace GCMSample
     }
 
     [Service (Exported=false)]
-    [IntentFilter (new [] { GoogleCloudMessaging.IntentFilterActionReceive })]
-    public class MyGcmListenerService : GcmListenerService
+    [IntentFilter (new [] { Android.Gms.Gcm.GoogleCloudMessaging.IntentFilterActionReceive })]
+    public class MyGcmListenerService : Android.Gms.Gcm.GcmListenerService
     {
         const string TAG = "GCMSAMPLE";
 

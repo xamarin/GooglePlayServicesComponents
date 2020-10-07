@@ -3,18 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalyticsSample", "AnalyticsSample\AnalyticsSample.csproj", "{D6E0205D-4B28-4CB9-99E3-D10C56FB5682}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalyticsSample.UITests", "AnalyticsSample.UITests\AnalyticsSample.UITests.csproj", "{21EF32D4-61EC-4C45-9B25-1044926A8EB0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{21EF32D4-61EC-4C45-9B25-1044926A8EB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21EF32D4-61EC-4C45-9B25-1044926A8EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21EF32D4-61EC-4C45-9B25-1044926A8EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21EF32D4-61EC-4C45-9B25-1044926A8EB0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D6E0205D-4B28-4CB9-99E3-D10C56FB5682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D6E0205D-4B28-4CB9-99E3-D10C56FB5682}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6E0205D-4B28-4CB9-99E3-D10C56FB5682}.Release|Any CPU.ActiveCfg = Release|Any CPU

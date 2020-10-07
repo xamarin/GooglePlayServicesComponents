@@ -14,16 +14,16 @@ namespace NearbySample
 {
     [Activity (Label = "Nearby Sample", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity,
-        GoogleApiClient.IConnectionCallbacks,
-        GoogleApiClient.IOnConnectionFailedListener,
-        IConnectionsMessageListener
+        Android.Gms.Common.Apis.GoogleApiClient.IConnectionCallbacks,
+        Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener,
+        Android.Gms.Nearby.Connection.IConnectionsMessageListener
     {        
 
-        class ConnectionResponseCallback : Java.Lang.Object, IConnectionsConnectionResponseCallback
+        class ConnectionResponseCallback : Java.Lang.Object, Android.Gms.Nearby.Connection.IConnectionsConnectionResponseCallback
         {
-            public Action<string, Statuses, byte[]> OnConnectionResponseHandler { get; set; }
+            public Action<string, Android.Gms.Common.Apis.Statuses, byte[]> OnConnectionResponseHandler { get; set; }
 
-            public void OnConnectionResponse (string endpointId, Statuses status, byte[] payload)
+            public void OnConnectionResponse (string endpointId, Android.Gms.Common.Apis.Statuses status, byte[] payload)
             {
                 var h = OnConnectionResponseHandler;
                 if (h != null)
@@ -42,7 +42,7 @@ namespace NearbySample
         const long TIMEOUT_DISCOVER = 0L; //1000L * 30L;
 
         /** GoogleApiClient for connecting to the Nearby Connections API **/
-        GoogleApiClient mGoogleApiClient;
+        Android.Gms.Common.Apis.GoogleApiClient mGoogleApiClient;
 
         /** Views and Dialogs **/
         TextView mDebugInfo;
@@ -85,10 +85,10 @@ namespace NearbySample
             // to use a separate Google API Client for Nearby Connections.  This API does not
             // require the user to authenticate so it can be used even when the user does not want to
             // sign in or sign-in has failed.
-            mGoogleApiClient = new GoogleApiClient.Builder (this)
+            mGoogleApiClient = new Android.Gms.Common.Apis.GoogleApiClient.Builder (this)
                 .AddConnectionCallbacks(this)
                 .AddOnConnectionFailedListener(this)
-                .AddApi(NearbyClass.CONNECTIONS_API)
+                .AddApi(Android.Gms.Nearby.NearbyClass.CONNECTIONS_API)
                 .Build();
         }
 
@@ -146,22 +146,30 @@ namespace NearbySample
 
             // Advertising with an AppIdentifer lets other devices on the network discover
             // this application and prompt the user to install the application.
-            var appIdentifierList = new List<AppIdentifier> ();
-            appIdentifierList.Add (new AppIdentifier (this.PackageName));
-            var appMetadata = new AppMetadata(appIdentifierList);
+            var appIdentifierList = new List<Android.Gms.Nearby.Connection.AppIdentifier> ();
+            appIdentifierList.Add (new Android.Gms.Nearby.Connection.AppIdentifier (this.PackageName));
+            var appMetadata = new Android.Gms.Nearby.Connection.AppMetadata(appIdentifierList);
 
             // Advertise for Nearby Connections. This will broadcast the service id defined in
             // AndroidManifest.xml. By passing 'null' for the name, the Nearby Connections API
             // will construct a default name based on device model such as 'LGE Nexus 5'.
             string name = null;
-            var result = await NearbyClass.Connections.StartAdvertisingAsync (
-				mGoogleApiClient, name, appMetadata, TIMEOUT_ADVERTISE, new MyConnectionRequestListener
-				{
-					ConnectionRequestHandler = OnConnectionRequest
-				});
+
+            // TODO: asyncify
+            var result =
+                //await
+                Android.Gms.Nearby.NearbyClass.Connections
+                        //.StartAdvertisingAsync(
+                        .StartAdvertising(
+                                                mGoogleApiClient, name, appMetadata, TIMEOUT_ADVERTISE,
+                                                new MyConnectionRequestListener
+				                                {
+					                                ConnectionRequestHandler = OnConnectionRequest
+				                                });
             
             Log ("startAdvertising:onResult:" + result);
 
+            /*
             if (result.Status.IsSuccess) {
                 Log("startAdvertising:onResult: SUCCESS");
 
@@ -177,6 +185,7 @@ namespace NearbySample
                     UpdateViewVisibility (NearbyConnectionState.Ready);
                 }
             }
+            */
         }
 
         /**
@@ -194,8 +203,18 @@ namespace NearbySample
                 return;
             }
 
-			var status = await NearbyClass.Connections.StartDiscoveryAsync (mGoogleApiClient, serviceId, TIMEOUT_DISCOVER, new MyEndpointDiscoveryListener { EndpointLostHandler = OnEndpointLost, EndpointFoundHandler = OnEndpointFound });
+			var status =
+                // TODO: asyncify
+                //await
+                    Android.Gms.Nearby.NearbyClass.Connections
+                            //.StartDiscoveryAsync
+                            .StartDiscovery
+                                (
+                                    mGoogleApiClient, serviceId, TIMEOUT_DISCOVER,
+                                    new MyEndpointDiscoveryListener { EndpointLostHandler = OnEndpointLost, EndpointFoundHandler = OnEndpointFound }
+                                );
 
+            /*
             if (status.IsSuccess) {
                 Log("startDiscovery:onResult: SUCCESS");
 
@@ -210,6 +229,7 @@ namespace NearbySample
                 else
                     UpdateViewVisibility(NearbyConnectionState.Ready);
             }
+            */
         }
 
         /**
@@ -225,7 +245,7 @@ namespace NearbySample
             // delivered faster than reliable messages.
             var msgBytes = System.Text.Encoding.UTF8.GetBytes (mMessageText.Text);
 
-            NearbyClass.Connections.SendReliableMessage (mGoogleApiClient, mOtherEndpointId, msgBytes);
+            Android.Gms.Nearby.NearbyClass.Connections.SendReliableMessage (mGoogleApiClient, mOtherEndpointId, msgBytes);
 
             mMessageText.Text = string.Empty;
         }
@@ -261,9 +281,19 @@ namespace NearbySample
                 }
             };
 
-            var status = await NearbyClass.Connections.SendConnectionRequestAsync (mGoogleApiClient, myName, endpointId, myPayload, connectionResponseCallback, this);
-
+            var status =
+                    // TODO: asyncify
+                    //await
+                        Android.Gms.Nearby.NearbyClass.Connections
+                                //.SendConnectionRequestAsync
+                                .SendConnectionRequest
+                                        (
+                                            mGoogleApiClient, myName, endpointId, myPayload, connectionResponseCallback,
+                                            this
+                                        );
+            /*
             Log ("connectTo: " + status.IsSuccess);
+            */
         }
 
         public void OnConnectionRequest (string endpointId, string endpointName, byte[] payload) 
@@ -279,8 +309,17 @@ namespace NearbySample
                 .SetPositiveButton ("Connect", async delegate {
 
                     //byte[] payload = null;
-                    var status = await NearbyClass.Connections.AcceptConnectionRequestAsync (mGoogleApiClient, endpointId, payload, this);
-                            
+                    var status =
+                        // TODO: asyncify
+                        //await
+                            Android.Gms.Nearby.NearbyClass.Connections
+                                            .AcceptConnectionRequest
+                                            //.AcceptConnectionRequestAsync
+                                            (
+                                                mGoogleApiClient, endpointId, payload, this
+                                            );
+
+                    /*
                     if (status.IsSuccess) {
                         Log("acceptConnectionRequest: SUCCESS");
 
@@ -288,10 +327,18 @@ namespace NearbySample
                         UpdateViewVisibility (NearbyConnectionState.Connected);
                     } else {
                         Log("acceptConnectionRequest: FAILURE");
-                    }                
+                    }
+                    */
                 })
                 .SetNegativeButton("No", async delegate {
-                    await NearbyClass.Connections.RejectConnectionRequestAsync (mGoogleApiClient, endpointId);
+                    // TODO: asyncify
+                    //await
+                    Android.Gms.Nearby.NearbyClass.Connections
+                                .RejectConnectionRequest
+                                //.RejectConnectionRequestAsync
+                                        (
+                                            mGoogleApiClient, endpointId
+                                        );
                 }).Create ();
 
             mConnectionRequestDialog.Show ();
@@ -419,8 +466,8 @@ namespace NearbySample
         Connected = 1027
     }
 
-	public class MyConnectionRequestListener : ConnectionsConnectionRequestListener
-	{
+	public class MyConnectionRequestListener : Android.Gms.Nearby.Connection.ConnectionsConnectionRequestListener
+    {
 		public Action<string, string, byte[]> ConnectionRequestHandler { get; set; }
 
 		public override void OnConnectionRequest(string remoteEndpointId, string remoteEndpointName, byte[] handshakeData)
@@ -429,8 +476,8 @@ namespace NearbySample
 		}
 	}
 
-	public class MyEndpointDiscoveryListener : ConnectionsEndpointDiscoveryListener
-	{
+	public class MyEndpointDiscoveryListener : Android.Gms.Nearby.Connection.ConnectionsEndpointDiscoveryListener
+    {
 		public Action<string, string, string> EndpointFoundHandler { get; set; }
 		public override void OnEndpointFound(string endpointId, string serviceId, string name)
 		{

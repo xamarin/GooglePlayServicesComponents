@@ -11,14 +11,13 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Gms.Maps;
-using Android.Support.V4.App;
 using Android.Gms.Maps.Model;
 using Java.Interop;
 
 namespace MapsSample
 {
     [Activity (Label = "Camera Demo")]			
-    public class CameraDemoActivity : FragmentActivity, IOnMapReadyCallback
+    public class CameraDemoActivity : AndroidX.Fragment.App.FragmentActivity, IOnMapReadyCallback
     {
         const int SCROLL_BY_PX = 100;
 

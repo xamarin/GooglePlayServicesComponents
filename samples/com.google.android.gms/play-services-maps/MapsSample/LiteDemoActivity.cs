@@ -10,7 +10,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V4.App;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Java.Interop;
@@ -18,7 +17,7 @@ using Java.Interop;
 namespace MapsSample
 {
     [Activity (Label = "Lite Demo")]			
-    public class LiteDemoActivity : FragmentActivity, IOnMapReadyCallback
+    public class LiteDemoActivity : AndroidX.Fragment.App.FragmentActivity, IOnMapReadyCallback
     {
         static readonly LatLng BRISBANE = new LatLng(-27.47093, 153.0235);
         static readonly LatLng MELBOURNE = new LatLng(-37.81319, 144.96298);

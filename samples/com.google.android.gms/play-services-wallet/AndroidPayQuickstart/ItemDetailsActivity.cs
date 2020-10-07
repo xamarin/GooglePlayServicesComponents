@@ -16,11 +16,11 @@ namespace AndroidPayQuickstart
         protected override void OnResume ()
         {
             base.OnResume ();
-        
-            ActivityCompat.InvalidateOptionsMenu (this);
+
+            AndroidX.Core.App.ActivityCompat.InvalidateOptionsMenu (this);
         }
 
-        protected override Fragment ResultTargetFragment {
+        protected override AndroidX.Fragment.App.Fragment ResultTargetFragment {
             get { return null; }
         }
     }
