@@ -15,8 +15,9 @@ using Google.Android.Material.Snackbar;
 namespace AdsLiteSample
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AdActivity      
+    public class MainActivity : Activity // AdActivity (final in AndroidX)
     {
+        AdActivity adActivity = new AdActivity();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

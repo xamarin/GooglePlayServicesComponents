@@ -15,11 +15,11 @@ namespace AppInviteSample
         public override void OnReceive (Context context, Intent intent) 
         {
             // Create deep link intent with correct action and add play store referral information
-            var deepLinkIntent = AppInviteReferral.AddPlayStoreReferrerToIntent (intent,
-                new Intent(context.GetString(Resource.String.action_deep_link)));            
+            var deepLinkIntent = Android.Gms.AppInvite.AppInviteReferral.AddPlayStoreReferrerToIntent (intent,
+                new Intent(context.GetString(Resource.String.action_deep_link)));
 
             // Let any listeners know about the change
-            LocalBroadcastManager.GetInstance (context).SendBroadcast (deepLinkIntent);
+            AndroidX.LocalBroadcastManager.Content.LocalBroadcastManager.GetInstance (context).SendBroadcast (deepLinkIntent);
         }
     }
 

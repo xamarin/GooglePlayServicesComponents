@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace PlacesAsync
 {
     [Activity]
-    public class PlaceDetailsActivity : Android.Support.V4.App.FragmentActivity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
+    public class PlaceDetailsActivity : AndroidX.Fragment.App.FragmentActivity, Android.Gms.Common.Apis.GoogleApiClient.IConnectionCallbacks, Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener
     {
-        GoogleApiClient googleApiClient;
+        Android.Gms.Common.Apis.GoogleApiClient googleApiClient;
         TextView textTitle;
         TextView textDetails;
         TextView textInfo;
@@ -26,10 +26,10 @@ namespace PlacesAsync
             textDetails = FindViewById<TextView> (Resource.Id.textDetails);
             textInfo = FindViewById<TextView> (Resource.Id.textInfo);
 
-            googleApiClient = new GoogleApiClient.Builder (this)
+            googleApiClient = new Android.Gms.Common.Apis.GoogleApiClient.Builder (this)
                 .AddConnectionCallbacks (this)
                 .AddOnConnectionFailedListener (this)
-                .AddApi (PlacesClass.GEO_DATA_API)
+                .AddApi (Android.Gms.Location.Places.PlacesClass.GEO_DATA_API)
                 .Build ();
         }
 
@@ -53,14 +53,19 @@ namespace PlacesAsync
 
                 var placeId = Intent.GetStringExtra ("PLACE_ID");
 
-                var places = await PlacesClass.GeoDataApi.GetPlaceByIdAsync (googleApiClient, placeId);
+                var places =
+                    // TODO: asyncify
+                    //await
+                        Android.Gms.Location.Places.PlacesClass.GeoDataApi
+                            .GetPlaceById(googleApiClient, placeId);
+                //.GetPlaceByIdAsync (googleApiClient, placeId);
 
+                /*
                 if (!places.Status.IsSuccess || !places.Any ()) {
                     Toast.MakeText (this, "Failed to load Place details", ToastLength.Short).Show ();
                     Finish ();
                     return;
                 }
-
                 var place = places.FirstOrDefault ();
 
                 textTitle.Text = place.NameFormatted.ToString ();
@@ -73,6 +78,7 @@ namespace PlacesAsync
                 info.AppendLine (place.PhoneNumberFormatted.ToString ());
                 info.AppendLine (place.WebsiteUri.ToString ());
                 textInfo.Text = info.ToString ();
+                */
             }
         }
 

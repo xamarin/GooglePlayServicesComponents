@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlacesAsync", "PlacesAsync\PlacesAsync.csproj", "{15468DD0-834F-41B3-9C46-4E9E744DC6D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlacesAsync.UITests", "PlacesAsync.UITests\PlacesAsync.UITests.csproj", "{9A92BAE1-0747-496B-AC09-35D9D604C2F9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +13,5 @@ Global
 		{15468DD0-834F-41B3-9C46-4E9E744DC6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15468DD0-834F-41B3-9C46-4E9E744DC6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15468DD0-834F-41B3-9C46-4E9E744DC6D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9A92BAE1-0747-496B-AC09-35D9D604C2F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A92BAE1-0747-496B-AC09-35D9D604C2F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A92BAE1-0747-496B-AC09-35D9D604C2F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A92BAE1-0747-496B-AC09-35D9D604C2F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

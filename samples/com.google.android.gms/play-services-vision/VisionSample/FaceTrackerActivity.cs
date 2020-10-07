@@ -21,7 +21,7 @@ namespace VisionSample
     {
         const string TAG = "FaceTracker";
 
-        CameraSource mCameraSource;
+        Android.Gms.Vision.CameraSource mCameraSource;
         CameraSourcePreview mPreview;
         GraphicOverlay mGraphicOverlay;
 
@@ -34,9 +34,9 @@ namespace VisionSample
             mPreview = FindViewById<CameraSourcePreview> (Resource.Id.preview);
             mGraphicOverlay = FindViewById<GraphicOverlay> (Resource.Id.faceOverlay);
 
-            var detector = new FaceDetector.Builder (Application.Context).Build ();
+            var detector = new Android.Gms.Vision.Faces.FaceDetector.Builder (Application.Context).Build ();
             detector.SetProcessor (
-                new MultiProcessor.Builder (new GraphicFaceTrackerFactory (mGraphicOverlay)).Build ());
+                new Android.Gms.Vision.MultiProcessor.Builder (new GraphicFaceTrackerFactory (mGraphicOverlay)).Build ());
 
             if (!detector.IsOperational) {
                 // Note: The first time that an app using face API is installed on a device, GMS will
@@ -50,9 +50,9 @@ namespace VisionSample
                 Android.Util.Log.Warn (TAG, "Face detector dependencies are not yet available.");
             }
 
-            mCameraSource = new CameraSource.Builder(Application.Context, detector)
+            mCameraSource = new Android.Gms.Vision.CameraSource.Builder(Application.Context, detector)
                 .SetRequestedPreviewSize (640, 480)
-                .SetFacing (CameraFacing.Back)
+                .SetFacing (Android.Gms.Vision.CameraFacing.Back)
                 .SetRequestedFps (30.0f)
                 .Build ();
         }
@@ -107,7 +107,7 @@ namespace VisionSample
      * Factory for creating a face tracker to be associated with a new face.  The multiprocessor
      * uses this factory to create face trackers as needed -- one for each individual.
      */
-        class GraphicFaceTrackerFactory : Java.Lang.Object, MultiProcessor.IFactory
+        class GraphicFaceTrackerFactory : Java.Lang.Object, Android.Gms.Vision.MultiProcessor.IFactory
         {            
             public GraphicFaceTrackerFactory (GraphicOverlay overlay) : base ()
             {
@@ -126,7 +126,7 @@ namespace VisionSample
      * Face tracker for each detected individual. This maintains a face graphic within the app's
      * associated face overlay.
      */
-        class GraphicFaceTracker : Tracker
+        class GraphicFaceTracker : Android.Gms.Vision.Tracker
         {
             GraphicOverlay mOverlay;
             FaceGraphic mFaceGraphic;
@@ -148,10 +148,10 @@ namespace VisionSample
             /**
             * Update the position/characteristics of the face within the overlay.
             */
-            public override void OnUpdate (Detector.Detections detections, Java.Lang.Object item)
+            public override void OnUpdate (Android.Gms.Vision.Detector.Detections detections, Java.Lang.Object item)
             {
                 mOverlay.Add (mFaceGraphic);
-                mFaceGraphic.UpdateFace (item.JavaCast<Face> ());
+                mFaceGraphic.UpdateFace (item.JavaCast<Android.Gms.Vision.Faces.Face> ());
             }
 
             /**
@@ -159,7 +159,7 @@ namespace VisionSample
             * intermediate frames temporarily (e.g., if the face was momentarily blocked from
             * view).
             */
-            public override void OnMissing (Detector.Detections detections)
+            public override void OnMissing (Android.Gms.Vision.Detector.Detections detections)
             {
                 mOverlay.Remove (mFaceGraphic);
             }

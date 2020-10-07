@@ -36,6 +36,21 @@ The build script for this project uses [Cake](http://cakebuild.net).  To run the
 
 The bootstrapper script will automatically download Cake.exe and all the required tools and files into the `./tools/` folder.
 
+Required dotnet core tools:
+
+* binderator
+
+Optional dotnet core tools:
+
+* cake
+
+To update all tools: 
+
+	dotnet tool uninstall 	-g Cake.Tool
+	dotnet tool install 	-g Cake.Tool	
+	dotnet tool uninstall 	-g Xamarin.AndroidBinderator.Tool
+	dotnet tool install 	-g Xamarin.AndroidBinderator.Tool
+
 The following targets can be specified:
 
  - `ci` builds the kitchen sink - what we run in CI

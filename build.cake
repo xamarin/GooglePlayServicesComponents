@@ -57,7 +57,7 @@ var REQUIRED_DOTNET_TOOLS = new [] {
 	"xamarin.androidx.migration.tool"
 };
 
-string nuget_version_template = 
+string nuget_version_template =
 							// "71.vvvv.0-preview3" 	// pre AndroidX version
 							"1xx.yy.zz-suffix"			// AndroidX version
 							;
@@ -70,7 +70,7 @@ string[] Configs = new []
 };
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
-if (IsRunningOnWindows ()) 
+if (IsRunningOnWindows ())
 {
 	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin", IncludePrerelease = true });
 	MONODROID_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION).FullPath;
@@ -251,6 +251,7 @@ Task("binderate-prepare-dependencies-samples-packages-config")
 JArray binderator_json_array = null;
 
 Task("binderate-config-verify")
+	.IsDependentOn("binderate-fix")
 	.Does
 	(
 		() =>
@@ -316,6 +317,53 @@ Task("binderate-config-verify")
 			}
 		}
 	);
+
+Task("binderate-fix")
+    .Does
+    (
+        () =>
+        {
+            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            {
+                JsonTextReader jtr = new JsonTextReader(reader);
+                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+            }
+
+            Warning("config.json fixing missing folder strucutre ...");
+            foreach(JObject jo in binderator_json_array[0]["artifacts"])
+            {
+                string groupId      = (string) jo["groupId"];
+                string artifactId   = (string) jo["artifactId"];
+
+                Information($"		Verifying files for     :");
+                Information($"              group       : {groupId}");
+                Information($"              artifact    : {artifactId}");
+
+                bool? dependency_only = (bool?) jo["dependencyOnly"];
+                if ( dependency_only == true)
+                {
+                    continue;
+                }
+
+
+                string dir_group = $"source/{groupId}";
+                if ( ! DirectoryExists(dir_group) )
+                {
+                    Warning($"  		Creating {dir_group}");
+                    //CreateDirectory(dir_group);
+                }
+                string dir_artifact = $"{dir_group}/{artifactId}";
+                if ( ! DirectoryExists(dir_group) )
+                {
+                    Warning($"     			Creating artifact folder : {dir_artifact}");
+                    //CreateDirectory(dir_group);
+                }
+
+            }
+
+            return;
+        }
+    );
 
 Task("mergetargets")
 	.Does(() =>
@@ -438,58 +486,86 @@ Task("samples")
 	.IsDependentOn("samples-directory-build-targets")
 	.IsDependentOn("mergetargets")
 	.IsDependentOn("allbindingprojectrefs")
-	.Does(() =>
-{
-	Configs = new string[] { "Debug", "Release" };
-
-	DeleteDirectories(GetDirectories("./samples/**/bin/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
-	DeleteDirectories(GetDirectories("./samples/**/obj/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
-
-	
-	var sampleSlns = GetFiles("./samples/all/**/*.sln");
-
-	foreach(string config in Configs)
+	.Does
+(
+	() =>
 	{
-		foreach (var sampleSln in sampleSlns) 
+		Configs = new string[] { "Debug", "Release" };
+
+		DeleteDirectories(GetDirectories("./samples/**/bin/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
+		DeleteDirectories(GetDirectories("./samples/**/obj/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
+
+		EnsureDirectoryExists($@"./output/failed/");
+
+		var sampleSlns = GetFiles("./samples/all/**/*.sln")
+							.Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
+							.Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
+							;
+
+		foreach(string config in Configs)
 		{
-			string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
+			foreach (var sampleSln in sampleSlns)
+			{
+				string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
 
-			if 
-				(
-					sampleSln.ToString().Contains("FirebaseStorageQuickstart") 
-					||
-					sampleSln.ToString().Contains("RepoSample.Issue.213")
-				)
-			{
-				continue;
-			}
-			if ( ! filename_sln.Contains("BuildAll") )
-			{
-				NuGetRestore(sampleSln, new NuGetRestoreSettings { }); // R8 errors
-			}
-			Information($"Solution: {filename_sln}");
-			MSBuild(sampleSln, c => {
-				c.Configuration = config;
-				c.Properties.Add("DesignTimeBuild", new [] { "false" });
-				c.BinaryLogger = new MSBuildBinaryLogSettings
+				if ( ! filename_sln.Contains("BuildAll") )
 				{
-					Enabled = true,
-					FileName = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath
-				};
-				if (! string.IsNullOrEmpty(ANDROID_HOME))
-				{
-					c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+					NuGetRestore(sampleSln, new NuGetRestoreSettings { }); // R8 errors
 				}
-			});
+				if
+				(
+					sampleSln.ToString().Contains("com.google.android.gms/play-services-cast/CastingCall.sln")
+					// ||
+					// sampleSln.ToString().Contains("com.google.firebase/firebase-appindexing/AppIndexingSample.sln")
+					// ||
+					// sampleSln.ToString().Contains("")
+				)
+				{
+					// skip problematic samples for now
+					continue;
+				}
+				Information($"Solution: {filename_sln}");
+				string bl = MakeAbsolute(new FilePath($"./output/{filename_sln}{config}.sample.binlog")).FullPath;
+				try
+				{
+					MSBuild
+						(
+							sampleSln,
+							c =>
+							{
+								c.Configuration = config;
+								c.Properties.Add("DesignTimeBuild", new [] { "false" });
+								c.BinaryLogger = new MSBuildBinaryLogSettings
+														{
+															Enabled = true,
+															FileName = bl
+														};
+								if (! string.IsNullOrEmpty(ANDROID_HOME))
+								{
+									c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+								}
+							}
+						);
+				}
+				catch (Exception exc)
+				{
+					Error($"Error: 	{exc}");
+					Error($"   bl:	{bl}");
+					Error($"   bl:	{bl.Replace($@"output", $@"output/failed")}");
+					if ( FileExists(bl) )
+					{
+						DeleteFile(bl);
+					}
+					MoveFile(bl, bl.Replace($@"output", $@"output/failed"));
+				}
+			}
 		}
-	}
 
-	DeleteFiles(".output/system.*/nupkg");
-	DeleteFiles(".output/microsoft.*/nupkg");
-	DeleteFiles(".output/xamarin.android.support.*/nupkg");
-	DeleteFiles(".output/xamarin.android.arch.*/nupkg");
-	DeleteFiles(".output/xamarin.build.download.*/nupkg");
-
+		DeleteFiles(".output/system.*/nupkg");
+		DeleteFiles(".output/microsoft.*/nupkg");
+		DeleteFiles(".output/xamarin.android.support.*/nupkg");
+		DeleteFiles(".output/xamarin.android.arch.*/nupkg");
+		DeleteFiles(".output/xamarin.build.download.*/nupkg");
 });
 
 Task("allbindingprojectrefs")
@@ -549,7 +625,7 @@ Task ("merge")
 	.IsDependentOn ("libs")
 	.Does (() =>
 {
-	var allDlls = 
+	var allDlls =
 		GetFiles ($"./generated/*/bin/Release/monoandroid*/Xamarin.GooglePlayServices.*.dll") +
 		GetFiles ($"./generated/*/bin/Release/monoandroid*/Xamarin.Firebase.*.dll");
 	var mergeDlls = allDlls

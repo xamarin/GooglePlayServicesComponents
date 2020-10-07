@@ -32,6 +32,9 @@
       }
     }
   </ItemGroup>
+  <PropertyGroup>
+    <AndroidManifestMerger>manifestmerger.jar</AndroidManifestMerger>
+  </PropertyGroup>
   }
 
   <PropertyGroup>
@@ -63,6 +66,8 @@
         <Sha256>@(xbdSha256)</Sha256>
       </XamarinBuildDownload>
     </ItemGroup>
+
+
     <ItemGroup>
      <XamarinBuildDownloadAndroidAarLibrary Include="$(XamarinBuildDownloadDir)@(xbdAarPath)" />
       @*

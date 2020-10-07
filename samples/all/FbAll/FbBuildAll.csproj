@@ -29,14 +29,13 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
-    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidEnableDesugar>true</AndroidEnableDesugar>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -47,12 +46,10 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <ConsolePause>false</ConsolePause>
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidEnableDesugar>true</AndroidEnableDesugar>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
-    <BundleAssemblies>true</BundleAssemblies>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -66,9 +63,7 @@
     <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.2.0" />
     <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0" />
     <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.1.0" />
-    <PackageReference Include="Xamarin.AndroidX.Migration">
-      <Version>1.0.1</Version>
-    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.7.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

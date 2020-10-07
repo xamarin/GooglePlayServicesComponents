@@ -15,7 +15,7 @@ using Android.Support.V4.App;
 namespace MapsSample
 {
     [Activity (Label = "Options Demo")]			
-    public class OptionsDemoActivity : FragmentActivity
+    public class OptionsDemoActivity : AndroidX.Fragment.App.FragmentActivity
     {
         protected override void OnCreate (Bundle bundle)
         {

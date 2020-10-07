@@ -11,13 +11,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Gms.Maps;
-using Android.Support.V4.App;
 using Android.Gms.Maps.Model;
 
 namespace MapsSample
 {
     [Activity (Label = "Split StreetView Panorama And Map Demo")]			
-    public class SplitStreetViewPanoramaAndMapDemoActivity : FragmentActivity, IOnStreetViewPanoramaReadyCallback, IOnMapReadyCallback
+    public class SplitStreetViewPanoramaAndMapDemoActivity : AndroidX.Fragment.App.FragmentActivity, IOnStreetViewPanoramaReadyCallback, IOnMapReadyCallback
     {
         const string MARKER_POSITION_KEY = "MarkerPosition";
 

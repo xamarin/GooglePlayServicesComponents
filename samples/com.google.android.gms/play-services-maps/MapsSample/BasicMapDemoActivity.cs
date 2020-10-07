@@ -10,14 +10,13 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V4.App;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 
 namespace MapsSample
 {
     [Activity (Label = "Basic Demo")]			
-    public class BasicMapDemoActivity : FragmentActivity, IOnMapReadyCallback
+    public class BasicMapDemoActivity : AndroidX.Fragment.App.FragmentActivity, IOnMapReadyCallback
     {
         protected override void OnCreate (Bundle bundle)
         {
