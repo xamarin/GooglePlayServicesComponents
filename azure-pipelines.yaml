@@ -46,5 +46,5 @@ jobs:
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
       parameters:
-      timeoutInMinutes: 120
+        timeoutInMinutes: 120
         dependsOn: [ 'build' ]
