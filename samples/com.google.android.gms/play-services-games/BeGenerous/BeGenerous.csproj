@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.2.0.3" />
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.5" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.1" />
     <PackageReference Include="Xamarin.GooglePlayServices.Games" Version="119.0.0" />
     <PackageReference Include="Xamarin.GooglePlayServices.Plus" Version="117.0.0" />
     
