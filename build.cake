@@ -59,7 +59,8 @@ var REQUIRED_DOTNET_TOOLS = new [] {
 
 string nuget_version_template =
 							// "71.vvvv.0-preview3" 	// pre AndroidX version
-							"1xx.yy.zz-suffix"			// AndroidX version
+							// "1xx.yy.zz-suffix"		// AndroidX version preview
+							"1xx.yy.zz"					// AndroidX version stable/release
 							;
 string nuget_version_suffix = "preview04";
 
