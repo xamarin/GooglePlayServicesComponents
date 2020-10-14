@@ -11,14 +11,13 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Text;
 using Android.Gms.Common;
-using Android.Gms.Games.Request;
 
 [assembly: MetaData ("com.google.android.gms.games.APP_ID", Value="@string/app_id")]
 
 namespace BeGenerous
 {
     [Activity (Label = "BeGenerous", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity, Android.Gms.Common.Apis.GoogleApiClient.IConnectionCallbacks, Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener, Android.Gms.Games.Request.IOnRequestReceivedListener
+    public class MainActivity : Activity, Android.Gms.Common.Apis.GoogleApiClient.IConnectionCallbacks, Android.Gms.Common.Apis.GoogleApiClient.IOnConnectionFailedListener//, Android.Gms.Games.Request.IOnRequestReceivedListener
     {        
         const string TAG = "BeGenerous";
 
