@@ -352,7 +352,7 @@
         >
         OnNativeAdLoaded
     </attr>
-    <!--    
+    
     <remove-node
         path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='zza' and count(parameter)=2 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='com.google.android.gms.ads.formats.NativeCustomTemplateAd']]"
         />
