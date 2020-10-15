@@ -1,4 +1,4 @@
-﻿﻿@using System.Linq
+@using System.Linq
 @using System.IO
 @using System.Xml.Linq
 @{
@@ -19,6 +19,11 @@
   }
 }
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <AndroidManifestMerger>manifestmerger.jar</AndroidManifestMerger>
+  </PropertyGroup>  
+  
   @if (@Model.MavenArtifacts.Count > 0) {
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
@@ -64,6 +69,7 @@
 
 
     <ItemGroup>
+     <XamarinBuildDownloadAndroidAarLibrary Include="$(XamarinBuildDownloadDir)@(xbdAarPath)" />
       @*
       <!--
       NOTE: 

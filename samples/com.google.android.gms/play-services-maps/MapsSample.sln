@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapsSample", "MapsSample\MapsSample.csproj", "{8F7D2AC9-C3BB-4698-886C-610A582691E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapsSample.UITests", "MapsSample.UITests\MapsSample.UITests.csproj", "{794BD1FF-B907-4D32-9F4E-1530FBF4ACB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{8F7D2AC9-C3BB-4698-886C-610A582691E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F7D2AC9-C3BB-4698-886C-610A582691E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F7D2AC9-C3BB-4698-886C-610A582691E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{794BD1FF-B907-4D32-9F4E-1530FBF4ACB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{794BD1FF-B907-4D32-9F4E-1530FBF4ACB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{794BD1FF-B907-4D32-9F4E-1530FBF4ACB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{794BD1FF-B907-4D32-9F4E-1530FBF4ACB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

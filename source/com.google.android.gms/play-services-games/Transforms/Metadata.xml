@@ -103,10 +103,10 @@
 	<!-- Fix up inheritence from covariant types -->
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='GameBuffer']/method[@name='get']" name="visibility">public virtual</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='GameBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
-	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerBuffer']/method[@name='get']" name="visibility">public override</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerBuffer']/method[@name='get']" name="visibility">public</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
 
-	<attr path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementBuffer']/method[@name='get']" name="visibility">public override</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementBuffer']/method[@name='get']" name="visibility">public</attr>
 	<attr path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
 
 	<attr path="/api/package[@name='com.google.android.gms.games.event']/class[@name='EventBuffer']/method[@name='get']" name="visibility">public override</attr>

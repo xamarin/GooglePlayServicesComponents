@@ -48,22 +48,6 @@ namespace Android.Gms.Games.Achievement
     }
 }
 
-//namespace Android.Gms.Games.AppContent
-//{
-//    public partial class AppContentSectionBuffer : IEnumerable<IAppContentSection>
-//    {
-//        public IEnumerator<IAppContentSection> GetEnumerator()
-//        {
-//            return this.ToEnumerable<IAppContentSection> ().GetEnumerator();
-//        }
-
-//        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-//        {
-//            return this.GetEnumerator();
-//        }
-//    }
-//}
-
 namespace Android.Gms.Games.Event
 {
     public partial class EventBuffer : IEnumerable<IEvent>
@@ -156,31 +140,6 @@ namespace Android.Gms.Games.MultiPlayer.TurnBased
 
 namespace Android.Gms.Games.Request
 {
-    //public partial class GameRequestSummaryBuffer : IEnumerable<IGameRequestSummary>
-    //{
-    //    public IEnumerator<IGameRequestSummary> GetEnumerator()
-    //    {
-    //        return this.ToEnumerable<IGameRequestSummary> ().GetEnumerator();
-    //    }
-
-    //    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-    //    {
-    //        return this.GetEnumerator();
-    //    }
-    //}
-
-    public partial class GameRequestBuffer : IEnumerable<IGameRequest>
-    {
-        public IEnumerator<IGameRequest> GetEnumerator()
-        {
-            return this.ToEnumerable<IGameRequest> ().GetEnumerator();
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-    }
 }
 
 namespace Android.Gms.Games.Snapshot
@@ -217,57 +176,8 @@ namespace Android.Gms.Games.Stats
 
 namespace Android.Gms.Games.Quest
 {
-    public partial class MilestoneBuffer : Java.Lang.Object, IEnumerable<IMilestone>, Java.Lang.IIterable
-	{
-        public IEnumerator<IMilestone> GetEnumerator()
-        {
-            return this.ToEnumerable<IMilestone> ().GetEnumerator();
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-
-        public IntPtr Handle => throw new NotImplementedException();
-
-        public IIterator Iterator()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-	public partial class QuestBuffer : IEnumerable<IQuest>
-    {
-        public IEnumerator<IQuest> GetEnumerator()
-        {
-            return this.ToEnumerable<IQuest> ().GetEnumerator();
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-    }
 }
 
 namespace Android.Gms.Games.Video
 {
-    //public partial class VideoBuffer : IEnumerable<IVideo>
-    //{
-    //    public IEnumerator<IVideo> GetEnumerator()
-    //    {
-    //        return this.ToEnumerable<IVideo>().GetEnumerator();
-    //    }
-
-    //    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-    //    {
-    //        return this.GetEnumerator();
-    //    }
-    //}
 }
