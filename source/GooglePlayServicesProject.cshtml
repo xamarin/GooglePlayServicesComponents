@@ -1,4 +1,4 @@
-﻿@using System.Linq
+@using System.Linq
 @using System.Collections.Generic
 
 @{
@@ -223,22 +223,12 @@
 
   <ItemGroup>
     <!-- ProjectReference -->
-    @foreach (var dep in @Model.NuGetDependencies) 
-    {
-      if (dep.IsProjectReference) 
-      {
+    @foreach (var dep in @Model.NuGetDependencies) {
+      if (dep.IsProjectReference) {
         <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" />
       }
     }
-
     <!-- some additional fixes -->
-    <!--
-      IProxyApi is moved to com.google.android.gms.play-services-auth-base, but reference causes dependency cycles
-    @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.Base")
-    {
-      <ProjectReference Include="..\..\generated\com.google.android.gms.play-services-auth-base\com.google.android.gms.play-services-auth-base.csproj" />
-    }
-    -->
   </ItemGroup>
 
   <ItemGroup>

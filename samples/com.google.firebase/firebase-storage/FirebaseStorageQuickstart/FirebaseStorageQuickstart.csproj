@@ -58,10 +58,10 @@
     <PackageReference Include="Xamarin.AndroidX.Migration">
       <Version>1.0.6.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Firebase.Auth" Version="118.1.0-preview01" />
-    <PackageReference Include="Xamarin.Firebase.Storage" Version="118.1.0-preview03" />        
+    <PackageReference Include="Xamarin.Firebase.Auth" Version="119.2.0" />
+    <PackageReference Include="Xamarin.Firebase.Storage" Version="119.1.1" />        
     <PackageReference Include="Xamarin.AndroidX.Migration">
-      <Version>1.0.6.1</Version>
+      <Version>1.0.7.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.AppCompat">
       <Version>1.1.0.1</Version>

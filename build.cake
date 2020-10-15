@@ -62,7 +62,7 @@ string nuget_version_template =
 							"1xx.yy.zz.ww-suffix"		// AndroidX version preview
 							//"1xx.yy.zz"				// AndroidX version stable/release
 							;
-string nuget_version_suffix = "";
+string nuget_version_suffix = "preview02";
 
 string[] Configs = new []
 {
@@ -115,56 +115,6 @@ void RunProcess(FilePath fileName, string processArguments)
 		throw new Exception ($"Process {fileName} exited with code {exitCode}.");
 }
 
-// string[] RunProcessWithOutput(FilePath fileName, string processArguments)
-// {
-// 	var baseDir = nupkg.GetDirectory(); //get the parent directory of the packge file
-
-// 	using (var reader = new PackageArchiveReader (nupkg.FullPath))
-// 	{
-// 		//get the id from the package and the version number
-// 		 var packageId = reader.GetIdentity ().Id;
-// 		var currentVersionNo = reader.GetIdentity ().Version.ToNormalizedString();
-
-// 		//calculate the diff storage path from the location of the nuget
-// 		var diffRoot = $"{baseDir}/api-diff/{packageId}";
-// 		CleanDirectories (diffRoot);
-
-// 		// get the latest version of this package - if any
-// 		var latestVersion = (await NuGetVersions.GetLatestAsync (packageId))?.ToNormalizedString ();
-
-// 		// log what is going to happen
-// 		if (string.IsNullOrEmpty (latestVersion))
-// 			Information ($"Running a diff on a new package '{packageId}'...");
-// 		else
-// 			Information ($"Running a diff on '{latestVersion}' vs '{currentVersionNo}' of '{packageId}'...");
-
-// 		// create comparer
-// 		var comparer = new NuGetDiff ();
-// 		comparer.PackageCache = DOCAPI_CACHEPATH;  // Cache path
-// 		comparer.SaveAssemblyApiInfo = true;       // we don't keep this, but it lets us know if there were no changes
-// 		comparer.SaveAssemblyMarkdownDiff = true;  // we want markdown
-// 		comparer.IgnoreResolutionErrors = true;    // we don't care if frameowrk/platform types can't be found
-
-// 		await comparer.SaveCompleteDiffToDirectoryAsync (packageId, latestVersion, reader, diffRoot);
-
-// 		// run the diff with just the breaking changes
-// 		comparer.MarkdownDiffFileExtension = ".breaking.md";
-// 		comparer.IgnoreNonBreakingChanges = true;
-// 		await comparer.SaveCompleteDiffToDirectoryAsync (packageId, latestVersion, reader, diffRoot);
-
-// 		// TODO: there are two bugs in this version of mono-api-html
-// 		var mdFiles = $"{diffRoot}/*.*.md";
-// 		// 1. the <h4> doesn't look pretty in the markdown
-// 		ReplaceTextInFiles (mdFiles, "<h4>", "> ");
-// 		ReplaceTextInFiles (mdFiles, "</h4>", Environment.NewLine);
-// 		// 2. newlines are inccorect on Windows: https://github.com/mono/mono/pull/9918
-// 		ReplaceTextInFiles (mdFiles, "\r\r", "\r");
-
-// 		// we are done
-// 		Information ($"Diff complete of '{packageId}'.");
-// 	}
-// }
-
 Task("javadocs")
 	.Does(() =>
 {
@@ -194,16 +144,6 @@ Task("javadocs")
 		StartProcess("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --xml \"" + srcJarPath + "\" \"" + outXmlPath + "\"");
 	}
 });
-
-// Task("check-tools")
-// 	.Does(() =>
-// {
-// 	var installedTools = RunProcessWithOutput("dotnet", "tool list -g");
-// 	foreach (var toolName in REQUIRED_DOTNET_TOOLS) {
-// 		if (installedTools.All(l => l.IndexOf(toolName, StringComparison.OrdinalIgnoreCase) == -1))
-// 			throw new Exception ($"Missing dotnet tool: {toolName}");
-// 	}
-// });
 
 Task("tools-update")
     .Does
@@ -239,60 +179,75 @@ Task("binderate")
 	RunProcess("xamarin-android-binderator",
 		$"--config=\"{configFile}\" --basepath=\"{basePath}\"");
 
-	// needed for offline builds 28.0.0.1 to 28.0.0.3
-	EnsureDirectoryExists("./output/");
-	EnsureDirectoryExists("./externals/");
-
-	// FilePathCollection files = GetFiles("./samples/**/*.csproj");
-	// foreach(FilePath file in files)
-	// {
-	// 	Information($"File: {file}");
-
-	// 	XmlDocument xml = new XmlDocument();
-	// 	xml.Load($"{file}");
-    //     XmlNamespaceManager mgr = new XmlNamespaceManager(xml.NameTable);
-    //     mgr.AddNamespace("x", xml.DocumentElement.NamespaceURI);
-	//     // XmlNodeList list = xml.SelectNodes("/packages/package/");
-	//     XmlNodeList list = xml.SelectNodes("//x:PackageReference[@Include]", mgr);	
-	// 	Information($"{list.Count}");	
-	// 	foreach (XmlNode xn in list)
-	// 	{
-	// 		string id = xn.Attributes["id"].Value; //Get attribute-id
-	// 		//string text = xn["Text"].InnerText; //Get Text Node
-	// 		string v = xn.Attributes["version"].Value; //Get attribute-id
-
-	// 		Information($"		id	   : {id}");
-
-	// 		if ( v is null)
-	// 		{
-	// 			v = xn.InnerText; //SelectSingleNode("Version", mgr).Value;
-	// 		}
-	// 		Information($"		version: {v}");
-
-	// 		if ( id.Contains("GooglePlayServices") || id.Contains("Firebase") )
-	// 		{
-	// 			Information($"		skipping download of {id}");
-	// 			continue;
-	// 		}
-
-	// 		string url = $"https://www.nuget.org/api/v2/package/{id}/{v}";
-	// 		string file1 = $"./externals/{id.ToLower()}.{v}.nupkg";
-	// 		try
-	// 		{
-	// 			if ( ! FileExists(file1) )
-	// 			{
-	// 				Information($"		download of {id}");
-	// 				DownloadFile(url, file1);
-	// 			}
-	// 		}
-	// 		catch (System.Exception exc)
-	// 		{
-	// 			Error($"Unable to download: {url}");
-	// 			Error($"             error: {exc.Message}");
-	// 		}
-	// 	}
-	// }
+	RunTarget("binderate-prepare-dependencies-samples-packages-config");
+	RunTarget("binderate-prepare-dependencies-samples-packagereferences");
 });
+
+Task("binderate-prepare-dependencies-samples-packagereferences")
+	.Does
+	(
+		() =>
+		{
+			// needed for offline builds 28.0.0.1 to 28.0.0.3
+			EnsureDirectoryExists("./output/");
+			EnsureDirectoryExists("./externals/");
+
+			FilePathCollection files = GetFiles("./samples/**/*.csproj");
+			foreach(FilePath file in files)
+			{
+				Information($"File: {file}");
+
+				XmlDocument xml = new XmlDocument();
+				xml.Load($"{file}");
+			}
+		}
+	);
+
+Task("binderate-prepare-dependencies-samples-packages-config")
+	.Does
+	(
+		() =>
+		{
+			// needed for offline builds 28.0.0.1 to 28.0.0.3
+			EnsureDirectoryExists("./output/");
+			EnsureDirectoryExists("./externals/");
+
+			FilePathCollection files = GetFiles("./samples/**/packages.config");
+			foreach(FilePath file in files)
+			{
+				Information($"File: {file}");
+
+				XmlDocument xml = new XmlDocument();
+				xml.Load($"{file}");
+				XmlNodeList list = xml.SelectNodes("/packages/package");
+				foreach (XmlNode xn in list)
+				{
+					string id = xn.Attributes["id"].Value; //Get attribute-id 
+					//string text = xn["Text"].InnerText; //Get Text Node
+					string v = xn.Attributes["version"].Value; //Get attribute-id 
+
+					Information($"		id	   : {id}");
+					Information($"		version: {v}");
+
+					string url = $"https://www.nuget.org/api/v2/package/{id}/{v}";
+					string file1 = $"./externals/{id.ToLower()}.{v}.nupkg";
+					try
+					{
+						if ( ! FileExists(file1) )
+						{
+							DownloadFile(url, file1);
+						}
+					}
+					catch (System.Exception)
+					{
+						Error($"Unable to download {url}");
+					}
+				}
+			}
+		
+			return;
+		}
+	);
 
 JArray binderator_json_array = null;
 
@@ -571,8 +526,10 @@ Task("samples")
 				if
 				(
 					sampleSln.ToString().Contains("com.google.android.gms/play-services-cast/CastingCall.sln")
-					// ||
-					// sampleSln.ToString().Contains("com.google.firebase/firebase-appindexing/AppIndexingSample.sln")
+					||
+					sampleSln.ToString().Contains("com.google.android.gms/play-services-games/BeGenerous.sln")
+					||
+					sampleSln.ToString().Contains("com.google.android.gms/play-services-wallet/AndroidPayQuickstart.sln")
 					// ||
 					// sampleSln.ToString().Contains("")
 				)
@@ -790,7 +747,7 @@ Task ("clean")
 
 Task ("ci")
 	.IsDependentOn ("ci-setup")
-	//.IsDependentOn ("check-tools")
+	//.IsDependentOn ("tools-check")
 	//.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")

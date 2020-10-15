@@ -11,18 +11,5 @@ namespace Android.Gms.Wearable
         }
     }
 
-    //public partial class Zzf
-    //{
-    //    public Java.Lang.Object CreateFromParcel (Android.OS.Parcel source)
-    //    {
-    //        throw new Exception ("Android.Gms.WearableSdk.Zzf.CreateFromParcel not implemented!  Please contact Support!");
-    //    }
-
-
-    //    public Java.Lang.Object[] NewArray (int size)
-    //    {
-    //        throw new Exception ("Android.Gms.WearableSdk.Zzf.NewArray not implemented!  Please contact Support!");
-    //    }
-    //}
 }
 
