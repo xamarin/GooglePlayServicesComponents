@@ -59,10 +59,10 @@ var REQUIRED_DOTNET_TOOLS = new [] {
 
 string nuget_version_template =
 							// "71.vvvv.0-preview3" 	// pre AndroidX version
-							// "1xx.yy.zz-suffix"		// AndroidX version preview
-							"1xx.yy.zz"					// AndroidX version stable/release
+							"1xx.yy.zz.ww-suffix"		// AndroidX version preview
+							//"1xx.yy.zz"				// AndroidX version stable/release
 							;
-string nuget_version_suffix = "preview04";
+string nuget_version_suffix = "";
 
 string[] Configs = new []
 {
@@ -324,21 +324,31 @@ Task("binderate-config-verify")
 					Information($"nuget_version = {nuget_version}");
 					Information($"nugetId       = {jo["nugetId"]}");
 
-					string[] version_parsed = version.Split(new string[] {"."}, StringSplitOptions.None);
+					string[] version_parsed = nuget_version.Split(new string[] {"."}, StringSplitOptions.None);
 					string nuget_version_new = nuget_version_template;
 					string version_parsed_xx = version_parsed[0];
+					string version_parsed_yy = version_parsed[1];
+					string version_parsed_zz = version_parsed[2];
 
-					Information($"version_parsed_xx       = {version_parsed_xx}");
 					if ( jo["groupId"].ToString().Equals("com.google.android.datatransport") )
 					{
 						version_parsed_xx = string.Concat("0", version_parsed_xx);
 					}
 					Information($"version_parsed_xx       = {version_parsed_xx}");
 
-					nuget_version_new = nuget_version_new.Replace("xx", version_parsed_xx);
-					nuget_version_new = nuget_version_new.Replace("yy", version_parsed[1]);
-					nuget_version_new = nuget_version_new.Replace("zz", version_parsed[2]);
-					nuget_version_new = nuget_version_new.Replace("suffix", nuget_version_suffix);
+					nuget_version_new = nuget_version_new.Replace("1xx", version_parsed_xx);
+					nuget_version_new = nuget_version_new.Replace("yy", version_parsed_yy);
+					nuget_version_new = nuget_version_new.Replace("zz", version_parsed_zz);
+					if (version_parsed.Length == 4)
+					{
+						nuget_version_new = nuget_version_new.Replace("ww", version_parsed[3]);
+					}
+					else
+					{
+						nuget_version_new = nuget_version_new.Replace(".ww", "");
+					}
+
+					nuget_version_new = nuget_version_new.Replace("-suffix", nuget_version_suffix);
 
 					Information($"nuget_version_new       = {nuget_version_new}");
 					Information($"nuget_version           = {nuget_version}");
