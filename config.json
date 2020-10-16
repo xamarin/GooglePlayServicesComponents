@@ -54,6 +54,14 @@
 		},
 		{
 			"groupId" : "com.google.android.gms",
+			"artifactId" : "play-services-afs-native",
+			"version" : "18.0.0",
+			"nugetVersion" : "118.0.0",
+			"nugetId" : "Xamarin.GooglePlayServices.AFS.Native",
+			"dependencyOnly" : false
+		},
+		{
+			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-analytics",
 			"version" : "17.0.0",
 			"nugetVersion" : "117.0.0",
@@ -111,8 +119,8 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-awareness",
-			"version" : "17.1.0",
-			"nugetVersion" : "117.1.0",
+			"version" : "18.0.0",
+			"nugetVersion" : "118.0.0",
 			"nugetId" : "Xamarin.GooglePlayServices.Awareness",
 			"dependencyOnly" : false
 		},
@@ -154,6 +162,14 @@
 			"version" : "17.0.0",
 			"nugetVersion" : "117.0.0",
 			"nugetId" : "Xamarin.GooglePlayServices.Clearcut",
+			"dependencyOnly" : false
+		},
+		{
+			"groupId" : "com.google.android.gms",
+			"artifactId" : "play-services-cronet",
+			"version" : "17.0.0",
+			"nugetVersion" : "117.0.0",
+			"nugetId" : "Xamarin.GooglePlayServices.CroNet",
 			"dependencyOnly" : false
 		},
 		{
@@ -511,6 +527,10 @@
 			"nugetId" : "Xamarin.Firebase.Analytics.Impl",
 			"dependencyOnly" : false
 		},
+
+
+
+
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-appindexing",
@@ -549,6 +569,14 @@
 			"version" : "16.0.0",
 			"nugetVersion" : "116.0.0",
 			"nugetId" : "Xamarin.Firebase.Common",
+			"dependencyOnly" : false
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-components",
+			"version" : "16.0.0",
+			"nugetVersion" : "116.0.0",
+			"nugetId" : "Xamarin.Firebase.Components",
 			"dependencyOnly" : false
 		},
 		{
@@ -601,10 +629,26 @@
 		},
 		{
 			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-datatransport",
+			"version" : "17.0.3",
+			"nugetVersion" : "117.0.3",
+			"nugetId" : "Xamarin.Firebase.DataTransport",
+			"dependencyOnly" : false
+		},
+		{
+			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-dynamic-links",
 			"version" : "18.0.0",
 			"nugetVersion" : "118.0.0",
 			"nugetId" : "Xamarin.Firebase.Dynamic.Links",
+			"dependencyOnly" : false
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-encoders-json",
+			"version" : "16.0.0",
+			"nugetVersion" : "116.0.0",
+			"nugetId" : "Xamarin.Firebase.Encoders.Json",
 			"dependencyOnly" : false
 		},
 		{
@@ -641,6 +685,26 @@
 		},
 		{
 			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-inappmessaging",
+			"version" : "19.0.3",
+			"nugetVersion" : "119.0.3",
+			"nugetId" : "Xamarin.Firebase.InAppMessaging",
+			"dependencyOnly" : false
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-inappmessaging-display",
+			"version" : "19.0.3",
+			"nugetVersion" : "119.0.3",
+			"nugetId" : "Xamarin.Firebase.InAppMessaging.Display",
+			"dependencyOnly" : false
+		},
+
+
+
+
+		{
+			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-invites",
 			"version" : "17.0.0",
 			"nugetVersion" : "117.0.0",
@@ -672,6 +736,14 @@
 			"version" : "18.0.0",
 			"nugetVersion" : "118.0.0",
 			"nugetId" : "Xamarin.Firebase.Measurement.Connector",
+			"dependencyOnly" : false
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-measurement-connector-impl",
+			"version" : "17.0.5",
+			"nugetVersion" : "117.0.5",
+			"nugetId" : "Xamarin.Firebase.Measurement.Connector.Impl",
 			"dependencyOnly" : false
 		},
 		{
@@ -769,6 +841,14 @@
 			"version" : "18.0.2",
 			"nugetVersion" : "118.0.2",
 			"nugetId" : "Xamarin.Firebase.ML.Vision.AutoML",
+			"dependencyOnly" : false
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-ml-vision-barcode-model",
+			"version" : "16.0.2",
+			"nugetVersion" : "116.0.2",
+			"nugetId" : "Xamarin.Firebase.ML.Vision.BarCode.Model",
 			"dependencyOnly" : false
 		},
 		{
@@ -1073,8 +1153,8 @@
 			"groupId" : "androidx.recyclerview",
 			"artifactId" : "recyclerview",
 			"version" : "1.1.0",
-			"nugetId" : "Xamarin.AndroidX.RecyclerView",
 			"nugetVersion": "1.1.0.1",
+			"nugetId" : "Xamarin.AndroidX.RecyclerView",
 			"dependencyOnly" : true
 		},
 		{
@@ -1212,8 +1292,8 @@
 		{
 			"groupId" : "com.google.dagger",
 			"artifactId" : "dagger",
-			"version" : "2.22",
-			"nugetVersion" : "2.22",
+			"version" : "2.25.2.1",
+			"nugetVersion" : "2.25.2.1",
 			"nugetId" : "Xamarin.Google.Dagger",
 			"dependencyOnly" : true
 		},

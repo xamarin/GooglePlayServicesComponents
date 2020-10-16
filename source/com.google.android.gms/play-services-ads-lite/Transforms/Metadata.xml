@@ -129,20 +129,6 @@
 		</method>
 	</add-node>
 
-	<add-node path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']">
-		<method abstract="false" deprecated="not deprecated" final="false" name="zza" native="false" return="void" static="false" synchronized="false" visibility="public">
-			<parameter name="adapter" type="com.google.android.gms.ads.mediation.MediationNativeAdapter"></parameter>
-			<parameter name="customTemplateAd" type="com.android.gms.ads.formats.NativeCustomTemplateAd"></parameter>
-			<parameter name="str" type="java.lang.String"></parameter>
-		</method>
-	</add-node>
-
-	<add-node path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']">
-		<method abstract="false" deprecated="not deprecated" final="false" name="zza" native="false" return="void" static="false" synchronized="false" visibility="public">
-			<parameter name="adapter" type="com.google.android.gms.ads.mediation.MediationNativeAdapter"></parameter>
-			<parameter name="customTemplateAd" type="com.android.gms.ads.formats.NativeCustomTemplateAd"></parameter>
-		</method>
-	</add-node>
     <!--
     (,17.1.2]   zzc
     [17.2.0,)   zzb
@@ -229,12 +215,38 @@
         Android.Gms.Ads.Initialization
     </attr>
     
+    
+    <!--
+    causing ACW errors:
+    ./samples/com.google.android.gms/play-services-ads-lite/AdsLiteSample/obj/Debug/android/src/crc6449ab38c9a8eed94c/MainActivity.java(36,36): 
+    Error JAVAC0000:  error: cannot inherit from final AdActivity
+    extends com.google.android.gms.ads.AdActivity
+    (JAVAC0000) (AdsLiteSample) javac
     <attr
         path="/api/package[@name='com.google.android.gms.ads']/class[@name='AdActivity']"
         name="final"
         >
         false
     </attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.ads.appopen']"
+        name="managedName"
+		>
+		Android.Gms.Ads.AppOpen
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.ads.instream']"
+        name="managedName"
+		>
+		Android.Gms.Ads.InStream
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.ads.query']"
+        name="managedName"
+		>
+		Android.Gms.Ads.Query
+	</attr>
+    -->
     
     <!--
     https://github.com/xamarin/GooglePlayServicesComponents/issues/334
@@ -338,37 +350,129 @@
         >
         OnNativeAdLoaded
     </attr>
-    <remove-node
+
+<remove-node
         path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='zza' and count(parameter)=2 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='com.google.android.gms.ads.formats.NativeCustomTemplateAd']]"
         />
     <remove-node
         path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='zza' and count(parameter)=3 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='com.google.android.gms.ads.formats.NativeCustomTemplateAd'] and parameter[3][@type='java.lang.String']]"
         />
+    -->
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.formats']/interface[@name='ShouldDelayBannerRenderingListener']/method[@name='zzb']"
+        name="abstract"
+        >
+        false
+    </attr>
+    
+    
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='zza']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.ads']/interface[@name='zzxb']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.ads']/interface[@name='zzxg']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.ads']/interface[@name='zzabt']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.ads']/interface[@name='zzabv']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.ads']/interface[@name='zzrl']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.ads']/interface[@name='zzrl']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.ads']/interface[@name='zzyw']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']"
+        name="abstract"
+        >
+        true
+    </attr>
+        
+    <add-node path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']">
+        <method abstract="false" deprecated="not deprecated" final="true" name="zza" native="false" return="void" static="false" synchronized="false" visibility="public">
+            <parameter name="adapter" type="com.google.android.gms.ads.mediation.MediationNativeAdapter"></parameter>
+            <parameter name="customTemplateAd" type="com.android.gms.ads.formats.NativeCustomTemplateAd"></parameter>
+            <parameter name="str" type="java.lang.String"></parameter>
+        </method>
+    </add-node>
+
+    <add-node path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']">
+        <method abstract="false" deprecated="not deprecated" final="true" name="zza" native="false" return="void" static="false" synchronized="false" visibility="public">
+            <parameter name="adapter" type="com.google.android.gms.ads.mediation.MediationNativeAdapter"></parameter>
+            <parameter name="customTemplateAd" type="com.android.gms.ads.formats.NativeCustomTemplateAd"></parameter>
+        </method>
+    </add-node>
+   
     <attr
         path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='zza' and count(parameter)=2 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='com.google.android.gms.ads.formats.NativeCustomTemplateAd']]"
+        name="managedName"
+        >
+        Zza1
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='zza' and count(parameter)=2 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='com.google.android.gms.ads.formats.NativeCustomTemplateAd']]"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='zza' and count(parameter)=2 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='com.google.android.gms.ads.formats.NativeCustomTemplateAd']]"
+        name="abstract"
+        >
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='zza' and count(parameter)=3 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='com.google.android.gms.ads.formats.NativeCustomTemplateAd'] and parameter[3][@type='java.lang.String']]"
         name="managedName"
         >
         Zza2
     </attr>
     <attr
-        path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='zza' and count(parameter)=2 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='com.google.android.gms.ads.formats.NativeCustomTemplateAd']]"
-        name="argsType"
+        path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='zza' and count(parameter)=3 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='com.google.android.gms.ads.formats.NativeCustomTemplateAd'] and parameter[3][@type='java.lang.String']]"
+        name="obfuscated"
         >
-        Zza2EventArgs    
+        false
     </attr>
     <attr
         path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='zza' and count(parameter)=3 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='com.google.android.gms.ads.formats.NativeCustomTemplateAd'] and parameter[3][@type='java.lang.String']]"
-        name="managedName"
+        name="abstract"
         >
-        Zza3
+        true
     </attr>
-    <attr
-        path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='zza' and count(parameter)=3 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='com.google.android.gms.ads.formats.NativeCustomTemplateAd'] and parameter[3][@type='java.lang.String']]"
-        name="argsType"
-        >
-        Zza3EventArgs    
-    </attr>
-    -->    
     
     <attr
         path="/api/package[@name='com.google.android.gms.internal.ads']"
@@ -377,11 +481,26 @@
         Android.Gms.Internal.Ads
     </attr>
     
+    
+    <!--
+    ./samples/com.google.android.gms/play-services-ads-lite/AdsLiteSample/obj/Debug/android/src/crc6449ab38c9a8eed94c/MainActivity.java(14,14): Error JAVAC0000:  error: onCreate(Bundle) in MainActivity cannot override onCreate(Bundle) in AdActivity
+    public void onCreate (android.os.Bundle p0)
+    overridden method is final
+    (JAVAC0000) (AdsLiteSample) javac
     <attr
         path="/api/package[@name='com.google.android.gms.ads']/class[@name='AdActivity']/method[@name='onCreate' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
         name="final"
         >
         false
+    </attr>
+    -->
+    
+    
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.ads']"
+        name="managedName"
+        >
+        Android.Gms.Internal.Ads
     </attr>
     
 </metadata>

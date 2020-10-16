@@ -5,7 +5,6 @@ using Android.Preferences;
 using Android.Views;
 using Android.Content;
 using Java.Util;
-using Android.Support.V4.App;
 using Firebase.Analytics;
 using AndroidX.AppCompat.App;
 using AndroidX.ViewPager.Widget;

@@ -5,7 +5,4 @@ using Android.Runtime;
 
 namespace Android.Gms.Common.Net
 {
-    public partial class SocketFactoryCreator
-    {
-    }
 }

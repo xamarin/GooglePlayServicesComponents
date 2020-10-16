@@ -57,9 +57,10 @@ var REQUIRED_DOTNET_TOOLS = new [] {
 	"xamarin.androidx.migration.tool"
 };
 
-string nuget_version_template = 
+string nuget_version_template =
 							// "71.vvvv.0-preview3" 	// pre AndroidX version
-							"1xx.yy.zz-suffix"			// AndroidX version
+							"1xx.yy.zz.ww-suffix"		// AndroidX version preview
+							//"1xx.yy.zz"				// AndroidX version stable/release
 							;
 string nuget_version_suffix = "preview01";
 
@@ -70,7 +71,7 @@ string[] Configs = new []
 };
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
-if (IsRunningOnWindows ()) 
+if (IsRunningOnWindows ())
 {
 	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin", IncludePrerelease = true });
 	MONODROID_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION).FullPath;
@@ -114,56 +115,6 @@ void RunProcess(FilePath fileName, string processArguments)
 		throw new Exception ($"Process {fileName} exited with code {exitCode}.");
 }
 
-// string[] RunProcessWithOutput(FilePath fileName, string processArguments)
-// {
-// 	var baseDir = nupkg.GetDirectory(); //get the parent directory of the packge file
-
-// 	using (var reader = new PackageArchiveReader (nupkg.FullPath))
-// 	{
-// 		//get the id from the package and the version number
-// 		 var packageId = reader.GetIdentity ().Id;
-// 		var currentVersionNo = reader.GetIdentity ().Version.ToNormalizedString();
-
-// 		//calculate the diff storage path from the location of the nuget
-// 		var diffRoot = $"{baseDir}/api-diff/{packageId}";
-// 		CleanDirectories (diffRoot);
-
-// 		// get the latest version of this package - if any
-// 		var latestVersion = (await NuGetVersions.GetLatestAsync (packageId))?.ToNormalizedString ();
-
-// 		// log what is going to happen
-// 		if (string.IsNullOrEmpty (latestVersion))
-// 			Information ($"Running a diff on a new package '{packageId}'...");
-// 		else
-// 			Information ($"Running a diff on '{latestVersion}' vs '{currentVersionNo}' of '{packageId}'...");
-
-// 		// create comparer
-// 		var comparer = new NuGetDiff ();
-// 		comparer.PackageCache = DOCAPI_CACHEPATH;  // Cache path
-// 		comparer.SaveAssemblyApiInfo = true;       // we don't keep this, but it lets us know if there were no changes
-// 		comparer.SaveAssemblyMarkdownDiff = true;  // we want markdown
-// 		comparer.IgnoreResolutionErrors = true;    // we don't care if frameowrk/platform types can't be found
-
-// 		await comparer.SaveCompleteDiffToDirectoryAsync (packageId, latestVersion, reader, diffRoot);
-
-// 		// run the diff with just the breaking changes
-// 		comparer.MarkdownDiffFileExtension = ".breaking.md";
-// 		comparer.IgnoreNonBreakingChanges = true;
-// 		await comparer.SaveCompleteDiffToDirectoryAsync (packageId, latestVersion, reader, diffRoot);
-
-// 		// TODO: there are two bugs in this version of mono-api-html
-// 		var mdFiles = $"{diffRoot}/*.*.md";
-// 		// 1. the <h4> doesn't look pretty in the markdown
-// 		ReplaceTextInFiles (mdFiles, "<h4>", "> ");
-// 		ReplaceTextInFiles (mdFiles, "</h4>", Environment.NewLine);
-// 		// 2. newlines are inccorect on Windows: https://github.com/mono/mono/pull/9918
-// 		ReplaceTextInFiles (mdFiles, "\r\r", "\r");
-
-// 		// we are done
-// 		Information ($"Diff complete of '{packageId}'.");
-// 	}
-// }
-
 Task("javadocs")
 	.Does(() =>
 {
@@ -193,16 +144,6 @@ Task("javadocs")
 		StartProcess("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --xml \"" + srcJarPath + "\" \"" + outXmlPath + "\"");
 	}
 });
-
-// Task("check-tools")
-// 	.Does(() =>
-// {
-// 	var installedTools = RunProcessWithOutput("dotnet", "tool list -g");
-// 	foreach (var toolName in REQUIRED_DOTNET_TOOLS) {
-// 		if (installedTools.All(l => l.IndexOf(toolName, StringComparison.OrdinalIgnoreCase) == -1))
-// 			throw new Exception ($"Missing dotnet tool: {toolName}");
-// 	}
-// });
 
 Task("tools-update")
     .Does
@@ -238,43 +179,75 @@ Task("binderate")
 	RunProcess("xamarin-android-binderator",
 		$"--config=\"{configFile}\" --basepath=\"{basePath}\"");
 
-	// needed for offline builds 28.0.0.1 to 28.0.0.3
-	EnsureDirectoryExists("./output/");
-	EnsureDirectoryExists("./externals/");
+	RunTarget("binderate-prepare-dependencies-samples-packages-config");
+	RunTarget("binderate-prepare-dependencies-samples-packagereferences");
+});
 
-	FilePathCollection files = GetFiles("./samples/**/packages.config");
-	foreach(FilePath file in files)
-	{
-		Information($"File: {file}");
-
-		XmlDocument xml = new XmlDocument();
-		xml.Load($"{file}");
-		XmlNodeList list = xml.SelectNodes("/packages/package");
-		foreach (XmlNode xn in list)
+Task("binderate-prepare-dependencies-samples-packagereferences")
+	.Does
+	(
+		() =>
 		{
-			string id = xn.Attributes["id"].Value; //Get attribute-id 
-			//string text = xn["Text"].InnerText; //Get Text Node
-			string v = xn.Attributes["version"].Value; //Get attribute-id 
+			// needed for offline builds 28.0.0.1 to 28.0.0.3
+			EnsureDirectoryExists("./output/");
+			EnsureDirectoryExists("./externals/");
 
-			Information($"		id	   : {id}");
-			Information($"		version: {v}");
+			FilePathCollection files = GetFiles("./samples/**/*.csproj");
+			foreach(FilePath file in files)
+			{
+				Information($"File: {file}");
 
-			string url = $"https://www.nuget.org/api/v2/package/{id}/{v}";
-			string file1 = $"./externals/{id.ToLower()}.{v}.nupkg";
-			try
-			{
-				if ( ! FileExists(file1) )
-				{
-					DownloadFile(url, file1);
-				}
-			}
-			catch (System.Exception)
-			{
-				Error($"Unable to download {url}");
+				XmlDocument xml = new XmlDocument();
+				xml.Load($"{file}");
 			}
 		}
-	}
-});
+	);
+
+Task("binderate-prepare-dependencies-samples-packages-config")
+	.Does
+	(
+		() =>
+		{
+			// needed for offline builds 28.0.0.1 to 28.0.0.3
+			EnsureDirectoryExists("./output/");
+			EnsureDirectoryExists("./externals/");
+
+			FilePathCollection files = GetFiles("./samples/**/packages.config");
+			foreach(FilePath file in files)
+			{
+				Information($"File: {file}");
+
+				XmlDocument xml = new XmlDocument();
+				xml.Load($"{file}");
+				XmlNodeList list = xml.SelectNodes("/packages/package");
+				foreach (XmlNode xn in list)
+				{
+					string id = xn.Attributes["id"].Value; //Get attribute-id 
+					//string text = xn["Text"].InnerText; //Get Text Node
+					string v = xn.Attributes["version"].Value; //Get attribute-id 
+
+					Information($"		id	   : {id}");
+					Information($"		version: {v}");
+
+					string url = $"https://www.nuget.org/api/v2/package/{id}/{v}";
+					string file1 = $"./externals/{id.ToLower()}.{v}.nupkg";
+					try
+					{
+						if ( ! FileExists(file1) )
+						{
+							DownloadFile(url, file1);
+						}
+					}
+					catch (System.Exception)
+					{
+						Error($"Unable to download {url}");
+					}
+				}
+			}
+		
+			return;
+		}
+	);
 
 JArray binderator_json_array = null;
 
@@ -306,9 +279,11 @@ Task("binderate-config-verify")
 					Information($"nuget_version = {nuget_version}");
 					Information($"nugetId       = {jo["nugetId"]}");
 
-					string[] version_parsed = version.Split(new string[] {"."}, StringSplitOptions.None);
+					string[] version_parsed = nuget_version.Split(new string[] {"."}, StringSplitOptions.None);
 					string nuget_version_new = nuget_version_template;
 					string version_parsed_xx = version_parsed[0];
+					string version_parsed_yy = version_parsed[1];
+					string version_parsed_zz = version_parsed[2];
 
 					Information($"version_parsed_xx       = {version_parsed_xx}");
 					if ( version_parsed_xx.Length == 1 )
@@ -317,10 +292,19 @@ Task("binderate-config-verify")
 					}
 					Information($"version_parsed_xx       = {version_parsed_xx}");
 
-					nuget_version_new = nuget_version_new.Replace("xx", version_parsed_xx);
-					nuget_version_new = nuget_version_new.Replace("yy", version_parsed[1]);
-					nuget_version_new = nuget_version_new.Replace("zz", version_parsed[2]);
-					nuget_version_new = nuget_version_new.Replace("suffix", nuget_version_suffix);
+					nuget_version_new = nuget_version_new.Replace("1xx", version_parsed_xx);
+					nuget_version_new = nuget_version_new.Replace("yy", version_parsed_yy);
+					nuget_version_new = nuget_version_new.Replace("zz", version_parsed_zz);
+					if (version_parsed.Length == 4)
+					{
+						nuget_version_new = nuget_version_new.Replace("ww", version_parsed[3]);
+					}
+					else
+					{
+						nuget_version_new = nuget_version_new.Replace(".ww", "");
+					}
+
+					nuget_version_new = nuget_version_new.Replace("-suffix", nuget_version_suffix);
 
 					Information($"nuget_version_new       = {nuget_version_new}");
 					Information($"nuget_version           = {nuget_version}");
@@ -357,7 +341,7 @@ Task("binderate-fix")
                 binderator_json_array = (JArray)JToken.ReadFrom(jtr);
             }
 
-            Information("config.json fixing missing folder strucutre ...");
+            Warning("config.json fixing missing folder strucutre ...");
             foreach(JObject jo in binderator_json_array[0]["artifacts"])
             {
                 string groupId      = (string) jo["groupId"];
@@ -576,69 +560,88 @@ Task("samples")
 	.IsDependentOn("samples-directory-build-targets")
 	.IsDependentOn("mergetargets")
 	.IsDependentOn("allbindingprojectrefs")
-	.Does(() =>
-{
-	Configs = new string[] { "Debug", "Release" };
-
-	DeleteDirectories(GetDirectories("./samples/**/bin/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
-	DeleteDirectories(GetDirectories("./samples/**/obj/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
-
-	EnsureDirectoryExists($@"./output/failed/");
-	
-	var sampleSlns = GetFiles("./samples/all/**/*.sln")
-						.Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
-						.Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
-						;
-
-	foreach(string config in Configs)
+	.Does
+(
+	() =>
 	{
-		foreach (var sampleSln in sampleSlns) 
-		{
-			string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
+		Configs = new string[] { "Debug", "Release" };
 
-			if ( ! filename_sln.Contains("BuildAll") )
+		DeleteDirectories(GetDirectories("./samples/**/bin/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
+		DeleteDirectories(GetDirectories("./samples/**/obj/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
+
+		EnsureDirectoryExists($@"./output/failed/");
+
+		var sampleSlns = GetFiles("./samples/all/**/*.sln")
+							.Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
+							.Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
+							;
+
+		foreach(string config in Configs)
+		{
+			foreach (var sampleSln in sampleSlns)
 			{
-				NuGetRestore(sampleSln, new NuGetRestoreSettings { }); // R8 errors
-			}
-			Information($"Solution: {filename_sln}");
-			string bl = MakeAbsolute(new FilePath($"./output/{filename_sln}.sample.binlog")).FullPath;
-			try
-			{				
-				MSBuild
-					(
-						sampleSln, 
-						c => 
-						{
-							c.Configuration = config;
-							c.Properties.Add("DesignTimeBuild", new [] { "false" });
-							c.BinaryLogger = new MSBuildBinaryLogSettings
-													{
-														Enabled = true,
-														FileName = bl
-													};
-							if (! string.IsNullOrEmpty(ANDROID_HOME))
+				string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
+
+				if ( ! filename_sln.Contains("BuildAll") )
+				{
+					NuGetRestore(sampleSln, new NuGetRestoreSettings { }); // R8 errors
+				}
+				if
+				(
+					sampleSln.ToString().Contains("com.google.android.gms/play-services-cast/CastingCall.sln")
+					||
+					sampleSln.ToString().Contains("com.google.android.gms/play-services-games/BeGenerous.sln")
+					||
+					sampleSln.ToString().Contains("com.google.android.gms/play-services-wallet/AndroidPayQuickstart.sln")
+					// ||
+					// sampleSln.ToString().Contains("")
+				)
+				{
+					// skip problematic samples for now
+					continue;
+				}
+				Information($"Solution: {filename_sln}");
+				string bl = MakeAbsolute(new FilePath($"./output/{filename_sln}{config}.sample.binlog")).FullPath;
+				try
+				{
+					MSBuild
+						(
+							sampleSln,
+							c =>
 							{
-								c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+								c.Configuration = config;
+								c.Properties.Add("DesignTimeBuild", new [] { "false" });
+								c.BinaryLogger = new MSBuildBinaryLogSettings
+														{
+															Enabled = true,
+															FileName = bl
+														};
+								if (! string.IsNullOrEmpty(ANDROID_HOME))
+								{
+									c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+								}
 							}
-						}
-					);
-			}
-			catch (Exception exc)
-			{
-				Error($"Error: 	{exc}");
-				Error($"   bl:	{bl}");
-				Error($"   bl:	{bl.Replace($@"output", $@"output/failed")}");
-				MoveFile(bl, bl.Replace($@"output", $@"output/failed"));
+						);
+				}
+				catch (Exception exc)
+				{
+					Error($"Error: 	{exc}");
+					Error($"   bl:	{bl}");
+					Error($"   bl:	{bl.Replace($@"output", $@"output/failed")}");
+					if ( FileExists(bl) )
+					{
+						DeleteFile(bl);
+					}
+					MoveFile(bl, bl.Replace($@"output", $@"output/failed"));
+				}
 			}
 		}
-	}
 
-	DeleteFiles(".output/system.*/nupkg");
-	DeleteFiles(".output/microsoft.*/nupkg");
-	DeleteFiles(".output/xamarin.android.support.*/nupkg");
-	DeleteFiles(".output/xamarin.android.arch.*/nupkg");
-	DeleteFiles(".output/xamarin.build.download.*/nupkg");
-
+		DeleteFiles(".output/system.*/nupkg");
+		DeleteFiles(".output/microsoft.*/nupkg");
+		DeleteFiles(".output/xamarin.android.support.*/nupkg");
+		DeleteFiles(".output/xamarin.android.arch.*/nupkg");
+		DeleteFiles(".output/xamarin.build.download.*/nupkg");
 });
 
 Task("allbindingprojectrefs")
@@ -698,7 +701,7 @@ Task ("merge")
 	.IsDependentOn ("libs")
 	.Does (() =>
 {
-	var allDlls = 
+	var allDlls =
 		GetFiles ($"./generated/*/bin/Release/monoandroid*/Xamarin.GooglePlayServices.*.dll") +
 		GetFiles ($"./generated/*/bin/Release/monoandroid*/Xamarin.Firebase.*.dll");
 	var mergeDlls = allDlls
@@ -807,7 +810,7 @@ Task ("clean")
 
 Task ("ci")
 	.IsDependentOn ("ci-setup")
-	//.IsDependentOn ("check-tools")
+	//.IsDependentOn ("tools-check")
 	//.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
