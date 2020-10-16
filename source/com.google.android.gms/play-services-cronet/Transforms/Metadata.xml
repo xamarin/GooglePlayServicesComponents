@@ -1,4 +1,4 @@
-﻿<metadata>
+<metadata>
 	<!-- Fix Namespaces -->
 	<attr 
         path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.cronet.dynamite']" 

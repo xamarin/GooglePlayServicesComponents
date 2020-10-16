@@ -1,4 +1,4 @@
-﻿<metadata>
+<metadata>
 	
     <remove-node
         path="/api/package[@name='com.google.firebase.components']/class[@name='ComponentRuntime']/method[@name='get' and count(parameter)=1 and parameter[1][@type='java.lang.Class']]"

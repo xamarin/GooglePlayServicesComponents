@@ -190,5 +190,11 @@
         public
     </attr>
     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzrc']" 
+        name="obfuscated"
+        >
+        false
+    </attr>
     
  </metadata>

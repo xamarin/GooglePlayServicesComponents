@@ -1,4 +1,4 @@
-﻿<enum-method-mappings>
+<enum-method-mappings>
 	<!--
   This example changes the Java method:
     android.support.v4.app.Fragment.SavedState.writeToParcel (int flags)

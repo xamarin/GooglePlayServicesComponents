@@ -59,7 +59,6 @@
     <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.5" />
     <PackageReference Include="Xamarin.Google.Android.Material" Version="1.1.0.5-rc3" />
     <PackageReference Include="Xamarin.Firebase.Analytics" Version="117.0.1" />
-
     <PackageReference Include="Xamarin.AndroidX.Migration">
       <Version>1.0.7.1</Version>
     </PackageReference>

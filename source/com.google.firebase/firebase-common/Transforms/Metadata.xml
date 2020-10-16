@@ -48,6 +48,12 @@
         path="/api/package[@name='com.google.firebase.components']/class[@name='AbstractComponentContainer']/method[@name='setOf' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;T&gt;']]"
         >        
     </remove-node>
+    <attr
+        path="/api/package[@name='com.google.firebase.heartbeatinfo']"
+        name="managedName"
+        >
+        Firebase.HeartBeatInfo
+    </attr>
     
     <attr
         path="/api/package[@name='com.google.firebase.heartbeatinfo']"

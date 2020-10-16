@@ -19,6 +19,9 @@
   }
 }
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AndroidManifestMerger>manifestmerger.jar</AndroidManifestMerger>
+  </PropertyGroup>  
   
   @if (@Model.MavenArtifacts.Count > 0) {
   <ItemGroup>
@@ -66,6 +69,17 @@
 
     <ItemGroup>
      <XamarinBuildDownloadAndroidAarLibrary Include="$(XamarinBuildDownloadDir)@(xbdAarPath)" />
+      @*
+      <!--
+      NOTE: 
+      Xamarin.Build.Download version set in GooglePlaySericesProjects.cshtml template is 
+      important for attributes in GooglePlaySericesTargets.cshtml template
+      
+      XamarinBuildDownloadAndroidAarLibrary   v >=  0.10.0
+      XamarinBuildDownloadRestoreAssemblyAar  v <   0.10.0
+      -->
+      *@
+      <XamarinBuildDownloadAndroidAarLibrary Include="$(XamarinBuildDownloadDir)@(xbdAarPath)" />
     </ItemGroup>
   </Target>
       }

@@ -13,14 +13,4 @@ namespace Android.Gms.People.ProtoModel
 			return (Java.Lang.Object)global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(JNIEnv.CallObjectMethod(Handle, id_freeze), JniHandleOwnership.TransferLocalRef);
 		}
 	}
-
-
-	//public partial class FetchBackUpDeviceContactInfoResponseEntity
-	//{
-	//	IntPtr id_freeze;
-	//	public Java.Lang.Object Freeze()
-	//	{
-	//		return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
-	//	}
-	//}
 }

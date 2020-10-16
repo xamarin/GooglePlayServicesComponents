@@ -48,22 +48,6 @@ namespace Android.Gms.Games.Achievement
     }
 }
 
-//namespace Android.Gms.Games.AppContent
-//{
-//    public partial class AppContentSectionBuffer : IEnumerable<IAppContentSection>
-//    {
-//        public IEnumerator<IAppContentSection> GetEnumerator()
-//        {
-//            return this.ToEnumerable<IAppContentSection> ().GetEnumerator();
-//        }
-
-//        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-//        {
-//            return this.GetEnumerator();
-//        }
-//    }
-//}
-
 namespace Android.Gms.Games.Event
 {
     public partial class EventBuffer : IEnumerable<IEvent>
@@ -185,4 +169,3 @@ namespace Android.Gms.Games.Stats
         }
     }
 }
-
