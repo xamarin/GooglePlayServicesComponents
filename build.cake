@@ -62,7 +62,7 @@ string nuget_version_template =
 							"1xx.yy.zz.ww-suffix"		// AndroidX version preview
 							//"1xx.yy.zz"				// AndroidX version stable/release
 							;
-string nuget_version_suffix = "preview02";
+string nuget_version_suffix = "";
 
 string[] Configs = new []
 {

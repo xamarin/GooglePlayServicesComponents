@@ -799,16 +799,16 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-natural-language-translate",
-			"version" : "22.0.1",
-			"nugetVersion" : "122.0.1",
+			"version" : "21.0.1",
+			"nugetVersion" : "121.0.1",
 			"nugetId" : "Xamarin.Firebase.ML.Natural.Language.Translate",
 			"dependencyOnly" : false
 		},
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-natural-language-translate-model",
-			"version" : "20.0.8",
-			"nugetVersion" : "120.0.8",
+			"version" : "20.0.4",
+			"nugetVersion" : "120.0.4",
 			"nugetId" : "Xamarin.Firebase.ML.Natural.Language.Translate.Model",
 			"dependencyOnly" : false
 		},
@@ -833,14 +833,6 @@
 			"artifactId" : "firebase-ml-vision-barcode-model",
 			"version" : "16.1.1",
 			"nugetVersion" : "116.1.1",
-			"nugetId" : "Xamarin.Firebase.ML.Vision.BarCode.Model",
-			"dependencyOnly" : false
-		},
-		{
-			"groupId" : "com.google.firebase",
-			"artifactId" : "firebase-ml-vision-barcode-model",
-			"version" : "16.0.2",
-			"nugetVersion" : "116.0.2",
 			"nugetId" : "Xamarin.Firebase.ML.Vision.BarCode.Model",
 			"dependencyOnly" : false
 		},
@@ -1216,6 +1208,14 @@
 		},
 
 
+		{
+			"groupId" : "com.google.android.gms",
+			"artifactId" : "play-services-measurement-base",
+			"version" : "16.3.0",
+			"nugetVersion" : "71.1630.1",
+			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Base",
+			"dependencyOnly" : true
+		},
 		{
 			"groupId" : "org.chromium.net",
 			"artifactId" : "cronet-api",
