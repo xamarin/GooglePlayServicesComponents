@@ -91,7 +91,6 @@
     <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Smart.Reply" Version="118.0.7" />
     <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Smart.Reply.Model" Version="120.0.7" />
     <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Translate" Version="122.0.0" />
-    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Model" Version="120.0.7" />
     <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Translate.Model" Version="120.0.7" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision" Version="124.0.1" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Image.Label.Model" Version="119.0.0" />
