@@ -4,7 +4,4 @@
 
 namespace Android.Gms.Common
 {
-	namespace Android.Gms.Common.Apis
-	{
-    }
 }
