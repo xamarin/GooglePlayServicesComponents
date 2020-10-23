@@ -775,7 +775,7 @@
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-vision",
 			"version" : "24.0.1",
-			"nugetVersion" : "124.0.1",
+			"nugetVersion" : "124.0.1.1",
 			"nugetId" : "Xamarin.Firebase.ML.Vision",
 			"dependencyOnly" : false
 		},
