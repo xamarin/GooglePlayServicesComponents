@@ -18,6 +18,12 @@
         >
         Android.Gms.Internal.Vision
     </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.face']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.Face
+    </attr>
     
     
     

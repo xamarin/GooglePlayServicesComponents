@@ -15,7 +15,13 @@
 		path="/api/package[@name='com.google.firebase.encoders.json']"
 		name="managedName"
 		>
-		Firebase.Encoders.Json
+		Firebase.Encoders.JSON
 	</attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.encoders.annotations']"
+        name="managedName"
+        >
+        Firebase.Encoders.Annotations
+    </attr>
 
 </metadata>

@@ -1,10 +1,9 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.vision.dynamite.ica']" 
         name="managedName"
         >
-        Package
+        Android.Gms.Dynamite.Descriptors.Vision.Ica
     </attr>
-    -->
+    
 </metadata>

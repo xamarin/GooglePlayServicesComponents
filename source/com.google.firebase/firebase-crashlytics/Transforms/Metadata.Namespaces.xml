@@ -134,4 +134,13 @@
         Firebase.Crashlytics.Internal.Unity
     </attr>
     
+    <attr 
+        path="/api/package[@name='com.google.firebase.crashlytics.ndk']" 
+        name="managedName"
+        >
+        Firebase.Crashlytics.NDK
+    </attr>
+
+
+
 </metadata>
