@@ -96,16 +96,16 @@
     <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Id.Model" Version="120.0.7" />
     <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Smart.Reply" Version="118.0.7" />
     <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Smart.Reply.Model" Version="120.0.7" />
-    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Translate" Version="122.0.0" />
-    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Translate.Model" Version="120.0.7" />
-    <PackageReference Update="Xamarin.Firebase.ML.Vision" Version="124.0.1" />
-    <PackageReference Update="Xamarin.Firebase.ML.Vision.Image.Label.Model" Version="119.0.0" />
-    <PackageReference Update="Xamarin.Firebase.ML.Vision.AutoML" Version="118.0.3" />
-    <PackageReference Update="Xamarin.Firebase.ML.Vision.BarCode.Model" Version="116.0.2" />
-    <PackageReference Update="Xamarin.Firebase.ML.Vision.Face.Model" Version="119.0.0" />
-    <PackageReference Update="Xamarin.Firebase.ML.Vision.Internal.Vkp" Version="116.0.2" />
-    <PackageReference Update="Xamarin.Firebase.ML.Vision.Object.Detection.Model" Version="119.0.3" />
-    <PackageReference Update="Xamarin.Firebase.Perf" Version="119.0.5" />
+    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Translate" Version="121.0.1" />
+    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Translate.Model" Version="120.0.4" />
+    <PackageReference Update="Xamarin.Firebase.ML.Vision" Version="124.0.3" />
+    <PackageReference Update="Xamarin.Firebase.ML.Vision.AutoML" Version="118.0.5" />
+    <PackageReference Update="Xamarin.Firebase.ML.Vision.BarCode.Model" Version="116.1.1" />
+    <PackageReference Update="Xamarin.Firebase.ML.Vision.Face.Model" Version="120.0.1" />
+    <PackageReference Update="Xamarin.Firebase.ML.Vision.Image.Label.Model" Version="120.0.1" />
+    <PackageReference Update="Xamarin.Firebase.ML.Vision.Internal.Vkp" Version="117.0.1" />
+    <PackageReference Update="Xamarin.Firebase.ML.Vision.Object.Detection.Model" Version="119.0.5" />
+    <PackageReference Update="Xamarin.Firebase.Perf" Version="119.0.7" />
     <PackageReference Update="Xamarin.Firebase.Storage" Version="119.1.1" />
     <PackageReference Update="Xamarin.Firebase.Storage.Common" Version="117.0.0" />
     <PackageReference Update="Xamarin.Firebase.ProtoliteWellKnownTypes" Version="117.0.0" />
