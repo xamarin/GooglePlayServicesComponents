@@ -1,13 +1,7 @@
 ﻿<metadata>
-    <!--
-    <attr 
-        path="/api/package[@name='package']" 
-        name="managedName"
-        >
-        Package
-    </attr>
-    -->
-    <attr 
+	
+	<!-- Rename Namespaces -->
+	<attr
         path="/api/package[@name='com.google.firebase.crashlytics']" 
         name="managedName"
         >
@@ -19,7 +13,7 @@
         >
         Firebase.Crashlytics.Internal
     </attr>
-    <attr 
+    <attr
         path="/api/package[@name='com.google.firebase.crashlytics.internal.analytics']" 
         name="managedName"
         >
@@ -37,7 +31,7 @@
         >
         Firebase.Crashlytics.Internal.Common
     </attr>
-    <attr 
+    <attr
         path="/api/package[@name='com.google.firebase.crashlytics.internal.log']" 
         name="managedName"
         >
@@ -49,7 +43,7 @@
         >
         Firebase.Crashlytics.Internal.Model
     </attr>
-    <attr 
+    <attr
         path="/api/package[@name='com.google.firebase.crashlytics.internal.model.serialization']" 
         name="managedName"
         >
@@ -67,7 +61,7 @@
         >
         Firebase.Crashlytics.Internal.Network
     </attr>
-    <attr 
+    <attr
         path="/api/package[@name='com.google.firebase.crashlytics.internal.persistence']" 
         name="managedName"
         >
@@ -79,55 +73,55 @@
         >
         Firebase.Crashlytics.Internal.Proto
     </attr>
-    <attr 
+    <attr
         path="/api/package[@name='com.google.firebase.crashlytics.internal.report']" 
         name="managedName"
         >
         Firebase.Crashlytics.Internal.Report
     </attr>
-    <attr 
+    <attr
         path="/api/package[@name='com.google.firebase.crashlytics.internal.report.model']" 
         name="managedName"
         >
         Firebase.Crashlytics.Internal.Report.Model
     </attr>
-    <attr 
+    <attr
         path="/api/package[@name='com.google.firebase.crashlytics.internal.report.network']" 
         name="managedName"
         >
         Firebase.Crashlytics.Internal.Report.Network
     </attr>
-    <attr 
+    <attr
         path="/api/package[@name='com.google.firebase.crashlytics.internal.send']" 
         name="managedName"
         >
         Firebase.Crashlytics.Internal.Send
     </attr>
-    <attr 
+    <attr
         path="/api/package[@name='com.google.firebase.crashlytics.internal.settings']" 
         name="managedName"
         >
         Firebase.Crashlytics.Internal.Settings
     </attr>
-    <attr 
+    <attr
         path="/api/package[@name='com.google.firebase.crashlytics.internal.settings.model']" 
         name="managedName"
         >
         Firebase.Crashlytics.Internal.Settings.Model
     </attr>
-    <attr 
+    <attr
         path="/api/package[@name='com.google.firebase.crashlytics.internal.settings.network']" 
         name="managedName"
         >
         Firebase.Crashlytics.Internal.Settings.Network
     </attr>
-    <attr 
+    <attr
         path="/api/package[@name='com.google.firebase.crashlytics.internal.stacktrace']" 
         name="managedName"
         >
         Firebase.Crashlytics.Internal.Stacktrace
     </attr>
-    <attr 
+    <attr
         path="/api/package[@name='com.google.firebase.crashlytics.internal.unity']" 
         name="managedName"
         >
@@ -140,7 +134,5 @@
         >
         Firebase.Crashlytics.NDK
     </attr>
-
-
-
+    
 </metadata>

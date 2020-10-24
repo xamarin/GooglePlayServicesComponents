@@ -143,6 +143,14 @@
     <PackageReference Update="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.1.1.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="71.1630.1" />
     <PackageReference Update="Xamarin.Chromium.CroNet.Api" Version="75.3770.101" />
+    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="" />
+    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="" />
+    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="" />
+    <PackageReference Update="Xamarin.Android.ReactiveX.RxAndroid" Version="" />
+    <PackageReference Update="Xamarin.Android.ReactiveX.Rxjava" Version="" />
+    <PackageReference Update="Square.Picasso" Version="" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="71.1630.1" />
+    <PackageReference Update="Xamarin.Chromium.CroNet.Api" Version="75.3770.101" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="2.1.0" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="2.1.0" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="2.1.0" />

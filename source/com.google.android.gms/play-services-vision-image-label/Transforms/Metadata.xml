@@ -14,4 +14,12 @@
         path="/api/package[@name='com.google.android.gms.vision.label.internal.client']/class[@name='zze']"
         />
     
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.imagelabel']"
+        name="managedName"
+        >
+        Android.Gms.Vision.ImageLabel
+    </attr>
+    
 </metadata>

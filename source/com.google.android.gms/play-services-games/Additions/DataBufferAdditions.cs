@@ -138,10 +138,6 @@ namespace Android.Gms.Games.MultiPlayer.TurnBased
     }
 }
 
-namespace Android.Gms.Games.Request
-{
-}
-
 namespace Android.Gms.Games.Snapshot
 {
     public partial class SnapshotMetadataBuffer : IEnumerable<ISnapshotMetadata>
@@ -172,12 +168,4 @@ namespace Android.Gms.Games.Stats
             return this.GetEnumerator();
         }
     }
-}
-
-namespace Android.Gms.Games.Quest
-{
-}
-
-namespace Android.Gms.Games.Video
-{
 }

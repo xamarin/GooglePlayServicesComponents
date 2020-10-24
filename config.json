@@ -281,7 +281,7 @@
 			"artifactId" : "play-services-measurement-api",
 			"version" : "17.4.1",
 			"nugetVersion" : "117.4.1",
-			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Api",
+			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Api",      
 			"dependencyOnly" : false
 		},
 		{
@@ -316,6 +316,7 @@
 			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Sdk.Api",
 			"dependencyOnly" : false
 		},
+
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-nearby",
@@ -441,7 +442,7 @@
 			"artifactId" : "play-services-vision-face-contour-internal",
 			"version" : "16.0.3",
 			"nugetVersion" : "116.0.3",
-			"nugetId" : "Xamarin.GooglePlayServices.Vision.FaceContourInternal",
+			"nugetId" : "Xamarin.GooglePlayServices.Vision.Face.Contour.Internal",
 			"dependencyOnly" : false
 		},
 		{
@@ -723,7 +724,6 @@
 			"nugetId" : "Xamarin.Firebase.Invites",
 			"dependencyOnly" : false
 		},
-
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-measurement-connector",
@@ -764,7 +764,6 @@
 			"nugetId" : "Xamarin.Firebase.ML.Model.Interpreter",
 			"dependencyOnly" : false
 		},
-
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-natural-language",
@@ -800,16 +799,16 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-natural-language-translate",
-			"version" : "22.0.0",
-			"nugetVersion" : "122.0.0",
+			"version" : "21.0.1",
+			"nugetVersion" : "121.0.1",
 			"nugetId" : "Xamarin.Firebase.ML.Natural.Language.Translate",
 			"dependencyOnly" : false
 		},
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-ml-natural-language-translate-model",
-			"version" : "20.0.7",
-			"nugetVersion" : "120.0.7",
+			"version" : "20.0.4",
+			"nugetVersion" : "120.0.4",
 			"nugetId" : "Xamarin.Firebase.ML.Natural.Language.Translate.Model",
 			"dependencyOnly" : false
 		},
@@ -1296,6 +1295,14 @@
 			"version" : "16.3.0",
 			"nugetVersion" : "71.1630.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Api",      
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-analytics",
+			"version" : "16.3.0",
+			"nugetVersion" : "71.1630.1",
+			"nugetId" : "Xamarin.Firebase.Analytics",      
 			"dependencyOnly" : true
 		}
 

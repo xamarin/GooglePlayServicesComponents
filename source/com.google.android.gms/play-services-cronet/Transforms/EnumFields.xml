@@ -15,4 +15,10 @@
   - An optional "bitfield" attribute marks the enum type with [Flags].
   - For Java interfaces, use "jni-interface" attribute instead of "jni-class" attribute.
   -->
+  <mapping clr-enum-type="Android.Gms.Cast.Framework.CastStates" jni-class="com/google/android/gms/cast/framework/CastState">
+    <field clr-name="Connected" jni-name="CONNECTED" value="4" />
+    <field clr-name="Connecting" jni-name="CONNECTING" value="3" />
+    <field clr-name="NotConnected" jni-name="NOT_CONNECTED" value="2" />
+    <field clr-name="NoDevicesAvailable" jni-name="NO_DEVICES_AVAILABLE" value="1" />
+  </mapping>
 </enum-field-mappings>

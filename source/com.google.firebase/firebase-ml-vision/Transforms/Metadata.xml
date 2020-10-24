@@ -189,9 +189,24 @@
         >
         public
     </attr>
-    
+ 
+    <!--
+    FirebaseVisionBarcodeDetector
+    -->
     <attr 
         path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzrc']" 
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzri']" 
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzrz']" 
         name="obfuscated"
         >
         false
