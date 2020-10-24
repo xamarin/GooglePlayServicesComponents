@@ -7,4 +7,23 @@
         Package
     </attr>
     -->
+    <attr 
+        path="/api/package[@name='com.google.firebase.installations']" 
+        name="managedName"
+        >
+        Firebase.Installations
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.installations.local']" 
+        name="managedName"
+        >
+        Firebase.Installations.Local
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.installations.remote']" 
+        name="managedName"
+        >
+        Firebase.Installations.Remote
+    </attr>
+    
 </metadata>
