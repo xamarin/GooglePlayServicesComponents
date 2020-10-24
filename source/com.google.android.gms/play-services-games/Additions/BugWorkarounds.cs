@@ -86,14 +86,6 @@ namespace Android.Gms.Games.MultiPlayer
 		}
 	}
 
-	public partial class ParticipantRef
-	{
-		IntPtr id_freeze;
-		public Java.Lang.Object Freeze()
-		{
-			return FreezeMethodImplementor.Freeze(ref id_freeze, class_ref, Handle);
-		}
-	}
 }
 
 

@@ -493,4 +493,15 @@
         </method>        
     </add-node>    
     
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='ParticipantRef']"
+        >
+      <method 
+            visibility="public" abstract="false" static="false" return="java.lang.Object" name="freeze"
+            deprecated="not deprecated" final="true" bridge="false" native="false" synchronized="false" synthetic="false" 
+            jni-signature="()Lcom/google/android/gms/games/Game;" rjni-return="Lcom/google/android/gms/games/Game;" 
+            >
+      </method>
+
+    </add-node>
 </metadata>

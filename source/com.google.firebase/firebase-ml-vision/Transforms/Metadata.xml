@@ -205,5 +205,11 @@
         >
         false
     </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzrz']" 
+        name="obfuscated"
+        >
+        false
+    </attr>
     
  </metadata>

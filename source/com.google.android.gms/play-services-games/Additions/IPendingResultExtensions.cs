@@ -225,6 +225,48 @@ namespace Android.Gms.Games.MultiPlayer.TurnBased
         }
     }
 }
+namespace Android.Gms.Games.Snapshot
+{
+    public static partial class ISnapshotsExtensions
+    {
+        public static async Task<ISnapshotsCommitSnapshotResult> CommitAndCloseAsync (this ISnapshots api, GoogleApiClient apiClient, ISnapshot snapshot, ISnapshotMetadataChange metadataChange)
+        {
+            return (await api.CommitAndClose (apiClient, snapshot, metadataChange)).JavaCast<ISnapshotsCommitSnapshotResult> ();
+        }
+        public static async Task<ISnapshotsDeleteSnapshotResult> DeleteAsync (this ISnapshots api, GoogleApiClient apiClient, ISnapshotMetadata metadata)
+        {
+            return (await api.Delete (apiClient, metadata)).JavaCast<ISnapshotsDeleteSnapshotResult> ();
+        }
+        public static async Task<ISnapshotsLoadSnapshotsResult> LoadAsync (this ISnapshots api, GoogleApiClient apiClient, bool forceReload)
+        {
+            return (await api.Load (apiClient, forceReload)).JavaCast<ISnapshotsLoadSnapshotsResult> ();
+        }
+        public static async Task<ISnapshotsOpenSnapshotResult> OpenAsync (this ISnapshots api, GoogleApiClient apiClient, ISnapshotMetadata metadata)
+        {
+            return (await api.Open (apiClient, metadata)).JavaCast<ISnapshotsOpenSnapshotResult> ();
+        }
+        public static async Task<ISnapshotsOpenSnapshotResult> OpenAsync (this ISnapshots api, GoogleApiClient apiClient, ISnapshotMetadata metadata, int conflictPolicy)
+        {
+            return (await api.Open (apiClient, metadata, conflictPolicy)).JavaCast<ISnapshotsOpenSnapshotResult> ();
+        }
+        public static async Task<ISnapshotsOpenSnapshotResult> OpenAsync (this ISnapshots api, GoogleApiClient apiClient, string fileName, bool createIfNotFound)
+        {
+            return (await api.Open (apiClient, fileName, createIfNotFound)).JavaCast<ISnapshotsOpenSnapshotResult> ();
+        }
+        public static async Task<ISnapshotsOpenSnapshotResult> OpenAsync (this ISnapshots api, GoogleApiClient apiClient, string fileName, bool createIfNotFound, int conflictPolicy)
+        {
+            return (await api.Open (apiClient, fileName, createIfNotFound, conflictPolicy)).JavaCast<ISnapshotsOpenSnapshotResult> ();
+        }
+        public static async Task<ISnapshotsOpenSnapshotResult> ResolveConflictAsync (this ISnapshots api, GoogleApiClient apiClient, string conflictId, ISnapshot snapshot)
+        {
+            return (await api.ResolveConflict (apiClient, conflictId, snapshot)).JavaCast<ISnapshotsOpenSnapshotResult> ();
+        }
+        public static async Task<ISnapshotsOpenSnapshotResult> ResolveConflictAsync (this ISnapshots api, GoogleApiClient apiClient, string conflictId, string snapshotId, ISnapshotMetadataChange metadataChange, ISnapshotContents snapshotContents)
+        {
+            return (await api.ResolveConflict (apiClient, conflictId, snapshotId, metadataChange, snapshotContents)).JavaCast<ISnapshotsOpenSnapshotResult> ();
+        }
+    }
+}
 
 namespace Android.Gms.Games.Stats
 {

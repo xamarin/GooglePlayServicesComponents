@@ -1,6 +1,4 @@
 ﻿<metadata>
-    
-    
     <remove-node
         path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='StubAnalyticsConnector']"
         >
@@ -240,4 +238,10 @@
         Java.Lang.Object
     </attr>        
     
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='AbtIntegrationHelper_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
 </metadata>

@@ -1,4 +1,4 @@
-﻿<enum-method-mappings>
+<enum-method-mappings>
 	<!--
   This example changes the Java method:
     android.support.v4.app.Fragment.SavedState.writeToParcel (int flags)
@@ -15,4 +15,7 @@
   - To change the type of the return value, use "return" as the parameter name.
   - The parameter names will be p0, p1, ... unless you provide JavaDoc file in the project.
   -->
+  <mapping jni-class="com/google/android/gms/cast/framework/CastContext">
+    <method jni-name="getCastState" parameter="return" clr-enum-type="Android.Gms.Cast.Framework.CastStates" />
+  </mapping>
 </enum-method-mappings>
