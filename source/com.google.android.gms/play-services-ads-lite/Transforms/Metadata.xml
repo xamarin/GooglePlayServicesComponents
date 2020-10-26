@@ -503,19 +503,12 @@
         Android.Gms.Internal.Ads
     </attr>
     
-    <!--
-    AddValue
-        method: getPrecisionType
-    Interface   AdValue.PrecisionType
-    rename needed
-    -->
     <attr
-        path="/api/package[@name='com.google.android.gms.ads']/interface[@name='AdValue.PrecisionType']"
+        path="/api/package[@name='com.google.android.gms.ads']/class[@name='AdValue']/method[@name='getPrecisionType' and count(parameter)=0]"
         name="managedName"
         >
         PrecisionTypeData
     </attr>
-    
     
     <attr
         path="/api/package[@name='com.google.android.gms.ads.query']"

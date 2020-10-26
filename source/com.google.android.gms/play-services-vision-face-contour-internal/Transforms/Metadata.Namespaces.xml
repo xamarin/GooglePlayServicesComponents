@@ -1,17 +1,4 @@
 ﻿<metadata>
-    <!-- Fix Namespaces -->
-    <attr 
-        path="/api/package[@name='com.google.android.gms.vision']" 
-        name="managedName"
-        >
-        Android.Gms.Vision
-    </attr>
-    <attr 
-        path="/api/package[@name='com.google.android.gms.vision.face']" 
-        name="managedName"
-        >
-        Android.Gms.Vision.Face
-    </attr>
     <attr 
         path="/api/package[@name='com.google.android.gms.vision.face']" 
         name="managedName"
@@ -30,5 +17,5 @@
         >
         Android.Gms.Internal.Vision
     </attr>
-
+    
 </metadata>

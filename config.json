@@ -424,41 +424,41 @@
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-vision",
-			"version" : "20.0.0",
-			"nugetVersion" : "120.0.0",
+			"version" : "20.1.2",
+			"nugetVersion" : "120.1.2",
 			"nugetId" : "Xamarin.GooglePlayServices.Vision",
 			"dependencyOnly" : false
 		},
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-vision-common",
-			"version" : "19.0.2",
-			"nugetVersion" : "119.0.2",
+			"version" : "19.1.2",
+			"nugetVersion" : "119.1.2",
 			"nugetId" : "Xamarin.GooglePlayServices.Vision.Common",
 			"dependencyOnly" : false
 		},
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-vision-face-contour-internal",
-			"version" : "16.0.0",
-			"nugetVersion" : "116.0.0",
+			"version" : "16.0.3",
+			"nugetVersion" : "116.0.3",
 			"nugetId" : "Xamarin.GooglePlayServices.Vision.Face.Contour.Internal",
 			"dependencyOnly" : false
 		},
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-vision-image-label",
-			"version" : "18.0.3",
-			"nugetVersion" : "118.0.3",
+			"version" : "18.1.0",
+			"nugetVersion" : "118.1.0",
 			"nugetId" : "Xamarin.GooglePlayServices.Vision.ImageLabel",
 			"dependencyOnly" : false
 		},
 		{
 			"groupId" : "com.google.android.gms",
 			"artifactId" : "play-services-vision-image-labeling-internal",
-			"version" : "16.0.0",
-			"nugetVersion" : "116.0.0",
-			"nugetId" : "Xamarin.GooglePlayServices.Vision.ImageLabelingIntetrnal",
+			"version" : "16.0.5",
+			"nugetVersion" : "116.0.5",
+			"nugetId" : "Xamarin.GooglePlayServices.Vision.ImageLabelingInternal",
 			"dependencyOnly" : false
 		},
 		{
@@ -901,11 +901,6 @@
 			"dependencyOnly" : false
 		},
 
-
-
-
-
-
 		{
 			"groupId" : "com.google.guava",
 			"artifactId" : "guava",
@@ -968,6 +963,14 @@
 			"version" : "1.0.0",
 			"nugetVersion": "1.0.0.1",
 			"nugetId" : "Xamarin.AndroidX.Legacy.Support.Core.Utils",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "androidx.lifecycle",
+			"artifactId" : "lifecycle-extensions",
+			"version" : "2.1.0",
+			"nugetVersion" : "2.1.0.1",
+			"nugetId" : "Xamarin.AndroidX.Lifecycle.Extensions",
 			"dependencyOnly" : true
 		},
 		{
@@ -1065,8 +1068,8 @@
 		{
 			"groupId" : "org.tensorflow",
 			"artifactId" : "tensorflow-lite",
-			"version" : "1.14.0",
-			"nugetVersion" : "1.14.0",
+			"version" : "2.1.0",
+			"nugetVersion" : "2.1.0.1",
 			"nugetId" : "Xamarin.TensorFlow.Lite",
 			"dependencyOnly" : true
 		},
@@ -1164,48 +1167,6 @@
 			"nugetId" : "Xamarin.Android.Arch.Lifecycle.Runtime",
 			"dependencyOnly" : true
 		},
-		{
-			"groupId" : "com.google.android.datatransport",
-			"artifactId" : "transport-api",
-			"version" : "2.1.0",
-			"nugetId" : "Xamarin.Google.Android.DataTransport.TransportApi",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "com.google.android.datatransport",
-			"artifactId" : "transport-backend-cct",
-			"version" : "2.1.0",
-			"nugetId" : "Xamarin.Google.Android.DataTransport.TransportBackendCct",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "com.google.android.datatransport",
-			"artifactId" : "transport-runtime",
-			"version" : "2.1.0",
-			"nugetId" : "Xamarin.Google.Android.DataTransport.TransportRuntime",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "io.reactivex.rxjava2",
-			"artifactId" : "rxandroid",
-			"version" : "2.1.1",
-			"nugetId" : "Xamarin.Android.ReactiveX.RxAndroid",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "io.reactivex.rxjava2",
-			"artifactId" : "rxjava",
-			"version" : "2.2.7",
-			"nugetId" : "Xamarin.Android.ReactiveX.Rxjava",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "com.squareup.picasso",
-			"artifactId" : "picasso",
-			"version" : "2.71828",
-			"nugetId" : "Square.Picasso",
-			"dependencyOnly" : true
-		},
 
 
 		{
@@ -1214,14 +1175,6 @@
 			"version" : "16.3.0",
 			"nugetVersion" : "71.1630.1",
 			"nugetId" : "Xamarin.GooglePlayServices.Measurement.Base",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "org.chromium.net",
-			"artifactId" : "cronet-api",
-			"version" : "75.3770.101",
-			"nugetVersion" : "75.3770.101",
-			"nugetId" : "Xamarin.Chromium.CroNet.Api",
 			"dependencyOnly" : true
 		},
 		{
@@ -1352,6 +1305,43 @@
 			"nugetId" : "Xamarin.Firebase.Analytics",      
 			"dependencyOnly" : true
 		}
+
+
+
+		,{
+			"groupId" : "com.google.android.gms",
+			"artifactId" : "play-services-vision-common",
+			"version" : "19.0.0",
+			"nugetVersion" : "119.0.0-preview03",
+			"nugetId" : "Xamarin.GooglePlayServices.Vision.Common",
+			"dependencyOnly" : true
+		}
+		,{
+			"groupId" : "com.google.android.gms",
+			"artifactId" : "play-services-vision",
+			"version" : "19.0.0",
+			"nugetVersion" : "119.0.0-preview03",
+			"nugetId" : "Xamarin.GooglePlayServices.Vision",
+			"dependencyOnly" : true
+		},
+
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-analytics",
+			"version" : "16.3.0",
+			"nugetVersion" : "71.1630.1",
+			"nugetId" : "Xamarin.Firebase.Analytics",      
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.firebase",
+			"artifactId" : "firebase-iid",
+			"version" : "19.0.1",
+			"nugetVersion" : "119.0.1-preview03",
+			"nugetId" : "Xamarin.Firebase.Iid",      
+			"dependencyOnly" : true
+		}
+
 
 	]
 }]

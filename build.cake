@@ -285,7 +285,8 @@ Task("binderate-config-verify")
 					string version_parsed_yy = version_parsed[1];
 					string version_parsed_zz = version_parsed[2];
 
-					if ( jo["groupId"].ToString().Equals("com.google.android.datatransport") )
+					Information($"version_parsed_xx       = {version_parsed_xx}");
+					if ( version_parsed_xx.Length == 1 )
 					{
 						version_parsed_xx = string.Concat("0", version_parsed_xx);
 					}
@@ -361,15 +362,77 @@ Task("binderate-fix")
                 if ( ! DirectoryExists(dir_group) )
                 {
                     Warning($"  		Creating {dir_group}");
-                    //CreateDirectory(dir_group);
-                }
-                string dir_artifact = $"{dir_group}/{artifactId}";
-                if ( ! DirectoryExists(dir_group) )
-                {
-                    Warning($"     			Creating artifact folder : {dir_artifact}");
-                    //CreateDirectory(dir_group);
+                    CreateDirectory(dir_group);
                 }
 
+                string dir_artifact = $"{dir_group}/{artifactId}";
+                if ( ! DirectoryExists(dir_artifact) )
+                {
+                    Warning($"     			Creating artifact folder : {dir_artifact}");
+                    CreateDirectory(dir_artifact);
+                    CreateDirectory($"{dir_artifact}/Transforms/");
+                    CreateDirectory($"{dir_artifact}/Additions/");
+                }
+				else
+				{
+					continue;
+				}
+
+				if ( ! FileExists($"{dir_artifact}/Transforms/Metadata.xml"))
+				{
+					Warning($"     				Creating file : {dir_artifact}/Metadata.xml");
+					CopyFile
+					(
+						$"./source/template-group-id/template-artifact/Transforms/Metadata.xml",
+						$"{dir_artifact}/Transforms/Metadata.xml"
+					);
+				}
+				if ( ! FileExists($"{dir_artifact}/Transforms/Metadata.Namespaces.xml"))
+				{
+					Warning($"     				Creating file : {dir_artifact}/Metadata.Namespaces.xml");
+					CopyFile
+					(
+						$"./source/template-group-id/template-artifact/Transforms/Metadata.Namespaces.xml",
+						$"{dir_artifact}/Transforms/Metadata.Namespaces.xml"
+					);
+				}
+				if ( ! FileExists($"{dir_artifact}/Transforms/Metadata.ParameterNames.xml"))
+				{
+					Warning($"     				Creating file : {dir_artifact}/Metadata.ParameterNames.xml");
+					CopyFile
+					(
+						$"./source/template-group-id/template-artifact/Transforms/Metadata.ParameterNames.xml",
+						$"{dir_artifact}/Transforms/Metadata.ParameterNames.xml"
+					);
+				}
+				if ( ! FileExists($"{dir_artifact}/Transforms/EnumFields.xml"))
+				{
+					Warning($"     				Creating file : {dir_artifact}/EnumFields.xml");
+					CopyFile
+					(
+						$"./source/template-group-id/template-artifact/Transforms/EnumFields.xml",
+						$"{dir_artifact}/Transforms/EnumFields.xml"
+					);
+				}
+				if ( ! FileExists($"{dir_artifact}/Transforms/EnumMethods.xml"))
+				{
+					Warning($"     				Creating file : {dir_artifact}/EnumMethods.xml");
+					CopyFile
+					(
+						$"./source/template-group-id/template-artifact/Transforms/EnumMethods.xml",
+						$"{dir_artifact}/Transforms/EnumMethods.xml"
+					);
+				}
+
+				if ( ! FileExists($"{dir_artifact}/Additions/Additions.cs"))
+				{
+					Warning($"     				Creating file : {dir_artifact}/Additions/Additions.cs");
+					CopyFile
+					(
+						$"./source/template-group-id/template-artifact/Additions/Additions.cs",
+						$"{dir_artifact}/Additions/Additions.cs"
+					);
+				}
             }
 
             return;

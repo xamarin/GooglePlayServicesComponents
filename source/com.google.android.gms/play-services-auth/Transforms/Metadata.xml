@@ -34,11 +34,11 @@
 	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.DowngradeableSafeParcel']" />
     
     <attr
-        path="/api/package[@name='com.google.android.gms.auth.api.identity']"
+        path="/api/package[@name='com.google.android.gms.auth.api.identity']" 
         name="managedName"
         >
         Android.Gms.Auth.Api.Identity
     </attr>
-    
+	
 </metadata>
 

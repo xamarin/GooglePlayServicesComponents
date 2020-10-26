@@ -7,7 +7,7 @@
         >
         Firebase.Crashlytics
     </attr>
-    <attr
+    <attr 
         path="/api/package[@name='com.google.firebase.crashlytics.internal']" 
         name="managedName"
         >
@@ -19,7 +19,13 @@
         >
         Firebase.Crashlytics.Internal.Analytics
     </attr>
-    <attr
+    <attr 
+        path="/api/package[@name='com.google.firebase.crashlytics.internal.analytics']" 
+        name="managedName"
+        >
+        Firebase.Crashlytics.Internal.Analytics
+    </attr>
+    <attr 
         path="/api/package[@name='com.google.firebase.crashlytics.internal.common']" 
         name="managedName"
         >
@@ -31,7 +37,7 @@
         >
         Firebase.Crashlytics.Internal.Log
     </attr>
-    <attr
+    <attr 
         path="/api/package[@name='com.google.firebase.crashlytics.internal.model']" 
         name="managedName"
         >
@@ -43,13 +49,13 @@
         >
         Firebase.Crashlytics.Internal.Model.Serialization
     </attr>
-    <attr
+    <attr 
         path="/api/package[@name='com.google.firebase.crashlytics.internal.ndk']" 
         name="managedName"
         >
-        Firebase.Crashlytics.Internal.Ndk
+        Firebase.Crashlytics.Internal.NDK
     </attr>
-    <attr
+    <attr 
         path="/api/package[@name='com.google.firebase.crashlytics.internal.network']" 
         name="managedName"
         >
@@ -61,7 +67,7 @@
         >
         Firebase.Crashlytics.Internal.Persistence
     </attr>
-    <attr
+    <attr 
         path="/api/package[@name='com.google.firebase.crashlytics.internal.proto']" 
         name="managedName"
         >
@@ -120,6 +126,13 @@
         name="managedName"
         >
         Firebase.Crashlytics.Internal.Unity
+    </attr>
+    
+    <attr 
+        path="/api/package[@name='com.google.firebase.crashlytics.ndk']" 
+        name="managedName"
+        >
+        Firebase.Crashlytics.NDK
     </attr>
     
 </metadata>
