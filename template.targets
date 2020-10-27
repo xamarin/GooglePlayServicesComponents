@@ -32,12 +32,5 @@
                 <Md5>$XbdMd5$</Md5>
             </XamarinBuildDownload>
         </ItemGroup>
-
-        <ItemGroup>
-            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_)">
-                <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
-                <AssemblyName>$(_XbdAssemblyName_)</AssemblyName>
-            </XamarinBuildDownloadRestoreAssemblyAar>
-        </ItemGroup>
     </Target>
 </Project>
