@@ -591,16 +591,16 @@
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-crashlytics",
-			"version" : "17.0.0",
-			"nugetVersion" : "117.0.0",
+			"version" : "17.1.0",
+			"nugetVersion" : "117.1.0",
 			"nugetId" : "Xamarin.Firebase.Crashlytics",
 			"dependencyOnly" : false
 		},
 		{
 			"groupId" : "com.google.firebase",
 			"artifactId" : "firebase-crashlytics-ndk",
-			"version" : "17.0.0",
-			"nugetVersion" : "117.0.0",
+			"version" : "17.1.0",
+			"nugetVersion" : "117.1.0",
 			"nugetId" : "Xamarin.Firebase.Crashlytics.NDK",
 			"dependencyOnly" : false
 		},
@@ -1254,6 +1254,22 @@
 			"artifactId" : "transport-backend-cct",
 			"version" : "2.2.2",
 			"nugetVersion" : "2.2.2",
+			"nugetId" : "Xamarin.Google.Android.DataTransport.TransportBackendCct",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.android.datatransport",
+			"artifactId" : "transport-runtime",
+			"version" : "2.2.3",
+			"nugetVersion" : "2.2.3",
+			"nugetId" : "Xamarin.Google.Android.DataTransport.TransportRuntime",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.android.datatransport",
+			"artifactId" : "transport-backend-cct",
+			"version" : "2.2.3",
+			"nugetVersion" : "2.2.3",
 			"nugetId" : "Xamarin.Google.Android.DataTransport.TransportBackendCct",
 			"dependencyOnly" : true
 		},
