@@ -52,7 +52,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Tasks" Version="117.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Vision" Version="120.1.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Vision.Common" Version="119.1.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Vision.FaceContourInternal" Version="116.0.3" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Vision.Face.Contour.Internal" Version="116.0.3" />
     <PackageReference Update="Xamarin.GooglePlayServices.Vision.ImageLabel" Version="118.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Vision.ImageLabelingInternal" Version="116.0.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.Wallet" Version="118.0.0" />
@@ -70,8 +70,8 @@
     <PackageReference Update="Xamarin.Firebase.Config" Version="119.1.4" />
     <PackageReference Update="Xamarin.Firebase.Core" Version="117.4.1" />
     <PackageReference Update="Xamarin.Firebase.Crash" Version="116.2.1" />
-    <PackageReference Update="Xamarin.Firebase.Crashlytics" Version="117.0.0" />
-    <PackageReference Update="Xamarin.Firebase.Crashlytics.NDK" Version="117.0.0" />
+    <PackageReference Update="Xamarin.Firebase.Crashlytics" Version="117.1.0" />
+    <PackageReference Update="Xamarin.Firebase.Crashlytics.NDK" Version="117.1.0" />
     <PackageReference Update="Xamarin.Firebase.Database" Version="119.3.0" />
     <PackageReference Update="Xamarin.Firebase.Database.Collection" Version="117.0.1" />
     <PackageReference Update="Xamarin.Firebase.Database.Connection" Version="116.0.2" />
@@ -96,8 +96,8 @@
     <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Id.Model" Version="120.0.7" />
     <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Smart.Reply" Version="118.0.7" />
     <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Smart.Reply.Model" Version="120.0.7" />
-    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Translate" Version="122.0.0" />
-    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Translate.Model" Version="120.0.7" />
+    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Translate" Version="121.0.1" />
+    <PackageReference Update="Xamarin.Firebase.ML.Natural.Language.Translate.Model" Version="120.0.4" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision" Version="124.0.3" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.AutoML" Version="118.0.5" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.BarCode.Model" Version="116.1.1" />
@@ -143,14 +143,6 @@
     <PackageReference Update="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.1.1.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="71.1630.1" />
     <PackageReference Update="Xamarin.Chromium.CroNet.Api" Version="75.3770.101" />
-    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="" />
-    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="" />
-    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="" />
-    <PackageReference Update="Xamarin.Android.ReactiveX.RxAndroid" Version="" />
-    <PackageReference Update="Xamarin.Android.ReactiveX.Rxjava" Version="" />
-    <PackageReference Update="Square.Picasso" Version="" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="71.1630.1" />
-    <PackageReference Update="Xamarin.Chromium.CroNet.Api" Version="75.3770.101" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="2.1.0" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="2.1.0" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="2.1.0" />
@@ -160,11 +152,14 @@
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="2.2.0" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="2.2.2" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="2.2.2" />
+    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="2.2.3" />
+    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="2.2.3" />
     <PackageReference Update="Xamarin.Google.Dagger" Version="2.25.2" />
     <PackageReference Update="Xamarin.Android.ReactiveX.RxAndroid" Version="2.1.1" />
     <PackageReference Update="Xamarin.Android.ReactiveX.RxJava" Version="2.2.7" />
     <PackageReference Update="Square.Picasso" Version="2.71828" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="71.1630.1" />
+    <PackageReference Update="Xamarin.Firebase.Analytics" Version="71.1630.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Vision.Common" Version="119.0.0-preview03" />
     <PackageReference Update="Xamarin.GooglePlayServices.Vision" Version="119.0.0-preview03" />
     <PackageReference Update="Xamarin.Firebase.Analytics" Version="71.1630.1" />

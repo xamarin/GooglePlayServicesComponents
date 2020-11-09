@@ -45,7 +45,7 @@
 	<remove-node path="/api/package[@name='com.google.android.gms.drive']/class[@name='MetadataChangeSet']/constructor[@name='MetadataChangeSet']" />
 
 	<!-- Fix up inheritence from covariant types -->
-	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='MetadataBuffer']/method[@name='get']" name="visibility">public override</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='MetadataBuffer']/method[@name='get']" name="visibility">public</attr>
 	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='MetadataBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
 
 <!--	<attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='zzh']" name="obfuscated">false</attr>-->

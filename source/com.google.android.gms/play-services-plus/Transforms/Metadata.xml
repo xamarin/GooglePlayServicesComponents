@@ -30,7 +30,7 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
 
-	<attr path="/api/package[@name='com.google.android.gms.plus.model.people']/class[@name='PersonBuffer']/method[@name='get']" name="visibility">public override</attr>
+	<attr path="/api/package[@name='com.google.android.gms.plus.model.people']/class[@name='PersonBuffer']/method[@name='get']" name="visibility">public</attr>
 	<attr path="/api/package[@name='com.google.android.gms.plus.model.people']/class[@name='PersonBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
 
 	<attr path="/api/package[@name='com.google.android.gms.plus.model.moments']/class[@name='MomentBuffer']/method[@name='get']" name="visibility">public override</attr>
