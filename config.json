@@ -17,6 +17,10 @@
 		{
 			"templateFile": "source/GooglePlayServicesPom.cshtml",
 			"outputFileRule" : "generated/{groupid}.{artifactid}/pom.xml"
+		},
+		{
+			"templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+			"outputFileRule" : "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
 		}
 	],
 	"artifacts" : [
