@@ -1,5 +1,7 @@
 # Xamarin Component for Google Play Services Client Library
 
+Legacy branch/PR 71.x.y.z-legacy-Android.Support - DO NOT MERGE to master!
+
 Xamarin creates and maintains Xamarin.Android bindings for the Google Play Services Client Library, including:
 
  - Ads
