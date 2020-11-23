@@ -19,4 +19,7 @@
 	<attr path="/api/package[@name='com.google.firebase.iid']/class[@name='zzb']" name="obfuscated">false</attr>
 
 	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
+
+  <!-- Conflicts with a nested class named "ErrorCode", so keep it "GetErrorCode" -->
+  <attr path="/api/package[@name='com.google.firebase.iid']/class[@name='MessengerIpcClient.RequestFailedException']/method[@name='getErrorCode' and count(parameter)=0]" name="propertyName"></attr>
 </metadata>

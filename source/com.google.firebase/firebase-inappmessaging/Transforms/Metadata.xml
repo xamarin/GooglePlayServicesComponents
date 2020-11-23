@@ -243,6 +243,28 @@
         name="managedReturn"
         >
         Java.Lang.Object
-    </attr>        
-    
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='ApiClientModule_ProvidesFirebaseInstallationsFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal.injection.modules']/class[@name='TransportClientModule_ProvidesMetricsLoggerClientFactory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+          >
+        Java.Lang.Object
+    </attr>
+
+    <!--
+      These classes all contain nested classes with the same names as the desired property names from the "Builder" interface
+      they implement.  Thus they cannot implement the interface due to name conflicts.
+    -->
+    <remove-node path="/api/package[@name='com.google.firebase.inappmessaging']/class[@name='CampaignAnalytics']/implements[@name='com.google.firebase.inappmessaging.CampaignAnalyticsOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firebase.inappmessaging']/class[@name='CommonTypesProto.TriggeringCondition']/implements[@name='com.google.firebase.inappmessaging.CommonTypesProto.TriggeringConditionOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firebase.inappmessaging']/class[@name='MessagesProto.Content']/implements[@name='com.google.firebase.inappmessaging.MessagesProto.ContentOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.internal.firebase.inappmessaging.v1']/class[@name='CampaignProto.ThickContent']/implements[@name='com.google.internal.firebase.inappmessaging.v1.CampaignProto.ThickContentOrBuilder']" />
 </metadata>

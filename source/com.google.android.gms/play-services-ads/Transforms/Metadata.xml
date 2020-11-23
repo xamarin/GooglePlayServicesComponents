@@ -16,6 +16,7 @@
   	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']" name="managedName">Android.Gms.Ads.Mediation</attr>
   	<attr path="/api/package[@name='com.google.android.gms.ads.mediation.admob']" name="managedName">Android.Gms.Ads.Mediation.Admob</attr>
   	<attr path="/api/package[@name='com.google.android.gms.ads.mediation.customevent']" name="managedName">Android.Gms.Ads.Mediation.CustomEvent</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.nonagon.transaction.omid']" name="managedName">Android.Gms.Ads.Nonagon.Transaction.Omid</attr>
   	<attr path="/api/package[@name='com.google.android.gms.ads.purchase']" name="managedName">Android.Gms.Ads.Purchase</attr>
   	<attr path="/api/package[@name='com.google.android.gms.ads.search']" name="managedName">Android.Gms.Ads.Search</attr>
   	<attr path="/api/package[@name='com.google.android.gms.internal']" name="managedName">Android.Gms.Internal</attr>
