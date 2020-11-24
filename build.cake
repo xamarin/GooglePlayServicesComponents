@@ -477,11 +477,8 @@ Task("mergetargets")
 
 
 Task("libs")
-	.IsDependentOn("nuget-restore")
 	.Does(() =>
 {
-	NuGetRestore("./generated/GooglePlayServices.sln", new NuGetRestoreSettings { });
-
 	Configs = new string[] { "Release" };
 
 	foreach(string config in Configs)
@@ -492,6 +489,7 @@ Task("libs")
 			c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/libs.binlog")).FullPath };
 			c.Properties.Add("DesignTimeBuild", new [] { "false" });
 			c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { AndroidSdkBuildTools });
+			c.Restore = true;
 			if (! string.IsNullOrEmpty(ANDROID_HOME))
 			{
 				c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
@@ -664,12 +662,6 @@ Task("allbindingprojectrefs")
 
 	generateTargets("./output/Xamarin.Firebase.*.nupkg", "./output/FirebasePackages.targets");
 	generateTargets("./output/Xamarin.GooglePlayServices.*.nupkg", "./output/PlayServicesPackages.targets");
-});
-
-Task("nuget-restore")
-	.Does(() =>
-{
-	NuGetRestore("./generated/GooglePlayServices.sln", new NuGetRestoreSettings { });
 });
 
 
