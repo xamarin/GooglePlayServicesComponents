@@ -25,6 +25,7 @@
 	<!-- These methods were using the explicit types instead of the expected Java.Lang.Object types for the interface -->
 	<attr path="/api/package[@name='com.google.firebase.firestore']/class[@name='GeoPoint']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='com.google.firebase.firestore.GeoPoint']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
 	<attr path="/api/package[@name='com.google.firebase.firestore']/class[@name='Blob']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='com.google.firebase.firestore.Blob']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.firebase.firestore.core']/class[@name='MemoryComponentProvider']/method[@name='createConnectivityMonitor' and count(parameter)=1 and parameter[1][@type='com.google.firebase.firestore.core.ComponentProvider.Configuration']]" name="managedReturn">Firebase.Firestore.Remote.IConnectivityMonitor</attr>
 
 	<attr path="/api/package[@name='com.google.firebase.firestore']/interface[@name='EventListener']/method[@name='onEvent']/parameter[1]" name="managedName">obj</attr>
 	<attr path="/api/package[@name='com.google.firebase.firestore']/interface[@name='EventListener']/method[@name='onEvent']/parameter[2]" name="managedName">error</attr>
@@ -275,11 +276,32 @@
         
     <remove-node
         path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='FieldValue']/method[@name='value' and count(parameter)=0]"
-        />    
-    <remove-node
-        path="/api/package[@name='com.google.firestore.v1']/class[@name='TransactionOptions']/implements[@name='com.google.firestore.v1.TransactionOptionsOrBuilder']"
-        />    
-    
+        />
+
+    <!--
+      These classes all contain nested classes with the same names as the desired property names from the "Builder" interface
+      they implement.  Thus they cannot implement the interface due to name conflicts.
+  -->
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='TransactionOptions']/implements[@name='com.google.firestore.v1.TransactionOptionsOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firebase.firestore.proto']/class[@name='MaybeDocument']/implements[@name='com.google.firebase.firestore.proto.MaybeDocumentOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firebase.firestore.proto']/class[@name='Target']/implements[@name='com.google.firebase.firestore.proto.TargetOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='BatchGetDocumentsRequest']/implements[@name='com.google.firestore.v1.BatchGetDocumentsRequestOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='BatchGetDocumentsResponse']/implements[@name='com.google.firestore.v1.BatchGetDocumentsResponseOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='MaybeDocument']/implements[@name='com.google.firestore.v1.BatchGetDocumentsResponseOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='DocumentTransform.FieldTransform']/implements[@name='com.google.firestore.v1.DocumentTransform.FieldTransformOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='GetDocumentRequest']/implements[@name='com.google.firestore.v1.GetDocumentRequestOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='ListDocumentsRequest']/implements[@name='com.google.firestore.v1.ListDocumentsRequestOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='ListenRequest']/implements[@name='com.google.firestore.v1.ListenRequestOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='ListenResponse']/implements[@name='com.google.firestore.v1.ListenResponseOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='Precondition']/implements[@name='com.google.firestore.v1.PreconditionOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='RunQueryRequest']/implements[@name='com.google.firestore.v1.RunQueryRequestOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='StructuredQuery.Filter']/implements[@name='com.google.firestore.v1.StructuredQuery.FilterOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='StructuredQuery.UnaryFilter']/implements[@name='com.google.firestore.v1.StructuredQuery.UnaryFilterOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='Target']/implements[@name='com.google.firestore.v1.TargetOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='Target.QueryTarget']/implements[@name='com.google.firestore.v1.Target.QueryTargetOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='TransactionOptions.ReadOnly']/implements[@name='com.google.firestore.v1.TransactionOptions.ReadOnlyOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='Value']/implements[@name='com.google.firestore.v1.ValueOrBuilder']" />
+    <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='Write']/implements[@name='com.google.firestore.v1.WriteOrBuilder']" />
 
 
     <attr
