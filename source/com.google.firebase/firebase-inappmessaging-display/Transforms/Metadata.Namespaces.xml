@@ -67,8 +67,16 @@
         >
         Firebase.InAppMessaging.Display.Internal.Layout.Util
     </attr>
-    
-    
-    
-    
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.display.dagger']"
+        name="managedName"
+         >
+        Firebase.InAppMessaging.Display.Dagger
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.display.dagger.multibindings']"
+        name="managedName"
+         >
+        Firebase.InAppMessaging.Display.Dagger.MultiBindings
+    </attr>
 </metadata>

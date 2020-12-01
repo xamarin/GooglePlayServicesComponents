@@ -1,2 +1,4 @@
 ﻿<metadata>
+  <!-- Remove internal API that has covariant return issues -->
+  <remove-node path="/api/package[@name='com.google.firebase.inappmessaging.display.dagger.internal']" />
 </metadata>
