@@ -74,5 +74,17 @@
         >
         Google.Internal.Firebase.InAppMessaging.V1.SdkServing
     </attr>
-    
+        <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.dagger']"
+        name="managedName"
+         >
+        Firebase.InAppMessaging.Dagger
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.dagger.multibindings']"
+        name="managedName"
+         >
+        Firebase.InAppMessaging.Dagger.MultiBindings
+    </attr>
+
 </metadata>

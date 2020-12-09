@@ -333,4 +333,11 @@
         >        
     </remove-node>
 
+    <!-- 
+        Work around a bug in generator where adding this static interface field makes generator think
+        that the base interface HasOptions is ConstSugar and thus it gets removed.
+        https://github.com/xamarin/java.interop/issues/752
+    -->
+    <remove-node path="/api/package[@name='com.google.android.gms.common.api']/interface[@name='Api.ApiOptions']/field[@name='NO_OPTIONS']" />
+
 </metadata>
