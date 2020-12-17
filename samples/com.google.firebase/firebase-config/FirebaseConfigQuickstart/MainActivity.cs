@@ -46,8 +46,8 @@ namespace Config
 			// Enabling developer mode allows many more requests to be made per hour, so developers
 			// can test different config values during development.
 			// [START enable_dev_mode]
-			FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder().SetDeveloperModeEnabled(BuildConfig.DEBUG).Build();
-			mFirebaseRemoteConfig.SetConfigSettings(configSettings);
+			FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder().Build();
+			mFirebaseRemoteConfig.SetConfigSettingsAsync(configSettings).Wait();
 			// [END enable_dev_mode]
 
 			// Set default Remote Config values. In general you should have in app defaults for all
@@ -57,7 +57,7 @@ namespace Config
 			// server, the updated value will be used. You can set defaults via an xml file like done
 			// here or you can set defaults inline by using one of the other setDefaults methods.S
 			// [START set_default_values]
-			mFirebaseRemoteConfig.SetDefaults(Resource.Xml.remote_config_defaults);
+			mFirebaseRemoteConfig.SetDefaultsAsync(Resource.Xml.remote_config_defaults).Wait();
 			// [END set_default_values]
 
 			// Fetch discount config.
@@ -72,13 +72,6 @@ namespace Config
 			mPriceTextView.SetText(LOADING_PHRASE_CONFIG_KEY, null);
 
 			long cacheExpiration = 3600; // 1 hour in seconds.
-										 // If in developer mode cacheExpiration is set to 0 so each fetch will retrieve values from
-										 // the server.
-			if (mFirebaseRemoteConfig.Info.ConfigSettings.IsDeveloperModeEnabled)
-			{
-				cacheExpiration = 0;
-			}
-
 
 			try
 			{
@@ -88,7 +81,7 @@ namespace Config
 
 				// Once the config is successfully fetched it must be activated before newly fetched
 				// values are returned.
-				mFirebaseRemoteConfig.ActivateFetched();
+				mFirebaseRemoteConfig.Activate().Wait();
 			}
 			catch
 			{
