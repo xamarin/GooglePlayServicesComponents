@@ -39,6 +39,7 @@
 	<!-- Remove some internal namespaces -->
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.common.internal')]" />
+	<remove-node path="/api/package[@name='com.google.android.gms.signin.internal']" />
 
 	<!-- Fix params for some inherited parcelable types -->
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
@@ -330,6 +331,10 @@
     </remove-node>
     <remove-node
         path="/api/package[@name='com.google.android.gms.common.images']/class[@name='zab']"    
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin']/class[@name='zab']"    
         >        
     </remove-node>
 
