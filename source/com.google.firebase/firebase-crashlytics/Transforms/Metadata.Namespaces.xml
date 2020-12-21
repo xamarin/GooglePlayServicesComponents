@@ -134,5 +134,11 @@
         >
         Firebase.Crashlytics.NDK
     </attr>
-    
+     <attr 
+        path="/api/package[@name='com.google.firebase.crashlytics.internal.breadcrumbs']" 
+        name="managedName"
+        >
+        Firebase.Crashlytics.Internal.Breadcrumbs
+    </attr>
+  
 </metadata>
