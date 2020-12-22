@@ -3,6 +3,7 @@
 	<attr path="/api/package[@name='com.google.android.gms.wallet.fragment']" name="managedName">Android.Gms.Wallet.Fragment</attr>
 	<attr path="/api/package[@name='com.google.android.gms.wallet.wobs']" name="managedName">Android.Gms.Wallet.Wobs</attr>
 	<attr path="/api/package[@name='com.google.android.gms.wallet.firstparty']" name="managedName">Android.Gms.Wallet.FirstParty</attr>
+	<attr path="/api/package[@name='com.google.android.gms.wallet.callback']" name="managedName">Android.Gms.Wallet.Callback</attr>
 
 	<attr path="/api/package[@name='com.google.android.gms.wallet']/class[@name='Wallet']" name="managedName">WalletClass</attr>
 	<attr path="/api/package[@name='com.google.android.gms.wallet']/class[@name='Wallet.WalletOptions']" name="managedName">WalletClass.WalletOptions</attr>

@@ -367,6 +367,10 @@
     
     <attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zzd']" name="obfuscated">false</attr>
     <attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zze']" name="obfuscated">false</attr>
+    <attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zza']" name="obfuscated">false</attr>
+    <attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zzb']" name="obfuscated">false</attr>
+    <attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zzab']" name="obfuscated">false</attr>
+    <attr path="/api/package[@name='com.google.android.gms.games']/class[@name='zzh']" name="obfuscated">false</attr>
 
     <remove-node
         path="/api/package[@name='com.google.android.gms.games.internal']/interface[@name='zzu']"
@@ -504,6 +508,15 @@
             >
       </method>
     </add-node>
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerRef']"
+        >
+        <method 
+            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+        </method>        
+    </add-node>    
 
 
 </metadata>

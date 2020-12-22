@@ -12,6 +12,7 @@
     <attr path="/api/package[@name='com.google.firebase.perf.gauges']" name="managedName">Firebase.Perf.Gauges</attr>
     <attr path="/api/package[@name='com.google.firebase.perf.impl']" name="managedName">Firebase.Perf.Impl</attr>
     <attr path="/api/package[@name='com.google.firebase.perf.logging']" name="managedName">Firebase.Perf.Logging</attr>
+    <attr path="/api/package[@name='com.google.firebase.perf.transport']" name="managedName">Firebase.Perf.Transport</attr>
     <attr path="/api/package[@name='com.google.firebase.perf.util']" name="managedName">Firebase.Perf.Util</attr>
     <attr path="/api/package[@name='com.google.firebase.perf.v1']" name="managedName">Firebase.Perf.V1</attr>
 

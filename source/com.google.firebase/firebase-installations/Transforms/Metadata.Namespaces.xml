@@ -25,5 +25,11 @@
         >
         Firebase.Installations.Remote
     </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.installations.time']" 
+        name="managedName"
+        >
+        Firebase.Installations.Time
+    </attr>
     
 </metadata>

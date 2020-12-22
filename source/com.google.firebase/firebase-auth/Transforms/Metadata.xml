@@ -4,7 +4,7 @@
 	<attr path="/api/package[@name='com.google.firebase.auth']" name="managedName">Firebase.Auth</attr>
 	<attr path="/api/package[@name='com.google.firebase.auth.api.model']" name="managedName">Firebase.Auth.Api.Model</attr>
 	<attr path="/api/package[@name='com.google.firebase.auth.internal']" name="managedName">Firebase.Auth.Internal</attr>
-	<attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.firebase.auth']" name="managedName">Android.Gms.Dynamite.Descriptors.Firebase.Auth.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.firebase.auth']" name="managedName">Android.Gms.Dynamite.Descriptors.Firebase.Auth</attr>
 	<attr path="/api/package[@name='com.google.firebase.auth.api.fallback.service']" name="managedName">Firebase.Auth.Api.Fallback.Service</attr>
 	<attr path="/api/package[@name='com.google.firebase.auth.api.internal']" name="managedName">Firebase.Auth.Api.Internal</attr>
 	<attr path="/api/package[@name='com.google.firebase.auth.api.model.json']" name="managedName">Firebase.Auth.Api.Model.Json</attr>

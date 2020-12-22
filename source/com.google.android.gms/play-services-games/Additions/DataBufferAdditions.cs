@@ -93,51 +93,6 @@ namespace Android.Gms.Games.LeaderBoard
     }
 }
 
-namespace Android.Gms.Games.MultiPlayer
-{
-    public partial class ParticipantBuffer : IEnumerable<IParticipant>
-    {
-        public IEnumerator<IParticipant> GetEnumerator()
-        {
-            return this.ToEnumerable<IParticipant> ().GetEnumerator();
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-    }
-
-    public partial class InvitationBuffer : IEnumerable<IInvitation>
-    {
-        public IEnumerator<IInvitation> GetEnumerator()
-        {
-            return this.ToEnumerable<IInvitation> ().GetEnumerator();
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-    }
-}
-
-namespace Android.Gms.Games.MultiPlayer.TurnBased
-{
-    public partial class TurnBasedMatchBuffer : IEnumerable<ITurnBasedMatch>
-    {
-        public IEnumerator<ITurnBasedMatch> GetEnumerator()
-        {
-            return this.ToEnumerable<ITurnBasedMatch> ().GetEnumerator();
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-    }
-}
-
 namespace Android.Gms.Games.Snapshot
 {
     public partial class SnapshotMetadataBuffer : IEnumerable<ISnapshotMetadata>
