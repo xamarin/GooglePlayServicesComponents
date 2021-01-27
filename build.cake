@@ -483,18 +483,21 @@ Task("libs")
 
 	foreach(string config in Configs)
 	{
-		MSBuild("./generated/GooglePlayServices.sln", c => {
-			c.Configuration = config;
-			c.MaxCpuCount = MAX_CPU_COUNT;
-			c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/libs.binlog")).FullPath };
-			c.Properties.Add("DesignTimeBuild", new [] { "false" });
-			c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { AndroidSdkBuildTools });
-			c.Restore = true;
-			if (! string.IsNullOrEmpty(ANDROID_HOME))
-			{
-				c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
-			}
+		var settings = new DotNetCoreMSBuildSettings()
+			.SetConfiguration(config)
+			.SetMaxCpuCount(MAX_CPU_COUNT);
+		settings.Properties.Add("DesignTimeBuild", new [] { "false" });
+		settings.Properties.Add("AndroidSdkBuildToolsVersion", new [] { AndroidSdkBuildTools });
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
+		}
+
+		DotNetCoreRestore("./generated/GooglePlayServices.sln", new DotNetCoreRestoreSettings
+		{ 
+			MSBuildSettings = settings.EnableBinaryLogger("./output/restore.binlog")
 		});
+		DotNetCoreMSBuild("./generated/GooglePlayServices.sln", settings.EnableBinaryLogger("./output/libs.binlog"));
 	}
 });
 
@@ -670,23 +673,23 @@ Task("nuget")
 	.Does(() =>
 {
 	var outputPath = new DirectoryPath("./output");
+	var settings = new DotNetCoreMSBuildSettings()
+		.SetConfiguration("Release")
+		.SetMaxCpuCount(MAX_CPU_COUNT)
+		.EnableBinaryLogger ("./output/nuget.binlog");
+	settings.Targets.Clear();
+	settings.Targets.Add("Pack");
+	settings.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(outputPath).FullPath });
+	settings.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
+	settings.Properties.Add("DesignTimeBuild", new [] { "false" });
+	settings.Properties.Add("AndroidSdkBuildToolsVersion", new [] { $"{AndroidSdkBuildTools}" });
 
-	MSBuild ("./generated/GooglePlayServices.sln", c => {
-		c.Configuration = "Release";
-		c.MaxCpuCount = MAX_CPU_COUNT;
-		c.BinaryLogger = new MSBuildBinaryLogSettings { Enabled = true, FileName = MakeAbsolute(new FilePath("./output/nuget.binlog")).FullPath };
-		c.Targets.Clear();
-		c.Targets.Add("Pack");
-		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(outputPath).FullPath });
-		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
-		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { $"{AndroidSdkBuildTools}" });
+	if (! string.IsNullOrEmpty(ANDROID_HOME))
+	{
+		settings.Properties.Add("AndroidSdkDirectory", new[] { $"{ANDROID_HOME}" });
+	}
 
-		if (! string.IsNullOrEmpty(ANDROID_HOME))
-		{
-			c.Properties.Add("AndroidSdkDirectory", new[] { $"{ANDROID_HOME}" });
-		}
-    });
+	DotNetCoreMSBuild ("./generated/GooglePlayServices.sln", settings);
 });
 
 Task ("merge")

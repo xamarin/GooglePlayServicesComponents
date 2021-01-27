@@ -2,29 +2,20 @@
 @using System.Collections.Generic
 
 @{
-  var targetFrameworkMoniker = "MonoAndroid90";
+  var targetFrameworkMoniker = "monoandroid90";
+  var dotnetFrameworkMoniker = "net6.0-android30.0";
 }
 
-<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+<Project Sdk="Xamarin.Legacy.Sdk/0.1.0-alpha1">
   <PropertyGroup>
-    <TargetFramework>@(targetFrameworkMoniker)</TargetFramework>
+    <TargetFrameworks>@(targetFrameworkMoniker);@(dotnetFrameworkMoniker)</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     @if (!string.IsNullOrEmpty(Model.AssemblyName)) {
     <AssemblyName>@(Model.AssemblyName)</AssemblyName>
     } else {
     <AssemblyName>@(Model.NuGetPackageId)</AssemblyName>
     }
-    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
-    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
-    <AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
-    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
-    <EnableProguard>true</EnableProguard>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidDexTool>d8</AndroidDexTool>
-    <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidManifestMerger>manifestmerger.jar</AndroidManifestMerger>
+    <AndroidUseIntermediateDesignerFile>false</AndroidUseIntermediateDesignerFile>
   </PropertyGroup>
 
   @{
@@ -107,15 +98,6 @@
     <NoWarn>08A04;BG8A00</NoWarn>
 
     <!--
-      Harmfull 
-      - BG8401: Skipping managed_type, due to a duplicate field, method or nested type name. (Nested type) (Java type: java_type)  
-      - BG8604: top ancestor Type1 not found for nested type Namespace.Type1.Type2
-      - BG8C00: For type Namespace.Type1, base interface java.Interface does not exist
-      - BG8700: Unknown return type java.Type1 in method Method1 in managed type Namespace.Type2.
-      - BG8800: Unknown parameter type java.Type1 in method Method2 in managed type Namespace.Type2.
-    -->
-    <WarningsAsErrors>BG8401;BG8604;BG8C00;BG8700;BG8800</WarningsAsErrors>
-    <!--
       Xamarin.Android specific warnings
       =================================================================================================================
     -->
@@ -147,12 +129,14 @@
 
   <ItemGroup>
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\@(targetFrameworkMoniker)" />
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\@(dotnetFrameworkMoniker)" />
   </ItemGroup>
 
   @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.Basement")
   {
     <ItemGroup>
       <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="build\@(targetFrameworkMoniker)" />
+      <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="build\@(dotnetFrameworkMoniker)" />
     </ItemGroup>
   }
 
@@ -160,7 +144,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.ProguardFile != null) {
-    <None Include="..\..\@(art.ProguardFile)" Pack="True" PackagePath="proguard\@(targetFrameworkMoniker)" />
+    <None Include="..\..\@(art.ProguardFile)" Pack="True" PackagePath="proguard" />
       }
     }
   </ItemGroup>
@@ -190,7 +174,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if (1==2 && art.MavenArtifactPackaging == "aar") {
-    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar\@(targetFrameworkMoniker)" />
+    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar" />
       }
     }
   </ItemGroup>
@@ -251,7 +235,8 @@
       <PackageReference Include="Xamarin.Google.Dagger" Version="2.25.2.1" />
     }
 
-
+    <!-- Reference -->
+    <Reference Include="System.Net.Http" Condition=" '$(TargetFramework)' == '@(targetFrameworkMoniker)' " />
   </ItemGroup>
 
 
