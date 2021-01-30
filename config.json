@@ -330,6 +330,22 @@
       },
       {
         "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-barcode-scanning",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.BarcodeScanning",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-face-detection",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.FaceDetection",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
         "artifactId": "play-services-nearby",
         "version": "17.0.0",
         "nugetVersion": "117.0.0",
@@ -918,6 +934,142 @@
         "version": "17.1.1",
         "nugetVersion": "117.1.1",
         "nugetId": "Xamarin.Firebase.ProtoliteWellKnownTypes",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "core",
+        "version": "1.9.0",
+        "nugetVersion": "1.9.0",
+        "nugetId": "Xamarin.Google.Android.Play.Core",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "common",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.Common",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "barcode-scanning",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.BarcodeScanning",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "face-detection",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.FaceDetection",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "image-labeling",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.ImageLabeling",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "image-labeling-automl",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.ImageLabeling.AutoML",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "image-labeling-common",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.ImageLabeling.Common",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "image-labeling-custom",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.ImageLabeling.Custom",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "language-id",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.Language.Id",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "linkfirebase",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.LinkFirebase",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "object-detection",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.ObjectDetection",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "object-detection-common",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.ObjectDetection.Common",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "object-detection-custom",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.ObjectDetection.Custom",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "smart-reply",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.SmartReply",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "translate",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.Translate",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "vision-common",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.Vision.Common",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "vision-internal-vkp",
+        "version": "16.0.0",
+        "nugetVersion": "16.0.0",
+        "nugetId": "Xamarin.GoogleFirebase.ML.Kit.Vision.Internal.Vkp",
         "dependencyOnly": false
       },
       {
