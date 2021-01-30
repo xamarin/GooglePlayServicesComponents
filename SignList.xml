@@ -3,8 +3,8 @@
   <ItemGroup>
     <FirstParty Include="Xamarin.GooglePlayServices.*.dll" />
     <FirstParty Include="Xamarin.Firebase.*.dll" />
-  </ItemGroup>
-
+    <FirstParty Include="Xamarin.GoogleFirebase.MLKit.*.dll" />
+    <FirstParty Include="Xamarin.Google.Android.Play.*.dll" />
   <ItemGroup>
     <ThirdParty Include="ILRepack.dll" />
     <ThirdParty Include="protobuf-net.dll" />
