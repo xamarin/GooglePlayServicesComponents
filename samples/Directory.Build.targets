@@ -115,22 +115,22 @@
     <PackageReference Update="Xamarin.Firebase.Storage.Common" Version="117.0.0" />
     <PackageReference Update="Xamarin.Firebase.ProtoliteWellKnownTypes" Version="117.1.1" />
     <PackageReference Update="Xamarin.Google.Android.Play.Core" Version="1.9.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.Common" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.BarcodeScanning" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.FaceDetection" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.ImageLabeling" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.ImageLabeling.AutoML" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.ImageLabeling.Common" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.ImageLabeling.Custom" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.Language.Id" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.LinkFirebase" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.ObjectDetection" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.ObjectDetection.Common" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.ObjectDetection.Custom" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.SmartReply" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.Translate" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.Vision.Common" Version="16.0.0" />
-    <PackageReference Update="Xamarin.GoogleFirebase.ML.Kit.Vision.Internal.Vkp" Version="16.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.Common" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.BarcodeScanning" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.FaceDetection" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.ImageLabeling" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.ImageLabeling.AutoML" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.ImageLabeling.Common" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.ImageLabeling.Custom" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.Language.Id" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.LinkFirebase" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.ObjectDetection" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.ObjectDetection.Common" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.ObjectDetection.Custom" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.SmartReply" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.Translate" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.Vision.Common" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GoogleFirebase.MLKit.Vision.Internal.Vkp" Version="116.0.0" />
     <PackageReference Update="Xamarin.Google.Guava" Version="" />
     <PackageReference Update="Xamarin.Google.Guava.ListenableFuture" Version="1.0.0.2" />
     <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.1.0.1" />
