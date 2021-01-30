@@ -1,0 +1,7 @@
+<Project>
+
+  <PropertyGroup>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+
+</Project>
