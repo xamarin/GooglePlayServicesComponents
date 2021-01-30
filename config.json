@@ -940,7 +940,7 @@
         "groupId": "androidx.annotation",
         "artifactId": "annotation",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0.1",
+        "nugetVersion": "1.1.0.4",
         "nugetId": "Xamarin.AndroidX.Annotation",
         "dependencyOnly": true
       },
@@ -1044,7 +1044,7 @@
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat",
         "version": "1.2.0",
-        "nugetVersion": "1.2.0",
+        "nugetVersion": "1.2.0.2",
         "nugetId": "Xamarin.AndroidX.AppCompat",
         "dependencyOnly": true
       },
