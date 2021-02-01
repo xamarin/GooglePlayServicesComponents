@@ -564,7 +564,7 @@
         "groupId": "com.google.firebase",
         "artifactId": "firebase-common",
         "version": "19.5.0",
-        "nugetVersion": "1119.5.0",
+        "nugetVersion": "119.5.0",
         "nugetId": "Xamarin.Firebase.Common",
         "dependencyOnly": false
       },
