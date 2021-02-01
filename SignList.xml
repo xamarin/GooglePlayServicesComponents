@@ -5,6 +5,8 @@
     <FirstParty Include="Xamarin.Firebase.*.dll" />
     <FirstParty Include="Xamarin.GoogleFirebase.MLKit.*.dll" />
     <FirstParty Include="Xamarin.Google.Android.Play.*.dll" />
+  </ItemGroup>
+
   <ItemGroup>
     <ThirdParty Include="ILRepack.dll" />
     <ThirdParty Include="protobuf-net.dll" />
