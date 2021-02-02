@@ -5,7 +5,7 @@
         path="/api/package[@name='com.google.android.gms.internal.mlkit_common']"
         name="managedName"
         >
-        Android.Gms.Internal.MLKitCommon
+        Android.Gms.Internal.MLKit.Common
     </attr>
   <attr
       path="/api/package[@name='com.google.mlkit.common']"
