@@ -11,37 +11,37 @@
       path="/api/package[@name='com.google.mlkit.common']"
       name="managedName"
         >
-      Xamarin.GoogleFirebase.MLKit.Common
+      Xamarin.Google.MLKit.Common
   </attr>
   <attr
       path="/api/package[@name='com.google.mlkit.common.internal']"
       name="managedName"
         >
-    Xamarin.GoogleFirebase.MLKit.Common.Internal
+    Xamarin.Google.MLKit.Common.Internal
   </attr>
   <attr
       path="/api/package[@name='com.google.mlkit.common.internal.model']"
       name="managedName"
         >
-    Xamarin.GoogleFirebase.MLKit.Common.Internal.Model
+    Xamarin.Google.MLKit.Common.Internal.Model
   </attr>
   <attr
       path="/api/package[@name='com.google.mlkit.common.model']"
       name="managedName"
         >
-    Xamarin.GoogleFirebase.MLKit.Common.Model
+    Xamarin.Google.MLKit.Common.Model
   </attr>
   <attr
       path="/api/package[@name='com.google.mlkit.common.sdkinternal']"
       name="managedName"
         >
-    Xamarin.GoogleFirebase.MLKit.Common.SDKInternal
+    Xamarin.Google.MLKit.Common.SDKInternal
   </attr>
   <attr
       path="/api/package[@name='com.google.mlkit.common.sdkinternal.model']"
       name="managedName"
         >
-    Xamarin.GoogleFirebase.MLKit.Common.SDKInternal.Model
+    Xamarin.Google.MLKit.Common.SDKInternal.Model
   </attr>
   
   

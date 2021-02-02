@@ -29,7 +29,7 @@
       path="/api/package[@name='com.google.mlkit.vision.vkp']"
       name="managedName"
       >
-      Xamarin.GoogleFirebase.MLKit.Vision.Vkp
+      Xamarin.Google.MLKit.Vision.Vkp
   </attr>
   
   

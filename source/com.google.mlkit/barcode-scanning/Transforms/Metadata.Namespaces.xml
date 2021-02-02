@@ -16,19 +16,19 @@
         path="/api/package[@name='com.google.android.libraries.barhopper']"
         name="managedName"
           >
-        Xamarin.GoogleFirebase.MLKit.Barhopper
+        Xamarin.Google.MLKit.Barhopper
     </attr>
     <attr
         path="/api/package[@name='com.google.barhopper.deeplearning']"
         name="managedName"
           >
-        Xamarin.GoogleFirebase.MLKit.Barhopper.DeepLearning
+        Xamarin.Google.MLKit.Barhopper.DeepLearning
     </attr>
     <attr
         path="/api/package[@name='com.google.mlkit.vision.barcode']"
         name="managedName"
           >
-        Xamarin.GoogleFirebase.MLKit.Barhopper.DeepLearning
+        Xamarin.Google.MLKit.Barhopper.DeepLearning
     </attr>
   
   

@@ -5,19 +5,19 @@
         path="/api/package[@name='com.google.mlkit.vision.face']"
         name="managedName"
         >
-        Xamarin.GoogleFirebase.MLKit.Vision.Face
+        Xamarin.Google.MLKit.Vision.Face
     </attr>
     <attr
         path="/api/package[@name='com.google.mlkit.vision.face']"
         name="managedName"
         >
-        Xamarin.GoogleFirebase.MLKit.Vision.Face
+        Xamarin.Google.MLKit.Vision.Face
     </attr>
     <attr
         path="/api/package[@name='com.google.mlkit.vision.barcode.internal']"
         name="managedName"
         >
-        Xamarin.GoogleFirebase.MLKit.Vision.Face.Internal
+        Xamarin.Google.MLKit.Vision.Face.Internal
     </attr>
   
 </metadata>

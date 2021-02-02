@@ -8,7 +8,7 @@
     return="com.google.mlkit.vision.label.automl.AutoMLImageLabelerOptions"
     return="com.google.mlkit.vision.label.ImageLabelerOptionsBase"
     
-    check also: Xamarin.GoogleFirebase.MLKit.ImageLabeling
+    check also: Xamarin.Google.MLKit.ImageLabeling
     
     removing `build` with return="com.google.mlkit.vision.label.automl.AutoMLImageLabelerOptions"
     renaming in Addditions

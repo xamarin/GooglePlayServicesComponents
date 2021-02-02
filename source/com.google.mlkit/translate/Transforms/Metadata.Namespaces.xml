@@ -11,13 +11,13 @@
       path="/api/package[@name='com.google.mlkit.nl.translate']"
       name="managedName"
       >
-      Xamarin.GoogleFirebase.MLKit.NL.Translate
+      Xamarin.Google.MLKit.NL.Translate
   </attr>
   <attr
       path="/api/package[@name='com.google.mlkit.nl.translate.internal']"
       name="managedName"
       >
-      Xamarin.GoogleFirebase.MLKit.NL.Translate.Internal
+      Xamarin.Google.MLKit.NL.Translate.Internal
   </attr>
   
   

@@ -11,13 +11,13 @@
       path="/api/package[@name='com.google.mlkit.vision.common']"
       name="managedName"
       >
-      Xamarin.GoogleFirebase.MLKit.Vision.Common
+      Xamarin.Google.MLKit.Vision.Common
   </attr>
   <attr
       path="/api/package[@name='com.google.mlkit.vision.common.internal']"
       name="managedName"
       >
-      Xamarin.GoogleFirebase.MLKit.Vision.Common.Internal
+      Xamarin.Google.MLKit.Vision.Common.Internal
   </attr>
 
   

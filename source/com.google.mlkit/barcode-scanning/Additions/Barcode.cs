@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Android.Runtime;
 using Java.Interop;
 
-namespace Xamarin.GoogleFirebase.MLKit.Barhopper
+namespace Xamarin.Google.MLKit.Barhopper
 {
 	// Metadata.xml XPath class reference: path="/api/package[@name='com.google.android.libraries.barhopper']/class[@name='Barcode']"
 	//[global::Android.Runtime.Register("com/google/android/libraries/barhopper/Barcode", DoNotGenerateAcw = true)]

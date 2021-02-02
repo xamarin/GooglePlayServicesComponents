@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Xamarin.GoogleFirebase.MLKit.ObjectDetection.Additions
+namespace Xamarin.Google.MLKit.ObjectDetection.Additions
 {
     public class ObjectDetectorOptions
     {

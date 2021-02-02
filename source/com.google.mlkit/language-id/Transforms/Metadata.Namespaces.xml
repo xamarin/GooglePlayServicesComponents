@@ -11,13 +11,13 @@
       path="/api/package[@name='com.google.mlkit.nl.languageid']"
       name="managedName"
       >
-      Xamarin.GoogleFirebase.MLKit.LanguageId
+      Xamarin.Google.MLKit.LanguageId
   </attr>
   <attr
       path="/api/package[@name='com.google.mlkit.nl.languageid.internal']"
       name="managedName"
         >
-    Xamarin.GoogleFirebase.MLKit.LanguageId.Internal
+    Xamarin.Google.MLKit.LanguageId.Internal
   </attr>
   
   

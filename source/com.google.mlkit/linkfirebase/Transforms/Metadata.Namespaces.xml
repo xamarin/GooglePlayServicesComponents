@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<metadata>
+﻿<metadata>
 
   <attr
       path="/api/package[@name='com.google.android.gms.internal.mlkit_linkfirebase']"
@@ -11,7 +10,7 @@
       path="/api/package[@name='com.google.mlkit.linkfirebase']"
       name="managedName"
       >
-      Xamarin.GoogleFirebase.MLKit.LinkFirebase
+      Xamarin.Google.MLKit.LinkFirebase
   </attr>
   
   

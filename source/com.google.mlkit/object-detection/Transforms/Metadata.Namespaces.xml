@@ -11,13 +11,13 @@
       path="/api/package[@name='com.google.mlkit.vision.objects.defaults']"
       name="managedName"
       >
-      Xamarin.GoogleFirebase.MLKit.Vision.Objects.Defaults
+      Xamarin.Google.MLKit.Vision.Objects.Defaults
   </attr>
   <attr
       path="/api/package[@name='com.google.mlkit.vision.objects.defaults.internal']"
       name="managedName"
       >
-      Xamarin.GoogleFirebase.MLKit.Vision.Objects.Defaults.Internal
+      Xamarin.Google.MLKit.Vision.Objects.Defaults.Internal
   </attr>
   
   

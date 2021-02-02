@@ -10,13 +10,13 @@
       path="/api/package[@name='com.google.mlkit.vision.label.automl']"
       name="managedName"
         >
-      Xamarin.GoogleFirebase.MLKit.Vision.Label.AutoML
+      Xamarin.Google.MLKit.Vision.Label.AutoML
   </attr>
   <attr
       path="/api/package[@name='com.google.mlkit.vision.label.automl.internal']"
       name="managedName"
         >
-      Xamarin.GoogleFirebase.MLKit.Vision.Label.AutoML.Internal
+      Xamarin.Google.MLKit.Vision.Label.AutoML.Internal
   </attr>
   
   

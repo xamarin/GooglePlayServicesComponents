@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using Android.Runtime;
 using Java.Interop;
 
-namespace Xamarin.GoogleFirebase.MLKit.Vision.Label.Custom
+namespace Xamarin.Google.MLKit.Vision.Label.Custom
 {
 
 	// Metadata.xml XPath class reference: path="/api/package[@name='com.google.mlkit.vision.label.custom']/class[@name='CustomImageLabelerOptions']"
 	//[global::Android.Runtime.Register("com/google/mlkit/vision/label/custom/CustomImageLabelerOptions", DoNotGenerateAcw = true)]
-	public partial class CustomImageLabelerOptions //: global::Xamarin.GoogleFirebase.MLKit.Vision.Label.ImageLabelerOptionsBase
+	public partial class CustomImageLabelerOptions //: global::Xamarin.Google.MLKit.Vision.Label.ImageLabelerOptionsBase
 	{
 		static Delegate cb_build;
 #pragma warning disable 0169
@@ -21,20 +21,20 @@ namespace Xamarin.GoogleFirebase.MLKit.Vision.Label.Custom
 
 		static IntPtr n_Build(IntPtr jnienv, IntPtr native__this)
 		{
-			global::Xamarin.GoogleFirebase.MLKit.Vision.Label.Custom.CustomImageLabelerOptions.Builder __this = global::Java.Lang.Object.GetObject<global::Xamarin.GoogleFirebase.MLKit.Vision.Label.Custom.CustomImageLabelerOptions.Builder>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Xamarin.Google.MLKit.Vision.Label.Custom.CustomImageLabelerOptions.Builder __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.MLKit.Vision.Label.Custom.CustomImageLabelerOptions.Builder>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			return JNIEnv.ToLocalJniHandle(__this.Build());
 		}
 #pragma warning restore 0169
 
 		// Metadata.xml XPath method reference: path="/api/package[@name='com.google.mlkit.vision.label.custom']/class[@name='CustomImageLabelerOptions.Builder']/method[@name='build' and count(parameter)=0]"
 		[Register("build", "()Lcom/google/mlkit/vision/label/ImageLabelerOptionsBase;", "GetBuildHandler")]
-		public virtual unsafe global::Xamarin.GoogleFirebase.MLKit.Vision.Label.ImageLabelerOptionsBase Build()
+		public virtual unsafe global::Xamarin.Google.MLKit.Vision.Label.ImageLabelerOptionsBase Build()
 		{
 			const string __id = "build.()Lcom/google/mlkit/vision/label/ImageLabelerOptionsBase;";
 			try
 			{
 				var __rm = _members.InstanceMethods.InvokeVirtualObjectMethod(__id, this, null);
-				return global::Java.Lang.Object.GetObject<global::Xamarin.GoogleFirebase.MLKit.Vision.Label.ImageLabelerOptionsBase>(__rm.Handle, JniHandleOwnership.TransferLocalRef);
+				return global::Java.Lang.Object.GetObject<global::Xamarin.Google.MLKit.Vision.Label.ImageLabelerOptionsBase>(__rm.Handle, JniHandleOwnership.TransferLocalRef);
 			}
 			finally
 			{
@@ -54,7 +54,7 @@ namespace Xamarin.GoogleFirebase.MLKit.Vision.Label.Custom
 
 		static IntPtr n_SetConfidenceThreshold_F(IntPtr jnienv, IntPtr native__this, float p0)
 		{
-			global::Xamarin.GoogleFirebase.MLKit.Vision.Label.Custom.CustomImageLabelerOptions.Builder __this = global::Java.Lang.Object.GetObject<global::Xamarin.GoogleFirebase.MLKit.Vision.Label.Custom.CustomImageLabelerOptions.Builder>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Xamarin.Google.MLKit.Vision.Label.Custom.CustomImageLabelerOptions.Builder __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.MLKit.Vision.Label.Custom.CustomImageLabelerOptions.Builder>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			return JNIEnv.ToLocalJniHandle(__this.SetConfidenceThreshold(p0));
 		}
 #pragma warning restore 0169
