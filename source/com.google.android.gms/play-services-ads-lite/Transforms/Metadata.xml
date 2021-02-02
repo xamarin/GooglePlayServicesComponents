@@ -542,4 +542,11 @@
         Android.Gms.Ads.InStream
     </attr>
     
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.interstitial']"
+        name="managedName"
+        >
+        Android.Gms.Ads.Interstitial
+    </attr>
+
 </metadata>

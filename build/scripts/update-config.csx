@@ -55,7 +55,7 @@ foreach (var art in config[0].Artifacts.Where(a => !a.DependencyOnly)) {
 		if (should_update)
 		{
 			var new_version = GetLatestVersion (a)?.ToString ();
-			var prefix = art.NugetVersion.StartsWith ("1" + art.Version + ".") ? "1" : string.Empty;
+			var prefix = art.NugetVersion.StartsWith ("1" + art.Version) ? "1" : string.Empty;
 
 			art.Version = new_version;
 			art.NugetVersion = prefix + new_version;
