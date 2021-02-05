@@ -662,6 +662,8 @@ Task("allbindingprojectrefs")
 
 	generateTargets("./output/Xamarin.Firebase.*.nupkg", "./output/FirebasePackages.targets");
 	generateTargets("./output/Xamarin.GooglePlayServices.*.nupkg", "./output/PlayServicesPackages.targets");
+	generateTargets("./output/Xamarin.Google.MLKit.*.nupkg", "./output/Google.MLKit.targets");
+	generateTargets("./output/Xamarin.Google.Play.*.nupkg", "./output/Google.Play.targets");
 });
 
 
