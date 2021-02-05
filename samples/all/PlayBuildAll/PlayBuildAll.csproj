@@ -8,13 +8,13 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A9BE4750-6DFD-412E-B998-26B725911CF3}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>GpsBuildAll</RootNamespace>
+    <RootNamespace>PlayBuildAll</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
-    <AssemblyName>GpsBuildAll</AssemblyName>
+    <AssemblyName>PlayBuildAll</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
@@ -88,5 +88,5 @@
     <ProguardConfiguration Include="proguard.cfg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <Import Project="..\..\..\output\PlayServicesPackages.targets" />
+  <Import Project="..\..\..\output\Google.Play.targets" />
 </Project>

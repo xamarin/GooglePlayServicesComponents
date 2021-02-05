@@ -25,21 +25,22 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Fitness" Version="120.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Flags" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Games" Version="121.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Gass" Version="119.6.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Gass" Version="119.7.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Gcm" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Identity" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Iid" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.InstantApps" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Location" Version="117.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Maps" Version="117.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement" Version="118.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="118.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="118.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Impl" Version="118.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk" Version="118.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk.Api" Version="118.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.BarcodeScanning" Version="116.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.FaceDetection" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement" Version="118.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="118.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="118.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Impl" Version="118.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk" Version="118.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk.Api" Version="118.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.BarcodeScanning" Version="116.1.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.FaceDetection" Version="116.1.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition" Version="116.0.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Nearby" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Oss.Licenses" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Panorama" Version="117.0.0" />
@@ -61,18 +62,18 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Wallet" Version="118.1.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Wearable" Version="117.0.0" />
     <PackageReference Update="Xamarin.Firebase.Abt" Version="120.0.0" />
-    <PackageReference Update="Xamarin.Firebase.Ads" Version="119.6.0" />
-    <PackageReference Update="Xamarin.Firebase.Ads.Lite" Version="119.6.0" />
-    <PackageReference Update="Xamarin.Firebase.Analytics" Version="118.0.0" />
+    <PackageReference Update="Xamarin.Firebase.Ads" Version="119.7.0" />
+    <PackageReference Update="Xamarin.Firebase.Ads.Lite" Version="119.7.0" />
+    <PackageReference Update="Xamarin.Firebase.Analytics" Version="118.0.1" />
     <PackageReference Update="Xamarin.Firebase.Analytics.Impl" Version="116.3.0" />
     <PackageReference Update="Xamarin.Firebase.Annotations" Version="116.0.0" />
     <PackageReference Update="Xamarin.Firebase.AppIndexing" Version="119.1.0" />
-    <PackageReference Update="Xamarin.Firebase.Auth" Version="120.0.1" />
-    <PackageReference Update="Xamarin.Firebase.Auth.Interop" Version="119.0.1" />
+    <PackageReference Update="Xamarin.Firebase.Auth" Version="120.0.2" />
+    <PackageReference Update="Xamarin.Firebase.Auth.Interop" Version="119.0.2" />
     <PackageReference Update="Xamarin.Firebase.Common" Version="119.5.0" />
     <PackageReference Update="Xamarin.Firebase.Components" Version="116.1.0" />
     <PackageReference Update="Xamarin.Firebase.Config" Version="120.0.2" />
-    <PackageReference Update="Xamarin.Firebase.Core" Version="118.0.0" />
+    <PackageReference Update="Xamarin.Firebase.Core" Version="118.0.1" />
     <PackageReference Update="Xamarin.Firebase.Crash" Version="116.2.1" />
     <PackageReference Update="Xamarin.Firebase.Crashlytics" Version="117.3.0" />
     <PackageReference Update="Xamarin.Firebase.Crashlytics.NDK" Version="117.3.0" />
@@ -92,7 +93,7 @@
     <PackageReference Update="Xamarin.Firebase.Installations" Version="116.3.5" />
     <PackageReference Update="Xamarin.Firebase.Installations.InterOp" Version="116.0.1" />
     <PackageReference Update="Xamarin.Firebase.Invites" Version="117.0.0" />
-    <PackageReference Update="Xamarin.Firebase.Measurement.Connector" Version="118.0.1" />
+    <PackageReference Update="Xamarin.Firebase.Measurement.Connector" Version="118.0.2" />
     <PackageReference Update="Xamarin.Firebase.Measurement.Connector.Impl" Version="117.0.5" />
     <PackageReference Update="Xamarin.Firebase.Messaging" Version="121.0.1" />
     <PackageReference Update="Xamarin.Firebase.ML.Common" Version="122.1.2" />
@@ -110,27 +111,28 @@
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Image.Label.Model" Version="120.0.2" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Internal.Vkp" Version="117.0.2" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Object.Detection.Model" Version="119.0.6" />
-    <PackageReference Update="Xamarin.Firebase.Perf" Version="119.0.11" />
+    <PackageReference Update="Xamarin.Firebase.Perf" Version="119.1.0" />
     <PackageReference Update="Xamarin.Firebase.Storage" Version="119.2.1" />
     <PackageReference Update="Xamarin.Firebase.Storage.Common" Version="117.0.0" />
     <PackageReference Update="Xamarin.Firebase.ProtoliteWellKnownTypes" Version="117.1.1" />
     <PackageReference Update="Xamarin.Google.Android.Play.Core" Version="1.9.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.Common" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.FaceDetection" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.AutoML" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Common" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Custom" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.Language.Id" Version="116.0.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.Common" Version="116.1.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning" Version="116.0.1" />
+    <PackageReference Update="Xamarin.Google.MLKit.DigitalInk.Recognition" Version="116.0.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.FaceDetection" Version="116.0.1" />
+    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling" Version="116.2.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.AutoML" Version="116.2.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Common" Version="116.2.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Custom" Version="116.2.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.Language.Id" Version="116.1.0" />
     <PackageReference Update="Xamarin.Google.MLKit.LinkFirebase" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection.Common" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection.Custom" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.SmartReply" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.Translate" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="116.0.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection" Version="116.1.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection.Common" Version="116.1.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection.Custom" Version="116.1.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.SmartReply" Version="116.1.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.Translate" Version="116.1.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="116.0.1" />
+    <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="117.0.0" />
     <PackageReference Update="Xamarin.Google.Guava" Version="" />
     <PackageReference Update="Xamarin.Google.Guava.ListenableFuture" Version="1.0.0.2" />
     <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.1.0.1" />
@@ -162,6 +164,7 @@
     <PackageReference Update="Xamarin.Grpc.Android" Version="1.28.0" />
     <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.6.6" />
     <PackageReference Update="Square.OkHttp3" Version="3.12.3" />
+    <PackageReference Update="Square.OkHttp3" Version="4.3.1" />
     <PackageReference Update="Xamarin.Google.Dagger" Version="2.27.0" />
     <PackageReference Update="Xamarin.Android.Arch.Lifecycle.Common" Version="1.1.1.1" />
     <PackageReference Update="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.1.1.1" />
