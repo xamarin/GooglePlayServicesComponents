@@ -332,7 +332,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-barcode-scanning",
         "version": "16.1.0",
-        "nugetVersion": "116.1.0",
+        "nugetVersion": "116.1.0.1",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.BarcodeScanning",
         "dependencyOnly": false
       },
@@ -340,7 +340,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-face-detection",
         "version": "16.1.0",
-        "nugetVersion": "116.1.0",
+        "nugetVersion": "116.1.0.1",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.FaceDetection",
         "dependencyOnly": false
       },
@@ -348,7 +348,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-text-recognition",
         "version": "16.0.0",
-        "nugetVersion": "116.0.0",
+        "nugetVersion": "116.0.0.1",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition",
         "dependencyOnly": false
       },
