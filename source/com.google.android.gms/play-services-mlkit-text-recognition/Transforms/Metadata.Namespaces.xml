@@ -1,10 +1,21 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_text']" 
         name="managedName"
         >
-        Package
+        Android.Gms.Internal.MLKitVisionText
     </attr>
-    -->
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.text']" 
+        name="managedName"
+        >
+        Android.Gms.MLKit.Vision.Text
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.text.internal']" 
+        name="managedName"
+        >
+        Android.Gms.MLKit.Vision.Text.Internal
+    </attr>
+
 </metadata>

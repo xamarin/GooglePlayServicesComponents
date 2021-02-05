@@ -33,4 +33,9 @@
         >
     </remove-node>
 
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.label.automl']/class[@name='AutoMLImageLabelerOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
+        >
+    </remove-node>
+
 </metadata>

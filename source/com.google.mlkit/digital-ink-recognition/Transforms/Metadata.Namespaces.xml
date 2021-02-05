@@ -7,4 +7,22 @@
         Package
     </attr>
     -->
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_digitalink']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.MLKitVisionDigitalInk
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.digitalink']" 
+        name="managedName"
+        >
+        Android.Gms.MLKit.Vision.DigitalInk
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.digitalink.internal']" 
+        name="managedName"
+        >
+        Android.Gms.MLKit.Vision.DigitalInk.Internal
+    </attr>
 </metadata>
