@@ -40,7 +40,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk.Api" Version="118.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.BarcodeScanning" Version="116.1.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.FaceDetection" Version="116.1.0.1" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition" Version="116.0.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition" Version="116.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Nearby" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Oss.Licenses" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Panorama" Version="117.0.0" />
