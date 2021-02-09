@@ -17,13 +17,13 @@
         path="/api/package[@name='com.google.mlkit.vision.barcode']" 
         name="managedName"
         >
-        Android.Gms.MLKit.Vision.BarCode
+        Xamarin.Google.MLKit.Vision.BarCode
     </attr>
     <attr 
         path="/api/package[@name='com.google.mlkit.vision.barcode.internal']" 
         name="managedName"
         >
-        Android.Gms.MLKit.Vision.BarCode.Internal
+        Xamarin.Google.MLKit.Vision.BarCode.Internal
     </attr>
 
         

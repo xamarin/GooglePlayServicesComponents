@@ -9,13 +9,13 @@
         path="/api/package[@name='com.google.mlkit.vision.text']" 
         name="managedName"
         >
-        Android.Gms.MLKit.Vision.Text
+        Xamarin.Google.MLKit.Vision.Text
     </attr>
     <attr 
         path="/api/package[@name='com.google.mlkit.vision.text.internal']" 
         name="managedName"
         >
-        Android.Gms.MLKit.Vision.Text.Internal
+        Xamarin.Google.MLKit.Vision.Text.Internal
     </attr>
 
 </metadata>
