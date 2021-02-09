@@ -17,12 +17,12 @@
         path="/api/package[@name='com.google.mlkit.vision.digitalink']" 
         name="managedName"
         >
-        Android.Gms.MLKit.Vision.DigitalInk
+        Xamarin.Google.MLKit.Vision.DigitalInk
     </attr>
     <attr 
         path="/api/package[@name='com.google.mlkit.vision.digitalink.internal']" 
         name="managedName"
         >
-        Android.Gms.MLKit.Vision.DigitalInk.Internal
+        Xamarin.Google.MLKit.Vision.DigitalInk.Internal
     </attr>
 </metadata>
