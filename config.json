@@ -348,7 +348,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-text-recognition",
         "version": "16.0.0",
-        "nugetVersion": "116.0.0.1",
+        "nugetVersion": "116.0.0",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition",
         "dependencyOnly": false
       },
