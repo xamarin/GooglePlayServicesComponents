@@ -139,8 +139,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
-        "version": "17.5.0",
-        "nugetVersion": "117.5.0",
+        "version": "17.6.0",
+        "nugetVersion": "117.6.0",
         "nugetId": "Xamarin.GooglePlayServices.Basement",
         "dependencyOnly": false
       },
@@ -339,8 +339,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-face-detection",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0.1",
+        "version": "16.1.1",
+        "nugetVersion": "116.1.1",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.FaceDetection",
         "dependencyOnly": false
       },
@@ -987,8 +987,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "face-detection",
-        "version": "16.0.1",
-        "nugetVersion": "116.0.1",
+        "version": "16.0.2",
+        "nugetVersion": "116.0.2",
         "nugetId": "Xamarin.Google.MLKit.FaceDetection",
         "dependencyOnly": false
       },
@@ -1003,8 +1003,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "image-labeling-automl",
-        "version": "16.2.0",
-        "nugetVersion": "116.2.0",
+        "version": "16.2.1",
+        "nugetVersion": "116.2.1",
         "nugetId": "Xamarin.Google.MLKit.ImageLabeling.AutoML",
         "dependencyOnly": false
       },
@@ -1019,8 +1019,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "image-labeling-custom",
-        "version": "16.2.0",
-        "nugetVersion": "116.2.0",
+        "version": "16.2.1",
+        "nugetVersion": "116.2.1ß",
         "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Custom",
         "dependencyOnly": false
       },
@@ -1099,8 +1099,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "vision-internal-vkp",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "version": "17.0.1",
+        "nugetVersion": "117.0.1",
         "nugetId": "Xamarin.Google.MLKit.Vision.Internal.Vkp",
         "dependencyOnly": false
       },
