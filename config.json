@@ -1035,48 +1035,80 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "language-id",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0",
+        "version": "16.1.1",
+        "nugetVersion": "116.1.1",
         "nugetId": "Xamarin.Google.MLKit.Language.Id",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.mlkit",
         "artifactId": "linkfirebase",
-        "version": "16.0.0",
-        "nugetVersion": "116.0.0",
+        "version": "16.0.1",
+        "nugetVersion": "116.0.1",
         "nugetId": "Xamarin.Google.MLKit.LinkFirebase",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.mlkit",
+        "artifactId": "mediapipe-internal",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.Google.MLKit.MediaPipe.Internal",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
         "artifactId": "object-detection",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0",
+        "version": "16.2.0",
+        "nugetVersion": "116.2.0",
         "nugetId": "Xamarin.Google.MLKit.ObjectDetection",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.mlkit",
         "artifactId": "object-detection-common",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0",
+        "version": "16.2.1",
+        "nugetVersion": "116.2.1",
         "nugetId": "Xamarin.Google.MLKit.ObjectDetection.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.mlkit",
         "artifactId": "object-detection-custom",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0",
+        "version": "16.2.1",
+        "nugetVersion": "116.2.1",
         "nugetId": "Xamarin.Google.MLKit.ObjectDetection.Custom",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.mlkit",
+        "artifactId": "pose-detection",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.Google.MLKit.PoseDetection",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "pose-detection-accurate",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0",
+        "nugetId": "Xamarin.Google.MLKit.PoseDetection.Accurate",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "pose-detection-common",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0",
+        "nugetId": "Xamarin.Google.MLKit.PoseDetection.Common",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
         "artifactId": "smart-reply",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0",
+        "version": "16.1.1",
+        "nugetVersion": "116.1.1",
         "nugetId": "Xamarin.Google.MLKit.SmartReply",
         "dependencyOnly": false
       },
