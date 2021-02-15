@@ -675,8 +675,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-datatransport",
-        "version": "17.0.11",
-        "nugetVersion": "117.0.11",
+        "version": "17.0.10",
+        "nugetVersion": "117.0.10",
         "nugetId": "Xamarin.Firebase.Datatransport",
         "dependencyOnly": false
       },
@@ -923,8 +923,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-perf",
-        "version": "19.1.1",
-        "nugetVersion": "119.1.1",
+        "version": "19.1.0",
+        "nugetVersion": "119.1.0",
         "nugetId": "Xamarin.Firebase.Perf",
         "dependencyOnly": false
       },
