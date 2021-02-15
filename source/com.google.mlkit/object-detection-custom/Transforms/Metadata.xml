@@ -51,7 +51,10 @@
     <remove-node
         path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int']]"
         >        
+    </remove-node>    
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
+        >        
     </remove-node>
-    
     
 </metadata>

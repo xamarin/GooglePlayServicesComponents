@@ -1,3 +1,15 @@
 ﻿<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.pose.accurate']/class[@name='AccuratePoseDetectorOptions.Builder']/method[@name='build' and count(parameter)=0]"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.pose.accurate']/class[@name='AccuratePoseDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int']]"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.pose.accurate']/class[@name='AccuratePoseDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
+        >
+    </remove-node>
 
 </metadata>
