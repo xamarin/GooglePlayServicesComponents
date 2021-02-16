@@ -324,4 +324,13 @@
         >
         Java.Lang.Object
     </attr>
+
+
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.bundle']"
+        name="managedName"
+        >
+        Firebase.Firestore.Bundle
+    </attr>
+
 </metadata>
