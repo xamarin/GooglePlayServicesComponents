@@ -333,7 +333,7 @@
         Firebase.Firestore.Bundle
     </attr>
     <attr
-        path="/api/package[@name='com.google.firebase.firestore.proto']"
+        path="/api/package[@name='com.google.firestore.proto']"
         name="managedName"
         >
         Firebase.Firestore.Proto
