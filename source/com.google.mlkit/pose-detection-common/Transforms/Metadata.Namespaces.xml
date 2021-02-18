@@ -3,7 +3,7 @@
         path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_pose_common']" 
         name="managedName"
         >
-        Package
+      Android.Gms.Internal.MLKitVisionPoseCommon
     </attr>
     <attr 
         path="/api/package[@name='com.google.mlkit.vision.pose']" 
