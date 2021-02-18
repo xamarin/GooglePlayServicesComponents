@@ -25,4 +25,11 @@
         >
         Xamarin.Google.MLKit.Vision.DigitalInk.Internal
     </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.digitalink.downloading']"
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.DigitalInk.Downloading
+    </attr>
+
 </metadata>

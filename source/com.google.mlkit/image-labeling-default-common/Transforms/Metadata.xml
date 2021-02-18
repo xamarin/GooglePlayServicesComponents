@@ -1,3 +1,15 @@
 ﻿<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.label.defaults']/class[@name='ImageLabelerOptions.Builder']/method[@name='build' and count(parameter)=0]"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.label.defaults']/class[@name='ImageLabelerOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.label.defaults']/class[@name='ImageLabelerOptions.Builder']/method[@name='setConfidenceThreshold' and count(parameter)=1 and parameter[1][@type='float']]"
+        >        
+    </remove-node>
 
 </metadata>

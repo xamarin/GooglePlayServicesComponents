@@ -311,6 +311,32 @@
         public
     </attr>
 
+    <remove-node
+        path="/api/package[@name='com.google.firestore.proto']/class[@name='BundleElement']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.firestore.proto']/class[@name='BundledQuery']/implements"
+        />
 
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore']/class[@name='LoadBundleTask']/method[@name='getResult' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;X&gt;']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.bundle']"
+        name="managedName"
+        >
+        Firebase.Firestore.Bundle
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.proto']"
+        name="managedName"
+        >
+        Firebase.Firestore.Proto
+    </attr>
 
 </metadata>

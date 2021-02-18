@@ -345,4 +345,50 @@
     -->
     <remove-node path="/api/package[@name='com.google.android.gms.common.api']/interface[@name='Api.ApiOptions']/field[@name='NO_OPTIONS']" />
 
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='zae']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.images']/class[@name='zah']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zad']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zaq']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zaq']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zae']/method[@name='zae' and count(parameter)=2 and parameter[1][@type='com.google.android.gms.common.api.internal.zaaa'] and parameter[2][@type='boolean']]"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zad']/method[@name='zaf' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.common.api.internal.zabl&lt;?&gt;']]"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zaf']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zad']/method[@name='zaf' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.common.api.internal.zabl&lt;?&gt;']]"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zah']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zae']"
+        />
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='SafeParcelResponse']/method[@name='getValueObject' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='SafeParcelResponse']/method[@name='isPrimitiveFieldSet' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="visibility"
+        >
+        protected
+    </attr>
 </metadata>
