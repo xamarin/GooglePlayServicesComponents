@@ -17,4 +17,11 @@
         >
         Xamarin.Google.MLKit.Vision.Pose.Internal
     </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.pose.defaults']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Pose.Defaults
+    </attr>
+    
 </metadata>

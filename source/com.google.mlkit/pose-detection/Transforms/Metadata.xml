@@ -1,3 +1,14 @@
 ﻿<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='build' and count(parameter)=0 and @return='com.google.mlkit.vision.pose.defaults.PoseDetectorOptions']"
+        />
+
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int'] and @return='com.google.mlkit.vision.pose.defaults.PoseDetectorOptions.Builder']"
+        />
+
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor'] and @return='com.google.mlkit.vision.pose.defaults.PoseDetectorOptions.Builder']"
+        />
 
 </metadata>
