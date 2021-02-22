@@ -267,8 +267,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-location",
-        "version": "17.1.0",
-        "nugetVersion": "117.1.0",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Location",
         "dependencyOnly": false
       },
@@ -347,16 +347,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-image-labeling",
-        "version": "16.0.0",
-        "nugetVersion": "116.0.0",
+        "version": "16.0.2",
+        "nugetVersion": "116.0.2",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.ImageLabeling",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-text-recognition",
-        "version": "16.0.0",
-        "nugetVersion": "116.0.0",
+        "version": "16.1.3",
+        "nugetVersion": "116.1.3",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition",
         "dependencyOnly": false
       },
