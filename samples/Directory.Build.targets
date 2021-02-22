@@ -30,7 +30,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Identity" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Iid" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.InstantApps" Version="117.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Location" Version="117.1.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Location" Version="118.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Maps" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement" Version="118.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="118.0.2" />
@@ -40,8 +40,8 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk.Api" Version="118.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.BarcodeScanning" Version="116.1.3" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.FaceDetection" Version="116.1.4" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.ImageLabeling" Version="116.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.ImageLabeling" Version="116.0.2" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition" Version="116.1.3" />
     <PackageReference Update="Xamarin.GooglePlayServices.Nearby" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Oss.Licenses" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Panorama" Version="117.0.0" />
