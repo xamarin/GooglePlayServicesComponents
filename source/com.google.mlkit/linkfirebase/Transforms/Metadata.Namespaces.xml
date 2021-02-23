@@ -12,7 +12,11 @@
       >
       Xamarin.Google.MLKit.LinkFirebase
   </attr>
+  <attr
+      path="/api/package[@name='com.google.mlkit.linkfirebase.internal']"
+      name="managedName"
+      >
+      Xamarin.Google.MLKit.LinkFirebase.Internal
+  </attr>
   
-  
-
 </metadata>
