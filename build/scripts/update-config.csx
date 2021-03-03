@@ -2,7 +2,7 @@
 
 #r "nuget: MavenNet, 2.2.0"
 #r "nuget: Newtonsoft.Json, 12.0.3"
-#r "nuget: NuGet.Versioning, 5.8.0"
+#r "nuget: NuGet.Versioning, 5.8.1"
 
 // Usage:
 //   dotnet tool install -g dotnet-script

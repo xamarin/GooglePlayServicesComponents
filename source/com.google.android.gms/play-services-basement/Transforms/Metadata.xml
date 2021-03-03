@@ -1,4 +1,4 @@
-﻿    <metadata>
+﻿<metadata>
 	
 	<!-- Rename Namespaces -->
 	<attr path="/api/package[@name='com.google.android.gms.actions']" name="managedName">Android.Gms.Actions</attr>
