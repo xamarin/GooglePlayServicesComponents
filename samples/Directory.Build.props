@@ -1,7 +1,14 @@
+<!-- See https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/messages/xa0119.md -->
+
 <Project>
 
-  <PropertyGroup>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
 
 </Project>
