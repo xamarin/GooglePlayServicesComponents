@@ -6777,98 +6777,82 @@
   <attr path="/api/package[@name='com.google.firebase.storage']/interface[@name='StreamDownloadTask.StreamProcessor']/method[@name='doInBackground' and count(parameter)=2 and parameter[1][@type='com.google.firebase.storage.StreamDownloadTask.TaskSnapshot'] and parameter[2][@type='java.io.InputStream']]/parameter[1]" name="managedName">state</attr>
   <attr path="/api/package[@name='com.google.firebase.storage']/interface[@name='StreamDownloadTask.StreamProcessor']/method[@name='doInBackground' and count(parameter)=2 and parameter[1][@type='com.google.firebase.storage.StreamDownloadTask.TaskSnapshot'] and parameter[2][@type='java.io.InputStream']]/parameter[2]" name="managedName">stream</attr>
 
-
-
-
-
-
-      <attr 
-        path="/api/package/*/constructor[count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[1]" 
+    <attr
+        path="/api/package/*/constructor[count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[1]"
         name="managedName"
         >
         context
     </attr>
-    
-    <attr 
-        path="/api/package/*/method[count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[1]" 
+    <attr
+        path="/api/package/*/method[count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[1]"
         name="managedName"
         >
         context
     </attr>
-
-    <attr 
-        path="/api/package/*/constructor[count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet']]/parameter[1]" 
+    <attr
+        path="/api/package/*/constructor[count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet']]/parameter[1]"
         name="managedName"
         >
         context
     </attr>
-    <attr 
-        path="/api/package/*/method[count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet']]/parameter[1]" 
+    <attr
+        path="/api/package/*/method[count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet']]/parameter[1]"
         name="managedName"
         >
         context
     </attr>
-    <attr 
-        path="/api/package/*/constructor[count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet']]/parameter[2]" 
+    <attr
+        path="/api/package/*/constructor[count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet']]/parameter[2]"
         name="managedName"
         >
         attrs
     </attr>
-    <attr 
-        path="/api/package/*/method[count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet']]/parameter[2]" 
+    <attr
+        path="/api/package/*/method[count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet']]/parameter[2]"
         name="managedName"
         >
         attrs
     </attr>
-
-
-    <attr 
-        path="/api/package/*/constructor[count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] ]/parameter[1]" 
+    <attr
+        path="/api/package/*/constructor[count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] ]/parameter[1]"
         name="managedName"
         >
         context
     </attr>
-    <attr 
-        path="/api/package/*/constructor[count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] ]/parameter[2]" 
+    <attr
+        path="/api/package/*/constructor[count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] ]/parameter[2]"
         name="managedName"
         >
         attrs
     </attr>
-    <attr 
-        path="/api/package/*/constructor[count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] ]/parameter[3]" 
+    <attr
+        path="/api/package/*/constructor[count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] ]/parameter[3]"
         name="managedName"
         >
         defStyleAttr
     </attr>
-
-
-    <attr 
-        path="/api/package/*/constructor[count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] and parameter[4][@type='int'] ]/parameter[1]" 
+    <attr
+        path="/api/package/*/constructor[count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] and parameter[4][@type='int'] ]/parameter[1]"
         name="managedName"
         >
         context
     </attr>
-    <attr 
-        path="/api/package/*/constructor[count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] and parameter[4][@type='int'] ]/parameter[2]" 
+    <attr
+        path="/api/package/*/constructor[count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] and parameter[4][@type='int'] ]/parameter[2]"
         name="managedName"
         >
         attrs
     </attr>
-    <attr 
-        path="/api/package/*/constructor[count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] and parameter[4][@type='int'] ]/parameter[3]" 
+    <attr
+        path="/api/package/*/constructor[count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] and parameter[4][@type='int'] ]/parameter[3]"
         name="managedName"
         >
         defStyleAttr
     </attr>
-    <attr 
-        path="/api/package/*/constructor[count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] and parameter[4][@type='int'] ]/parameter[4]" 
+    <attr
+        path="/api/package/*/constructor[count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] and parameter[4][@type='int'] ]/parameter[4]"
         name="managedName"
         >
         defStyleRes
     </attr>
-
-
-
-
-
 </metadata>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>GooglePlayServices.Tests</RootNamespace>
     <AssemblyName>AndroidSupport.Tests</AssemblyName>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -66,11 +66,17 @@
     <Reference Include="Xamarin.Firebase.Crash">
       <HintPath>..\..\output\Xamarin.Firebase.Crash.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Firebase.Database">
+      <HintPath>..\..\output\Xamarin.Firebase.Database.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Firebase.Database.Connection">
       <HintPath>..\..\output\Xamarin.Firebase.Database.Connection.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Firebase.Database">
-      <HintPath>..\..\output\Xamarin.Firebase.Database.dll</HintPath>
+    <Reference Include="Xamarin.Firebase.Dynamic.Links">
+      <HintPath>..\..\output\Xamarin.Firebase.Dynamic.Links.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Firebase.Firestore">
+      <HintPath>..\..\output\Xamarin.Firebase.Firestore.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Firebase.Iid">
       <HintPath>..\..\output\Xamarin.Firebase.Iid.dll</HintPath>
@@ -78,11 +84,14 @@
     <Reference Include="Xamarin.Firebase.Messaging">
       <HintPath>..\..\output\Xamarin.Firebase.Messaging.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Firebase.Storage.Common">
-      <HintPath>..\..\output\Xamarin.Firebase.Storage.Common.dll</HintPath>
+    <Reference Include="Xamarin.Firebase.Perf">
+      <HintPath>..\..\output\Xamarin.Firebase.Perf.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Firebase.Storage">
       <HintPath>..\..\output\Xamarin.Firebase.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Firebase.Storage.Common">
+      <HintPath>..\..\output\Xamarin.Firebase.Storage.Common.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Ads">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.Ads.dll</HintPath>
@@ -99,11 +108,14 @@
     <Reference Include="Xamarin.GooglePlayServices.AppInvite">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.AppInvite.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Auth.Base">
-      <HintPath>..\..\output\Xamarin.GooglePlayServices.Auth.Base.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Auth">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Auth.Api.Phone">
+      <HintPath>..\..\output\Xamarin.GooglePlayServices.Auth.Api.Phone.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Auth.Base">
+      <HintPath>..\..\output\Xamarin.GooglePlayServices.Auth.Base.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Awareness">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.Awareness.dll</HintPath>
@@ -135,6 +147,9 @@
     <Reference Include="Xamarin.GooglePlayServices.Gcm">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.Gcm.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Fido">
+      <HintPath>..\..\output\Xamarin.GooglePlayServices.Fido.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Identity">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.Identity.dll</HintPath>
     </Reference>
@@ -153,6 +168,9 @@
     <Reference Include="Xamarin.GooglePlayServices.Nearby">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.Nearby.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Oss.Licenses">
+      <HintPath>..\..\output\Xamarin.GooglePlayServices.Oss.Licenses.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Panorama">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.Panorama.dll</HintPath>
     </Reference>
@@ -165,11 +183,11 @@
     <Reference Include="Xamarin.GooglePlayServices.SafetyNet">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.SafetyNet.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.TagManager.Api">
-      <HintPath>..\..\output\Xamarin.GooglePlayServices.TagManager.Api.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.GooglePlayServices.TagManager">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.TagManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.TagManager.Api">
+      <HintPath>..\..\output\Xamarin.GooglePlayServices.TagManager.Api.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.GooglePlayServices.TagManager.V4.Impl">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.TagManager.V4.Impl.dll</HintPath>
@@ -180,44 +198,28 @@
     <Reference Include="Xamarin.GooglePlayServices.Vision">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.Vision.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Vision.Common">
+      <HintPath>..\..\output\Xamarin.GooglePlayServices.Vision.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Wallet">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.Wallet.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Wearable">
       <HintPath>..\..\output\Xamarin.GooglePlayServices.Wearable.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Firebase.Firestore">
-      <HintPath>..\..\output\Xamarin.Firebase.Firestore.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Auth.Api.Phone">
-      <HintPath>..\..\output\Xamarin.GooglePlayServices.Auth.Api.Phone.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Fido">
-      <HintPath>..\..\output\Xamarin.GooglePlayServices.Fido.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Oss.Licenses">
-      <HintPath>..\..\output\Xamarin.GooglePlayServices.Oss.Licenses.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Vision.Common">
-      <HintPath>..\..\output\Xamarin.GooglePlayServices.Vision.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Firebase.Dynamic.Links">
-      <HintPath>..\..\output\Xamarin.Firebase.Dynamic.Links.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Firebase.Perf">
-      <HintPath>..\..\output\Xamarin.Firebase.Perf.dll</HintPath>
-    </Reference>
+    <!-- NOTE: Don't add new references just to the end of this list! Keep it sorted for maintainability. Thanks! -->
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
-    <PackageReference Include="xunit.core" Version="2.3.1" />
-    <PackageReference Include="xunit.abstractions" Version="2.0.1" />
-    <PackageReference Include="xunit.assert" Version="2.3.1" />
-    <PackageReference Include="xunit.extensibility.execution" Version="2.3.1" />
-    <PackageReference Include="xunit.runner.utility" Version="2.3.1" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.7" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.7" />
+    <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.2.2.1" />
+    <PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.8" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.10.0" />
+    <PackageReference Include="xunit.abstractions" Version="2.0.3" />
+    <PackageReference Include="xunit.assert" Version="2.4.1" />
+    <PackageReference Include="xunit.core" Version="2.4.1" />
+    <PackageReference Include="xunit.extensibility.execution" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.utility" Version="2.4.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -243,5 +245,5 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <Import Project="..\..\generated.targets" />
+  <Import Project="..\..\generated\generated.targets" />
 </Project>

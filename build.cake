@@ -1,9 +1,10 @@
 // Tools needed by cake addins
-#tool nuget:?package=vswhere&version=2.7.1
+#tool nuget:?package=vswhere&version=2.8.4
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=3.2.1
-#addin nuget:?package=Newtonsoft.Json&version=11.0.2
+#addin nuget:?package=Cake.FileHelpers&version=4.0.0
+#addin nuget:?package=Newtonsoft.Json&version=12.0.3
+//#addin nuget:?package=NuGet.CommandLine&version=5.8.1
 
 using System;
 using System.Text.RegularExpressions;
@@ -53,15 +54,15 @@ var BUILD_NUMBER = EnvironmentVariable("BUILD_NUMBER") ?? "DEBUG";
 var BUILD_TIMESTAMP = DateTime.UtcNow.ToString();
 
 var REQUIRED_DOTNET_TOOLS = new [] {
-	"xamarin-android-binderator",
+	"xamarin.androidbinderator.tool",
 	"xamarin.androidx.migration.tool"
 };
 
 string nuget_version_template =
-							// "71.vvvv.0-preview3" 	// pre AndroidX version
-							"1xx.yy.zz.ww-suffix"		// AndroidX version preview
-							//"1xx.yy.zz"				// AndroidX version stable/release
-							;
+	// "71.vvvv.0-preview3" 	// pre AndroidX version
+	"1xx.yy.zz.ww-suffix"		// AndroidX version preview
+	//"1xx.yy.zz"			// AndroidX version stable/release
+	;
 string nuget_version_suffix = "";
 
 string[] Configs = new []
@@ -132,7 +133,9 @@ Task("javadocs")
 	if (!FileExists("./externals/paramnames.xml"))
 		DownloadFile(REF_METADATA_URL, "./externals/paramnames.xml");
 
-	var astJar = new FilePath("./util/JavaASTParameterNames-1.0.jar");
+	var javaExe = MakeAbsolute(new DirectoryPath(JAVA_HOME).Combine("bin/java")).FullPath;
+	var astJar = MakeAbsolute(new FilePath("./util/JavaASTParameterNames-1.0.jar")).FullPath;
+
 	var sourcesJars = GetFiles("./externals/**/*-sources.jar");
 
 	foreach (var srcJar in sourcesJars) {
@@ -140,8 +143,8 @@ Task("javadocs")
 		var outTxtPath = srcJarPath.Replace("-sources.jar", "-paramnames.txt");
 		var outXmlPath = srcJarPath.Replace("-sources.jar", "-paramnames.xml");
 
-		StartProcess("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --text \"" + srcJarPath + "\" \"" + outTxtPath + "\"");
-		StartProcess("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --xml \"" + srcJarPath + "\" \"" + outXmlPath + "\"");
+		StartProcess(javaExe, "-jar \"" + astJar + "\" --text \"" + srcJarPath + "\" \"" + outTxtPath + "\"");
+		StartProcess(javaExe, "-jar \"" + astJar + "\" --xml \"" + srcJarPath + "\" \"" + outXmlPath + "\"");
 	}
 });
 
@@ -222,9 +225,9 @@ Task("binderate-prepare-dependencies-samples-packages-config")
 				XmlNodeList list = xml.SelectNodes("/packages/package");
 				foreach (XmlNode xn in list)
 				{
-					string id = xn.Attributes["id"].Value; //Get attribute-id 
+					string id = xn.Attributes["id"].Value; //Get attribute-id
 					//string text = xn["Text"].InnerText; //Get Text Node
-					string v = xn.Attributes["version"].Value; //Get attribute-id 
+					string v = xn.Attributes["version"].Value; //Get attribute-id
 
 					Information($"		id	   : {id}");
 					Information($"		version: {v}");
@@ -244,7 +247,7 @@ Task("binderate-prepare-dependencies-samples-packages-config")
 					}
 				}
 			}
-		
+
 			return;
 		}
 	);
@@ -323,7 +326,7 @@ Task("binderate-config-verify")
 						Warning($"		nuget_version = {nuget_version_new}");
 						throw new Exception("check config.json for nuget id");
 
-						return;
+						// return;
 					}
 				}
 			}
@@ -332,10 +335,10 @@ Task("binderate-config-verify")
 
 Task("binderate-diff")
 	.IsDependentOn("binderate")
-    .Does
-    (
-        () =>
-        {
+	.Does
+	(
+		() =>
+		{
 			EnsureDirectoryExists("./output/");
 
 			// "git diff master:config.json config.json" > ./output/config.json.diff-from-master.txt"
@@ -344,9 +347,9 @@ Task("binderate-diff")
 			IEnumerable<string> redirectedStandardOutput;
 			ProcessSettings process_settings = new ProcessSettings ()
 			{
-             Arguments = process_args,
-             RedirectStandardOutput = true
-         	};
+				Arguments = process_args,
+				RedirectStandardOutput = true
+			};
 			int exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
 			System.IO.File.WriteAllLines("./output/config.json.diff-from-master.txt", redirectedStandardOutput.ToArray());
 			Information("Exit code: {0}", exitCodeWithoutArguments);
@@ -364,7 +367,7 @@ Task("binderate-fix")
                 binderator_json_array = (JArray)JToken.ReadFrom(jtr);
             }
 
-            Warning("config.json fixing missing folder strucutre ...");
+            Warning("config.json fixing missing folder structure ...");
             foreach(JObject jo in binderator_json_array[0]["artifacts"])
             {
                 string groupId      = (string) jo["groupId"];
@@ -456,11 +459,11 @@ Task("binderate-fix")
 						$"{dir_artifact}/Additions/Additions.cs"
 					);
 				}
-            }
+			}
 
-            return;
-        }
-    );
+			return;
+		}
+	);
 
 Task("mergetargets")
 	.Does(() =>
@@ -544,11 +547,11 @@ Task("samples-directory-build-targets")
 				Information($"nugetId       = {jo["nugetId"]}");
 			}
 
-	        XmlDocument doc = new XmlDocument();
-	        XmlElement element_p = doc.CreateElement( string.Empty, "Project", string.Empty );
-        	doc.AppendChild( element_p );
-	       	XmlElement element_ig = doc.CreateElement( string.Empty, "ItemGroup", string.Empty );
-        	element_p.AppendChild(element_ig);
+			XmlDocument doc = new XmlDocument();
+			XmlElement element_p = doc.CreateElement( string.Empty, "Project", string.Empty );
+			doc.AppendChild( element_p );
+			XmlElement element_ig = doc.CreateElement( string.Empty, "ItemGroup", string.Empty );
+			element_p.AppendChild(element_ig);
 
 			foreach(JObject jo in binderator_json_array[0]["artifacts"])
 			{
@@ -561,7 +564,7 @@ Task("samples-directory-build-targets")
 				Information($"nugetId       = {jo["nugetId"]}");
 
 				XmlElement element_pr = doc.CreateElement( string.Empty, "PackageReference", string.Empty );
-	        	element_ig.AppendChild(element_pr);
+				element_ig.AppendChild(element_pr);
 				XmlAttribute attr_update = doc.CreateAttribute("Update");
 				attr_update.Value = (string) jo["nugetId"];
 				element_pr.Attributes.Append(attr_update);
@@ -593,9 +596,9 @@ Task("samples")
 		EnsureDirectoryExists($@"./output/failed/");
 
 		var sampleSlns = GetFiles("./samples/all/**/*.sln")
-							.Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
-							.Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
-							;
+			.Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
+			.Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
+			;
 
 		foreach(string config in Configs)
 		{
@@ -603,10 +606,13 @@ Task("samples")
 			{
 				string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
 
-				if ( ! filename_sln.Contains("BuildAll") )
-				{
-					NuGetRestore(sampleSln, new NuGetRestoreSettings { }); // R8 errors
-				}
+				// Restore solution using MSBuild (see MSBuild invocation below) due to NuGet CLI
+				// has to be downloaded manually from https://www.nuget.org/downloads on Windows
+				// or be installed as Cake addin using NuGet.CommandLine package.
+				// if ( ! filename_sln.Contains("BuildAll") )
+				// {
+				// 	NuGetRestore(sampleSln, new NuGetRestoreSettings { }); // R8 errors
+				// }
 				if
 				(
 					sampleSln.ToString().Contains("com.google.android.gms/play-services-cast/CastingCall.sln")
@@ -631,12 +637,14 @@ Task("samples")
 							c =>
 							{
 								c.Configuration = config;
+								c.MaxCpuCount = MAX_CPU_COUNT;
 								c.Properties.Add("DesignTimeBuild", new [] { "false" });
 								c.BinaryLogger = new MSBuildBinaryLogSettings
-														{
-															Enabled = true,
-															FileName = bl
-														};
+								{
+									Enabled = true,
+									FileName = bl
+								};
+								c.Restore = !filename_sln.Contains("BuildAll"); // R8 errors
 								if (! string.IsNullOrEmpty(ANDROID_HOME))
 								{
 									c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
@@ -673,8 +681,8 @@ Task("allbindingprojectrefs")
 		var itemGroup = new XElement(xmlns + "ItemGroup");
 		foreach (var nupkg in GetFiles(pattern)) {
 			var filename = nupkg.GetFilenameWithoutExtension();
-		var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
-		itemGroup.Add(new XElement(xmlns + "PackageReference",
+			var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
+			itemGroup.Add(new XElement(xmlns + "PackageReference",
 			new XAttribute("Include", match.Groups[1]),
 			new XAttribute("Version", match.Groups[2])));
 		}
@@ -706,7 +714,7 @@ Task("nuget")
 		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { $"{AndroidSdkBuildTools}" });
-
+		c.Restore = false;
 		if (! string.IsNullOrEmpty(ANDROID_HOME))
 		{
 			c.Properties.Add("AndroidSdkDirectory", new[] { $"{ANDROID_HOME}" });
@@ -747,14 +755,14 @@ Task ("ci-setup")
 	ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", BUILD_TIMESTAMP);
 });
 
-Task("nuget-dependecies")
-	.Does
-	(
-		() =>
-		{
-			string icanhasdotnet = "https://icanhasdot.net/Downloads/ICanHasDotnetCore.zip";
-		}
-	);
+// Task("nuget-dependecies")
+// 	.Does
+// 	(
+// 		() =>
+// 		{
+// 			string icanhasdotnet = "https://icanhasdot.net/Downloads/ICanHasDotnetCore.zip";
+// 		}
+// 	);
 
 // Task ("genapi")
 // 	.IsDependentOn ("libs")

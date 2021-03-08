@@ -31,7 +31,6 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidSupportedAbis>arm64-v8a;armeabi-v7a;x86</AndroidSupportedAbis>
     <AndroidDexTool>d8</AndroidDexTool>
-    <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidUseAapt2>true</AndroidUseAapt2>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -55,20 +54,11 @@
     <Reference Include="Java.Interop" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Migration">
-      <Version>1.0.6.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Firebase.Auth" Version="119.2.0" />
-    <PackageReference Include="Xamarin.Firebase.Storage" Version="119.1.1" />        
-    <PackageReference Include="Xamarin.AndroidX.Migration">
-      <Version>1.0.7.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat">
-      <Version>1.1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.MultiDex">
-      <Version>2.0.1.1</Version>
-    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.7" />
+    <PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.8" />
+    <PackageReference Include="Xamarin.AndroidX.MultiDex" Version="2.0.1.7" />
+    <PackageReference Include="Xamarin.Firebase.Auth" Version="120.2.0" />
+    <PackageReference Include="Xamarin.Firebase.Storage" Version="119.2.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
