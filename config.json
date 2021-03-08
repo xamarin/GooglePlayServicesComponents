@@ -331,8 +331,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-barcode-scanning",
-        "version": "16.1.3",
-        "nugetVersion": "116.1.3",
+        "version": "16.1.4",
+        "nugetVersion": "116.1.4",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.BarcodeScanning",
         "dependencyOnly": false
       },
@@ -579,8 +579,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-auth",
-        "version": "20.0.2",
-        "nugetVersion": "120.0.2",
+        "version": "20.0.3",
+        "nugetVersion": "120.0.3",
         "nugetId": "Xamarin.Firebase.Auth",
         "dependencyOnly": false
       },
@@ -611,8 +611,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-config",
-        "version": "20.0.3",
-        "nugetVersion": "120.0.3",
+        "version": "20.0.4",
+        "nugetVersion": "120.0.4",
         "nugetId": "Xamarin.Firebase.Config",
         "dependencyOnly": false
       },
@@ -675,8 +675,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-datatransport",
-        "version": "17.0.10",
-        "nugetVersion": "117.0.10",
+        "version": "17.0.11",
+        "nugetVersion": "117.0.11",
         "nugetId": "Xamarin.Firebase.Datatransport",
         "dependencyOnly": false
       },
@@ -707,8 +707,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-firestore",
-        "version": "22.1.0",
-        "nugetVersion": "122.1.0",
+        "version": "22.1.1",
+        "nugetVersion": "122.1.1",
         "nugetId": "Xamarin.Firebase.Firestore",
         "dependencyOnly": false
       },
@@ -739,16 +739,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-inappmessaging",
-        "version": "19.1.4",
-        "nugetVersion": "119.1.4",
+        "version": "19.1.5",
+        "nugetVersion": "119.1.5",
         "nugetId": "Xamarin.Firebase.InAppMessaging",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-inappmessaging-display",
-        "version": "19.1.4",
-        "nugetVersion": "119.1.4",
+        "version": "19.1.5",
+        "nugetVersion": "119.1.5",
         "nugetId": "Xamarin.Firebase.InAppMessaging.Display",
         "dependencyOnly": false
       },
@@ -923,8 +923,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-perf",
-        "version": "19.1.0",
-        "nugetVersion": "119.1.0",
+        "version": "19.1.1",
+        "nugetVersion": "119.1.1",
         "nugetId": "Xamarin.Firebase.Perf",
         "dependencyOnly": false
       },
@@ -955,8 +955,8 @@
       {
         "groupId": "com.google.android.play",
         "artifactId": "core",
-        "version": "1.9.1",
-        "nugetVersion": "1.9.1",
+        "version": "1.10.0",
+        "nugetVersion": "1.10.0",
         "nugetId": "Xamarin.Google.Android.Play.Core",
         "dependencyOnly": false
       },
@@ -971,8 +971,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "barcode-scanning",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0",
+        "version": "16.1.1",
+        "nugetVersion": "116.1.1",
         "nugetId": "Xamarin.Google.MLKit.BarcodeScanning",
         "dependencyOnly": false
       },
