@@ -1443,8 +1443,8 @@
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
-        "version": "2.2.4",
-        "nugetVersion": "2.2.4",
+        "version": "2.2.6",
+        "nugetVersion": "2.2.6",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
         "dependencyOnly": true
       },
