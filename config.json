@@ -531,16 +531,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads",
-        "version": "19.8.0",
-        "nugetVersion": "119.8.0",
+        "version": "19.7.0",
+        "nugetVersion": "119.7.0",
         "nugetId": "Xamarin.Firebase.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads-lite",
-        "version": "19.8.0",
-        "nugetVersion": "119.8.0",
+        "version": "19.7.0",
+        "nugetVersion": "119.7.0",
           "nugetId": "Xamarin.Firebase.Ads.Lite",
         "dependencyOnly": false
       },
