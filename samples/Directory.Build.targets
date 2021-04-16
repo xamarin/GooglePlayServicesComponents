@@ -33,7 +33,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Location" Version="118.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Maps" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement" Version="118.0.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="118.0.2" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="116.3.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="118.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Impl" Version="118.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk" Version="118.0.2" />
@@ -65,7 +65,7 @@
     <PackageReference Update="Xamarin.Firebase.Abt" Version="120.0.0" />
     <PackageReference Update="Xamarin.Firebase.Ads" Version="119.7.0" />
     <PackageReference Update="Xamarin.Firebase.Ads.Lite" Version="119.7.0" />
-    <PackageReference Update="Xamarin.Firebase.Analytics" Version="118.0.2" />
+    <PackageReference Update="Xamarin.Firebase.Analytics" Version="116.3.0" />
     <PackageReference Update="Xamarin.Firebase.Analytics.Impl" Version="116.3.0" />
     <PackageReference Update="Xamarin.Firebase.Annotations" Version="116.0.0" />
     <PackageReference Update="Xamarin.Firebase.AppIndexing" Version="119.2.0" />
@@ -172,7 +172,7 @@
     <PackageReference Update="Square.OkHttp3" Version="4.8.1" />
     <PackageReference Update="Square.OkHttp3" Version="4.3.1" />
     <PackageReference Update="Xamarin.Google.Dagger" Version="2.27.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="71.1630.1" />
     <PackageReference Update="Xamarin.Chromium.CroNet.Api" Version="76.3809.111" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="2.2.6" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="2.3.3" />
@@ -180,8 +180,8 @@
     <PackageReference Update="Xamarin.Android.ReactiveX.RxAndroid" Version="2.1.1" />
     <PackageReference Update="Xamarin.Android.ReactiveX.RxJava" Version="2.2.7" />
     <PackageReference Update="Square.Picasso" Version="2.71828" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="" />
-    <PackageReference Update="Xamarin.Firebase.Analytics" Version="71.1630.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="118.0.2" />
+    <PackageReference Update="Xamarin.Firebase.Analytics" Version="118.0.2" />
     <PackageReference Update="Xamarin.JavaX.Inject" Version="1.0.0" />
   </ItemGroup>
 </Project>
