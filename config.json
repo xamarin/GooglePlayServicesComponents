@@ -27,16 +27,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "19.7.0",
-        "nugetVersion": "119.7.0",
+        "version": "19.8.0",
+        "nugetVersion": "119.8.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "19.7.0",
-        "nugetVersion": "119.7.0",
+        "version": "19.8.0",
+        "nugetVersion": "119.8.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -51,8 +51,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "19.7.0",
-        "nugetVersion": "119.7.0",
+        "version": "19.8.0",
+        "nugetVersion": "119.8.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
@@ -227,9 +227,9 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-gass",
-        "version": "19.7.0",
-        "nugetVersion": "119.7.0",
-        "nugetId": "Xamarin.GooglePlayServices.Gass",
+        "version": "19.8.0",
+        "nugetVersion": "119.8.0",
+          "nugetId": "Xamarin.GooglePlayServices.Gass",
         "dependencyOnly": false
       },
       {
@@ -531,17 +531,17 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads",
-        "version": "19.7.0",
-        "nugetVersion": "119.7.0",
+        "version": "19.8.0",
+        "nugetVersion": "119.8.0",
         "nugetId": "Xamarin.Firebase.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads-lite",
-        "version": "19.7.0",
-        "nugetVersion": "119.7.0",
-        "nugetId": "Xamarin.Firebase.Ads.Lite",
+        "version": "19.8.0",
+        "nugetVersion": "119.8.0",
+          "nugetId": "Xamarin.Firebase.Ads.Lite",
         "dependencyOnly": false
       },
       {
@@ -1401,14 +1401,6 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-measurement-base",
-        "version": "16.3.0",
-        "nugetVersion": "71.1630.1",
-        "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
-        "dependencyOnly": true
-      },
-      {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-api",
         "version": "76.3809.111",
@@ -1462,6 +1454,14 @@
         "version": "2.71828",
         "nugetVersion": "2.71828",
         "nugetId": "Square.Picasso",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-measurement-base",
+        "version": "16.3.0",
+        "nugetVersion": "71.1630.1",
+        "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": true
       },
       {
