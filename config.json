@@ -27,16 +27,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "19.8.0",
-        "nugetVersion": "119.8.0",
+        "version": "19.7.0",
+        "nugetVersion": "119.7.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "19.8.0",
-        "nugetVersion": "119.8.0",
+        "version": "19.7.0",
+        "nugetVersion": "119.7.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -51,8 +51,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "19.8.0",
-        "nugetVersion": "119.8.0",
+        "version": "19.7.0",
+        "nugetVersion": "119.7.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
@@ -227,8 +227,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-gass",
-        "version": "19.8.0",
-        "nugetVersion": "119.8.0",
+        "version": "19.7.0",
+        "nugetVersion": "119.7.0",
           "nugetId": "Xamarin.GooglePlayServices.Gass",
         "dependencyOnly": false
       },
