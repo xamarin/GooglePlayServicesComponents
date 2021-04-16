@@ -291,8 +291,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-api",
-        "version": "18.0.2",
-        "nugetVersion": "118.0.2",
+        "version": "16.3.0",
+        "nugetVersion": "116.3.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
         "dependencyOnly": false
       },
@@ -547,8 +547,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics",
-        "version": "18.0.2",
-        "nugetVersion": "118.0.2",
+        "version": "16.3.0",
+        "nugetVersion": "116.3.0",
         "nugetId": "Xamarin.Firebase.Analytics",
         "dependencyOnly": false
       },
@@ -1404,7 +1404,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
         "version": "16.3.0",
-        "nugetVersion": null,
+        "nugetVersion": "71.1630.1",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": true
       },
@@ -1467,16 +1467,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-api",
-        "version": "16.3.0",
-        "nugetVersion": null,
+        "version": "18.0.2",
+        "nugetVersion": "118.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics",
-        "version": "16.3.0",
-        "nugetVersion": "71.1630.1",
+        "version": "18.0.2",
+        "nugetVersion": "118.0.2",
         "nugetId": "Xamarin.Firebase.Analytics",
         "dependencyOnly": true
       },
