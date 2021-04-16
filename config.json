@@ -27,16 +27,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "19.7.0",
-        "nugetVersion": "119.7.0",
+        "version": "19.8.0",
+        "nugetVersion": "119.8.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "19.7.0",
-        "nugetVersion": "119.7.0",
+        "version": "19.8.0",
+        "nugetVersion": "119.8.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -51,8 +51,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "19.7.0",
-        "nugetVersion": "119.7.0",
+        "version": "19.8.0",
+        "nugetVersion": "119.8.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
@@ -531,16 +531,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads",
-        "version": "19.7.0",
-        "nugetVersion": "119.7.0",
+        "version": "19.8.0",
+        "nugetVersion": "119.8.0",
         "nugetId": "Xamarin.Firebase.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads-lite",
-        "version": "19.7.0",
-        "nugetVersion": "119.7.0",
+        "version": "19.8.0",
+        "nugetVersion": "119.8.0",
           "nugetId": "Xamarin.Firebase.Ads.Lite",
         "dependencyOnly": false
       },
@@ -1487,7 +1487,14 @@
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.JavaX.Inject",
         "dependencyOnly": true
-      }
+      },
+      {
+        "groupId": "com.google.android.ump",
+        "artifactId": "user-messaging-platform",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.Google.UserMessagingPlatform",
+        "dependencyOnly": true
     ]
   }
 ]
