@@ -33,7 +33,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Location" Version="118.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Maps" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement" Version="118.0.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="116.3.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="118.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="118.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Impl" Version="118.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk" Version="118.0.2" />
@@ -179,8 +179,8 @@
     <PackageReference Update="Xamarin.Android.ReactiveX.RxAndroid" Version="2.1.1" />
     <PackageReference Update="Xamarin.Android.ReactiveX.RxJava" Version="2.2.7" />
     <PackageReference Update="Square.Picasso" Version="2.71828" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="71.1630.1" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="118.0.2" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="117.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="116.3.0" />
     <PackageReference Update="Xamarin.Firebase.Analytics" Version="118.0.2" />
     <PackageReference Update="Xamarin.JavaX.Inject" Version="1.0.0" />
     <PackageReference Update="Xamarin.Google.UserMessagingPlatform" Version="1.0.0" />
