@@ -77,12 +77,14 @@ namespace Android.Gms.Common.Apis
 
             public Builder EnableAutoManage(AndroidX.Fragment.App.FragmentActivity fragmentActivity, int clientId, Action<Android.Gms.Common.ConnectionResult> unresolvedConnectionFailedHandler)
             {
-                return EnableAutoManage(fragmentActivity, clientId, new GoogleApiClientOnConnectionFailedListenerImpl(unresolvedConnectionFailedHandler));
+                // return EnableAutoManage(fragmentActivity, clientId, new GoogleApiClientOnConnectionFailedListenerImpl(unresolvedConnectionFailedHandler));
+                return EnableAutoManage(fragmentActivity, clientId, new System.Action<Android.Gms.Common.ConnectionResult>(unresolvedConnectionFailedHandler));
             }
 
             public Builder EnableAutoManage(AndroidX.Fragment.App.FragmentActivity fragmentActivity, Action<Android.Gms.Common.ConnectionResult> unresolvedConnectionFailedHandler)
             {
-                return EnableAutoManage(fragmentActivity, new GoogleApiClientOnConnectionFailedListenerImpl(unresolvedConnectionFailedHandler));
+                // return EnableAutoManage(fragmentActivity, new GoogleApiClientOnConnectionFailedListenerImpl(unresolvedConnectionFailedHandler));
+                return EnableAutoManage(fragmentActivity, new System.Action<Android.Gms.Common.ConnectionResult>(unresolvedConnectionFailedHandler));
             }
         }
     }
