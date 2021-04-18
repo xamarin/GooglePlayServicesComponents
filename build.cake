@@ -593,8 +593,8 @@ Task("samples")
 		EnsureDirectoryExists($@"./output/failed/");
 
 		var sampleSlns = GetFiles("./samples/all/**/*.sln")
-							.Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
-							.Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
+							// .Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
+							// .Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
 							;
 
 		foreach(string config in Configs)
@@ -658,11 +658,11 @@ Task("samples")
 			}
 		}
 
-		DeleteFiles(".output/system.*/nupkg");
-		DeleteFiles(".output/microsoft.*/nupkg");
-		DeleteFiles(".output/xamarin.android.support.*/nupkg");
-		DeleteFiles(".output/xamarin.android.arch.*/nupkg");
-		DeleteFiles(".output/xamarin.build.download.*/nupkg");
+		DeleteFiles("./output/system.*/nupkg");
+		DeleteFiles("./output/microsoft.*/nupkg");
+		DeleteFiles("./output/xamarin.android.support.*/nupkg");
+		DeleteFiles("./output/xamarin.android.arch.*/nupkg");
+		DeleteFiles("./output/xamarin.build.download.*/nupkg");
 });
 
 Task("allbindingprojectrefs")
