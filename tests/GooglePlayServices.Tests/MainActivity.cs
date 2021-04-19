@@ -1,18 +1,20 @@
 ﻿using Android.App;
-using Android.Widget;
 using Android.OS;
+using Android.Views;
+using Android.Widget;
+
+using AndroidX.AppCompat.App;
+
+using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Xunit;
-using System;
-using Xunit.Runners;
 using System.Threading.Tasks;
-using Android.Support.V7.App;
-using Android.Views;
+
+using Xunit.Runners;
 
 namespace GooglePlayServices.Tests
 {
-	[Activity(Label = "AndroidSupport.Tests", MainLauncher = true, Theme="@style/Theme.AppCompat.Light", Icon = "@mipmap/icon")]
+	[Activity(Label = "AndroidX.Tests", MainLauncher = true, Theme="@style/Theme.AppCompat.Light", Icon = "@mipmap/icon")]
 	public class MainActivity : AppCompatActivity
 	{
 		public static Activity TestParentActivity { get; set; }
