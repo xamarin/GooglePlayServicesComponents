@@ -547,8 +547,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics",
-        "version": "16.3.0",
-        "nugetVersion": "116.3.0",
+        "version": "18.0.3",
+        "nugetVersion": "118.0.3",
         "nugetId": "Xamarin.Firebase.Analytics",
         "dependencyOnly": false
       },
@@ -1475,8 +1475,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics",
-        "version": "18.0.2",
-        "nugetVersion": "118.0.2",
+        "version": "16.3.0",
+        "nugetVersion": "116.3.0",
         "nugetId": "Xamarin.Firebase.Analytics",
         "dependencyOnly": true
       },
