@@ -1,8 +1,8 @@
 {
-    "msbuild-sdks": 
+    "msbuild-sdks":
     {
         "MSBuild.Sdk.Extras": "3.0.23",
-        "Microsoft.Build.Traversal": "2.1.1",
-        "Microsoft.Build.NoTargets": "2.0.1"
+        "Microsoft.Build.Traversal": "3.0.23",
+        "Microsoft.Build.NoTargets": "3.0.4"
     }
 }
