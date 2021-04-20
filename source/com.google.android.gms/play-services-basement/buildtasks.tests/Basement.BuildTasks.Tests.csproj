@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{76CDBE93-0177-4980-8514-C4D785E1DC78}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>buildtasks.tests</RootNamespace>
