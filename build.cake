@@ -38,7 +38,7 @@ var REF_PARAMNAMES_URL = "https://bosstoragemirror.blob.core.windows.net/android
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
 var ANDROID_SDK_BASE_VERSION = "v1.0";
 var ANDROID_SDK_VERSION = "v9.0";
-string AndroidSdkBuildTools = $"30.0.2";
+string AndroidSdkBuildTools = "29.0.2";
 
 if (string.IsNullOrEmpty(XAMARIN_ANDROID_PATH)) {
 	if (IsRunningOnWindows()) {
