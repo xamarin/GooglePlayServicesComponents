@@ -16,6 +16,7 @@ namespace AndroidPayQuickstart
      *                 of an item.
      * @return {@link MaskedWalletRequest} instance
      */
+        // removed https://developers.google.com/android/guides/releases#august_27_2019
         public static Android.Gms.Wallet.MaskedWalletRequest CreateMaskedWalletRequest (ItemInfo itemInfo) 
         {
             return CreateMaskedWalletRequest (itemInfo, null);
@@ -30,11 +31,13 @@ namespace AndroidPayQuickstart
      *                   for payment processing with Stripe.
      * @return {@link MaskedWalletRequest} instance
      */
+        // removed https://developers.google.com/android/guides/releases#august_27_2019
         public static MaskedWalletRequest CreateStripeMaskedWalletRequest (ItemInfo itemInfo, PaymentMethodTokenizationParameters parameters) 
         {
             return CreateMaskedWalletRequest (itemInfo, parameters);
         }
 
+        // removed https://developers.google.com/android/guides/releases#august_27_2019
         private static MaskedWalletRequest CreateMaskedWalletRequest (ItemInfo itemInfo, PaymentMethodTokenizationParameters parameters) {
             // Build a List of all line items
             var lineItems = buildLineItems (itemInfo, true);
@@ -42,6 +45,7 @@ namespace AndroidPayQuickstart
             // Calculate the cart total by iterating over the line items.
             var cartTotal = calculateCartTotal(lineItems);
 
+            // removed https://developers.google.com/android/guides/releases#august_27_2019
             var builder = MaskedWalletRequest.NewBuilder()
                 .SetMerchantName (Constants.MERCHANT_NAME)
                 .SetPhoneNumberRequired (true)
@@ -73,11 +77,14 @@ namespace AndroidPayQuickstart
      *                   shipping and tax values.
      * @return list of line items
      */
+        // removed https://developers.google.com/android/guides/releases#august_27_2019
         private static List<LineItem> buildLineItems (ItemInfo itemInfo, bool isEstimate) 
         {
+            // removed https://developers.google.com/android/guides/releases#august_27_2019
             var list = new List<LineItem> ();
             var itemPrice = toDollars(itemInfo.PriceMicros);
 
+            // removed https://developers.google.com/android/guides/releases#august_27_2019
             list.Add (LineItem.NewBuilder()
                 .SetCurrencyCode (Constants.CURRENCY_CODE_USD)
                 .SetDescription (itemInfo.Name)
@@ -86,12 +93,14 @@ namespace AndroidPayQuickstart
                 .SetTotalPrice (itemPrice)
                 .Build ());
 
+            // removed https://developers.google.com/android/guides/releases#august_27_2019
             var shippingPrice = toDollars (
                 isEstimate ? itemInfo.EstimatedShippingPriceMicros : itemInfo.ShippingPriceMicros);
 
             list.Add (LineItem.NewBuilder ()
                 .SetCurrencyCode (Constants.CURRENCY_CODE_USD)
                 .SetDescription (Constants.DESCRIPTION_LINE_ITEM_SHIPPING)
+                // removed https://developers.google.com/android/guides/releases#august_27_2019
                 .SetRole (LineItem.Role.Shipping)
                 .SetTotalPrice (shippingPrice)
                 .Build ());
@@ -99,9 +108,11 @@ namespace AndroidPayQuickstart
             String tax = toDollars(
                 isEstimate ? itemInfo.EstimatedTaxMicros : itemInfo.TaxMicros);
 
+            // removed https://developers.google.com/android/guides/releases#august_27_2019
             list.Add (LineItem.NewBuilder ()
                 .SetCurrencyCode (Constants.CURRENCY_CODE_USD)
                 .SetDescription (Constants.DESCRIPTION_LINE_ITEM_TAX)
+                // removed https://developers.google.com/android/guides/releases#august_27_2019
                 .SetRole (LineItem.Role.Tax)
                 .SetTotalPrice (tax)
                 .Build ());
@@ -139,12 +150,15 @@ namespace AndroidPayQuickstart
      * @param googleTransactionId
      * @return {@link FullWalletRequest} instance
      */
+        // removed https://developers.google.com/android/guides/releases#august_27_2019
         public static FullWalletRequest CreateFullWalletRequest(ItemInfo itemInfo, string googleTransactionId) {
 
+            // removed https://developers.google.com/android/guides/releases#august_27_2019
             List<LineItem> lineItems = buildLineItems(itemInfo, false);
 
             String cartTotal = calculateCartTotal(lineItems);
 
+            // removed https://developers.google.com/android/guides/releases#august_27_2019
             return FullWalletRequest.NewBuilder ()
                 .SetGoogleTransactionId (googleTransactionId)
                 .SetCart (Cart.NewBuilder ()
