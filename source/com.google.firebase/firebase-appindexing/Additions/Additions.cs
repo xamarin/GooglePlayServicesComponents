@@ -17,16 +17,3 @@ namespace Android.Gms.AppIndexing
         }
     }
 }
-
-namespace Firebase.AppIndexing
-{
-    //[Register ("com/google/firebase/appindexing/Indexable", "", "Firebase.AppIndexing.IIndexableInvoker")]
-    public partial interface IIndexable : IJavaObject, IDisposable
-    {
-    }
-
-    //[Register ("com/google/firebase/appindexing/Indexable", DoNotGenerateAcw = true)]
-    internal partial class IIndexableInvoker : Java.Lang.Object, IIndexable, IJavaObject, IDisposable
-    {
-    }
-}
