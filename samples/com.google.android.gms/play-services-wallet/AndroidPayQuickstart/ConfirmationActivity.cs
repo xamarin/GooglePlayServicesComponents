@@ -28,6 +28,7 @@ namespace AndroidPayQuickstart
         }
 
         private void CreateAndAddWalletFragment() {
+            // removed https://developers.google.com/android/guides/releases#august_27_2019
             var walletFragmentStyle = new Android.Gms.Wallet.Fragment.WalletFragmentStyle()
                 .SetMaskedWalletDetailsTextAppearance (
                     Resource.Style.BikestoreWalletFragmentDetailsTextAppearance)
@@ -38,17 +39,21 @@ namespace AndroidPayQuickstart
                 .SetMaskedWalletDetailsButtonBackgroundResource(
                     Resource.Drawable.bikestore_btn_default_holo_light);
 
+            // removed https://developers.google.com/android/guides/releases#august_27_2019
             var walletFragmentOptions = Android.Gms.Wallet.Fragment.WalletFragmentOptions.NewBuilder ()
                 .SetEnvironment (Constants.WALLET_ENVIRONMENT)
                 .SetFragmentStyle (walletFragmentStyle)
                 .SetTheme (Android.Gms.Wallet.WalletConstants.ThemeLight)
+                // removed https://developers.google.com/android/guides/releases#august_27_2019
                 .SetMode (Android.Gms.Wallet.Fragment.WalletFragmentMode.SelectionDetails)
                 .Build ();
+            // removed https://developers.google.com/android/guides/releases#august_27_2019
             mWalletFragment = Android.Gms.Wallet.Fragment.SupportWalletFragment.NewInstance (walletFragmentOptions);
 
             // Now initialize the Wallet Fragment
             var accountName = ((BikestoreApplication) Application).AccountName;
 
+            // removed https://developers.google.com/android/guides/releases#august_27_2019
             var startParamsBuilder = Android.Gms.Wallet.Fragment.WalletFragmentInitParams.NewBuilder ()
                 .SetMaskedWallet (mMaskedWallet)
                 .SetMaskedWalletRequestCode (REQUEST_CODE_CHANGE_MASKED_WALLET)
@@ -66,8 +71,10 @@ namespace AndroidPayQuickstart
             switch (requestCode) {
             case REQUEST_CODE_CHANGE_MASKED_WALLET:
                 if (resultCode == Android.App.Result.Ok &&
+                    // removed https://developers.google.com/android/guides/releases#august_27_2019
                     data.HasExtra (Android.Gms.Wallet.WalletConstants.ExtraMaskedWallet)) {
-                    mMaskedWallet = data.GetParcelableExtra (Android.Gms.Wallet.WalletConstants.ExtraMaskedWallet).JavaCast<Android.Gms.Wallet.MaskedWallet> ();
+                        // removed https://developers.google.com/android/guides/releases#august_27_2019
+                        mMaskedWallet = data.GetParcelableExtra (Android.Gms.Wallet.WalletConstants.ExtraMaskedWallet).JavaCast<Android.Gms.Wallet.MaskedWallet> ();
                     ((FullWalletConfirmationButtonFragment) ResultTargetFragment)
                         .UpdateMaskedWallet (mMaskedWallet);
                 }
