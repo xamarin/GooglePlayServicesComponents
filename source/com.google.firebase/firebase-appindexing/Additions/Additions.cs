@@ -18,77 +18,80 @@ namespace Android.Gms.AppIndexing
     }
 }
 
-public interface IIndexable : IJavaObject, IDisposable
+namespace Firebase.AppIndexing
 {
-}
-
-[Register("com/google/firebase/appindexing/Indexable", DoNotGenerateAcw = true)]
-internal class IIndexableInvoker : Java.Lang.Object, IIndexable, IJavaObject, IDisposable
-{
-    //
-    // Static Fields
-    //
-    private static IntPtr java_class_ref = JNIEnv.FindClass("com/google/firebase/appindexing/Indexable");
-
-    private IntPtr class_ref;
-
-
-    //
-    // Properties
-    //
-    protected override IntPtr ThresholdClass
+    public interface IIndexable : IJavaObject, IDisposable
     {
-        get
+    }
+
+    [Register("com/google/firebase/appindexing/Indexable", DoNotGenerateAcw = true)]
+    internal class IIndexableInvoker : Java.Lang.Object, IIndexable, IJavaObject, IDisposable
+    {
+        //
+        // Static Fields
+        //
+        private static IntPtr java_class_ref = JNIEnv.FindClass("com/google/firebase/appindexing/Indexable");
+
+        private IntPtr class_ref;
+
+
+        //
+        // Properties
+        //
+        protected override IntPtr ThresholdClass
         {
-            return this.class_ref;
+            get
+            {
+                return this.class_ref;
+            }
         }
-    }
 
-    protected override Type ThresholdType
-    {
-        get
+        protected override Type ThresholdType
         {
-            return typeof(IIndexableInvoker);
+            get
+            {
+                return typeof(IIndexableInvoker);
+            }
         }
-    }
 
-    //
-    // Constructors
-    //
-    public IIndexableInvoker(IntPtr handle, JniHandleOwnership transfer) : base(IIndexableInvoker.Validate(handle), transfer)
-    {
-        IntPtr objectClass = JNIEnv.GetObjectClass(base.Handle);
-        this.class_ref = JNIEnv.NewGlobalRef(objectClass);
-        JNIEnv.DeleteLocalRef(objectClass);
-    }
-
-    //
-    // Static Methods
-    //
-    public static IIndexable GetObject(IntPtr handle, JniHandleOwnership transfer)
-    {
-        return Java.Lang.Object.GetObject<IIndexable>(handle, transfer);
-    }
-
-    private static IntPtr Validate(IntPtr handle)
-    {
-        if (!JNIEnv.IsInstanceOf(handle, IIndexableInvoker.java_class_ref))
+        //
+        // Constructors
+        //
+        public IIndexableInvoker(IntPtr handle, JniHandleOwnership transfer) : base(IIndexableInvoker.Validate(handle), transfer)
         {
-            throw new InvalidCastException(string.Format("Unable to convert instance of type '{0}' to type '{1}'.", JNIEnv.GetClassNameFromInstance(handle), "com.google.firebase.IIndexable"));
+            IntPtr objectClass = JNIEnv.GetObjectClass(base.Handle);
+            this.class_ref = JNIEnv.NewGlobalRef(objectClass);
+            JNIEnv.DeleteLocalRef(objectClass);
         }
-        return handle;
-    }
 
-    //
-    // Methods
-    //
-    protected override void Dispose(bool disposing)
-    {
-        if (this.class_ref != IntPtr.Zero)
+        //
+        // Static Methods
+        //
+        public static IIndexable GetObject(IntPtr handle, JniHandleOwnership transfer)
         {
-            JNIEnv.DeleteGlobalRef(this.class_ref);
+            return Java.Lang.Object.GetObject<IIndexable>(handle, transfer);
         }
-        this.class_ref = IntPtr.Zero;
-        base.Dispose(disposing);
+
+        private static IntPtr Validate(IntPtr handle)
+        {
+            if (!JNIEnv.IsInstanceOf(handle, IIndexableInvoker.java_class_ref))
+            {
+                throw new InvalidCastException(string.Format("Unable to convert instance of type '{0}' to type '{1}'.", JNIEnv.GetClassNameFromInstance(handle), "com.google.firebase.IIndexable"));
+            }
+            return handle;
+        }
+
+        //
+        // Methods
+        //
+        protected override void Dispose(bool disposing)
+        {
+            if (this.class_ref != IntPtr.Zero)
+            {
+                JNIEnv.DeleteGlobalRef(this.class_ref);
+            }
+            this.class_ref = IntPtr.Zero;
+            base.Dispose(disposing);
+        }
     }
 }
