@@ -104,7 +104,7 @@
       - BG8A04: <attr path="XPath" /> matched no nodes.
       - BG8A00: <remove-node path="XPath" /> matched no nodes.  
     -->
-    <NoWarn>08A04;BG8A00</NoWarn>
+    <NoWarn>BG8A04;BG8A00</NoWarn>
 
     <!--
       Harmfull 
@@ -113,8 +113,9 @@
       - BG8C00: For type Namespace.Type1, base interface java.Interface does not exist
       - BG8700: Unknown return type java.Type1 in method Method1 in managed type Namespace.Type2.
       - BG8800: Unknown parameter type java.Type1 in method Method2 in managed type Namespace.Type2.
-    -->
+
     <WarningsAsErrors>BG8401;BG8604;BG8C00;BG8700;BG8800</WarningsAsErrors>
+    -->
     <!--
       Xamarin.Android specific warnings
       =================================================================================================================
