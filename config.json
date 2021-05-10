@@ -1043,8 +1043,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "linkfirebase",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0",
+        "version": "16.1.1",
+        "nugetVersion": "116.1.1",
         "nugetId": "Xamarin.Google.MLKit.LinkFirebase",
         "dependencyOnly": false
       },
