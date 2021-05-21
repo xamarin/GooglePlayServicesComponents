@@ -328,9 +328,27 @@
         Firestore.Bundle
     </attr>
 
+    <!--
+    =======================================================================================================
+    issue analysis
+
+    Needed      for 16.9
+    NOT needed  for 16.10
+
+        static {
+        final Document defaultInstance = new Document();
+        GeneratedMessageLite.registerDefaultInstance((Class)Document.class, (GeneratedMessageLite)(DEFAULT_INSTANCE = defaultInstance));
+    }
+
+    -->
     <remove-node
         path="/api/package[@name='com.google.firebase.firestore.model']/class[@name='Document.']"
         />
+    <!--
+    issue analysis
+    =======================================================================================================
+    -->
+
     <remove-node
         path="/api/package[@name='com.google.firestore.bundle']/class[@name='BundledQuery']/implements"
         />
