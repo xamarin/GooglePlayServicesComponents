@@ -19,8 +19,8 @@ namespace AdMob
 
             var samples = new [] {
                 new Sample (Resources.GetString (Resource.String.banner_in_xml), typeof (BannerXmlActivity)),
-                new Sample (Resources.GetString (Resource.String.banner_in_code), typeof (BannerCodeActivity)),
-                new Sample (Resources.GetString (Resource.String.interstitial), typeof (InterstitialActivity))
+                new Sample (Resources.GetString (Resource.String.banner_in_code), typeof (BannerCodeActivity))
+                //new Sample (Resources.GetString (Resource.String.interstitial), typeof (InterstitialActivity))
             };
 
             ListAdapter = new ArrayAdapter<Sample>(this, Android.Resource.Layout.SimpleListItem1, samples);
@@ -37,8 +37,8 @@ namespace AdMob
             var testDeviceId = "BC2508B19A2078B6AC72133BB7E6E177";
             var builder = new AdRequest.Builder ();
 
-            if (addTestDevice)
-                builder.AddTestDevice (testDeviceId);
+            //if (addTestDevice)
+            //    builder.AddTestDevice (testDeviceId);
 
             return builder.Build ();
         }

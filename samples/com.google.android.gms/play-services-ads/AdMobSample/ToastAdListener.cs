@@ -27,7 +27,7 @@ namespace AdMob
             Toast.MakeText (context, "OnAdLoaded ()", ToastLength.Short).Show ();
         }
 
-        public override void OnAdFailedToLoad (int errorCode)
+        public override void OnAdFailedToLoad (global::Android.Gms.Ads.LoadAdError errorCode)
         {
             if (AdFailedToLoadAction != null) {
                 AdFailedToLoadAction ();
@@ -36,7 +36,7 @@ namespace AdMob
 
             var errorReason = string.Empty;
 
-            switch(errorCode) {
+            switch(errorCode.Code) {
             case AdRequest.ErrorCodeInternalError:
                 errorReason = "Internal error";
                 break;
@@ -65,10 +65,10 @@ namespace AdMob
             Toast.MakeText (context, "OnAdClosed ()", ToastLength.Short).Show ();
         }
 
-        public override void OnAdLeftApplication ()
-        {
-            Toast.MakeText (context, "OnAdLeftApplication ()", ToastLength.Short).Show ();
-        }          
+        //public override void OnAdLeftApplication ()
+        //{
+        //    Toast.MakeText (context, "OnAdLeftApplication ()", ToastLength.Short).Show ();
+        //}          
     }
 }
 
