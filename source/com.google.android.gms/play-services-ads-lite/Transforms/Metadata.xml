@@ -549,4 +549,12 @@
         Android.Gms.Ads.Interstitial
     </attr>
 
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.h5']"
+        name="managedName"
+        >
+        Android.Gms.Ads.H5
+    </attr>
+
 </metadata>
