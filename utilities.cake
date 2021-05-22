@@ -370,9 +370,6 @@ Task ("read-analysis-files")
                 "./output/spell-errors.txt",
                 "./output/changelog.md",
                 "./output/config.json.diff-from-main.txt",
-                "./output/missing_dotnet_override_type.csv",
-                "./output/missing_dotnet_type.csv",
-                "./output/missing_java_type.csv",
             };
 			string process = "code";
 			string process_args = $"-n {string.Join(" ", files)}";
