@@ -1,9 +1,10 @@
 trigger:
-  - master
+  - main
   - refs/tags/*
 
 pr:
-  - master
+  - main
+  - main_based_androidx*
   - master_based_androidx*
   
 variables:

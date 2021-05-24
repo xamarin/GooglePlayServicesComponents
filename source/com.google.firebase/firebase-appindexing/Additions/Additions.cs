@@ -18,12 +18,13 @@ namespace Android.Gms.AppIndexing
     }
 }
 
+// needed in 16.9, but not in 16.10
 namespace Firebase.AppIndexing
 {
     public interface IIndexable : IJavaObject, IDisposable
     {
     }
-
+ 
     [Register("com/google/firebase/appindexing/Indexable", DoNotGenerateAcw = true)]
     internal class IIndexableInvoker : Java.Lang.Object, IIndexable, IJavaObject, IDisposable
     {
@@ -31,10 +32,10 @@ namespace Firebase.AppIndexing
         // Static Fields
         //
         private static IntPtr java_class_ref = JNIEnv.FindClass("com/google/firebase/appindexing/Indexable");
-
+ 
         private IntPtr class_ref;
-
-
+ 
+ 
         //
         // Properties
         //
@@ -45,7 +46,7 @@ namespace Firebase.AppIndexing
                 return this.class_ref;
             }
         }
-
+ 
         protected override Type ThresholdType
         {
             get
@@ -53,7 +54,7 @@ namespace Firebase.AppIndexing
                 return typeof(IIndexableInvoker);
             }
         }
-
+ 
         //
         // Constructors
         //
@@ -63,7 +64,7 @@ namespace Firebase.AppIndexing
             this.class_ref = JNIEnv.NewGlobalRef(objectClass);
             JNIEnv.DeleteLocalRef(objectClass);
         }
-
+ 
         //
         // Static Methods
         //
@@ -71,7 +72,7 @@ namespace Firebase.AppIndexing
         {
             return Java.Lang.Object.GetObject<IIndexable>(handle, transfer);
         }
-
+ 
         private static IntPtr Validate(IntPtr handle)
         {
             if (!JNIEnv.IsInstanceOf(handle, IIndexableInvoker.java_class_ref))
@@ -80,7 +81,7 @@ namespace Firebase.AppIndexing
             }
             return handle;
         }
-
+ 
         //
         // Methods
         //

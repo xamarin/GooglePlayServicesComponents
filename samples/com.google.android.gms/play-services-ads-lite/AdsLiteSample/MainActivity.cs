@@ -1,12 +1,14 @@
 ﻿using System;
 using Android.App;
 using Android.Gms.Ads;
+using Android.Gms.Ads.Initialization;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using AndroidX.AppCompat.Widget;
 using Google.Android.Material.FloatingActionButton;
 using Google.Android.Material.Snackbar;
+using Java.Interop;
 
 [assembly: UsesPermission (Android.Manifest.Permission.Internet)]
 [assembly: UsesPermission (Android.Manifest.Permission.AccessNetworkState)]
@@ -32,7 +34,9 @@ namespace AdsLiteSample
             fab.Click += FabOnClick;
 
             string id = "YOUR_ADMOB_APP_ID";
-            global::Android.Gms.Ads.MobileAds.Initialize(ApplicationContext, id);
+            global::Android.Gms.Ads.MobileAds.Initialize(ApplicationContext
+                // id
+                );
 
             AdView adView = FindViewById<AdView>(Resource.Id.adView);
             AdRequest adRequest = new AdRequest.Builder().Build();
@@ -68,6 +72,7 @@ namespace AdsLiteSample
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
     }
 }
 

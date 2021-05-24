@@ -193,46 +193,4 @@ namespace Android.Gms.Cast
 
 namespace Android.Gms.Cast.Games 
 {
-    public partial class GameManagerClient 
-    {
-        public async Task<GameManagerClient.IGameManagerInstanceResult> GetInstanceForAsync (GoogleApiClient googleApiClient, string castSessionId) {
-            return (await GetInstanceFor (googleApiClient, castSessionId)).JavaCast<GameManagerClient.IGameManagerInstanceResult> ();
-        }
-        public async Task<Android.Gms.Cast.Games.GameManagerClient.IGameManagerResult> SendGameRequestAsync (string playerId, Org.Json.JSONObject extraMessageData) {
-            return (await SendGameRequest (playerId, extraMessageData)).JavaCast<GameManagerClient.IGameManagerResult> ();
-        }
-        public async Task<GameManagerClient.IGameManagerResult> SendGameRequestAsync (Org.Json.JSONObject extraMessageData) {
-            return (await SendGameRequest (extraMessageData)).JavaCast<GameManagerClient.IGameManagerResult> ();
-        }
-        public async Task<GameManagerClient.IGameManagerResult> SendPlayerAvailableRequestAsync (string playerId, Org.Json.JSONObject extraMessageData) {
-            return (await SendPlayerAvailableRequest (playerId, extraMessageData)).JavaCast<GameManagerClient.IGameManagerResult> ();
-        }
-        public async Task<GameManagerClient.IGameManagerResult> SendPlayerAvailableRequestAsync (Org.Json.JSONObject extraMessageData) {
-            return (await SendPlayerAvailableRequest (extraMessageData)).JavaCast<GameManagerClient.IGameManagerResult> ();
-        }
-        public async Task<GameManagerClient.IGameManagerResult> SendPlayerIdleRequestAsync (string playerId, Org.Json.JSONObject extraMessageData) {
-            return (await SendPlayerIdleRequest (playerId, extraMessageData)).JavaCast<GameManagerClient.IGameManagerResult> ();
-        }
-        public async Task<GameManagerClient.IGameManagerResult> SendPlayerIdleRequestAsync (Org.Json.JSONObject extraMessageData) {
-            return (await SendPlayerIdleRequest (extraMessageData)).JavaCast<GameManagerClient.IGameManagerResult> ();
-        }
-        public async Task<GameManagerClient.IGameManagerResult> SendPlayerPlayingRequestAsync (string playerId, Org.Json.JSONObject extraMessageData) {
-            return (await SendPlayerPlayingRequest (playerId, extraMessageData)).JavaCast<GameManagerClient.IGameManagerResult> ();
-        }
-        public async Task<GameManagerClient.IGameManagerResult> SendPlayerPlayingRequestAsync (Org.Json.JSONObject extraMessageData) {
-            return (await SendPlayerPlayingRequest (extraMessageData)).JavaCast<GameManagerClient.IGameManagerResult> ();
-        }
-        public async Task<GameManagerClient.IGameManagerResult> SendPlayerQuitRequestAsync (string playerId, Org.Json.JSONObject extraMessageData) {
-            return (await SendPlayerQuitRequest (playerId, extraMessageData)).JavaCast<GameManagerClient.IGameManagerResult> ();
-        }
-        public async Task<GameManagerClient.IGameManagerResult> SendPlayerQuitRequestAsync (Org.Json.JSONObject extraMessageData) {
-            return (await SendPlayerQuitRequest (extraMessageData)).JavaCast<GameManagerClient.IGameManagerResult> ();
-        }
-        public async Task<GameManagerClient.IGameManagerResult> SendPlayerReadyRequestAsync (string playerId, Org.Json.JSONObject extraMessageData) {
-            return (await SendPlayerReadyRequest (playerId, extraMessageData)).JavaCast<GameManagerClient.IGameManagerResult> ();
-        }
-        public async Task<GameManagerClient.IGameManagerResult> SendPlayerReadyRequestAsync (Org.Json.JSONObject extraMessageData) {
-            return (await SendPlayerReadyRequest (extraMessageData)).JavaCast<GameManagerClient.IGameManagerResult> ();
-        }
-    }
 }

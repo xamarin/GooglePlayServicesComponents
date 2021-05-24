@@ -166,7 +166,14 @@ Task ("namespace-check")
 
             if (files.Any())
             {
-                throw new Exception("Namespaces!!!");
+                string[] namespaces = Array.ConvertAll(files, x => x.ToString());
+                System.IO.File.WriteAllLines("./output/namespaces.md", namespaces);
+
+                StringBuilder msg = new StringBuilder("Namespaces!!!");
+                msg.AppendLine();
+                msg.AppendLine(string.Join(System.Environment.NewLine, namespaces));
+
+                throw new Exception(msg.ToString());
             }
 
             return;
@@ -180,9 +187,9 @@ Task("binderate-diff")
         {
 			EnsureDirectoryExists("./output/");
 
-			// "git diff master:config.json config.json" > ./output/config.json.diff-from-master.txt"
+			// "git diff main:config.json config.json" > ./output/config.json.diff-from-main.txt"
 			string process = "git";
-			string process_args = "diff master:config.json config.json";
+			string process_args = "diff main:config.json config.json";
 			IEnumerable<string> redirectedStandardOutput;
 			ProcessSettings process_settings = new ProcessSettings ()
 			{
@@ -190,7 +197,7 @@ Task("binderate-diff")
              RedirectStandardOutput = true
          	};
 			int exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-			System.IO.File.WriteAllLines("./output/config.json.diff-from-master.txt", redirectedStandardOutput.ToArray());
+			System.IO.File.WriteAllLines("./output/config.json.diff-from-main.txt", redirectedStandardOutput.ToArray());
 			Information("Exit code: {0}", exitCodeWithoutArguments);
 		}
 	);
@@ -201,8 +208,8 @@ Task ("api-diff-markdown-info-pr")
     (
         () =>
         {
-            // TODO: api-diff markdown info based on diff from master
-            string[] lines = System.IO.File.ReadAllLines("./output/config.json.diff-from-master.txt");
+            // TODO: api-diff markdown info based on diff from main
+            string[] lines = System.IO.File.ReadAllLines("./output/config.json.diff-from-main.txt");
 
             bool group_new = false;
             bool artifact_new = false;
@@ -362,10 +369,7 @@ Task ("read-analysis-files")
             {
                 "./output/spell-errors.txt",
                 "./output/changelog.md",
-                "./output/config.json.diff-from-master.txt",
-                "./output/missing_dotnet_override_type.csv",
-                "./output/missing_dotnet_type.csv",
-                "./output/missing_java_type.csv",
+                "./output/config.json.diff-from-main.txt",
             };
 			string process = "code";
 			string process_args = $"-n {string.Join(" ", files)}";

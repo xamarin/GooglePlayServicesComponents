@@ -62,4 +62,12 @@
         Java.Lang.Object
     </attr>
         
+    <attr
+        path="/api/package[@name='com.google.firebase.iid']"
+        name="managedName"
+        >
+        Firebase.Iid
+    </attr>
+
+
 </metadata>
