@@ -27,16 +27,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
+        "version": "20.1.0",
+        "nugetVersion": "120.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
+        "version": "20.1.0",
+        "nugetVersion": "120.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -51,8 +51,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
+        "version": "20.1.0",
+        "nugetVersion": "120.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
@@ -275,8 +275,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-maps",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "version": "17.0.1",
+        "nugetVersion": "117.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Maps",
         "dependencyOnly": false
       },
@@ -339,8 +339,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-face-detection",
-        "version": "16.1.5",
-        "nugetVersion": "116.1.5",
+        "version": "16.1.6",
+        "nugetVersion": "116.1.6",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.FaceDetection",
         "dependencyOnly": false
       },
@@ -515,8 +515,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-wearable",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Wearable",
         "dependencyOnly": false
       },
@@ -531,16 +531,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
+        "version": "20.1.0",
+        "nugetVersion": "120.1.0",
         "nugetId": "Xamarin.Firebase.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads-lite",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
+        "version": "20.1.0",
+        "nugetVersion": "120.1.0",
         "nugetId": "Xamarin.Firebase.Ads.Lite",
         "dependencyOnly": false
       },
@@ -987,8 +987,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "face-detection",
-        "version": "16.0.6",
-        "nugetVersion": "116.0.6",
+        "version": "16.0.7",
+        "nugetVersion": "116.0.7",
         "nugetId": "Xamarin.Google.MLKit.FaceDetection",
         "dependencyOnly": false
       },
@@ -1059,16 +1059,16 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "object-detection",
-        "version": "16.2.3",
-        "nugetVersion": "116.2.3",
+        "version": "16.2.4",
+        "nugetVersion": "116.2.4",
         "nugetId": "Xamarin.Google.MLKit.ObjectDetection",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.mlkit",
         "artifactId": "object-detection-common",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "version": "17.0.1",
+        "nugetVersion": "117.0.1",
         "nugetId": "Xamarin.Google.MLKit.ObjectDetection.Common",
         "dependencyOnly": false
       },
@@ -1123,16 +1123,16 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "vision-common",
-        "version": "16.3.0",
-        "nugetVersion": "116.3.0",
+        "version": "16.4.0",
+        "nugetVersion": "116.4.0",
         "nugetId": "Xamarin.Google.MLKit.Vision.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.mlkit",
         "artifactId": "vision-internal-vkp",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0",
         "nugetId": "Xamarin.Google.MLKit.Vision.Internal.Vkp",
         "dependencyOnly": false
       },
@@ -1494,6 +1494,23 @@
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.Google.UserMessagingPlatform",
+        "dependencyOnly": true
+      },
+
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-ads-base",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-ads-lite",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": true
       }
     ]
