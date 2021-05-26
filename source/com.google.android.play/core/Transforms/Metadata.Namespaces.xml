@@ -108,6 +108,12 @@
         >
         Xamarin.Google.Android.Play.Core.Review.Testing
     </attr>
+    <attr
+        path="/api/package[@name='com.google.android.play.core.review.model']"
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.Review.Model
+    </attr>
 
 
 </metadata>

@@ -9,10 +9,18 @@ using AndroidX.AppCompat.App;
 // [START load_banner_ad]
 // [START_EXCLUDE] with InterstitialAd
 using Android.Gms.Ads;
+using Android.Gms.Ads.Interstitial;
 // [END_EXCLUDE]
 
 namespace Admob
 {
+	// https://stackoverflow.com/questions/65875325/android-admob-interstitialad-deprecated
+	// https://stackoverflow.com/questions/65880741/after-updating-google-ads-sdk-interstitialad-is-deprecated-how-to-resolve
+	// https://developers.google.com/admob/android/interstitial
+	// https://developers.google.com/admob/android/migration
+	// https://stackoverflow.com/questions/66164874/interstitial-ad
+	// https://stackoverflow.com/questions/11106322/how-to-create-android-interstitial-ads
+
 	[Activity(Label = "Admob", MainLauncher = true, Theme="@style/Theme.AppCompat")]
 	[IntentFilter(new[] { Intent.ActionView }, Categories = new[] { Intent.ActionMain, Intent.CategoryLauncher })]
 	[MetaData("android.support.PARENT_ACTIVITY", Value = ".MainActivity")]
@@ -20,7 +28,7 @@ namespace Admob
 	{
 		private AdView mAdView;
 		// [START_EXCLUDE]
-		private InterstitialAd mInterstitialAd;
+		//private InterstitialAd mInterstitialAd;
 		private Button mLoadInterstitialButton;
 		// [END_EXCLUDE]
 
@@ -42,8 +50,8 @@ namespace Admob
 			// [START instantiate_interstitial_ad]
 			// Create an InterstitialAd object. This same object can be re-used whenever you want to
 			// show an interstitial.
-			mInterstitialAd = new InterstitialAd(this);
-			mInterstitialAd.AdUnitId = GetString(Resource.String.interstitial_ad_unit_id);
+			//mInterstitialAd = new InterstitialAd(this);
+			//mInterstitialAd.AdUnitId = GetString(Resource.String.interstitial_ad_unit_id);
 			// [END instantiate_interstitial_ad]
 
 			// [START create_interstitial_ad_listener]
@@ -54,20 +62,20 @@ namespace Admob
 				BeginSecondActivity();
 			};
 
-			mInterstitialAd.AdListener = adListener;
+			//mInterstitialAd.AdListener = adListener;
 			// [END create_interstitial_ad_listener]
 
 			// [START display_interstitial_ad]
 			mLoadInterstitialButton = (Button)FindViewById(Resource.Id.load_interstitial_button);
 			mLoadInterstitialButton.Click += delegate
 			{
-				if (mInterstitialAd.IsLoaded)
-				{
-					mInterstitialAd.Show();
-				}
-				else {
+				//if (mInterstitialAd.IsLoaded)
+				//{
+				//	mInterstitialAd.Show();
+				//}
+				//else {
 					BeginSecondActivity();
-				}
+				//}
 			};
 			// [END display_interstitial_ad]
 		}
@@ -79,7 +87,7 @@ namespace Admob
 		private void RequestNewInterstitial()
 		{
 			AdRequest adRequest = new AdRequest.Builder().Build();
-			mInterstitialAd.LoadAd(adRequest);
+			//mInterstitialAd.LoadAd(adRequest);
 		}
 		// [END request_new_interstitial]
 
@@ -108,7 +116,7 @@ namespace Admob
 			{
 				mAdView.Resume();
 			}
-			if (!mInterstitialAd.IsLoaded)
+			//if (!mInterstitialAd.IsLoaded)
 			{
 				RequestNewInterstitial();
 			}
