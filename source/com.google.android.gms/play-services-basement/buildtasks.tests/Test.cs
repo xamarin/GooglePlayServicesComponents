@@ -24,7 +24,7 @@ namespace buildtasks.tests
             var g = GoogleServicesJsonProcessor.ProcessJson (TestPkgName, OpenTestFile ());
             var v = g.GetGoogleApiKey (TestPkgName);
 
-            Assert.AreEqual ("AIzaSyCfJp9rrUEaA07vdoGvGQgJqm0Fa9cJGiw", v);
+            Assert.AreEqual ("EXAMPLE_KEY_HERE", v);
         }
 
         [Test]
@@ -42,7 +42,7 @@ namespace buildtasks.tests
             var g = GoogleServicesJsonProcessor.ProcessJson (TestPkgName, OpenTestFile ());
             var v = g.GetCrashReportingApiKey (TestPkgName);
 
-            Assert.AreEqual ("AIzaSyCfJp9rrUEaA07vdoGvGQgJqm0Fa9cJGiw", v);
+            Assert.AreEqual ("EXAMPLE_KEY_HERE", v);
         }
 
         [Test]
