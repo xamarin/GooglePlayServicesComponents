@@ -127,7 +127,7 @@
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Custom" Version="116.3.1" />
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Default.Common" Version="116.0.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Language.Id" Version="116.1.1" />
-    <PackageReference Update="Xamarin.Google.MLKit.LinkFirebase" Version="116.1.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.LinkFirebase" Version="116.1.1" />
     <PackageReference Update="Xamarin.Google.MLKit.MediaPipe.Internal" Version="116.0.0" />
     <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection" Version="116.2.4" />
     <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection.Common" Version="117.0.1" />
