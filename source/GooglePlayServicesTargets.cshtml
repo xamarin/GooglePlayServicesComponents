@@ -22,7 +22,7 @@
   <PropertyGroup>
     <AndroidManifestMerger>manifestmerger.jar</AndroidManifestMerger>
   </PropertyGroup>  
-  
+
   @if (@Model.MavenArtifacts.Count > 0) {
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
@@ -36,9 +36,6 @@
   </PropertyGroup>
   }
 
-  <PropertyGroup>
-    <AndroidManifestMerger>manifestmerger.jar</AndroidManifestMerger>
-  </PropertyGroup>  
   <PropertyGroup>
     <AndroidFragmentType>AndroidX.Fragment.App.Fragment</AndroidFragmentType>
   </PropertyGroup>
@@ -68,7 +65,6 @@
 
 
     <ItemGroup>
-     <XamarinBuildDownloadAndroidAarLibrary Include="$(XamarinBuildDownloadDir)@(xbdAarPath)" />
       @*
       <!--
       NOTE: 

@@ -2,16 +2,17 @@
 
 #r "nuget: MavenNet, 2.2.0"
 #r "nuget: Newtonsoft.Json, 12.0.3"
-#r "nuget: NuGet.Versioning, 5.8.0"
+#r "nuget: NuGet.Versioning, 5.8.1"
 
 // Usage:
 //   dotnet tool install -g dotnet-script
 //   dotnet script update-config.csx -- ../../config.json <update|bump>
 // This script compares the versions of Java packages we are currently binding to the
-// stable versions available in Google's Maven repository.  The specified configuration
-// file can be automatically updated by including the "update" argument.  A revision bump
+// stable versions available in Google's Maven repository. The specified configuration
+// file can be automatically updated by including the "update" argument. A revision bump
 // can be applied to all packages with the "bump" argument, which is mutually exclusive
 // with "update".
+
 using MavenNet;
 using MavenNet.Models;
 using Newtonsoft.Json;
@@ -34,8 +35,8 @@ var should_minor_bump = Args.Count > 1 && Args[1].ToLowerInvariant () == "bump";
 var repo = MavenRepository.FromGoogle ();
 await repo.Refresh ();
 
-Console.WriteLine ("| Package (* = Needs Update)                                   | Currently Bound | Latest Stable   |");
-Console.WriteLine ("|--------------------------------------------------------------|-----------------|-----------------|");
+Console.WriteLine ("| Package (* = Needs Update)                                             | Currently Bound | Latest Stable   |");
+Console.WriteLine ("|------------------------------------------------------------------------|-----------------|-----------------|");
 
 // Find the Maven artifact for each package in our configuration file
 foreach (var art in config[0].Artifacts.Where(a => !a.DependencyOnly)) {
@@ -91,7 +92,7 @@ foreach (var art in config[0].Artifacts.Where(a => !a.DependencyOnly)) {
 		art.NugetVersion = $"{version}.{revision}{release}";
 	}
 
-	Console.WriteLine ($"| {package_name.PadRight (60)} | {current_version.PadRight (15)} | {(GetLatestVersion (a)?.ToString () ?? string.Empty).PadRight (15)} |");
+	Console.WriteLine ($"| {package_name.PadRight (70)} | {current_version.PadRight (15)} | {(GetLatestVersion (a)?.ToString () ?? string.Empty).PadRight (15)} |");
 
 	if (should_update || should_minor_bump)
 	{
