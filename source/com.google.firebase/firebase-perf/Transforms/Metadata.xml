@@ -35,4 +35,64 @@
     
     <attr path="/api/package/*[@extends='com.google.android.gms.internal.zzekz']" name="extends">java.lang.Object</attr>
     <attr path="/api/package/*[@extends='com.google.firebase.perf.internal.zzb']" name="extends">java.lang.Object</attr>
+
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']"
+		name="managedName"
+		>
+		Firebase.Perf.Injection.Modules
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf']/class[@name='FirebasePerformance_Factory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesConfigResolverFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesFirebaseAppFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesGaugeManagerFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesRemoteConfigManagerFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesFirebaseInstallationsFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesRemoteConfigComponentFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesTransportFactoryProviderFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+
+
+
+
+
 </metadata>

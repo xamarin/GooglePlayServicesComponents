@@ -7,6 +7,8 @@
 
     
 
-
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.ads.identifier']/class[@name='AdvertisingIdClient']/method[@name='finalize' and count(parameter)=0]"
+        />
 
 </metadata>

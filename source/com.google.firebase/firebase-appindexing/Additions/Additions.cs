@@ -21,12 +21,13 @@ namespace Android.Gms.AppIndexing
 // needed in 16.9, but not in 16.10
 namespace Firebase.AppIndexing
 {
-    public interface IIndexable : IJavaObject, IDisposable
+    public partial interface IIndexable : IJavaObject, IDisposable
     {
     }
- 
-    [Register("com/google/firebase/appindexing/Indexable", DoNotGenerateAcw = true)]
-    internal class IIndexableInvoker : Java.Lang.Object, IIndexable, IJavaObject, IDisposable
+
+    /*
+    //[Register("com/google/firebase/appindexing/Indexable", DoNotGenerateAcw = true)]
+    internal partial class IIndexableInvoker : Java.Lang.Object, IIndexable, IJavaObject, IDisposable
     {
         //
         // Static Fields
@@ -95,4 +96,5 @@ namespace Firebase.AppIndexing
             base.Dispose(disposing);
         }
     }
+    */
 }

@@ -287,4 +287,13 @@
         >        
         reference
     </attr>
+
+
+    <attr
+        path="/api/package[@name='com.google.firebase.database.core']/interface[@name='TokenProvider.TokenChangeListener']/method[@name='onTokenChange' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="managedName"
+        >
+        OnTokenChangeString
+    </attr>
+
 </metadata>
