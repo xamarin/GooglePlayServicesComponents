@@ -570,6 +570,14 @@
       },
       {
         "groupId": "com.google.firebase",
+        "artifactId": "firebase-appcheck-interop",
+        "version": "16.0.0-beta01",
+        "nugetVersion": "116.0.0-beta01",
+        "nugetId": "Xamarin.Firebase.AppCheck.Interop",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.firebase",
         "artifactId": "firebase-appindexing",
         "version": "20.0.0",
         "nugetVersion": "120.0.0",
@@ -1411,24 +1419,24 @@
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
-        "version": "2.2.6",
-        "nugetVersion": "2.2.6",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-backend-cct",
-        "version": "2.3.3",
-        "nugetVersion": "2.3.3",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-api",
-        "version": "2.2.1",
-        "nugetVersion": "2.2.1",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportApi",
         "dependencyOnly": true
       },
