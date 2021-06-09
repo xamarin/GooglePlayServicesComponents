@@ -25,5 +25,12 @@
         >
         Android.Gms.Vision.Face
     </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.mlkit.dynamite.face']"
+        name="managedName"
+        >
+        Android.Gms.Vision.Dynamite.Descriptors.Google.MLKit.Dynamite.Face
+    </attr>
+
 
 </metadata>

@@ -133,8 +133,13 @@
 		path="/api/package[@name='com.google.firebase.perf.validator']"
 		name="managedName"
 		>
+		Firebase.Perf.Validator
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.metrics.validator']"
+		name="managedName"
+		>
 		Firebase.Perf.Metrics.Validator
 	</attr>
-
 
 </metadata>
