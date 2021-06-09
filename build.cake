@@ -616,6 +616,8 @@ Task("samples")
 					sampleSln.ToString().Contains("com.google.android.gms/play-services-wallet/AndroidPayQuickstart.sln")
 					||
 					sampleSln.ToString().Contains("com.google.firebase/firebase-analytics/FirebaseAnalyticsQuickstart.sln")
+					||
+					sampleSln.ToString().Contains("com.google.firebase/firebase-storage/FirebaseStorageQuickstart.sln")
 				)
 				{
 					// skip problematic samples for now
