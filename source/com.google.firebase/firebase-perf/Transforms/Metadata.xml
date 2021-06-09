@@ -93,6 +93,48 @@
 
 
 
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.components']"
+		name="managedName"
+		>
+		Firebase.Perf.Injection.Components
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.session']"
+		name="managedName"
+		>
+		Firebase.Perf.Session
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.session.gauges']"
+		name="managedName"
+		>
+		Firebase.Perf.Session.Gauges
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.application']"
+		name="managedName"
+		>
+		Firebase.Perf.Application
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.metrics']"
+		name="managedName"
+		>
+		Firebase.Perf.Metrics
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.metrics.resource']"
+		name="managedName"
+		>
+		Firebase.Perf.Metrics.Resource
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.validator']"
+		name="managedName"
+		>
+		Firebase.Perf.Metrics.Validator
+	</attr>
 
 
 </metadata>

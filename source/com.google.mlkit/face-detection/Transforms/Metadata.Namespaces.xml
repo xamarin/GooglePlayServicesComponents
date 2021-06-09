@@ -19,5 +19,11 @@
         >
         Xamarin.Google.MLKit.Vision.Face.Internal
     </attr>
-  
+    <attr
+        path="/api/package[@name='com.google.android.gms.vision.face']"
+        name="managedName"
+        >
+        Android.Gms.Vision.Face
+    </attr>
+
 </metadata>
