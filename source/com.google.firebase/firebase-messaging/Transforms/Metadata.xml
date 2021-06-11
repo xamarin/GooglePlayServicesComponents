@@ -68,6 +68,12 @@
         >
         Firebase.Iid
     </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.messaging.reporting']"
+        name="managedName"
+        >
+        Firebase.Messaging.Reporting
+    </attr>
 
 
 </metadata>
