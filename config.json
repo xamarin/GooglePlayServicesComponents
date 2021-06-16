@@ -27,16 +27,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "20.1.0",
-        "nugetVersion": "120.1.0",
+        "version": "20.2.0",
+        "nugetVersion": "120.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "20.1.0",
-        "nugetVersion": "120.1.0",
+        "version": "20.2.0",
+        "nugetVersion": "120.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -51,8 +51,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "20.1.0",
-        "nugetVersion": "120.1.0",
+        "version": "20.2.0",
+        "nugetVersion": "120.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
@@ -363,8 +363,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-nearby",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Nearby",
         "dependencyOnly": false
       },
@@ -531,16 +531,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads",
-        "version": "20.1.0",
-        "nugetVersion": "120.1.0",
+        "version": "20.2.0",
+        "nugetVersion": "120.2.0",
         "nugetId": "Xamarin.Firebase.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads-lite",
-        "version": "20.1.0",
-        "nugetVersion": "120.1.0",
+        "version": "20.2.0",
+        "nugetVersion": "120.2.0",
         "nugetId": "Xamarin.Firebase.Ads.Lite",
         "dependencyOnly": false
       },
@@ -643,16 +643,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-crashlytics",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1",
         "nugetId": "Xamarin.Firebase.Crashlytics",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-crashlytics-ndk",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1",
         "nugetId": "Xamarin.Firebase.Crashlytics.NDK",
         "dependencyOnly": false
       },
@@ -691,8 +691,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-dynamic-links",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
+        "version": "20.1.0",
+        "nugetVersion": "120.1.0",
         "nugetId": "Xamarin.Firebase.Dynamic.Links",
         "dependencyOnly": false
       },
@@ -715,8 +715,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-firestore",
-        "version": "23.0.0",
-        "nugetVersion": "123.0.0",
+        "version": "23.0.1",
+        "nugetVersion": "123.0.1",
         "nugetId": "Xamarin.Firebase.Firestore",
         "dependencyOnly": false
       },
@@ -931,8 +931,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-perf",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
+        "version": "20.0.1",
+        "nugetVersion": "120.0.1",
         "nugetId": "Xamarin.Firebase.Perf",
         "dependencyOnly": false
       },
@@ -995,8 +995,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "face-detection",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0",
+        "version": "16.1.1",
+        "nugetVersion": "116.1.1",
         "nugetId": "Xamarin.Google.MLKit.FaceDetection",
         "dependencyOnly": false
       },
