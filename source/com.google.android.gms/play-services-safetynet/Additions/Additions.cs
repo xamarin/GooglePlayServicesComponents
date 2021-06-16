@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
-using System.Json;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http;
 
@@ -29,9 +29,12 @@ namespace Android.Gms.SafetyNet
 
             response.EnsureSuccessStatusCode ();
 
-            var json = JsonObject.Parse (data);
-            if (json.ContainsKey ("isValidSignature"))
-                return json ["isValidSignature"].ToString ().Trim ('"').Equals ("true");
+            JsonDocument doc = JsonDocument.Parse(data);
+            JsonElement root = doc.RootElement;
+            JsonElement signature = root.GetProperty("isValidSignature");
+
+            if (signature.GetBoolean())
+                return true;
             
             return false;
         }
