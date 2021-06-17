@@ -25,11 +25,10 @@ namespace Android.Gms.SafetyNet
             var content = new StringContent (jsonReq, Encoding.Default, "application/json");
 
             var response = await http.PostAsync (url + validationApiKey, content);
-            var data = await response.Content.ReadAsStringAsync ();
-
             response.EnsureSuccessStatusCode ();
 
-            JsonDocument doc = JsonDocument.Parse(data);
+            using var stream = await response.Content.ReadAsStreamAsync();
+            JsonDocument doc = await JsonDocument.ParseAsync(stream);
             JsonElement root = doc.RootElement;
             bool isValidSignature = false;
 
