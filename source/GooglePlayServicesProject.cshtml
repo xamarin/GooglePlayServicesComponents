@@ -48,8 +48,23 @@
 
       string c = Model.Name;
 
-      int index = Model.NuGetVersion.LastIndexOf(".");
-      string artifact_version = Model.NuGetVersion.Substring(1, index + 2); // skip "1" in "1<major>.<minor>.<patch>"
+      string[] artifact_version_parts = Model.NuGetVersion
+                                              .Substring(1, Model.NuGetVersion.Length - 1)
+                                              .Split(new string[] { "-" }, StringSplitOptions.None);
+      string artifact_version = null;
+
+      string artifact_version_release = artifact_version_parts[0];
+      string[] artifact_version_release_parts = artifact_version_release.Split(new string[] { "." }, StringSplitOptions.None);
+      artifact_version = string.Join(".", artifact_version_release_parts, 0, 3);
+
+      if (artifact_version_parts.Length == 1)
+      {
+          // release
+      }
+      if (artifact_version_parts.Length == 2)
+      {
+          artifact_version += "-" + artifact_version_parts[1];
+      }
   }
 
   <PropertyGroup>
