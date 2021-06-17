@@ -30,19 +30,12 @@ namespace Android.Gms.SafetyNet
             using var stream = await response.Content.ReadAsStreamAsync();
             JsonDocument doc = await JsonDocument.ParseAsync(stream);
             JsonElement root = doc.RootElement;
-            bool isValidSignature = false;
 
-            try
-            {
-                JsonElement signature = root.GetProperty("isValidSignature");
-            if (signature.GetBoolean())
-                isValidSignature = true;
+            if (root.TryGetProperty ("isValidSignature", out var signature)) {
+                return signature.GetBoolean ();
+            } else {
+                return false;
             }
-            catch (KeyNotFoundException)
-            {                
-            }
-            
-            return isValidSignature;
         }
     }
 
