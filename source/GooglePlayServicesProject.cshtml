@@ -1,3 +1,4 @@
+@using System
 @using System.Linq
 @using System.Collections.Generic
 
@@ -121,13 +122,13 @@
       Ignoreable
       Performance hit for builds
       - BG8A04: <attr path="XPath" /> matched no nodes.
-      - BG8A00: <remove-node path="XPath" /> matched no nodes.  
+      - BG8A00: <remove-node path="XPath" /> matched no nodes.
     -->
     <NoWarn>BG8A04;BG8A00</NoWarn>
 
     <!--
-      Harmfull 
-      - BG8401: Skipping managed_type, due to a duplicate field, method or nested type name. (Nested type) (Java type: java_type)  
+      Harmfull
+      - BG8401: Skipping managed_type, due to a duplicate field, method or nested type name. (Nested type) (Java type: java_type)
       - BG8604: top ancestor Type1 not found for nested type Namespace.Type1.Type2
       - BG8C00: For type Namespace.Type1, base interface java.Interface does not exist
       - BG8700: Unknown return type java.Type1 in method Method1 in managed type Namespace.Type2.
@@ -142,7 +143,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-      @foreach (var art in @Model.MavenArtifacts) 
+      @foreach (var art in @Model.MavenArtifacts)
       {
       <TransformFile Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml" Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml')" />
       }
@@ -153,17 +154,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts) 
+    @foreach (var art in @Model.MavenArtifacts)
     {
-    <JavaSourceJar 
-          Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" 
-          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')" 
+    <JavaSourceJar
+          Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar"
+          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')"
           />
-    <JavaDocJar 
-          Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar" 
-          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')" 
+    <JavaDocJar
+          Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar"
+          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')"
           />
-    }   
+    }
   </ItemGroup>
 
   <ItemGroup>
@@ -230,13 +231,13 @@
       if (art.MavenArtifactPackaging == "aar") {
         if ((System.Environment.GetEnvironmentVariable("LOCAL_TEST_PKG") ?? "") == "true") {
     <LibraryProjectZip Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" />
-    
+
         } else {
     <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
     <!-- For those artifacts with lib/ folder -->
     <InputJar
       Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\')"
-      Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\*.jar" 
+      Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\*.jar"
       />
         }
       } else {
@@ -264,7 +265,7 @@
     @foreach (var dep in @Model.NuGetDependencies) {
       if (!dep.IsProjectReference) {
       <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" PrivateAssets="none" />
-      }      
+      }
     }
     @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.SafetyNet")
     {
@@ -285,10 +286,10 @@
 
   @*
   <!--
-  NOTE: 
-  Xamarin.Build.Download version set in GooglePlaySericesProjects.cshtml template is 
+  NOTE:
+  Xamarin.Build.Download version set in GooglePlaySericesProjects.cshtml template is
   important for attributes in GooglePlaySericesTargets.cshtml template
-  
+
   XamarinBuildDownloadAndroidAarLibrary   v >=  0.10.0
   XamarinBuildDownloadRestoreAssemblyAar  v <   0.10.0
   -->
@@ -414,7 +415,7 @@
           IconUrl = "https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/play-services-analytics-impl_128x128.png",
         }
       },
-      /* 
+      /*
         {
         "Xamarin.GooglePlayServices.AppIndexing",
         new  NugetPackageCustomMetaData()
