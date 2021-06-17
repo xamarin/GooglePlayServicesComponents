@@ -31,12 +31,19 @@ namespace Android.Gms.SafetyNet
 
             JsonDocument doc = JsonDocument.Parse(data);
             JsonElement root = doc.RootElement;
-            JsonElement signature = root.GetProperty("isValidSignature");
+            bool isValidSignature = false;
 
+            try
+            {
+                JsonElement signature = root.GetProperty("isValidSignature");
             if (signature.GetBoolean())
-                return true;
+                isValidSignature = true;
+            }
+            catch (KeyNotFoundException)
+            {                
+            }
             
-            return false;
+            return isValidSignature;
         }
     }
 
