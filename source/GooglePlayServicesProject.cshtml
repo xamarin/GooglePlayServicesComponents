@@ -49,7 +49,7 @@
       string c = Model.Name;
 
       int index = Model.NuGetVersion.LastIndexOf(".");
-      string artifact_version = Model.NuGetVersion.Substring(1, index); // skip "1" in "1<major>.<minor>.<patch>"
+      string artifact_version = Model.NuGetVersion.Substring(1, index + 2); // skip "1" in "1<major>.<minor>.<patch>"
   }
 
   <PropertyGroup>
