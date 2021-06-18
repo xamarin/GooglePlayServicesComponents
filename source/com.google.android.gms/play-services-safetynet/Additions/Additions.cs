@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
-using System.Json;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http;
 
@@ -25,15 +25,17 @@ namespace Android.Gms.SafetyNet
             var content = new StringContent (jsonReq, Encoding.Default, "application/json");
 
             var response = await http.PostAsync (url + validationApiKey, content);
-            var data = await response.Content.ReadAsStringAsync ();
-
             response.EnsureSuccessStatusCode ();
 
-            var json = JsonObject.Parse (data);
-            if (json.ContainsKey ("isValidSignature"))
-                return json ["isValidSignature"].ToString ().Trim ('"').Equals ("true");
-            
-            return false;
+            using var stream = await response.Content.ReadAsStreamAsync();
+            JsonDocument doc = await JsonDocument.ParseAsync(stream);
+            JsonElement root = doc.RootElement;
+
+            if (root.TryGetProperty ("isValidSignature", out var signature)) {
+                return signature.GetBoolean ();
+            } else {
+                return false;
+            }
         }
     }
 
