@@ -140,7 +140,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
         "version": "17.6.0",
-        "nugetVersion": "117.6.0",
+        "nugetVersion": "117.6.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Basement",
         "dependencyOnly": false
       },
@@ -180,7 +180,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-cronet",
         "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "nugetVersion": "117.0.0.1",
         "nugetId": "Xamarin.GooglePlayServices.CroNet",
         "dependencyOnly": false
       },
@@ -188,7 +188,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-drive",
         "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "nugetVersion": "117.0.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Drive",
         "dependencyOnly": false
       },
@@ -244,7 +244,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-identity",
         "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "nugetVersion": "117.0.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Identity",
         "dependencyOnly": false
       },
@@ -412,7 +412,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-plus",
         "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "nugetVersion": "117.0.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Plus",
         "dependencyOnly": false
       },
@@ -508,7 +508,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-wallet",
         "version": "18.1.3",
-        "nugetVersion": "118.1.3",
+        "nugetVersion": "118.1.3.1",
         "nugetId": "Xamarin.GooglePlayServices.Wallet",
         "dependencyOnly": false
       },
@@ -580,7 +580,7 @@
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appindexing",
         "version": "20.0.0",
-        "nugetVersion": "120.0.0",
+        "nugetVersion": "120.0.0.1",
         "nugetId": "Xamarin.Firebase.AppIndexing",
         "dependencyOnly": false
       },
@@ -588,7 +588,7 @@
         "groupId": "com.google.firebase",
         "artifactId": "firebase-auth",
         "version": "21.0.1",
-        "nugetVersion": "121.0.1",
+        "nugetVersion": "121.0.1.1",
         "nugetId": "Xamarin.Firebase.Auth",
         "dependencyOnly": false
       },
@@ -716,7 +716,7 @@
         "groupId": "com.google.firebase",
         "artifactId": "firebase-firestore",
         "version": "23.0.1",
-        "nugetVersion": "123.0.1",
+        "nugetVersion": "123.0.1.1",
         "nugetId": "Xamarin.Firebase.Firestore",
         "dependencyOnly": false
       },
@@ -796,7 +796,7 @@
         "groupId": "com.google.firebase",
         "artifactId": "firebase-measurement-connector-impl",
         "version": "17.0.5",
-        "nugetVersion": "117.0.5",
+        "nugetVersion": "117.0.5.1",
         "nugetId": "Xamarin.Firebase.Measurement.Connector.Impl",
         "dependencyOnly": false
       },
@@ -1012,7 +1012,7 @@
         "groupId": "com.google.mlkit",
         "artifactId": "image-labeling-automl",
         "version": "16.2.1",
-        "nugetVersion": "116.2.1",
+        "nugetVersion": "116.2.1.1",
         "nugetId": "Xamarin.Google.MLKit.ImageLabeling.AutoML",
         "dependencyOnly": false
       },
@@ -1020,7 +1020,7 @@
         "groupId": "com.google.mlkit",
         "artifactId": "image-labeling-common",
         "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "nugetVersion": "117.0.0.1",
         "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Common",
         "dependencyOnly": false
       },
@@ -1036,7 +1036,7 @@
         "groupId": "com.google.mlkit",
         "artifactId": "image-labeling-default-common",
         "version": "16.0.0",
-        "nugetVersion": "116.0.0",
+        "nugetVersion": "116.0.0.1",
         "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Default.Common",
         "dependencyOnly": false
       },
