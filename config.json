@@ -2,6 +2,7 @@
   {
     "mavenRepositoryType": "Google",
     "slnFile": "generated/GooglePlayServices.sln",
+    "strictRuntimeDependencies": true,
     "additionalProjects": [
       "source/com.google.android.gms/play-services-basement/buildtasks/Basement-BuildTasks.csproj"
     ],
