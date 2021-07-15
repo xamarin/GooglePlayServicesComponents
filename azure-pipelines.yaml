@@ -49,3 +49,4 @@ jobs:
       parameters:
         timeoutInMinutes: 120
         dependsOn: [ 'build' ]
+        condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
