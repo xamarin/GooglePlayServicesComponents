@@ -1145,6 +1145,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "com.google.android.odml",
+        "artifactId": "image",
+        "version": "1.0.0-beta1",
+        "nugetVersion": "1.0.0-beta1",
+        "nugetId": "Xamarin.Android.Odml.Image",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "com.google.guava",
         "artifactId": "guava",
         "version": "28.2.0",
@@ -1419,8 +1427,8 @@
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
         "dependencyOnly": true
       },
