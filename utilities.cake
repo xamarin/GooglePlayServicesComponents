@@ -100,6 +100,7 @@ Task ("spell-check")
                 "Abt",
                 "Firestore",
                 "AppCheck",
+                "Odml",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
@@ -352,12 +353,18 @@ Task ("read-analysis-files")
     (
         () =>
         {
-            string[] files = new[]
+            List<string> files = new List<string>
             {
                 "./output/spell-errors.txt",
                 "./output/changelog.md",
                 "./output/config.json.diff-from-main.txt",
             };
+
+            if ( ! FileExists("./output/spell-errors.txt") )
+            {
+                files.Remove("./output/spell-errors.txt");
+            }
+
 			string process = "code";
 			string process_args = $"-n {string.Join(" ", files)}";
 			IEnumerable<string> redirectedStandardOutput;
