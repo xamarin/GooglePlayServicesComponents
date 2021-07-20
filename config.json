@@ -332,7 +332,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-barcode-scanning",
         "version": "16.2.0",
-        "nugetVersion": "116.2.0",
+        "nugetVersion": "116.2.0-beta1",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.BarcodeScanning",
         "dependencyOnly": false
       },
@@ -340,7 +340,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-face-detection",
         "version": "16.2.0",
-        "nugetVersion": "116.2.0",
+        "nugetVersion": "116.2.0-beta1",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.FaceDetection",
         "dependencyOnly": false
       },
@@ -356,7 +356,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-text-recognition",
         "version": "16.3.0",
-        "nugetVersion": "116.3.0",
+        "nugetVersion": "116.3.0-beta1",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition",
         "dependencyOnly": false
       },
@@ -1076,7 +1076,7 @@
         "groupId": "com.google.mlkit",
         "artifactId": "object-detection-common",
         "version": "17.1.0",
-        "nugetVersion": "117.1.0",
+        "nugetVersion": "117.1.0-beta1",
         "nugetId": "Xamarin.Google.MLKit.ObjectDetection.Common",
         "dependencyOnly": false
       },
@@ -1132,7 +1132,7 @@
         "groupId": "com.google.mlkit",
         "artifactId": "vision-common",
         "version": "16.5.0",
-        "nugetVersion": "116.5.0",
+        "nugetVersion": "116.5.0-beta1",
         "nugetId": "Xamarin.Google.MLKit.Vision.Common",
         "dependencyOnly": false
       },
