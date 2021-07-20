@@ -54,8 +54,8 @@ jobs:
             boots $(LegacyXamarinAndroidVsix)
           condition: eq(variables['System.JobName'], 'windows')
       tools:
-        - 'xamarin.androidbinderator.tool': '0.4.3'
-        - 'xamarin.androidx.migration.tool': '1.0.8'
+        - 'xamarin.androidbinderator.tool': '$(AndroidBinderatorVersion)'
+        - 'xamarin.androidx.migration.tool': '$(AndroidXMigrationVersion)'
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
       parameters:
