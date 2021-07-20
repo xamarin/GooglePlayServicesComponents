@@ -3,7 +3,7 @@
         path="/api/package[@name='com.google.android.odml.image']"
         name="managedName"
         >
-        Xamarin.Android.Odml.Image
+        Xamarin.Google.Android.Odml.Image
     </attr>
     <!--
     -->

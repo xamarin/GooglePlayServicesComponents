@@ -1149,7 +1149,7 @@
         "artifactId": "image",
         "version": "1.0.0-beta1",
         "nugetVersion": "1.0.0-beta1",
-        "nugetId": "Xamarin.Android.Odml.Image",
+        "nugetId": "Xamarin.Google.Android.Odml.Image",
         "dependencyOnly": false
       },
       {
