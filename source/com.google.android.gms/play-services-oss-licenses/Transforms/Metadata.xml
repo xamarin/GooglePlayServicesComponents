@@ -17,7 +17,8 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
-    <remove-node path="/api/package[@name='com.google.android.gms.oss.licenses']/class[@name='OssLicensesMenuActivity']/implements[@name='android.support.v4.app.LoaderManager.LoaderCallbacks']" />
+	<!-- Generic parameter types -->
+	<remove-node path="/api/package[@name='com.google.android.gms.oss.licenses']/class[@name='OssLicensesMenuActivity']/implements[@name='androidx.loader.app.LoaderManager.LoaderCallbacks']" />
     
 	<!-- We don't want to subclass this type, it will change the base type on a bunch of things from past versions -->
 	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends">java.lang.Object</attr>
