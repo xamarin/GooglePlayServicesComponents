@@ -331,16 +331,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-barcode-scanning",
-        "version": "16.2.0",
-        "nugetVersion": "116.2.0-beta1",
+        "version": "16.1.5",
+        "nugetVersion": "116.1.5",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.BarcodeScanning",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-face-detection",
-        "version": "16.2.0",
-        "nugetVersion": "116.2.0-beta1",
+        "version": "16.1.7",
+        "nugetVersion": "116.1.7",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.FaceDetection",
         "dependencyOnly": false
       },
@@ -355,8 +355,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-text-recognition",
-        "version": "16.3.0",
-        "nugetVersion": "116.3.0-beta1",
+        "version": "16.2.0",
+        "nugetVersion": "116.2.0",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition",
         "dependencyOnly": false
       },
@@ -979,8 +979,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "barcode-scanning",
-        "version": "16.2.0",
-        "nugetVersion": "116.2.0",
+        "version": "16.1.2",
+        "nugetVersion": "116.1.2",
         "nugetId": "Xamarin.Google.MLKit.BarcodeScanning",
         "dependencyOnly": false
       },
@@ -995,8 +995,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "face-detection",
-        "version": "16.1.2",
-        "nugetVersion": "116.1.2",
+        "version": "16.1.1",
+        "nugetVersion": "116.1.1",
         "nugetId": "Xamarin.Google.MLKit.FaceDetection",
         "dependencyOnly": false
       },
@@ -1019,8 +1019,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "image-labeling-common",
-        "version": "17.1.0",
-        "nugetVersion": "117.1.0",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.1",
         "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Common",
         "dependencyOnly": false
       },
@@ -1075,8 +1075,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "object-detection-common",
-        "version": "17.1.0",
-        "nugetVersion": "117.1.0-beta1",
+        "version": "17.0.1",
+        "nugetVersion": "117.0.1",
         "nugetId": "Xamarin.Google.MLKit.ObjectDetection.Common",
         "dependencyOnly": false
       },
@@ -1131,8 +1131,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "vision-common",
-        "version": "16.5.0",
-        "nugetVersion": "116.5.0-beta1",
+        "version": "16.4.0",
+        "nugetVersion": "116.4.0",
         "nugetId": "Xamarin.Google.MLKit.Vision.Common",
         "dependencyOnly": false
       },
@@ -1142,14 +1142,6 @@
         "version": "18.1.1",
         "nugetVersion": "118.1.1",
         "nugetId": "Xamarin.Google.MLKit.Vision.Internal.Vkp",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "com.google.android.odml",
-        "artifactId": "image",
-        "version": "1.0.0-beta1",
-        "nugetVersion": "1.0.0-beta1",
-        "nugetId": "Xamarin.Google.Android.Odml.Image",
         "dependencyOnly": false
       },
       {
