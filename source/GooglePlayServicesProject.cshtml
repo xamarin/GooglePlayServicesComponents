@@ -6,7 +6,7 @@
   var targetFrameworkMoniker = "MonoAndroid90";
 }
 
-<Project Sdk="MSBuild.Sdk.Extras">
+<Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
     <TargetFramework>@(targetFrameworkMoniker)</TargetFramework>
     <IsBindingProject>true</IsBindingProject>
@@ -15,17 +15,6 @@
     } else {
     <AssemblyName>@(Model.NuGetPackageId)</AssemblyName>
     }
-    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
-    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
-    <AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
-    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
-    <EnableProguard>true</EnableProguard>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidDexTool>d8</AndroidDexTool>
-    <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidManifestMerger>manifestmerger.jar</AndroidManifestMerger>
   </PropertyGroup>
 
   @{
@@ -269,6 +258,7 @@
     }
     @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.SafetyNet")
     {
+      <Reference Include="System.Net.Http" />
       <PackageReference Include="System.Text.Json" Version="5.0.2" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Firestore")
