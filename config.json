@@ -1036,7 +1036,7 @@
         "groupId": "com.google.mlkit",
         "artifactId": "image-labeling-default-common",
         "version": "16.0.0",
-        "nugetVersion": "116.0.0",
+        "nugetVersion": "116.0.0.1",
         "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Default.Common",
         "dependencyOnly": false
       },
