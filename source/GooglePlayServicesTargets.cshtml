@@ -1,9 +1,6 @@
 @using System.Linq
 @using System.IO
 @using System.Xml.Linq
-@{
-  var targetFrameworkMoniker = "MonoAndroid90";
-}
 <?xml version="1.0" encoding="utf-8"?>
 @functions {
   public static void RemoveXmlns(XElement e)
@@ -27,7 +24,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.ProguardFile != null) {
-    <ProguardConfiguration Include="$(MSBuildThisFileDirectory)..\..\proguard\@(targetFrameworkMoniker)\proguard.txt" />
+    <ProguardConfiguration Include="$(MSBuildThisFileDirectory)..\..\proguard\proguard.txt" />
       }
     }
   </ItemGroup>

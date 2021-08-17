@@ -10,7 +10,7 @@ pr:
 variables:
   AndroidBinderatorVersion: 0.4.7
   AndroidXMigrationVersion: 1.0.8
-  DotNetVersion: 6.0.100-preview.7.21379.14
+  DotNetVersion: 6.0.100-rc.1.21458.32
   LegacyXamarinAndroidPkg: https://aka.ms/xamarin-android-commercial-d16-10-macos
   LegacyXamarinAndroidVsix: https://aka.ms/xamarin-android-commercial-d16-10-windows
   BUILD_NUMBER: $(Build.BuildNumber)
@@ -33,6 +33,7 @@ jobs:
     parameters:
       timeoutInMinutes: 240
       areaPath: 'DevDiv\Xamarin SDK\Android'
+      windowsAgentPoolName: android-win-2019
       initSteps:
         - task: UseDotNet@2
           displayName: install .NET $(DotNetVersion)
@@ -40,6 +41,12 @@ jobs:
             version: $(DotNetVersion)
         - pwsh: |
             dotnet workload install android
+        - task: JavaToolInstaller@0
+          inputs:
+            versionSpec: '11'
+            jdkArchitectureOption: 'x64'
+            jdkSourceOption: 'PreInstalled'
+
       preBuildSteps:
         - pwsh: |
             dotnet tool uninstall --global Cake.Tool
