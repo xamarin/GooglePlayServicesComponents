@@ -40,5 +40,19 @@
         Android.Gms.Auth.Api.Identity
     </attr>
 	
+	<remove-node
+		path="/api/package[@name='com.google.android.gms.auth.api.identity']/class[starts-with(@name,'zb')]/implements"
+		/>
+	<remove-node
+		path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[starts-with(@name,'zb')]/implements"
+		/>
+	<remove-node
+		path="/api/package[@name='com.google.android.gms.auth.api.credentials']/class[starts-with(@name,'zb')]/implements"
+		/>
+
+	<remove-node
+		path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']/class[starts-with(@name,'zb')]"
+		/>
+
 </metadata>
 
