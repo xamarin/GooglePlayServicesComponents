@@ -28,4 +28,18 @@
         Firebase.DynamicLinks.Internal
     </attr>
     
+
+    <remove-node
+        path="/api/package[@name='com.google.firebase.dynamiclinks.internal']/class[@name='ShortDynamicLinkImpl']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.firebase.dynamiclinks.internal']/class[@name='ShortDynamicLinkImplCreator']"
+        >
+    </remove-node>
+
+    <remove-node
+        path="/api/package[@name='com.google.firebase.dynamiclinks.internal']/class[@name='WarningImplCreator']/implements"
+        >
+    </remove-node>
 </metadata>
