@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.Build.NoTargets">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+        <!--
+            This needs to be changed for EACH Dynamic Asset Feature.
+            The main app defaults to 0x7f , and each feature after that should
+            be lower. So the first feature is 0x7e the next is 0x7d etc etc.
+        -->
+        <PackageId>0x7E</PackageId>
+        <!-- root url should match the main app with the feature name appened to the end. -->
+        <Package>com.xamarin.assetpacksample.dynamicassetpack</Package>
+        <AssetsDirectory>Assets</AssetsDirectory>
+    </PropertyGroup>
+
+    <PropertyGroup>
+       <OutputPath Condition="'$(OutputPath)'==''">bin\$(Configuration)</OutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Assets\" />
+    </ItemGroup>
+    <!-- Import the Dynamic Feature targets. -->
+    <Import Project="..\..\Targets\DynamicFeature.targets" />
+
+    <Target Name="GenerateLargeAssetData" BeforeTargets="Build" Outputs="Assets\dynamic.txt">
+        <PropertyGroup>
+            <_Size>159383552</_Size>
+        </PropertyGroup>
+        <MakeDir Directories="Assets" />
+        <Exec Command="fsutil file createnew dynamic.txt $(_Size)" WorkingDirectory="Assets"
+            Condition=" '$(OS)' == 'Windows_NT' And !Exists ('Assets\dynamic.txt')  "
+        />
+        <Exec Command="dd bs=$(_Size) count=1 &lt;/dev/urandom &gt;dynamic.txt" WorkingDirectory="Assets"
+            Condition=" '$(OS)' != 'Windows_NT' And !Exists ('Assets\dynamic.txt')  "
+        />
+        <ItemGroup>
+            <FileWrites Include="Assets\dynamic.txt" />
+        </ItemGroup>
+    </Target>
+</Project>
