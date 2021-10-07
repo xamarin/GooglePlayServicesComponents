@@ -1412,10 +1412,47 @@
       {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-api",
-        "version": "76.3809.111",
-        "nugetVersion": "76.3809.111",
+        "version": "92.4515.131",
+        "nugetVersion": "92.4515.131",
         "nugetId": "Xamarin.Chromium.CroNet.Api",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "chromium-cronet"      
+      },
+      {
+        "groupId": "org.chromium.net",
+        "artifactId": "cronet-common",
+        "version": "92.4515.131",
+        "nugetVersion": "92.4515.131",
+        "nugetId": "Xamarin.Chromium.CroNet.Common",
+        "dependencyOnly": false,
+        "templateSet": "chromium-cronet"      
+      },
+      {
+        "groupId": "org.chromium.net",
+        "artifactId": "cronet-embedded",
+        "version": "92.4515.131",
+        "nugetVersion": "92.4515.131",
+        "nugetId": "Xamarin.Chromium.CroNet.Embedded",
+        "dependencyOnly": false,
+        "templateSet": "chromium-cronet"      
+      },
+      {
+        "groupId": "org.chromium.net",
+        "artifactId": "cronet-fallback",
+        "version": "92.4515.131",
+        "nugetVersion": "92.4515.131",
+        "nugetId": "Xamarin.Chromium.CroNet.Fallback",
+        "dependencyOnly": false,
+        "templateSet": "chromium-cronet"      
+      },
+      {
+        "groupId": "com.google.code.findbugs",
+        "artifactId": "jsr305",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1",
+        "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
+        "dependencyOnly": false,
+        "templateSet": "findbugs"      
       },
       {
         "groupId": "com.google.android.datatransport",
@@ -1529,6 +1566,39 @@
         "nugetId": "Xamarin.Android.Glide",
         "dependencyOnly": true
       }
-    ]
+    ],
+    "templateSets": 
+    [
+      {
+        "name": "chromium-cronet",
+        "mavenRepositoryType": "Google",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/chromium-cronet/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      }, 
+      {
+        "name": "findbugs",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/findbugs/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      }
+    ]  
   }
 ]
