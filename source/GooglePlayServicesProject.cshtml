@@ -237,6 +237,11 @@
     <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
       }
     }
+    <!-- Pull in the play core extensions helpers -->
+    @if (@Model.NuGetPackageId == "Xamarin.Google.Android.Play.Core")
+    {
+    <EmbeddedJar Include="..\..\externals\com.xamarin.google.android.play.core.extensions\extensions.jar" />
+    }
   </ItemGroup>
   }
   <ItemGroup>

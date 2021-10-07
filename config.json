@@ -581,7 +581,7 @@
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appindexing",
         "version": "20.0.0",
-        "nugetVersion": "120.0.0.1",
+        "nugetVersion": "120.0.0.2",
         "nugetId": "Xamarin.Firebase.AppIndexing",
         "dependencyOnly": false
       },
@@ -964,8 +964,8 @@
       {
         "groupId": "com.google.android.play",
         "artifactId": "core",
-        "version": "1.10.0",
-        "nugetVersion": "1.10.0",
+        "version": "1.10.2",
+        "nugetVersion": "1.10.2",
         "nugetId": "Xamarin.Google.Android.Play.Core",
         "dependencyOnly": false
       },

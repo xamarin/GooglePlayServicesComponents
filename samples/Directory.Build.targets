@@ -117,7 +117,7 @@
     <PackageReference Update="Xamarin.Firebase.Storage" Version="120.0.0" />
     <PackageReference Update="Xamarin.Firebase.Storage.Common" Version="117.0.0" />
     <PackageReference Update="Xamarin.Firebase.ProtoliteWellKnownTypes" Version="118.0.0" />
-    <PackageReference Update="Xamarin.Google.Android.Play.Core" Version="1.10.0" />
+    <PackageReference Update="Xamarin.Google.Android.Play.Core" Version="1.10.2" />
     <PackageReference Update="Xamarin.Google.MLKit.Common" Version="117.3.0" />
     <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning" Version="116.1.2" />
     <PackageReference Update="Xamarin.Google.MLKit.DigitalInk.Recognition" Version="117.0.0" />
