@@ -25,8 +25,10 @@
     <Authors>Microsoft</Authors>
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
-    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2091414</PackageProjectUrl>
-    <PackageLicenseUrl>https://aka.ms/AAdvoow</PackageLicenseUrl>
+    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageLicenseUrl>
+    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageProjectUrl>
+    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/tensorflow/tensorflow/</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 
     @foreach (var art in @Model.MavenArtifacts) 
@@ -35,12 +37,18 @@
       switch(@Model.NuGetPackageId)
       {
           case "Xamarin.TensorFlow.Lite":
-            <Title>Google Auto Value Annotations for Xamarin.Android - Xamarin.TensorFlow.Lite</Title>
-            <PackageDescription>Xamarin.Android bindings for Google Auto Value Xamarin.TensorFlow.Lite</PackageDescription>
+            <Title>Xamarin.TensorFlow.Lite</Title>
+            <PackageDescription>
+              Bindings for Google's TensorFlow Lite package (Google Play Services dependency)
+            </PackageDescription>
+            <PackageTags>xamarin, android, bindings, google, tensorflow, lite</PackageTags>
             break; 
           case "Xamarin.TensorFlow.Lite.Gpu":
-            <Title>Google Auto Value Annotations for Xamarin.Android - Xamarin.TensorFlow.Lite.Gpu</Title>
-            <PackageDescription>Xamarin.Android bindings for Google Auto Value Xamarin.TensorFlow.Lite.Gpu</PackageDescription>
+            <Title>Xamarin.TensorFlow.Lite.Gpu</Title>
+            <PackageDescription>
+              Bindings for Google's TensorFlow Lite GPU package (Google Play Services dependency)
+            </PackageDescription>
+            <PackageTags>xamarin, android, bindings, google, tensorflow, lite</PackageTags>
             break; 
           default:
             break; 
