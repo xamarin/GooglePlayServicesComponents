@@ -964,8 +964,8 @@
       {
         "groupId": "com.google.android.play",
         "artifactId": "core",
-        "version": "1.10.0",
-        "nugetVersion": "1.10.0",
+        "version": "1.10.2",
+        "nugetVersion": "1.10.2",
         "nugetId": "Xamarin.Google.Android.Play.Core",
         "dependencyOnly": false
       },

@@ -19,4 +19,17 @@
         Java.Lang.Object
     </attr>
 
+    <attr
+        path="/api/package[@name='xamarin.google.android.play.core.splitInstall']/interface[@name='SplitInstallStateUpdatedListenerWrapper.StateUpdateListener']/method[@name='OnStateUpdate']/parameter[@name='p0']" 
+        name="name"
+        >
+        state
+    </attr>
+    <attr
+        path="/api/package[@name='xamarin.google.android.play.core.assetpacks']/interface[@name='AssetPackStateUpdateListenerWrapper.AssetPackStateListener']/method[@name='OnStateUpdate']/parameter[@name='p0']" 
+        name="name"
+        >
+        state
+    </attr>
+
 </metadata>

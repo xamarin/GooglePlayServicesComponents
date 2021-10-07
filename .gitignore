@@ -28,6 +28,7 @@ GettingStarted.md
 Details.md
 generated.targets
 .droidres
+.gradle
 cake.sh
 cake.sh.commit
 /.vs
@@ -37,3 +38,4 @@ tools/
 generated
 binderator
 models.json
+source/com.google.android.play/core.extensions/build
