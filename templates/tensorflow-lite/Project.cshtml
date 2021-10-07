@@ -2,8 +2,6 @@
   <PropertyGroup>
     <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
-    <RootNamespace>Annotations</RootNamespace>
-    <AssemblyName>Xamarin.Google.AutoValue.Annotations</AssemblyName>
     <!--
       No warnings for:
        - CS0618: 'member' is obsolete: 'text'
@@ -37,6 +35,8 @@
       switch(@Model.NuGetPackageId)
       {
           case "Xamarin.TensorFlow.Lite":
+            <RootNamespace>Xamarin.TensorFlow.Lite</RootNamespace>
+            <AssemblyName>Xamarin.TensorFlow.Lite</AssemblyName>
             <Title>Xamarin.TensorFlow.Lite</Title>
             <PackageDescription>
               Bindings for Google's TensorFlow Lite package (Google Play Services dependency)
@@ -44,6 +44,8 @@
             <PackageTags>xamarin, android, bindings, google, tensorflow, lite</PackageTags>
             break; 
           case "Xamarin.TensorFlow.Lite.Gpu":
+            <RootNamespace>Xamarin.TensorFlow.Lite.Gpu</RootNamespace>
+            <AssemblyName>Xamarin.TensorFlow.Lite.Gpu</AssemblyName>
             <Title>Xamarin.TensorFlow.Lite.Gpu</Title>
             <PackageDescription>
               Bindings for Google's TensorFlow Lite GPU package (Google Play Services dependency)
