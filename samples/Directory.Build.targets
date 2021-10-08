@@ -69,7 +69,7 @@
     <PackageReference Update="Xamarin.Firebase.Analytics.Impl" Version="116.3.0" />
     <PackageReference Update="Xamarin.Firebase.Annotations" Version="116.0.0" />
     <PackageReference Update="Xamarin.Firebase.AppCheck.Interop" Version="116.0.0-beta01" />
-    <PackageReference Update="Xamarin.Firebase.AppIndexing" Version="120.0.0.1" />
+    <PackageReference Update="Xamarin.Firebase.AppIndexing" Version="120.0.0.2" />
     <PackageReference Update="Xamarin.Firebase.Auth" Version="121.0.1.1" />
     <PackageReference Update="Xamarin.Firebase.Auth.Interop" Version="120.0.0" />
     <PackageReference Update="Xamarin.Firebase.Common" Version="120.0.0" />
@@ -117,7 +117,7 @@
     <PackageReference Update="Xamarin.Firebase.Storage" Version="120.0.0" />
     <PackageReference Update="Xamarin.Firebase.Storage.Common" Version="117.0.0" />
     <PackageReference Update="Xamarin.Firebase.ProtoliteWellKnownTypes" Version="118.0.0" />
-    <PackageReference Update="Xamarin.Google.Android.Play.Core" Version="1.10.0" />
+    <PackageReference Update="Xamarin.Google.Android.Play.Core" Version="1.10.2" />
     <PackageReference Update="Xamarin.Google.MLKit.Common" Version="117.3.0" />
     <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning" Version="116.1.2" />
     <PackageReference Update="Xamarin.Google.MLKit.DigitalInk.Recognition" Version="117.0.0" />
@@ -161,7 +161,8 @@
     <PackageReference Update="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.7" />
     <PackageReference Update="Xamarin.AndroidX.Work.Runtime" Version="2.5.0.1" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.1" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite" Version="2.4.0" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite" Version="2.5.0" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu" Version="2.5.0" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1" />
     <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.14.0" />
     <PackageReference Update="Square.Retrofit" Version="1.9.0.1" />

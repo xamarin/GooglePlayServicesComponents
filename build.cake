@@ -115,6 +115,22 @@ void RunProcess(FilePath fileName, string processArguments)
 		throw new Exception ($"Process {fileName} exited with code {exitCode}.");
 }
 
+void RunGradle(DirectoryPath root, string target)
+{
+    root = MakeAbsolute(root);
+    var proc = IsRunningOnWindows()
+        ? root.CombineWithFilePath("gradlew.bat").FullPath
+        : "bash";
+    var args = IsRunningOnWindows()
+        ? ""
+        : root.CombineWithFilePath("gradlew").FullPath;
+    args += $" {target} -p {root}";
+
+    var exitCode = StartProcess(proc, args);
+    if (exitCode != 0)
+        throw new Exception($"Gradle exited with code {exitCode}.");
+}
+
 Task("javadocs")
 	.Does(() =>
 {
@@ -498,8 +514,25 @@ Task("mergetargets")
 	******************************/
 });
 
+Task("libs-native")
+	.Does(() =>
+{
+	string root = "./source/com.google.android.play/core.extensions/";
+
+	RunGradle(root, "build");
+
+	string outputDir = "./externals/com.xamarin.google.android.play.core.extensions/";
+	EnsureDirectoryExists(outputDir);
+	CleanDirectories(outputDir);
+
+	CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
+	Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
+	MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
+});
+
 
 Task("libs")
+	.IsDependentOn("libs-native")
 	.Does(() =>
 {
 	Configs = new string[] { "Release" };
