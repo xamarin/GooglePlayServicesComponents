@@ -165,6 +165,8 @@ Task ("spell-check")
                 "Firestore",
                 "AppCheck",
                 "Odml",
+                "TensorFlow",
+                "Gpu",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 

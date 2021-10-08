@@ -1316,10 +1316,20 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite",
-        "version": "2.4.0",
-        "nugetVersion": "2.4.0",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.TensorFlow.Lite",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-gpu",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
+        "nugetId": "Xamarin.TensorFlow.Lite.Gpu",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
       },
       {
         "groupId": "com.google.protobuf",
@@ -1529,6 +1539,24 @@
         "nugetId": "Xamarin.Android.Glide",
         "dependencyOnly": true
       }
-    ]
+    ],
+      "templateSets": 
+      [
+        {
+          "name": "tensorflow-lite",
+          "mavenRepositoryType": "MavenCentral",
+          "templates": 
+          [
+            {
+              "templateFile": "templates/tensorflow-lite/Project.cshtml",
+              "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+            },
+            {
+              "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+              "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+            }
+          ]
+        }
+      ]
   }
 ]
