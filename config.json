@@ -1420,42 +1420,6 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "org.chromium.net",
-        "artifactId": "cronet-api",
-        "version": "92.4515.131",
-        "nugetVersion": "92.4515.131",
-        "nugetId": "Xamarin.Chromium.CroNet.Api",
-        "dependencyOnly": false,
-        "templateSet": "chromium-cronet"      
-      },
-      {
-        "groupId": "org.chromium.net",
-        "artifactId": "cronet-common",
-        "version": "92.4515.131",
-        "nugetVersion": "92.4515.131",
-        "nugetId": "Xamarin.Chromium.CroNet.Common",
-        "dependencyOnly": false,
-        "templateSet": "chromium-cronet"      
-      },
-      {
-        "groupId": "org.chromium.net",
-        "artifactId": "cronet-embedded",
-        "version": "92.4515.131",
-        "nugetVersion": "92.4515.131",
-        "nugetId": "Xamarin.Chromium.CroNet.Embedded",
-        "dependencyOnly": false,
-        "templateSet": "chromium-cronet"      
-      },
-      {
-        "groupId": "org.chromium.net",
-        "artifactId": "cronet-fallback",
-        "version": "92.4515.131",
-        "nugetVersion": "92.4515.131",
-        "nugetId": "Xamarin.Chromium.CroNet.Fallback",
-        "dependencyOnly": false,
-        "templateSet": "chromium-cronet"      
-      },
-      {
         "groupId": "com.google.code.findbugs",
         "artifactId": "jsr305",
         "version": "3.0.1",
@@ -1465,6 +1429,42 @@
         "templateSet": "findbugs"      
       },
       {
+        "groupId": "org.chromium.net",
+        "artifactId": "cronet-api",
+        "version": "72.3626.96",
+        "nugetVersion": "72.3626.96",
+        "nugetId": "Xamarin.Chromium.CroNet.Api",
+        "dependencyOnly": false,
+        "templateSet": "chromium-cronet"      
+      },
+      {
+        "groupId": "org.chromium.net",
+        "artifactId": "cronet-common",
+        "version": "72.3626.96",
+        "nugetVersion": "72.3626.96",
+        "nugetId": "Xamarin.Chromium.CroNet.Common",
+        "dependencyOnly": false,
+        "templateSet": "chromium-cronet"      
+      },
+      {
+        "groupId": "org.chromium.net",
+        "artifactId": "cronet-embedded",
+        "version": "72.3626.96",
+        "nugetVersion": "72.3626.96",
+        "nugetId": "Xamarin.Chromium.CroNet.Embedded",
+        "dependencyOnly": false,
+        "templateSet": "chromium-cronet"      
+      },
+      {
+        "groupId": "org.chromium.net",
+        "artifactId": "cronet-fallback",
+        "version": "72.3626.96",
+        "nugetVersion": "72.3626.96",
+        "nugetId": "Xamarin.Chromium.CroNet.Fallback",
+        "dependencyOnly": false,
+        "templateSet": "chromium-cronet"      
+      },
+          {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
         "version": "3.0.1",
@@ -1580,12 +1580,12 @@
     "templateSets": 
     [
       {
-        "name": "chromium-cronet",
-        "mavenRepositoryType": "Google",
+        "name": "findbugs",
+        "mavenRepositoryType": "MavenCentral",
         "templates": 
         [
           {
-            "templateFile": "templates/chromium-cronet/Project.cshtml",
+            "templateFile": "templates/findbugs/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
@@ -1593,14 +1593,14 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
         ]
-      }, 
+      },
       {
-        "name": "findbugs",
-        "mavenRepositoryType": "MavenCentral",
+        "name": "chromium-cronet",
+        "mavenRepositoryType": "Google",
         "templates": 
         [
           {
-            "templateFile": "templates/findbugs/Project.cshtml",
+            "templateFile": "templates/chromium-cronet/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
