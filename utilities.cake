@@ -167,6 +167,8 @@ Task ("spell-check")
                 "Odml",
                 "TensorFlow",
                 "Gpu",
+                "FindBugs",
+                "JSR305",            
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
