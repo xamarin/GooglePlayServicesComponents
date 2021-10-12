@@ -7,5 +7,26 @@
         >
         public
     </attr>
-
+    <!--
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='JavaCronetEngine']/method[@name='createBidirectionalStream' and count(parameter)=12 ]"
+        name="override"
+        >
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='JavaCronetEngine']/method[@name='createBidirectionalStream' and count(parameter)=12 ]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    -->
+    <remove-node
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='JavaCronetEngine']/method[@name='createBidirectionalStream' ]"
+        />
+    <remove-node
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='JavaCronetEngine']/method[@name='createRequest' ]"
+        />
+        						 
 </metadata>
+

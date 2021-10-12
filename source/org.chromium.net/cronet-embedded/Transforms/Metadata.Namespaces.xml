@@ -57,11 +57,18 @@
         Xamarin.Chromium.Base.Task
     </attr>
     
+    
     <attr
         path="/api/package[@name='org.chromium.net.urlconnection']"
         name="managedName"
         >
         Xamarin.Chromium.CroNet.UrlConnection
+    </attr>    
+    <attr
+        path="/api/package[@name='org.chromium.url']"
+        name="managedName"
+        >
+        Xamarin.Chromium.Url
     </attr>    
     
     

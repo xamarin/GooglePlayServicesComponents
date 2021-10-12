@@ -194,5 +194,10 @@
         Xamarin.Chromium.CroNet.UrlRequest.Builder
     </attr>
     
-
+    <attr
+        path="/api/package[@name='org.chromium.net']/class[@name='ICronetEngineBuilder']/method[@name='addPublicKeyPins' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.util.Set&lt;byte[]&gt;'] and parameter[3][@type='boolean'] and parameter[4][@type='java.util.Date']]"
+        name="abstract"
+        >
+        false
+    </attr>
 </metadata>
