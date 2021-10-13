@@ -1298,6 +1298,14 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "androidx.vectordrawable",
+        "artifactId": "vectordrawable-animated",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0.10",
+        "nugetId": "Xamarin.AndroidX.VectorDrawable.Animated",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "androidx.work",
         "artifactId": "work-runtime",
         "version": "2.5.0",
@@ -1593,6 +1601,15 @@
         "version": "4.11.0",
         "nugetVersion": "4.11.0.2",
         "nugetId": "Xamarin.Android.Glide.DiskLruCache",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "annotations",
+        "version": "4.11.0",
+        "nugetVersion": "4.11.0.2",
+        "nugetId": "Xamarin.Android.Glide.Annotations",
         "dependencyOnly": false,
         "templateSet": "glide"
       },
