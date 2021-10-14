@@ -1404,10 +1404,11 @@
       {
         "groupId": "com.google.dagger",
         "artifactId": "dagger",
-        "version": "2.27.0",
+        "version": "2.27",
         "nugetVersion": "2.27.0",
         "nugetId": "Xamarin.Google.Dagger",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "dagger"
       },
       {
         "groupId": "org.chromium.net",
@@ -1529,6 +1530,24 @@
         "nugetId": "Xamarin.Android.Glide",
         "dependencyOnly": true
       }
-    ]
+    ],
+    "templateSets": 
+    [
+      {
+        "name": "dagger",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/dagger/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      }
+    ]  
   }
 ]
