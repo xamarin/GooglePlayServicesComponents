@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <Target Name="PackageAssets" Returns="$(MSBuildProjectDirectory)\$(_OutputFile)">
+        <PropertyGroup>
+            <_OutputFile>$(OutputPath)$(MSBuildProjectName).zip</_OutputFile>
+            <_TempOutputFile>$(IntermediateOutputPath)$(MSBuildProjectName).zip</_TempOutputFile>
+            <_TempExtractionDirectory>$(IntermediateOutputPath)\feature</_TempExtractionDirectory>
+        </PropertyGroup>
+        <MakeDir Directories="$(_TempExtractionDirectory);$(OutputPath)" />
+        <Exec Command="&quot;$(Aapt2ToolPath)\$(Aapt2ToolExe)&quot; link --manifest AndroidManifest.xml --proto-format --custom-package $(Package) -A $(AssetsDirectory) -o $(_TempOutputFile)" />
+        <Unzip
+            DestinationFolder="$(_TempExtractionDirectory)"
+            SourceFiles="$(_TempOutputFile)"
+        />
+        <Move SourceFiles="$(_TempExtractionDirectory)\AndroidManifest.xml" DestinationFolder="$(_TempExtractionDirectory)\manifest" />
+        <!-- We don't need this file for asset packs. In fact bundle-tool will error if it is present. -->
+        <Delete Files="$(_TempExtractionDirectory)\resources.pb" />
+        <ZipDirectory
+            SourceDirectory="$(_TempExtractionDirectory)"
+            DestinationFile="$(_OutputFile)"
+            Overwrite="true"
+        />
+    </Target>
+
+  <Target Name="BuildAssetFeature" AfterTargets="_CreateBaseApk" Condition=" '$(AndroidApplication)' == 'true' ">
+    <PropertyGroup>
+      <Aapt2ToolExe Condition=" '$(Aapt2ToolExe)' == '' And '$(OS)' == 'Windows_NT' ">aapt2.exe</Aapt2ToolExe>
+      <Aapt2ToolExe Condition=" '$(Aapt2ToolExe)' == ''  And '$(OS)' != 'Windows_NT' ">aapt2</Aapt2ToolExe>
+      <_BuildArguments>
+        Aapt2ToolPath=$(Aapt2ToolPath);Aapt2ToolExe=$(Aapt2ToolExe);
+      </_BuildArguments>
+    </PropertyGroup>
+    <ItemGroup>
+        <_FeatureProjectFiles Include="@(ProjectReference)" Condition=" '%(ProjectReference.DynamicFeature)' == 'true' " />
+    </ItemGroup>
+    <MSBuild
+      Projects="@(_FeatureProjectFiles)"
+      Targets="Restore;PackageAssets"
+      SkipNonexistentTargets="true"
+      Properties="$(_BuildArguments)"
+    >
+      <Output TaskParameter="TargetOutputs" ItemName="AndroidAppBundleModules" />
+    </MSBuild>
+  </Target>
+</Project>

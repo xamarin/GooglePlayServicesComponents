@@ -5,6 +5,7 @@
     <FirstParty Include="Xamarin.Firebase.*.dll" />
     <FirstParty Include="Xamarin.Google.MLKit.*.dll" />
     <FirstParty Include="Xamarin.Google.Android.Play.*.dll" />
+    <FirstParty Include="Xamarin.TensorFlow.Lite*.dll" />
     <FirstParty Include="Xamarin.Google.Dagger*.dll" />
   </ItemGroup>
 
