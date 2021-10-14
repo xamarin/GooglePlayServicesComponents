@@ -36,11 +36,11 @@
       <AssemblyName>@Model.NuGetPackageId</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Xamarin.Android.Glide":
+          case "Xamarin.Google.Dagger":
             <Title>Xamarin.Google.Dagger</Title>
-            <PackageDescription>
-            </PackageDescription>
-            <PackageTags>xamarin, android, bindings, </PackageTags>
+            <PackageDescription>Xamarin.Android bindings for Google Dagger</PackageDescription>
+            <Summary>Xamarin.Android bindings for Google Dagger</Summary>
+            <PackageTags>xamarin, android, bindings, google dagger</PackageTags>
             break; 
           default:
             break; 
@@ -83,7 +83,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\dagger\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\dagger\License.md" Pack="true" PackagePath="License.md" />
     <None Include="..\..\templates\dagger\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
