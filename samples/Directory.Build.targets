@@ -69,7 +69,7 @@
     <PackageReference Update="Xamarin.Firebase.Analytics.Impl" Version="116.3.0" />
     <PackageReference Update="Xamarin.Firebase.Annotations" Version="116.0.0" />
     <PackageReference Update="Xamarin.Firebase.AppCheck.Interop" Version="116.0.0-beta01" />
-    <PackageReference Update="Xamarin.Firebase.AppIndexing" Version="120.0.0.1" />
+    <PackageReference Update="Xamarin.Firebase.AppIndexing" Version="120.0.0.2" />
     <PackageReference Update="Xamarin.Firebase.Auth" Version="121.0.1.1" />
     <PackageReference Update="Xamarin.Firebase.Auth.Interop" Version="120.0.0" />
     <PackageReference Update="Xamarin.Firebase.Common" Version="120.0.0" />
