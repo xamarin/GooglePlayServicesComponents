@@ -1,3 +1,4 @@
-﻿<metadata>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <attr path="/api/package[@name='com.bumptech.glide.gifdecoder']" name="managedName">Bumptech.Glide.GifDecoder</attr>
 </metadata>
