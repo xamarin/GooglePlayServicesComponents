@@ -169,6 +169,9 @@ Task ("spell-check")
                 "Gpu",
                 "FindBugs",
                 "JSR305",            
+                "GifDecoder",
+                "DiskLruCache",
+                "RecyclerViewIntegration",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
