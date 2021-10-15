@@ -1471,7 +1471,8 @@
         "version": "3.0.1",
         "nugetVersion": "3.0.1",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "datatransport"      
       },
       {
         "groupId": "com.google.android.datatransport",
@@ -1479,7 +1480,8 @@
         "version": "3.0.0",
         "nugetVersion": "3.0.0",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "datatransport"      
       },
       {
         "groupId": "com.google.android.datatransport",
@@ -1487,7 +1489,8 @@
         "version": "3.0.0",
         "nugetVersion": "3.0.0",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportApi",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "datatransport"      
       },
       {
         "groupId": "io.reactivex.rxjava2",
@@ -1632,6 +1635,21 @@
         [
           {
             "templateFile": "templates/dagger/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "datatransport",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/datatransport/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
