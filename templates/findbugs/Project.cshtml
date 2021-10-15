@@ -26,17 +26,17 @@
     <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageLicenseUrl>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageProjectUrl>
     <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</PackageLicenseUrl>
-    <RepositoryUrl>https://github.com/tensorflow/tensorflow/</RepositoryUrl>
+    <RepositoryUrl>http://findbugs.sourceforge.net/</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 
     @foreach (var art in @Model.MavenArtifacts) 
     {
       <PackageId>@Model.NuGetPackageId</PackageId>
       <RootNamespace>@Model.NuGetPackageId</RootNamespace>
-      <AssemblyName>@Model.NuGetPackageId</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
           case "Xamarin.Google.Code.FindBugs.JSR305":
+            <AssemblyName>Jsr305Binding</AssemblyName>
             <Title>Xamarin.Google.Code.FindBugs.JSR305</Title>
             <PackageDescription>
               Bindings for Xamarin Xamarin.Google.Code.FindBugs.JSR305 package
