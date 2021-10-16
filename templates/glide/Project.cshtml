@@ -26,43 +26,35 @@
     <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageLicenseUrl>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageProjectUrl>
     <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</PackageLicenseUrl>
-    <RepositoryUrl>https://github.com/tensorflow/tensorflow/</RepositoryUrl>
+    <RepositoryUrl>https://github.com/bumptech/glide</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 
     @foreach (var art in @Model.MavenArtifacts) 
     {
       <PackageId>@Model.NuGetPackageId</PackageId>
-      <RootNamespace>@Model.NuGetPackageId</RootNamespace>
       <AssemblyName>@Model.NuGetPackageId</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
           case "Xamarin.Android.Glide":
             <Title>Xamarin.Android.Glide</Title>
-            <PackageDescription>
-              Bindings for Xamarin Chromium.CroNet.Api package
-            </PackageDescription>
-            <PackageTags>xamarin, android, bindings, chromium, cronet, api</PackageTags>
+            <PackageDescription>Xamarin.Android bindings for Glide</PackageDescription>
+            <PackageTags>xamarin, android, bindings, bumptech, glide</PackageTags>
+            <RootNamespace>Bumptech.Glide</RootNamespace>
             break; 
           case "Xamarin.Android.Glide.GifDecoder":
             <Title>Xamarin.Android.Glide.GifDecoder</Title>
-            <PackageDescription>
-              Bindings for Xamarin Chromium.CroNet.Common package
-            </PackageDescription>
-            <PackageTags>xamarin, android, bindings, chromium, cronet, common</PackageTags>
+            <PackageDescription>Xamarin.Android bindings for Glide.GifDecoder</PackageDescription>
+            <PackageTags>xamarin, android, bindings, bumptech, glide, gifdecoder</PackageTags>
             break; 
           case "Xamarin.Android.Glide.DiskLruCache":
             <Title>Xamarin.Android.Glide.DiskLruCache</Title>
-            <PackageDescription>
-              Bindings for Xamarin Chromium.CroNet.Embedded package
-            </PackageDescription>
-            <PackageTags>xamarin, android, bindings, chromium, cronet, embedded</PackageTags>
+            <PackageDescription>Xamarin.Android bindings for Glide.DiskLruCahce</PackageDescription>
+            <PackageTags>xamarin, android, bindings, bumptech, glide, disklrucache</PackageTags>
             break; 
           case "Xamarin.Android.Glide.RecyclerViewIntegration":
             <Title>Xamarin.Android.Glide.RecyclerViewIntegration</Title>
-            <PackageDescription>
-              Bindings for Xamarin Chromium.CroNet.FallBack package
-            </PackageDescription>
-            <PackageTags>xamarin, android, bindings, chromium, cronet, fallback</PackageTags>
+            <PackageDescription>Xamarin.Android bindings for Glide.RecyclerViewIntegration</PackageDescription>
+            <PackageTags>xamarin, android, bindings, bumptech, glide, recyclerviewintegration</PackageTags>
             break; 
           default:
             break; 
