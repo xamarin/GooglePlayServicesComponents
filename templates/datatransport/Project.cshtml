@@ -73,11 +73,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    @foreach (var dep in @Model.NuGetDependencies) {
-      if (dep.IsProjectReference) {
+    @foreach (var dep in @Model.NuGetDependencies) 
+    {
+      if (dep.IsProjectReference) 
+      {
     <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" />
-      } else {
-    <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" />
+      } 
+      else 
+      {
+        if (dep.NuGetPackageId == "Xamarin.AndroidX.Annotation")
+        {
+          <PackageReference Include="@(dep.NuGetPackageId)" Version="1.2.0.3" />
+        } 
+        else
+        {
+          <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" />
+        }
       }
     }
   </ItemGroup>
