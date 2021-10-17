@@ -1645,7 +1645,7 @@
       },
       {
         "name": "datatransport",
-        "mavenRepositoryType": "MavenCentral",
+        "mavenRepositoryType": "Google",
         "templates": 
         [
           {
