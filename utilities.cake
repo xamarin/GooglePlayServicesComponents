@@ -17,7 +17,7 @@ List<string> spell_errors = null;
 JArray binderator_json_array = null;
 
 Task ("list-artifacts")
-    .Does 
+    .Does
     (
         () =>
         {
@@ -81,7 +81,7 @@ Task ("list-artifacts")
 
 
 Task ("spell-check")
-    .Does 
+    .Does
     (
         () =>
         {
@@ -100,7 +100,7 @@ Task ("spell-check")
             };
             foreach(string file_dictionary in files_dictionaries)
             {
-                string url_full = url + System.Uri.EscapeDataString(file_dictionary); 
+                string url_full = url + System.Uri.EscapeDataString(file_dictionary);
                 Information($"Downloading ");
                 Information($"      {url_full}");
                 if (!FileExists($"./externals/{file_dictionary}"))
@@ -172,6 +172,7 @@ Task ("spell-check")
                 "GifDecoder",
                 "DiskLruCache",
                 "RecyclerViewIntegration",
+                "JavaX",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
@@ -211,7 +212,7 @@ Task ("spell-check")
                         Information($"          Found in EN-US dictionary!");
                         continue;
                     }
-                    
+
                     Information($"Added {nuget_id_part} from {nuget_id}");
                     spell_errors.Add(nuget_id_part);
                 }
@@ -226,7 +227,7 @@ Task ("spell-check")
 
 
 Task ("namespace-check")
-    .Does 
+    .Does
     (
         () =>
         {
@@ -264,7 +265,7 @@ Task("binderate-diff")
 			EnsureDirectoryExists("./output/");
 
 			// "git diff -U999999 main:config.json config.json" > ./output/config.json.diff-from-main.txt"
-			string process = "git"; 
+			string process = "git";
 			string process_args = "diff -U999999 main:config.json config.json";
 			IEnumerable<string> redirectedStandardOutput;
 			ProcessSettings process_settings = new ProcessSettings ()
@@ -280,7 +281,7 @@ Task("binderate-diff")
 
 Task ("api-diff-markdown-info-pr")
     .IsDependentOn("binderate-diff")
-    .Does 
+    .Does
     (
         () =>
         {
@@ -301,7 +302,7 @@ Task ("api-diff-markdown-info-pr")
                 {
                     idx_start = i;
                 }
-                                
+
                 if(line.Contains("dependencyOnly"))
                 {
                     if (line.StartsWith("-"))
@@ -421,7 +422,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("namespace-check")
     .IsDependentOn ("spell-check")
     .IsDependentOn ("list-artifacts")
-    .Does 
+    .Does
     (
         () =>
         {
