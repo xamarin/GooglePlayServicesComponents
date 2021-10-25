@@ -1543,10 +1543,11 @@
       {
         "groupId": "javax.inject",
         "artifactId": "javax.inject",
-        "version": "1.0.0",
+        "version": "1",
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.JavaX.Inject",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "javax-inject"      
       },
       {
         "groupId": "com.google.android.ump",
@@ -1635,6 +1636,21 @@
         [
           {
             "templateFile": "templates/dagger/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "javax-inject",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/javax-inject/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
