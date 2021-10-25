@@ -1337,7 +1337,8 @@
         "version": "3.0.1",
         "nugetVersion": "3.0.1",
         "nugetId": "Xamarin.Protobuf.Lite",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "protobuf-lite"
       },
       {
         "groupId": "com.google.protobuf",
@@ -1345,7 +1346,8 @@
         "version": "3.14.0",
         "nugetVersion": "3.14.0",
         "nugetId": "Xamarin.Protobuf.JavaLite",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "protobuf-lite"
       },
       {
         "groupId": "com.squareup.retrofit",
@@ -1632,6 +1634,21 @@
         [
           {
             "templateFile": "templates/dagger/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "protobuf-lite",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/protobuf-lite/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
