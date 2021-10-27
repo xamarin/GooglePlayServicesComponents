@@ -1338,7 +1338,8 @@
         "nugetVersion": "3.0.1",
         "nugetId": "Xamarin.Protobuf.Lite",
         "dependencyOnly": false,
-        "templateSet": "protobuf-lite"
+        "templateSet": "protobuf-lite",
+        "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth"
       },
       {
         "groupId": "com.google.protobuf",
@@ -1347,7 +1348,8 @@
         "nugetVersion": "3.14.0",
         "nugetId": "Xamarin.Protobuf.JavaLite",
         "dependencyOnly": false,
-        "templateSet": "protobuf-lite"
+        "templateSet": "protobuf-lite",
+        "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth"
       },
       {
         "groupId": "com.squareup.retrofit",
