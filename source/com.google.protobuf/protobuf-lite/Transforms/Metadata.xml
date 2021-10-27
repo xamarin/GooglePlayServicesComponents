@@ -25,14 +25,12 @@
         path="/api/package[@name='com.google.protobuf']/class[@name='LazyField.LazyIterator']/implements[@name='java.util.Iterator']"
         >        
     </remove-node>
+    <!--
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='AbstractMessageLite.Builder']/implements[@name='com.google.protobuf.MessageLite.Builder']"
         >        
     </remove-node>
-    <remove-node
-        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractProtobufList']/implements[@name='com.google.protobuf.Internal.ProtobufList']"
-        >        
-    </remove-node>
+    -->
     <remove-node
         path="/api/package[@name='com.google.protobuf']/interface[@name='MessageLite']/implements[@name='com.google.protobuf.MessageLiteOrBuilder']"
         >        
@@ -132,17 +130,8 @@
     </remove-node>
 
 
-<!--    <remove-node
-        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/implements[@name='RandomAccess']"
-        >        
-    </remove-node>
--->
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='Internal']"
-        >
-    </remove-node>
-    <remove-node
-        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/implements[@name='java.util.RandomAccess']"
         >
     </remove-node>
 
@@ -183,10 +172,6 @@
         false
     </attr>
 
-    <remove-node
-        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='remove' and count(parameter)=1 and parameter[1][@type='int' and @name='p0']]"
-        >        
-    </remove-node>
 
     <attr
         path="/api/package[@name='com.google.protobuf']/class[@name='UnmodifiableLazyStringList']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
@@ -201,50 +186,177 @@
         >
         false
     </attr>
-    <attr
-        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='addAll' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='java.util.Collection&lt;? extends java.lang.String&gt;']]"
-        name="visibility"
-        >
-        public new
-    </attr>
-    <attr
-        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='addAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.String&gt;']]"
-        name="visibility"
-        >
-        public new
-    </attr>
-
-    <attr
-        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
-        name="managedReturn"
-        >
-        Java.Lang.Object
-    </attr>
-    <remove-node
-        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/implements[@name='com.google.protobuf.LazyStringList']"
-        >        
-    </remove-node>
-    <remove-node
-        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
-        >
-    </remove-node>
     
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='ByteString']/implements[@name='java.lang.Iterable']"
         >        
     </remove-node>
 
-<!--    
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class/method[@name='addAll']"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface/method[@name='addAll']"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class/method[@name='clone']"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
     <attr
         path="/api/package[@name='com.google.protobuf']/class[@name='AbstractParser']/method[@name='parsePartialFrom' and count(parameter)=2 and parameter[1][@type='java.io.InputStream'] and parameter[2][@type='com.google.protobuf.ExtensionRegistryLite']]/parameter[1]"
         name="managedType"
         >
-        Xamarin.Protobuf.Lite.CodedInputStream
+        System.IO.Stream
     </attr>
--->
+
+    <add-node
+        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractParser']"
+        >
+        <method abstract="false" deprecated="not deprecated" final="false" name="parsePartialFrom"
+         bridge="false" native="false" return="java.lang.Object" static="false" synchronized="false" synthetic="false" visibility="public">
+            <parameter name="input" type="com.google.protobuf.CodedInputStream" >
+            </parameter>
+            <parameter name="extensionRegistry" type="com.google.protobuf.ExtensionRegistryLite" >
+            </parameter>
+        </method>
+    </add-node>
+ 
+
+
+
+    <!--    
     <remove-node
-        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractParser']/implements[@name='com.google.protobuf.Parser']"
+        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/implements[@name='java.util.RandomAccess']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/implements[@name='RandomAccess']"
         >        
     </remove-node>
-        
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='addAll']"
+        name="visibility"
+        >
+        public
+    </attr>
+    -->
+    -->
+    <remove-node
+        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='remove' and count(parameter)=1 and parameter[1][@type='int' and @name='p0']]"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
+        >
+    </remove-node>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='addAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.String&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='addAll' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='java.util.Collection&lt;? extends java.lang.String&gt;']]/parameter[2]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+
+
+
+    <!--
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class/method[@name='mergeFrom']"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface/method[@name='mergeFrom']"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    -->
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractMessageLite.Builder']/method[@name='mergeFrom' and count(parameter)=2 and parameter[1][@type='java.io.InputStream'] and parameter[2][@type='com.google.protobuf.ExtensionRegistryLite']]"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractMessageLite.Builder']/method[@name='mergeFrom' and count(parameter)=1 and parameter[1][@type='java.io.InputStream']]"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractMessageLite.Builder']/method[@name='mergeFrom' and count(parameter)=1 and parameter[1][@type='com.google.protobuf.MessageLite']]"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractMessageLite.Builder']/method[@name='mergeFrom' and count(parameter)=2 and parameter[1][@type='com.google.protobuf.CodedInputStream'] and parameter[2][@type='com.google.protobuf.ExtensionRegistryLite']]"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='GeneratedMessageLite.Builder']/method[@name='mergeFrom' and count(parameter)=2 and parameter[1][@type='com.google.protobuf.CodedInputStream'] and parameter[2][@type='com.google.protobuf.ExtensionRegistryLite']]"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractMessageLite.Builder']/method[@name='mergeFrom' and count(parameter)=1 and parameter[1][@type='com.google.protobuf.CodedInputStream']]"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractMessageLite.Builder']/method[@name='mergeFrom' and count(parameter)=2 and parameter[1][@type='com.google.protobuf.ByteString'] and parameter[2][@type='com.google.protobuf.ExtensionRegistryLite']]"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractMessageLite.Builder']/method[@name='mergeFrom' and count(parameter)=1 and parameter[1][@type='com.google.protobuf.ByteString']]"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractMessageLite.Builder']/method[@name='mergeFrom' and count(parameter)=4 and parameter[1][@type='byte[]'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='com.google.protobuf.ExtensionRegistryLite']]"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractMessageLite.Builder']/method[@name='mergeFrom' and count(parameter)=3 and parameter[1][@type='byte[]'] and parameter[2][@type='int'] and parameter[3][@type='int']]"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractMessageLite.Builder']/method[@name='mergeFrom' and count(parameter)=2 and parameter[1][@type='byte[]'] and parameter[2][@type='com.google.protobuf.ExtensionRegistryLite']]"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractMessageLite.Builder']/method[@name='mergeFrom' and count(parameter)=1 and parameter[1][@type='byte[]']]"
+        name="managedReturn"
+        >
+        Xamarin.Protobuf.Lite.IMessageLiteBuilder
+    </attr>
+
 </metadata>
