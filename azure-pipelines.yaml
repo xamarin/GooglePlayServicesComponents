@@ -33,6 +33,7 @@ jobs:
     parameters:
       timeoutInMinutes: 240
       areaPath: 'DevDiv\Xamarin SDK\Android'
+      xcode: 13.0
       windowsAgentPoolName: android-win-2019
       initSteps:
         - task: UseDotNet@2
