@@ -72,28 +72,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts) 
-    {
-      switch(@Model.NuGetPackageId)
-      {
-          case "Xamarin.Android.Glide":
-          case "Xamarin.Android.Glide.GifDecoder":
-          case "Xamarin.Android.Glide.RecyclerViewIntegration":
-            <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar" />
-            <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
-            break; 
-          case "Xamarin.Android.Glide.DiskLruCache":
-            <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="jar" />
-            <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
-            break; 
-          default:
-            break; 
-      }
-      <JavaSourcesJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Link="Jars\%(Filename)%(Extension)" />
-    }
-  </ItemGroup>
-
-  <ItemGroup>
     <GlideBuildFolders Include="build\monoandroid9.0" />
     <GlideBuildFolders Include="build\monoandroid10.0" />
     <GlideBuildFolders Include="build\net6.0-android31.0" />
@@ -105,7 +83,22 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) 
     {
-      <None Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(GlideBuildFolders)" />
+      switch(@Model.NuGetPackageId)
+      {
+          case "Xamarin.Android.Glide":
+          case "Xamarin.Android.Glide.GifDecoder":
+          case "Xamarin.Android.Glide.RecyclerViewIntegration":
+            <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="@@(GlideBuildFolders)/aar" />
+            <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
+            break; 
+          case "Xamarin.Android.Glide.DiskLruCache":
+            <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="@@(GlideBuildFolders)/jar" />
+            <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
+            break; 
+          default:
+            break; 
+      }
+      <JavaSourcesJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Link="Jars\%(Filename)%(Extension)" />
     }
   </ItemGroup>
 
