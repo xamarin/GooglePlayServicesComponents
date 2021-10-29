@@ -68,7 +68,7 @@
         Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Link="Jars\%(Filename)%(Extension)" 
         Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar')"
         />
-    <JavaSourcesJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Link="Jars\%(Filename)%(Extension)" />
+    <JavaDocJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar" Link="Jars\%(Filename)%(Extension)" />
     }
   </ItemGroup>
 
