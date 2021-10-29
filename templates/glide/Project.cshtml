@@ -98,7 +98,7 @@
           default:
             break; 
       }
-      <None Include="$(PackageId).targets" Pack="True" PackagePath="@(GlideBuildFolders)" />
+      <None Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\$(PackageId).targets" Pack="True" PackagePath="@@(GlideBuildFolders)" />
       <JavaSourcesJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Link="Jars\%(Filename)%(Extension)" />
     }
   </ItemGroup>
