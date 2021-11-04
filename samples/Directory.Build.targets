@@ -159,6 +159,7 @@
     <PackageReference Update="Xamarin.AndroidX.CardView" Version="1.0.0.8" />
     <PackageReference Update="Xamarin.AndroidX.ConstraintLayout" Version="2.0.4.2" />
     <PackageReference Update="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.7" />
+    <PackageReference Update="Xamarin.AndroidX.VectorDrawable.Animated" Version="1.1.0.10" />
     <PackageReference Update="Xamarin.AndroidX.Work.Runtime" Version="2.5.0.1" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.1" />
     <PackageReference Update="Xamarin.TensorFlow.Lite" Version="2.5.0" />
@@ -192,6 +193,10 @@
     <PackageReference Update="Xamarin.Google.UserMessagingPlatform" Version="1.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
-    <PackageReference Update="Xamarin.Android.Glide" Version="4.11.0.2" />
+    <PackageReference Update="Xamarin.Android.Glide" Version="4.12.0.3" />
+    <PackageReference Update="Xamarin.Android.Glide.GifDecoder" Version="4.12.0.3" />
+    <PackageReference Update="Xamarin.Android.Glide.DiskLruCache" Version="4.12.0.3" />
+    <PackageReference Update="Xamarin.Android.Glide.Annotations" Version="4.12.0.3" />
+    <PackageReference Update="Xamarin.Android.Glide.RecyclerViewIntegration" Version="4.12.0.3" />
   </ItemGroup>
 </Project>

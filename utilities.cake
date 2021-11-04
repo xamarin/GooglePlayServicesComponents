@@ -168,7 +168,10 @@ Task ("spell-check")
                 "TensorFlow",
                 "Gpu",
                 "FindBugs",
-                "JSR305",
+                "JSR305",            
+                "GifDecoder",
+                "DiskLruCache",
+                "RecyclerViewIntegration",
                 "JavaX",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);

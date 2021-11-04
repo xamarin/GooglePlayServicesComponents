@@ -1298,6 +1298,14 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "androidx.vectordrawable",
+        "artifactId": "vectordrawable-animated",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0.10",
+        "nugetId": "Xamarin.AndroidX.VectorDrawable.Animated",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "androidx.work",
         "artifactId": "work-runtime",
         "version": "2.5.0",
@@ -1573,14 +1581,66 @@
       {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "glide",
-        "version": "4.11.0",
-        "nugetVersion": "4.11.0.2",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.3",
         "nugetId": "Xamarin.Android.Glide",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "gifdecoder",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.3",
+        "nugetId": "Xamarin.Android.Glide.GifDecoder",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "disklrucache",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.3",
+        "nugetId": "Xamarin.Android.Glide.DiskLruCache",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "annotations",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.3",
+        "nugetId": "Xamarin.Android.Glide.Annotations",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "recyclerview-integration",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.3",
+        "nugetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
+        "dependencyOnly": false,
+        "templateSet": "glide"
       }
     ],
     "templateSets": 
     [
+      {
+        "name": "glide",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/glide/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
       {
         "name": "findbugs",
         "mavenRepositoryType": "MavenCentral",

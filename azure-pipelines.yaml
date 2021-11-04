@@ -10,7 +10,9 @@ pr:
 variables:
   AndroidBinderatorVersion: 0.5.1
   AndroidXMigrationVersion: 1.0.8
-  DotNetVersion: 6.0.100-rc.1.21463.6
+  DotNetVersion: 6.0.100-rc.2.21505.57
+  DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
+  NuGetOrgSource: https://api.nuget.org/v3/index.json
   LegacyXamarinAndroidPkg: https://public.bl.files.1drv.com/y4m8ZIxRmDSJIaJlctazuR4QnIkMo6SNTpTAA6CkyRnP0ABnO8nKTae880wW_4bFUuTX2HXNr-mb36szS7pK8nyk_zwCACCHRYz8PNHJRhZqwlWGzo7lI687XjeKXZ9IzYgXRQ1rQt7MtpaL8E1yD6XaFW5u08cOJEaKJm9-k76syolR5I82mAqhEQIjQLzJut2uXhHzsehxJqX7sr5bdHM1Vq1BVLpEZhTiQPjYWqR5UI?access_token=EwAAA61DBAAU2kADSankulnKv2PwDjfenppNXFIAAS8Hesx5aE3N3qML31krKKx9X2L4x8yNHFVgFgFybFT%2bRKTnTUZfFAaXlPlnzAWANUYZZ2uCZp7dX1QLeRpfq0Y9v200Bw0hlQlyaEQoi%2b1Ww15ODD3/6IIhleiX0qALAbInFVKwOwgFhCmxXw%2b26bNLlIqenY5IKMlH1cIDTLOtQJGUDxkAFOhkHNG9SwN95ykP2RbWw5FBd9eEwJiJU9/64OzIv5HPVSd8iEUu6txBgbMp3tz0kSYIuGcEILCGop8lf1yKdCAk4a5oXrAgoOghjElVcp9QOefjk7u1%2bfhDAIbdDeg%2bKN0soSAeuc6FgyZobMyOrPRXCO9kqrHxeoEDZgAACN8ZOsbeLU100AEXEtN%2b9HrJ4Gu3QUvJX78rkX5HDij5ehnjBDkQObcA/dpAqtr5LWG9d0PUlV%2bRJwUzIjLkt%2bviskmTP8hXl93F8jUDIOJKgYOoe/vZk0nOf9MPWgA7j9kkTMLVA5AtSyGd9hPn8Bdfo3mMbTNr/3hKmRj9AAIn68VVRPauVy7CNErEXhp4mssxHcMSfr5t5k/AEdg53xcI1gAyyP668CYQwS8A7mrnFjwSDKVZN3Gaw5bmPxzPh0HVH5nEUkTJdk8MDAhMfPyT28qlIDHiUE8KmtdXINeU7QeBEAy70Bg6k%2b2/Jy26aR8lpw2me6LuJfJW4%2b/szBZpMMziPf%2bFKAXqZiwOHo7tEWLcZzpWU9VEdRXTJukNixsylwO8ImjYsijcixsQtHOl88YrZLFRXbuY35xR5bDalTqXc0zfsTcWq1OXC/id2Mh%2bi%2bbr2Duaspm/UazS%2bIgGnoPlyYMZj1L7WztyxAkeofGwPlQZgN7zFesNXwE/X7oI1xH1k3fx8dibyxdRMZC8Zy8L5EhGG3Wp1r0IDnLMo0auy7YRexEgnT0wl7coiC87sNCrLCyqzLm3ZzoIvUQDeGvdo/pZMehptVdQvsZTnVjicN3HDOyO%2bg8C
   LegacyXamarinAndroidVsix: https://download.visualstudio.microsoft.com/download/pr/7372b89a-b719-426c-9916-c33cbc6c7a61/45c38957fdcacfbee95be95ee40c4f5a4cc9ace69416625ad26e2da83b176941/Xamarin.Android.Sdk-11.4.0.5.vsix
   BUILD_NUMBER: $(Build.BuildNumber)
@@ -33,6 +35,7 @@ jobs:
     parameters:
       timeoutInMinutes: 240
       areaPath: 'DevDiv\Xamarin SDK\Android'
+      xcode: 13.0
       windowsAgentPoolName: android-win-2019
       initSteps:
         - task: UseDotNet@2
@@ -40,7 +43,8 @@ jobs:
           inputs:
             version: $(DotNetVersion)
         - pwsh: |
-            dotnet workload install android
+            dotnet workload update --verbosity diag --from-rollback-file workload.json --source $(Dotnet6Source) --source $(NuGetOrgSource)
+            dotnet workload install android --verbosity diag --skip-manifest-update --source $(Dotnet6Source) --source $(NuGetOrgSource)
         - task: JavaToolInstaller@0
           inputs:
             versionSpec: '11'
