@@ -173,6 +173,7 @@ Task ("spell-check")
                 "DiskLruCache",
                 "RecyclerViewIntegration",
                 "JavaX",
+                "UserMessagingPlatform",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 

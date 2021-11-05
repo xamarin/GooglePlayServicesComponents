@@ -1560,7 +1560,8 @@
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.Google.UserMessagingPlatform",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "user-messaging-platform"
       },
       {
         "groupId": "com.google.android.gms",
@@ -1708,6 +1709,21 @@
         [
           {
             "templateFile": "templates/javax-inject/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "user-messaging-platform",
+        "mavenRepositoryType": "Google",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/user-messaging-platform/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
