@@ -34,13 +34,21 @@
       <PackageId>@Model.NuGetPackageId</PackageId>
       <RootNamespace>@Model.NuGetPackageId</RootNamespace>
       <AssemblyName>@Model.NuGetPackageId</AssemblyName>
+      <Title>@Model.NuGetPackageId</Title>
+
       switch(@Model.NuGetPackageId)
       {
-          case "Xamarin.Android.Glide":
-            <Title>Xamarin.Google.Dagger</Title>
-            <PackageDescription>
-            </PackageDescription>
-            <PackageTags>xamarin, android, bindings, </PackageTags>
+          case "Xamarin.Google.Android.DataTransport.TransportApi":
+            <PackageDescription>Bindings for Google.Android.DataTransport.TransportApi package</PackageDescription>
+            <PackageTags>xamarin, android, bindings, google, datatransport, transport, api </PackageTags>
+            break; 
+          case "Xamarin.Google.Android.DataTransport.TransportRuntime":
+            <PackageDescription>Bindings for Google.Android.DataTransport.TransportRuntime package</PackageDescription>
+            <PackageTags>xamarin, android, bindings, google, datatransport, transport, runtime </PackageTags>
+            break; 
+          case "Xamarin.Google.Android.DataTransport.TransportApi":
+            <PackageDescription>Bindings for Google.Android.DataTransport.TransportRuntime package</PackageDescription>
+            <PackageTags>xamarin, android, bindings, google, datatransport, transport, runtime </PackageTags>
             break; 
           default:
             break; 
@@ -60,15 +68,8 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) 
     {
-    <LibraryProjectZip 
-        Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Link="Jars\%(Filename)%(Extension)" 
-        Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar')"
-         />
-    <Embeddedjar 
-        Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Link="Jars\%(Filename)%(Extension)" 
-        Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar')"
-        />
-    <JavaDocJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar" Link="Jars\%(Filename)%(Extension)" />
+    <LibraryProjectZip Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" />
+    <JavaDocJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar"/>
     }
   </ItemGroup>
 
