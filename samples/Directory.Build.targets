@@ -140,7 +140,7 @@
     <PackageReference Update="Xamarin.Google.MLKit.Translate" Version="116.1.2.1" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="116.4.0.1" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="118.1.1.1" />
-    <PackageReference Update="Xamarin.Google.Guava" Version="28.2.0" />
+    <PackageReference Update="Xamarin.Google.Guava" Version="29.0.0" />
     <PackageReference Update="Xamarin.Google.Guava.ListenableFuture" Version="1.0.0.2" />
     <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.2.0" />
     <PackageReference Update="Xamarin.AndroidX.Browser" Version="1.3.0.5" />
@@ -161,6 +161,7 @@
     <PackageReference Update="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.7" />
     <PackageReference Update="Xamarin.AndroidX.Work.Runtime" Version="2.5.0.1" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.1" />
+    <PackageReference Update="Square.OkIo" Version="1.13.0" />
     <PackageReference Update="Xamarin.TensorFlow.Lite" Version="2.5.0" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu" Version="2.5.0" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1" />
@@ -169,7 +170,13 @@
     <PackageReference Update="Xamarin.Grpc.Protobuf.Lite" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.Stub" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.28.0" />
+    <PackageReference Update="Xamarin.Grpc.Context" Version="1.28.0" />
+    <PackageReference Update="Xamarin.Grpc.Core" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.Android" Version="1.28.0" />
+    <PackageReference Update="Xamarin.Grpc.Api" Version="1.28.0" />
+    <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusApi" Version="0.28.3" />
+    <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics" Version="0.28.3" />
+    <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics" Version="0.23.0" />
     <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.6.6" />
     <PackageReference Update="Square.OkHttp3" Version="4.8.1" />
     <PackageReference Update="Square.OkHttp3" Version="4.3.1" />
@@ -190,8 +197,13 @@
     <PackageReference Update="Xamarin.Firebase.Analytics" Version="116.3.0" />
     <PackageReference Update="Xamarin.JavaX.Inject" Version="1.0.0" />
     <PackageReference Update="Xamarin.Google.UserMessagingPlatform" Version="1.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
+    <PackageReference Update="GoogleGson" Version="2.8.6" />
     <PackageReference Update="Xamarin.Android.Glide" Version="4.11.0.2" />
+    <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.3.4" />
+    <PackageReference Update="Xamarin.GoogleAndroid.Annotations" Version="4.1.1.4" />
+    <PackageReference Update="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations" Version="1.18.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Gass" Version="120.0.0" />
   </ItemGroup>
 </Project>
