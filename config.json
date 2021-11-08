@@ -1149,7 +1149,7 @@
         "groupId": "com.google.guava",
         "artifactId": "guava",
         "version": "29.0-android",
-        "nugetVersion": "29.0-android",
+        "nugetVersion": "29.0.0",
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": true
       },
@@ -1314,6 +1314,14 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "com.squareup.okio",
+        "artifactId": "okio",
+        "version": "1.13.0",
+        "nugetVersion": "1.13.0",
+        "nugetId": "Square.OkIo",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite",
         "version": "2.5.0",
@@ -1410,6 +1418,15 @@
         "templateSet": "grpc"
       },
       {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-api",
+        "version": "1.28.0",
+        "nugetVersion": "1.28.0",
+        "nugetId": "Xamarin.Grpc.Api",
+        "dependencyOnly": false,
+        "templateSet": "grpc"
+      },
+      {
         "groupId": "io.opencensus",
         "artifactId": "opencensus-api",
         "version": "0.28.3",
@@ -1476,7 +1493,7 @@
         "nugetVersion": "3.0.2",
         "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
         "dependencyOnly": false,
-        "templateSet": "findbugs"      
+        "templateSet": "findbugs"
       },
       {
         "groupId": "org.chromium.net",
@@ -1485,7 +1502,7 @@
         "nugetVersion": "76.3809.111",
         "nugetId": "Xamarin.Chromium.CroNet.Api",
         "dependencyOnly": false,
-        "templateSet": "chromium-cronet"      
+        "templateSet": "chromium-cronet"
       },
       {
         "groupId": "org.chromium.net",
@@ -1494,7 +1511,7 @@
         "nugetVersion": "76.3809.111",
         "nugetId": "Xamarin.Chromium.CroNet.Common",
         "dependencyOnly": false,
-        "templateSet": "chromium-cronet"      
+        "templateSet": "chromium-cronet"
       },
       {
         "groupId": "org.chromium.net",
@@ -1503,7 +1520,7 @@
         "nugetVersion": "76.3809.111",
         "nugetId": "Xamarin.Chromium.CroNet.Embedded",
         "dependencyOnly": false,
-        "templateSet": "chromium-cronet"      
+        "templateSet": "chromium-cronet"
       },
       {
         "groupId": "org.chromium.net",
@@ -1512,7 +1529,7 @@
         "nugetVersion": "76.3809.111",
         "nugetId": "Xamarin.Chromium.CroNet.Fallback",
         "dependencyOnly": false,
-        "templateSet": "chromium-cronet"      
+        "templateSet": "chromium-cronet"
       },
           {
         "groupId": "com.google.android.datatransport",
@@ -1603,20 +1620,13 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-ads-base",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
-        "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-ads-lite",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
-        "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
-        "dependencyOnly": true
+        "groupId": "com.google.code.gson",
+        "artifactId": "gson",
+        "version": "2.8.6",
+        "nugetVersion": "2.8.6",
+        "nugetId": "GoogleGson",
+        "dependencyOnly": false,
+        "templateSet": "gson"
       },
       {
         "groupId": "com.github.bumptech.glide",
@@ -1631,61 +1641,59 @@
         "artifactId": "error_prone_annotations",
         "version": "2.3.4",
         "nugetVersion": "2.3.4",
-        "nugetId": "Xamarin.Google.ErrorProne.ErrorProneAnnotations",
-        "dependencyOnly": false
+        "nugetId": "Xamarin.Google.ErrorProne.Annotations",
+        "dependencyOnly": false,
+        "templateSet": "errorprone"
+      },
+      {
+        "groupId": "com.google.android",
+        "artifactId": "annotations",
+        "version": "4.1.1.4",
+        "nugetVersion": "4.1.1.4",
+        "nugetId": "Xamarin.GoogleAndroid.Annotations",
+        "dependencyOnly": false,
+        "templateSet": "annotations"
+      },
+      {
+        "groupId": "org.codehaus.mojo",
+        "artifactId": "animal-sniffer-annotations",
+        "version": "1.18",
+        "nugetVersion": "1.18.0",
+        "nugetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
+        "dependencyOnly": false,
+        "templateSet": "codehaus-mojo"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-ads-lite",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-ads-base",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-gass",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.Gass",
+        "dependencyOnly": true
       }
     ],
-    "templateSets": 
+    "templateSets":
     [
-      {
-        "name": "grpc",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": 
-        [
-          {
-            "templateFile": "templates/grpc/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "opencensus",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": 
-        [
-          {
-            "templateFile": "templates/opencensus/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "perfmark",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": 
-        [
-          {
-            "templateFile": "templates/perfmark/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
       {
         "name": "findbugs",
         "mavenRepositoryType": "MavenCentral",
-        "templates": 
+        "templates":
         [
           {
             "templateFile": "templates/findbugs/Project.cshtml",
@@ -1700,7 +1708,7 @@
       {
         "name": "chromium-cronet",
         "mavenRepositoryType": "Google",
-        "templates": 
+        "templates":
         [
           {
             "templateFile": "templates/chromium-cronet/Project.cshtml",
@@ -1715,7 +1723,7 @@
       {
         "name": "tensorflow-lite",
         "mavenRepositoryType": "MavenCentral",
-        "templates": 
+        "templates":
         [
           {
             "templateFile": "templates/tensorflow-lite/Project.cshtml",
@@ -1730,7 +1738,7 @@
       {
         "name": "dagger",
         "mavenRepositoryType": "MavenCentral",
-        "templates": 
+        "templates":
         [
           {
             "templateFile": "templates/dagger/Project.cshtml",
@@ -1741,7 +1749,112 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
         ]
+      },
+      {
+        "name": "grpc",
+        "mavenRepositoryType": "MavenCentral",
+        "templates":
+        [
+          {
+            "templateFile": "templates/grpc/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "opencensus",
+        "mavenRepositoryType": "MavenCentral",
+        "templates":
+        [
+          {
+            "templateFile": "templates/opencensus/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "perfmark",
+        "mavenRepositoryType": "MavenCentral",
+        "templates":
+        [
+          {
+            "templateFile": "templates/perfmark/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "errorprone",
+        "mavenRepositoryType": "MavenCentral",
+        "templates":
+        [
+          {
+            "templateFile": "templates/errorprone/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "annotations",
+        "mavenRepositoryType": "MavenCentral",
+        "templates":
+        [
+          {
+            "templateFile": "templates/errorprone/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "gson",
+        "mavenRepositoryType": "MavenCentral",
+        "templates":
+        [
+          {
+            "templateFile": "templates/gson/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "codehaus-mojo",
+        "mavenRepositoryType": "MavenCentral",
+        "templates":
+        [
+          {
+            "templateFile": "templates/codehaus-mojo/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
       }
-    ]  
+    ]
   }
 ]
