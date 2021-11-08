@@ -1298,6 +1298,14 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "androidx.vectordrawable",
+        "artifactId": "vectordrawable-animated",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0.10",
+        "nugetId": "Xamarin.AndroidX.VectorDrawable.Animated",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "androidx.work",
         "artifactId": "work-runtime",
         "version": "2.5.0",
@@ -1606,10 +1614,11 @@
       {
         "groupId": "javax.inject",
         "artifactId": "javax.inject",
-        "version": "1.0.0",
+        "version": "1",
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.JavaX.Inject",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "javax-inject"      
       },
       {
         "groupId": "com.google.android.ump",
@@ -1617,7 +1626,8 @@
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.Google.UserMessagingPlatform",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "user-messaging-platform"
       },
       {
         "groupId": "com.google.code.gson",
@@ -1686,10 +1696,70 @@
         "nugetVersion": "120.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Gass",
         "dependencyOnly": true
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "glide",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.3",
+        "nugetId": "Xamarin.Android.Glide",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "gifdecoder",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.3",
+        "nugetId": "Xamarin.Android.Glide.GifDecoder",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "disklrucache",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.3",
+        "nugetId": "Xamarin.Android.Glide.DiskLruCache",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "annotations",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.3",
+        "nugetId": "Xamarin.Android.Glide.Annotations",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "recyclerview-integration",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.3",
+        "nugetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
+        "dependencyOnly": false,
+        "templateSet": "glide"
       }
     ],
     "templateSets":
     [
+      {
+        "name": "glide",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/glide/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
       {
         "name": "findbugs",
         "mavenRepositoryType": "MavenCentral",
@@ -1750,6 +1820,21 @@
           }
         ]
       },
+      {
+        "name": "javax-inject",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/javax-inject/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },            
       {
         "name": "grpc",
         "mavenRepositoryType": "MavenCentral",
@@ -1816,7 +1901,7 @@
         "templates":
         [
           {
-            "templateFile": "templates/errorprone/Project.cshtml",
+            "templateFile": "templates/annotations/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
@@ -1847,6 +1932,21 @@
         [
           {
             "templateFile": "templates/codehaus-mojo/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "user-messaging-platform",
+        "mavenRepositoryType": "Google",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/user-messaging-platform/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {

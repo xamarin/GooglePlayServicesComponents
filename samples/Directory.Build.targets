@@ -159,6 +159,7 @@
     <PackageReference Update="Xamarin.AndroidX.CardView" Version="1.0.0.8" />
     <PackageReference Update="Xamarin.AndroidX.ConstraintLayout" Version="2.0.4.2" />
     <PackageReference Update="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.7" />
+    <PackageReference Update="Xamarin.AndroidX.VectorDrawable.Animated" Version="1.1.0.10" />
     <PackageReference Update="Xamarin.AndroidX.Work.Runtime" Version="2.5.0.1" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.1" />
     <PackageReference Update="Square.OkIo" Version="1.13.0" />

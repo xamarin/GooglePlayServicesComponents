@@ -181,6 +181,11 @@ Task ("spell-check")
                 "CodeHaus",
                 "Mojo",
                 "AnimalSnifferAnnotations",
+                "GifDecoder",
+                "DiskLruCache",
+                "RecyclerViewIntegration",
+                "JavaX",
+                "UserMessagingPlatform",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
