@@ -339,11 +339,11 @@
         final Document defaultInstance = new Document();
         GeneratedMessageLite.registerDefaultInstance((Class)Document.class, (GeneratedMessageLite)(DEFAULT_INSTANCE = defaultInstance));
     }
-
-    -->
     <remove-node
         path="/api/package[@name='com.google.firebase.firestore.model']/class[@name='Document.']"
         />
+    -->
+
     <!--
     issue analysis
     =======================================================================================================
@@ -354,6 +354,24 @@
         />
     <remove-node
         path="/api/package[@name='com.google.firestore.bundle']/class[@name='BundleElement']/implements"
-        />
+        />        
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/class[@name='FirestoreGrpc.FirestoreStub']/method[@name='build' and count(parameter)=2 and parameter[1][@type='io.grpc.Channel'] and parameter[2][@type='io.grpc.CallOptions']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/class[@name='FirestoreGrpc.FirestoreBlockingStub']/method[@name='build' and count(parameter)=2 and parameter[1][@type='io.grpc.Channel'] and parameter[2][@type='io.grpc.CallOptions']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/class[@name='FirestoreGrpc.FirestoreFutureStub']/method[@name='build' and count(parameter)=2 and parameter[1][@type='io.grpc.Channel'] and parameter[2][@type='io.grpc.CallOptions']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
 
 </metadata>
