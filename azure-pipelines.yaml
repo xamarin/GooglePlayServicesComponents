@@ -35,6 +35,10 @@ jobs:
     parameters:
       timeoutInMinutes: 240
       areaPath: 'DevDiv\Xamarin SDK\Android'
+      validPackagePrefixes: 
+        # Preferred prefixes
+        - Xamarin
+        - GoogleGson
       xcode: 13.0
       windowsAgentPoolName: android-win-2019
       initSteps:
