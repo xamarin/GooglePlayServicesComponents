@@ -206,5 +206,10 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Gass" Version="120.0.0" />
+    <PackageReference Update="Xamarin.Android.Glide" Version="4.12.0.3" />
+    <PackageReference Update="Xamarin.Android.Glide.GifDecoder" Version="4.12.0.3" />
+    <PackageReference Update="Xamarin.Android.Glide.DiskLruCache" Version="4.12.0.3" />
+    <PackageReference Update="Xamarin.Android.Glide.Annotations" Version="4.12.0.3" />
+    <PackageReference Update="Xamarin.Android.Glide.RecyclerViewIntegration" Version="4.12.0.3" />
   </ItemGroup>
 </Project>
