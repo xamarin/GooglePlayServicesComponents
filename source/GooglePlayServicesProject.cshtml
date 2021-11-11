@@ -143,19 +143,34 @@
       }
   </ItemGroup>
 
+  <!--
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts)
     {
+      if 
+        (
+          @Model.NuGetPackageId == "Xamarin.GooglePlayServices.Basement" 
+          ||
+          @Model.NuGetPackageId == "Xamarin.Firebase.Annotations" 
+          ||
+          @Model.NuGetPackageId == "Xamarin.Firebase.ProtoliteWellKnownTypes" 
+          ||
+          @Model.NuGetPackageId == "Xamarin.Firebase.Encoders" 
+        )
+      {
+        continue;
+      }
     <JavaSourceJar
           Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar"
-          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')"
+          Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')"
           />
     <JavaDocJar
           Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar"
-          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')"
+          Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')"
           />
     }
   </ItemGroup>
+  -->
 
   <ItemGroup>
     <_AndroidDocumentationPath Include="..\..\externals\paramnames.txt" Condition="Exists('..\..\externals\paramnames.txt')" />
