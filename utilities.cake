@@ -174,6 +174,11 @@ Task ("spell-check")
                 "RecyclerViewIntegration",
                 "JavaX",
                 "UserMessagingPlatform",
+                "OkHttp",
+                "OkIO",
+                "OkHttp3",
+                "OkHttp3",
+                "UrlConnection",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
