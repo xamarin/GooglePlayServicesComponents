@@ -1319,7 +1319,8 @@
         "version": "2.7.5",
         "nugetVersion": "2.7.5.1",
         "nugetId": "Square.OkHttp",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "squareup-okhttp"
       },
       {
         "groupId": "org.tensorflow",
@@ -1361,7 +1362,8 @@
         "version": "1.9.0",
         "nugetVersion": "1.9.0.1",
         "nugetId": "Square.Retrofit",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "squareup-retrofit"
       },
       {
         "groupId": "io.grpc",
@@ -1404,20 +1406,31 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "com.squareup.okio",
+        "artifactId": "okio",
+        "version": "2.7.0",
+        "nugetVersion": "2.7.0",
+        "nugetId": "Square.OkIO",
+        "dependencyOnly": false,
+        "templateSet": "squareup-okio"
+      },
+      {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "okhttp",
         "version": "4.8.1",
         "nugetVersion": "4.8.1",
         "nugetId": "Square.OkHttp3",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "squareup-okhttp3"
       },
       {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "okhttp-urlconnection",
         "version": "4.3.1",
-        "nugetVersion": "4.3.1",
-        "nugetId": "Square.OkHttp3",
-        "dependencyOnly": true
+        "nugetVersion": "4.3.1.1",
+        "nugetId": "Square.OkHttp3.UrlConnection",
+        "dependencyOnly": false,
+        "templateSet": "squareup-okhttp3"
       },
       {
         "groupId": "com.google.dagger",
@@ -1516,10 +1529,11 @@
       {
         "groupId": "com.squareup.picasso",
         "artifactId": "picasso",
-        "version": "2.71828",
-        "nugetVersion": "2.71828",
+        "version": "2.8",
+        "nugetVersion": "2.8.0",
         "nugetId": "Square.Picasso",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "squareup-picasso"
       },
       {
         "groupId": "com.google.android.gms",
@@ -1623,6 +1637,22 @@
         "nugetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
         "dependencyOnly": false,
         "templateSet": "glide"
+      },
+      {
+        "groupId": "org.jetbrains.kotlin",
+        "artifactId": "kotlin-stdlib-common",
+        "version": "1.5.31",
+        "nugetVersion": "1.5.31.2",
+        "nugetId": "Xamarin.Kotlin.StdLib.Common",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.jetbrains.kotlin",
+        "artifactId": "kotlin-stdlib",
+        "version": "1.5.31",
+        "nugetVersion": "1.5.31.2",
+        "nugetId": "Xamarin.Kotlin.StdLib",
+        "dependencyOnly": true
       }
     ],
     "templateSets": 
@@ -1724,6 +1754,81 @@
         [
           {
             "templateFile": "templates/user-messaging-platform/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "squareup-okhttp",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/squareup-okhttp/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "squareup-okhttp3",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/squareup-okhttp3/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "squareup-picasso",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/squareup-picasso/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "squareup-retrofit",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/squareup-retrofit/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "squareup-okio",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/squareup-okio/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
