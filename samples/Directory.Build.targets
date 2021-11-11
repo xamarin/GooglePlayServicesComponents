@@ -172,8 +172,9 @@
     <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.Android" Version="1.28.0" />
     <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.6.6" />
+    <PackageReference Update="Square.OkIO" Version="2.7.0" />
     <PackageReference Update="Square.OkHttp3" Version="4.8.1" />
-    <PackageReference Update="Square.OkHttp3" Version="4.3.1" />
+    <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.3.1.1" />
     <PackageReference Update="Xamarin.Google.Dagger" Version="2.27.0" />
     <PackageReference Update="Xamarin.Google.Code.FindBugs.JSR305" Version="3.0.2" />
     <PackageReference Update="Xamarin.Chromium.CroNet.Api" Version="76.3809.111" />
@@ -185,7 +186,7 @@
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="3.0.0" />
     <PackageReference Update="Xamarin.Android.ReactiveX.RxAndroid" Version="2.1.1" />
     <PackageReference Update="Xamarin.Android.ReactiveX.RxJava" Version="2.2.7" />
-    <PackageReference Update="Square.Picasso" Version="2.71828" />
+    <PackageReference Update="Square.Picasso" Version="2.8.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="117.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="116.3.0" />
     <PackageReference Update="Xamarin.Firebase.Analytics" Version="116.3.0" />
@@ -198,5 +199,7 @@
     <PackageReference Update="Xamarin.Android.Glide.DiskLruCache" Version="4.12.0.3" />
     <PackageReference Update="Xamarin.Android.Glide.Annotations" Version="4.12.0.3" />
     <PackageReference Update="Xamarin.Android.Glide.RecyclerViewIntegration" Version="4.12.0.3" />
+    <PackageReference Update="Xamarin.Kotlin.StdLib.Common" Version="1.5.31.2" />
+    <PackageReference Update="Xamarin.Kotlin.StdLib" Version="1.5.31.2" />
   </ItemGroup>
 </Project>
