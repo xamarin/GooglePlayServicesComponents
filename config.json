@@ -1635,8 +1635,7 @@
         "version": "2.8.6",
         "nugetVersion": "2.8.6",
         "nugetId": "GoogleGson",
-        "dependencyOnly": false,
-        "templateSet": "gson"
+        "dependencyOnly": true
       },
       {
         "groupId": "com.github.bumptech.glide",
@@ -1902,21 +1901,6 @@
         [
           {
             "templateFile": "templates/annotations/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "gson",
-        "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
-          {
-            "templateFile": "templates/gson/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
