@@ -8,7 +8,7 @@ pr:
   - master_based_androidx*
   
 variables:
-  AndroidBinderatorVersion: 0.5.1
+  AndroidBinderatorVersion: 0.5.2
   AndroidXMigrationVersion: 1.0.8
   DotNetVersion: 6.0.100-rc.1.21463.6
   LegacyXamarinAndroidPkg: https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/4941337/d16-11/7776c9f1c8fac303c3aa57867825990850be0384/xamarin.android-11.4.0.5.pkg
