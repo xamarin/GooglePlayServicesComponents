@@ -170,6 +170,12 @@ Task ("spell-check")
                 "FindBugs",
                 "JSR305",
                 "JavaX",
+                "DataTransport",
+                "TransportRuntime",
+                "DataTransport",
+                "TransportBackendCct",
+                "DataTransport",
+                "TransportApi",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
