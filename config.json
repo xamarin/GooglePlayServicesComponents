@@ -1771,38 +1771,6 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-android",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0",
-        "nugetId": "Xamarin.Grpc.Android",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-okhttp",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0",
-        "nugetId": "Xamarin.Grpc.OkHttp",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-protobuf-lite",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0",
-        "nugetId": "Xamarin.Grpc.Protobuf.Lite",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-stub",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0",
-        "nugetId": "Xamarin.Grpc.Stub",
-        "dependencyOnly": true
-      },
-      {
         "groupId": "io.reactivex.rxjava2",
         "artifactId": "rxandroid",
         "version": "2.1.1",
