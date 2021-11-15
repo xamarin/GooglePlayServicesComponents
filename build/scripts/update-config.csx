@@ -156,6 +156,9 @@ static SemanticVersion GetVersion (string s)
 	if (version.Any (c => char.IsLetter (c)))
 		return new SemanticVersion (0, 0, 0);
 
+	if (version.Count (c => c == '.') == 0)
+		version += ".0.0";
+
 	if (version.Count (c => c == '.') == 1)
 		version += ".0";
 
