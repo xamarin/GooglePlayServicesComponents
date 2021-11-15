@@ -168,7 +168,10 @@ Task ("spell-check")
                 "TensorFlow",
                 "Gpu",
                 "FindBugs",
-                "JSR305",
+                "JSR305",            
+                "GifDecoder",
+                "DiskLruCache",
+                "RecyclerViewIntegration",
                 "JavaX",
                 "DataTransport",
                 "TransportRuntime",
@@ -176,6 +179,7 @@ Task ("spell-check")
                 "TransportBackendCct",
                 "DataTransport",
                 "TransportApi",
+                "UserMessagingPlatform",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
