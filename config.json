@@ -1585,15 +1585,6 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "org.chromium.net",
-        "artifactId": "cronet-fallback",
-        "version": "76.3809.111",
-        "nugetVersion": "76.3809.111",
-        "nugetId": "Xamarin.Chromium.CroNet.Fallback",
-        "dependencyOnly": false,
-        "templateSet": "chromium-cronet"      
-      },
-          {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
         "version": "3.0.1",
