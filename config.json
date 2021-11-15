@@ -1457,7 +1457,7 @@
         "artifactId": "perfmark-api",
         "version": "0.23.0",
         "nugetVersion": "0.23.0",
-        "nugetId": "Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics",
+        "nugetId": "Xamarin.Io.PerfMark.PerfMarkApi",
         "dependencyOnly": false,
         "templateSet": "opencensus"
       },
