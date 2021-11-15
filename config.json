@@ -1497,24 +1497,6 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
-        "nugetId": "Xamarin.TensorFlow.Lite",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-gpu",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
-        "nugetId": "Xamarin.TensorFlow.Lite.Gpu",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
         "groupId": "com.google.protobuf",
         "artifactId": "protobuf-lite",
         "version": "3.0.1",
@@ -1693,60 +1675,6 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "com.google.dagger",
-        "artifactId": "dagger",
-        "version": "2.27",
-        "nugetVersion": "2.27.0",
-        "nugetId": "Xamarin.Google.Dagger",
-        "dependencyOnly": false,
-        "templateSet": "dagger"
-      },
-      {
-        "groupId": "com.google.code.findbugs",
-        "artifactId": "jsr305",
-        "version": "3.0.2",
-        "nugetVersion": "3.0.2",
-        "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
-        "dependencyOnly": false,
-        "templateSet": "findbugs"
-      },
-      {
-        "groupId": "org.chromium.net",
-        "artifactId": "cronet-api",
-        "version": "76.3809.111",
-        "nugetVersion": "76.3809.111",
-        "nugetId": "Xamarin.Chromium.CroNet.Api",
-        "dependencyOnly": false,
-        "templateSet": "chromium-cronet"
-      },
-      {
-        "groupId": "org.chromium.net",
-        "artifactId": "cronet-common",
-        "version": "76.3809.111",
-        "nugetVersion": "76.3809.111",
-        "nugetId": "Xamarin.Chromium.CroNet.Common",
-        "dependencyOnly": false,
-        "templateSet": "chromium-cronet"
-      },
-      {
-        "groupId": "org.chromium.net",
-        "artifactId": "cronet-embedded",
-        "version": "76.3809.111",
-        "nugetVersion": "76.3809.111",
-        "nugetId": "Xamarin.Chromium.CroNet.Embedded",
-        "dependencyOnly": false,
-        "templateSet": "chromium-cronet"
-      },
-      {
-        "groupId": "org.chromium.net",
-        "artifactId": "cronet-fallback",
-        "version": "76.3809.111",
-        "nugetVersion": "76.3809.111",
-        "nugetId": "Xamarin.Chromium.CroNet.Fallback",
-        "dependencyOnly": false,
-        "templateSet": "chromium-cronet"
-      },
-      {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
         "version": "3.0.1",
@@ -1819,37 +1747,11 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "javax.inject",
-        "artifactId": "javax.inject",
-        "version": "1",
-        "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.JavaX.Inject",
-        "dependencyOnly": false,
-        "templateSet": "javax-inject"      
-      },
-      {
-        "groupId": "com.google.android.ump",
-        "artifactId": "user-messaging-platform",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.Google.UserMessagingPlatform",
-        "dependencyOnly": false,
-        "templateSet": "user-messaging-platform"
-      },
-      {
         "groupId": "com.google.code.gson",
         "artifactId": "gson",
         "version": "2.8.6",
         "nugetVersion": "2.8.6",
         "nugetId": "GoogleGson",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.github.bumptech.glide",
-        "artifactId": "glide",
-        "version": "4.11.0",
-        "nugetVersion": "4.11.0.2",
-        "nugetId": "Xamarin.Android.Glide",
         "dependencyOnly": true
       },
       {
@@ -1902,51 +1804,6 @@
         "nugetVersion": "120.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Gass",
         "dependencyOnly": true
-      },
-      {
-        "groupId": "com.github.bumptech.glide",
-        "artifactId": "glide",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.3",
-        "nugetId": "Xamarin.Android.Glide",
-        "dependencyOnly": false,
-        "templateSet": "glide"
-      },
-      {
-        "groupId": "com.github.bumptech.glide",
-        "artifactId": "gifdecoder",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.3",
-        "nugetId": "Xamarin.Android.Glide.GifDecoder",
-        "dependencyOnly": false,
-        "templateSet": "glide"
-      },
-      {
-        "groupId": "com.github.bumptech.glide",
-        "artifactId": "disklrucache",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.3",
-        "nugetId": "Xamarin.Android.Glide.DiskLruCache",
-        "dependencyOnly": false,
-        "templateSet": "glide"
-      },
-      {
-        "groupId": "com.github.bumptech.glide",
-        "artifactId": "annotations",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.3",
-        "nugetId": "Xamarin.Android.Glide.Annotations",
-        "dependencyOnly": false,
-        "templateSet": "glide"
-      },
-      {
-        "groupId": "com.github.bumptech.glide",
-        "artifactId": "recyclerview-integration",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.3",
-        "nugetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
-        "dependencyOnly": false,
-        "templateSet": "glide"
       }
     ],
     "templateSets":
