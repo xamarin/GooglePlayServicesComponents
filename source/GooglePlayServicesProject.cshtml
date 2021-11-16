@@ -274,7 +274,7 @@
     @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.SafetyNet")
     {
       <Reference Include="System.Net.Http" />
-      <PackageReference Include="System.Text.Json" Version="5.0.2" />
+      <PackageReference Include="System.Text.Json" Version="6.0.0" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Firestore")
     {
@@ -282,8 +282,15 @@
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Crashlytics")
     {
-      <PackageReference Include="Xamarin.Google.Dagger" Version="2.27.0" />
+      <PackageReference Include="Xamarin.Google.Dagger" Version="2.37.0" />
     }
+    @if (@Model.NuGetPackageId == "Xamarin.Firebase.Measurement.Connector.Impl")
+    {
+
+      <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base" Version="117.0.1" PrivateAssets="none" />
+      <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Api" Version="117.0.1" PrivateAssets="none" />
+    }
+     
 
     <!-- Reference -->
     <Reference Include="System.Net.Http" Condition=" '$(TargetFramework)' == '@(targetFrameworkMoniker)' " />
