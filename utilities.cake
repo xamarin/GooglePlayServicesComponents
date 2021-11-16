@@ -186,6 +186,8 @@ Task ("spell-check")
                 "RecyclerViewIntegration",
                 "JavaX",
                 "UserMessagingPlatform",
+                "PerfMark",
+                "PerfMarkApi",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
