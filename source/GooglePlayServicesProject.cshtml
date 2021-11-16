@@ -270,14 +270,7 @@
     {
       if (!dep.IsProjectReference) 
       {
-        @if (@Model.NuGetPackageId == "Xamarin.Firebase.Perf" || @Model.NuGetPackageId == "Xamarin.Firebase.Datatransport")
-        {
-          <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.2.0.3" />
-        }
-        else
-        {
           <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" PrivateAssets="none" />
-        }
       }
     }
     @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.SafetyNet")
