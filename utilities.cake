@@ -175,9 +175,7 @@ Task ("spell-check")
                 "JavaX",
                 "DataTransport",
                 "TransportRuntime",
-                "DataTransport",
                 "TransportBackendCct",
-                "DataTransport",
                 "TransportApi",
                 "UserMessagingPlatform",
             };
