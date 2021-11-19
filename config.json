@@ -1212,8 +1212,8 @@
       {
         "groupId": "com.google.guava",
         "artifactId": "guava",
-        "version": "29.0-android",
-        "nugetVersion": "29.0.0",
+        "version": "30.0-android",
+        "nugetVersion": "30.0.0",
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": true
       },
@@ -1709,8 +1709,8 @@
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.3.4",
-        "nugetVersion": "2.3.4",
+        "version": "2.4.0",
+        "nugetVersion": "2.4.0",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": false,
         "templateSet": "errorprone"
