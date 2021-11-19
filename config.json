@@ -1544,7 +1544,7 @@
         "nugetId": "Square.OkHttp",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp",
-        "excludedRuntimeDependencies": "com.squareup.okio.okio"
+        "excludedRuntimeDependencies": "com.squareup.okio.okio,com.google.android.android"
       },
       {
         "groupId": "com.squareup.retrofit",
@@ -1553,7 +1553,8 @@
         "nugetVersion": "1.9.0.1",
         "nugetId": "Square.Retrofit",
         "dependencyOnly": false,
-        "templateSet": "squareup-retrofit"
+        "templateSet": "squareup-retrofit",
+        "excludedRuntimeDependencies": "com.squareup.okhttp.okhttp,com.google.code.gson.gson,com.google.android.android,io.reactivex.rxjava,com.google.appengine.appengine-api-1.0-sdk"
       },
       {
         "groupId": "com.squareup.okio",
@@ -1627,15 +1628,15 @@
         "groupId": "io.reactivex.rxjava2",
         "artifactId": "rxandroid",
         "version": "2.1.1",
-        "nugetVersion": "2.1.1",
+        "nugetVersion": "2.1.1.1",
         "nugetId": "Xamarin.Android.ReactiveX.RxAndroid",
         "dependencyOnly": true
       },
       {
         "groupId": "io.reactivex.rxjava2",
         "artifactId": "rxjava",
-        "version": "2.2.7",
-        "nugetVersion": "2.2.7",
+        "version": "2.2.10",
+        "nugetVersion": "2.2.10",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava",
         "dependencyOnly": true
       },

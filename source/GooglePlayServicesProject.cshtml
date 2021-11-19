@@ -293,6 +293,10 @@
     {
       <PackageReference Include="Xamarin.Google.Dagger" Version="2.37.0" />
     }
+    @if (@Model.NuGetPackageId == "Xamarin.Firebase.InAppMessaging")
+    {
+      <PackageReference Include="Xamarin.Android.ReactiveX.RxJava" Version="2.2.10" />
+    }
 
     <!-- Reference -->
     <Reference Include="System.Net.Http" Condition=" '$(TargetFramework)' == '@(targetFrameworkMoniker)' " />
