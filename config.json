@@ -1543,7 +1543,8 @@
         "nugetVersion": "2.7.5.1",
         "nugetId": "Square.OkHttp",
         "dependencyOnly": false,
-        "templateSet": "squareup-okhttp"
+        "templateSet": "squareup-okhttp",
+        "excludedRuntimeDependencies": "com.squareup.okio.okio"
       },
       {
         "groupId": "com.squareup.retrofit",
