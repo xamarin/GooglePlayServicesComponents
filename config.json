@@ -1507,8 +1507,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-protobuf-lite",
-        "version": "1.37.0",
-        "nugetVersion": "1.37.0",
+        "version": "1.28.0",
+        "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1516,8 +1516,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-stub",
-        "version": "1.37.0",
-        "nugetVersion": "1.37.0",
+        "version": "1.28.0",
+        "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Stub",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1525,8 +1525,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-okhttp",
-        "version": "1.37.0",
-        "nugetVersion": "1.37.0",
+        "version": "1.28.0",
+        "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.OkHttp",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1534,8 +1534,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-context",
-        "version": "1.37.0",
-        "nugetVersion": "1.37.0",
+        "version": "1.28.0",
+        "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Context",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1543,8 +1543,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-core",
-        "version": "1.37.0",
-        "nugetVersion": "1.37.0",
+        "version": "1.28.0",
+        "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Core",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1552,8 +1552,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-android",
-        "version": "1.37.0",
-        "nugetVersion": "1.37.0",
+        "version": "1.28.0",
+        "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Android",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1561,8 +1561,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-api",
-        "version": "1.37.0",
-        "nugetVersion": "1.37.0",
+        "version": "1.28.0",
+        "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Api",
         "dependencyOnly": false,
         "templateSet": "grpc"
