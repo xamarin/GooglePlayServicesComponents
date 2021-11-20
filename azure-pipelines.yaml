@@ -39,7 +39,7 @@ jobs:
         # Preferred prefixes
         - Xamarin
         - GoogleGson
-      xcode: 13.0
+      xcode: 13.1
       windowsAgentPoolName: android-win-2019
       initSteps:
         - task: UseDotNet@2
