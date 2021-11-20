@@ -38,6 +38,7 @@ jobs:
       macosImage: 'macOS-11'                                  # the name of the macOS VM image
                                                               # BigSur 20211120
       xcode: 13.1
+      validPackagePrefixes: [ 'Xamarin', 'Mono', 'Square' ]   # any NuGet prefixes that should pass validation
       windowsAgentPoolName: android-win-2019
       initSteps:
         - task: UseDotNet@2
