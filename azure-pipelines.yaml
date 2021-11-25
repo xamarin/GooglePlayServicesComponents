@@ -8,9 +8,9 @@ pr:
   - master_based_androidx*
   
 variables:
-  AndroidBinderatorVersion: 0.5.1
+  AndroidBinderatorVersion: 0.5.2
   AndroidXMigrationVersion: 1.0.8
-  DotNetVersion: 6.0.100-rc.1.21463.6
+  DotNetVersion: 6.0.100
   LegacyXamarinAndroidPkg: https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/4941337/d16-11/7776c9f1c8fac303c3aa57867825990850be0384/xamarin.android-11.4.0.5.pkg
   LegacyXamarinAndroidVsix: https://download.visualstudio.microsoft.com/download/pr/7372b89a-b719-426c-9916-c33cbc6c7a61/45c38957fdcacfbee95be95ee40c4f5a4cc9ace69416625ad26e2da83b176941/Xamarin.Android.Sdk-11.4.0.5.vsix
   BUILD_NUMBER: $(Build.BuildNumber)
@@ -32,6 +32,9 @@ jobs:
   - template: .ci/build.yml@components
     parameters:
       timeoutInMinutes: 240
+      macosImage: 'macOS-11'                                  # the name of the macOS VM image
+                                                              # BigSur 20211120
+      xcode: 13.1
       areaPath: 'DevDiv\Xamarin SDK\Android'
       windowsAgentPoolName: android-win-2019
       initSteps:
