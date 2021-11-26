@@ -170,6 +170,8 @@ Task ("spell-check")
                 "FindBugs",
                 "JSR305",
                 "JavaX",
+                "Protobuf",
+                "JavaLite",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
