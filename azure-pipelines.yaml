@@ -11,6 +11,8 @@ variables:
   AndroidBinderatorVersion: 0.5.2
   AndroidXMigrationVersion: 1.0.8
   DotNetVersion: 6.0.100
+  DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
+  NuGetOrgSource: https://api.nuget.org/v3/index.json
   LegacyXamarinAndroidPkg: https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/4941337/d16-11/7776c9f1c8fac303c3aa57867825990850be0384/xamarin.android-11.4.0.5.pkg
   LegacyXamarinAndroidVsix: https://download.visualstudio.microsoft.com/download/pr/7372b89a-b719-426c-9916-c33cbc6c7a61/45c38957fdcacfbee95be95ee40c4f5a4cc9ace69416625ad26e2da83b176941/Xamarin.Android.Sdk-11.4.0.5.vsix
   BUILD_NUMBER: $(Build.BuildNumber)
@@ -36,6 +38,7 @@ jobs:
                                                               # BigSur 20211120
       xcode: 13.1
       areaPath: 'DevDiv\Xamarin SDK\Android'
+      xcode: 13.0
       windowsAgentPoolName: android-win-2019
       initSteps:
         - task: UseDotNet@2
@@ -43,7 +46,8 @@ jobs:
           inputs:
             version: $(DotNetVersion)
         - pwsh: |
-            dotnet workload install android
+            dotnet workload update --verbosity diag --from-rollback-file workload.json --source $(Dotnet6Source) --source $(NuGetOrgSource)
+            dotnet workload install android --verbosity diag --skip-manifest-update --source $(Dotnet6Source) --source $(NuGetOrgSource)
         - task: JavaToolInstaller@0
           inputs:
             versionSpec: '11'
