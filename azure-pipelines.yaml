@@ -38,6 +38,8 @@ jobs:
       macosImage: 'macOS-11'                                  # the name of the macOS VM image
                                                               # BigSur 20211120
       xcode: 13.1
+      dotnet: '5.0.403'                                       # the version of .NET Core to use
+      dotnetStable: '3.1.415'                                 # the stable version of .NET Core to use
       validPackagePrefixes: [ 'Xamarin', 'Mono', 'Square' ]   # any NuGet prefixes that should pass validation
       windowsAgentPoolName: android-win-2019
       initSteps:
