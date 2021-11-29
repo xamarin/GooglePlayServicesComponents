@@ -77,15 +77,15 @@
     <Compile Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\Additions\*.cs" Link="Additions\%(Filename)%(Extension)" />
   </ItemGroup>
 
-  <!--
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) 
     {
     <LibraryProjectZip Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" />
+    <!--
     <JavaDocJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar"/>
+    -->
     }
   </ItemGroup>
-  -->
   
   <ItemGroup>
     @foreach (var dep in @Model.NuGetDependencies) 
