@@ -1502,8 +1502,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.grpc",
@@ -1511,8 +1510,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Stub",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.grpc",
@@ -1520,8 +1518,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.OkHttp",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.grpc",
@@ -1529,8 +1526,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Context",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.grpc",
@@ -1538,8 +1534,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Core",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.grpc",
@@ -1547,8 +1542,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Android",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.grpc",
@@ -1556,8 +1550,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Api",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.opencensus",
@@ -1565,8 +1558,7 @@
         "version": "0.28.3",
         "nugetVersion": "0.28.3",
         "nugetId": "Xamarin.Io.OpenCensus.OpenCensusApi",
-        "dependencyOnly": false,
-        "templateSet": "opencensus"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.opencensus",
@@ -1574,8 +1566,7 @@
         "version": "0.28.3",
         "nugetVersion": "0.28.3",
         "nugetId": "Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics",
-        "dependencyOnly": false,
-        "templateSet": "opencensus"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.perfmark",
@@ -1583,8 +1574,7 @@
         "version": "0.23.0",
         "nugetVersion": "0.23.0",
         "nugetId": "Xamarin.Io.PerfMark.PerfMarkApi",
-        "dependencyOnly": false,
-        "templateSet": "opencensus"
+        "dependencyOnly": true
       },
       {
         "groupId": "com.google.guava",
@@ -1721,8 +1711,7 @@
         "version": "4.1.1.4",
         "nugetVersion": "4.1.1.4",
         "nugetId": "Xamarin.GoogleAndroid.Annotations",
-        "dependencyOnly": false,
-        "templateSet": "annotations"
+        "dependencyOnly": true
       },
       {
         "groupId": "org.codehaus.mojo",
@@ -1807,21 +1796,6 @@
         ]
       },
       {
-        "name": "findbugs",
-        "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
-          {
-            "templateFile": "templates/findbugs/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
         "name": "chromium-cronet",
         "mavenRepositoryType": "Google",
         "templates":
@@ -1881,42 +1855,12 @@
         ]
       },            
       {
-        "name": "grpc",
+        "name": "findbugs",
         "mavenRepositoryType": "MavenCentral",
         "templates":
         [
           {
-            "templateFile": "templates/grpc/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "opencensus",
-        "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
-          {
-            "templateFile": "templates/opencensus/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "perfmark",
-        "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
-          {
-            "templateFile": "templates/perfmark/Project.cshtml",
+            "templateFile": "templates/findbugs/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
@@ -1932,21 +1876,6 @@
         [
           {
             "templateFile": "templates/errorprone/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "annotations",
-        "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
-          {
-            "templateFile": "templates/annotations/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
