@@ -162,7 +162,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-auth-base",
         "version": "17.1.4",
-        "nugetVersion": "117.1.4.2",
+        "nugetVersion": "117.1.4.3",
         "nugetId": "Xamarin.GooglePlayServices.Auth.Base",
         "dependencyOnly": false
       },
