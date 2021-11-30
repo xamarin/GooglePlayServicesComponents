@@ -589,8 +589,7 @@
         "version": "3.0.2",
         "nugetVersion": "3.0.2.1",
         "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
-        "dependencyOnly": false,
-        "templateSet": "findbugs"
+        "dependencyOnly": true
       },
       {
         "groupId": "com.google.dagger",
@@ -1502,8 +1501,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.grpc",
@@ -1511,8 +1509,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Stub",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.grpc",
@@ -1520,8 +1517,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.OkHttp",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.grpc",
@@ -1529,8 +1525,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Context",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.grpc",
@@ -1538,8 +1533,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Core",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.grpc",
@@ -1547,8 +1541,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Android",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.grpc",
@@ -1556,8 +1549,7 @@
         "version": "1.28.0",
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Api",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
+        "dependencyOnly": true
       },
       {
         "groupId": "io.opencensus",
@@ -1712,8 +1704,7 @@
         "version": "2.4.0",
         "nugetVersion": "2.4.0",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
-        "dependencyOnly": false,
-        "templateSet": "errorprone"
+        "dependencyOnly": true
       },
       {
         "groupId": "com.google.android",
@@ -1730,8 +1721,7 @@
         "version": "1.18",
         "nugetVersion": "1.18.0",
         "nugetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
-        "dependencyOnly": false,
-        "templateSet": "codehaus-mojo"
+        "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
@@ -1807,21 +1797,6 @@
         ]
       },
       {
-        "name": "findbugs",
-        "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
-          {
-            "templateFile": "templates/findbugs/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
         "name": "chromium-cronet",
         "mavenRepositoryType": "Google",
         "templates":
@@ -1881,21 +1856,6 @@
         ]
       },            
       {
-        "name": "grpc",
-        "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
-          {
-            "templateFile": "templates/grpc/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
         "name": "opencensus",
         "mavenRepositoryType": "MavenCentral",
         "templates":
@@ -1926,42 +1886,12 @@
         ]
       },
       {
-        "name": "errorprone",
-        "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
-          {
-            "templateFile": "templates/errorprone/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
         "name": "annotations",
         "mavenRepositoryType": "MavenCentral",
         "templates":
         [
           {
             "templateFile": "templates/annotations/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "codehaus-mojo",
-        "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
-          {
-            "templateFile": "templates/codehaus-mojo/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
