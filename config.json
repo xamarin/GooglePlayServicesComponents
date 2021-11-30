@@ -1481,24 +1481,6 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
-        "nugetId": "Xamarin.TensorFlow.Lite",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-gpu",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
-        "nugetId": "Xamarin.TensorFlow.Lite.Gpu",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
         "groupId": "com.google.protobuf",
         "artifactId": "protobuf-lite",
         "version": "3.0.1",
