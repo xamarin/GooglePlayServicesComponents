@@ -1625,6 +1625,22 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "com.google.guava",
+        "artifactId": "guava",
+        "version": "29.0-android",
+        "nugetVersion": "29.0.0",
+        "nugetId": "Xamarin.Google.Guava",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-context",
+        "version": "1.28.0",
+        "nugetVersion": "1.28.0",
+        "nugetId": "Xamarin.Grpc.Context",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "io.opencensus",
         "artifactId": "opencensus-api",
         "version": "0.28.3",
@@ -1762,7 +1778,7 @@
       },
       {
         "name": "annotations",
-        "mavenRepositoryType": "Google",
+        "mavenRepositoryType": "MavenCentral",
         "templates": [
           {
             "templateFile": "templates/annotations/Project.cshtml",
