@@ -589,7 +589,8 @@
         "version": "3.0.2",
         "nugetVersion": "3.0.2.1",
         "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "findbugs"
       },
       {
         "groupId": "com.google.dagger",
@@ -870,6 +871,14 @@
         "version": "19.0.0",
         "nugetVersion": "119.0.0.2",
         "nugetId": "Xamarin.Firebase.Measurement.Connector",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-measurement-connector-impl",
+        "version": "17.0.5",
+        "nugetVersion": "117.0.5.3",
+        "nugetId": "Xamarin.Firebase.Measurement.Connector.Impl",
         "dependencyOnly": false
       },
       {
@@ -1464,19 +1473,19 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "com.squareup.okio",
-        "artifactId": "okio",
-        "version": "1.13.0",
-        "nugetVersion": "1.13.0",
-        "nugetId": "Square.OkIo",
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-measurement-api",
+        "version": "16.3.0",
+        "nugetVersion": "116.3.0",
+        "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
         "dependencyOnly": true
       },
       {
-        "groupId": "com.google.protobuf",
-        "artifactId": "protobuf-lite",
-        "version": "3.0.1",
-        "nugetVersion": "3.0.1",
-        "nugetId": "Xamarin.Protobuf.Lite",
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-measurement-base",
+        "version": "16.3.0",
+        "nugetVersion": "117.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": true
       },
       {
@@ -1496,101 +1505,10 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-protobuf-lite",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0",
-        "nugetId": "Xamarin.Grpc.Protobuf.Lite",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-stub",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0",
-        "nugetId": "Xamarin.Grpc.Stub",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-okhttp",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0",
-        "nugetId": "Xamarin.Grpc.OkHttp",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-context",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0",
-        "nugetId": "Xamarin.Grpc.Context",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-core",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0",
-        "nugetId": "Xamarin.Grpc.Core",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-android",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0",
-        "nugetId": "Xamarin.Grpc.Android",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-api",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0",
-        "nugetId": "Xamarin.Grpc.Api",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "io.opencensus",
-        "artifactId": "opencensus-api",
-        "version": "0.28.3",
-        "nugetVersion": "0.28.3",
-        "nugetId": "Xamarin.Io.OpenCensus.OpenCensusApi",
-        "dependencyOnly": false,
-        "templateSet": "opencensus"
-      },
-      {
-        "groupId": "io.opencensus",
-        "artifactId": "opencensus-contrib-grpc-metrics",
-        "version": "0.28.3",
-        "nugetVersion": "0.28.3",
-        "nugetId": "Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics",
-        "dependencyOnly": false,
-        "templateSet": "opencensus"
-      },
-      {
-        "groupId": "io.perfmark",
-        "artifactId": "perfmark-api",
-        "version": "0.23.0",
-        "nugetVersion": "0.23.0",
-        "nugetId": "Xamarin.Io.PerfMark.PerfMarkApi",
-        "dependencyOnly": false,
-        "templateSet": "opencensus"
-      },
-      {
         "groupId": "com.google.guava",
         "artifactId": "guava",
         "version": "28.2.0",
         "nugetVersion": "28.2.0",
-        "nugetId": "Xamarin.Google.Guava",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.guava",
-        "artifactId": "guava",
-        "version": "29.0-android",
-        "nugetVersion": "29.0.0",
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": true
       },
@@ -1643,14 +1561,6 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "com.google.android.datatransport",
-        "artifactId": "transport-runtime",
-        "version": "3.0.1",
-        "nugetVersion": "3.0.1",
-        "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
-        "dependencyOnly": true
-      },
-      {
         "groupId": "com.squareup.picasso",
         "artifactId": "picasso",
         "version": "2.71828",
@@ -1664,6 +1574,38 @@
         "version": "1.9.0",
         "nugetVersion": "1.9.0.1",
         "nugetId": "Square.Retrofit",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-android",
+        "version": "1.28.0",
+        "nugetVersion": "1.28.0",
+        "nugetId": "Xamarin.Grpc.Android",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-okhttp",
+        "version": "1.28.0",
+        "nugetVersion": "1.28.0",
+        "nugetId": "Xamarin.Grpc.OkHttp",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-protobuf-lite",
+        "version": "1.28.0",
+        "nugetVersion": "1.28.0",
+        "nugetId": "Xamarin.Grpc.Protobuf.Lite",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-stub",
+        "version": "1.28.0",
+        "nugetVersion": "1.28.0",
+        "nugetId": "Xamarin.Grpc.Stub",
         "dependencyOnly": true
       },
       {
@@ -1683,28 +1625,31 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "com.squareup.picasso",
-        "artifactId": "picasso",
-        "version": "2.71828",
-        "nugetVersion": "2.71828",
-        "nugetId": "Square.Picasso",
-        "dependencyOnly": true
+        "groupId": "io.opencensus",
+        "artifactId": "opencensus-api",
+        "version": "0.28.3",
+        "nugetVersion": "0.28.3",
+        "nugetId": "Xamarin.Io.OpenCensus.OpenCensusApi",
+        "dependencyOnly": false,
+        "templateSet": "opencensus"
       },
       {
-        "groupId": "com.google.code.gson",
-        "artifactId": "gson",
-        "version": "2.8.6",
-        "nugetVersion": "2.8.6",
-        "nugetId": "GoogleGson",
-        "dependencyOnly": true
+        "groupId": "io.opencensus",
+        "artifactId": "opencensus-contrib-grpc-metrics",
+        "version": "0.28.3",
+        "nugetVersion": "0.28.3",
+        "nugetId": "Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics",
+        "dependencyOnly": false,
+        "templateSet": "opencensus"
       },
       {
-        "groupId": "com.google.errorprone",
-        "artifactId": "error_prone_annotations",
-        "version": "2.4.0",
-        "nugetVersion": "2.4.0",
-        "nugetId": "Xamarin.Google.ErrorProne.Annotations",
-        "dependencyOnly": true
+        "groupId": "io.perfmark",
+        "artifactId": "perfmark-api",
+        "version": "0.23.0",
+        "nugetVersion": "0.23.0",
+        "nugetId": "Xamarin.Io.PerfMark.PerfMarkApi",
+        "dependencyOnly": false,
+        "templateSet": "opencensus"
       },
       {
         "groupId": "com.google.android",
@@ -1714,74 +1659,9 @@
         "nugetId": "Xamarin.GoogleAndroid.Annotations",
         "dependencyOnly": false,
         "templateSet": "annotations"
-      },
-      {
-        "groupId": "org.codehaus.mojo",
-        "artifactId": "animal-sniffer-annotations",
-        "version": "1.18",
-        "nugetVersion": "1.18.0",
-        "nugetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-ads-lite",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
-        "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-ads-base",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
-        "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-gass",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
-        "nugetId": "Xamarin.GooglePlayServices.Gass",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-measurement-base",
-        "version": "16.3.0",
-        "nugetVersion": "116.3.0",
-        "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-measurement-api",
-        "version": "16.3.0",
-        "nugetVersion": "116.3.0",
-        "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-measurement-base",
-        "version": "17.0.1",
-        "nugetVersion": "117.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-measurement-api",
-        "version": "17.0.1",
-        "nugetVersion": "117.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
-        "dependencyOnly": true
       }
     ],
-    "templateSets":
-    [
+    "templateSets": [
       {
         "name": "glide",
         "mavenRepositoryType": "MavenCentral",
@@ -1797,10 +1677,23 @@
         ]
       },
       {
+        "name": "findbugs",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/findbugs/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
         "name": "chromium-cronet",
         "mavenRepositoryType": "Google",
-        "templates":
-        [
+        "templates": [
           {
             "templateFile": "templates/chromium-cronet/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
@@ -1814,8 +1707,7 @@
       {
         "name": "tensorflow-lite",
         "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
+        "templates": [
           {
             "templateFile": "templates/tensorflow-lite/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
@@ -1829,8 +1721,7 @@
       {
         "name": "dagger",
         "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
+        "templates": [
           {
             "templateFile": "templates/dagger/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
@@ -1854,12 +1745,39 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
         ]
-      },            
+      },
+      {
+        "name": "user-messaging-platform",
+        "mavenRepositoryType": "Google",
+        "templates": [
+          {
+            "templateFile": "templates/user-messaging-platform/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "annotations",
+        "mavenRepositoryType": "Google",
+        "templates": [
+          {
+            "templateFile": "templates/annotations/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
       {
         "name": "opencensus",
         "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
+        "templates": [
           {
             "templateFile": "templates/opencensus/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
@@ -1873,39 +1791,9 @@
       {
         "name": "perfmark",
         "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
-          {
-            "templateFile": "templates/perfmark/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "annotations",
-        "mavenRepositoryType": "MavenCentral",
-        "templates":
-        [
-          {
-            "templateFile": "templates/annotations/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "user-messaging-platform",
-        "mavenRepositoryType": "Google",
         "templates": [
           {
-            "templateFile": "templates/user-messaging-platform/Project.cshtml",
+            "templateFile": "templates/perfmark/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
