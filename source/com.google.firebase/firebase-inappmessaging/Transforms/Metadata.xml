@@ -282,24 +282,4 @@
 
     <!-- Remove internal API that has covariant return issues -->
     <remove-node path="/api/package[@name='com.google.firebase.inappmessaging.dagger.internal']" />
-
-    <attr
-        path="/api/package[@name='com.google.internal.firebase.inappmessaging.v1.sdkserving']/class[@name='InAppMessagingSdkServingGrpc.InAppMessagingSdkServingBlockingStub']/method[@name='build' and count(parameter)=2 and parameter[1][@type='io.grpc.Channel'] and parameter[2][@type='io.grpc.CallOptions']]"
-        name="managedReturn"
-        >
-        Java.Lang.Object
-    </attr>
-    <attr
-        path="/api/package[@name='com.google.internal.firebase.inappmessaging.v1.sdkserving']/class[@name='InAppMessagingSdkServingGrpc.InAppMessagingSdkServingFutureStub']/method[@name='build' and count(parameter)=2 and parameter[1][@type='io.grpc.Channel'] and parameter[2][@type='io.grpc.CallOptions']]"
-        name="managedReturn"
-        >
-        Java.Lang.Object
-    </attr>
-    <attr
-        path="/api/package[@name='com.google.internal.firebase.inappmessaging.v1.sdkserving']/class[@name='InAppMessagingSdkServingGrpc.InAppMessagingSdkServingStub']/method[@name='build' and count(parameter)=2 and parameter[1][@type='io.grpc.Channel'] and parameter[2][@type='io.grpc.CallOptions']]"
-        name="managedReturn"
-        >
-        Java.Lang.Object
-    </attr>
-
 </metadata>
