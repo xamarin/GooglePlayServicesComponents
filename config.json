@@ -1623,6 +1623,32 @@
         "nugetVersion": "2.2.7",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava",
         "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.errorprone",
+        "artifactId": "error_prone_annotations",
+        "version": "2.4.0",
+        "nugetVersion": "2.4.0",
+        "nugetId": "Xamarin.Google.ErrorProne.Annotations",
+        "dependencyOnly": false,
+        "templateSet": "errorprone"
+      },
+      {
+        "groupId": "com.google.android",
+        "artifactId": "annotations",
+        "version": "4.1.1.4",
+        "nugetVersion": "4.1.1.4",
+        "nugetId": "Xamarin.GoogleAndroid.Annotations",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.codehaus.mojo",
+        "artifactId": "animal-sniffer-annotations",
+        "version": "1.18",
+        "nugetVersion": "1.18.0",
+        "nugetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
+        "dependencyOnly": false,
+        "templateSet": "codehaus-mojo"
       }
     ],
     "templateSets": [
@@ -1716,6 +1742,34 @@
         "templates": [
           {
             "templateFile": "templates/user-messaging-platform/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "errorprone",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/errorprone/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "codehaus-mojo",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/codehaus-mojo/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
