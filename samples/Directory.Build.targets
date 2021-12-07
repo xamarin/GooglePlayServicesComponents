@@ -202,7 +202,9 @@
     <PackageReference Update="Xamarin.Grpc.Context" Version="1.28.0" />
     <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusApi" Version="0.28.3" />
     <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics" Version="0.28.3" />
+    <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.4.0" />
     <PackageReference Update="Xamarin.Io.PerfMark.PerfMarkApi" Version="0.23.0" />
     <PackageReference Update="Xamarin.GoogleAndroid.Annotations" Version="4.1.1.4" />
+    <PackageReference Update="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations" Version="1.18.0" />
   </ItemGroup>
 </Project>
