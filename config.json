@@ -1682,8 +1682,7 @@
         "version": "4.1.1.4",
         "nugetVersion": "4.1.1.4",
         "nugetId": "Xamarin.GoogleAndroid.Annotations",
-        "dependencyOnly": false,
-        "templateSet": "annotations"
+        "dependencyOnly": true
       },
       {
         "groupId": "org.codehaus.mojo",
@@ -1814,6 +1813,20 @@
         "templates": [
           {
             "templateFile": "templates/annotations/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "user-messaging-platform",
+        "mavenRepositoryType": "Google",
+        "templates": [
+          {
+            "templateFile": "templates/user-messaging-platform/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
