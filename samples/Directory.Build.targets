@@ -200,5 +200,13 @@
     <PackageReference Update="Xamarin.Grpc.Stub" Version="1.28.0" />
     <PackageReference Update="Xamarin.Android.ReactiveX.RxAndroid" Version="2.1.1" />
     <PackageReference Update="Xamarin.Android.ReactiveX.RxJava" Version="2.2.7" />
+    <PackageReference Update="Xamarin.Google.Guava" Version="29.0.0" />
+    <PackageReference Update="Xamarin.Grpc.Context" Version="1.28.0" />
+    <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusApi" Version="0.28.3" />
+    <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics" Version="0.28.3" />
+    <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.4.0" />
+    <PackageReference Update="Xamarin.Io.PerfMark.PerfMarkApi" Version="0.23.0" />
+    <PackageReference Update="Xamarin.GoogleAndroid.Annotations" Version="4.1.1.4" />
+    <PackageReference Update="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations" Version="1.18.0" />
   </ItemGroup>
 </Project>
