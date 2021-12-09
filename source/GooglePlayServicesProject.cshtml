@@ -143,26 +143,20 @@
       }
   </ItemGroup>
 
-  <!--
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts)
     {
-      if (@Model.NuGetPackageId == "Xamarin.Firebase.ProtoliteWellKnownTypes" )
-      {
-        continue;
-      }
     <JavaSourceJar
           Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar"
-          Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')"
+          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')"
           />
     <JavaDocJar
           Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar"
-          Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')"
+          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')"
           />
     }
   </ItemGroup>
-  -->
-  
+
   <ItemGroup>
     <_AndroidDocumentationPath Include="..\..\externals\paramnames.txt" Condition="Exists('..\..\externals\paramnames.txt')" />
     @foreach (var art in @Model.MavenArtifacts) {
@@ -266,25 +260,23 @@
 
   <ItemGroup>
     <!-- PackageReference -->
-    @foreach (var dep in @Model.NuGetDependencies) 
-    {
-      if (!dep.IsProjectReference) 
-      {
-          <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" PrivateAssets="none" />
+    @foreach (var dep in @Model.NuGetDependencies) {
+      if (!dep.IsProjectReference) {
+      <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" PrivateAssets="none" />
       }
     }
     @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.SafetyNet")
     {
       <Reference Include="System.Net.Http" />
-      <PackageReference Include="System.Text.Json" Version="6.0.0" />
+      <PackageReference Include="System.Text.Json" Version="5.0.2" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Firestore")
     {
-      <PackageReference Include="Xamarin.Google.Guava" Version="29.0.0" />
+      <PackageReference Include="Xamarin.Google.Guava" Version="28.2.0.1" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Crashlytics")
     {
-      <PackageReference Include="Xamarin.Google.Dagger" Version="2.37.0" />
+      <PackageReference Include="Xamarin.Google.Dagger" Version="2.27.0" />
     }
 
     <!-- Reference -->
