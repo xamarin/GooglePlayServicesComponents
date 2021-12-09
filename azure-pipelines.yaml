@@ -8,7 +8,7 @@ pr:
   - master_based_androidx*
   
 variables:
-  AndroidBinderatorVersion: 0.5.2
+  AndroidBinderatorVersion: 0.5.3
   AndroidXMigrationVersion: 1.0.8
   DotNetVersion: 6.0.100
   DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
@@ -44,11 +44,6 @@ jobs:
         # Preferred prefixes
         - Xamarin
         - GoogleGson
-      macosImage: 'macOS-11'                                  # the name of the macOS VM image
-                                                              # BigSur 20211120
-      xcode: 13.1
-      dotnet: '5.0.403'                                       # the version of .NET Core to use
-      dotnetStable: '3.1.415'                                 # the stable version of .NET Core to use
       windowsAgentPoolName: android-win-2019
       initSteps:
         - task: UseDotNet@2
