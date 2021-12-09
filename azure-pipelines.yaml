@@ -35,6 +35,10 @@ jobs:
     parameters:
       timeoutInMinutes: 240
       areaPath: 'DevDiv\Xamarin SDK\Android'
+      validPackagePrefixes: 
+        # Preferred prefixes
+        - Xamarin
+        - GoogleGson
       macosImage: 'macOS-11'                                  # the name of the macOS VM image
                                                               # BigSur 20211120
       xcode: 13.1
