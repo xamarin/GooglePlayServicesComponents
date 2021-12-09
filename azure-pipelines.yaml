@@ -8,7 +8,7 @@ pr:
   - master_based_androidx*
   
 variables:
-  AndroidBinderatorVersion: 0.5.2
+  AndroidBinderatorVersion: 0.5.3
   AndroidXMigrationVersion: 1.0.8
   DotNetVersion: 6.0.100
   DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
@@ -40,7 +40,6 @@ jobs:
       xcode: 13.1
       dotnet: '5.0.403'                                       # the version of .NET Core to use
       dotnetStable: '3.1.415'                                 # the stable version of .NET Core to use
-      validPackagePrefixes: [ 'Xamarin', 'Mono', 'Square' ]   # any NuGet prefixes that should pass validation
       validPackagePrefixes: 
         # Preferred prefixes
         - Xamarin
