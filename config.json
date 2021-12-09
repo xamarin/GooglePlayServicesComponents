@@ -1605,6 +1605,33 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "com.google.android.datatransport",
+        "artifactId": "transport-runtime",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1",
+        "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
+        "dependencyOnly": false,
+        "templateSet": "datatransport"      
+      },
+      {
+        "groupId": "com.google.android.datatransport",
+        "artifactId": "transport-backend-cct",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
+        "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
+        "dependencyOnly": false,
+        "templateSet": "datatransport"      
+      },
+      {
+        "groupId": "com.google.android.datatransport",
+        "artifactId": "transport-api",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
+        "nugetId": "Xamarin.Google.Android.DataTransport.TransportApi",
+        "dependencyOnly": false,
+        "templateSet": "datatransport"      
+      },
+      {
         "groupId": "io.grpc",
         "artifactId": "grpc-okhttp",
         "version": "1.28.0",
@@ -1814,9 +1841,25 @@
         ]
       },
       {
+        "name": "datatransport",
+        "mavenRepositoryType": "Google",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/datatransport/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
         "name": "user-messaging-platform",
         "mavenRepositoryType": "Google",
-        "templates": [
+        "templates": 
+        [
           {
             "templateFile": "templates/user-messaging-platform/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
