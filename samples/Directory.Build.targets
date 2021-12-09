@@ -193,6 +193,9 @@
     <PackageReference Update="Square.Picasso" Version="2.71828" />
     <PackageReference Update="Square.Retrofit" Version="1.9.0.1" />
     <PackageReference Update="Xamarin.Grpc.Android" Version="1.28.0" />
+    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="3.0.1" />
+    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="3.0.0" />
+    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="3.0.0" />
     <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.Protobuf.Lite" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.Stub" Version="1.28.0" />
