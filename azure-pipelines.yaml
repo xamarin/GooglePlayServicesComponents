@@ -41,6 +41,10 @@ jobs:
       dotnet: '5.0.403'                                       # the version of .NET Core to use
       dotnetStable: '3.1.415'                                 # the stable version of .NET Core to use
       validPackagePrefixes: [ 'Xamarin', 'Mono', 'Square' ]   # any NuGet prefixes that should pass validation
+      validPackagePrefixes: 
+        # Preferred prefixes
+        - Xamarin
+        - GoogleGson
       windowsAgentPoolName: android-win-2019
       initSteps:
         - task: UseDotNet@2

@@ -193,6 +193,10 @@
     <PackageReference Update="Square.OkHttp3" Version="4.8.1" />
     <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.3.1.1" />
     <PackageReference Update="Square.Picasso" Version="2.8.0" />
+    <PackageReference Update="Square.OkHttp3" Version="4.8.1" />
+    <PackageReference Update="Square.OkHttp3" Version="4.3.1" />
+    <PackageReference Update="Square.Picasso" Version="2.71828" />
+    <PackageReference Update="Square.Retrofit" Version="1.9.0.1" />
     <PackageReference Update="Xamarin.Grpc.Android" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.Protobuf.Lite" Version="1.28.0" />
@@ -206,5 +210,15 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
     <PackageReference Update="Xamarin.Kotlin.StdLib.Common" Version="1.5.31.2" />
     <PackageReference Update="Xamarin.Kotlin.StdLib" Version="1.5.31.2" />
+    <PackageReference Update="Xamarin.Android.ReactiveX.RxAndroid" Version="2.1.1" />
+    <PackageReference Update="Xamarin.Android.ReactiveX.RxJava" Version="2.2.7" />
+    <PackageReference Update="Xamarin.Google.Guava" Version="29.0.0" />
+    <PackageReference Update="Xamarin.Grpc.Context" Version="1.28.0" />
+    <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusApi" Version="0.28.3" />
+    <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics" Version="0.28.3" />
+    <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.4.0" />
+    <PackageReference Update="Xamarin.Io.PerfMark.PerfMarkApi" Version="0.23.0" />
+    <PackageReference Update="Xamarin.GoogleAndroid.Annotations" Version="4.1.1.4" />
+    <PackageReference Update="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations" Version="1.18.0" />
   </ItemGroup>
 </Project>
