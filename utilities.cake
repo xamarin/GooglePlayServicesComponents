@@ -185,6 +185,8 @@ Task ("spell-check")
                 "DiskLruCache",
                 "RecyclerViewIntegration",
                 "JavaX",
+                "Protobuf",
+                "JavaLite",
                 "DataTransport",
                 "TransportRuntime",
                 "TransportBackendCct",

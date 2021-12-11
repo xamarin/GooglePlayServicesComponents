@@ -1481,6 +1481,26 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "com.google.protobuf",
+        "artifactId": "protobuf-lite",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1",
+        "nugetId": "Xamarin.Protobuf.Lite",
+        "dependencyOnly": false,
+        "templateSet": "protobuf-lite",
+        "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth"
+      },
+      {
+        "groupId": "com.google.protobuf",
+        "artifactId": "protobuf-javalite",
+        "version": "3.14.0",
+        "nugetVersion": "3.14.0",
+        "nugetId": "Xamarin.Protobuf.JavaLite",
+        "dependencyOnly": false,
+        "templateSet": "protobuf-lite",
+        "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth"
+      },
+      {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
         "version": "16.3.0",
@@ -1798,6 +1818,20 @@
         "templates": [
           {
             "templateFile": "templates/javax-inject/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "protobuf-lite",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/protobuf-lite/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
