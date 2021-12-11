@@ -1481,6 +1481,26 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "com.google.protobuf",
+        "artifactId": "protobuf-lite",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1",
+        "nugetId": "Xamarin.Protobuf.Lite",
+        "dependencyOnly": false,
+        "templateSet": "protobuf-lite",
+        "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth"
+      },
+      {
+        "groupId": "com.google.protobuf",
+        "artifactId": "protobuf-javalite",
+        "version": "3.14.0",
+        "nugetVersion": "3.14.0",
+        "nugetId": "Xamarin.Protobuf.JavaLite",
+        "dependencyOnly": false,
+        "templateSet": "protobuf-lite",
+        "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth"
+      },
+      {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
         "version": "16.3.0",
@@ -1599,6 +1619,33 @@
         "nugetVersion": "1.28.0",
         "nugetId": "Xamarin.Grpc.Android",
         "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.datatransport",
+        "artifactId": "transport-runtime",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1",
+        "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
+        "dependencyOnly": false,
+        "templateSet": "datatransport"      
+      },
+      {
+        "groupId": "com.google.android.datatransport",
+        "artifactId": "transport-backend-cct",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
+        "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
+        "dependencyOnly": false,
+        "templateSet": "datatransport"      
+      },
+      {
+        "groupId": "com.google.android.datatransport",
+        "artifactId": "transport-api",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
+        "nugetId": "Xamarin.Google.Android.DataTransport.TransportApi",
+        "dependencyOnly": false,
+        "templateSet": "datatransport"      
       },
       {
         "groupId": "io.grpc",
@@ -1852,6 +1899,35 @@
         ]
       },
       {
+        "name": "protobuf-lite",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/protobuf-lite/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "datatransport",
+        "mavenRepositoryType": "Google",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/datatransport/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
         "name": "squareup-okhttp",
         "mavenRepositoryType": "MavenCentral",
         "templates": 
@@ -1897,20 +1973,6 @@
         ]
       },
       {
-        "name": "annotations",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/annotations/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
         "name": "squareup-retrofit",
         "mavenRepositoryType": "MavenCentral",
         "templates": 
@@ -1933,6 +1995,20 @@
           {
             "templateFile": "templates/squareup-okio/Project.cshtml",
              "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "annotations",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/annotations/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
