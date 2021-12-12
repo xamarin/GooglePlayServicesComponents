@@ -1346,15 +1346,6 @@
         "templateSet": "chromium-cronet"
       },
       {
-        "groupId": "org.codehaus.mojo",
-        "artifactId": "animal-sniffer-annotations",
-        "version": "1.18",
-        "nugetVersion": "1.18.0.1",
-        "nugetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
-        "dependencyOnly": false,
-        "templateSet": "codehaus-mojo"
-      },
-      {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite",
         "version": "2.5.0",
@@ -1522,14 +1513,6 @@
         "version": "2.5.0",
         "nugetVersion": "2.5.0.1",
         "nugetId": "Xamarin.AndroidX.Work.Runtime",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android",
-        "artifactId": "annotations",
-        "version": "4.1.1.4",
-        "nugetVersion": "4.1.1.4",
-        "nugetId": "Xamarin.GoogleAndroid.Annotations",
         "dependencyOnly": true
       },
       {
@@ -1829,54 +1812,19 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "io.opencensus",
-        "artifactId": "opencensus-api",
-        "version": "0.28.3",
-        "nugetVersion": "0.28.3",
-        "nugetId": "Xamarin.Io.OpenCensus.OpenCensusApi",
-        "dependencyOnly": false,
-        "templateSet": "opencensus"
-      },
-      {
-        "groupId": "io.opencensus",
-        "artifactId": "opencensus-contrib-grpc-metrics",
-        "version": "0.28.3",
-        "nugetVersion": "0.28.3",
-        "nugetId": "Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics",
-        "dependencyOnly": false,
-        "templateSet": "opencensus"
-      },
-      {
-        "groupId": "com.google.errorprone",
-        "artifactId": "error_prone_annotations",
-        "version": "2.4.0",
-        "nugetVersion": "2.4.0",
-        "nugetId": "Xamarin.Google.ErrorProne.Annotations",
-        "dependencyOnly": false,
-        "templateSet": "errorprone"
-      },
-      {
-        "groupId": "io.perfmark",
-        "artifactId": "perfmark-api",
-        "version": "0.23.0",
-        "nugetVersion": "0.23.0",
-        "nugetId": "Xamarin.Io.PerfMark.PerfMarkApi",
-        "dependencyOnly": false,
-        "templateSet": "perfmark"
-      },
-      {
         "groupId": "com.google.android",
         "artifactId": "annotations",
         "version": "4.1.1.4",
         "nugetVersion": "4.1.1.4",
         "nugetId": "Xamarin.GoogleAndroid.Annotations",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "annotations"
       },
       {
         "groupId": "org.codehaus.mojo",
         "artifactId": "animal-sniffer-annotations",
         "version": "1.18",
-        "nugetVersion": "1.18.0",
+        "nugetVersion": "1.18.0.1",
         "nugetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
         "dependencyOnly": false,
         "templateSet": "codehaus-mojo"
