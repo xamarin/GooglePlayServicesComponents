@@ -1686,8 +1686,8 @@
       {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "okhttp-urlconnection",
-        "version": "4.3.1",
-        "nugetVersion": "4.3.1.1",
+        "version": "4.9.2",
+        "nugetVersion": "4.9.2",
         "nugetId": "Square.OkHttp3.UrlConnection",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
@@ -1770,6 +1770,14 @@
         "version": "1.5.31",
         "nugetVersion": "1.5.31.2",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.jetbrains.kotlin",
+        "artifactId": "kotlin-stdlib-jdk8",
+        "version": "1.5.31",
+        "nugetVersion": "1.5.31.2",
+        "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": true
       }
     ],
