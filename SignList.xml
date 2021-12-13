@@ -23,6 +23,7 @@
     <FirstParty Include="Xamarin.Io.PerfMark.PerfMarkApi.dll" />
     <FirstParty Include="Xamarin.Protobuf.Lite.dll" />
     <FirstParty Include="Xamarin.Protobuf.JavaLite.dll" />
+    <FirstParty Include="Xamarin.GoogleAndroid.Annotations.dll" />
   </ItemGroup>
 
   <ItemGroup>
