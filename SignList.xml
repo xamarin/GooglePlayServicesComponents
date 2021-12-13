@@ -12,7 +12,17 @@
     <FirstParty Include="Jsr305Binding.dll" />
     <FirstParty Include="disklrucache.jar" />
     <FirstParty Include="Xamarin.JavaX.Inject.dll" />
-    <FirstParty Include="Xamarin.Google.UserMessagingPlatform.dll" />    
+    <FirstParty Include="Xamarin.Google.UserMessagingPlatform.dll" />
+    <FirstParty Include="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations.dll" />
+    <FirstParty Include="Xamarin.Google.Android.DataTransport.TransportApi.dll" />
+    <FirstParty Include="Xamarin.Google.Android.DataTransport.TransportBackendCct.dll" />
+    <FirstParty Include="Xamarin.Google.Android.DataTransport.TransportRuntime.dll" />
+    <FirstParty Include="Xamarin.Google.ErrorProne.Annotations.dll" />
+    <FirstParty Include="Xamarin.Io.OpenCensus.OpenCensusApi.dll" />
+    <FirstParty Include="Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics.dll" />
+    <FirstParty Include="Xamarin.Io.PerfMark.PerfMarkApi.dll" />
+    <FirstParty Include="Xamarin.Protobuf.Lite.dll" />
+    <FirstParty Include="Xamarin.Protobuf.JavaLite.dll" />
   </ItemGroup>
 
   <ItemGroup>
