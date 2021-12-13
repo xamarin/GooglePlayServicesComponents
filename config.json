@@ -1668,8 +1668,8 @@
       {
         "groupId": "com.squareup.okio",
         "artifactId": "okio",
-        "version": "2.7.0",
-        "nugetVersion": "2.7.0",
+        "version": "2.10.0",
+        "nugetVersion": "2.10.0",
         "nugetId": "Square.OkIO",
         "dependencyOnly": false,
         "templateSet": "squareup-okio"
@@ -1677,8 +1677,8 @@
       {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "okhttp",
-        "version": "4.8.1",
-        "nugetVersion": "4.8.1",
+        "version": "4.9.2",
+        "nugetVersion": "4.9.2",
         "nugetId": "Square.OkHttp3",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
