@@ -162,6 +162,7 @@
     <PackageReference Update="Xamarin.Chromium.CroNet.Common" Version="76.3809.111.2" />
     <PackageReference Update="Xamarin.Chromium.CroNet.Embedded" Version="76.3809.111.2" />
     <PackageReference Update="Xamarin.Chromium.CroNet.Fallback" Version="76.3809.111.2" />
+    <PackageReference Update="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations" Version="1.18.0.1" />
     <PackageReference Update="Xamarin.TensorFlow.Lite" Version="2.5.0.2" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu" Version="2.5.0.2" />
     <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.2.0" />
@@ -183,6 +184,7 @@
     <PackageReference Update="Xamarin.AndroidX.RecyclerView" Version="1.1.0.8" />
     <PackageReference Update="Xamarin.AndroidX.VectorDrawable.Animated" Version="1.1.0.10" />
     <PackageReference Update="Xamarin.AndroidX.Work.Runtime" Version="2.5.0.1" />
+    <PackageReference Update="Xamarin.GoogleAndroid.Annotations" Version="4.1.1.4" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="3.0.0" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="3.0.0" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="3.0.1" />
@@ -208,18 +210,9 @@
     <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.Protobuf.Lite" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.Stub" Version="1.28.0" />
-    <PackageReference Update="Xamarin.Android.ReactiveX.RxAndroid" Version="2.1.1.1" />
-    <PackageReference Update="Xamarin.Android.ReactiveX.RxJava" Version="2.2.10" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="117.0.1" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="116.3.0" />
-    <PackageReference Update="Xamarin.Firebase.Analytics" Version="116.3.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
-    <PackageReference Update="Xamarin.Kotlin.StdLib.Common" Version="1.5.31.2" />
+    <PackageReference Update="Xamarin.Android.ReactiveX.RxAndroid" Version="2.1.1" />
+    <PackageReference Update="Xamarin.Android.ReactiveX.RxJava" Version="2.2.7" />
     <PackageReference Update="Xamarin.Kotlin.StdLib" Version="1.5.31.2" />
-    <PackageReference Update="Xamarin.Google.Guava" Version="29.0.0" />
-    <PackageReference Update="Xamarin.Grpc.Context" Version="1.28.0" />
-    <PackageReference Update="Xamarin.GoogleAndroid.Annotations" Version="4.1.1.4" />
-    <PackageReference Update="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations" Version="1.18.0.1" />
+    <PackageReference Update="Xamarin.Kotlin.StdLib.Common" Version="1.5.31.2" />
   </ItemGroup>
 </Project>
