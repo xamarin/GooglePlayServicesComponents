@@ -24,8 +24,6 @@
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageProjectUrl>
-    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</PackageLicenseUrl>
-    <RepositoryUrl>http://code.google.com/p/atinject/</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 
     @foreach (var art in @Model.MavenArtifacts) 
@@ -35,11 +33,14 @@
       <AssemblyName>@Model.NuGetPackageId</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Xamarin.JavaX.Inject":
-            <Title>JavaX Inject bindings for Xamarin.Android</Title>
-            <Summary>Xamarin.Android bindings for Javax Inject</Summary>
-            <PackageDescription>Xamarin.Android bindings for JavaX Inject</PackageDescription>
-            <PackageTags>xamarin, android, bindings, javax, inject</PackageTags>
+          case "Square.Retrofit":
+            <Title>Retrofit bindings for Xamarin.Android</Title>
+            <Summary>A type-safe HTTP client for Android and Java.</Summary>
+            <Description>A type-safe HTTP client for Android and Java.</Description>
+            <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+            <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
+            <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+            <PackageTags>retrofit xamarin android monodroid</PackageTags>
             break; 
           default:
             break; 
@@ -79,11 +80,12 @@
     <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" />
       }
     }
+    <PackageReference Include="GoogleGson" Version="2.8.8.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\javax-inject\License.md" Pack="true" PackagePath="LICENSE.md" />
-    <None Include="..\..\templates\javax-inject\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\templates\squareup-retrofit\License.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\squareup-retrofit\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
 </Project>

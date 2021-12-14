@@ -192,6 +192,11 @@ Task ("spell-check")
                 "TransportBackendCct",
                 "TransportApi",
                 "UserMessagingPlatform",
+                "OkHttp",
+                "OkIO",
+                "OkHttp3",
+                "OkHttp3",
+                "UrlConnection",
                 "PerfMark",
                 "PerfMarkApi",
             };

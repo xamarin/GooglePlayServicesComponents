@@ -24,7 +24,6 @@
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageProjectUrl>
-    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</PackageLicenseUrl>
     <RepositoryUrl>http://code.google.com/p/atinject/</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 
@@ -35,12 +34,23 @@
       <AssemblyName>@Model.NuGetPackageId</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Xamarin.JavaX.Inject":
-            <Title>JavaX Inject bindings for Xamarin.Android</Title>
-            <Summary>Xamarin.Android bindings for Javax Inject</Summary>
-            <PackageDescription>Xamarin.Android bindings for JavaX Inject</PackageDescription>
-            <PackageTags>xamarin, android, bindings, javax, inject</PackageTags>
+          case "Square.OkHttp3":
+            <Title>OkHttp v3 bindings for Xamarin.Android</Title>
+            <Summary>An HTTP+HTTP/2 client for Android and Java applications.</Summary>
+            <Description>An HTTP+HTTP/2 client for Android and Java applications.</Description>
+            <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+            <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
+            <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+            <PackageTags>okhttp square square.okhttp xamarin android monodroid</PackageTags>
             break; 
+          case "Square.OkHttp3.UrlConnection":
+            <Title>OkHttp v3 UrlConnection bindings for Xamarin.Android</Title>
+            <Summary>OkHttp ability to be used with HttpURLConnection.</Summary>
+            <Description>OkHttp ability to be used with HttpURLConnection.</Description>
+            <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+            <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+            <PackageTags>okhttp square square.okhttp xamarin android monodroid</PackageTags>
+           break;             
           default:
             break; 
       }
@@ -82,8 +92,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\javax-inject\License.md" Pack="true" PackagePath="LICENSE.md" />
-    <None Include="..\..\templates\javax-inject\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\templates\squareup-okhttp3\License.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\squareup-okhttp3\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
 </Project>
