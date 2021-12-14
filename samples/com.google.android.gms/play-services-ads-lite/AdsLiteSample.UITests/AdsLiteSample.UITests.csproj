@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>AdsLiteSample.UITests</RootNamespace>
     <AssemblyName>AdsLiteSample.UITests</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

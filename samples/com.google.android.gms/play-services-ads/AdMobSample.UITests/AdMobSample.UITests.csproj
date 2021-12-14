@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>AdMobSample.UITests</RootNamespace>
     <AssemblyName>AdMobSample.UITests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>FirebaseCrashReportingQuickstart.UITests</RootNamespace>
     <AssemblyName>FirebaseCrashReportingQuickstart.UITests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
