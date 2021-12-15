@@ -203,7 +203,7 @@
     <PackageReference Update="Square.Retrofit" Version="1.9.0.1" />
     <PackageReference Update="Square.OkIO" Version="2.10.0" />
     <PackageReference Update="Square.OkHttp3" Version="4.9.2" />
-    <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.3.1.1" />
+    <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.9.2" />
     <PackageReference Update="Square.Picasso" Version="2.8.0" />
     <PackageReference Update="Xamarin.Grpc.Android" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.Context" Version="1.28.0" />
@@ -214,5 +214,6 @@
     <PackageReference Update="Xamarin.Android.ReactiveX.RxJava" Version="2.2.7" />
     <PackageReference Update="Xamarin.Kotlin.StdLib" Version="1.5.31.2" />
     <PackageReference Update="Xamarin.Kotlin.StdLib.Common" Version="1.5.31.2" />
+    <PackageReference Update="Xamarin.Kotlin.StdLib.Jdk8" Version="1.5.31.2" />
   </ItemGroup>
 </Project>
