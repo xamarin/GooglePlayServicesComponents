@@ -199,21 +199,12 @@
     <PackageReference Update="Xamarin.Google.Guava.ListenableFuture" Version="1.0.0.2" />
     <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.14.0" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1" />
-    <PackageReference Update="Square.OkHttp" Version="2.7.5.1" />
-    <PackageReference Update="Square.Retrofit" Version="1.9.0.1" />
-    <PackageReference Update="Square.OkIO" Version="2.10.0" />
-    <PackageReference Update="Square.OkHttp3" Version="4.9.2" />
-    <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.9.2" />
-    <PackageReference Update="Square.Picasso" Version="2.8.0" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.2" />
     <PackageReference Update="Square.Retrofit" Version="1.9.0.2" />
     <PackageReference Update="Square.OkIO" Version="2.10.0.1" />
     <PackageReference Update="Square.OkHttp3" Version="4.9.2.1" />
     <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.9.2.1" />
     <PackageReference Update="Square.Picasso" Version="2.8.0.1" />
-    <PackageReference Update="Xamarin.Grpc.Android" Version="1.28.0" />
-    <PackageReference Update="Xamarin.Grpc.Context" Version="1.28.0" />
-    <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.Protobuf.Lite" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.Stub" Version="1.28.0" />
     <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.28.0" />
