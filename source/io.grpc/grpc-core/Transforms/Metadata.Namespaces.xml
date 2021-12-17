@@ -1,10 +1,23 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='io.grpc.inprocess']" 
         name="managedName"
         >
-        Package
+        Xamarin.Grpc.Core.InProcess
     </attr>
-    -->
+    <attr 
+        path="/api/package[@name='io.grpc.internal']" 
+        name="managedName"
+        >
+        Xamarin.Grpc.Core.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='io.grpc.util']" 
+        name="managedName"
+        >
+        Xamarin.Grpc.Core.Util
+    </attr>
+    
+    
+    
 </metadata>
