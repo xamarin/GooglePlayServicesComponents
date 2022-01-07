@@ -1677,8 +1677,8 @@
       {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "okhttp",
-        "version": "4.9.2",
-        "nugetVersion": "4.9.2.1",
+        "version": "4.9.3",
+        "nugetVersion": "4.9.3.0",
         "nugetId": "Square.OkHttp3",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
@@ -1686,8 +1686,8 @@
       {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "okhttp-urlconnection",
-        "version": "4.9.2",
-        "nugetVersion": "4.9.2.1",
+        "version": "4.9.3",
+        "nugetVersion": "4.9.3.0",
         "nugetId": "Square.OkHttp3.UrlConnection",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
