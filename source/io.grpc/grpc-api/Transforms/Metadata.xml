@@ -53,11 +53,23 @@
         public
     </attr>
 
+
     <remove-node
         path="/api/package[@name='io.grpc']/class[@name='ManagedChannelProvider']/method[@name='builderForAddress' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]"
         />
     <remove-node
         path="/api/package[@name='io.grpc']/class[@name='ManagedChannelProvider']/method[@name='builderForTarget' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
         />
+
+    <remove-node
+        path="/api/package[@name='io.grpc']/class[@name='ManagedChannelBuilder']/method[@name='intercept' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;io.grpc.ClientInterceptor&gt;']]"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc.internal']/class[@name='AbstractManagedChannelImplBuilder']/typeParameters"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/class[@name='ManagedChannelBuilder']/method[@name='intercept' and count(parameter)=1 and parameter[1][@type='io.grpc.ClientInterceptor...']]"
+        />
+
 
 </metadata>

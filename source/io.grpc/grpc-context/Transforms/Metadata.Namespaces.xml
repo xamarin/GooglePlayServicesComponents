@@ -1,10 +1,8 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='io.grpc']" 
         name="managedName"
         >
-        Package
+        Xamarin.Grpc
     </attr>
-    -->
 </metadata>
