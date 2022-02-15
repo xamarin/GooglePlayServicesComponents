@@ -1,0 +1,8 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='protobuf.lite']" 
+        name="managedName"
+        >
+        Xamarin.Grpc.Protobuf.Lite
+    </attr>
+</metadata>
