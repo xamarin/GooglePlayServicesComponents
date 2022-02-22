@@ -35,7 +35,7 @@ jobs:
     parameters:
       timeoutInMinutes: 240
       areaPath: 'DevDiv\Xamarin SDK\Android'
-      macosImage: 'macOS-11'                                  # the name of the macOS VM image (BigSur)
+      macosImage:                                             # the name of the macOS VM image (BigSur) - Disabled until we have newer XA classic packages
       windowsAgentPoolName: android-win-2022
       xcode: 13.1
       dotnet: '5.0.403'                                       # the version of .NET Core to use
