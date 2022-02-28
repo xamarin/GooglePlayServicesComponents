@@ -643,7 +643,7 @@ Task ("api-diff-analysis")
                         Information( $"     artifactId                  = {artifactId}");
                         Information( $"     artifactId  fully qualified = {groupId}.{artifactId}");
 
-                        nugets_modified.Add(d_name, $"{groupId}.{artifactId}");
+                        nugets_modified[d_name] = $"{groupId}.{artifactId}";
                     }
                 }
             }
@@ -669,7 +669,7 @@ Task ("api-diff-analysis")
                     }
                 }
 
-                api_changes_breaking_removed.Add(f.ToString(), line_numbers.ToArray());
+                api_changes_breaking_removed[f.ToString()] = line_numbers.ToArray();
             }
 
             System.IO.File.WriteAllLines("./output/commands-open-file.sh", commands.ToArray());
