@@ -23,7 +23,10 @@
     <Authors>Microsoft</Authors>
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageLicenseUrl>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageProjectUrl>
+    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/tensorflow/tensorflow/</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 
     @foreach (var art in @Model.MavenArtifacts) 
@@ -33,14 +36,61 @@
       <AssemblyName>@Model.NuGetPackageId</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Square.OkHttp":
-            <Title>OkHttp v2 bindings for Xamarin.Android</Title>
-            <Summary>An HTTP+SPDY client for Android and Java applications.</Summary>
-            <Description>An HTTP+SPDY client for Android and Java applications.</Description>
-            <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-            <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
-            <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-            <PackageTags>okhttp square square.okhttp xamarin android monodroid</PackageTags>
+          case "Xamarin.Grpc.Android":
+            <Title>Xamarin.Grpc.Android</Title>
+            <PackageDescription>
+                Bindings for Google's GRPC Android package
+            </PackageDescription>
+            <Summary>Bindings for Google's GRPC Android package</Summary>
+            <PackageTags>xamarin, android, bindings, google, grpc, android </PackageTags>
+            break; 
+          case "Xamarin.Grpc.Api":
+            <Title>Xamarin.Grpc.Api</Title>
+            <PackageDescription>
+                Bindings for Google's GRPC Api package
+            </PackageDescription>
+            <Summary>Bindings for Google's GRPC Api package</Summary>
+            <PackageTags>xamarin, android, bindings, google, grpc, api </PackageTags>
+            break; 
+          case "Xamarin.Grpc.Context":
+            <Title>Xamarin.Grpc.Context</Title>
+            <PackageDescription>
+                Bindings for Google's GRPC Context package
+            </PackageDescription>
+            <Summary>Bindings for Google's GRPC Context package</Summary>
+            <PackageTags>xamarin, android, bindings, google, grpc, context </PackageTags>
+            break; 
+          case "Xamarin.Grpc.Core":
+            <Title>Xamarin.Grpc.Core</Title>
+            <PackageDescription>
+                Bindings for Google's GRPC Core package
+            </PackageDescription>
+            <Summary>Bindings for Google's GRPC Core package</Summary>
+            <PackageTags>xamarin, android, bindings, google, grpc, core </PackageTags>
+            break; 
+          case "Xamarin.Grpc.OkHttp":
+            <Title>Xamarin.Grpc.OkHttp</Title>
+            <PackageDescription>
+                Bindings for Google's GRPC OkHttp package
+            </PackageDescription>
+            <Summary>Bindings for Google's GRPC OkHttp package</Summary>
+            <PackageTags>xamarin, android, bindings, google, grpc, okhttp </PackageTags>
+            break; 
+          case "Xamarin.Grpc.Protobuf.Lite":
+            <Title>Xamarin.Grpc.Protobuf.Lite</Title>
+            <PackageDescription>
+                Bindings for Google's GRPC Protobuf.Lite package
+            </PackageDescription>
+            <Summary>Bindings for Google's GRPC Protobuf.Lite package</Summary>
+            <PackageTags>xamarin, android, bindings, google, grpc, protobuf.lite, protobuf-lite, protobuf, lite </PackageTags>
+            break; 
+          case "Xamarin.Grpc.Stub":
+            <Title>Xamarin.Grpc.Stub</Title>
+            <PackageDescription>
+                Bindings for Google's GRPC Stub package
+            </PackageDescription>
+            <Summary>Bindings for Google's GRPC Stub package</Summary>
+            <PackageTags>xamarin, android, bindings, google, grpc, stub </PackageTags>
             break; 
           default:
             break; 
@@ -83,8 +133,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\squareup-okhttp\License.md" Pack="true" PackagePath="LICENSE.md" />
-    <None Include="..\..\templates\squareup-okhttp\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\templates\grpc\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\grpc\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
 </Project>
