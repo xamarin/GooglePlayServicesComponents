@@ -183,7 +183,7 @@
     <PackageReference Update="Xamarin.AndroidX.MediaRouter" Version="1.2.2.1" />
     <PackageReference Update="Xamarin.AndroidX.RecyclerView" Version="1.1.0.8" />
     <PackageReference Update="Xamarin.AndroidX.VectorDrawable.Animated" Version="1.1.0.10" />
-    <PackageReference Update="Xamarin.AndroidX.Work.Runtime" Version="2.5.0.1" />
+    <PackageReference Update="Xamarin.AndroidX.Work.Runtime" Version="2.7.0" />
     <PackageReference Update="Xamarin.GoogleAndroid.Annotations" Version="4.1.1.4" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="3.0.0" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="3.0.0" />
