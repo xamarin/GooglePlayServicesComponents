@@ -99,4 +99,13 @@
 
     </add-node>
 
-</metadata>
+    <remove-node
+      path="/api/package[@name='io.grpc.internal']/class[@name='ScParser']"
+      />
+    <remove-node
+      path="/api/package[@name='io.grpc.internal']/class[@name='ManagedChannelImplBuilder']"
+      />
+      <remove-node
+        path="/api/package[@name='io.grpc.internal']/class[@name='ServerImplBuilder']"
+        />
+    </metadata>

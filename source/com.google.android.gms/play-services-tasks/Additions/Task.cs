@@ -4,6 +4,7 @@ using Android.Gms.Tasks;
 using System.Runtime.CompilerServices;
 using Android.Gms.Extensions;
 
+
 namespace Android.Gms.Extensions
 {
     public static class TasksExtensions

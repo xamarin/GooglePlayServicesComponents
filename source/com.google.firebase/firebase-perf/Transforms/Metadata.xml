@@ -142,4 +142,11 @@
 		Firebase.Perf.Metrics.Validator
 	</attr>
 
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesSessionManagerFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	
 </metadata>

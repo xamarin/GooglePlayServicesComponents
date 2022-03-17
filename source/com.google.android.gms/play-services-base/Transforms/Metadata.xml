@@ -391,4 +391,21 @@
         >
         protected
     </attr>
+
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zaf']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zag']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='zaa']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='zae']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common']/class[@name='zaa']"
+        />
+
 </metadata>

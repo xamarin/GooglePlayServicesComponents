@@ -313,7 +313,9 @@
     <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='TransactionOptions.ReadOnly']/implements[@name='com.google.firestore.v1.TransactionOptions.ReadOnlyOrBuilder']" />
     <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='Value']/implements[@name='com.google.firestore.v1.ValueOrBuilder']" />
     <remove-node path="/api/package[@name='com.google.firestore.v1']/class[@name='Write']/implements[@name='com.google.firestore.v1.WriteOrBuilder']" />
-
+    <remove-node 
+        path="/api/package[@name='com.google.firestore.admin.v1']/class[@name='Index.IndexField']/implements[@name='com.google.firestore.admin.v1.Index.IndexFieldOrBuilder']"
+        />
 
 
     <attr
@@ -344,6 +346,30 @@
         >
         Firestore.Bundle
     </attr>
+    <attr
+        path="/api/package[@name='com.google.apphosting.datastore.testing']"
+        name="managedName"
+        >
+        Google.AppHosting.Datastore.Testing
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.index']"
+        name="managedName"
+        >
+        Firebase.Firestore.Index
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.admin.v1']"
+        name="managedName"
+        >
+        Firestore.Admin.V1
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']"
+        name="managedName"
+        >
+        Firestore.V1
+    </attr>
 
     <!--
     =======================================================================================================
@@ -371,6 +397,9 @@
         />
     <remove-node
         path="/api/package[@name='com.google.firestore.bundle']/class[@name='BundleElement']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.apphosting.datastore.testing']/class[@name='DatastoreTestTrace']"
         />
 
 </metadata>

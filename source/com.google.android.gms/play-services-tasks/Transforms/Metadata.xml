@@ -15,4 +15,8 @@
 
 	<remove-node path="/api/package[@name='com.google.firebase.iid']/class[@name='zzb']/method[contains(@name, 'zz')]" />
 	
+
+	<remove-node
+		path="/api/package[@name='com.google.android.gms.tasks']/class[@name='NativeOnCompleteListener']/implements"
+		/>
 </metadata>

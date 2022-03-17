@@ -216,5 +216,18 @@
       path="/api/package[@name='com.google.android.datatransport.runtime.dagger.internal']/class[@name='MapProviderFactory']/implements"
       />
 
+    <attr
+      path="/api/package[@name='com.google.android.datatransport.runtime.scheduling.persistence']/class[@name='EventStoreModule_PackageNameFactory']/method[@name='get' and count(parameter)=0]"
+      name="managedReturn"
+      >
+      Java.Lang.Object
+    </attr>
 
+    <attr
+        path="/api/package[@name='com.google.android.datatransport.runtime.firebase.transport']"
+        name="managedName"
+        >
+        Xamarin.Google.Android.DataTransport.Runtime.Firebase.Transport
+    </attr>
+    
 </metadata>
