@@ -539,7 +539,7 @@ Task("libs")
 
 	foreach(string config in Configs)
 	{
-		var settings = new DotNetCoreMSBuildSettings()
+		var settings = new DotNetMSBuildSettings()
 			.SetConfiguration(config)
 			.SetMaxCpuCount(MAX_CPU_COUNT)
 			.EnableBinaryLogger("./output/libs.binlog");
@@ -552,12 +552,36 @@ Task("libs")
 			settings.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
 		}
 
-		DotNetCoreRestore("./generated/GooglePlayServices.sln", new DotNetCoreRestoreSettings
-		{ 
-			MSBuildSettings = settings.EnableBinaryLogger("./output/restore.binlog")
-		});
+		try
+		{
+			DotNetRestore
+				(
+					"./generated/GooglePlayServices.sln", 
+					new DotNetRestoreSettings
+					{ 
+						MSBuildSettings = settings.EnableBinaryLogger("./output/restore-1.binlog")
+					}
+				);
+		}
+		catch
+		{
+			Warning("############################################################################################");
+			Warning("running DotNetRestore 2nd time");
+			Warning("		https://github.com/NuGet/Home/issues/4681");
+			Warning("		https://github.com/NuGet/Home/issues/10741");
+			Warning("		https://github.com/NuGet/Home/issues/10127");
+			Warning("############################################################################################");
+		}
+		DotNetRestore
+			(
+				"./generated/GooglePlayServices.sln", 
+				new DotNetRestoreSettings
+				{ 
+					MSBuildSettings = settings.EnableBinaryLogger("./output/restore-2.binlog")
+				}
+			);
 		
-		DotNetCoreMSBuild("./generated/GooglePlayServices.sln", settings);
+		DotNetMSBuild("./generated/GooglePlayServices.sln", settings);
 	}
 });
 
@@ -738,7 +762,7 @@ Task("nuget")
 {
 	var outputPath = new DirectoryPath("./output");
 
-	var settings = new DotNetCoreMSBuildSettings()
+	var settings = new DotNetMSBuildSettings()
 		.SetConfiguration("Release")
 		.SetMaxCpuCount(MAX_CPU_COUNT)
 		.EnableBinaryLogger ("./output/nuget.binlog");
@@ -754,7 +778,7 @@ Task("nuget")
 		settings.Properties.Add("AndroidSdkDirectory", new[] { $"{ANDROID_HOME}" });
 	}
 
-	DotNetCoreMSBuild ("./generated/GooglePlayServices.sln", settings);
+	DotNetMSBuild ("./generated/GooglePlayServices.sln", settings);
 });
 
 Task ("merge")
