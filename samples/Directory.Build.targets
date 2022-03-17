@@ -5,7 +5,6 @@
     <PackageReference Update="Xamarin.Android.Glide.GifDecoder" Version="4.12.0.6" />
     <PackageReference Update="Xamarin.Android.Glide" Version="4.12.0.6" />
     <PackageReference Update="Xamarin.Android.Glide.RecyclerViewIntegration" Version="4.12.0.6" />
-    <PackageReference Update="Xamarin.GoogleAndroid.Annotations" Version="4.1.1.5" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="3.0.0.2" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="3.0.0.2" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="3.0.1.2" />
@@ -179,6 +178,7 @@
     <PackageReference Update="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations" Version="1.18.0.2" />
     <PackageReference Update="Xamarin.TensorFlow.Lite" Version="2.5.0.3" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu" Version="2.5.0.3" />
+    <PackageReference Update="Xamarin.GoogleAndroid.Annotations" Version="4.1.1.5" />
     <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.2.0" />
     <PackageReference Update="Xamarin.AndroidX.AppCompat" Version="1.2.0.7" />
     <PackageReference Update="Xamarin.AndroidX.Browser" Version="1.3.0.5" />
@@ -208,8 +208,8 @@
     <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.6.6" />
     <PackageReference Update="GoogleGson" Version="2.8.8.2" />
     <PackageReference Update="Xamarin.Firebase.Analytics" Version="116.3.0" />
-    <PackageReference Update="Xamarin.Google.Guava" Version="28.2.0" />
     <PackageReference Update="Xamarin.Google.Guava" Version="29.0.0" />
+    <PackageReference Update="Xamarin.Google.Guava" Version="28.2.0" />
     <PackageReference Update="Xamarin.Google.Guava.ListenableFuture" Version="1.0.0.2" />
     <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.14.0" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1" />
