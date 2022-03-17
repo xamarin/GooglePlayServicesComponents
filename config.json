@@ -71,15 +71,6 @@
         "templateSet": "glide"
       },
       {
-        "groupId": "com.google.android",
-        "artifactId": "annotations",
-        "version": "4.1.1.4",
-        "nugetVersion": "4.1.1.5",
-        "nugetId": "Xamarin.GoogleAndroid.Annotations",
-        "dependencyOnly": false,
-        "templateSet": "annotations"
-      },
-      {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-api",
         "version": "3.0.0",
@@ -1501,6 +1492,15 @@
         "templateSet": "tensorflow-lite"
       },
       {
+        "groupId": "com.google.android",
+        "artifactId": "annotations",
+        "version": "4.1.1.4",
+        "nugetVersion": "4.1.1.5",
+        "nugetId": "Xamarin.GoogleAndroid.Annotations",
+        "dependencyOnly": false,
+        "templateSet": "annotations"
+      },
+      {
         "groupId": "androidx.annotation",
         "artifactId": "annotation",
         "version": "1.2.0",
@@ -1735,16 +1735,16 @@
       {
         "groupId": "com.google.guava",
         "artifactId": "guava",
-        "version": "28.2.0",
-        "nugetVersion": "28.2.0",
+        "version": "29.0-android",
+        "nugetVersion": "29.0.0",
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.guava",
         "artifactId": "guava",
-        "version": "29.0-android",
-        "nugetVersion": "29.0.0",
+        "version": "28.2.0",
+        "nugetVersion": "28.2.0",
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": true
       },
