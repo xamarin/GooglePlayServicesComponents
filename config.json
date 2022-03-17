@@ -618,14 +618,6 @@
         "dependencyOnly": false
       },
       {
-        "groupId": "com.google.android.play",
-        "artifactId": "core-ktx",
-        "version": "1.8.1",
-        "nugetVersion": "1.8.1.0",
-        "nugetId": "Xamarin.Google.Android.Play.Core.Ktx",
-        "dependencyOnly": false
-      },
-      {
         "groupId": "com.google.android.ump",
         "artifactId": "user-messaging-platform",
         "version": "2.0.0",
@@ -984,8 +976,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-measurement-connector-impl",
-        "version": "17.0.5",
-        "nugetVersion": "117.0.5.4",
+        "version": "17.0.2",
+        "nugetVersion": "117.0.2.1",
         "nugetId": "Xamarin.Firebase.Measurement.Connector.Impl",
         "dependencyOnly": false
       },
@@ -1526,6 +1518,15 @@
         "templateSet": "squareup-picasso"
       },
       {
+        "groupId": "com.squareup",
+        "artifactId": "javapoet",
+        "version": "1.13.0",
+        "nugetVersion": "1.13.0.0",
+        "nugetId": "Square.JavaPoet",
+        "dependencyOnly": false,
+        "templateSet": "squareup-javapoet"
+      },
+      {
         "groupId": "io.grpc",
         "artifactId": "grpc-protobuf-lite",
         "version": "1.41.0",
@@ -1679,8 +1680,8 @@
       {
         "groupId": "com.google.guava",
         "artifactId": "guava",
-        "version": "30.1-android",
-        "nugetVersion": "30.1.0",
+        "version": "30.1.1-android",
+        "nugetVersion": "30.1.1",
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": true
       },
@@ -1912,7 +1913,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
         "version": "16.3.0",
-        "nugetVersion": "16.3.0",
+        "nugetVersion": "116.3.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": true
       },
@@ -2159,6 +2160,21 @@
         [
           {
             "templateFile": "templates/squareup-picasso/Project.cshtml",
+             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "squareup-javapoet",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": 
+        [
+          {
+            "templateFile": "templates/squareup-javapoet/Project.cshtml",
              "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
