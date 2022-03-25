@@ -266,8 +266,25 @@
         >
         Firebase.Firestore.Model.Value.FieldValue
     </attr>
-        
-        
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/class[@name='FirestoreGrpc.FirestoreStub']/method[@name='build' and count(parameter)=2 and parameter[1][@type='io.grpc.Channel'] and parameter[2][@type='io.grpc.CallOptions']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/class[@name='FirestoreGrpc.FirestoreBlockingStub']/method[@name='build' and count(parameter)=2 and parameter[1][@type='io.grpc.Channel'] and parameter[2][@type='io.grpc.CallOptions']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/class[@name='FirestoreGrpc.FirestoreFutureStub']/method[@name='build' and count(parameter)=2 and parameter[1][@type='io.grpc.Channel'] and parameter[2][@type='io.grpc.CallOptions']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
     <remove-node
         path="/api/package[@name='com.google.firebase.firestore.model.value']/class[@name='FieldValue']/method[@name='value' and count(parameter)=0]"
         />
