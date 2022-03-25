@@ -30,8 +30,8 @@ var REF_PARAMNAMES_URL = "https://bosstoragemirror.blob.core.windows.net/android
 // Resolve Xamarin.Android installation
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
 var ANDROID_SDK_BASE_VERSION = "v1.0";
-var ANDROID_SDK_VERSION = "v9.0";
-string AndroidSdkBuildTools = $"29.0.2";
+var ANDROID_SDK_VERSION = "v12.0";
+string AndroidSdkBuildTools = $"32.0.0";
 
 if (string.IsNullOrEmpty(XAMARIN_ANDROID_PATH)) {
 	if (IsRunningOnWindows()) {
