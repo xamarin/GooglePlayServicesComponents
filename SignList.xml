@@ -25,6 +25,7 @@
     <FirstParty Include="Xamarin.Protobuf.JavaLite.dll" />
     <FirstParty Include="Xamarin.GoogleAndroid.Annotations.dll" />
     <FirstParty Include="Square.*.dll" />
+    <FirstParty Include="Xamarin.Grpc.*.dll" />
   </ItemGroup>
 
   <ItemGroup>

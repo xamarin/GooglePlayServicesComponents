@@ -7,6 +7,8 @@
 #addin nuget:?package=Newtonsoft.Json&version=12.0.3
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
 
+using System.Collections.Generic;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -42,6 +44,7 @@ Task ("list-artifacts")
             lines1.Add(Environment.NewLine);
             lines2.Add(Environment.NewLine);
             lines2.Add(Environment.NewLine);
+            // | Maven Fully Qualified Artifact                                       | NuGet Package                                                        |
             lines1.Add($@"|{space.PadRight(width1)}|{space.PadRight(width1)}|");
             lines1.Add($@"|{dash.PadRight(width1, '-')}|{dash.PadRight(width1, '-')}|");
             lines2.Add($@"|{space.PadRight(width1)}|{space.PadRight(width2)}|{space.PadRight(width1)}|{space.PadRight(width2)}|");
@@ -261,11 +264,19 @@ Task ("namespace-check")
             FilePath[] files = new FilePath[]{};
             FilePath[] files_com = GetFiles("./generated/**/Com.*.cs").ToArray();
             FilePath[] files_org = GetFiles("./generated/**/Org.*.cs").ToArray();
-            FilePath[] files_io = GetFiles("./generated/**/Io.*.cs").ToArray();
+            FilePath[] files_io_1 = GetFiles("./generated/**/Io.*.cs").ToArray();
+            FilePath[] files_io_2 = GetFiles("./generated/**/IO.*.cs").ToArray();
+            FilePath[] files_net = GetFiles("./generated/**/Net.*.cs").ToArray();
+            FilePath[] files_kotlin = GetFiles("./generated/**/Kotlin*.cs").ToArray();
+            FilePath[] files_kotlinx = GetFiles("./generated/**/Kotlinx*.cs").ToArray();
 
             files = files.Concat(files_com.ToArray()).ToArray();
             files = files.Concat(files_org.ToArray()).ToArray();
-            files = files.Concat(files_io.ToArray()).ToArray();
+            files = files.Concat(files_net.ToArray()).ToArray();
+            files = files.Concat(files_io_1.ToArray()).ToArray();
+            files = files.Concat(files_io_2.ToArray()).ToArray();
+            files = files.Concat(files_kotlin.ToArray()).ToArray();
+            files = files.Concat(files_kotlinx.ToArray()).ToArray();
 
             if (files.Any())
             {
@@ -304,6 +315,153 @@ Task("binderate-diff")
 			Information("Exit code: {0}", exitCodeWithoutArguments);
 		}
 	);
+
+
+void RunProcess(FilePath file, string args)
+{
+    int exit_code = StartProcess(file, args);
+    if (exit_code != 0)
+    {
+        throw new Exception ($"Process {file} exited with code {exit_code}.");
+    }
+
+    return;
+}
+
+System.Xml.XmlDocument xmldoc = null;
+System.Xml.XmlNamespaceManager nsmgr = null;
+
+Task ("target-sdk-version-check")
+    .Does
+    (
+        () =>
+        {
+            FilePath        config_file = MakeAbsolute(new FilePath("./config.json")).FullPath;
+            DirectoryPath   base_path = MakeAbsolute(new DirectoryPath ("./")).FullPath;
+
+            // Run the dotnet tool for binderator
+            RunProcess
+            (
+                "xamarin-android-binderator",
+                $"--config=\"{config_file}\" --basepath=\"{base_path}\""
+            );
+
+            Dictionary<(string group, string artifact), int> artifacts_target_sdk = null;
+            Dictionary<(string group, string artifact), string> artifacts_versions = null;
+            Parallel.Invoke
+            (
+                () =>
+                {
+                    FilePath[] files_android_manifests = GetFiles("./externals/**/AndroidManifest.xml").ToArray();
+                    foreach(FilePath fp in files_android_manifests)
+                    {
+                        Information($"files_android_manifest = {fp}");
+                    }
+
+                    artifacts_target_sdk = new Dictionary<(string group, string artifact), int>();
+
+                    foreach(FilePath fp in files_android_manifests)
+                    {
+                        Information($"      AndroidManifest = {fp}");
+                        xmldoc = new System.Xml.XmlDocument();
+                        xmldoc.Load(fp.ToString());
+
+                        nsmgr = new System.Xml.XmlNamespaceManager(xmldoc.NameTable);
+                        nsmgr.AddNamespace("android", "http://schemas.android.com/apk/res/android");
+
+                        string t = xmldoc.SelectSingleNode($@"/manifest/uses-sdk/@android:targetSdkVersion", nsmgr)?.Value;
+                        string mc = xmldoc.SelectSingleNode($@"/manifest/uses-sdk/@android:minCompileSdk", nsmgr)?.Value;
+
+                        string[] path_parts = fp
+                                                .ToString()
+                                                .Split
+                                                    (
+                                                        new char[]{ '/' },
+                                                        System.StringSplitOptions.None
+                                                    );
+
+                        string a = path_parts[path_parts.Length - 2];
+                        string g = path_parts[path_parts.Length - 3];
+                                                
+                        Information($"              artifact  = {g}:{a} - target SDK version = {t} min compile SDK = {mc}");
+                        int t_sdk; 
+                        bool ok = int.TryParse(t, out t_sdk);
+                        if (ok)
+                        {
+                            artifacts_target_sdk.Add((g,a), t_sdk);
+                        }
+                    }
+
+                    return;
+                },
+                () =>
+                {
+                    FilePath[] files_poms = GetFiles("./externals/**/*.pom").ToArray();
+                    foreach(FilePath fp in files_poms)
+                    {
+                        Information($"files_android_pom     = {fp}");
+                    }
+
+                    artifacts_versions = new Dictionary<(string group, string artifact), string>();
+
+
+                    foreach(FilePath fp in files_poms)
+                    {
+                        Information($"      pom.xml = {fp}");
+                        xmldoc = new System.Xml.XmlDocument();
+                        xmldoc.Load(fp.ToString());
+
+                        nsmgr = new System.Xml.XmlNamespaceManager(xmldoc.NameTable);
+                        nsmgr.AddNamespace("pom", "http://maven.apache.org/POM/4.0.0");
+
+                        string v = xmldoc.SelectSingleNode($@"/pom:project/pom:version", nsmgr)?.InnerText;
+                        Information($"              version     = {v}");
+                        if ( v == null )
+                        {
+                            v = xmldoc.SelectSingleNode($@"/pom:project/pom:parent/pom:version", nsmgr)?.InnerText;
+                        }
+                        
+                        string g = xmldoc.SelectSingleNode($@"/pom:project/pom:groupId", nsmgr)?.InnerText;
+                        if ( g == null )
+                        {
+                            g = xmldoc.SelectSingleNode($@"/pom:project/pom:parent/pom:groupId", nsmgr)?.InnerText;
+                        }
+                        Information($"              groupId     = {g}");
+
+                        string a = xmldoc.SelectSingleNode($@"/pom:project/pom:artifactId", nsmgr)?.InnerText;
+                        Information($"              artifactId  = {a}");
+
+                        artifacts_versions.Add((g, a), v);
+                    }
+                    return;
+                }
+            );
+
+            Dictionary<(string group, string artifact), (string version, int sdk)> artifact_fq_sdk;
+            artifact_fq_sdk = new Dictionary<(string group, string artifact), (string version, int sdk)>();
+
+            foreach (KeyValuePair<(string group, string artifact), int> ga in artifacts_target_sdk)
+            {
+                int t_sdk = ga.Value;
+                string v = artifacts_versions[ga.Key];
+                
+                artifact_fq_sdk.Add((ga.Key.group, ga.Key.artifact), (v, t_sdk));
+            }
+
+            List<string> log_artifacts_sdk_targets = new List<string>();
+
+            foreach (KeyValuePair<(string g, string a), (string v, int sdk)> ga in artifact_fq_sdk)
+            {
+                string log = $"{ga.Key.g}.{ga.Key.a}:{ga.Value.v} - SDK {ga.Value.sdk}";
+                Information(log);
+                log_artifacts_sdk_targets.Add(log);
+            }
+
+            System.IO.File.WriteAllLines("./output/artifacts_sdk_targets.md", log_artifacts_sdk_targets.ToArray());
+
+            return;
+        }
+    );
 
 Task ("api-diff-markdown-info-pr")
     .IsDependentOn("binderate-diff")
@@ -436,18 +594,162 @@ string ParseDiffLine(string line, string name)
                     )
                     .Replace("\"", "")
                     .Replace("+", "")
+                    .Replace("-", "")
                     .Replace(":", "")
                     .Replace(name, "")
                     .Replace(",", "")
                     ;
 }
 
+
+Task ("api-diff-analysis")
+    .Does
+    (
+        () =>
+        {
+            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            {
+                JsonTextReader jtr = new JsonTextReader(reader);
+                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+            }
+
+            DirectoryPathCollection directories = GetSubDirectories("./output/api-diff");
+            Dictionary<string, string>  nugets_modified = new Dictionary<string, string>();
+            Dictionary<string, int[]>   api_changes_breaking_removed = new Dictionary<string, int[]>();
+
+            foreach(DirectoryPath d in directories)
+            {
+                string d_name = d.GetDirectoryName();
+
+                Information( $"Directory    = {d}");
+                Information( $"     nugetId    = {d.GetDirectoryName()}");
+
+                string groupId      = null;
+                string artifactId   = null;
+                string nugetId      = null;
+                string nugetVersion = null;
+                // no guarantees thta config.json is sorted, so linear "search"
+                // TODO: sort + (LINQ or binary serch)
+                foreach(JObject jo in binderator_json_array[0]["artifacts"])
+                {
+                    groupId      = (string) jo["groupId"];
+                    artifactId   = (string) jo["artifactId"];
+                    nugetId      = (string) jo["nugetId"];
+                    nugetVersion = (string) jo["nugetVersion"];
+
+                    if (nugetId == d_name)
+                    {
+                        Information( $"     groupId                     = {groupId}");
+                        Information( $"     artifactId                  = {artifactId}");
+                        Information( $"     artifactId  fully qualified = {groupId}.{artifactId}");
+
+                        nugets_modified[d_name] = $"{groupId}.{artifactId}";
+                    }
+                }
+            }
+
+            FilePathCollection files = GetFiles(@"./output/api-diff/**/*.dll.breaking.md");
+            List<string> commands = new List<string>();
+
+            foreach(FilePath f in files)
+            {
+                Information($"file = {f}");
+
+                string[] lines_in_file = System.IO.File.ReadAllLines(f.ToString());
+                List<int> line_numbers = new List<int>();
+
+                for(int i=0; i<lines_in_file.Length; i++)
+                {
+                    if (lines_in_file[i].ToLower().Contains("remove"))
+                    {
+                        line_numbers.Add(i + 1);
+                        string command = $"code -n -g {f}:{i + 1}";
+                        Information($"      command = {command}");
+                        commands.Add(command);
+                    }
+                }
+
+                api_changes_breaking_removed[f.ToString()] = line_numbers.ToArray();
+            }
+
+            System.IO.File.WriteAllLines("./output/commands-open-file.sh", commands.ToArray());
+
+            var nugets_modified_ordered = nugets_modified.ToList();
+
+            nugets_modified_ordered.Sort((pair1,pair2) => pair1.Value.CompareTo(pair2.Value));
+
+            string[] lines = nugets_modified_ordered
+                                            .Select(kv => $"- {kv.Value}" + Environment.NewLine + "\t - " + kv.Key)
+                                            .ToArray();
+            System.IO.File.WriteAllLines("./output/nugets-with-changed-APIs.md", lines);
+
+            return;
+        }
+    );
+
+Task("nuget-structure-analysis")
+.Does
+    (
+        () =>
+        {
+            string path = "./output/*.nupkg";
+            FilePathCollection files_configs = GetFiles(path);
+            foreach(FilePath f in files_configs)
+            {
+                Information($"File  = {f}");
+                string d_zip = $"{f.ToString().Replace(".nupkg", "")}";
+                if (DirectoryExists(d_zip))
+                {
+                    DeleteDirectory
+                            (
+                                d_zip, 
+                                new DeleteDirectorySettings 
+                                {
+                                    Recursive = true,
+                                    Force = true
+                                }
+                            );
+                }
+                Unzip($"{f}", d_zip);
+
+                IEnumerable<string> redirected_std_out;
+                IEnumerable<string> redirected_std_err;
+                int exit_code =
+                                StartProcess
+                                    (
+                                        "tree",
+                                        new ProcessSettings 
+                                        {
+                                            Arguments = $"-H {f.ToString().Replace(".nupkg", "")}",
+                                            // WorkingDirectory = "./"
+                                            RedirectStandardOutput = true,
+                                            RedirectStandardError = true
+                                        },
+                                        out redirected_std_out,
+                                        out redirected_std_err
+                                    );
+                
+                System.IO.File.WriteAllLines
+                                    (
+                                        $"{f.ToString().Replace(".nupkg", ".md")}", 
+                                        redirected_std_out.ToArray()
+                                    );
+            }
+        }
+    );
+
+
+
+
+
 Task ("read-analysis-files")
     .IsDependentOn ("binderate-diff")
     .IsDependentOn ("api-diff-markdown-info-pr")
     .IsDependentOn ("namespace-check")
     .IsDependentOn ("spell-check")
+    .IsDependentOn ("api-diff-analysis")
     .IsDependentOn ("list-artifacts")
+    .IsDependentOn ("nuget-structure-analysis")
     .Does
     (
         () =>
@@ -457,6 +759,12 @@ Task ("read-analysis-files")
                 "./output/spell-errors.txt",
                 "./output/changelog.md",
                 "./output/config.json.diff-from-main.txt",
+                "./output/missing_dotnet_override_type.csv",
+                "./output/missing_dotnet_type.csv",
+                "./output/missing_java_type.csv",
+                "./output/nugets-with-changed-APIs.md",
+                "./output/commands-open-file.sh",
+                "./output/artifacts_sdk_targets.md",
             };
 
             if ( ! FileExists("./output/spell-errors.txt") )
@@ -474,6 +782,33 @@ Task ("read-analysis-files")
          	};
 			int exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
 			Information("Exit code: {0}", exitCodeWithoutArguments);
+        }
+    );
+
+
+Task("dependencies")
+    .Does
+    (
+        () =>
+        {
+            if (!(binderator_json_array?.Count > 0))
+            {
+                using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+                {
+                    JsonTextReader jtr = new JsonTextReader(reader);
+                    binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+                }
+            }
+
+            Warning("config.json dependencies ...");
+            foreach(JObject jo in binderator_json_array[0]["artifacts"])
+            {
+                string groupId      = (string) jo["groupId"];
+                string artifactId   = (string) jo["artifactId"];
+                string nugetId      = (string) jo["nugetId"];
+                string nugetVersion = (string) jo["nugetVersion"];
+
+            }
         }
     );
 
