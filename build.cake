@@ -5,6 +5,8 @@
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
 #addin nuget:?package=Newtonsoft.Json&version=11.0.2
 
+//using Cake.Common.Tools.MSBuild;
+
 using System;
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -539,11 +541,12 @@ Task("libs")
 
 	foreach(string config in Configs)
 	{
-		var settings = new DotNetCoreMSBuildSettings()
-			.SetConfiguration(config)
-			.SetMaxCpuCount(MAX_CPU_COUNT)
-			.EnableBinaryLogger("./output/libs.binlog");
-			
+		var settings = new DotNetMSBuildSettings()
+							.SetConfiguration(config)
+							.SetMaxCpuCount(MAX_CPU_COUNT)
+							.EnableBinaryLogger("./output/libs.binlog")
+							.WithProperty("NodeReuse", "false");
+
 		settings.Properties.Add("DesignTimeBuild", new [] { "false" });
 		settings.Properties.Add("AndroidSdkBuildToolsVersion", new [] { AndroidSdkBuildTools });
 		
@@ -552,12 +555,12 @@ Task("libs")
 			settings.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
 		}
 
-		DotNetCoreRestore("./generated/GooglePlayServices.sln", new DotNetCoreRestoreSettings
+		DotNetRestore("./generated/GooglePlayServices.sln", new DotNetRestoreSettings
 		{ 
 			MSBuildSettings = settings.EnableBinaryLogger("./output/restore.binlog")
 		});
 		
-		DotNetCoreMSBuild("./generated/GooglePlayServices.sln", settings);
+		DotNetMSBuild("./generated/GooglePlayServices.sln", settings);
 	}
 });
 
@@ -738,7 +741,7 @@ Task("nuget")
 {
 	var outputPath = new DirectoryPath("./output");
 
-	var settings = new DotNetCoreMSBuildSettings()
+	var settings = new DotNetMSBuildSettings()
 		.SetConfiguration("Release")
 		.SetMaxCpuCount(MAX_CPU_COUNT)
 		.EnableBinaryLogger ("./output/nuget.binlog");
@@ -754,7 +757,7 @@ Task("nuget")
 		settings.Properties.Add("AndroidSdkDirectory", new[] { $"{ANDROID_HOME}" });
 	}
 
-	DotNetCoreMSBuild ("./generated/GooglePlayServices.sln", settings);
+	DotNetMSBuild ("./generated/GooglePlayServices.sln", settings);
 });
 
 Task ("merge")
