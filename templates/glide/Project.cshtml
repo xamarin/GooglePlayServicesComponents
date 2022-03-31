@@ -95,6 +95,9 @@
             <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="./jar" />
             <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
             break; 
+          case "Xamarin.Android.Glide.Annotations":
+            <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="./jar" />
+            break; 
           default:
             break; 
       }
