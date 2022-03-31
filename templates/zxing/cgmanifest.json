@@ -1,16 +1,16 @@
 {
-  "Registrations": [
-    {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "okhttp",
-          "GroupId": "com.squareup.okhttp",
-          "Version": "2.7.5",
-          "NuGetId": "Square.OkHttp3"
+    "Registrations": [
+      {
+        "Component": {
+          "Type": "Maven",
+          "Maven": {
+            "ArtifactId": "core",
+            "GroupId": "com.google.zxing",
+            "Version": "3.3.3",
+            "NuGetId": "Xamarin.Google.ZXing.Core"
+          }
         }
       }
-    }
-  ],
-  "Version": 1
-}
+    ],
+    "Version": 1
+  }
