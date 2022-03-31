@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>FirebaseStorageQuickstart</RootNamespace>
     <AssemblyName>FirebaseStorageQuickstart</AssemblyName>
-    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
