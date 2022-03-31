@@ -29,7 +29,7 @@
         "groupId": "com.github.bumptech.glide",
         "artifactId": "annotations",
         "version": "4.12.0",
-        "nugetVersion": "4.12.0.6",
+        "nugetVersion": "4.12.0.7",
         "nugetId": "Xamarin.Android.Glide.Annotations",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -38,7 +38,7 @@
         "groupId": "com.github.bumptech.glide",
         "artifactId": "disklrucache",
         "version": "4.12.0",
-        "nugetVersion": "4.12.0.6",
+        "nugetVersion": "4.12.0.7",
         "nugetId": "Xamarin.Android.Glide.DiskLruCache",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -47,7 +47,7 @@
         "groupId": "com.github.bumptech.glide",
         "artifactId": "gifdecoder",
         "version": "4.12.0",
-        "nugetVersion": "4.12.0.6",
+        "nugetVersion": "4.12.0.7",
         "nugetId": "Xamarin.Android.Glide.GifDecoder",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -56,7 +56,7 @@
         "groupId": "com.github.bumptech.glide",
         "artifactId": "glide",
         "version": "4.12.0",
-        "nugetVersion": "4.12.0.6",
+        "nugetVersion": "4.12.0.7",
         "nugetId": "Xamarin.Android.Glide",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -65,7 +65,7 @@
         "groupId": "com.github.bumptech.glide",
         "artifactId": "recyclerview-integration",
         "version": "4.12.0",
-        "nugetVersion": "4.12.0.6",
+        "nugetVersion": "4.12.0.7",
         "nugetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
         "dependencyOnly": false,
         "templateSet": "glide"
