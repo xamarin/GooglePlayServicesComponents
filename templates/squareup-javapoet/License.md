@@ -1,6 +1,6 @@
 **Xamarin is not responsible for, nor does it grant any licenses to, third-party packages. Some packages may require or install dependencies which are governed by additional licenses.**
 
-Note: This component depends on [Square OkHttp](https://github.com/square/okhttp), which is subject to the [Apache 2.0](https://github.com/square/okhttp/blob/master/LICENSE.txt)
+Note: This component depends on [Square JavaPoet](https://github.com/square/javapoet), which is subject to the [Apache 2.0](https://github.com/square/javapoet/blob/master/LICENSE.txt)
 
 ### Xamarin Component for Square OkHttp for Xamarin.Android
 
