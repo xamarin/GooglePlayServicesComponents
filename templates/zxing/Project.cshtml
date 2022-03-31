@@ -1,6 +1,6 @@
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
+    <TargetFrameworks>MonoAndroid12.0;net6.0-android31.0</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <!--
       No warnings for:
@@ -24,23 +24,31 @@
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageProjectUrl>
+    <RepositoryUrl>http://code.google.com/p/atinject/</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 
     @foreach (var art in @Model.MavenArtifacts) 
     {
       <PackageId>@Model.NuGetPackageId</PackageId>
-      <RootNamespace>@Model.NuGetPackageId</RootNamespace>
-      <AssemblyName>@Model.NuGetPackageId</AssemblyName>
+      <RootNamespace>Google.ZXing</RootNamespace>
+      <AssemblyName>Google.ZXing.Core</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Square.OkHttp":
-            <Title>OkHttp v2 bindings for Xamarin.Android</Title>
-            <Summary>An HTTP+SPDY client for Android and Java applications.</Summary>
-            <Description>An HTTP+SPDY client for Android and Java applications.</Description>
+          case "Google.ZXing.Core":
+            <PackageId>Xamarin.Google.ZXing.Core</PackageId>
+            <Title>Google ZXing (Core)</Title>
+            <Summary>Xamarin Google ZXing (Core) bindings</Summary>
+            <Description>
+              ZXing ("zebra crossing") is an open-source, multi-format 1D/2D barcode image processing library. 
+              Core barcode encoding/decoding library.</Description>
+            <PackageDescription>
+              ZXing ("zebra crossing") is an open-source, multi-format 1D/2D barcode image processing library. 
+              Core barcode encoding/decoding library.
+            </PackageDescription>
             <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
             <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
             <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-            <PackageTags>okhttp square square.okhttp xamarin android monodroid</PackageTags>
+            <PackageTags>google zxing zebra crossing bindings 1d 2d barcode qrcode scanning xamarin android monodroid</PackageTags>
             break; 
           default:
             break; 

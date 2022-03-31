@@ -1,6 +1,6 @@
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
+    <TargetFrameworks>MonoAndroid12.0;net6.0-android31.0</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <!--
       No warnings for:
@@ -33,14 +33,23 @@
       <AssemblyName>@Model.NuGetPackageId</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Square.OkHttp":
-            <Title>OkHttp v2 bindings for Xamarin.Android</Title>
-            <Summary>An HTTP+SPDY client for Android and Java applications.</Summary>
-            <Description>An HTTP+SPDY client for Android and Java applications.</Description>
+          case "Square.JavaPoet":
+            <Title>JavaPoet bindings for Xamarin.Android</Title>
+            <Summary>APIs to generate Java source code</Summary>
+            <Description>
+              JavaPoet is library, which provides APIs to generate Java source code. 
+              It can generate primitive types, reference types and their variants (such as classes, interfaces, 
+              enumerated types, anonymous inner classes), fields, methods, parameters, annotations, and Javadocs.
+            </Description>
+            <PackageDescription>
+              JavaPoet is library, which provides APIs to generate Java source code. 
+              It can generate primitive types, reference types and their variants (such as classes, interfaces, 
+              enumerated types, anonymous inner classes), fields, methods, parameters, annotations, and Javadocs.
+            </PackageDescription>
             <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
             <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
             <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-            <PackageTags>okhttp square square.okhttp xamarin android monodroid</PackageTags>
+            <PackageTags>javapoet square square.javapoet bindings xamarin android monodroid</PackageTags>
             break; 
           default:
             break; 
