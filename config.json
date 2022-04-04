@@ -26,6 +26,78 @@
     ],
     "artifacts": [
       {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "annotations",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.6",
+        "nugetId": "Xamarin.Android.Glide.Annotations",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "disklrucache",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.6",
+        "nugetId": "Xamarin.Android.Glide.DiskLruCache",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "gifdecoder",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.6",
+        "nugetId": "Xamarin.Android.Glide.GifDecoder",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "glide",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.6",
+        "nugetId": "Xamarin.Android.Glide",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "recyclerview-integration",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.6",
+        "nugetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.google.android.datatransport",
+        "artifactId": "transport-api",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0.1",
+        "nugetId": "Xamarin.Google.Android.DataTransport.TransportApi",
+        "dependencyOnly": false,
+        "templateSet": "datatransport"
+      },
+      {
+        "groupId": "com.google.android.datatransport",
+        "artifactId": "transport-backend-cct",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0.1",
+        "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
+        "dependencyOnly": false,
+        "templateSet": "datatransport"
+      },
+      {
+        "groupId": "com.google.android.datatransport",
+        "artifactId": "transport-runtime",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1.1",
+        "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
+        "dependencyOnly": false,
+        "templateSet": "datatransport"
+      },
+      {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
         "version": "20.5.0",
