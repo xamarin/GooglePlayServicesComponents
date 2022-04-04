@@ -11,6 +11,7 @@
     <FirstParty Include="Xamarin.Android.Glide.*.dll" />
     <FirstParty Include="Jsr305Binding.dll" />
     <FirstParty Include="disklrucache.jar" />
+    <FirstParty Include="annotations.jar" />
     <FirstParty Include="Xamarin.JavaX.Inject.dll" />
     <FirstParty Include="Xamarin.Google.UserMessagingPlatform.dll" />
     <FirstParty Include="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations.dll" />
