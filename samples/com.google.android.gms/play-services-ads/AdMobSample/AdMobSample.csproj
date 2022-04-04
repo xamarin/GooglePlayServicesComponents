@@ -16,7 +16,7 @@
     <AndroidApplication>True</AndroidApplication>
     <AssemblyName>AdMob</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
     <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
     <AndroidLinkMode>None</AndroidLinkMode>
     <NuGetPackageImportStamp>
