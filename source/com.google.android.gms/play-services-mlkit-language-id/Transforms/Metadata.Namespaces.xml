@@ -17,5 +17,11 @@
         >
         Xamarin.Google.MLKit.Vision.Barcode.Common.Internal
     </attr>
-    
+    <attr 
+        path="/api/package[@name='com.google.mlkit.nl.languageid.internal']"
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.NL.LanguageId.Internal
+    </attr>
+
 </metadata>
