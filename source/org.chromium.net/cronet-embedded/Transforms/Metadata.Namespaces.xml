@@ -71,10 +71,46 @@
         Xamarin.Chromium.Url
     </attr>    
     <attr
-        path="/api/package[@name='J']"
+        path="/api/package[@name='org.chromium']"
         name="managedName"
         >
-        Xamarin.Chromium.J
+        Xamarin.Chromium
+    </attr>    
+    <attr
+        path="/api/package[@name='org.chromium.base.supplier']"
+        name="managedName"
+        >
+        Xamarin.Chromium.Base.Supplier
+    </attr>    
+    <attr
+        path="/api/package[@name='org.chromium.build']"
+        name="managedName"
+        >
+        Xamarin.Chromium.Build
+    </attr>    
+    <attr
+        path="/api/package[@name='org.chromium']"
+        name="managedName"
+        >
+        Xamarin.Chromium
+    </attr>    
+    <attr
+        path="/api/package[@name='org.chromium.base']"
+        name="managedName"
+        >
+        Xamarin.Chromium.Base
+    </attr>    
+    <attr
+        path="/api/package[@name='org.chromium.base.natives']"
+        name="managedName"
+        >
+        Xamarin.Chromium.Base.Natives
+    </attr>    
+    <attr
+        path="/api/package[@name='org.chromium.native_test']"
+        name="managedName"
+        >
+        Xamarin.Chromium.NativeTest
     </attr>    
     
 </metadata>

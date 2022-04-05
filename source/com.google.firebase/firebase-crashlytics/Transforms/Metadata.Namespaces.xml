@@ -140,5 +140,17 @@
         >
         Firebase.Crashlytics.Internal.Breadcrumbs
     </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.crashlytics.internal']" 
+        name="managedName"
+        >
+        Firebase.Crashlytics.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.crashlytics.internal.metadata']" 
+        name="managedName"
+        >
+        Firebase.Crashlytics.Internal.Metadata
+    </attr>
   
 </metadata>

@@ -17,7 +17,13 @@
       path="/api/package[@name='com.google.mlkit.nl.languageid.internal']"
       name="managedName"
         >
-    Xamarin.Google.MLKit.LanguageId.Internal
+      Xamarin.Google.MLKit.LanguageId.Internal
+  </attr>
+  <attr
+      path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.mlkit.dynamite.langid']"
+      name="managedName"
+      >
+      Android.Gms.Dynamite.Descriptors.MLKit.Dynamite.LangId
   </attr>
   
   

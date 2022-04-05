@@ -31,6 +31,19 @@
         Xamarin.Google.MLKit.Barhopper.DeepLearning
     </attr>
   
+
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.barcode.common']"
+        name="managedName"
+          >
+        Xamarin.Google.MLKit.Vision.Barcode.Common
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.barcode.common.internal']"
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Barcode.Common.Internal
+    </attr>
   
   
 

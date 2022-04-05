@@ -1,10 +1,16 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='com.google.firebase.analytics']"
         name="managedName"
         >
-        Package
+        Firebase.Analytics
     </attr>
-    -->
+
+    <attr 
+    path="/api/package[@name='com.google.firebase.analytics.ktx']" 
+        name="managedName"
+        >
+        Firebase.Analytics.Ktx
+    </attr>
+
 </metadata>
