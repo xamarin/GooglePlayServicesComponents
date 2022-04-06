@@ -5,6 +5,8 @@
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
 #addin nuget:?package=Newtonsoft.Json&version=11.0.2
 
+//using Cake.Common.Tools.MSBuild;
+
 using System;
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -543,8 +545,8 @@ Task("libs")
 			.SetConfiguration(config)
 			.SetMaxCpuCount(MAX_CPU_COUNT)
 			.EnableBinaryLogger("./output/libs.binlog");
-			
-		settings.Properties.Add("DesignTimeBuild", new [] { "false" });
+
+    settings.Properties.Add("DesignTimeBuild", new [] { "false" });
 		settings.Properties.Add("AndroidSdkBuildToolsVersion", new [] { AndroidSdkBuildTools });
 		
 		if (!string.IsNullOrEmpty(ANDROID_HOME))
