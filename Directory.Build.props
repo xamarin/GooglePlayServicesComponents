@@ -1,5 +1,8 @@
 <Project>
   <PropertyGroup>
+    <RepositoryUrl>https://github.com/xamarin/GooglePlayServicesComponents.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
     <!-- Opt out of C#8 features to maintain compatibility with legacy -->
     <AndroidBoundInterfacesContainConstants>false</AndroidBoundInterfacesContainConstants>
     <AndroidBoundInterfacesContainTypes>false</AndroidBoundInterfacesContainTypes>
@@ -13,5 +16,8 @@
     
     <!-- Hold off on JavaTypeSystem until d17-1 for needed bugfixes -->
     <_AndroidUseJavaLegacyResolver>true</_AndroidUseJavaLegacyResolver>
+
+    <!-- Mark .NET6+ packages as supporting trimming -->
+    <IsTrimmable>true</IsTrimmable>
   </PropertyGroup>
 </Project>
