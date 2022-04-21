@@ -1270,7 +1270,6 @@
         "dependencyOnly": false,
         "templateSet": "zxing"
       },
-=======
       {
         "groupId": "com.google.protobuf",
         "artifactId": "protobuf-javalite",
