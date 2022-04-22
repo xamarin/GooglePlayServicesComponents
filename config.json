@@ -1777,8 +1777,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
-        "version": "17.0.1",
-        "nugetVersion": "117.0.1",
+        "version": "16.3.0",
+        "nugetVersion": "116.3.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": true
       },
@@ -1787,16 +1787,8 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-api",
         "version": "16.3.0",
-        "nugetVersion": "117.0.5.4",
+        "nugetVersion": "119.0.1.5",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
-        "dependencyOnly": true
-      },     
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-measurement-base",
-        "version": "16.3.0",
-        "nugetVersion": "116.3.0",
-        "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": true
       },
       // FB nuget dependencies
@@ -2079,7 +2071,7 @@
       {
         "name": "squareup-javapoet",
         "mavenRepositoryType": "MavenCentral",
-        "templates": 
+        "templates":
         [
           {
             "templateFile": "templates/squareup-javapoet/Project.cshtml",
