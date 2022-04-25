@@ -1931,6 +1931,14 @@
         "nugetVersion": "116.3.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
         "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-measurement-base",
+        "version": "16.0.5",
+        "nugetVersion": "116.0.5",
+        "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
+        "dependencyOnly": true
       }
     ],
     "templateSets": [
