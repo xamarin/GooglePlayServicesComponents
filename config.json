@@ -444,14 +444,6 @@
       },
       {
         "groupId": "com.google.android.gms",
-        "artifactId": "play-services-mlkit-language-id",
-        "version": "16.0.0-beta2",
-        "nugetVersion": "116.0.0-beta2",
-        "nugetId": "Xamarin.GooglePlayServices.MLKit.LanguageId",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-text-recognition",
         "version": "16.3.0",
         "nugetVersion": "116.3.0",
@@ -1118,7 +1110,7 @@
         "nugetId": "Xamarin.Google.MLKit.BarcodeScanning.Common",
         "dependencyOnly": false
       },
-      {
+          {
         "groupId": "com.google.mlkit",
         "artifactId": "common",
         "version": "17.5.0",
