@@ -51,7 +51,6 @@
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.BarcodeScanning" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.FaceDetection" Version="116.2.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.ImageLabeling" Version="116.0.5" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.LanguageId" Version="116.0.0-beta2" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition" Version="116.3.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Nearby" Version="118.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Oss.Licenses" Version="117.0.0.5" />
