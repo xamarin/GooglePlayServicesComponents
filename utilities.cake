@@ -202,6 +202,8 @@ Task ("spell-check")
                 "UrlConnection",
                 "PerfMark",
                 "PerfMarkApi",
+                "ZXing",
+		        "JavaPoet",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
