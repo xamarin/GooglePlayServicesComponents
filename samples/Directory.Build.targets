@@ -47,9 +47,10 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Impl" Version="119.0.1.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk" Version="119.0.1.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk.Api" Version="119.0.1.5" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.BarcodeScanning" Version="116.1.5.5" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.FaceDetection" Version="116.1.7.5" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.BarcodeScanning" Version="116.2.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.FaceDetection" Version="116.2.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.ImageLabeling" Version="116.0.4.5" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.LanguageId" Version="116.0.0-beta2" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition" Version="116.2.0.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.Nearby" Version="118.0.0.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.Oss.Licenses" Version="117.0.0.5" />
@@ -131,28 +132,29 @@
     <PackageReference Update="Xamarin.Firebase.Storage" Version="120.0.0.5" />
     <PackageReference Update="Xamarin.Firebase.Storage.Common" Version="117.0.0.5" />
     <PackageReference Update="Xamarin.Firebase.ProtoliteWellKnownTypes" Version="118.0.0.5" />
-    <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning" Version="116.1.2.5" />
-    <PackageReference Update="Xamarin.Google.MLKit.Common" Version="117.3.0.5" />
-    <PackageReference Update="Xamarin.Google.MLKit.DigitalInk.Recognition" Version="117.0.0.5" />
-    <PackageReference Update="Xamarin.Google.MLKit.FaceDetection" Version="116.1.1.5" />
-    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling" Version="117.0.4.5" />
+    <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning" Version="116.2.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.Common" Version="117.5.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.DigitalInk.Recognition" Version="117.0.1" />
+    <PackageReference Update="Xamarin.Google.MLKit.FaceDetection" Version="116.1.2" />
+    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling" Version="117.0.5" />
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.AutoML" Version="116.2.1.6" />
-    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Common" Version="117.0.0.6" />
+    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Common" Version="117.1.0.0" />
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Custom" Version="116.3.1.5" />
-    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Default.Common" Version="116.0.0.6" />
-    <PackageReference Update="Xamarin.Google.MLKit.Language.Id" Version="116.1.1.5" />
+    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Default.Common" Version="116.0.1" />
+    <PackageReference Update="Xamarin.Google.MLKit.Language.Id" Version="117.0.0" />
     <PackageReference Update="Xamarin.Google.MLKit.LinkFirebase" Version="116.1.1.5" />
     <PackageReference Update="Xamarin.Google.MLKit.MediaPipe.Internal" Version="116.0.0.5" />
-    <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection" Version="116.2.4.5" />
-    <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection.Common" Version="117.0.1.5" />
-    <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection.Custom" Version="116.3.2.5" />
+    <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection" Version="116.2.8" />
+    <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection.Common" Version="117.2.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection.Custom" Version="116.3.4" />
     <PackageReference Update="Xamarin.Google.MLKit.PoseDetection" Version="117.0.0.5" />
     <PackageReference Update="Xamarin.Google.MLKit.PoseDetection.Accurate" Version="117.0.0.5" />
     <PackageReference Update="Xamarin.Google.MLKit.PoseDetection.Common" Version="117.0.0.5" />
-    <PackageReference Update="Xamarin.Google.MLKit.SmartReply" Version="116.1.1.5" />
+    <PackageReference Update="Xamarin.Google.MLKit.SmartReply" Version="116.2.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Translate" Version="116.1.2.5" />
-    <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="116.4.0.5" />
-    <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="118.1.1.5" />
+    <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="116.7.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="118.2.1" />
+    <PackageReference Update="Xamarin.Google.Android.ODML.Image" Version="1.0.0.0-beta1" />
     <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.14.0.3" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1.3" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.4" />
@@ -179,25 +181,26 @@
     <PackageReference Update="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations" Version="1.18.0.3" />
     <PackageReference Update="Xamarin.TensorFlow.Lite" Version="2.5.0.4" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu" Version="2.5.0.4" />
-    <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.2.0" />
-    <PackageReference Update="Xamarin.AndroidX.AppCompat" Version="1.2.0.7" />
-    <PackageReference Update="Xamarin.AndroidX.Browser" Version="1.3.0.5" />
-    <PackageReference Update="Xamarin.AndroidX.CardView" Version="1.0.0.8" />
-    <PackageReference Update="Xamarin.AndroidX.Collection" Version="1.1.0.7" />
-    <PackageReference Update="Xamarin.AndroidX.ConstraintLayout" Version="2.0.4.2" />
-    <PackageReference Update="Xamarin.AndroidX.Core" Version="1.3.2.3" />
-    <PackageReference Update="Xamarin.AndroidX.ExifInterface" Version="1.3.2.2" />
-    <PackageReference Update="Xamarin.AndroidX.Fragment" Version="1.3.2" />
-    <PackageReference Update="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0.7" />
-    <PackageReference Update="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.7" />
-    <PackageReference Update="Xamarin.AndroidX.Lifecycle.Extensions" Version="2.2.0.7" />
-    <PackageReference Update="Xamarin.AndroidX.Loader" Version="1.1.0.7" />
-    <PackageReference Update="Xamarin.AndroidX.LocalBroadcastManager" Version="1.0.0.7" />
-    <PackageReference Update="Xamarin.AndroidX.Media" Version="1.2.1.2" />
-    <PackageReference Update="Xamarin.AndroidX.MediaRouter" Version="1.2.2.1" />
-    <PackageReference Update="Xamarin.AndroidX.RecyclerView" Version="1.1.0.8" />
+    <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.3.0.2" />
+    <PackageReference Update="Xamarin.AndroidX.AppCompat" Version="1.3.1.3" />
+    <PackageReference Update="Xamarin.AndroidX.Browser" Version="1.3.0.8" />
+    <PackageReference Update="Xamarin.AndroidX.CardView" Version="1.0.0.11" />
+    <PackageReference Update="Xamarin.AndroidX.Collection" Version="1.2.0.2" />
+    <PackageReference Update="Xamarin.AndroidX.ConstraintLayout" Version="2.1.1.2" />
+    <PackageReference Update="Xamarin.AndroidX.Core" Version="1.6.0.5" />
+    <PackageReference Update="Xamarin.AndroidX.ExifInterface" Version="1.3.3.2" />
+    <PackageReference Update="Xamarin.AndroidX.Fragment" Version="1.3.6.3" />
+    <PackageReference Update="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0.10" />
+    <PackageReference Update="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.10" />
+    <PackageReference Update="Xamarin.AndroidX.Lifecycle.Extensions" Version="2.2.0.10" />
+    <PackageReference Update="Xamarin.AndroidX.Loader" Version="1.1.0.10" />
+    <PackageReference Update="Xamarin.AndroidX.LocalBroadcastManager" Version="1.0.0.10" />
+    <PackageReference Update="Xamarin.AndroidX.Media" Version="1.4.3" />
+    <PackageReference Update="Xamarin.AndroidX.MediaRouter" Version="1.2.5.2" />
+    <PackageReference Update="Xamarin.AndroidX.RecyclerView" Version="1.2.1.3" />
+    <PackageReference Update="Xamarin.AndroidX.Tracing.Tracing" Version="1.0.0.3" />
     <PackageReference Update="Xamarin.AndroidX.VectorDrawable.Animated" Version="1.1.0.10" />
-    <PackageReference Update="Xamarin.AndroidX.Work.Runtime" Version="2.5.0.1" />
+    <PackageReference Update="Xamarin.AndroidX.Work.Runtime" Version="2.7.1.2" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="3.0.0" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="3.0.0" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="3.0.1" />
