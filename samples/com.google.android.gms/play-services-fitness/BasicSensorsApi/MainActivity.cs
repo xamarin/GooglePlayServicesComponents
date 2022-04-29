@@ -74,7 +74,7 @@ namespace BasicSensorsApi
             // Create the Google API Client
             mClient = new Android.Gms.Common.Apis.GoogleApiClient.Builder (this)
                 .AddApi(Android.Gms.Fitness.FitnessClass.SENSORS_API)
-                .AddScope(new Android.Gms.Common.Apis.Scope(Android.Gms.Common.Scopes.FitnessLocationRead))
+                //.AddScope(new Android.Gms.Common.Apis.Scope(Android.Gms.Common.Scopes.FitnessLocationRead))
                 .AddConnectionCallbacks(
                     bundle => {
                         Log (TAG, "Connected!!!");

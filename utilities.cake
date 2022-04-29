@@ -203,7 +203,12 @@ Task ("spell-check")
                 "PerfMark",
                 "PerfMarkApi",
                 "ZXing",
-		        "JavaPoet",
+		            "JavaPoet",
+                "AppSet",
+                "Ktx",
+                "Proto",
+                "ZXing",
+                "JavaPoet",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
