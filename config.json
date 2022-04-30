@@ -340,8 +340,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-barcode-scanning",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "version": "16.2.1",
+        "nugetVersion": "116.2.1",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.BarcodeScanning",
         "dependencyOnly": false
       },
@@ -359,6 +359,14 @@
         "version": "16.0.5",
         "nugetVersion": "116.0.5",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.ImageLabeling",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-language-id",
+        "version": "16.0.0-beta2",
+        "nugetVersion": "116.0.0-beta2",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.LanguageId",
         "dependencyOnly": false
       },
       {
@@ -982,8 +990,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "barcode-scanning",
-        "version": "16.1.2",
-        "nugetVersion": "116.1.2.5",
+        "version": "16.2.0",
+        "nugetVersion": "116.2.0",
         "nugetId": "Xamarin.Google.MLKit.BarcodeScanning",
         "dependencyOnly": false
       },
@@ -1006,24 +1014,24 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "digital-ink-recognition",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0.5",
+        "version": "17.0.1",
+        "nugetVersion": "117.0.1",
         "nugetId": "Xamarin.Google.MLKit.DigitalInk.Recognition",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.mlkit",
         "artifactId": "face-detection",
-        "version": "16.1.1",
-        "nugetVersion": "116.1.1.5",
+        "version": "16.1.2",
+        "nugetVersion": "116.1.2",
         "nugetId": "Xamarin.Google.MLKit.FaceDetection",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.mlkit",
         "artifactId": "image-labeling",
-        "version": "17.0.4",
-        "nugetVersion": "117.0.4.5",
+        "version": "17.0.5",
+        "nugetVersion": "117.0.5",
         "nugetId": "Xamarin.Google.MLKit.ImageLabeling",
         "dependencyOnly": false
       },
@@ -1062,8 +1070,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "language-id",
-        "version": "16.1.1",
-        "nugetVersion": "116.1.1.5",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0",
         "nugetId": "Xamarin.Google.MLKit.Language.Id",
         "dependencyOnly": false
       },
@@ -1086,24 +1094,24 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "object-detection",
-        "version": "16.2.4",
-        "nugetVersion": "116.2.4.5",
+        "version": "16.2.8",
+        "nugetVersion": "116.2.8",
         "nugetId": "Xamarin.Google.MLKit.ObjectDetection",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.mlkit",
         "artifactId": "object-detection-common",
-        "version": "17.0.1",
-        "nugetVersion": "117.0.1.5",
+        "version": "17.2.0",
+        "nugetVersion": "117.2.0",
         "nugetId": "Xamarin.Google.MLKit.ObjectDetection.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.mlkit",
         "artifactId": "object-detection-custom",
-        "version": "16.3.2",
-        "nugetVersion": "116.3.2.5",
+        "version": "16.3.4",
+        "nugetVersion": "116.3.4",
         "nugetId": "Xamarin.Google.MLKit.ObjectDetection.Custom",
         "dependencyOnly": false
       },
@@ -1134,8 +1142,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "smart-reply",
-        "version": "16.1.1",
-        "nugetVersion": "116.1.1.5",
+        "version": "16.2.0",
+        "nugetVersion": "116.2.0",
         "nugetId": "Xamarin.Google.MLKit.SmartReply",
         "dependencyOnly": false
       },
@@ -1158,8 +1166,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "vision-internal-vkp",
-        "version": "18.1.1",
-        "nugetVersion": "118.1.1.5",
+        "version": "18.2.1",
+        "nugetVersion": "118.2.1",
         "nugetId": "Xamarin.Google.MLKit.Vision.Internal.Vkp",
         "dependencyOnly": false
       },

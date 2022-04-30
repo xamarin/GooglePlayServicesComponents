@@ -204,6 +204,7 @@ Task ("spell-check")
                 "PerfMarkApi",
                 "ZXing",
 		            "JavaPoet",
+                "LanguageId",
                 "AppSet",
                 "Ktx",
                 "Proto",
