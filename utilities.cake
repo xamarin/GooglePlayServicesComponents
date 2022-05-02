@@ -202,6 +202,7 @@ Task ("spell-check")
                 "UrlConnection",
                 "PerfMark",
                 "PerfMarkApi",
+                "LanguageId",
                 "AppSet",
                 "Ktx",
                 "Proto",
