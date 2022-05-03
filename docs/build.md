@@ -26,3 +26,74 @@ Items currently included are
 *   various tools (`brew`)
 
 
+## Build
+
+AndroidX (AX) and GooglePlayServices-Firebase-MLKit (GPS-FB-MLKit) repositories are built and signed
+on Azure DevOps infrastructure with `ci` Cake (Cake build tool default `build.cake` script) target.
+
+Build stages:
+
+1.  on CI servers 
+
+    2 stages
+
+    1.   target `ci`
+
+    2.   `api-diff` as default target (`nuget-api-diff` in `nuget-diff.cake`)
+
+        `api-diff` is not target, script is executed
+
+2. local builds have additional script `utilities.cake`
+
+    1.  namespace naming verification (dotnettification/dotnetifying java package names)
+
+    2.  spell checking (nugets, and namespaces)
+
+    3.  report generation
+
+    4.  other
+
+        there are several tools in early preview 
+
+### Versions
+
+*   CI Builds
+
+    All tools are installed from scratch, so the latest versions are used (nuget semver `*`)
+
+*   local builds
+
+    It depends on team members. 
+    
+    Due to dogfooding user `@moljac` uses previews (nuget semver `*_*`)
+
+https://docs.microsoft.com/en-us/nuget/concepts/package-versioning
+
+### Tools used
+
+```
+xamarin-android-binderator,*
+xamarin.androidx.migration.tool,*
+androidx-migrator,*
+```
+
+#### build (`ci` in build.cake)
+
+```
+msbuild,*
+dotnet build,*
+nuget,*
+java,*
+dotnet tool cake.tool,*
+dotnet tool xamarin.androidbinderator.tool,*
+dotnet tool xamarin.androidx.migration.tool,*
+```
+
+
+#### `api-diff` (`nuget-diff`)
+
+default in `nuget-diff.cake` (no target is necessary)
+
+```
+dotnet tool api-tools,*
+```
