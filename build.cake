@@ -169,12 +169,18 @@ Task("tools-update")
         () =>
         {
             /*
+			// dotnet cake	
             dotnet tool uninstall   -g Cake.Tool
             dotnet tool install     -g Cake.Tool
+			// binderator
             dotnet tool uninstall   -g xamarin.androidbinderator.tool
             dotnet tool install     -g xamarin.androidbinderator.tool
+			// androidx-migrator
             dotnet tool uninstall   -g xamarin.androidx.migration.tool
             dotnet tool install     -g xamarin.androidx.migration.tool
+			// androidx-migrator
+            dotnet tool uninstall   -g api-tools
+            dotnet tool install     -g api-tools
 
             StartProcess("dotnet", "tool uninstall   -g Cake.Tool");
             StartProcess("dotnet", "tool install     -g Cake.Tool");
@@ -183,6 +189,8 @@ Task("tools-update")
             StartProcess("dotnet", "tool install     -g xamarin.androidbinderator.tool");
             StartProcess("dotnet", "tool uninstall   -g xamarin.androidx.migration.tool");
             StartProcess("dotnet", "tool install     -g xamarin.androidx.migration.tool");
+            StartProcess("dotnet", "tool uninstall   -g api-tools");
+            StartProcess("dotnet", "tool install     -g api-tools");
         }
     );
 
