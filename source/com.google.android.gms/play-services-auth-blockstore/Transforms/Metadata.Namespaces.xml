@@ -1,10 +1,8 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='com.google.android.gms.auth.blockstore']" 
         name="managedName"
         >
-        Package
+        Android.Gms.Auth.Managed.BlockStore
     </attr>
-    -->
 </metadata>

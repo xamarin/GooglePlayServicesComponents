@@ -1,10 +1,8 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='com.google.mlkit.vision.interfaces']" 
         name="managedName"
         >
-        Package
+        Xamarin.Google.MLKit.Vision.Interfaces
     </attr>
-    -->
 </metadata>

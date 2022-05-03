@@ -1,10 +1,10 @@
 ﻿<metadata>
-    <!--
+
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='com.google.android.gms.streamprotect']" 
         name="managedName"
         >
-        Package
+        Android.Gms.StreamProtect
     </attr>
-    -->
+
 </metadata>

@@ -66,5 +66,11 @@
 	<attr path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='Payload']/method[@name='getType' and count(parameter)=0]" name="propertyName">PayloadType</attr>
 	<attr path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='PayloadTransferUpdate']/method[@name='getStatus' and count(parameter)=0]" name="propertyName">TransferStatus</attr>
 
+	<attr
+		path="/api/package[@name='com.google.android.gms.nearby.exposurenotification']"
+		name="managedName"
+		>
+		Android.Gms.Nearby.ExposureNotification
+	</attr>
 
 </metadata>
