@@ -13,7 +13,7 @@ namespace Xamarin.Google.MLKit.Vision.Common.Internal
 		public unsafe global::System.Collections.Generic.IList <global:: Firebase.Components.Component > Components 
         {
 			// Metadata.xml XPath method reference: path="/api/package[@name='com.google.mlkit.vision.common.internal']/class[@name='VisionCommonRegistrar']/method[@name='getComponents' and count(parameter)=0]"
-			//[Register ("getComponents", "()Ljava/util/List;", "")]
+			[Register ("getComponents", "()Ljava/util/List;", "")]
 			get {
 				const string __id = "getComponents.()Ljava/util/List;";
 				try {

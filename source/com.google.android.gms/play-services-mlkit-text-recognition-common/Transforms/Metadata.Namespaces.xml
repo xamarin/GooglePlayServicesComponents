@@ -7,4 +7,23 @@
         Package
     </attr>
     -->
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_text_common']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.MLKitVisionTextCommon
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.text']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Text
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.text.internal']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Text.Internal
+    </attr>
+
 </metadata>
