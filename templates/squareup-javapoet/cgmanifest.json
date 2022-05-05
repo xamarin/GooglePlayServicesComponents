@@ -4,10 +4,10 @@
       "Component": {
         "Type": "Maven",
         "Maven": {
-          "ArtifactId": "okhttp",
-          "GroupId": "com.squareup.okhttp",
-          "Version": "2.7.5",
-          "NuGetId": "Square.OkHttp3"
+          "ArtifactId": "javapoet",
+          "GroupId": "com.squareup",
+          "Version": "1.13.0",
+          "NuGetId": "Square.JavaPoet"
         }
       }
     }

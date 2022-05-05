@@ -2,7 +2,7 @@
 
 Note: This component depends on [Square JavaPoet](https://github.com/square/javapoet), which is subject to the [Apache 2.0](https://github.com/square/javapoet/blob/master/LICENSE.txt)
 
-### Xamarin Component for Square OkHttp for Xamarin.Android
+### Xamarin Component for Square JavaPoet for Xamarin.Android
 
 **The MIT License (MIT)**
 
