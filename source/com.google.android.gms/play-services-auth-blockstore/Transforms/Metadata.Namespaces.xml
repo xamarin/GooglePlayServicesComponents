@@ -3,6 +3,6 @@
         path="/api/package[@name='com.google.android.gms.auth.blockstore']" 
         name="managedName"
         >
-        Android.Gms.Auth.Managed.BlockStore
+        Android.Gms.Auth.Managed.Blockstore
     </attr>
 </metadata>
