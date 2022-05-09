@@ -208,6 +208,9 @@ Task ("spell-check")
                 "Proto",
                 "ZXing",
                 "JavaPoet",
+                "Blockstore",
+                "PasswordComplexity",
+                "StreamPotect",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
