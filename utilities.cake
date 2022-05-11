@@ -202,6 +202,8 @@ Task ("spell-check")
                 "UrlConnection",
                 "PerfMark",
                 "PerfMarkApi",
+                "ZXing",
+		            "JavaPoet",
                 "LanguageId",
                 "AppSet",
                 "Ktx",

@@ -1,14 +1,5 @@
 <Project>
   <ItemGroup>
-    <PackageReference Update="Xamarin.Android.Glide.Annotations" Version="4.12.0.8" />
-    <PackageReference Update="Xamarin.Android.Glide.DiskLruCache" Version="4.12.0.8" />
-    <PackageReference Update="Xamarin.Android.Glide.GifDecoder" Version="4.12.0.8" />
-    <PackageReference Update="Xamarin.Android.Glide" Version="4.12.0.8" />
-    <PackageReference Update="Xamarin.Android.Glide.RecyclerViewIntegration" Version="4.12.0.8" />
-    <PackageReference Update="Xamarin.GoogleAndroid.Annotations" Version="4.1.1.6" />
-    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="3.0.0.3" />
-    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="3.0.0.3" />
-    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="3.0.1.3" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads" Version="120.4.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.4.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.0.1" />
@@ -74,10 +65,6 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Wallet" Version="119.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Wearable" Version="117.1.0.5" />
     <PackageReference Update="Xamarin.Google.Android.Play.Core" Version="1.10.2.5" />
-    <PackageReference Update="Xamarin.Google.UserMessagingPlatform" Version="1.0.0.4" />
-    <PackageReference Update="Xamarin.Google.Code.FindBugs.JSR305" Version="3.0.2.4" />
-    <PackageReference Update="Xamarin.Google.Dagger" Version="2.27.0.4" />
-    <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.4.0.3" />
     <PackageReference Update="Xamarin.Firebase.Abt" Version="121.0.0.5" />
     <PackageReference Update="Xamarin.Firebase.Ads" Version="120.3.0.5" />
     <PackageReference Update="Xamarin.Firebase.Ads.Lite" Version="120.3.0.5" />
@@ -157,14 +144,29 @@
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="116.7.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="118.2.1" />
     <PackageReference Update="Xamarin.Google.Android.ODML.Image" Version="1.0.0.0-beta1" />
-    <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.14.0.3" />
-    <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1.3" />
+    <PackageReference Update="Xamarin.Android.Glide.Annotations" Version="4.12.0.8" />
+    <PackageReference Update="Xamarin.Android.Glide.DiskLruCache" Version="4.12.0.8" />
+    <PackageReference Update="Xamarin.Android.Glide.GifDecoder" Version="4.12.0.8" />
+    <PackageReference Update="Xamarin.Android.Glide" Version="4.12.0.8" />
+    <PackageReference Update="Xamarin.Android.Glide.RecyclerViewIntegration" Version="4.12.0.8" />
+    <PackageReference Update="Xamarin.GoogleAndroid.Annotations" Version="4.1.1.6" />
+    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="3.0.0.3" />
+    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="3.0.0.3" />
+    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="3.0.1.3" />
+    <PackageReference Update="Xamarin.Google.UserMessagingPlatform" Version="2.0.0" />
+    <PackageReference Update="Xamarin.Google.Code.FindBugs.JSR305" Version="3.0.2.4" />
+    <PackageReference Update="Xamarin.Google.Dagger" Version="2.40.5" />
+    <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.5.1" />
+    <PackageReference Update="Xamarin.Google.ZXing.Core" Version="3.4.1" />
+    <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.15.8" />
+    <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1.4" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.4" />
-    <PackageReference Update="Square.OkHttp3" Version="4.9.2.3" />
-    <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.9.2.3" />
+    <PackageReference Update="Square.OkHttp3" Version="4.9.3" />
+    <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.9.3" />
     <PackageReference Update="Square.OkIO" Version="2.10.0.3" />
     <PackageReference Update="Square.Picasso" Version="2.8.0.3" />
     <PackageReference Update="Square.Retrofit" Version="1.9.0.4" />
+    <PackageReference Update="Square.JavaPoet" Version="1.13.0.0" />
     <PackageReference Update="Xamarin.Grpc.Android" Version="1.28.0.2" />
     <PackageReference Update="Xamarin.Grpc.Api" Version="1.28.0.2" />
     <PackageReference Update="Xamarin.Grpc.Context" Version="1.28.0.2" />
@@ -203,24 +205,20 @@
     <PackageReference Update="Xamarin.AndroidX.Tracing.Tracing" Version="1.0.0.3" />
     <PackageReference Update="Xamarin.AndroidX.VectorDrawable.Animated" Version="1.1.0.10" />
     <PackageReference Update="Xamarin.AndroidX.Work.Runtime" Version="2.7.1.2" />
-    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="3.0.0" />
-    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="3.0.0" />
-    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="3.0.1" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="116.3.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="117.0.1" />
-    <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.6.6" />
-    <PackageReference Update="GoogleGson" Version="2.8.8.2" />
-    <PackageReference Update="Xamarin.Firebase.Analytics" Version="116.3.0" />
     <PackageReference Update="Xamarin.Google.Guava" Version="31.1.0" />
     <PackageReference Update="Xamarin.Google.Guava.ListenableFuture" Version="1.0.0.6" />
-    <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.14.0" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1" />
     <PackageReference Update="Xamarin.Android.ReactiveX.RxAndroid" Version="2.1.1" />
     <PackageReference Update="Xamarin.Android.ReactiveX.RxJava" Version="2.2.7" />
     <PackageReference Update="Xamarin.Kotlin.StdLib" Version="1.5.31.2" />
     <PackageReference Update="Xamarin.Kotlin.StdLib.Common" Version="1.5.31.2" />
     <PackageReference Update="Xamarin.Kotlin.StdLib.Jdk8" Version="1.5.31.2" />
+    <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.6.6" />
+    <PackageReference Update="GoogleGson" Version="2.8.8.2" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="116.3.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="119.0.1.5" />
+    <PackageReference Update="Xamarin.Firebase.Analytics" Version="116.3.0" />
   </ItemGroup>
 </Project>
