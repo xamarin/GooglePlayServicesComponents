@@ -24,7 +24,10 @@
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageProjectUrl>
+    <RepositoryUrl>https://go.microsoft.com/fwlink/?linkid=865435</RepositoryUrl>
+    <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
 
     @foreach (var art in @Model.MavenArtifacts) 
     {
@@ -37,9 +40,6 @@
             <Title>OkIO bindings for Xamarin.Android</Title>
             <Summary>A modern I/O API for Java.</Summary>
             <Description>OkIO is a new library that complements Java.IO and Java.Nio to make it much easier to access, store, and process your data.</Description>
-            <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-            <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
-            <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
             <PackageTags>okio square square.okio xamarin android monodroid</PackageTags>
             break; 
           default:

@@ -1,6 +1,6 @@
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid12.0;net6.0-android31</TargetFrameworks>
+    <TargetFrameworks>MonoAndroid12.0;net6.0-android31.0</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <!--
       No warnings for:
@@ -36,11 +36,22 @@
       <AssemblyName>@Model.NuGetPackageId</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Xamarin.Io.PerfMark.PerfMarkApi":
-            <Title>Xamarin.Io.PerfMark.PerfMarkApi</Title>
-            <PackageDescription>Bindings for Io.PerfMark.PerfMarkApi io.perfmark:perfmark-api package (Google GRPC  dependency)</PackageDescription>
-            <Summary>Xamarin.Android Bindings for Bindings for io.perfmark:perfmark-api package</Summary>
-            <PackageTags>xamarin, android, bindings, io.perfmark, io, perfmark, perfmark-api </PackageTags>
+          case "Square.JavaPoet":
+            <Title>JavaPoet bindings for Xamarin.Android</Title>
+            <Summary>APIs to generate Java source code</Summary>
+            <Description>
+              JavaPoet is library, which provides APIs to generate Java source code. 
+              It can generate primitive types, reference types and their variants (such as classes, interfaces, 
+              enumerated types, anonymous inner classes), fields, methods, parameters, annotations, and Javadocs.
+            </Description>
+            <PackageDescription>
+              JavaPoet is library, which provides APIs to generate Java source code. 
+              It can generate primitive types, reference types and their variants (such as classes, interfaces, 
+              enumerated types, anonymous inner classes), fields, methods, parameters, annotations, and Javadocs.
+            </PackageDescription>
+            <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
+            <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+            <PackageTags>javapoet square square.javapoet bindings xamarin android monodroid</PackageTags>
             break; 
           default:
             break; 
@@ -83,8 +94,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\perfmark\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
-    <None Include="..\..\templates\perfmark\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\templates\squareup-okhttp\License.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\squareup-okhttp\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid12.0;net6.0-android31</TargetFrameworks>
+    <TargetFrameworks>MonoAndroid12.0;net6.0-android31.0</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <!--
       No warnings for:
@@ -32,15 +32,22 @@
     @foreach (var art in @Model.MavenArtifacts) 
     {
       <PackageId>@Model.NuGetPackageId</PackageId>
-      <RootNamespace>@Model.NuGetPackageId</RootNamespace>
-      <AssemblyName>@Model.NuGetPackageId</AssemblyName>
+      <RootNamespace>Google.ZXing</RootNamespace>
+      <AssemblyName>Google.ZXing.Core</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Xamarin.Io.PerfMark.PerfMarkApi":
-            <Title>Xamarin.Io.PerfMark.PerfMarkApi</Title>
-            <PackageDescription>Bindings for Io.PerfMark.PerfMarkApi io.perfmark:perfmark-api package (Google GRPC  dependency)</PackageDescription>
-            <Summary>Xamarin.Android Bindings for Bindings for io.perfmark:perfmark-api package</Summary>
-            <PackageTags>xamarin, android, bindings, io.perfmark, io, perfmark, perfmark-api </PackageTags>
+          case "Xamarin.Google.ZXing.Core":
+            <PackageId>Xamarin.Google.ZXing.Core</PackageId>
+            <Title>Google ZXing (Core)</Title>
+            <Summary>Xamarin Google ZXing (Core) bindings</Summary>
+            <Description>
+              ZXing ("zebra crossing") is an open-source, multi-format 1D/2D barcode image processing library. 
+              Core barcode encoding/decoding library.</Description>
+            <PackageDescription>
+              ZXing ("zebra crossing") is an open-source, multi-format 1D/2D barcode image processing library. 
+              Core barcode encoding/decoding library.
+            </PackageDescription>
+            <PackageTags>google zxing zebra crossing bindings 1d 2d barcode qrcode scanning xamarin android monodroid</PackageTags>
             break; 
           default:
             break; 
@@ -83,8 +90,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\perfmark\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
-    <None Include="..\..\templates\perfmark\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\templates\zxing\License.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\zxing\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
 </Project>
