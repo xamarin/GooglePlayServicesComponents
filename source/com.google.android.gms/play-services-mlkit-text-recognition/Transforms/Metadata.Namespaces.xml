@@ -17,5 +17,10 @@
         >
         Xamarin.Google.MLKit.Vision.Text.Internal
     </attr>
-
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.text.latin']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Text.Latin
+    </attr>
 </metadata>
