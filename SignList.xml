@@ -29,6 +29,7 @@
     <FirstParty Include="Square.*.dll" />
     <FirstParty Include="Xamarin.Grpc.*.dll" />
     <FirstParty Include="Xamarin.Google.Android.ODML.*.dll" />
+    <FirstParty Include="Google.ZXing.*.dll" />
   </ItemGroup>
 
   <ItemGroup>
