@@ -175,6 +175,8 @@ Task("tools-update")
             dotnet tool install     -g xamarin.androidbinderator.tool
             dotnet tool uninstall   -g xamarin.androidx.migration.tool
             dotnet tool install     -g xamarin.androidx.migration.tool
+			dotnet tool uninstall   -g api-tools
+			dotnet tool install     -g api-tools
 
             StartProcess("dotnet", "tool uninstall   -g Cake.Tool");
             StartProcess("dotnet", "tool install     -g Cake.Tool");
