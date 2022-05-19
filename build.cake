@@ -1,9 +1,9 @@
 // Tools needed by cake addins
-#tool nuget:?package=vswhere&version=2.7.1
+#tool nuget:?package=vswhere&version=3.0.2
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=3.2.1
-#addin nuget:?package=Newtonsoft.Json&version=11.0.2
+#addin nuget:?package=Cake.FileHelpers&version=5.0.0
+#addin nuget:?package=Newtonsoft.Json&version=13.0.1
 
 //using Cake.Common.Tools.MSBuild;
 
@@ -175,6 +175,8 @@ Task("tools-update")
             dotnet tool install     -g xamarin.androidbinderator.tool
             dotnet tool uninstall   -g xamarin.androidx.migration.tool
             dotnet tool install     -g xamarin.androidx.migration.tool
+			dotnet tool uninstall   -g api-tools
+			dotnet tool install     -g api-tools
 
             StartProcess("dotnet", "tool uninstall   -g Cake.Tool");
             StartProcess("dotnet", "tool install     -g Cake.Tool");
