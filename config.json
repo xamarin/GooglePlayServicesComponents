@@ -1260,6 +1260,38 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "com.google.android.libraries.places",
+        "artifactId": "places",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.GoogleAndroid.Libraries.Places",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.libraries.places",
+        "artifactId": "places-compat",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.android.volley",
+        "artifactId": "volley",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
+        "nugetId": "Xamarin.Android.Volley",
+        "dependencyOnly": false
+      },      
+      {
+        "groupId": "com.android.volley",
+        "artifactId": "volley-cronet",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
+        "nugetId": "Xamarin.Android.Volley.CroNet",
+        "dependencyOnly": false
+      },      
+      {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "annotations",
         "version": "4.12.0",
