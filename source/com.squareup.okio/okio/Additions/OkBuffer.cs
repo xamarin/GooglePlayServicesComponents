@@ -4,9 +4,6 @@ namespace Square.OkIO
 {
     partial class OkBuffer
     {
-        /*
-        removed - no *.class files only metadata
-
         IBufferedSink IBufferedSink.Emit() => Emit();
 
         IBufferedSink IBufferedSink.EmitCompleteSegments() => EmitCompleteSegments();
@@ -48,6 +45,5 @@ namespace Square.OkIO
         IBufferedSink IBufferedSink.WriteUtf8(string str, int beginIndex, int endIndex) => WriteUtf8(str, beginIndex, endIndex);
 
         IBufferedSink IBufferedSink.WriteUtf8CodePoint(int codePoint) => WriteUtf8CodePoint(codePoint);
-        */
     }
 }
