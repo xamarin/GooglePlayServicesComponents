@@ -3,7 +3,7 @@
         path="/api/package[@name='com.google.mlkit.vision.label.custom']" 
         name="managedName"
         >
-        Xamarin.Google.MLKit.Vision.Label.Defaults
+        Xamarin.Google.MLKit.Vision.Label.Custom
     </attr>
     <attr 
         path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_label_custom_common']" 
