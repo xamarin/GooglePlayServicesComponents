@@ -57,4 +57,13 @@
         >        
     </remove-node>
     
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.objects.custom.internal']/class[@name='CustomObjectsRegistrar']/implements"
+        >        
+    </remove-node>
+    <remove-node
+    path="/api/package[@name='com.google.mlkit.vision.objects.custom.internal']/class[@name='CustomObjectsRegistrar']/method[@name='getComponents' and count(parameter)=0]"
+        >        
+    </remove-node>
+
 </metadata>
