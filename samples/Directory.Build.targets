@@ -95,6 +95,7 @@
     <PackageReference Update="Xamarin.Firebase.Dynamic.Links" Version="120.1.1.5" />
     <PackageReference Update="Xamarin.Firebase.Encoders" Version="117.0.0.5" />
     <PackageReference Update="Xamarin.Firebase.Encoders.JSON" Version="118.0.0.5" />
+    <PackageReference Update="Xamarin.Firebase.Encoders.Proto" Version="116.0.0" />
     <PackageReference Update="Xamarin.Firebase.Firestore" Version="123.0.3.5" />
     <PackageReference Update="Xamarin.Firebase.Functions" Version="120.0.0.5" />
     <PackageReference Update="Xamarin.Firebase.Iid" Version="121.1.0.5" />
@@ -152,47 +153,47 @@
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Interfaces" Version="116.0.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="118.2.2" />
     <PackageReference Update="Xamarin.Google.Android.ODML.Image" Version="1.0.0.0-beta1" />
-    <PackageReference Update="Xamarin.Android.Glide.Annotations" Version="4.12.0.8" />
-    <PackageReference Update="Xamarin.Android.Glide.DiskLruCache" Version="4.12.0.8" />
-    <PackageReference Update="Xamarin.Android.Glide.GifDecoder" Version="4.12.0.8" />
-    <PackageReference Update="Xamarin.Android.Glide" Version="4.12.0.8" />
-    <PackageReference Update="Xamarin.Android.Glide.RecyclerViewIntegration" Version="4.12.0.8" />
+    <PackageReference Update="Xamarin.Android.Glide.Annotations" Version="4.13.2" />
+    <PackageReference Update="Xamarin.Android.Glide.DiskLruCache" Version="4.13.2" />
+    <PackageReference Update="Xamarin.Android.Glide.GifDecoder" Version="4.13.2" />
+    <PackageReference Update="Xamarin.Android.Glide" Version="4.13.2" />
+    <PackageReference Update="Xamarin.Android.Glide.RecyclerViewIntegration" Version="4.13.2" />
     <PackageReference Update="Xamarin.GoogleAndroid.Annotations" Version="4.1.1.6" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="3.0.0.3" />
-    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="3.0.0.3" />
-    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="3.0.1.3" />
+    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="3.1.4" />
+    <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="3.1.4" />
     <PackageReference Update="Xamarin.Google.UserMessagingPlatform" Version="2.0.0" />
     <PackageReference Update="Xamarin.Google.Code.FindBugs.JSR305" Version="3.0.2.4" />
-    <PackageReference Update="Xamarin.Google.Dagger" Version="2.40.5" />
-    <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.5.1" />
-    <PackageReference Update="Xamarin.Google.ZXing.Core" Version="3.4.1" />
-    <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.15.8" />
+    <PackageReference Update="Xamarin.Google.Dagger" Version="2.41.0" />
+    <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.6.0" />
+    <PackageReference Update="Xamarin.Google.ZXing.Core" Version="3.5.0" />
+    <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.16.1" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1.4" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.4" />
     <PackageReference Update="Square.OkHttp3" Version="4.9.3" />
     <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.9.3" />
-    <PackageReference Update="Square.OkIO" Version="2.10.0.3" />
+    <PackageReference Update="Square.OkIO" Version="3.0.0" />
     <PackageReference Update="Square.Picasso" Version="2.8.0.3" />
     <PackageReference Update="Square.Retrofit" Version="1.9.0.4" />
     <PackageReference Update="Square.JavaPoet" Version="1.13.0.0" />
-    <PackageReference Update="Xamarin.Grpc.Android" Version="1.28.0.2" />
-    <PackageReference Update="Xamarin.Grpc.Api" Version="1.28.0.2" />
-    <PackageReference Update="Xamarin.Grpc.Context" Version="1.28.0.2" />
-    <PackageReference Update="Xamarin.Grpc.Core" Version="1.28.0.2" />
-    <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.28.0.2" />
-    <PackageReference Update="Xamarin.Grpc.Protobuf.Lite" Version="1.28.0.2" />
-    <PackageReference Update="Xamarin.Grpc.Stub" Version="1.28.0.2" />
-    <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusApi" Version="0.28.3.3" />
-    <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics" Version="0.28.3.3" />
-    <PackageReference Update="Xamarin.Io.PerfMark.PerfMarkApi" Version="0.23.0.3" />
+    <PackageReference Update="Xamarin.Grpc.Android" Version="1.29.0" />
+    <PackageReference Update="Xamarin.Grpc.Api" Version="1.29.0" />
+    <PackageReference Update="Xamarin.Grpc.Context" Version="1.29.0" />
+    <PackageReference Update="Xamarin.Grpc.Core" Version="1.29.0" />
+    <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.29.0" />
+    <PackageReference Update="Xamarin.Grpc.Protobuf.Lite" Version="1.29.0" />
+    <PackageReference Update="Xamarin.Grpc.Stub" Version="1.29.0" />
+    <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusApi" Version="0.29.0" />
+    <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics" Version="0.29.0" />
+    <PackageReference Update="Xamarin.Io.PerfMark.PerfMarkApi" Version="0.24.0" />
     <PackageReference Update="Xamarin.JavaX.Inject" Version="1.0.0.4" />
-    <PackageReference Update="Xamarin.Chromium.CroNet.Api" Version="76.3809.111.4" />
-    <PackageReference Update="Xamarin.Chromium.CroNet.Common" Version="76.3809.111.4" />
-    <PackageReference Update="Xamarin.Chromium.CroNet.Embedded" Version="76.3809.111.4" />
-    <PackageReference Update="Xamarin.Chromium.CroNet.Fallback" Version="76.3809.111.4" />
-    <PackageReference Update="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations" Version="1.18.0.3" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite" Version="2.5.0.4" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu" Version="2.5.0.4" />
+    <PackageReference Update="Xamarin.Chromium.CroNet.Api" Version="92.4515.131" />
+    <PackageReference Update="Xamarin.Chromium.CroNet.Common" Version="92.4515.131" />
+    <PackageReference Update="Xamarin.Chromium.CroNet.Embedded" Version="92.4515.131" />
+    <PackageReference Update="Xamarin.Chromium.CroNet.Fallback" Version="92.4515.131" />
+    <PackageReference Update="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations" Version="1.19.0" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite" Version="2.6.0" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu" Version="2.6.0" />
     <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.3.0.3" />
     <PackageReference Update="Xamarin.AndroidX.AppCompat" Version="1.4.1.1" />
     <PackageReference Update="Xamarin.AndroidX.Browser" Version="1.4.0.1" />

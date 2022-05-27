@@ -789,6 +789,14 @@
       },
       {
         "groupId": "com.google.firebase",
+        "artifactId": "firebase-encoders-proto",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.Firebase.Encoders.Proto",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.firebase",
         "artifactId": "firebase-firestore",
         "version": "23.0.3",
         "nugetVersion": "123.0.3.5",
@@ -1246,8 +1254,8 @@
       {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "annotations",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.8",
+        "version": "4.13.2",
+        "nugetVersion": "4.13.2",
         "nugetId": "Xamarin.Android.Glide.Annotations",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -1255,8 +1263,8 @@
       {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "disklrucache",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.8",
+        "version": "4.13.2",
+        "nugetVersion": "4.13.2",
         "nugetId": "Xamarin.Android.Glide.DiskLruCache",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -1264,8 +1272,8 @@
       {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "gifdecoder",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.8",
+        "version": "4.13.2",
+        "nugetVersion": "4.13.2",
         "nugetId": "Xamarin.Android.Glide.GifDecoder",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -1273,8 +1281,8 @@
       {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "glide",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.8",
+        "version": "4.13.2",
+        "nugetVersion": "4.13.2",
         "nugetId": "Xamarin.Android.Glide",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -1282,8 +1290,8 @@
       {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "recyclerview-integration",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.8",
+        "version": "4.13.2",
+        "nugetVersion": "4.13.2",
         "nugetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -1309,8 +1317,8 @@
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-backend-cct",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0.3",
+        "version": "3.1.4",
+        "nugetVersion": "3.1.4",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
         "dependencyOnly": false,
         "templateSet": "datatransport"
@@ -1318,8 +1326,8 @@
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
-        "version": "3.0.1",
-        "nugetVersion": "3.0.1.3",
+        "version": "3.1.4",
+        "nugetVersion": "3.1.4",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
         "dependencyOnly": false,
         "templateSet": "datatransport"
@@ -1345,8 +1353,8 @@
       {
         "groupId": "com.google.dagger",
         "artifactId": "dagger",
-        "version": "2.40.5",
-        "nugetVersion": "2.40.5",
+        "version": "2.41",
+        "nugetVersion": "2.41.0",
         "nugetId": "Xamarin.Google.Dagger",
         "dependencyOnly": false,
         "templateSet": "dagger"
@@ -1354,8 +1362,8 @@
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.5.1",
-        "nugetVersion": "2.5.1",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": false,
         "templateSet": "errorprone"
@@ -1363,8 +1371,8 @@
       {
         "groupId": "com.google.zxing",
         "artifactId": "core",
-        "version": "3.4.1",
-        "nugetVersion": "3.4.1",
+        "version": "3.5.0",
+        "nugetVersion": "3.5.0",
         "nugetId": "Xamarin.Google.ZXing.Core",
         "dependencyOnly": false,
         "templateSet": "zxing"
@@ -1372,8 +1380,8 @@
       {
         "groupId": "com.google.protobuf",
         "artifactId": "protobuf-javalite",
-        "version": "3.15.8",
-        "nugetVersion": "3.15.8",
+        "version": "3.16.1",
+        "nugetVersion": "3.16.1",
         "nugetId": "Xamarin.Protobuf.JavaLite",
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth",
@@ -1457,8 +1465,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-android",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0.2",
+        "version": "1.29.0",
+        "nugetVersion": "1.29.0",
         "nugetId": "Xamarin.Grpc.Android",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1466,8 +1474,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-api",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0.2",
+        "version": "1.29.0",
+        "nugetVersion": "1.29.0",
         "nugetId": "Xamarin.Grpc.Api",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1475,8 +1483,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-context",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0.2",
+        "version": "1.29.0",
+        "nugetVersion": "1.29.0",
         "nugetId": "Xamarin.Grpc.Context",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1484,8 +1492,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-core",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0.2",
+        "version": "1.29.0",
+        "nugetVersion": "1.29.0",
         "nugetId": "Xamarin.Grpc.Core",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1493,8 +1501,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-okhttp",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0.2",
+        "version": "1.29.0",
+        "nugetVersion": "1.29.0",
         "nugetId": "Xamarin.Grpc.OkHttp",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1502,8 +1510,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-protobuf-lite",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0.2",
+        "version": "1.29.0",
+        "nugetVersion": "1.29.0",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1511,8 +1519,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-stub",
-        "version": "1.28.0",
-        "nugetVersion": "1.28.0.2",
+        "version": "1.29.0",
+        "nugetVersion": "1.29.0",
         "nugetId": "Xamarin.Grpc.Stub",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1520,8 +1528,8 @@
       {
         "groupId": "io.opencensus",
         "artifactId": "opencensus-api",
-        "version": "0.28.3",
-        "nugetVersion": "0.28.3.3",
+        "version": "0.29.0",
+        "nugetVersion": "0.29.0",
         "nugetId": "Xamarin.Io.OpenCensus.OpenCensusApi",
         "dependencyOnly": false,
         "templateSet": "opencensus"
@@ -1529,8 +1537,8 @@
       {
         "groupId": "io.opencensus",
         "artifactId": "opencensus-contrib-grpc-metrics",
-        "version": "0.28.3",
-        "nugetVersion": "0.28.3.3",
+        "version": "0.29.0",
+        "nugetVersion": "0.29.0",
         "nugetId": "Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics",
         "dependencyOnly": false,
         "templateSet": "opencensus"
@@ -1538,8 +1546,8 @@
       {
         "groupId": "io.perfmark",
         "artifactId": "perfmark-api",
-        "version": "0.23.0",
-        "nugetVersion": "0.23.0.3",
+        "version": "0.24.0",
+        "nugetVersion": "0.24.0",
         "nugetId": "Xamarin.Io.PerfMark.PerfMarkApi",
         "dependencyOnly": false,
         "templateSet": "perfmark"
@@ -1556,8 +1564,8 @@
       {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-api",
-        "version": "76.3809.111",
-        "nugetVersion": "76.3809.111.4",
+        "version": "92.4515.131",
+        "nugetVersion": "92.4515.131",
         "nugetId": "Xamarin.Chromium.CroNet.Api",
         "dependencyOnly": false,
         "templateSet": "chromium-cronet"
@@ -1565,8 +1573,8 @@
       {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-common",
-        "version": "76.3809.111",
-        "nugetVersion": "76.3809.111.4",
+        "version": "92.4515.131",
+        "nugetVersion": "92.4515.131",
         "nugetId": "Xamarin.Chromium.CroNet.Common",
         "dependencyOnly": false,
         "templateSet": "chromium-cronet"
@@ -1574,8 +1582,8 @@
       {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-embedded",
-        "version": "76.3809.111",
-        "nugetVersion": "76.3809.111.4",
+        "version": "92.4515.131",
+        "nugetVersion": "92.4515.131",
         "nugetId": "Xamarin.Chromium.CroNet.Embedded",
         "dependencyOnly": false,
         "templateSet": "chromium-cronet"
@@ -1583,8 +1591,8 @@
       {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-fallback",
-        "version": "76.3809.111",
-        "nugetVersion": "76.3809.111.4",
+        "version": "92.4515.131",
+        "nugetVersion": "92.4515.131",
         "nugetId": "Xamarin.Chromium.CroNet.Fallback",
         "dependencyOnly": false,
         "templateSet": "chromium-cronet"
@@ -1592,8 +1600,8 @@
       {
         "groupId": "org.codehaus.mojo",
         "artifactId": "animal-sniffer-annotations",
-        "version": "1.18",
-        "nugetVersion": "1.18.0.3",
+        "version": "1.19",
+        "nugetVersion": "1.19.0",
         "nugetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
         "dependencyOnly": false,
         "templateSet": "codehaus-mojo"
@@ -1601,8 +1609,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0.4",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.TensorFlow.Lite",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
@@ -1610,8 +1618,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-gpu",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0.4",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.TensorFlow.Lite.Gpu",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
