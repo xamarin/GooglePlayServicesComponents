@@ -122,4 +122,15 @@
         >
         Java.Lang.Object
     </attr>
-  </metadata>
+
+    <remove-node 
+      path="/api/package[@name='io.grpc.internal']/class[@name='ServerImplBuilder']"
+      />
+    <remove-node 
+      path="/api/package[@name='io.grpc.internal']/class[@name='ScParser']"
+      />
+    <remove-node 
+      path="/api/package[@name='io.grpc.internal']/class[@name='ManagedChannelImplBuilder']"      
+      />
+
+</metadata>
