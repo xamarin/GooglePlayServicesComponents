@@ -27,4 +27,24 @@
         </method>
     </add-node>
 
+    <remove-node 
+        path="/api/package[@name='io.grpc.stub']/class[@name='ServerCallStreamObserver']/method[@name='request' and count(parameter)=1 and parameter[1][@type='int']]"
+        />
+    <remove-node 
+        path="/api/package[@name='io.grpc.stub']/class[@name='ServerCallStreamObserver']/method[@name='setMessageCompression' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        />
+    <remove-node 
+        path="/api/package[@name='io.grpc.stub']/class[@name='ServerCallStreamObserver']/method[@name='setOnReadyHandler' and count(parameter)=1 and parameter[1][@type='java.lang.Runnable']]"
+        />
+        <remove-node 
+        path="/api/package[@name='io.grpc.stub']/class[@name='ClientCallStreamObserver']/method[@name='request' and count(parameter)=1 and parameter[1][@type='int']]"
+        />
+    <remove-node 
+        path="/api/package[@name='io.grpc.stub']/class[@name='ClientCallStreamObserver']/method[@name='setMessageCompression' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        />
+    <remove-node 
+        path="/api/package[@name='io.grpc.stub']/class[@name='ClientCallStreamObserver']/method[@name='setOnReadyHandler' and count(parameter)=1 and parameter[1][@type='java.lang.Runnable']]"
+        />
+
+        
 </metadata>

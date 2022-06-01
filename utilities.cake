@@ -202,12 +202,17 @@ Task ("spell-check")
                 "UrlConnection",
                 "PerfMark",
                 "PerfMarkApi",
+                "ZXing",
+		            "JavaPoet",
                 "LanguageId",
                 "AppSet",
                 "Ktx",
                 "Proto",
                 "ZXing",
                 "JavaPoet",
+                "Blockstore",
+                "PasswordComplexity",
+                "StreamPotect",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
