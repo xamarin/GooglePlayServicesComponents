@@ -26,87 +26,6 @@
     ],
     "artifacts": [
       {
-        "groupId": "com.github.bumptech.glide",
-        "artifactId": "annotations",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.8",
-        "nugetId": "Xamarin.Android.Glide.Annotations",
-        "dependencyOnly": false,
-        "templateSet": "glide"
-      },
-      {
-        "groupId": "com.github.bumptech.glide",
-        "artifactId": "disklrucache",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.8",
-        "nugetId": "Xamarin.Android.Glide.DiskLruCache",
-        "dependencyOnly": false,
-        "templateSet": "glide"
-      },
-      {
-        "groupId": "com.github.bumptech.glide",
-        "artifactId": "gifdecoder",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.8",
-        "nugetId": "Xamarin.Android.Glide.GifDecoder",
-        "dependencyOnly": false,
-        "templateSet": "glide"
-      },
-      {
-        "groupId": "com.github.bumptech.glide",
-        "artifactId": "glide",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.8",
-        "nugetId": "Xamarin.Android.Glide",
-        "dependencyOnly": false,
-        "templateSet": "glide"
-      },
-      {
-        "groupId": "com.github.bumptech.glide",
-        "artifactId": "recyclerview-integration",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.8",
-        "nugetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
-        "dependencyOnly": false,
-        "templateSet": "glide"
-      },
-      {
-        "groupId": "com.google.android",
-        "artifactId": "annotations",
-        "version": "4.1.1.4",
-        "nugetVersion": "4.1.1.6",
-        "nugetId": "Xamarin.GoogleAndroid.Annotations",
-        "dependencyOnly": false,
-        "templateSet": "annotations"
-      },
-      {
-        "groupId": "com.google.android.datatransport",
-        "artifactId": "transport-api",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0",
-        "nugetId": "Xamarin.Google.Android.DataTransport.TransportApi",
-        "dependencyOnly": false,
-        "templateSet": "datatransport"
-      },
-      {
-        "groupId": "com.google.android.datatransport",
-        "artifactId": "transport-backend-cct",
-        "version": "3.1.3",
-        "nugetVersion": "3.1.3",
-        "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
-        "dependencyOnly": false,
-        "templateSet": "datatransport"
-      },
-      {
-        "groupId": "com.google.android.datatransport",
-        "artifactId": "transport-runtime",
-        "version": "3.1.3",
-        "nugetVersion": "3.1.3",
-        "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
-        "dependencyOnly": false,
-        "templateSet": "datatransport"
-      },
-      {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
         "version": "20.5.0",
@@ -683,33 +602,6 @@
         "dependencyOnly": false,
         "templateSet": "user-messaging-platform"
       },
-      {
-        "groupId": "com.google.code.findbugs",
-        "artifactId": "jsr305",
-        "version": "3.0.2",
-        "nugetVersion": "3.0.2.4",
-        "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
-        "dependencyOnly": false,
-        "templateSet": "findbugs"
-      },
-      {
-        "groupId": "com.google.dagger",
-        "artifactId": "dagger",
-        "version": "2.27",
-        "nugetVersion": "2.27.0.4",
-        "nugetId": "Xamarin.Google.Dagger",
-        "dependencyOnly": false,
-        "templateSet": "dagger"
-      },
-      {
-        "groupId": "com.google.errorprone",
-        "artifactId": "error_prone_annotations",
-        "version": "2.9.0",
-        "nugetVersion": "2.9.0",
-        "nugetId": "Xamarin.Google.ErrorProne.Annotations",
-        "dependencyOnly": false,
-        "templateSet": "errorprone"
-      },
       //=======================================================================
       // FB
       {
@@ -739,8 +631,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics",
-        "version": "19.0.2",
-        "nugetVersion": "119.0.2.0",
+        "version": "20.0.1",
+        "nugetVersion": "120.0.1",
         "nugetId": "Xamarin.Firebase.Analytics",
         "dependencyOnly": false
       },
@@ -1369,6 +1261,15 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "com.google.android",
+        "artifactId": "annotations",
+        "version": "4.1.1.4",
+        "nugetVersion": "4.1.1.6",
+        "nugetId": "Xamarin.GoogleAndroid.Annotations",
+        "dependencyOnly": false,
+        "templateSet": "annotations"
+      },
+          {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "annotations",
         "version": "4.13.2",
@@ -1412,15 +1313,6 @@
         "nugetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
         "dependencyOnly": false,
         "templateSet": "glide"
-      },
-      {
-        "groupId": "com.google.android",
-        "artifactId": "annotations",
-        "version": "4.1.1.4",
-        "nugetVersion": "4.1.1.6",
-        "nugetId": "Xamarin.GoogleAndroid.Annotations",
-        "dependencyOnly": false,
-        "templateSet": "annotations"
       },
       {
         "groupId": "com.google.android.datatransport",
