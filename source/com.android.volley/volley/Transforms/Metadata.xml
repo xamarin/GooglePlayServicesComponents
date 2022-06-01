@@ -17,5 +17,11 @@
 		>
 		RequestQueueRequestEvent
 	</attr>
+	<attr 
+		path="/api/package[@name='com.android.volley.toolbox']/class[@name='AsyncHttpStack']/method[@name='executeRequest' and count(parameter)=3 and parameter[1][@type='com.android.volley.Request&lt;?&gt;'] and parameter[2][@type='java.util.Map&lt;java.lang.String, java.lang.String&gt;'] and parameter[3][@type='com.android.volley.toolbox.AsyncHttpStack.OnRequestComplete']]"
+		name="abstract"
+		>
+		false
+	</attr>
 
 </metadata>
