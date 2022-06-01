@@ -251,14 +251,6 @@
       },
       {
         "groupId": "com.google.android.gms",
-        "artifactId": "play-services-games-v2",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0",
-        "nugetId": "Xamarin.GooglePlayServices.Games",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "com.google.android.gms",
         "artifactId": "play-services-gass",
         "version": "20.0.0",
         "nugetVersion": "120.0.0.5",
@@ -615,6 +607,14 @@
         "version": "1.10.3",
         "nugetVersion": "1.10.3",
         "nugetId": "Xamarin.Google.Android.Play.Core",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "integrity",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.Google.Android.Play.Integrity",
         "dependencyOnly": false
       },
       //=======================================================================
