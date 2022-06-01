@@ -1,4 +1,10 @@
 ﻿using System;
-using Android.Views;
-using Android.Widget;
-using Android.Graphics;
+
+namespace Volley.Toolbox {
+	public partial class StringRequest {
+		protected override void DeliverResponse (Java.Lang.Object response)
+		{
+			DeliverResponse ((string)response);
+		}
+	}
+}
