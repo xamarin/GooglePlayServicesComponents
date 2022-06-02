@@ -1,3 +1,9 @@
 ﻿<metadata>
+    <attr 
+        path="/api/package[@name='org.tensorflow.lite']" 
+        name="managedName" 
+        >
+        Xamarin.TensorFlow.Lite
+    </attr>
 
 </metadata>
