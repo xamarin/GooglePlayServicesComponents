@@ -1,10 +1,45 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='com.google.android.libraries.places.api']" 
         name="managedName"
         >
-        Package
+        Xamarin.GoogleAndroid.Libraries.Places.API
     </attr>
-    -->
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.places.api.model']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Places.API.Model
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.places.api.net']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Places.API.Net
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.places.internal']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Places.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.places.widget']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Places.Widget
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.places.widget.listener']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Places.Widget.Listener
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.places.widget.model']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Places.Widget.Model
+    </attr>
+
 </metadata>

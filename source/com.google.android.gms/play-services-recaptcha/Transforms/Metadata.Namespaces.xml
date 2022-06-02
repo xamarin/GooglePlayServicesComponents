@@ -1,10 +1,15 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='com.google.android.gms.recaptcha']" 
         name="managedName"
         >
-        Package
+        Android.Gms.ReCaptcha
     </attr>
-    -->
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.recaptcha']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.ReCaptcha
+    </attr>
+
 </metadata>
