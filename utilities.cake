@@ -213,6 +213,8 @@ Task ("spell-check")
                 "Blockstore",
                 "PasswordComplexity",
                 "StreamPotect",
+                "ReCaptcha",
+                "Compat",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
