@@ -486,7 +486,7 @@
         "artifactId": "play-services-recaptcha",
         "version": "16.0.1",
         "nugetVersion": "116.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Recaptcha",
+        "nugetId": "Xamarin.GooglePlayServices.ReCaptcha",
         "dependencyOnly": false
       },
       {
