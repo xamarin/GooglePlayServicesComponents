@@ -1620,7 +1620,7 @@
         "artifactId": "tensorflow-lite-api",
         "version": "2.7.0",
         "nugetVersion": "2.7.0",
-        "nugetId": "Xamarin.TensorFlow.Lite.API",
+        "nugetId": "Xamarin.TensorFlow.Lite.Api",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
       },
