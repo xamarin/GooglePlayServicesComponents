@@ -212,7 +212,7 @@ Task ("spell-check")
                 "JavaPoet",
                 "Blockstore",
                 "PasswordComplexity",
-                "StreamPotect",
+                "StreamProtect",
                 "ReCaptcha",
                 "Compat",
             };

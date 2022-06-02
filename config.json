@@ -509,8 +509,8 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-streamprotect",
         "version": "16.0.2",
-        "nugetVersion": "116.0.2",
-        "nugetId": "Xamarin.GooglePlayServices.StreamPotect",
+        "nugetVersion": "116.0.2.1",
+        "nugetId": "Xamarin.GooglePlayServices.StreamProtect",
         "dependencyOnly": false
       },
       {
