@@ -112,5 +112,11 @@
         >
         Xamarin.Chromium.Native_Test
     </attr>    
+    <attr
+        path="/api/package[@name='org.chromium.base.lifetime']"
+        name="managedName"
+        >
+        Xamarin.Chromium.Base.LifeTime
+    </attr>
     
 </metadata>
