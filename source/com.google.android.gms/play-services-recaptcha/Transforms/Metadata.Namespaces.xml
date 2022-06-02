@@ -3,13 +3,13 @@
         path="/api/package[@name='com.google.android.gms.recaptcha']" 
         name="managedName"
         >
-        Android.Gms.ReCaptcha
+        Android.Gms.Recaptcha
     </attr>
     <attr 
         path="/api/package[@name='com.google.android.gms.internal.recaptcha']" 
         name="managedName"
         >
-        Android.Gms.Internal.ReCaptcha
+        Android.Gms.Internal.Recaptcha
     </attr>
 
 </metadata>

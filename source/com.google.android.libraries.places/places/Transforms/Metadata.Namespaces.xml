@@ -3,19 +3,19 @@
         path="/api/package[@name='com.google.android.libraries.places.api']" 
         name="managedName"
         >
-        Xamarin.GoogleAndroid.Libraries.Places.API
+        Xamarin.GoogleAndroid.Libraries.Places.Api
     </attr>
     <attr 
         path="/api/package[@name='com.google.android.libraries.places.api.model']" 
         name="managedName"
         >
-        Xamarin.GoogleAndroid.Libraries.Places.API.Model
+        Xamarin.GoogleAndroid.Libraries.Places.Api.Model
     </attr>
     <attr 
         path="/api/package[@name='com.google.android.libraries.places.api.net']" 
         name="managedName"
         >
-        Xamarin.GoogleAndroid.Libraries.Places.API.Net
+        Xamarin.GoogleAndroid.Libraries.Places.Api.Net
     </attr>
     <attr 
         path="/api/package[@name='com.google.android.libraries.places.internal']" 
