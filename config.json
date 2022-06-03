@@ -28,16 +28,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "20.6.0",
-        "nugetVersion": "120.6.0",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "20.6.0",
-        "nugetVersion": "120.6.0",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -52,8 +52,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "20.6.0",
-        "nugetVersion": "120.6.0",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
@@ -228,8 +228,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-fitness",
-        "version": "21.0.1",
-        "nugetVersion": "121.0.1",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Fitness",
         "dependencyOnly": false
       },
@@ -308,48 +308,48 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement",
-        "version": "20.1.2",
-        "nugetVersion": "120.1.2",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-api",
-        "version": "20.1.2",
-        "nugetVersion": "120.1.2",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
-        "version": "20.1.2",
-        "nugetVersion": "120.1.2",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-impl",
-        "version": "20.1.2",
-        "nugetVersion": "120.1.2",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Impl",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk",
-        "version": "20.1.2",
-        "nugetVersion": "120.1.2",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk-api",
-        "version": "20.1.2",
-        "nugetVersion": "120.1.2",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk.Api",
         "dependencyOnly": false
       },
@@ -364,16 +364,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-face-detection",
-        "version": "16.2.1",
-        "nugetVersion": "116.2.1",
+        "version": "17.0.1",
+        "nugetVersion": "117.0.1",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.FaceDetection",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-image-labeling",
-        "version": "16.0.6",
-        "nugetVersion": "116.0.6",
+        "version": "16.0.7",
+        "nugetVersion": "116.0.7",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.ImageLabeling",
         "dependencyOnly": false
       },
@@ -404,8 +404,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-nearby",
-        "version": "18.1.0",
-        "nugetVersion": "118.1.0",
+        "version": "18.2.0",
+        "nugetVersion": "118.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Nearby",
         "dependencyOnly": false
       },
@@ -436,8 +436,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-password-complexity",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1",
         "nugetId": "Xamarin.GooglePlayServices.PasswordComplexity",
         "dependencyOnly": false
       },
@@ -484,8 +484,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-recaptcha",
-        "version": "16.0.1",
-        "nugetVersion": "116.0.1",
+        "version": "17.0.1",
+        "nugetVersion": "117.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Recaptcha",
         "dependencyOnly": false
       },
@@ -702,8 +702,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-common",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0.5",
+        "version": "20.1.0",
+        "nugetVersion": "120.1.0",
         "nugetId": "Xamarin.Firebase.Common",
         "dependencyOnly": false
       },
@@ -870,16 +870,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-installations",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0.5",
+        "version": "17.0.1",
+        "nugetVersion": "117.0.1",
         "nugetId": "Xamarin.Firebase.Installations",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-installations-interop",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0.5",
+        "version": "17.0.1",
+        "nugetVersion": "117.0.1",
         "nugetId": "Xamarin.Firebase.Installations.InterOp",
         "dependencyOnly": false
       },
@@ -1126,8 +1126,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "image-labeling-common",
-        "version": "17.2.0",
-        "nugetVersion": "117.2.0",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0",
         "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Common",
         "dependencyOnly": false
       },
@@ -1150,8 +1150,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "image-labeling-default-common",
-        "version": "16.0.2",
-        "nugetVersion": "116.0.2",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0",
         "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Default.Common",
         "dependencyOnly": false
       },
