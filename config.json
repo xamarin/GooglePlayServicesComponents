@@ -28,16 +28,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "20.5.0",
-        "nugetVersion": "120.5.0",
+        "version": "20.6.0",
+        "nugetVersion": "120.6.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "20.5.0",
-        "nugetVersion": "120.5.0",
+        "version": "20.6.0",
+        "nugetVersion": "120.6.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -52,8 +52,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "20.5.0",
-        "nugetVersion": "120.5.0",
+        "version": "20.6.0",
+        "nugetVersion": "120.6.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
@@ -68,16 +68,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-analytics",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Analytics",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-analytics-impl",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Analytics.Impl",
         "dependencyOnly": false
       },
@@ -108,8 +108,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-auth",
-        "version": "20.1.0",
-        "nugetVersion": "120.1.0",
+        "version": "20.2.0",
+        "nugetVersion": "120.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Auth",
         "dependencyOnly": false
       },
@@ -132,8 +132,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-auth-blockstore",
-        "version": "16.0.4",
-        "nugetVersion": "116.0.4",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Auth.Blockstore",
         "dependencyOnly": false
       },
@@ -156,8 +156,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1",
+        "version": "18.0.2",
+        "nugetVersion": "118.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Basement",
         "dependencyOnly": false
       },
@@ -308,48 +308,48 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement",
-        "version": "20.0.2",
-        "nugetVersion": "120.0.2",
+        "version": "20.1.2",
+        "nugetVersion": "120.1.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-api",
-        "version": "20.0.2",
-        "nugetVersion": "120.0.2",
+        "version": "20.1.2",
+        "nugetVersion": "120.1.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
-        "version": "20.0.2",
-        "nugetVersion": "120.0.2",
+        "version": "20.1.2",
+        "nugetVersion": "120.1.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-impl",
-        "version": "20.0.2",
-        "nugetVersion": "120.0.2",
+        "version": "20.1.2",
+        "nugetVersion": "120.1.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Impl",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk",
-        "version": "20.0.2",
-        "nugetVersion": "120.0.2",
+        "version": "20.1.2",
+        "nugetVersion": "120.1.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk-api",
-        "version": "20.0.2",
-        "nugetVersion": "120.0.2",
+        "version": "20.1.2",
+        "nugetVersion": "120.1.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk.Api",
         "dependencyOnly": false
       },
@@ -372,8 +372,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-image-labeling",
-        "version": "16.0.5",
-        "nugetVersion": "116.0.5",
+        "version": "16.0.6",
+        "nugetVersion": "116.0.6",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.ImageLabeling",
         "dependencyOnly": false
       },
@@ -388,8 +388,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-text-recognition",
-        "version": "17.0.1",
-        "nugetVersion": "117.0.1",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition",
         "dependencyOnly": false
       },
@@ -420,8 +420,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-pal",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0",
+        "version": "19.0.0",
+        "nugetVersion": "119.0.0",
         "nugetId": "Xamarin.GooglePlayServices.PAL",
         "dependencyOnly": false
       },
@@ -436,9 +436,17 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-password-complexity",
-        "version": "17.0.1",
-        "nugetVersion": "117.0.1",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0",
         "nugetId": "Xamarin.GooglePlayServices.PasswordComplexity",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-pay",
+        "version": "16.0.3",
+        "nugetVersion": "116.0.3",
+        "nugetId": "Xamarin.GooglePlayServices.Pay",
         "dependencyOnly": false
       },
       {
@@ -475,6 +483,14 @@
       },
       {
         "groupId": "com.google.android.gms",
+        "artifactId": "play-services-recaptcha",
+        "version": "16.0.1",
+        "nugetVersion": "116.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Recaptcha",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
         "artifactId": "play-services-safetynet",
         "version": "18.0.1",
         "nugetVersion": "118.0.1",
@@ -493,31 +509,31 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-streamprotect",
         "version": "16.0.2",
-        "nugetVersion": "116.0.2",
-        "nugetId": "Xamarin.GooglePlayServices.StreamPotect",
+        "nugetVersion": "116.0.2.1",
+        "nugetId": "Xamarin.GooglePlayServices.StreamProtect",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tagmanager",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1",
         "nugetId": "Xamarin.GooglePlayServices.TagManager",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tagmanager-api",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1",
         "nugetId": "Xamarin.GooglePlayServices.TagManager.Api",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tagmanager-v4-impl",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1",
         "nugetId": "Xamarin.GooglePlayServices.TagManager.V4.Impl",
         "dependencyOnly": false
       },
@@ -588,19 +604,18 @@
       {
         "groupId": "com.google.android.play",
         "artifactId": "core",
-        "version": "1.10.2",
-        "nugetVersion": "1.10.2.5",
+        "version": "1.10.3",
+        "nugetVersion": "1.10.3",
         "nugetId": "Xamarin.Google.Android.Play.Core",
         "dependencyOnly": false
       },
       {
-        "groupId": "com.google.android.ump",
-        "artifactId": "user-messaging-platform",
+        "groupId": "com.google.android.play",
+        "artifactId": "integrity",
         "version": "1.0.0",
-        "nugetVersion": "1.0.0.4",
-        "nugetId": "Xamarin.Google.UserMessagingPlatform",
-        "dependencyOnly": false,
-        "templateSet": "user-messaging-platform"
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.Google.Android.Play.Integrity",
+        "dependencyOnly": false
       },
       //=======================================================================
       // FB
@@ -1261,6 +1276,38 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "com.google.android.libraries.places",
+        "artifactId": "places",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.GoogleAndroid.Libraries.Places",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.libraries.places",
+        "artifactId": "places-compat",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.android.volley",
+        "artifactId": "volley",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
+        "nugetId": "Xamarin.Android.Volley",
+        "dependencyOnly": false
+      },      
+      {
+        "groupId": "com.android.volley",
+        "artifactId": "volley-cronet",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
+        "nugetId": "Xamarin.Android.Volley.CroNet",
+        "dependencyOnly": false
+      },      
+      {
         "groupId": "com.google.android",
         "artifactId": "annotations",
         "version": "4.1.1.4",
@@ -1269,7 +1316,16 @@
         "dependencyOnly": false,
         "templateSet": "annotations"
       },
-          {
+      {
+        "groupId": "com.google.android.ump",
+        "artifactId": "user-messaging-platform",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0.4",
+        "nugetId": "Xamarin.Google.UserMessagingPlatform",
+        "dependencyOnly": false,
+        "templateSet": "user-messaging-platform"
+      },
+      {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "annotations",
         "version": "4.13.2",

@@ -30,6 +30,9 @@
     <FirstParty Include="Xamarin.Grpc.*.dll" />
     <FirstParty Include="Xamarin.Google.Android.ODML.*.dll" />
     <FirstParty Include="Google.ZXing.*.dll" />
+    <FirstParty Include="Xamarin.GoogleAndroid.Libraries.*.dll" />
+    <FirstParty Include="Xamarin.Android.Volley.dll" />
+    <FirstParty Include="Xamarin.Android.Volley.*.dll" />
   </ItemGroup>
 
   <ItemGroup>
