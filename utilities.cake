@@ -212,7 +212,9 @@ Task ("spell-check")
                 "JavaPoet",
                 "Blockstore",
                 "PasswordComplexity",
-                "StreamPotect",
+                "StreamProtect",
+                "ReCaptcha",
+                "Compat",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
