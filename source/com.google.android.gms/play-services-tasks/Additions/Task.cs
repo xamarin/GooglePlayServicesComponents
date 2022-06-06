@@ -48,18 +48,18 @@ namespace Android.Gms.Extensions
         }
     }
 
-    [Android.Runtime.Preserve]
+    [System.Diagnostics.CodeAnalysis.DynamicDependency]
     class AwaitableTaskCompleteListener<TResult> : Java.Lang.Object, IOnCompleteListener where TResult : class, IJavaObject
     {
         System.Threading.Tasks.TaskCompletionSource<TResult> taskCompletionSource;
 
-        [Android.Runtime.Preserve]
+        [System.Diagnostics.CodeAnalysis.DynamicDependency]
         public AwaitableTaskCompleteListener ()
         {
             taskCompletionSource = new System.Threading.Tasks.TaskCompletionSource<TResult> ();
         }
 
-        [Android.Runtime.Preserve]
+        [System.Diagnostics.CodeAnalysis.DynamicDependency]
         public void OnComplete (Task task)
         {
             if (task.IsSuccessful) {
@@ -69,13 +69,13 @@ namespace Android.Gms.Extensions
             }
         }
 
-        [Android.Runtime.Preserve]
+        [System.Diagnostics.CodeAnalysis.DynamicDependency]
         public System.Threading.Tasks.Task<TResult> AwaitAsync ()
         {
             return taskCompletionSource.Task;
         }
 
-        [Android.Runtime.Preserve]
+        [System.Diagnostics.CodeAnalysis.DynamicDependency]
         public TaskAwaiter<TResult> GetAwaiter ()
         {
             return taskCompletionSource.Task.GetAwaiter ();
@@ -85,19 +85,19 @@ namespace Android.Gms.Extensions
 
 namespace Android.Gms.Tasks
 {
-    [Android.Runtime.Preserve]
+    [System.Diagnostics.CodeAnalysis.DynamicDependency]
     public partial class Task
     {
-        [Android.Runtime.Preserve]
+        [System.Diagnostics.CodeAnalysis.DynamicDependency]
         public virtual Java.Lang.Object Result {
             get { return RawResult; }
         }
     }
 
-    [Android.Runtime.Preserve]
+    [System.Diagnostics.CodeAnalysis.DynamicDependency]
     public partial class TaskCompletionSource
     {
-        [Android.Runtime.Preserve]
+        [System.Diagnostics.CodeAnalysis.DynamicDependency]
         public virtual Task Task { get { return GetTask (); } }
     }
 }
