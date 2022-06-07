@@ -34,4 +34,9 @@
         >
     </remove-node>
     
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.label.defaults.internal']/class[@name='BundledLabelRegistrar']/implements"
+        >
+    </remove-node>
+
 </metadata>
