@@ -1,3 +1,7 @@
 ﻿<metadata>
 
+    <remove-node
+       path="/api/package[@name='com.google.mlkit.nl.languageid.internal']/class[@name='LanguageIdRegistrar']/implements"
+        />
+
 </metadata>
