@@ -203,7 +203,7 @@ Task ("spell-check")
                 "PerfMark",
                 "PerfMarkApi",
                 "ZXing",
-		            "JavaPoet",
+		        "JavaPoet",
                 "LanguageId",
                 "AppSet",
                 "Ktx",
@@ -213,7 +213,7 @@ Task ("spell-check")
                 "Blockstore",
                 "PasswordComplexity",
                 "StreamProtect",
-                "ReCaptcha",
+                "Recaptcha",
                 "Compat",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
