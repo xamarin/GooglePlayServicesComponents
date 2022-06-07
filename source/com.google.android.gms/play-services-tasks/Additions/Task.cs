@@ -4,6 +4,8 @@ using Android.Gms.Tasks;
 using System.Runtime.CompilerServices;
 using Android.Gms.Extensions;
 
+using System.Diagnostics.CodeAnalysis;
+
 namespace Android.Gms.Extensions
 {
     public static class TasksExtensions
@@ -48,18 +50,15 @@ namespace Android.Gms.Extensions
         }
     }
 
-    [System.Diagnostics.CodeAnalysis.DynamicDependency]
     class AwaitableTaskCompleteListener<TResult> : Java.Lang.Object, IOnCompleteListener where TResult : class, IJavaObject
     {
         System.Threading.Tasks.TaskCompletionSource<TResult> taskCompletionSource;
 
-        [System.Diagnostics.CodeAnalysis.DynamicDependency]
         public AwaitableTaskCompleteListener ()
         {
             taskCompletionSource = new System.Threading.Tasks.TaskCompletionSource<TResult> ();
         }
 
-        [System.Diagnostics.CodeAnalysis.DynamicDependency]
         public void OnComplete (Task task)
         {
             if (task.IsSuccessful) {
@@ -69,13 +68,11 @@ namespace Android.Gms.Extensions
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.DynamicDependency]
         public System.Threading.Tasks.Task<TResult> AwaitAsync ()
         {
             return taskCompletionSource.Task;
         }
 
-        [System.Diagnostics.CodeAnalysis.DynamicDependency]
         public TaskAwaiter<TResult> GetAwaiter ()
         {
             return taskCompletionSource.Task.GetAwaiter ();
@@ -85,19 +82,15 @@ namespace Android.Gms.Extensions
 
 namespace Android.Gms.Tasks
 {
-    [System.Diagnostics.CodeAnalysis.DynamicDependency]
     public partial class Task
     {
-        [System.Diagnostics.CodeAnalysis.DynamicDependency]
         public virtual Java.Lang.Object Result {
             get { return RawResult; }
         }
     }
 
-    [System.Diagnostics.CodeAnalysis.DynamicDependency]
     public partial class TaskCompletionSource
     {
-        [System.Diagnostics.CodeAnalysis.DynamicDependency]
         public virtual Task Task { get { return GetTask (); } }
     }
 }

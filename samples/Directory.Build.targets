@@ -57,10 +57,10 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Places" Version="117.0.0.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.Places.PlaceReport" Version="117.0.0.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.Plus" Version="117.0.0.6" />
-    <PackageReference Update="Xamarin.GooglePlayServices.ReCaptcha" Version="116.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Recaptcha" Version="116.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.SafetyNet" Version="118.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Stats" Version="117.0.3" />
-    <PackageReference Update="Xamarin.GooglePlayServices.StreamPotect" Version="116.0.2" />
+    <PackageReference Update="Xamarin.GooglePlayServices.StreamProtect" Version="116.0.2.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager" Version="118.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager.Api" Version="118.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager.V4.Impl" Version="118.0.1" />
