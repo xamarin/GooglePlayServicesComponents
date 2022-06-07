@@ -132,13 +132,12 @@
     <PackageReference Update="Xamarin.Firebase.ProtoliteWellKnownTypes" Version="118.0.0.5" />
     <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning" Version="117.0.2" />
     <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning.Common" Version="117.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.Common" Version="118.1.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.Common" Version="118.2.0" />
     <PackageReference Update="Xamarin.Google.MLKit.DigitalInk.Recognition" Version="118.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.FaceDetection" Version="116.1.3" />
-    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling" Version="117.0.6" />
+    <PackageReference Update="Xamarin.Google.MLKit.FaceDetection" Version="116.1.5" />
+    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling" Version="117.0.7" />
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.AutoML" Version="116.2.1.6" />
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Common" Version="118.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Custom" Version="117.0.0" />
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Custom.Common" Version="116.0.1" />
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Default.Common" Version="117.0.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Language.Id" Version="117.0.1" />
@@ -150,7 +149,7 @@
     <PackageReference Update="Xamarin.Google.MLKit.PoseDetection" Version="117.0.0.5" />
     <PackageReference Update="Xamarin.Google.MLKit.PoseDetection.Accurate" Version="117.0.0.5" />
     <PackageReference Update="Xamarin.Google.MLKit.PoseDetection.Common" Version="117.0.0.5" />
-    <PackageReference Update="Xamarin.Google.MLKit.SmartReply" Version="116.2.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.SmartReply" Version="117.0.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Translate" Version="117.0.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="117.1.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Interfaces" Version="116.0.0" />

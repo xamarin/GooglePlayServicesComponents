@@ -15,6 +15,11 @@
         Xamarin.Google.MLKit.Vision.Label.ImageLabelerOptionsBase
     </attr>
 
-
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.label.custom.internal']/class[@name='CustomLabelRegistrar']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.label.custom.internal']/class[@name='CustomLabelRegistrar']/method[@name='getComponents' and count(parameter)=0]"
+        />
 
 </metadata>
