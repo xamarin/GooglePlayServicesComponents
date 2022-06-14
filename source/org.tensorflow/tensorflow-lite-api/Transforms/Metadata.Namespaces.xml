@@ -6,5 +6,11 @@
         >
         Xamarin.TensorFlow.Lite.Annotations
     </attr>
+    <attr 
+        path="/api/package[@name='org.tensorflow.lite.nnapi']" 
+        name="managedName"
+        >
+        Xamarin.TensorFlow.Lite.Nnapi
+    </attr>
 
 </metadata>
