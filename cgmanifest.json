@@ -11,11 +11,7 @@
           "NuGetVersion": "120.6.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -28,11 +24,7 @@
           "NuGetVersion": "120.6.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -45,11 +37,7 @@
           "NuGetVersion": "118.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -62,11 +50,7 @@
           "NuGetVersion": "120.6.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -79,11 +63,7 @@
           "NuGetVersion": "119.0.3.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -96,11 +76,7 @@
           "NuGetVersion": "118.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -113,11 +89,7 @@
           "NuGetVersion": "118.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -130,11 +102,7 @@
           "NuGetVersion": "118.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -147,11 +115,7 @@
           "NuGetVersion": "16.0.2.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -164,11 +128,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -181,11 +141,7 @@
           "NuGetVersion": "120.2.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -198,11 +154,7 @@
           "NuGetVersion": "118.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -215,11 +167,7 @@
           "NuGetVersion": "118.0.3.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -232,11 +180,7 @@
           "NuGetVersion": "116.1.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -249,11 +193,7 @@
           "NuGetVersion": "119.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -266,11 +206,7 @@
           "NuGetVersion": "118.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -283,11 +219,7 @@
           "NuGetVersion": "118.0.2.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -300,11 +232,7 @@
           "NuGetVersion": "121.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -317,11 +245,7 @@
           "NuGetVersion": "121.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -334,11 +258,7 @@
           "NuGetVersion": "119.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -351,11 +271,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -368,11 +284,7 @@
           "NuGetVersion": "117.0.2.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -385,11 +297,7 @@
           "NuGetVersion": "118.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -402,11 +310,7 @@
           "NuGetVersion": "117.0.0.7"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -419,11 +323,7 @@
           "NuGetVersion": "118.1.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -436,11 +336,7 @@
           "NuGetVersion": "121.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -453,11 +349,7 @@
           "NuGetVersion": "118.0.1.4"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -470,11 +362,7 @@
           "NuGetVersion": "122.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -487,11 +375,7 @@
           "NuGetVersion": "120.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -504,11 +388,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -521,11 +401,7 @@
           "NuGetVersion": "118.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -538,11 +414,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -555,11 +427,7 @@
           "NuGetVersion": "118.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -572,11 +440,7 @@
           "NuGetVersion": "119.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -589,11 +453,7 @@
           "NuGetVersion": "118.0.2.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -606,11 +466,7 @@
           "NuGetVersion": "120.1.2.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -623,11 +479,7 @@
           "NuGetVersion": "120.1.2.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -640,11 +492,7 @@
           "NuGetVersion": "120.1.2.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -657,11 +505,7 @@
           "NuGetVersion": "120.1.2.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -674,11 +518,7 @@
           "NuGetVersion": "120.1.2.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -691,11 +531,7 @@
           "NuGetVersion": "120.1.2.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -708,11 +544,7 @@
           "NuGetVersion": "118.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -725,11 +557,7 @@
           "NuGetVersion": "117.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -742,11 +570,7 @@
           "NuGetVersion": "116.0.6.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -759,11 +583,7 @@
           "NuGetVersion": "117.0.0.1-beta1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -776,11 +596,7 @@
           "NuGetVersion": "118.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -793,11 +609,7 @@
           "NuGetVersion": "117.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -810,11 +622,7 @@
           "NuGetVersion": "118.1.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -827,11 +635,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -844,11 +648,7 @@
           "NuGetVersion": "119.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -861,11 +661,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -878,11 +674,7 @@
           "NuGetVersion": "118.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -895,11 +687,7 @@
           "NuGetVersion": "116.0.3.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -912,11 +700,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -929,11 +713,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -946,11 +726,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -963,11 +739,7 @@
           "NuGetVersion": "117.0.0.7"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -980,11 +752,7 @@
           "NuGetVersion": "116.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -997,11 +765,7 @@
           "NuGetVersion": "118.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1014,11 +778,7 @@
           "NuGetVersion": "117.0.3.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1031,11 +791,7 @@
           "NuGetVersion": "116.0.2.2"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1048,11 +804,7 @@
           "NuGetVersion": "118.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1065,11 +817,7 @@
           "NuGetVersion": "118.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1082,11 +830,7 @@
           "NuGetVersion": "118.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1099,11 +843,7 @@
           "NuGetVersion": "118.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1116,11 +856,7 @@
           "NuGetVersion": "120.1.3.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1133,11 +869,7 @@
           "NuGetVersion": "119.1.3.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1150,11 +882,7 @@
           "NuGetVersion": "116.1.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1167,11 +895,7 @@
           "NuGetVersion": "118.1.1.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1184,11 +908,7 @@
           "NuGetVersion": "116.1.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1201,11 +921,7 @@
           "NuGetVersion": "119.1.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1218,11 +934,7 @@
           "NuGetVersion": "117.1.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -1235,11 +947,7 @@
           "NuGetVersion": "1.10.3.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Play Core Software Development Kit Terms of Service"
     },
     {
       "Component": {
@@ -1252,11 +960,7 @@
           "NuGetVersion": "1.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Play Core Software Development Kit Terms of Service"
     },
     {
       "Component": {
@@ -1269,11 +973,7 @@
           "NuGetVersion": "121.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1286,11 +986,7 @@
           "NuGetVersion": "120.3.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1303,11 +999,7 @@
           "NuGetVersion": "120.3.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1320,11 +1012,7 @@
           "NuGetVersion": "120.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1337,11 +1025,7 @@
           "NuGetVersion": "116.3.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1354,11 +1038,7 @@
           "NuGetVersion": "116.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1371,11 +1051,7 @@
           "NuGetVersion": "116.0.0.6-beta01"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1388,11 +1064,7 @@
           "NuGetVersion": "120.0.0.8"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1405,11 +1077,7 @@
           "NuGetVersion": "121.0.1.7"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1422,11 +1090,7 @@
           "NuGetVersion": "120.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1439,11 +1103,7 @@
           "NuGetVersion": "120.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1456,11 +1116,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1473,11 +1129,7 @@
           "NuGetVersion": "121.0.1.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1490,11 +1142,7 @@
           "NuGetVersion": "119.0.1.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1507,11 +1155,7 @@
           "NuGetVersion": "116.2.1.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1524,11 +1168,7 @@
           "NuGetVersion": "118.2.1.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1541,11 +1181,7 @@
           "NuGetVersion": "118.2.1.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1558,11 +1194,7 @@
           "NuGetVersion": "120.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1575,11 +1207,7 @@
           "NuGetVersion": "118.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1592,11 +1220,7 @@
           "NuGetVersion": "116.0.2.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1609,11 +1233,7 @@
           "NuGetVersion": "118.0.1.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1626,11 +1246,7 @@
           "NuGetVersion": "120.1.1.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1643,11 +1259,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1660,11 +1272,7 @@
           "NuGetVersion": "118.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1677,11 +1285,7 @@
           "NuGetVersion": "116.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1694,11 +1298,7 @@
           "NuGetVersion": "123.0.3.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1711,11 +1311,7 @@
           "NuGetVersion": "120.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1728,11 +1324,7 @@
           "NuGetVersion": "121.1.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1745,11 +1337,7 @@
           "NuGetVersion": "117.1.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1762,11 +1350,7 @@
           "NuGetVersion": "120.1.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1779,11 +1363,7 @@
           "NuGetVersion": "120.1.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1796,11 +1376,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1813,11 +1389,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1830,11 +1402,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1847,11 +1415,7 @@
           "NuGetVersion": "119.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1864,11 +1428,7 @@
           "NuGetVersion": "122.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1881,11 +1441,7 @@
           "NuGetVersion": "122.1.2.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1898,11 +1454,7 @@
           "NuGetVersion": "122.0.4.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1915,11 +1467,7 @@
           "NuGetVersion": "122.0.1.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1932,11 +1480,7 @@
           "NuGetVersion": "120.0.8.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1949,11 +1493,7 @@
           "NuGetVersion": "118.0.8.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1966,11 +1506,7 @@
           "NuGetVersion": "120.0.8.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -1983,11 +1519,7 @@
           "NuGetVersion": "122.0.2.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2000,11 +1532,7 @@
           "NuGetVersion": "120.0.9.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2017,11 +1545,7 @@
           "NuGetVersion": "124.1.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2034,11 +1558,7 @@
           "NuGetVersion": "118.0.6.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2051,11 +1571,7 @@
           "NuGetVersion": "116.1.2.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2068,11 +1584,7 @@
           "NuGetVersion": "120.0.2.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2085,11 +1597,7 @@
           "NuGetVersion": "120.0.2.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2102,11 +1610,7 @@
           "NuGetVersion": "117.0.2.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2119,11 +1623,7 @@
           "NuGetVersion": "119.0.6.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2136,11 +1636,7 @@
           "NuGetVersion": "120.0.2.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2153,11 +1649,7 @@
           "NuGetVersion": "120.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2170,11 +1662,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2187,11 +1675,7 @@
           "NuGetVersion": "118.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2204,11 +1688,7 @@
           "NuGetVersion": "117.0.2.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2221,11 +1701,7 @@
           "NuGetVersion": "117.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2238,11 +1714,7 @@
           "NuGetVersion": "118.2.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2255,11 +1727,7 @@
           "NuGetVersion": "118.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2272,11 +1740,7 @@
           "NuGetVersion": "116.1.5.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2289,11 +1753,7 @@
           "NuGetVersion": "117.0.7.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2306,11 +1766,7 @@
           "NuGetVersion": "116.2.1.7"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2323,11 +1779,7 @@
           "NuGetVersion": "118.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2340,11 +1792,7 @@
           "NuGetVersion": "117.0.1.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2357,11 +1805,7 @@
           "NuGetVersion": "117.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2374,11 +1818,7 @@
           "NuGetVersion": "117.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2391,11 +1831,7 @@
           "NuGetVersion": "117.0.3.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2408,11 +1844,7 @@
           "NuGetVersion": "117.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2425,11 +1857,7 @@
           "NuGetVersion": "116.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2442,11 +1870,7 @@
           "NuGetVersion": "117.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2459,11 +1883,7 @@
           "NuGetVersion": "118.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2476,11 +1896,7 @@
           "NuGetVersion": "117.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2493,11 +1909,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2510,11 +1922,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2527,11 +1935,7 @@
           "NuGetVersion": "117.0.0.6"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2544,11 +1948,7 @@
           "NuGetVersion": "117.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2561,11 +1961,7 @@
           "NuGetVersion": "117.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2578,11 +1974,7 @@
           "NuGetVersion": "117.1.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2595,11 +1987,7 @@
           "NuGetVersion": "116.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2612,11 +2000,7 @@
           "NuGetVersion": "118.2.2.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "ML Kit Terms of Service"
     },
     {
       "Component": {
@@ -2629,11 +2013,7 @@
           "NuGetVersion": "1.0.0.1-beta1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -2645,12 +2025,7 @@
           "NuGetId": "Xamarin.GoogleAndroid.Libraries.Places",
           "NuGetVersion": "2.0.0.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2662,12 +2037,7 @@
           "NuGetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat",
           "NuGetVersion": "2.0.0.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2679,12 +2049,7 @@
           "NuGetId": "Xamarin.Android.Volley",
           "NuGetVersion": "1.2.1.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2696,12 +2061,7 @@
           "NuGetId": "Xamarin.Android.Volley.CroNet",
           "NuGetVersion": "1.2.1.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2713,12 +2073,7 @@
           "NuGetId": "Xamarin.Android.Glide.Annotations",
           "NuGetVersion": "4.13.2.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2730,12 +2085,7 @@
           "NuGetId": "Xamarin.Android.Glide.DiskLruCache",
           "NuGetVersion": "4.13.2.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2747,12 +2097,7 @@
           "NuGetId": "Xamarin.Android.Glide.GifDecoder",
           "NuGetVersion": "4.13.2.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2764,12 +2109,7 @@
           "NuGetId": "Xamarin.Android.Glide",
           "NuGetVersion": "4.13.2.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2781,12 +2121,7 @@
           "NuGetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
           "NuGetVersion": "4.13.2.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2798,12 +2133,7 @@
           "NuGetId": "Xamarin.GoogleAndroid.Annotations",
           "NuGetVersion": "4.1.1.7"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2815,12 +2145,7 @@
           "NuGetId": "Xamarin.Google.Android.DataTransport.TransportApi",
           "NuGetVersion": "3.0.0.4"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2832,12 +2157,7 @@
           "NuGetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
           "NuGetVersion": "3.1.4.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2849,12 +2169,7 @@
           "NuGetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
           "NuGetVersion": "3.1.4.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2867,11 +2182,7 @@
           "NuGetVersion": "2.0.0.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
@@ -2883,12 +2194,7 @@
           "NuGetId": "Xamarin.Google.Code.FindBugs.JSR305",
           "NuGetVersion": "3.0.2.5"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2900,12 +2206,7 @@
           "NuGetId": "Xamarin.Google.Dagger",
           "NuGetVersion": "2.41.0.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2917,12 +2218,7 @@
           "NuGetId": "Xamarin.Google.ErrorProne.Annotations",
           "NuGetVersion": "2.10.0.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2934,12 +2230,7 @@
           "NuGetId": "Xamarin.Google.ZXing.Core",
           "NuGetVersion": "3.5.0.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2951,12 +2242,7 @@
           "NuGetId": "Xamarin.Protobuf.JavaLite",
           "NuGetVersion": "3.19.2.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2968,12 +2254,7 @@
           "NuGetId": "Xamarin.Protobuf.Lite",
           "NuGetVersion": "3.0.1.5"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -2985,12 +2266,7 @@
           "NuGetId": "Square.OkHttp",
           "NuGetVersion": "2.7.5.5"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3002,12 +2278,7 @@
           "NuGetId": "Square.OkHttp3",
           "NuGetVersion": "4.9.3.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3019,12 +2290,7 @@
           "NuGetId": "Square.OkHttp3.UrlConnection",
           "NuGetVersion": "4.9.3.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3036,12 +2302,7 @@
           "NuGetId": "Square.OkIO",
           "NuGetVersion": "2.10.0.4"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3053,12 +2314,7 @@
           "NuGetId": "Square.Picasso",
           "NuGetVersion": "2.8.0.4"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3070,12 +2326,7 @@
           "NuGetId": "Square.Retrofit",
           "NuGetVersion": "1.9.0.5"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3087,12 +2338,7 @@
           "NuGetId": "Square.JavaPoet",
           "NuGetVersion": "1.13.0.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3104,12 +2350,7 @@
           "NuGetId": "Xamarin.Grpc.Android",
           "NuGetVersion": "1.45.1.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3121,12 +2362,7 @@
           "NuGetId": "Xamarin.Grpc.Api",
           "NuGetVersion": "1.45.1.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3138,12 +2374,7 @@
           "NuGetId": "Xamarin.Grpc.Context",
           "NuGetVersion": "1.45.1.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3155,12 +2386,7 @@
           "NuGetId": "Xamarin.Grpc.Core",
           "NuGetVersion": "1.45.1.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3172,12 +2398,7 @@
           "NuGetId": "Xamarin.Grpc.OkHttp",
           "NuGetVersion": "1.45.1.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3189,12 +2410,7 @@
           "NuGetId": "Xamarin.Grpc.Protobuf.Lite",
           "NuGetVersion": "1.45.1.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3206,12 +2422,7 @@
           "NuGetId": "Xamarin.Grpc.Stub",
           "NuGetVersion": "1.45.1.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3223,12 +2434,7 @@
           "NuGetId": "Xamarin.Io.OpenCensus.OpenCensusApi",
           "NuGetVersion": "0.29.0.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3240,12 +2446,7 @@
           "NuGetId": "Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics",
           "NuGetVersion": "0.29.0.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3257,12 +2458,7 @@
           "NuGetId": "Xamarin.Io.PerfMark.PerfMarkApi",
           "NuGetVersion": "0.24.0.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3274,12 +2470,7 @@
           "NuGetId": "Xamarin.JavaX.Inject",
           "NuGetVersion": "1.0.0.5"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3292,11 +2483,7 @@
           "NuGetVersion": "92.4515.131.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Chromium and built-in dependencies"
     },
     {
       "Component": {
@@ -3309,11 +2496,7 @@
           "NuGetVersion": "92.4515.131.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Chromium and built-in dependencies"
     },
     {
       "Component": {
@@ -3326,11 +2509,7 @@
           "NuGetVersion": "92.4515.131.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Chromium and built-in dependencies"
     },
     {
       "Component": {
@@ -3343,11 +2522,7 @@
           "NuGetVersion": "92.4515.131.1"
         }
       },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      "License": "Chromium and built-in dependencies"
     },
     {
       "Component": {
@@ -3359,12 +2534,7 @@
           "NuGetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
           "NuGetVersion": "1.19.0.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3376,12 +2546,7 @@
           "NuGetId": "Xamarin.TensorFlow.Lite",
           "NuGetVersion": "2.6.0.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     },
     {
       "Component": {
@@ -3393,13 +2558,8 @@
           "NuGetId": "Xamarin.TensorFlow.Lite.Gpu",
           "NuGetVersion": "2.6.0.1"
         }
-      },
-      "License": "MIT",
-      "Description": "GPS-FB-MLKit and dependencies",
-      "LicenseDetail": [
-        "MIT by Microsoft, other by Google and other 3rd party"
-      ]
+      }
     }
   ],
-  "Version": 1
+  "Version": 0
 }
