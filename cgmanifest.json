@@ -2025,7 +2025,8 @@
           "NuGetId": "Xamarin.GoogleAndroid.Libraries.Places",
           "NuGetVersion": "2.0.0.1"
         }
-      }
+      },
+      "License": "Google Maps Platform Terms of Service"
     },
     {
       "Component": {
@@ -2037,7 +2038,8 @@
           "NuGetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat",
           "NuGetVersion": "2.0.0.1"
         }
-      }
+      },
+      "License": "Google Maps Platform Terms of Service"
     },
     {
       "Component": {
@@ -2049,7 +2051,8 @@
           "NuGetId": "Xamarin.Android.Volley",
           "NuGetVersion": "1.2.1.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2061,7 +2064,8 @@
           "NuGetId": "Xamarin.Android.Volley.CroNet",
           "NuGetVersion": "1.2.1.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2073,7 +2077,8 @@
           "NuGetId": "Xamarin.Android.Glide.Annotations",
           "NuGetVersion": "4.13.2.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0 AND Simplified BSD License"
     },
     {
       "Component": {
@@ -2085,7 +2090,8 @@
           "NuGetId": "Xamarin.Android.Glide.DiskLruCache",
           "NuGetVersion": "4.13.2.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0 AND Simplified BSD License"
     },
     {
       "Component": {
@@ -2097,7 +2103,8 @@
           "NuGetId": "Xamarin.Android.Glide.GifDecoder",
           "NuGetVersion": "4.13.2.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0 AND Simplified BSD License"
     },
     {
       "Component": {
@@ -2109,7 +2116,8 @@
           "NuGetId": "Xamarin.Android.Glide",
           "NuGetVersion": "4.13.2.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0 AND Simplified BSD License"
     },
     {
       "Component": {
@@ -2121,7 +2129,8 @@
           "NuGetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
           "NuGetVersion": "4.13.2.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0 AND Simplified BSD License"
     },
     {
       "Component": {
@@ -2133,7 +2142,8 @@
           "NuGetId": "Xamarin.GoogleAndroid.Annotations",
           "NuGetVersion": "4.1.1.7"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2145,7 +2155,8 @@
           "NuGetId": "Xamarin.Google.Android.DataTransport.TransportApi",
           "NuGetVersion": "3.0.0.4"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2157,7 +2168,8 @@
           "NuGetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
           "NuGetVersion": "3.1.4.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2169,7 +2181,8 @@
           "NuGetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
           "NuGetVersion": "3.1.4.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2194,7 +2207,8 @@
           "NuGetId": "Xamarin.Google.Code.FindBugs.JSR305",
           "NuGetVersion": "3.0.2.5"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2206,7 +2220,8 @@
           "NuGetId": "Xamarin.Google.Dagger",
           "NuGetVersion": "2.41.0.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2218,7 +2233,8 @@
           "NuGetId": "Xamarin.Google.ErrorProne.Annotations",
           "NuGetVersion": "2.10.0.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2230,7 +2246,8 @@
           "NuGetId": "Xamarin.Google.ZXing.Core",
           "NuGetVersion": "3.5.0.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2242,7 +2259,8 @@
           "NuGetId": "Xamarin.Protobuf.JavaLite",
           "NuGetVersion": "3.19.2.1"
         }
-      }
+      },
+      "License": "BSD 2 Clause AND BSD 3 Clause"
     },
     {
       "Component": {
@@ -2254,7 +2272,8 @@
           "NuGetId": "Xamarin.Protobuf.Lite",
           "NuGetVersion": "3.0.1.5"
         }
-      }
+      },
+      "License": "BSD 2 Clause AND BSD 3 Clause"
     },
     {
       "Component": {
@@ -2266,7 +2285,8 @@
           "NuGetId": "Square.OkHttp",
           "NuGetVersion": "2.7.5.5"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2278,7 +2298,8 @@
           "NuGetId": "Square.OkHttp3",
           "NuGetVersion": "4.9.3.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2290,7 +2311,8 @@
           "NuGetId": "Square.OkHttp3.UrlConnection",
           "NuGetVersion": "4.9.3.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2302,7 +2324,8 @@
           "NuGetId": "Square.OkIO",
           "NuGetVersion": "2.10.0.4"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2314,7 +2337,8 @@
           "NuGetId": "Square.Picasso",
           "NuGetVersion": "2.8.0.4"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2326,7 +2350,8 @@
           "NuGetId": "Square.Retrofit",
           "NuGetVersion": "1.9.0.5"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2338,7 +2363,8 @@
           "NuGetId": "Square.JavaPoet",
           "NuGetVersion": "1.13.0.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2350,7 +2376,8 @@
           "NuGetId": "Xamarin.Grpc.Android",
           "NuGetVersion": "1.45.1.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2362,7 +2389,8 @@
           "NuGetId": "Xamarin.Grpc.Api",
           "NuGetVersion": "1.45.1.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2374,7 +2402,8 @@
           "NuGetId": "Xamarin.Grpc.Context",
           "NuGetVersion": "1.45.1.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2386,7 +2415,8 @@
           "NuGetId": "Xamarin.Grpc.Core",
           "NuGetVersion": "1.45.1.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2398,7 +2428,8 @@
           "NuGetId": "Xamarin.Grpc.OkHttp",
           "NuGetVersion": "1.45.1.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2410,7 +2441,8 @@
           "NuGetId": "Xamarin.Grpc.Protobuf.Lite",
           "NuGetVersion": "1.45.1.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2422,7 +2454,8 @@
           "NuGetId": "Xamarin.Grpc.Stub",
           "NuGetVersion": "1.45.1.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2434,7 +2467,8 @@
           "NuGetId": "Xamarin.Io.OpenCensus.OpenCensusApi",
           "NuGetVersion": "0.29.0.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2446,7 +2480,8 @@
           "NuGetId": "Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics",
           "NuGetVersion": "0.29.0.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2458,7 +2493,8 @@
           "NuGetId": "Xamarin.Io.PerfMark.PerfMarkApi",
           "NuGetVersion": "0.24.0.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2470,7 +2506,8 @@
           "NuGetId": "Xamarin.JavaX.Inject",
           "NuGetVersion": "1.0.0.5"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2534,7 +2571,8 @@
           "NuGetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
           "NuGetVersion": "1.19.0.1"
         }
-      }
+      },
+      "License": "MIT"
     },
     {
       "Component": {
@@ -2546,7 +2584,8 @@
           "NuGetId": "Xamarin.TensorFlow.Lite",
           "NuGetVersion": "2.6.0.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     },
     {
       "Component": {
@@ -2558,7 +2597,8 @@
           "NuGetId": "Xamarin.TensorFlow.Lite.Gpu",
           "NuGetVersion": "2.6.0.1"
         }
-      }
+      },
+      "License": "The Apache Software License, Version 2.0"
     }
   ],
   "Version": 0
