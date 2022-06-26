@@ -167,6 +167,8 @@
   <ItemGroup>
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\@(targetFrameworkMoniker)" />
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\@(dotnetFrameworkMoniker)" />
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="buildTransitive\@(targetFrameworkMoniker)" />
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="buildTransitive\@(dotnetFrameworkMoniker)" />    
   </ItemGroup>
 
   @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.Basement")
@@ -174,6 +176,8 @@
     <ItemGroup>
       <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="build\@(targetFrameworkMoniker)" />
       <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="build\@(dotnetFrameworkMoniker)" />
+      <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="buildTransitive\@(targetFrameworkMoniker)" />
+      <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="buildTransitive\@(dotnetFrameworkMoniker)" />      
     </ItemGroup>
   }
 
