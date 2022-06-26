@@ -44,7 +44,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.BarcodeScanning" Version="118.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.FaceDetection" Version="117.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.ImageLabeling" Version="116.0.7" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.LanguageId" Version="116.0.0-beta2" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.LanguageId" Version="117.0.0-beta1" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition" Version="118.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition.Common" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Nearby" Version="118.2.0" />
@@ -138,9 +138,10 @@
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling" Version="117.0.7" />
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.AutoML" Version="116.2.1.6" />
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Common" Version="118.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Custom.Common" Version="116.0.1" />
+    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Custom" Version="117.0.1" />
+    <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Custom.Common" Version="117.0.0" />
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling.Default.Common" Version="117.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.Language.Id" Version="117.0.1" />
+    <PackageReference Update="Xamarin.Google.MLKit.Language.Id" Version="117.0.3" />
     <PackageReference Update="Xamarin.Google.MLKit.LinkFirebase" Version="117.0.0" />
     <PackageReference Update="Xamarin.Google.MLKit.MediaPipe.Internal" Version="116.0.0.5" />
     <PackageReference Update="Xamarin.Google.MLKit.ObjectDetection" Version="117.0.0" />
