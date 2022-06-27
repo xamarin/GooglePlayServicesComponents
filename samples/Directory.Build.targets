@@ -43,9 +43,9 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk.Api" Version="120.1.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.BarcodeScanning" Version="118.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.FaceDetection" Version="117.0.1" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.ImageLabeling" Version="116.0.5" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.ImageLabeling" Version="116.0.6" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.LanguageId" Version="117.0.0-beta1" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition" Version="117.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition" Version="118.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition.Common" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Nearby" Version="118.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Oss.Licenses" Version="117.0.0.5" />
@@ -57,10 +57,10 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Places" Version="117.0.0.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.Places.PlaceReport" Version="117.0.0.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.Plus" Version="117.0.0.6" />
-    <PackageReference Update="Xamarin.GooglePlayServices.ReCaptcha" Version="116.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Recaptcha" Version="116.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.SafetyNet" Version="118.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Stats" Version="117.0.3" />
-    <PackageReference Update="Xamarin.GooglePlayServices.StreamPotect" Version="116.0.2" />
+    <PackageReference Update="Xamarin.GooglePlayServices.StreamProtect" Version="116.0.2.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager" Version="118.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager.Api" Version="118.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager.V4.Impl" Version="118.0.1" />
@@ -172,9 +172,9 @@
     <PackageReference Update="Xamarin.Google.UserMessagingPlatform" Version="2.0.0" />
     <PackageReference Update="Xamarin.Google.Code.FindBugs.JSR305" Version="3.0.2.4" />
     <PackageReference Update="Xamarin.Google.Dagger" Version="2.42.0" />
-    <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.10.0" />
+    <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.7.1" />
     <PackageReference Update="Xamarin.Google.ZXing.Core" Version="3.5.0" />
-    <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.19.2" />
+    <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.17.3" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1.4" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.4" />
     <PackageReference Update="Square.OkHttp3" Version="4.9.3" />
@@ -183,13 +183,13 @@
     <PackageReference Update="Square.Picasso" Version="2.8.0.3" />
     <PackageReference Update="Square.Retrofit" Version="1.9.0.4" />
     <PackageReference Update="Square.JavaPoet" Version="1.13.0.0" />
-    <PackageReference Update="Xamarin.Grpc.Android" Version="1.45.1" />
-    <PackageReference Update="Xamarin.Grpc.Api" Version="1.45.1" />
-    <PackageReference Update="Xamarin.Grpc.Context" Version="1.45.1" />
-    <PackageReference Update="Xamarin.Grpc.Core" Version="1.45.1" />
-    <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.45.1" />
-    <PackageReference Update="Xamarin.Grpc.Protobuf.Lite" Version="1.45.1" />
-    <PackageReference Update="Xamarin.Grpc.Stub" Version="1.45.1" />
+    <PackageReference Update="Xamarin.Grpc.Android" Version="1.43.2" />
+    <PackageReference Update="Xamarin.Grpc.Api" Version="1.43.2" />
+    <PackageReference Update="Xamarin.Grpc.Context" Version="1.43.2" />
+    <PackageReference Update="Xamarin.Grpc.Core" Version="1.43.2" />
+    <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.43.2" />
+    <PackageReference Update="Xamarin.Grpc.Protobuf.Lite" Version="1.43.2" />
+    <PackageReference Update="Xamarin.Grpc.Stub" Version="1.43.2" />
     <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusApi" Version="0.30.0" />
     <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics" Version="0.30.0" />
     <PackageReference Update="Xamarin.Io.PerfMark.PerfMarkApi" Version="0.25.0" />
