@@ -243,9 +243,7 @@
     <PackageReference Update="Xamarin.Kotlin.StdLib.Common" Version="1.5.31.2" />
     <PackageReference Update="Xamarin.Kotlin.StdLib.Jdk8" Version="1.5.31.2" />
     <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.6.6" />
-    <PackageReference Update="GoogleGson" Version="2.8.8.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
+    <PackageReference Update="GoogleGson" Version="2.8.9" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="116.3.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="119.0.1.5" />
     <PackageReference Update="Xamarin.Firebase.Analytics" Version="116.3.0" />
