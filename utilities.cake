@@ -273,6 +273,7 @@ Task ("generate-component-governance")
                                                                                 Formatting.Indented
                                                                             )
                                 );
+
             return;
         }
     );
