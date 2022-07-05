@@ -148,16 +148,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-base",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1.1",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Base",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
-        "version": "18.0.2",
-        "nugetVersion": "118.0.2.1",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Basement",
         "dependencyOnly": false
       },
@@ -292,8 +292,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-location",
-        "version": "19.0.1",
-        "nugetVersion": "119.0.1.1",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Location",
         "dependencyOnly": false
       },
@@ -540,8 +540,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tasks",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1.1",
+        "version": "18.0.2",
+        "nugetVersion": "118.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Tasks",
         "dependencyOnly": false
       },
