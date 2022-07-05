@@ -194,14 +194,14 @@
     <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics" Version="0.31.1" />
     <PackageReference Update="Xamarin.Io.PerfMark.PerfMarkApi" Version="0.25.0" />
     <PackageReference Update="Xamarin.JavaX.Inject" Version="1.0.0.4" />
-    <PackageReference Update="Xamarin.Chromium.CroNet.Api" Version="101.4951.41" />
-    <PackageReference Update="Xamarin.Chromium.CroNet.Common" Version="101.4951.41" />
-    <PackageReference Update="Xamarin.Chromium.CroNet.Embedded" Version="101.4951.41" />
-    <PackageReference Update="Xamarin.Chromium.CroNet.Fallback" Version="101.4951.41" />
-    <PackageReference Update="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations" Version="1.21.0" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite" Version="2.9.0" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Api" Version="2.9.0" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu" Version="2.9.0" />
+    <PackageReference Update="Xamarin.Chromium.CroNet.Api" Version="94.4606.61" />
+    <PackageReference Update="Xamarin.Chromium.CroNet.Common" Version="94.4606.61" />
+    <PackageReference Update="Xamarin.Chromium.CroNet.Embedded" Version="94.4606.61" />
+    <PackageReference Update="Xamarin.Chromium.CroNet.Fallback" Version="94.4606.61" />
+    <PackageReference Update="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations" Version="1.20.0" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite" Version="2.7.0" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite.Api" Version="2.7.0" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu" Version="2.7.0" />
     <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.3.0.3" />
     <PackageReference Update="Xamarin.AndroidX.AppCompat" Version="1.4.1.1" />
     <PackageReference Update="Xamarin.AndroidX.Browser" Version="1.4.0.1" />
