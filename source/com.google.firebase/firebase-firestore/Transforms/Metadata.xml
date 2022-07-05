@@ -380,4 +380,20 @@
         path="/api/package[@name='com.google.firestore.admin.v1']/class[@name='Index.IndexField']/implements"
         />
 
+
+    <attr
+        path="/api/package[@name='com.google.firestore.index']"
+        name="managedName"
+        >
+        Firebase.Firestore.Index
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.admin.v1']"
+        name="managedName"
+        >
+        Firestore.Admin.V1
+    </attr>
+
+
+
 </metadata>
