@@ -1308,15 +1308,6 @@
         "dependencyOnly": false
       },
       {
-        "groupId": "com.google.android",
-        "artifactId": "annotations",
-        "version": "4.1.1.4",
-        "nugetVersion": "4.1.1.6",
-        "nugetId": "Xamarin.GoogleAndroid.Annotations",
-        "dependencyOnly": false,
-        "templateSet": "annotations"
-      },
-      {
         "groupId": "com.google.android.ump",
         "artifactId": "user-messaging-platform",
         "version": "1.0.0",
@@ -1945,8 +1936,8 @@
       {
         "groupId": "com.google.guava",
         "artifactId": "guava",
-        "version": "30.1.1-android",
-        "nugetVersion": "30.1.1",
+        "version": "31.0.1-android",
+        "nugetVersion": "31.0.1",
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": true
       },
