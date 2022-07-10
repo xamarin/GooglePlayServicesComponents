@@ -59,7 +59,6 @@
     <PackageReference Include="Xamarin.GooglePlayServices.Nearby">
       <Version>118.1.0.1</Version>
     </PackageReference>
-
     <PackageReference Include="Xamarin.AndroidX.Migration">
       <Version>1.0.10</Version>
     </PackageReference>
