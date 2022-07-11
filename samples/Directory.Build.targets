@@ -237,9 +237,5 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="116.3.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Analytics.Impl" Version="117.0.1.5" />
-    <PackageReference Update="Xamarin.Firebase.Analytics" Version="116.3.0" />
   </ItemGroup>
 </Project>
