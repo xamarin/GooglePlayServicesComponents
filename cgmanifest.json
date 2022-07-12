@@ -6,9 +6,9 @@
         "Maven": {
           "ArtifactId": "play-services-ads",
           "GroupId": "com.google.android.gms",
-          "Version": "20.6.0",
+          "Version": "21.0.0",
           "NuGetId": "Xamarin.GooglePlayServices.Ads",
-          "NuGetVersion": "120.6.0.1"
+          "NuGetVersion": "121.0.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -19,9 +19,9 @@
         "Maven": {
           "ArtifactId": "play-services-ads-base",
           "GroupId": "com.google.android.gms",
-          "Version": "20.6.0",
+          "Version": "21.0.0",
           "NuGetId": "Xamarin.GooglePlayServices.Ads.Base",
-          "NuGetVersion": "120.6.0.1"
+          "NuGetVersion": "121.0.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -45,9 +45,9 @@
         "Maven": {
           "ArtifactId": "play-services-ads-lite",
           "GroupId": "com.google.android.gms",
-          "Version": "20.6.0",
+          "Version": "21.0.0",
           "NuGetId": "Xamarin.GooglePlayServices.Ads.Lite",
-          "NuGetVersion": "120.6.0.1"
+          "NuGetVersion": "121.0.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -331,9 +331,9 @@
         "Maven": {
           "ArtifactId": "play-services-fitness",
           "GroupId": "com.google.android.gms",
-          "Version": "21.0.1",
+          "Version": "21.1.0",
           "NuGetId": "Xamarin.GooglePlayServices.Fitness",
-          "NuGetVersion": "121.0.1.1"
+          "NuGetVersion": "121.1.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -461,9 +461,9 @@
         "Maven": {
           "ArtifactId": "play-services-measurement",
           "GroupId": "com.google.android.gms",
-          "Version": "20.1.2",
+          "Version": "21.0.0",
           "NuGetId": "Xamarin.GooglePlayServices.Measurement",
-          "NuGetVersion": "120.1.2.1"
+          "NuGetVersion": "121.0.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -474,9 +474,9 @@
         "Maven": {
           "ArtifactId": "play-services-measurement-api",
           "GroupId": "com.google.android.gms",
-          "Version": "20.1.2",
+          "Version": "21.0.0",
           "NuGetId": "Xamarin.GooglePlayServices.Measurement.Api",
-          "NuGetVersion": "120.1.2.1"
+          "NuGetVersion": "121.0.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -487,9 +487,9 @@
         "Maven": {
           "ArtifactId": "play-services-measurement-base",
           "GroupId": "com.google.android.gms",
-          "Version": "20.1.2",
+          "Version": "21.0.0",
           "NuGetId": "Xamarin.GooglePlayServices.Measurement.Base",
-          "NuGetVersion": "120.1.2.1"
+          "NuGetVersion": "121.0.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -500,9 +500,9 @@
         "Maven": {
           "ArtifactId": "play-services-measurement-impl",
           "GroupId": "com.google.android.gms",
-          "Version": "20.1.2",
+          "Version": "21.0.0",
           "NuGetId": "Xamarin.GooglePlayServices.Measurement.Impl",
-          "NuGetVersion": "120.1.2.1"
+          "NuGetVersion": "121.0.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -513,9 +513,9 @@
         "Maven": {
           "ArtifactId": "play-services-measurement-sdk",
           "GroupId": "com.google.android.gms",
-          "Version": "20.1.2",
+          "Version": "21.0.0",
           "NuGetId": "Xamarin.GooglePlayServices.Measurement.Sdk",
-          "NuGetVersion": "120.1.2.1"
+          "NuGetVersion": "121.0.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -526,9 +526,9 @@
         "Maven": {
           "ArtifactId": "play-services-measurement-sdk-api",
           "GroupId": "com.google.android.gms",
-          "Version": "20.1.2",
+          "Version": "21.0.0",
           "NuGetId": "Xamarin.GooglePlayServices.Measurement.Sdk.Api",
-          "NuGetVersion": "120.1.2.1"
+          "NuGetVersion": "121.0.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -565,9 +565,9 @@
         "Maven": {
           "ArtifactId": "play-services-mlkit-image-labeling",
           "GroupId": "com.google.android.gms",
-          "Version": "16.0.6",
+          "Version": "16.0.7",
           "NuGetId": "Xamarin.GooglePlayServices.MLKit.ImageLabeling",
-          "NuGetVersion": "116.0.6.1"
+          "NuGetVersion": "116.0.7"
         }
       },
       "License": "Android Software Development Kit License"
@@ -617,9 +617,9 @@
         "Maven": {
           "ArtifactId": "play-services-nearby",
           "GroupId": "com.google.android.gms",
-          "Version": "18.1.0",
+          "Version": "18.2.0",
           "NuGetId": "Xamarin.GooglePlayServices.Nearby",
-          "NuGetVersion": "118.1.0.1"
+          "NuGetVersion": "118.2.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -669,9 +669,9 @@
         "Maven": {
           "ArtifactId": "play-services-password-complexity",
           "GroupId": "com.google.android.gms",
-          "Version": "18.0.0",
+          "Version": "18.0.1",
           "NuGetId": "Xamarin.GooglePlayServices.PasswordComplexity",
-          "NuGetVersion": "118.0.0.1"
+          "NuGetVersion": "118.0.1"
         }
       },
       "License": "Android Software Development Kit License"
@@ -747,9 +747,9 @@
         "Maven": {
           "ArtifactId": "play-services-recaptcha",
           "GroupId": "com.google.android.gms",
-          "Version": "16.0.1",
+          "Version": "17.0.1",
           "NuGetId": "Xamarin.GooglePlayServices.Recaptcha",
-          "NuGetVersion": "116.0.1.1"
+          "NuGetVersion": "117.0.1"
         }
       },
       "License": "Android Software Development Kit License"
@@ -1098,9 +1098,9 @@
         "Maven": {
           "ArtifactId": "firebase-common",
           "GroupId": "com.google.firebase",
-          "Version": "20.0.0",
+          "Version": "20.1.0",
           "NuGetId": "Xamarin.Firebase.Common",
-          "NuGetVersion": "120.0.0.6"
+          "NuGetVersion": "120.1.0"
         }
       },
       "License": "The Apache Software License, Version 2.0"
@@ -1371,9 +1371,9 @@
         "Maven": {
           "ArtifactId": "firebase-installations",
           "GroupId": "com.google.firebase",
-          "Version": "17.0.0",
+          "Version": "17.0.1",
           "NuGetId": "Xamarin.Firebase.Installations",
-          "NuGetVersion": "117.0.0.6"
+          "NuGetVersion": "117.0.1"
         }
       },
       "License": "The Apache Software License, Version 2.0"
@@ -1384,9 +1384,9 @@
         "Maven": {
           "ArtifactId": "firebase-installations-interop",
           "GroupId": "com.google.firebase",
-          "Version": "17.0.0",
+          "Version": "17.0.1",
           "NuGetId": "Xamarin.Firebase.Installations.InterOp",
-          "NuGetVersion": "117.0.0.6"
+          "NuGetVersion": "117.0.1"
         }
       },
       "License": "The Apache Software License, Version 2.0"
