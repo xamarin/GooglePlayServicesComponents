@@ -40,7 +40,7 @@ jobs:
     parameters:
       timeoutInMinutes: 240
       areaPath: 'DevDiv\Xamarin SDK\Android'
-      macosImage: macOS-11                                    # the name of the macOS VM image (BigSur)
+      macosImage: macOS-12                                    # the name of the macOS VM image (BigSur)
       windowsAgentPoolName: android-win-2022
       xcode: $(XcodeVersion)
       dotnet: $(DotNetVersion)                                # the version of .NET Core to use
