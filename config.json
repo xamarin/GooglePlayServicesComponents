@@ -1936,8 +1936,8 @@
       {
         "groupId": "com.google.guava",
         "artifactId": "guava",
-        "version": "31.0.1-android",
-        "nugetVersion": "31.0.1",
+        "version": "31.1.0-android",
+        "nugetVersion": "31.1.0.3",
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": true
       },
