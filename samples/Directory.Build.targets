@@ -232,7 +232,7 @@
     <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.9.0.1" />
     <PackageReference Update="GoogleGson" Version="2.9.0.1" />
     <PackageReference Update="Xamarin.Firebase.Analytics" Version="116.3.0" />
-    <PackageReference Update="Xamarin.Google.Guava" Version="31.0.1" />
+    <PackageReference Update="Xamarin.Google.Guava" Version="31.1.0" />
     <PackageReference Update="Xamarin.Google.Guava.ListenableFuture" Version="1.0.0.6" />
     <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.19.2" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1" />
