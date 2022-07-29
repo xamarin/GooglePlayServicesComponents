@@ -72,5 +72,23 @@
 		>
 		Android.Gms.Nearby.ExposureNotification
 	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.nearby.uwb']"
+		name="managedName"
+		>
+		Android.Gms.Nearby.Uwb
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.nearby.uwb']/class[@name='RangingParameters']/method[@name='getRangingUpdateRate' and count(parameter)=0]"
+		name="managedName"
+		>
+		RangingUpdateRateData
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.nearby.uwb']/class[@name='RangingParameters']/method[@name='getUwbConfigId' and count(parameter)=0]"
+		name="managedName"
+		>
+		UwbConfigIdData
+	</attr>
 
 </metadata>
