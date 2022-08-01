@@ -791,6 +791,28 @@ Task("allbindingprojectrefs")
 	generateTargets("./output/Xamarin.GooglePlayServices.*.nupkg", "./output/PlayServicesPackages.targets");
 	generateTargets("./output/Xamarin.Google.MLKit.*.nupkg", "./output/Google.MLKit.targets");
 	generateTargets("./output/Xamarin.Google.Play.*.nupkg", "./output/Google.Play.targets");
+
+    // ... and Directory.packages.props for central package management
+    // 
+    string content_original = null;
+    string content_new      = null;
+
+    content_original = System.IO.File.ReadAllText("./output/FirebasePackages.targets");
+    content_new      = content_original.Replace("PackageReference", "PackageVersion");
+    System.IO.File.WriteAllText("./output/Directory.FB.packages.props", content_new);
+
+    content_original = System.IO.File.ReadAllText("./output/PlayServicesPackages.targets");
+    content_new      = content_original.Replace("PackageReference", "PackageVersion");
+    System.IO.File.WriteAllText("./output/Directory.GPS.packages.props", content_new);
+
+    content_original = System.IO.File.ReadAllText("./output/Google.MLKit.targets");
+    content_new      = content_original.Replace("PackageReference", "PackageVersion");
+    System.IO.File.WriteAllText("./output/Directory.MLKit.packages.props", content_new);
+
+    content_original = System.IO.File.ReadAllText("./output/Google.Play.targets");
+    content_new      = content_original.Replace("PackageReference", "PackageVersion");
+    System.IO.File.WriteAllText("./output/Directory.Play.packages.props", content_new);
+
 });
 
 
