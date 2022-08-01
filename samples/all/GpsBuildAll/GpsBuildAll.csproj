@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A9BE4750-6DFD-412E-B998-26B725911CF3}</ProjectGuid>
+    <ProjectGuid>{feb70ddb-8ece-4086-b111-2ea410b8165c}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>GpsBuildAll</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -57,12 +57,13 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" Version="0.11.2" />
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.2.0" />
-    <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.3.0.5" />
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.7" />
-    <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.2.2.1" />
-    <PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.7.1" />
+    <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.4.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.13" />
+    <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.2.6.1" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.11.3" />
+    <PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.10" />
+    <PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.6.21.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
