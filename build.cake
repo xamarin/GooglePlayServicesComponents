@@ -622,7 +622,7 @@ Task("samples-directory-build-targets")
 	);
 
 Task("samples")
-	.IsDependentOn("libs")
+    .IsDependentOn("nuget")
 	.IsDependentOn("samples-directory-build-targets")
 	.IsDependentOn("mergetargets")
 	.IsDependentOn("allbindingprojectrefs")
@@ -654,6 +654,8 @@ Task("samples")
 				}
 				if
 				(
+					sampleSln.ToString().Contains("samples-dotnet")
+					||
 					sampleSln.ToString().Contains("com.google.android.gms/play-services-cast/CastingCall.sln")
 					||
 					sampleSln.ToString().Contains("com.google.android.gms/play-services-games/BeGenerous.sln")
@@ -669,9 +671,12 @@ Task("samples")
 					continue;
 				}
 				Information($"Solution: {filename_sln}");
-				string bl = MakeAbsolute(new FilePath($"./output/{filename_sln}{config}.sample.binlog")).FullPath;
+				string bl = MakeAbsolute(new FilePath($"./output/{filename_sln}{config}.sample.msbuild.{DateTime.Now.ToString("yyyyMMddHHmmss")}.binlog")).FullPath;
 				try
 				{
+					string filename = sampleSln.GetFilenameWithoutExtension().ToString();
+					Information($"=====================================================================================================");
+					Information($"MSBuild          {sampleSln} / {filename}");    
 					MSBuild
 						(
 							sampleSln,
@@ -705,11 +710,63 @@ Task("samples")
 			}
 		}
 
-		DeleteFiles(".output/system.*/nupkg");
-		DeleteFiles(".output/microsoft.*/nupkg");
-		DeleteFiles(".output/xamarin.android.support.*/nupkg");
-		DeleteFiles(".output/xamarin.android.arch.*/nupkg");
-		DeleteFiles(".output/xamarin.build.download.*/nupkg");
+	    RunTarget("samples-dotnet");
+
+		DeleteFiles("./output/system.*/nupkg");
+		DeleteFiles("./output/microsoft.*/nupkg");
+		DeleteFiles("./output/xamarin.android.support.*/nupkg");
+		DeleteFiles("./output/xamarin.android.arch.*/nupkg");
+		DeleteFiles("./output/xamarin.build.download.*/nupkg");
+
+});
+
+Task("samples-dotnet")
+	.IsDependentOn("samples-directory-build-targets")
+	.IsDependentOn("mergetargets")
+	.IsDependentOn("allbindingprojectrefs")
+    .Does
+(
+	() =>
+	{
+		Configs = new string[] { "Debug", "Release" };
+
+		var sampleSlns = GetFiles("./samples/dotnet/**/*.sln");
+
+		foreach(string config in Configs)
+		{
+			foreach (var sampleSln in sampleSlns)
+			{
+				string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
+
+				// clear the packages folder so we always use the latest
+				var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages-dotnet").FullPath;
+				EnsureDirectoryExists(packagesPath);
+				CleanDirectories(packagesPath);
+
+				var settings = new DotNetMSBuildSettings()
+					.SetConfiguration(config)
+					.SetMaxCpuCount(0)
+					.EnableBinaryLogger($"./output/samples-dotnet.{config}.binlog")
+					.WithProperty("RestorePackagesPath", packagesPath)
+					.WithProperty("DesignTimeBuild", "false")
+					.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
+
+				if (!string.IsNullOrEmpty(ANDROID_HOME))
+					settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+
+				string filename = sampleSln.GetFilenameWithoutExtension().ToString();
+				Information($"=====================================================================================================");
+				Information($"DotNetMSBuild        {sampleSln} / {filename}");    
+				DotNetRestore(sampleSln.ToString(), new DotNetRestoreSettings
+				{
+					MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-restore-{filename}.binlog")
+				});
+				DotNetBuild(sampleSln.ToString(), new DotNetBuildSettings
+				{
+					MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
+				});
+			}
+		}
 });
 
 Task("allbindingprojectrefs")
