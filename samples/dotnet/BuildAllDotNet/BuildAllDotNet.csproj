@@ -21,6 +21,17 @@
     
   </PropertyGroup>
   
-  <Import Project="..\..\..\output\AllPackages.targets" />
+	<Import 
+		Project="..\..\..\output\Directory.GPS.packages.props" 
+		/>
+	<Import 
+		Project="..\..\..\output\Directory.FB.packages.props" 
+		/>
+	<Import 
+		Project="..\..\..\output\Directory.MLKit.packages.props" 
+		/>
+	<Import 
+		Project="..\..\..\output\Directory.Play.packages.props" 
+		/>
     
 </Project>

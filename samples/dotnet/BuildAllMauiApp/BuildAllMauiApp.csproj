@@ -47,9 +47,21 @@
 
 	<Import 
 		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
-		Project="..\..\..\output\AllPackages.targets" 
+		Project="..\..\..\output\Directory.GPS.packages.props" 
 		/>
-
+	<Import 
+		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+		Project="..\..\..\output\Directory.FB.packages.props" 
+		/>
+	<Import 
+		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+		Project="..\..\..\output\Directory.MLKit.packages.props" 
+		/>
+	<Import 
+		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+		Project="..\..\..\output\Directory.Play.packages.props" 
+		/>
+	
 	<!--
 	./samples/dotnet/BuildAllMauiApp/BuildAllMauiApp.csproj : 
 	error NU1605: Detected package downgrade: Xamarin.AndroidX.Security.SecurityCrypto from 1.1.0-alpha03 to 1.0.0.7. 
