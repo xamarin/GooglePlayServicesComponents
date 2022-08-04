@@ -68,6 +68,7 @@ jobs:
 
       preBuildSteps:
         - pwsh: |
+            mkdir ./externals/
             Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -OutFile './externals/dotnet-install.ps1';
             ./externals/dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '6.0.400';
             dotnet tool update --global Cake.Tool
