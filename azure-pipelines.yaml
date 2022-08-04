@@ -70,7 +70,8 @@ jobs:
         - pwsh: |
             mkdir ./externals/
             Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -OutFile './externals/dotnet-install.ps1';
-            ./externals/dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '6.0.400';
+            export PATH=$PATH;$HOME/.dotnet
+            ./externals/dotnet-install.ps1 -InstallDir '$HOME/.dotnet' -Version '6.0.400' -Verbose;
             dotnet tool update --global Cake.Tool
             dotnet tool update --global boots --version $(BootsVersion)
             boots $(LegacyXamarinAndroidPkg)
@@ -78,6 +79,9 @@ jobs:
             sudo xcode-select -p
           condition: eq(variables['System.JobName'], 'macos')
         - pwsh: |
+            mkdir ./externals/
+            Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -OutFile './externals/dotnet-install.ps1';
+            ./externals/dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '6.0.400';
             dotnet tool update --global Cake.Tool
             dotnet tool update --global boots --version $(BootsVersion)
             boots --url $(LegacyXamarinAndroidVsix) --downgrade-first
