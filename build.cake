@@ -746,7 +746,6 @@ Task("samples-dotnet")
 				var settings = new DotNetMSBuildSettings()
 					.SetConfiguration(config)
 					.SetMaxCpuCount(0)
-					.EnableBinaryLogger($"./output/samples-dotnet.{config}.binlog")
 					.WithProperty("RestorePackagesPath", packagesPath)
 					.WithProperty("DesignTimeBuild", "false")
 					.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
@@ -761,10 +760,16 @@ Task("samples-dotnet")
 				{
 					MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-restore-{filename}.binlog")
 				});
-				DotNetBuild(sampleSln.ToString(), new DotNetBuildSettings
-				{
-					MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
-				});
+				DotNetBuild
+				(
+					sampleSln.ToString(), 
+					new DotNetBuildSettings()
+					{
+						Configuration = config,
+						MSBuildSettings = settings
+											.EnableBinaryLogger($"./output/samples-dotnet-dotnet-build-{filename}.binlog")
+					}
+				);
 			}
 		}
 });
