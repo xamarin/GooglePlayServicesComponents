@@ -1,3 +1,8 @@
+using Android.App;
+using Android.Content.PM;
+using Android.Runtime;
+using Android.OS;
+
 namespace BuildAllDotNet;
 
 [Activity(Label = "@string/app_name", MainLauncher = true)]
