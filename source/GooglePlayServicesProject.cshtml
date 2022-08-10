@@ -227,7 +227,7 @@
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.MavenArtifactPackaging == "aar") {
         if ((System.Environment.GetEnvironmentVariable("LOCAL_TEST_PKG") ?? "") == "true") {
-    <LibraryProjectZip Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" />
+    <AndroidLibrary Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" />
 
         } else {
     <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
@@ -302,7 +302,7 @@
   -->
   *@
   <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" Version="0.11.2" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.11.3" />
   </ItemGroup>
 
   <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
