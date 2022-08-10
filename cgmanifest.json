@@ -201,9 +201,9 @@
         "Maven": {
           "ArtifactId": "play-services-base",
           "GroupId": "com.google.android.gms",
-          "Version": "18.0.1",
+          "Version": "18.1.0",
           "NuGetId": "Xamarin.GooglePlayServices.Base",
-          "NuGetVersion": "118.0.1.2"
+          "NuGetVersion": "118.1.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -214,9 +214,9 @@
         "Maven": {
           "ArtifactId": "play-services-basement",
           "GroupId": "com.google.android.gms",
-          "Version": "18.0.2",
+          "Version": "18.1.0",
           "NuGetId": "Xamarin.GooglePlayServices.Basement",
-          "NuGetVersion": "118.0.2.2"
+          "NuGetVersion": "118.1.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -435,9 +435,9 @@
         "Maven": {
           "ArtifactId": "play-services-location",
           "GroupId": "com.google.android.gms",
-          "Version": "19.0.1",
+          "Version": "20.0.0",
           "NuGetId": "Xamarin.GooglePlayServices.Location",
-          "NuGetVersion": "119.0.1.2"
+          "NuGetVersion": "120.0.0"
         }
       },
       "License": "Android Software Development Kit License"
@@ -838,9 +838,9 @@
         "Maven": {
           "ArtifactId": "play-services-tasks",
           "GroupId": "com.google.android.gms",
-          "Version": "18.0.1",
+          "Version": "18.0.2",
           "NuGetId": "Xamarin.GooglePlayServices.Tasks",
-          "NuGetVersion": "118.0.1.2"
+          "NuGetVersion": "118.0.2"
         }
       },
       "License": "Android Software Development Kit License"
