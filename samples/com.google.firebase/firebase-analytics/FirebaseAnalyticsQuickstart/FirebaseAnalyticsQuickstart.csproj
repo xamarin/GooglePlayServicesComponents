@@ -60,10 +60,10 @@
     <PackageReference Include="Xamarin.Google.Android.Material" Version="1.3.0.1" />
     <PackageReference Include="Xamarin.Firebase.Analytics" />
     <PackageReference Include="Xamarin.AndroidX.Migration">
-      <Version>1.0.8</Version>
+      <Version>1.0.10</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Build.Download">
-      <Version>0.11.2</Version>
+      <Version>0.11.3</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
