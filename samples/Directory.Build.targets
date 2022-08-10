@@ -238,9 +238,9 @@
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1" />
     <PackageReference Update="Xamarin.Android.ReactiveX.RxAndroid" Version="2.1.1" />
     <PackageReference Update="Xamarin.Android.ReactiveX.RxJava" Version="2.2.7" />
-    <PackageReference Update="Xamarin.Kotlin.StdLib" Version="1.6.21.1" />
-    <PackageReference Update="Xamarin.Kotlin.StdLib.Common" Version="1.6.21.1" />
-    <PackageReference Update="Xamarin.Kotlin.StdLib.Jdk8" Version="1.6.21.1" />
+    <PackageReference Update="Xamarin.Kotlin.StdLib" Version="1.7.0" />
+    <PackageReference Update="Xamarin.Kotlin.StdLib.Common" Version="1.7.0" />
+    <PackageReference Update="Xamarin.Kotlin.StdLib.Jdk8" Version="1.7.0" />
     <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.6.6" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
