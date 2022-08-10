@@ -80,7 +80,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) 
     {
-    <LibraryProjectZip Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" />
+    <AndroidLibrary Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" />
     <!--
     <JavaDocJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar"/>
     -->
