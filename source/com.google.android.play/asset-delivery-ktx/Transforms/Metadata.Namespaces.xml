@@ -1,10 +1,8 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='com.google.android.play.core.ktx']" 
         name="managedName"
         >
-        Package
+        Xamarin.Google.Android.Play.Core.Ktx
     </attr>
-    -->
 </metadata>
