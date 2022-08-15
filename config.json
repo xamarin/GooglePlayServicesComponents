@@ -669,7 +669,7 @@
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appcheck-interop",
         "version": "16.0.0-beta04",
-        "nugetVersion": "116.0.0.4-beta04",
+        "nugetVersion": "116.0.0.7-beta04",
         "nugetId": "Xamarin.Firebase.AppCheck.Interop",
         "dependencyOnly": false
       },
@@ -1304,15 +1304,6 @@
         "nugetVersion": "1.2.1.2",
         "nugetId": "Xamarin.Android.Volley.CroNet",
         "dependencyOnly": false
-      },
-      {
-        "groupId": "com.google.android.ump",
-        "artifactId": "user-messaging-platform",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0.4",
-        "nugetId": "Xamarin.Google.UserMessagingPlatform",
-        "dependencyOnly": false,
-        "templateSet": "user-messaging-platform"
       },
       {
         "groupId": "com.github.bumptech.glide",
