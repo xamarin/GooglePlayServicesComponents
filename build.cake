@@ -796,6 +796,17 @@ Task("allbindingprojectrefs")
 	generateTargets("./output/Xamarin.GooglePlayServices.*.nupkg", "./output/PlayServicesPackages.targets");
 	generateTargets("./output/Xamarin.Google.MLKit.*.nupkg", "./output/Google.MLKit.targets");
 	generateTargets("./output/Xamarin.Google.Play.*.nupkg", "./output/Google.Play.targets");
+	generateTargets("./output/Xamarin.GoogleAndroid.*.nupkg", "./output/Diverse.targets");
+	generateTargets("./output/Xamarin.Google.Code.*.nupkg", "./output/Diverse.targets");
+	generateTargets("./output/Xamarin.Google.Dagger.*.nupkg", "./output/Diverse.targets");
+	generateTargets("./output/Xamarin.Google.Android.*.nupkg", "./output/Diverse.targets");
+	generateTargets("./output/Xamarin.Google.UserMessagingPlatform.*.nupkg", "./output/Diverse.targets");
+	generateTargets("./output/Xamarin.Grpc.*.nupkg", "./output/Diverse.targets");
+	generateTargets("./output/Xamarin.JavaX.*.nupkg", "./output/Diverse.targets");
+	generateTargets("./output/Xamarin.Protobuf.*.nupkg", "./output/Diverse.targets");
+	generateTargets("./output/Xamarin.TensorFlow.*.nupkg", "./output/Diverse.targets");
+	generateTargets("./output/Xamarin.Google.Io.OpenCensus.*.nupkg", "./output/Diverse.targets");
+	generateTargets("./output/Xamarin.Google.ZXing.*.nupkg", "./output/Diverse.targets");
 
     // ... and Directory.packages.props for central package management
     // 
