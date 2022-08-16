@@ -620,24 +620,24 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-abt",
-        "version": "21.0.0",
-        "nugetVersion": "121.0.0.7",
+        "version": "21.0.1",
+        "nugetVersion": "121.0.1",
         "nugetId": "Xamarin.Firebase.Abt",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads",
-        "version": "20.3.0",
-        "nugetVersion": "120.3.0.7",
+        "version": "20.4.0",
+        "nugetVersion": "120.4.0",
         "nugetId": "Xamarin.Firebase.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads-lite",
-        "version": "20.3.0",
-        "nugetVersion": "120.3.0.7",
+        "version": "20.4.0",
+        "nugetVersion": "120.4.0",
         "nugetId": "Xamarin.Firebase.Ads.Lite",
         "dependencyOnly": false
       },
@@ -660,16 +660,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-annotations",
-        "version": "16.0.0",
-        "nugetVersion": "116.0.0.7",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
         "nugetId": "Xamarin.Firebase.Annotations",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appcheck-interop",
-        "version": "16.0.0-beta01",
-        "nugetVersion": "116.0.0.7-beta01",
+        "version": "16.0.0-beta04",
+        "nugetVersion": "116.0.0.7-beta04",
         "nugetId": "Xamarin.Firebase.AppCheck.Interop",
         "dependencyOnly": false
       },
@@ -684,8 +684,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-auth",
-        "version": "21.0.1",
-        "nugetVersion": "121.0.1.8",
+        "version": "21.0.3",
+        "nugetVersion": "121.0.3",
         "nugetId": "Xamarin.Firebase.Auth",
         "dependencyOnly": false
       },
@@ -716,16 +716,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-config",
-        "version": "21.0.1",
-        "nugetVersion": "121.0.1.7",
+        "version": "21.0.2",
+        "nugetVersion": "121.0.2",
         "nugetId": "Xamarin.Firebase.Config",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-core",
-        "version": "19.0.1",
-        "nugetVersion": "119.0.1.7",
+        "version": "19.0.2",
+        "nugetVersion": "119.0.2.0",
         "nugetId": "Xamarin.Firebase.Core",
         "dependencyOnly": false
       },
@@ -740,32 +740,32 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-crashlytics",
-        "version": "18.2.1",
-        "nugetVersion": "118.2.1.7",
+        "version": "18.2.10",
+        "nugetVersion": "118.2.10",
         "nugetId": "Xamarin.Firebase.Crashlytics",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-crashlytics-ndk",
-        "version": "18.2.1",
-        "nugetVersion": "118.2.1.7",
+        "version": "18.2.10",
+        "nugetVersion": "118.2.10",
         "nugetId": "Xamarin.Firebase.Crashlytics.NDK",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-database",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0.7",
+        "version": "20.0.4",
+        "nugetVersion": "120.0.4",
         "nugetId": "Xamarin.Firebase.Database",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-database-collection",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0.7",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1",
         "nugetId": "Xamarin.Firebase.Database.Collection",
         "dependencyOnly": false
       },
@@ -780,16 +780,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-datatransport",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1.7",
+        "version": "18.1.2",
+        "nugetVersion": "118.1.2",
         "nugetId": "Xamarin.Firebase.Datatransport",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-dynamic-links",
-        "version": "20.1.1",
-        "nugetVersion": "120.1.1.7",
+        "version": "21.0.1",
+        "nugetVersion": "121.0.1",
         "nugetId": "Xamarin.Firebase.Dynamic.Links",
         "dependencyOnly": false
       },
@@ -820,16 +820,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-firestore",
-        "version": "23.0.3",
-        "nugetVersion": "123.0.3.7",
+        "version": "24.0.2",
+        "nugetVersion": "124.0.2",
         "nugetId": "Xamarin.Firebase.Firestore",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-functions",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0.7",
+        "version": "20.0.2",
+        "nugetVersion": "120.0.2",
         "nugetId": "Xamarin.Firebase.Functions",
         "dependencyOnly": false
       },
@@ -852,16 +852,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-inappmessaging",
-        "version": "20.1.0",
-        "nugetVersion": "120.1.0.7",
+        "version": "20.1.2",
+        "nugetVersion": "120.1.2",
         "nugetId": "Xamarin.Firebase.InAppMessaging",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-inappmessaging-display",
-        "version": "20.1.0",
-        "nugetVersion": "120.1.0.7",
+        "version": "20.1.2",
+        "nugetVersion": "120.1.2",
         "nugetId": "Xamarin.Firebase.InAppMessaging.Display",
         "dependencyOnly": false
       },
@@ -892,8 +892,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-measurement-connector",
-        "version": "19.0.0",
-        "nugetVersion": "119.0.0.7",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0",
         "nugetId": "Xamarin.Firebase.Measurement.Connector",
         "dependencyOnly": false
       },
@@ -908,8 +908,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-messaging",
-        "version": "22.0.0",
-        "nugetVersion": "122.0.0.7",
+        "version": "23.0.3",
+        "nugetVersion": "123.0.3",
         "nugetId": "Xamarin.Firebase.Messaging",
         "dependencyOnly": false
       },
@@ -1036,8 +1036,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-perf",
-        "version": "20.0.2",
-        "nugetVersion": "120.0.2.7",
+        "version": "20.0.5",
+        "nugetVersion": "120.0.5.0",
         "nugetId": "Xamarin.Firebase.Perf",
         "dependencyOnly": false
       },
@@ -1844,25 +1844,17 @@
       },
       {
         "groupId": "com.google.android.datatransport",
-        "artifactId": "transport-api",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0",
-        "nugetId": "Xamarin.Google.Android.DataTransport.TransportApi",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.datatransport",
         "artifactId": "transport-backend-cct",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0",
+        "version": "3.1.2",
+        "nugetVersion": "3.1.2",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
-        "version": "3.0.1",
-        "nugetVersion": "3.0.1",
+        "version": "3.1.2",
+        "nugetVersion": "3.1.2",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
         "dependencyOnly": true
       },
@@ -1907,10 +1899,34 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "com.google.auto.value",
+        "artifactId": "auto-value-annotations",
+        "version": "1.9.0",
+        "nugetVersion": "1.9.0.1",
+        "nugetId": "Xamarin.Google.AutoValue.Annotations",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.code.gson",
+        "artifactId": "gson",
+        "version": "2.9.0",
+        "nugetVersion": "2.9.0.1",
+        "nugetId": "GoogleGson",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-analytics",
+        "version": "16.3.0",
+        "nugetVersion": "116.3.0",
+        "nugetId": "Xamarin.Firebase.Analytics",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "com.google.guava",
         "artifactId": "guava",
-        "version": "31.1-android",
-        "nugetVersion": "31.1.0",
+        "version": "31.1.0-android",
+        "nugetVersion": "31.1.0.3",
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": true
       },
@@ -1920,6 +1936,14 @@
         "version": "9999.0-empty-to-avoid-conflict-with-guava",
         "nugetVersion": "1.0.0.6",
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.protobuf",
+        "artifactId": "protobuf-javalite",
+        "version": "3.19.2",
+        "nugetVersion": "3.19.2",
+        "nugetId": "Xamarin.Protobuf.JavaLite",
         "dependencyOnly": true
       },
       {
