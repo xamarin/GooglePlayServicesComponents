@@ -72,7 +72,17 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Vision.ImageLabelingInternal" Version="116.1.0.7" />
     <PackageReference Update="Xamarin.GooglePlayServices.Wallet" Version="119.1.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Wearable" Version="117.1.0.7" />
+    <PackageReference Update="Xamarin.Google.Android.Play.App.Update" Version="2.0.0" />
+    <PackageReference Update="Xamarin.Google.Android.Play.App.Update.Ktx" Version="2.0.0" />
+    <PackageReference Update="Xamarin.Google.Android.Play.Asset.Delivery" Version="2.0.0" />
+    <PackageReference Update="Xamarin.Google.Android.Play.Asset.Delivery.Ktx" Version="2.0.0" />
     <PackageReference Update="Xamarin.Google.Android.Play.Core" Version="1.10.3.2" />
+    <PackageReference Update="Xamarin.Google.Android.Play.Core.Common" Version="2.0.0" />
+    <PackageReference Update="Xamarin.Google.Android.Play.Core.Ktx" Version="1.8.1" />
+    <PackageReference Update="Xamarin.Google.Android.Play.Review" Version="2.0.0" />
+    <PackageReference Update="Xamarin.Google.Android.Play.Review.Ktx" Version="2.0.0" />
+    <PackageReference Update="Xamarin.Google.Android.Play.Feature.Delivery" Version="2.0.0" />
+    <PackageReference Update="Xamarin.Google.Android.Play.Feature.Delivery.Ktx" Version="2.0.0" />
     <PackageReference Update="Xamarin.Google.Android.Play.Integrity" Version="1.0.0.2" />
     <PackageReference Update="Xamarin.Firebase.Abt" Version="121.0.1" />
     <PackageReference Update="Xamarin.Firebase.Ads" Version="120.4.0" />
@@ -239,7 +249,10 @@
     <PackageReference Update="Xamarin.Android.ReactiveX.RxJava" Version="2.2.7" />
     <PackageReference Update="Xamarin.Kotlin.StdLib" Version="1.7.0" />
     <PackageReference Update="Xamarin.Kotlin.StdLib.Common" Version="1.7.0" />
+    <PackageReference Update="Xamarin.Kotlin.StdLib.Jdk7" Version="1.6.21.1" />
     <PackageReference Update="Xamarin.Kotlin.StdLib.Jdk8" Version="1.7.0" />
+    <PackageReference Update="Xamarin.KotlinX.Coroutines.Android" Version="1.5.2.5" />
+    <PackageReference Update="Xamarin.KotlinX.Coroutines.Core" Version="1.5.2.5" />
     <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.6.6" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
