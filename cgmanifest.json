@@ -940,11 +940,141 @@
       "Component": {
         "Type": "Maven",
         "Maven": {
+          "ArtifactId": "app-update",
+          "GroupId": "com.google.android.play",
+          "Version": "2.0.0",
+          "NuGetId": "Xamarin.Google.Android.Play.App.Update",
+          "NuGetVersion": "2.0.0"
+        }
+      },
+      "License": "Play Core Software Development Kit Terms of Service"
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "app-update-ktx",
+          "GroupId": "com.google.android.play",
+          "Version": "2.0.0",
+          "NuGetId": "Xamarin.Google.Android.Play.App.Update.Ktx",
+          "NuGetVersion": "2.0.0"
+        }
+      },
+      "License": "Play Core Software Development Kit Terms of Service"
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "asset-delivery",
+          "GroupId": "com.google.android.play",
+          "Version": "2.0.0",
+          "NuGetId": "Xamarin.Google.Android.Play.Asset.Delivery",
+          "NuGetVersion": "2.0.0"
+        }
+      },
+      "License": "Play Core Software Development Kit Terms of Service"
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "asset-delivery-ktx",
+          "GroupId": "com.google.android.play",
+          "Version": "2.0.0",
+          "NuGetId": "Xamarin.Google.Android.Play.Asset.Delivery.Ktx",
+          "NuGetVersion": "2.0.0"
+        }
+      },
+      "License": "Play Core Software Development Kit Terms of Service"
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
           "ArtifactId": "core",
           "GroupId": "com.google.android.play",
           "Version": "1.10.3",
           "NuGetId": "Xamarin.Google.Android.Play.Core",
           "NuGetVersion": "1.10.3.2"
+        }
+      },
+      "License": "Play Core Software Development Kit Terms of Service"
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "core-common",
+          "GroupId": "com.google.android.play",
+          "Version": "2.0.0",
+          "NuGetId": "Xamarin.Google.Android.Play.Core.Common",
+          "NuGetVersion": "2.0.0"
+        }
+      },
+      "License": "Play Core Software Development Kit Terms of Service"
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "core-ktx",
+          "GroupId": "com.google.android.play",
+          "Version": "1.8.1",
+          "NuGetId": "Xamarin.Google.Android.Play.Core.Ktx",
+          "NuGetVersion": "1.8.1"
+        }
+      },
+      "License": "Play Core Software Development Kit Terms of Service"
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "review",
+          "GroupId": "com.google.android.play",
+          "Version": "2.0.0",
+          "NuGetId": "Xamarin.Google.Android.Play.Review",
+          "NuGetVersion": "2.0.0"
+        }
+      },
+      "License": "Play Core Software Development Kit Terms of Service"
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "review-ktx",
+          "GroupId": "com.google.android.play",
+          "Version": "2.0.0",
+          "NuGetId": "Xamarin.Google.Android.Play.Review.Ktx",
+          "NuGetVersion": "2.0.0"
+        }
+      },
+      "License": "Play Core Software Development Kit Terms of Service"
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "feature-delivery",
+          "GroupId": "com.google.android.play",
+          "Version": "2.0.0",
+          "NuGetId": "Xamarin.Google.Android.Play.Feature.Delivery",
+          "NuGetVersion": "2.0.0"
+        }
+      },
+      "License": "Play Core Software Development Kit Terms of Service"
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "feature-delivery-ktx",
+          "GroupId": "com.google.android.play",
+          "Version": "2.0.0",
+          "NuGetId": "Xamarin.Google.Android.Play.Feature.Delivery.Ktx",
+          "NuGetVersion": "2.0.0"
         }
       },
       "License": "Play Core Software Development Kit Terms of Service"
@@ -1048,7 +1178,7 @@
           "GroupId": "com.google.firebase",
           "Version": "16.0.0-beta04",
           "NuGetId": "Xamarin.Firebase.AppCheck.Interop",
-          "NuGetVersion": "116.0.0.4-beta04"
+          "NuGetVersion": "116.0.0.7-beta04"
         }
       },
       "License": "The Apache Software License, Version 2.0"
@@ -2066,19 +2196,6 @@
         }
       },
       "License": "The Apache Software License, Version 2.0"
-    },
-    {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "user-messaging-platform",
-          "GroupId": "com.google.android.ump",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.Google.UserMessagingPlatform",
-          "NuGetVersion": "1.0.0.4"
-        }
-      },
-      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
