@@ -1048,7 +1048,7 @@
           "GroupId": "com.google.firebase",
           "Version": "16.0.0-beta04",
           "NuGetId": "Xamarin.Firebase.AppCheck.Interop",
-          "NuGetVersion": "116.0.0.4-beta04"
+          "NuGetVersion": "116.0.0.7-beta04"
         }
       },
       "License": "The Apache Software License, Version 2.0"
@@ -2066,19 +2066,6 @@
         }
       },
       "License": "The Apache Software License, Version 2.0"
-    },
-    {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "user-messaging-platform",
-          "GroupId": "com.google.android.ump",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.Google.UserMessagingPlatform",
-          "NuGetVersion": "1.0.0.4"
-        }
-      },
-      "License": "Android Software Development Kit License"
     },
     {
       "Component": {
