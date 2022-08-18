@@ -603,10 +603,90 @@
       },
       {
         "groupId": "com.google.android.play",
+        "artifactId": "app-update",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.Google.Android.Play.App.Update",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "app-update-ktx",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.Google.Android.Play.App.Update.Ktx",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "asset-delivery",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.Google.Android.Play.Asset.Delivery",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "asset-delivery-ktx",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.Google.Android.Play.Asset.Delivery.Ktx",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
         "artifactId": "core",
         "version": "1.10.3",
         "nugetVersion": "1.10.3.2",
         "nugetId": "Xamarin.Google.Android.Play.Core",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "core-common",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.Google.Android.Play.Core.Common",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "core-ktx",
+        "version": "1.8.1",
+        "nugetVersion": "1.8.1",
+        "nugetId": "Xamarin.Google.Android.Play.Core.Ktx",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "review",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.Google.Android.Play.Review",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "review-ktx",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.Google.Android.Play.Review.Ktx",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "feature-delivery",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.Google.Android.Play.Feature.Delivery",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "feature-delivery-ktx",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.Google.Android.Play.Feature.Delivery.Ktx",
         "dependencyOnly": false
       },
       {
@@ -1988,10 +2068,34 @@
       },
       {
         "groupId": "org.jetbrains.kotlin",
+        "artifactId": "kotlin-stdlib-jdk7",
+        "version": "1.6.21",
+        "nugetVersion": "1.6.21.1",
+        "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk8",
         "version": "1.7.0",
         "nugetVersion": "1.7.0",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-android",
+        "version": "1.5.2",
+        "nugetVersion": "1.5.2.5",
+        "nugetId": "Xamarin.KotlinX.Coroutines.Android",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-core",
+        "version": "1.5.2",
+        "nugetVersion": "1.5.2.5",
+        "nugetId": "Xamarin.KotlinX.Coroutines.Core",
         "dependencyOnly": true
       },
       {
