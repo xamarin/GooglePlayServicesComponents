@@ -16,19 +16,19 @@
   </ItemGroup>
 
 	<Import 
-		Project="..\..\..\output\Directory.GPS.packages.props" 
+		Project="..\..\..\..\output\Directory.GPS.packages.props" 
 		/>
 	<Import 
-		Project="..\..\..\output\Directory.FB.packages.props" 
+		Project="..\..\..\..\output\Directory.FB.packages.props" 
 		/>
 	<Import 
-		Project="..\..\..\output\Directory.MLKit.packages.props" 
+		Project="..\..\..\..\output\Directory.MLKit.packages.props" 
 		/>
 	<Import 
-		Project="..\..\..\output\Directory.Play.packages.props" 
+		Project="..\..\..\..\output\Directory.Play.packages.props" 
 		/>
     <Import 
-		Project="..\..\..\output\Directory.Diverse.packages.props" 
+		Project="..\..\..\..\output\Directory.Diverse.packages.props" 
 		/>
 </Project>
 
