@@ -777,10 +777,16 @@ Task("samples-dotnet")
 Task("allbindingprojectrefs")
 	.Does(() =>
 {
-	Action<string,string> generateTargets = (string pattern, string file) => {
+	Action<string, string[]> generateTargets = (string file, string[] patterns) => 
+	{
+		FilePath[] nupkgs = new FilePath[]{};
+		foreach(string p in patterns)
+		{
+			nupkgs = nupkgs.Concat(GetFiles(p)).ToArray();
+		}
 		var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
 		var itemGroup = new XElement(xmlns + "ItemGroup");
-		foreach (var nupkg in GetFiles(pattern)) {
+		foreach (var nupkg in nupkgs) {
 			var filename = nupkg.GetFilenameWithoutExtension();
 		var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
 		itemGroup.Add(new XElement(xmlns + "PackageReference",
@@ -792,21 +798,23 @@ Task("allbindingprojectrefs")
 
 	};
 
-	generateTargets("./output/Xamarin.Firebase.*.nupkg", "./output/FirebasePackages.targets");
-	generateTargets("./output/Xamarin.GooglePlayServices.*.nupkg", "./output/PlayServicesPackages.targets");
-	generateTargets("./output/Xamarin.Google.MLKit.*.nupkg", "./output/Google.MLKit.targets");
-	generateTargets("./output/Xamarin.Google.Play.*.nupkg", "./output/Google.Play.targets");
-	generateTargets("./output/Xamarin.GoogleAndroid.*.nupkg", "./output/Diverse.targets");
-	generateTargets("./output/Xamarin.Google.Code.*.nupkg", "./output/Diverse.targets");
-	generateTargets("./output/Xamarin.Google.Dagger.*.nupkg", "./output/Diverse.targets");
-	generateTargets("./output/Xamarin.Google.Android.*.nupkg", "./output/Diverse.targets");
-	generateTargets("./output/Xamarin.Google.UserMessagingPlatform.*.nupkg", "./output/Diverse.targets");
-	generateTargets("./output/Xamarin.Grpc.*.nupkg", "./output/Diverse.targets");
-	generateTargets("./output/Xamarin.JavaX.*.nupkg", "./output/Diverse.targets");
-	generateTargets("./output/Xamarin.Protobuf.*.nupkg", "./output/Diverse.targets");
-	generateTargets("./output/Xamarin.TensorFlow.*.nupkg", "./output/Diverse.targets");
-	generateTargets("./output/Xamarin.Google.Io.OpenCensus.*.nupkg", "./output/Diverse.targets");
-	generateTargets("./output/Xamarin.Google.ZXing.*.nupkg", "./output/Diverse.targets");
+	generateTargets("./output/FirebasePackages.targets", new string[] {"./output/Xamarin.Firebase.*.nupkg"} );
+	generateTargets("./output/PlayServicesPackages.targets", new string[] {"./output/Xamarin.GooglePlayServices.*.nupkg"} );
+	generateTargets("./output/Google.MLKit.targets", new string[] {"./output/Xamarin.Google.MLKit.*.nupkg"} );
+	generateTargets("./output/Google.Play.targets", new string[] {"./output/Xamarin.Google.Android.Play.*.nupkg"});
+	generateTargets("./output/Diverse.targets", new string[] { 
+																"./output/Square.*.nupkg",
+																"./output/Xamarin.GoogleAndroid.*.nupkg",
+																"./output/Xamarin.Google.Code.*.nupkg",
+																"./output/Xamarin.Google.Dagger.*.nupkg",
+																"./output/Xamarin.Google.Android.*.nupkg",
+																"./output/Xamarin.Google.UserMessagingPlatform.*.nupkg",
+																"./output/Xamarin.Grpc.*.nupkg",
+																"./output/Xamarin.JavaX.*.nupkg",
+																"./output/Xamarin.Protobuf.*.nupkg",
+																"./output/Xamarin.TensorFlow.*.nupkg",
+																"./output/Xamarin.Google.Io.OpenCensus.*.nupkg",
+																"./output/Xamarin.Google.ZXing.*.nupkg"});
 
     // ... and Directory.packages.props for central package management
     // 
@@ -828,6 +836,10 @@ Task("allbindingprojectrefs")
     content_original = System.IO.File.ReadAllText("./output/Google.Play.targets");
     content_new      = content_original.Replace("PackageReference", "PackageVersion");
     System.IO.File.WriteAllText("./output/Directory.Play.packages.props", content_new);
+
+    content_original = System.IO.File.ReadAllText("./output/Diverse.targets");
+    content_new      = content_original.Replace("PackageReference", "PackageVersion");
+    System.IO.File.WriteAllText("./output/Directory.Diverse.packages.props", content_new);
 
 });
 
