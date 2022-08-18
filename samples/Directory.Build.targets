@@ -80,7 +80,7 @@
     <PackageReference Update="Xamarin.Firebase.Analytics" Version="120.0.1.2" />
     <PackageReference Update="Xamarin.Firebase.Analytics.Impl" Version="116.3.0.7" />
     <PackageReference Update="Xamarin.Firebase.Annotations" Version="116.1.0" />
-    <PackageReference Update="Xamarin.Firebase.AppCheck.Interop" Version="116.0.0.4-beta04" />
+    <PackageReference Update="Xamarin.Firebase.AppCheck.Interop" Version="116.0.0.7-beta04" />
     <PackageReference Update="Xamarin.Firebase.AppIndexing" Version="120.0.0.9" />
     <PackageReference Update="Xamarin.Firebase.Auth" Version="121.0.3" />
     <PackageReference Update="Xamarin.Firebase.Auth.Interop" Version="120.0.0.7" />
@@ -160,7 +160,6 @@
     <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places.Compat" Version="2.0.0.2" />
     <PackageReference Update="Xamarin.Android.Volley" Version="1.2.1.2" />
     <PackageReference Update="Xamarin.Android.Volley.CroNet" Version="1.2.1.2" />
-    <PackageReference Update="Xamarin.Google.UserMessagingPlatform" Version="1.0.0.4" />
     <PackageReference Update="Xamarin.Android.Glide.Annotations" Version="4.13.2.2" />
     <PackageReference Update="Xamarin.Android.Glide.DiskLruCache" Version="4.13.2.2" />
     <PackageReference Update="Xamarin.Android.Glide.GifDecoder" Version="4.13.2.2" />
