@@ -14,6 +14,22 @@
   <ItemGroup>
     <ProjectReference Include="..\BuildAllXamarinForms\BuildAllXamarinForms.csproj" />
   </ItemGroup>
+
+	<Import 
+		Project="..\..\..\output\Directory.GPS.packages.props" 
+		/>
+	<Import 
+		Project="..\..\..\output\Directory.FB.packages.props" 
+		/>
+	<Import 
+		Project="..\..\..\output\Directory.MLKit.packages.props" 
+		/>
+	<Import 
+		Project="..\..\..\output\Directory.Play.packages.props" 
+		/>
+    <Import 
+		Project="..\..\..\output\Directory.Diverse.packages.props" 
+		/>
 </Project>
 
 <!--

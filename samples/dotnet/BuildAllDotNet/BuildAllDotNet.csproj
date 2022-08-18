@@ -40,5 +40,8 @@
 	<Import 
 		Project="..\..\..\output\Directory.Play.packages.props" 
 		/>
+    <Import 
+		Project="..\..\..\output\Directory.Diverse.packages.props" 
+		/>
     
 </Project>

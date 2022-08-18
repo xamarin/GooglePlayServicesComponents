@@ -61,6 +61,10 @@
 		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
 		Project="..\..\..\output\Directory.Play.packages.props" 
 		/>
+		<Import 
+		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+		Project="..\..\..\output\Directory.Diverse.packages.props" 
+		/>
 	
 	<!--
 	./samples/dotnet/BuildAllMauiApp/BuildAllMauiApp.csproj : 
