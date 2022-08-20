@@ -59,7 +59,7 @@
     <PackageReference Include="Xamarin.GooglePlayServices.AppInvite" />
         
     <PackageReference Include="Xamarin.AndroidX.Migration">
-      <Version>1.0.5</Version>
+      <Version>1.0.10</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Build.Download">
       <Version>0.11.3</Version>
