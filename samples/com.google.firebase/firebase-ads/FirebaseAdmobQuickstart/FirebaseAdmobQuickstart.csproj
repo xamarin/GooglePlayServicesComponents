@@ -90,7 +90,7 @@
     <GoogleServicesJson Include="google-services.json" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.4.1.2" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.5.1" />
     <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.14" />
     <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.4.0.2" />
     <PackageReference Include="Xamarin.Google.Android.Material" Version="1.6.1.1" />
