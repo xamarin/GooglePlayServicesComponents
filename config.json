@@ -1164,8 +1164,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "common",
-        "version": "18.2.0",
-        "nugetVersion": "118.2.0.2",
+        "version": "18.3.0",
+        "nugetVersion": "118.3.0",
         "nugetId": "Xamarin.Google.MLKit.Common",
         "dependencyOnly": false
       },
@@ -1308,8 +1308,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "smart-reply",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0.2",
+        "version": "17.0.1",
+        "nugetVersion": "117.0.1",
         "nugetId": "Xamarin.Google.MLKit.SmartReply",
         "dependencyOnly": false
       },
@@ -1317,7 +1317,7 @@
         "groupId": "com.google.mlkit",
         "artifactId": "translate",
         "version": "17.0.0",
-        "nugetVersion": "117.0.0.2",
+        "nugetVersion": "117.0.0",
         "nugetId": "Xamarin.Google.MLKit.Translate",
         "dependencyOnly": false
       },
@@ -1325,15 +1325,15 @@
         "groupId": "com.google.mlkit",
         "artifactId": "vision-common",
         "version": "17.1.0",
-        "nugetVersion": "117.1.0.2",
+        "nugetVersion": "117.1.0",
         "nugetId": "Xamarin.Google.MLKit.Vision.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.mlkit",
         "artifactId": "vision-interfaces",
-        "version": "16.0.0",
-        "nugetVersion": "116.0.0.2",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
         "nugetId": "Xamarin.Google.MLKit.Vision.Interfaces",
         "dependencyOnly": false
       },
