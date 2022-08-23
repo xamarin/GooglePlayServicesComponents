@@ -1,4 +1,4 @@
-#! "net5.0"
+#! "net6.0"
 
 #r "nuget: MavenNet, 2.2.13"
 #r "nuget: Newtonsoft.Json, 13.0.1"
@@ -6,30 +6,25 @@
 
 // Usage:
 //   dotnet tool install -g dotnet-script
-//   dotnet script update-config.csx -- ../../config.json <update|bump>
+//   dotnet script update-config.csx -- ../../config.json <update|bump|published|sort>
 // This script compares the versions of Java packages we are currently binding to the
-// stable versions available in Google's Maven repository.  The specified configuration
-// file can be automatically updated by including the "update" argument.  A revision bump
-// can be applied to all packages with the "bump" argument, which is mutually exclusive
-// with "update".
+// stable versions available in Google's Maven repository.  
+// update - Automatically update the specified configuration file
+// bump - Apply NuGet revision bump to *all* packages
+// published - Display which NuGet package versions are already published on NuGet.org
+// sort - Sort the provided config.json without making any updates
+
 using MavenNet;
 using MavenNet.Models;
 using Newtonsoft.Json;
 using NuGet.Versioning;
 using System.ComponentModel;
+using System.Net.Http;
 
-// Parse the configuration file
-var config_file = Args[0];
+var options = new Options (Args);
+var config = await ParseConfigurationFile (options.ConfigFile);
+var external_deps = await GetExternalDependencies (options);
 
-if (string.IsNullOrWhiteSpace (config_file) || !File.Exists (config_file)) {
-	System.Console.WriteLine ($"Could not find configuration file: '{config_file}'");
-	return -1;
-}
-
-var config_json = File.ReadAllText (config_file);
-var config = JsonConvert.DeserializeObject<List<MyArray>> (config_json);
-var should_update = Args.Count > 1 && Args[1].ToLowerInvariant () == "update";
-var should_minor_bump = Args.Count > 1 && Args[1].ToLowerInvariant () == "bump";
 var serializer_settings = new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore };
 serializer_settings.Converters.Add (new Newtonsoft.Json.Converters.StringEnumConverter ());
 
@@ -40,8 +35,12 @@ foreach (var array in config)
 // Query Maven
 await MavenFactory.Initialize (config);
 
-Console.WriteLine ("| Package (* = Needs Update)                                   | Currently Bound | Latest Stable   |");
-Console.WriteLine ("|--------------------------------------------------------------|-----------------|-----------------|");
+var column1 = ("Package" + (options.Published ? "" : " (* = Needs Update)")).PadRight (58);
+var column2 = (options.Published ? "Version" : "Currently Bound").PadRight (17);
+var column3 = (options.Published ? "Status" : "Latest Stable").PadRight (15);
+
+Console.WriteLine ($"| {column1} | {column2} | {column3} |");
+Console.WriteLine ("|------------------------------------------------------------|-------------------|-----------------|");
 
 // Find the Maven artifact for each package in our configuration file
 foreach (var art in config[0].Artifacts.Where (a => !a.DependencyOnly)) {
@@ -53,12 +52,13 @@ foreach (var art in config[0].Artifacts.Where (a => !a.DependencyOnly)) {
 	var package_name = $"{art.GroupId}.{art.ArtifactId}";
 	var current_version = art.Version;
 
+	// Update packages we are binding
 	if (NeedsUpdate (art, a))
 	{
 		package_name = "* " + package_name;
 
 		// Update the JSON objects
-		if (should_update)
+		if (options.Update)
 		{
 			var new_version = GetLatestVersion (a)?.ToString ();
 			var prefix = art.NugetVersion.StartsWith ("1" + art.Version + ".") ? "1" : string.Empty;
@@ -68,9 +68,12 @@ foreach (var art in config[0].Artifacts.Where (a => !a.DependencyOnly)) {
 		}
 	}
 
+	if (art.Frozen)
+		package_name = "# " + package_name;
+  
 	// Bump the revision version of all NuGet versions
 	// If there isn't currently a revision version, make it ".1"
-	if (should_minor_bump)
+	if (options.Bump)
 	{
 		string version = "";
 		string release = "";
@@ -97,14 +100,51 @@ foreach (var art in config[0].Artifacts.Where (a => !a.DependencyOnly)) {
 		art.NugetVersion = $"{version}.{revision}{release}";
 	}
 
-	Console.WriteLine ($"| {package_name.PadRight (60)} | {current_version.PadRight (15)} | {(GetLatestVersion (a)?.ToString () ?? string.Empty).PadRight (15)} |");
+  if (options.Published) {
+    var status = (await DoesNuGetPackageAlreadyExist (art.NugetId, art.NugetVersion)) ? "Published" : "Not Published";
+	  Console.WriteLine ($"| {art.NugetId.PadRight (58)} | {art.NugetVersion.PadRight (17)} | {status.PadRight (15)} |");  
+  } else {
+	  Console.WriteLine ($"| {package_name.PadRight (58)} | {current_version.PadRight (17)} | {(GetLatestVersion (a)?.ToString () ?? string.Empty).PadRight (15)} |");  
+  }
+}
 
-	if (should_update || should_minor_bump)
-	{
-		// Write updated config.json back to disk
-		var output = JsonConvert.SerializeObject (config, Formatting.Indented, serializer_settings);
-		File.WriteAllText (config_file, output + Environment.NewLine);
+// Update any "dependencyOnly: true" packages to the latest we can find
+if (external_deps.Any ()) {
+
+	Console.WriteLine ();
+
+	var column1 = "Dependencies (* = Needs Update)".PadRight (58);
+	var column2 = (options.Published ? "Version" : "Current Reference").PadRight (17);
+	var column3 = (options.Published ? "Status" : "Latest Stable").PadRight (15);
+
+	Console.WriteLine ($"| {column1} | {column2} | {column3} |");
+	Console.WriteLine ("|------------------------------------------------------------|-------------------|-----------------|");
+
+	foreach (var art in config[0].Artifacts.Where (a => a.DependencyOnly && !a.Frozen)) {
+		var dep = external_deps.FirstOrDefault (d => d.NugetId == art.NugetId);
+	  var current_version = art.NugetVersion;
+		
+		// We need to ensure the NuGet dependency has actually been published
+		if (dep != null && await DoesNuGetPackageAlreadyExist (dep.NugetId, dep.NugetVersion)) {
+		  art.Version = dep.Version;
+		  art.NugetVersion = dep.NugetVersion;
+		}
+
+	  var package_name = $"{art.GroupId}.{art.ArtifactId}";
+	  
+	  if (current_version != art.NugetVersion)
+	    package_name = "* " + package_name;
+		
+		if (!options.Published) 
+	    Console.WriteLine ($"| {package_name.PadRight (58)} | {current_version.PadRight (17)} | {art.NugetVersion.PadRight (15)} |");  
 	}
+}
+
+if (options.ShouldWriteOutput)
+{
+	// Write updated config.json back to disk
+	var output = JsonConvert.SerializeObject (config, Formatting.Indented, serializer_settings);
+	File.WriteAllText (options.ConfigFile, output + Environment.NewLine);
 }
 
 static Artifact FindMavenArtifact (List<MyArray> config, ArtifactModel artifact)
@@ -117,6 +157,10 @@ static Artifact FindMavenArtifact (List<MyArray> config, ArtifactModel artifact)
 
 static bool NeedsUpdate (ArtifactModel model, Artifact artifact)
 {
+	// Don't update package if it's "Frozen"
+	if (model.Frozen)
+		return false;
+    
 	// Get latest stable version
 	var latest = GetLatestVersion (artifact);
 
@@ -167,6 +211,53 @@ static SemanticVersion GetVersion (string s)
 		return new SemanticVersion (0, 0, 0);
 
 	return SemanticVersion.Parse (version + tag);
+}
+	
+public static async Task<bool> DoesNuGetPackageAlreadyExist (string package, string version)
+{
+  var url = $"https://www.nuget.org/api/v2/package/{package}/{version}";
+  
+  using (var client = new HttpClient ()) {
+    var result = await client.GetAsync (url);
+    return result.StatusCode != System.Net.HttpStatusCode.NotFound;
+  }
+}
+
+static async Task<List<MyArray>> ParseConfigurationFile (string filename)
+{
+  string json;
+  
+	if (filename.StartsWith ("http")) {
+	
+	  // Configuration file URL
+	  using (var client = new HttpClient ())
+			json = await client.GetStringAsync (filename);
+	
+	} else {
+	
+		// Local configuration file
+		if (string.IsNullOrWhiteSpace (filename) || !File.Exists (filename)) {
+			System.Console.WriteLine ($"Could not find configuration file: '{filename}'");
+			Environment.Exit (-1);
+		}
+		
+		json = File.ReadAllText (filename);
+	}
+
+	return JsonConvert.DeserializeObject<List<MyArray>> (json);
+}
+
+static async Task<List<ArtifactModel>> GetExternalDependencies (Options options)
+{
+  var list = new List<ArtifactModel> ();
+  
+  foreach (var file in options.DependencyConfigs) {
+    var config = await ParseConfigurationFile (file);
+    
+    list.AddRange (config.SelectMany (arr => arr.Artifacts.Where (a => !a.DependencyOnly)));
+  }
+  
+  return list;
 }
 
 public static class MavenFactory
@@ -285,6 +376,9 @@ public class ArtifactModel
 	[JsonProperty ("dependencyOnly")]
 	public bool DependencyOnly { get; set; }
 
+	[JsonProperty ("frozen")]
+	public bool Frozen { get; set; }
+
 	[JsonProperty ("excludedRuntimeDependencies")]
 	public string ExcludedRuntimeDependencies { get; set; }
 
@@ -358,4 +452,29 @@ public enum MavenRepoType
 	Directory,
 	Google,
 	MavenCentral
+}
+
+public class Options
+{
+  public string ConfigFile { get; }
+  public bool Update { get; }
+  public bool Bump { get; }
+  public bool Sort { get; }
+  public bool Published { get; }
+  public List<string> DependencyConfigs { get; }
+  
+  public Options (IList<string> args)
+  {
+    // Config file must always be the first argument
+    ConfigFile = args[0];
+    
+    Update = args.Any (a => a.ToLowerInvariant () == "update");
+    Bump = args.Any (a => a.ToLowerInvariant () == "bump");
+    Sort = args.Any (a => a.ToLowerInvariant () == "sort");
+    Published = args.Any (a => a.ToLowerInvariant () == "published");
+    
+    DependencyConfigs = args.Where (a => a.StartsWith ("-dep:")).Select (a => a.Substring (5)).ToList ();
+  }
+  
+  public bool ShouldWriteOutput => Update || Bump || Sort;
 }
