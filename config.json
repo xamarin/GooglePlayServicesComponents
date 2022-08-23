@@ -749,7 +749,7 @@
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appcheck-interop",
         "version": "16.0.0",
-        "nugetVersion": "116.0.0",
+        "nugetVersion": "116.0.0.7",
         "nugetId": "Xamarin.Firebase.AppCheck.Interop",
         "dependencyOnly": false
       },
