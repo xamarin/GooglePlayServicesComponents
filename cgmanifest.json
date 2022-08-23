@@ -1839,9 +1839,9 @@
         "Maven": {
           "ArtifactId": "common",
           "GroupId": "com.google.mlkit",
-          "Version": "18.2.0",
+          "Version": "18.3.0",
           "NuGetId": "Xamarin.Google.MLKit.Common",
-          "NuGetVersion": "118.2.0.2"
+          "NuGetVersion": "118.3.0"
         }
       },
       "License": "ML Kit Terms of Service"
@@ -2073,9 +2073,9 @@
         "Maven": {
           "ArtifactId": "smart-reply",
           "GroupId": "com.google.mlkit",
-          "Version": "17.0.0",
+          "Version": "17.0.1",
           "NuGetId": "Xamarin.Google.MLKit.SmartReply",
-          "NuGetVersion": "117.0.0.2"
+          "NuGetVersion": "117.0.1"
         }
       },
       "License": "ML Kit Terms of Service"
@@ -2088,7 +2088,7 @@
           "GroupId": "com.google.mlkit",
           "Version": "17.0.0",
           "NuGetId": "Xamarin.Google.MLKit.Translate",
-          "NuGetVersion": "117.0.0.2"
+          "NuGetVersion": "117.0.0"
         }
       },
       "License": "ML Kit Terms of Service"
@@ -2101,7 +2101,7 @@
           "GroupId": "com.google.mlkit",
           "Version": "17.1.0",
           "NuGetId": "Xamarin.Google.MLKit.Vision.Common",
-          "NuGetVersion": "117.1.0.2"
+          "NuGetVersion": "117.1.0"
         }
       },
       "License": "ML Kit Terms of Service"
@@ -2112,9 +2112,9 @@
         "Maven": {
           "ArtifactId": "vision-interfaces",
           "GroupId": "com.google.mlkit",
-          "Version": "16.0.0",
+          "Version": "16.1.0",
           "NuGetId": "Xamarin.Google.MLKit.Vision.Interfaces",
-          "NuGetVersion": "116.0.0.2"
+          "NuGetVersion": "116.1.0"
         }
       },
       "License": "ML Kit Terms of Service"
