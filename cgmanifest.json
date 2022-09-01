@@ -1111,9 +1111,9 @@
         "Maven": {
           "ArtifactId": "firebase-ads",
           "GroupId": "com.google.firebase",
-          "Version": "20.6.0",
+          "Version": "21.0.0",
           "NuGetId": "Xamarin.Firebase.Ads",
-          "NuGetVersion": "120.6.0"
+          "NuGetVersion": "121.0.0"
         }
       },
       "License": "The Apache Software License, Version 2.0"
@@ -1124,9 +1124,9 @@
         "Maven": {
           "ArtifactId": "firebase-ads-lite",
           "GroupId": "com.google.firebase",
-          "Version": "20.6.0",
+          "Version": "21.0.0",
           "NuGetId": "Xamarin.Firebase.Ads.Lite",
-          "NuGetVersion": "120.6.0"
+          "NuGetVersion": "121.0.0"
         }
       },
       "License": "The Apache Software License, Version 2.0"
@@ -1137,9 +1137,9 @@
         "Maven": {
           "ArtifactId": "firebase-analytics",
           "GroupId": "com.google.firebase",
-          "Version": "20.1.2",
+          "Version": "21.0.0",
           "NuGetId": "Xamarin.Firebase.Analytics",
-          "NuGetVersion": "120.1.2"
+          "NuGetVersion": "121.0.0"
         }
       },
       "License": "The Apache Software License, Version 2.0"
@@ -1153,6 +1153,19 @@
           "Version": "16.3.0",
           "NuGetId": "Xamarin.Firebase.Analytics.Impl",
           "NuGetVersion": "116.3.0.7"
+        }
+      },
+      "License": "The Apache Software License, Version 2.0"
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "firebase-analytics-ktx",
+          "GroupId": "com.google.firebase",
+          "Version": "21.0.0",
+          "NuGetId": "Xamarin.Firebase.Analytics.Ktx",
+          "NuGetVersion": "121.0.0"
         }
       },
       "License": "The Apache Software License, Version 2.0"
@@ -1178,7 +1191,7 @@
           "GroupId": "com.google.firebase",
           "Version": "16.0.0",
           "NuGetId": "Xamarin.Firebase.AppCheck.Interop",
-          "NuGetVersion": "116.0.0"
+          "NuGetVersion": "116.0.0.7"
         }
       },
       "License": "The Apache Software License, Version 2.0"
@@ -1239,6 +1252,19 @@
       "Component": {
         "Type": "Maven",
         "Maven": {
+          "ArtifactId": "firebase-common-ktx",
+          "GroupId": "com.google.firebase",
+          "Version": "20.1.0",
+          "NuGetId": "Xamarin.Firebase.Common.Ktx",
+          "NuGetVersion": "120.1.0"
+        }
+      },
+      "License": "The Apache Software License, Version 2.0"
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
           "ArtifactId": "firebase-components",
           "GroupId": "com.google.firebase",
           "Version": "17.0.0",
@@ -1267,9 +1293,9 @@
         "Maven": {
           "ArtifactId": "firebase-core",
           "GroupId": "com.google.firebase",
-          "Version": "20.0.2",
+          "Version": "20.1.2",
           "NuGetId": "Xamarin.Firebase.Core",
-          "NuGetVersion": "120.0.2.0"
+          "NuGetVersion": "120.1.2"
         }
       },
       "License": "The Apache Software License, Version 2.0"
@@ -1423,9 +1449,9 @@
         "Maven": {
           "ArtifactId": "firebase-firestore",
           "GroupId": "com.google.firebase",
-          "Version": "24.1.2",
+          "Version": "24.2.2",
           "NuGetId": "Xamarin.Firebase.Firestore",
-          "NuGetVersion": "124.1.2"
+          "NuGetVersion": "124.2.2"
         }
       },
       "License": "The Apache Software License, Version 2.0"
@@ -1436,9 +1462,9 @@
         "Maven": {
           "ArtifactId": "firebase-functions",
           "GroupId": "com.google.firebase",
-          "Version": "20.0.2",
+          "Version": "20.1.0",
           "NuGetId": "Xamarin.Firebase.Functions",
-          "NuGetVersion": "120.0.2"
+          "NuGetVersion": "120.1.0"
         }
       },
       "License": "The Apache Software License, Version 2.0"
@@ -1761,9 +1787,9 @@
         "Maven": {
           "ArtifactId": "firebase-perf",
           "GroupId": "com.google.firebase",
-          "Version": "20.0.6",
+          "Version": "20.1.0",
           "NuGetId": "Xamarin.Firebase.Perf",
-          "NuGetVersion": "120.0.6"
+          "NuGetVersion": "120.1.0"
         }
       },
       "License": "The Apache Software License, Version 2.0"
@@ -2088,7 +2114,7 @@
           "GroupId": "com.google.mlkit",
           "Version": "17.0.0",
           "NuGetId": "Xamarin.Google.MLKit.Translate",
-          "NuGetVersion": "117.0.0"
+          "NuGetVersion": "117.0.0.2"
         }
       },
       "License": "ML Kit Terms of Service"
@@ -2101,7 +2127,7 @@
           "GroupId": "com.google.mlkit",
           "Version": "17.1.0",
           "NuGetId": "Xamarin.Google.MLKit.Vision.Common",
-          "NuGetVersion": "117.1.0"
+          "NuGetVersion": "117.1.0.2"
         }
       },
       "License": "ML Kit Terms of Service"
@@ -2359,9 +2385,9 @@
         "Maven": {
           "ArtifactId": "error_prone_annotations",
           "GroupId": "com.google.errorprone",
-          "Version": "2.10.0",
+          "Version": "2.11.0",
           "NuGetId": "Xamarin.Google.ErrorProne.Annotations",
-          "NuGetVersion": "2.10.0.2"
+          "NuGetVersion": "2.11.0"
         }
       },
       "License": "The Apache Software License, Version 2.0"
