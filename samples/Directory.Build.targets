@@ -90,7 +90,7 @@
     <PackageReference Update="Xamarin.Firebase.Analytics" Version="120.1.2" />
     <PackageReference Update="Xamarin.Firebase.Analytics.Impl" Version="116.3.0.7" />
     <PackageReference Update="Xamarin.Firebase.Annotations" Version="116.1.0" />
-    <PackageReference Update="Xamarin.Firebase.AppCheck.Interop" Version="116.0.0" />
+    <PackageReference Update="Xamarin.Firebase.AppCheck.Interop" Version="116.0.0.7" />
     <PackageReference Update="Xamarin.Firebase.AppIndexing" Version="120.0.0.9" />
     <PackageReference Update="Xamarin.Firebase.Auth" Version="121.0.7" />
     <PackageReference Update="Xamarin.Firebase.Auth.Interop" Version="120.0.0.7" />
@@ -161,8 +161,8 @@
     <PackageReference Update="Xamarin.Google.MLKit.PoseDetection.Accurate" Version="117.0.0.7" />
     <PackageReference Update="Xamarin.Google.MLKit.PoseDetection.Common" Version="117.0.0.7" />
     <PackageReference Update="Xamarin.Google.MLKit.SmartReply" Version="117.0.1" />
-    <PackageReference Update="Xamarin.Google.MLKit.Translate" Version="117.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="117.1.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.Translate" Version="117.0.0.2" />
+    <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="117.1.0.2" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Interfaces" Version="116.1.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="118.2.2.2" />
     <PackageReference Update="Xamarin.Google.Android.ODML.Image" Version="1.0.0.2-beta1" />
