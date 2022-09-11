@@ -9,12 +9,9 @@ APIs and services.
 
 ## Binding Policies
 
-- This repository binds over 200 GPS/FB/MLKit (2022-09)libraries that are published to [NuGet.org](https://nuget.org). The full package list can be 
-  found in [config.json](config.json).
-- GPS/FB/MLKit Java artifacts come from [Google's Maven Respository](https://maven.google.com/web/index.html#).
-- dependency Maven artifacts come from different maven repositories mostly:
-  - [Google's Maven Respository](https://maven.google.com/web/index.html#) and
-  - [Maven/Sonatype Central](https://repo1.maven.org/maven2/)
+- This repository binds over 200 GPS/FB/MLKit libraries that are published to [NuGet.org](https://nuget.org). The full package list can be found in [config.json](config.json).
+- AndroidX Java artifacts and some dependencies come from [Google's Maven Respository](https://maven.google.com/web/index.html#).
+- Additional dependencies come from [Maven/Sonatype Central](https://repo1.maven.org/maven2/).
 - Google's release notes for GPS/FB/MLKit libraries are available [here](https://developers.google.com/android/guides/releases).
 - The major/minor/patch version numbers are the GPS/FB/MLKit library version prefixed with a `1`. For example, the NuGet `Xamarin.GooglePlayServices.Maps 117.0.1` binds version `17.0.1` of the GPS library `com.google.android.gms:play-services-maps`.
   - The revision version number is used when a new NuGet needs to be built but the GPS/FB/MLKit library has not been updated.
@@ -37,7 +34,7 @@ Full list of maven artifact with versions to NuGet mappings with versions:
 The license for this repository is specified in 
 [LICENSE.md](LICENSE.md)
 
-Detailed metada with licenses can be found in: [Component Governance cgmanifes.json](./cgmanifest.json)
+Each package published from this repository generally contains third-party code (ie: `.jar`/`.aar`) that is governed by its own license.  Per-package license information is available in [cgmanifest.json](cgmanifest.json).
 
 The `externals` build task downloads some external dependencies from Google which are licensed under and subject to the terms of 
 [Android Software Development Kit License Agreement](http://developer.android.com/sdk/terms.html)
