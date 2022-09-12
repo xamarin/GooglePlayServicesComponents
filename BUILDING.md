@@ -74,7 +74,7 @@ sh ./build.sh --target=nuget && sh ./build.sh --target=samples && sh ./build.sh 
 ./build.ps1 --target=nuget ; ./build.ps1 --target=samples ; ./build.ps1 --target=diff
 ```
 
-## Working in Visual Studio / Xamarin Studio
+## Working in Visual Studio
 
 Before the `.sln` files will compile in Visual Studio or Xamarin Studio, the external dependencies need to be downloaded.  This can be done by running the `build.sh` or `build.ps1` with the target `externals`.  After the externals are setup, the `.sln` files should compile in an IDE.
 
