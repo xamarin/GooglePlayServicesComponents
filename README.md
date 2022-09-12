@@ -43,9 +43,6 @@ The `externals` build task downloads some external dependencies from Google whic
 
 Instructions for building this repository are specified in [BUILDING.md](BUILDING.md)
 
-In depth building instructions: [./docs/build.md](./docs/build.md).
-
-
 ## Contribution Guidelines
 
 The Contribution Guidelines for this repository are listed in [CONTRIBUTING.md](.github/CONTRIBUTING.md)
