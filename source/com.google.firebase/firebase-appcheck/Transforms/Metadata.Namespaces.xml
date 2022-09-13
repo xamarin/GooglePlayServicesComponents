@@ -1,10 +1,16 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='com.google.firebase.appcheck.playintegrity']" 
         name="managedName"
         >
-        Package
+        Firebase.AppCheck
     </attr>
-    -->
+    <attr 
+        path="/api/package[@name='com.google.firebase.appcheck.playintegrity.internal']" 
+        name="managedName"
+        >
+        Firebase.AppCheck
+    </attr>
+    
+    
 </metadata>
