@@ -1180,8 +1180,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "common",
-        "version": "18.3.0",
-        "nugetVersion": "118.3.0",
+        "version": "18.4.0",
+        "nugetVersion": "118.4.0",
         "nugetId": "Xamarin.Google.MLKit.Common",
         "dependencyOnly": false
       },
@@ -1252,9 +1252,17 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "language-id",
-        "version": "17.0.3",
-        "nugetVersion": "117.0.3.2",
+        "version": "17.0.4",
+        "nugetVersion": "117.0.4",
         "nugetId": "Xamarin.Google.MLKit.Language.Id",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "language-id-common",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.Google.MLKit.Language.Id.Common",
         "dependencyOnly": false
       },
       {
@@ -1324,9 +1332,17 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "smart-reply",
-        "version": "17.0.1",
-        "nugetVersion": "117.0.1",
+        "version": "17.0.2",
+        "nugetVersion": "117.0.2",
         "nugetId": "Xamarin.Google.MLKit.SmartReply",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "smart-reply-common",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.Google.MLKit.SmartReply.Common",
         "dependencyOnly": false
       },
       {
