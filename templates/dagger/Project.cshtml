@@ -23,11 +23,11 @@
     <Authors>Microsoft</Authors>
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
-    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageLicenseUrl>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageProjectUrl>
-    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</PackageLicenseUrl>
-    <RepositoryUrl>https://github.com/google/dagger</RepositoryUrl>
+    <RepositoryUrl>https://go.microsoft.com/fwlink/?linkid=865435</RepositoryUrl>
+    <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
 
     @foreach (var art in @Model.MavenArtifacts) 
     {
@@ -60,7 +60,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) 
     {
-    <LibraryProjectZip 
+    <AndroidLibrary 
         Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Link="Jars\%(Filename)%(Extension)" 
         Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar')"
          />

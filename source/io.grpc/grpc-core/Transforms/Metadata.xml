@@ -9,6 +9,12 @@
         >
         public
     </attr>
+    <attr
+        path="/api/package[@name='io.grpc.inprocess']/class[@name='InProcessServer']"
+        name="visibility"
+        >
+        public
+    </attr>
 
     <remove-node
         path="/api/package[@name='io.grpc.internal']/class[@name='AbstractServerStream']"    
@@ -19,9 +25,11 @@
     <remove-node
         path="/api/package[@name='io.grpc.internal']/class[@name='ServerImpl']"    
         />
+    <!--
     <remove-node
         path="/api/package[@name='io.grpc.internal']/class[@name='AbstractServerImplBuilder']"    
         />
+    -->
     <remove-node
         path="/api/package[@name='io.grpc.internal']/class[@name='CompositeReadableBuffer']"    
         />
@@ -98,5 +106,31 @@
         </method>
 
     </add-node>
+    <attr
+        path="/api/package[@name='io.grpc.internal']/class[@name='AbstractServerImplBuilder']/method"
+        name="final"
+        >
+        false
+    </attr>
 
+    <remove-node
+        path="/api/package[@name='io.grpc.internal']/class[@name='AbstractServerImplBuilder']/method[@name='buildTransportServers' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;? extends io.grpc.ServerStreamTracer.Factory&gt;']]"
+        />
+    <attr
+        path="/api/package[@name='io.grpc.inprocess']/class[@name='InProcessServerBuilder']/method[@name='useTransportSecurity' and count(parameter)=2 and parameter[1][@type='java.io.File'] and parameter[2][@type='java.io.File']]"    
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <remove-node 
+      path="/api/package[@name='io.grpc.internal']/class[@name='ServerImplBuilder']"
+      />
+    <remove-node 
+      path="/api/package[@name='io.grpc.internal']/class[@name='ScParser']"
+      />
+    <remove-node 
+      path="/api/package[@name='io.grpc.internal']/class[@name='ManagedChannelImplBuilder']"      
+      />
+   
 </metadata>

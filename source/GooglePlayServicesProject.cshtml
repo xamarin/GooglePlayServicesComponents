@@ -167,6 +167,8 @@
   <ItemGroup>
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\@(targetFrameworkMoniker)" />
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\@(dotnetFrameworkMoniker)" />
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="buildTransitive\@(targetFrameworkMoniker)" />
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="buildTransitive\@(dotnetFrameworkMoniker)" />    
   </ItemGroup>
 
   @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.Basement")
@@ -174,6 +176,8 @@
     <ItemGroup>
       <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="build\@(targetFrameworkMoniker)" />
       <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="build\@(dotnetFrameworkMoniker)" />
+      <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="buildTransitive\@(targetFrameworkMoniker)" />
+      <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="buildTransitive\@(dotnetFrameworkMoniker)" />      
     </ItemGroup>
   }
 
@@ -223,7 +227,7 @@
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.MavenArtifactPackaging == "aar") {
         if ((System.Environment.GetEnvironmentVariable("LOCAL_TEST_PKG") ?? "") == "true") {
-    <LibraryProjectZip Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" />
+    <AndroidLibrary Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" />
 
         } else {
     <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
@@ -268,17 +272,20 @@
     @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.SafetyNet")
     {
       <Reference Include="System.Net.Http" />
-      <PackageReference Include="System.Text.Json" Version="6.0.1" />
+      <PackageReference Include="System.Text.Json" Version="6.0.5" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Firestore")
     {
-      <PackageReference Include="Xamarin.Google.Guava" Version="29.0.0" />
+      <PackageReference Include="Xamarin.Google.Guava" Version="31.1.0.3" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Crashlytics")
     {
-      <PackageReference Include="Xamarin.Google.Dagger" Version="2.39.1" />
+      <PackageReference Include="Xamarin.Google.Dagger" Version="2.41.0.1" />
     }
-
+    @if (@Model.NuGetPackageId == "Xamarin.Firebase.Measurement.Connector.Impl")
+    {
+      <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base" Version="121.0.0" />
+    }
     <!-- Reference -->
     <Reference Include="System.Net.Http" Condition=" '$(TargetFramework)' == '@(targetFrameworkMoniker)' " />
   </ItemGroup>
@@ -295,7 +302,7 @@
   -->
   *@
   <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" Version="0.11.0" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.11.3" />
   </ItemGroup>
 
   <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />

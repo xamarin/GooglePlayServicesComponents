@@ -24,7 +24,10 @@
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageProjectUrl>
+    <RepositoryUrl>https://go.microsoft.com/fwlink/?linkid=865435</RepositoryUrl>
+    <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
 
     @foreach (var art in @Model.MavenArtifacts) 
     {
@@ -37,7 +40,6 @@
             <Title>OkHttp v2 bindings for Xamarin.Android</Title>
             <Summary>An HTTP+SPDY client for Android and Java applications.</Summary>
             <Description>An HTTP+SPDY client for Android and Java applications.</Description>
-            <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
             <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
             <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
             <PackageTags>okhttp square square.okhttp xamarin android monodroid</PackageTags>
@@ -60,7 +62,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) 
     {
-    <LibraryProjectZip 
+    <AndroidLibrary 
         Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Link="Jars\%(Filename)%(Extension)" 
         Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar')"
          />
