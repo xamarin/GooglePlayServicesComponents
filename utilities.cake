@@ -1,22 +1,338 @@
 #tool nuget:?package=Cake.CoreCLR
+
 /*
-     dotnet cake spell-check.cake
+    dotnet cake spell-check.cake
     dotnet cake spell-check.cake -t=spell-check
  */
 #addin nuget:?package=WeCantSpell.Hunspell&version=3.0.1
 #addin nuget:?package=Newtonsoft.Json&version=12.0.3
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
+#addin nuget:?package=HolisticWare.Xamarin.Tools.ComponentGovernance&version=0.0.1.2
+#addin nuget:?package=HolisticWare.Core.Net.HTTP&version=0.0.1
+#addin nuget:?package=HolisticWare.Core.IO&version=0.0.1
 
 using System.Collections.Generic;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
+using HolisticWare.Xamarin.Tools.ComponentGovernance;
+
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
 string file_spell_errors = "./output/spell-errors.txt";
 List<string> spell_errors = null;
 JArray binderator_json_array = null;
+
+
+List<(string, string, string, string)> mappings_artifact_nuget = new List<(string, string, string, string)>();
+Dictionary<string, string> Licenses = new Dictionary<string, string>();
+
+// modifying default method for licenses
+Manifest.Defaults.VersionBasedOnFullyQualifiedArtifactIdDelegate = delegate(string fully_qualified_artifact_id)
+{
+    if
+        (
+            fully_qualified_artifact_id.StartsWith("androidx")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.android.material")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.firebase")
+            ||
+            fully_qualified_artifact_id.StartsWith("org.jetbrains.kotlin")
+            ||
+            fully_qualified_artifact_id.StartsWith("org.jetbrains.kotlinx")
+            ||
+            fully_qualified_artifact_id.StartsWith("org.jetbrains")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.squareup")
+            ||
+            fully_qualified_artifact_id.StartsWith("io.grpc")
+            ||
+            fully_qualified_artifact_id.StartsWith("io.reactivex.rxjava3")
+            ||
+            fully_qualified_artifact_id.StartsWith("io.reactivex.rxjava2")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.j2objc")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.guava")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.auto.value")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.code.gson")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.crypto.tink")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.android:annotations")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.android.datatransport")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.code.findbugs")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.dagger")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.errorprone")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.zxing")
+            ||
+            fully_qualified_artifact_id.StartsWith("io.opencensus")
+            ||
+            fully_qualified_artifact_id.StartsWith("io.perfmark")
+            ||
+            fully_qualified_artifact_id.StartsWith("javax.inject")
+            ||
+            fully_qualified_artifact_id.StartsWith("org.tensorflow")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.android.volley")
+        )
+    {
+        const string l = "The Apache Software License, Version 2.0";
+        const string u = "https://www.apache.org/licenses/LICENSE-2.0.txt";
+
+        if (!Licenses.ContainsKey(l))
+        {
+            Licenses.Add(l, u);
+        }
+
+        return l;
+    }
+
+    if
+        (
+            fully_qualified_artifact_id.StartsWith("org.checkerframework")
+            ||
+            fully_qualified_artifact_id.StartsWith("org.codehaus.mojo")
+        )
+    {
+        const string l = "MIT";
+        const string u = "http://opensource.org/licenses/MIT";
+
+        if (!Licenses.ContainsKey(l))
+        {
+            Licenses.Add(l, u);
+        }
+
+        return l;
+    }
+
+    if
+        (
+            fully_qualified_artifact_id.StartsWith("com.github.bumptech.glide")
+        )
+    {
+        const string l = "The Apache Software License, Version 2.0 AND Simplified BSD License";
+        const string u = "https://www.apache.org/licenses/LICENSE-2.0.txt;http://www.opensource.org/licenses/bsd-license";
+
+        if (!Licenses.ContainsKey(l))
+        {
+            Licenses.Add(l, u);
+        }
+
+        return l;
+    }
+
+    if
+        (
+            fully_qualified_artifact_id.StartsWith("org.reactivestreams")
+        )
+    {
+        const string l = "MIT-0";
+        const string u = "https://spdx.org/licenses/MIT-0.html";
+
+        if (!Licenses.ContainsKey(l))
+        {
+            Licenses.Add(l, u);
+        }
+
+        return l;
+    }
+
+    if
+        (
+            fully_qualified_artifact_id.StartsWith("com.google.android.gms")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.android.odml")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.android.ump")
+        )
+    {
+        const string l = "Android Software Development Kit License";
+        const string u = "https://developer.android.com/studio/terms";
+
+        if (!Licenses.ContainsKey(l))
+        {
+            Licenses.Add(l, u);
+        }
+
+        return l;
+    }
+
+    if
+        (
+            fully_qualified_artifact_id.StartsWith("org.chromium.net")
+        )
+    {
+        const string l = "Chromium and built-in dependencies";
+        const string u = "https://storage.cloud.google.com/chromium-cronet/android/72.0.3626.96/Release/cronet/LICENSE";
+
+        if (!Licenses.ContainsKey(l))
+        {
+            Licenses.Add(l, u);
+        }
+
+        return l;
+    }
+
+    if
+        (
+            fully_qualified_artifact_id.StartsWith("com.google.mlkit")
+        )
+    {
+        const string l = "ML Kit Terms of Service";
+        const string u = "https://developers.google.com/ml-kit/terms";
+
+        if (!Licenses.ContainsKey(l))
+        {
+            Licenses.Add(l, u);
+        }
+
+        return l;
+    }
+
+    if
+        (
+            fully_qualified_artifact_id.StartsWith("com.google.android.play")
+        )
+    {
+        const string l = "Play Core Software Development Kit Terms of Service";
+        const string u = "https://developer.android.com/guide/playcore#license";
+
+        if (!Licenses.ContainsKey(l))
+        {
+            Licenses.Add(l, u);
+        }
+
+        return l;
+    }
+
+    if
+        (
+            fully_qualified_artifact_id.StartsWith("com.google.android.libraries.places")
+        )
+    {
+        const string l = "Google Maps Platform Terms of Service";
+        const string u = "https://cloud.google.com/maps-platform/terms/";
+
+        if (!Licenses.ContainsKey(l))
+        {
+            Licenses.Add(l, u);
+        }
+
+        return l;
+    }
+
+    if
+        (
+            fully_qualified_artifact_id.StartsWith("com.google.protobuf")
+        )
+    {
+        const string l = "BSD 2 Clause AND BSD 3 Clause";
+        const string u = "https://opensource.org/licenses/BSD-2-Clause;https://opensource.org/licenses/BSD-3-Clause;";
+
+        if (!Licenses.ContainsKey(l))
+        {
+            Licenses.Add(l, u);
+        }
+
+        return l;
+    }
+
+
+    return null;
+};
+
+Task ("generate-component-governance")
+    .IsDependentOn("mappings-artifact-nuget")
+    .Does
+    (
+        () =>
+        {
+            Manifest manifest = new Manifest();
+
+            manifest.MappingMavenArtifact2NuGetPackage = mappings_artifact_nuget;
+
+            Console.WriteLine($"Saving ComponetGovernanceManifest cgmanifest.json...");
+            manifest.Save("./cgmanifest.json");
+
+            System.IO.File.WriteAllText
+                                (
+                                    "Licenses.json",
+                                    Newtonsoft.Json.JsonConvert.SerializeObject
+                                                                            (
+                                                                                Licenses,
+                                                                                Formatting.Indented
+                                                                            )
+                                );
+
+            return;
+        }
+    );
+
+Task ("mappings-artifact-nuget")
+    .Does
+    (
+        () =>
+        {
+            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            {
+                JsonTextReader jtr = new JsonTextReader(reader);
+                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+            }
+
+            foreach(JObject jo in binderator_json_array[0]["artifacts"])
+            {
+                bool? dependency_only = (bool?) jo["dependencyOnly"];
+                if ( dependency_only == true)
+                {
+                    continue;
+                }
+
+                string group_id  	= (string) jo["groupId"];
+                string artifact_id  = (string) jo["artifactId"];
+                string artifact_v   = (string) jo["version"];
+                string nuget_id  	= (string) jo["nugetId"];
+                string nuget_v  	= (string) jo["nugetVersion"];
+
+                mappings_artifact_nuget.Add
+                (
+                    (
+                        $"{group_id}:{artifact_id}",
+                        $"{artifact_v}",
+                        $"{nuget_id}",
+                        $"{nuget_v}"
+                    )
+                );
+            }
+
+            // dump for C# tuple initialization
+            string dump = string.Join($",{Environment.NewLine}", mappings_artifact_nuget);
+            dump = dump.Replace("(","(\"");
+            dump = dump.Replace(")","\")");
+            dump = dump.Replace(", ","\", \"");
+            EnsureDirectoryExists("./output/");
+			System.IO.File.WriteAllText($"./output/mappings-artifact-nuget.md", dump);
+
+
+            Manifest manifest = new Manifest();
+
+            manifest.MappingMavenArtifact2NuGetPackage = mappings_artifact_nuget;
+
+            Console.WriteLine($"Saving ComponetGovernanceManifest cgmanifest.json...");
+            manifest.Save("./cgmanifest.json");
+
+            return;
+        }
+    );
 
 Task ("list-artifacts")
     .Does
@@ -45,10 +361,12 @@ Task ("list-artifacts")
             lines2.Add(Environment.NewLine);
             lines2.Add(Environment.NewLine);
             // | Maven Fully Qualified Artifact                                       | NuGet Package                                                        |
-            lines1.Add($@"|{space.PadRight(width1)}|{space.PadRight(width1)}|");
-            lines1.Add($@"|{dash.PadRight(width1, '-')}|{dash.PadRight(width1, '-')}|");
-            lines2.Add($@"|{space.PadRight(width1)}|{space.PadRight(width2)}|{space.PadRight(width1)}|{space.PadRight(width2)}|");
-            lines2.Add($@"|{dash.PadRight(width1, '-')}|{dash.PadRight(width2, '-')}|{dash.PadRight(width1, '-')}|{dash.PadRight(width2, '-')}|");
+            lines1.Add($@"|{new string(' ', 4)}|{space.PadRight(width1)}|{space.PadRight(width1)}|");
+            lines1.Add($@"|{new string('-', 4)}|{dash.PadRight(width1, '-')}|{dash.PadRight(width1, '-')}|");
+            lines2.Add($@"|{new string(' ', 4)}|{space.PadRight(width1)}|{space.PadRight(width2)}|{space.PadRight(width1)}|{space.PadRight(width2)}|");
+            lines2.Add($@"|{new string('-', 4)}|{dash.PadRight(width1, '-')}|{dash.PadRight(width2, '-')}|{dash.PadRight(width1, '-')}|{dash.PadRight(width2, '-')}|");
+
+            int i = 1;
 
             foreach(JObject jo in binderator_json_array[0]["artifacts"])
             {
@@ -66,11 +384,14 @@ Task ("list-artifacts")
 
                 string maven = $"{group_id}:{artifact_id}";
                 string nuget = $"{nuget_id}";
-                string line1 = $@"|{maven.PadRight(width1)}|{nuget.PadRight(width1)}|";
-                string line2 = $@"|{maven.PadRight(width1)}|{artifact_v.PadRight(width2)}|{nuget.PadRight(width1)}|{nuget_v.PadRight(width2)}|";
+                string index = i.ToString();
+                string line1 = $@"|{index.PadLeft(4)}|{maven.PadRight(width1)}|{nuget.PadRight(width1)}|";
+                string line2 = $@"|{index.PadLeft(4)}|{maven.PadRight(width1)}|{artifact_v.PadRight(width2)}|{nuget.PadRight(width1)}|{nuget_v.PadRight(width2)}|";
 
                 lines1.Add(line1);
                 lines2.Add(line2);
+
+                i++;
             }
 
             EnsureDirectoryExists("./output/");
@@ -79,6 +400,9 @@ Task ("list-artifacts")
 			System.IO.File.WriteAllLines($"./output/artifact-list-{DateTime.Now.ToString("yyyyMMdd")}.md", lines1.ToArray());
 			System.IO.File.WriteAllLines($"./output/artifact-list-with-versions-{DateTime.Now.ToString("yyyyMMdd")}.md", lines2.ToArray());
 
+            EnsureDirectoryExists("./docs/");
+			System.IO.File.WriteAllLines($"./docs/artifact-list.md", lines1.ToArray());
+			System.IO.File.WriteAllLines($"./docs/artifact-list-with-versions.md", lines2.ToArray());
         }
     );
 
@@ -202,6 +526,19 @@ Task ("spell-check")
                 "UrlConnection",
                 "PerfMark",
                 "PerfMarkApi",
+                "ZXing",
+		        "JavaPoet",
+                "LanguageId",
+                "AppSet",
+                "Ktx",
+                "Proto",
+                "ZXing",
+                "JavaPoet",
+                "Blockstore",
+                "PasswordComplexity",
+                "StreamProtect",
+                "Recaptcha",
+                "Compat",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
@@ -382,9 +719,9 @@ Task ("target-sdk-version-check")
 
                         string a = path_parts[path_parts.Length - 2];
                         string g = path_parts[path_parts.Length - 3];
-                                                
+
                         Information($"              artifact  = {g}:{a} - target SDK version = {t} min compile SDK = {mc}");
-                        int t_sdk; 
+                        int t_sdk;
                         bool ok = int.TryParse(t, out t_sdk);
                         if (ok)
                         {
@@ -420,7 +757,7 @@ Task ("target-sdk-version-check")
                         {
                             v = xmldoc.SelectSingleNode($@"/pom:project/pom:parent/pom:version", nsmgr)?.InnerText;
                         }
-                        
+
                         string g = xmldoc.SelectSingleNode($@"/pom:project/pom:groupId", nsmgr)?.InnerText;
                         if ( g == null )
                         {
@@ -444,7 +781,7 @@ Task ("target-sdk-version-check")
             {
                 int t_sdk = ga.Value;
                 string v = artifacts_versions[ga.Key];
-                
+
                 artifact_fq_sdk.Add((ga.Key.group, ga.Key.artifact), (v, t_sdk));
             }
 
@@ -702,8 +1039,8 @@ Task("nuget-structure-analysis")
                 {
                     DeleteDirectory
                             (
-                                d_zip, 
-                                new DeleteDirectorySettings 
+                                d_zip,
+                                new DeleteDirectorySettings
                                 {
                                     Recursive = true,
                                     Force = true
@@ -718,7 +1055,7 @@ Task("nuget-structure-analysis")
                                 StartProcess
                                     (
                                         "tree",
-                                        new ProcessSettings 
+                                        new ProcessSettings
                                         {
                                             Arguments = $"-H {f.ToString().Replace(".nupkg", "")}",
                                             // WorkingDirectory = "./"
@@ -728,10 +1065,10 @@ Task("nuget-structure-analysis")
                                         out redirected_std_out,
                                         out redirected_std_err
                                     );
-                
+
                 System.IO.File.WriteAllLines
                                     (
-                                        $"{f.ToString().Replace(".nupkg", ".md")}", 
+                                        $"{f.ToString().Replace(".nupkg", ".md")}",
                                         redirected_std_out.ToArray()
                                     );
             }
@@ -743,13 +1080,14 @@ Task("nuget-structure-analysis")
 
 
 Task ("read-analysis-files")
+    .IsDependentOn ("mappings-artifact-nuget")
     .IsDependentOn ("binderate-diff")
     .IsDependentOn ("api-diff-markdown-info-pr")
     .IsDependentOn ("namespace-check")
     .IsDependentOn ("spell-check")
     .IsDependentOn ("api-diff-analysis")
     .IsDependentOn ("list-artifacts")
-    .IsDependentOn ("nuget-structure-analysis")
+    .IsDependentOn ("generate-markdown-publish-log")
     .Does
     (
         () =>
@@ -765,6 +1103,8 @@ Task ("read-analysis-files")
                 "./output/nugets-with-changed-APIs.md",
                 "./output/commands-open-file.sh",
                 "./output/artifacts_sdk_targets.md",
+                "./output/ci-publish-log.txt",
+                "./output/name-tag.md",
             };
 
             if ( ! FileExists("./output/spell-errors.txt") )
@@ -777,8 +1117,8 @@ Task ("read-analysis-files")
 			IEnumerable<string> redirectedStandardOutput;
 			ProcessSettings process_settings = new ProcessSettings ()
 			{
-             Arguments = process_args,
-             RedirectStandardOutput = true
+                 Arguments = process_args,
+                 RedirectStandardOutput = true
          	};
 			int exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
 			Information("Exit code: {0}", exitCodeWithoutArguments);
@@ -812,6 +1152,125 @@ Task("dependencies")
         }
     );
 
+
+// notes for published artifacts by tags collected from CI builds after publishing/pushing
+// it was very handy when we need to delist packages
+// https://github.com/moljac/HolisticWare.WebSite.Notes/tree/master/xamarin/products/xamarin-platform/traditional-standard/xamarin.android/advanced/bindings/android-ecosystem/google-play-services-and-firebase-and-mlkit/updates/tags
+Task("generate-markdown-publish-log")
+    .Does
+    (
+        () =>
+        {
+            string ci_publish_log_file = "./output/ci-publish-log.txt";
+
+            string[] ci_publish_log_lines = null;
+
+            if (System.IO.File.Exists(ci_publish_log_file))
+            {
+                ci_publish_log_lines = System.IO.File.ReadAllLines(ci_publish_log_file);
+            }
+            else
+            {
+                Error("No log file found");
+                Error($"     save ci log to {ci_publish_log_file}");
+
+                FileWriteText(ci_publish_log_file, $"{ci_publish_log_file}          paste log from CI");
+
+                return;
+            }
+
+            int row = 1;
+            string n1 = null;
+            string n2 = null;
+            List<string> packages           = new List<string>();
+            List<string> packages_published = new List<string>();
+            List<string> packages_rejected  = new List<string>();
+
+
+            foreach (string s in ci_publish_log_lines)
+            {
+                if (s.Contains("Pushing ") && s.Contains(".nupkg to 'https://www.nuget.org/api/v2/package'..."))
+                {
+                    n1 = s.Substring(37, s.Length - 39);
+                    n2 = n1.Replace(" to 'https://www.nuget.org/api/v2/package'.", "");
+
+                    packages.Add(n2);
+
+                    if
+                        (
+                            ci_publish_log_lines[row+1].Contains("Conflict https://www.nuget.org/api/v2/package")
+                            &&
+                            ci_publish_log_lines[row+2].Contains(".nupkg' already exists at feed 'https://www.nuget.org/api/v2/package'.")
+                        )
+                    {
+                        packages_rejected.Add(n2);
+                    }
+                    else if
+                        (
+                            ci_publish_log_lines[row+2].Contains("Created https://www.nuget.org/api/v2/package")
+                            &&
+                            ci_publish_log_lines[row+3].Contains("Your package was pushed.")
+                        )
+                    {
+                        packages_published.Add(n2);
+                    }
+                    else if
+                        (
+                            ci_publish_log_lines[row+1].Contains("Created https://www.nuget.org/api/v2/package")
+                            &&
+                            // if warning is present
+                            ci_publish_log_lines[row+2].Contains("Your package was pushed.")   
+                        )
+                    {
+                        packages_published.Add(n2);
+                    }
+                    else
+                    {
+                        Error($"n1                          = {n1}");
+                        Error($"n2                          = {n2}");
+                        Error($"ci_publish_log_lines[row+1] = {ci_publish_log_lines[row+1]}");
+                        Error($"ci_publish_log_lines[row+2] = {ci_publish_log_lines[row+2]}");
+                        Error($"ci_publish_log_lines[row+3] = {ci_publish_log_lines[row+3]}");
+                        Error($"ci_publish_log_lines[row+4] = {ci_publish_log_lines[row+4]}");
+                    }
+                }
+
+                row++;
+            }
+
+            string dump_packages_published  = string.Join($"{Environment.NewLine}", packages_published);
+            string dump_packages_rejected   = string.Join($"{Environment.NewLine}", packages_rejected);
+
+            string markdown =
+@"
+# name-tag
+
+name-tag.md
+
+Total packages = %PackagesTotal.Count%
+
+Pushed / Published: %PackagesPushedPublished.Count%
+
+
+```
+%PackagesPushedPublished%
+```
+
+Rejected / Duplicates: %PackagesRejectedDuplicates.Count%
+
+```
+%PackagesRejectedDuplicates%
+```
+";
+            markdown = markdown.Replace("%PackagesTotal.Count%", $"{packages.Count}");
+            markdown = markdown.Replace("%PackagesPushedPublished.Count%", $"{packages_published.Count}");
+            markdown = markdown.Replace("%PackagesRejectedDuplicates.Count%", $"{packages_rejected.Count}");
+            markdown = markdown.Replace("%PackagesPushedPublished%", dump_packages_published);
+            markdown = markdown.Replace("%PackagesRejectedDuplicates%", dump_packages_rejected);
+
+            System.IO.File.WriteAllText("./output/name-tag.md", markdown);
+        }
+    );
 
 Task ("Default")
     .IsDependentOn ("read-analysis-files")

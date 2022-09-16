@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
 
-    <attr
-        path="/api/package[@name='com.google.android.gms.internal.mlkit_common']"
-        name="managedName"
-        >
-        Android.Gms.Internal.MLKit.Common
-    </attr>
+  <attr
+      path="/api/package[@name='com.google.android.gms.internal.mlkit_common']"
+      name="managedName"
+      >
+      Android.Gms.Internal.MLKit.Common
+  </attr>
   <attr
       path="/api/package[@name='com.google.mlkit.common']"
       name="managedName"

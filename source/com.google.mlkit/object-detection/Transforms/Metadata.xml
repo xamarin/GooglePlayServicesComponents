@@ -58,7 +58,9 @@
 
     <remove-node
         path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
-        >        
-    </remove-node>
+        />        
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults.internal']/class[@name='DefaultObjectsRegistrar']/implements"
+        />
 
-</metadata>
+    </metadata>
