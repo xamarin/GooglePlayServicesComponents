@@ -1032,6 +1032,19 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "integrity",
+          "groupId": "com.google.android.play",
+          "version": "1.0.1",
+          "nuGetId": "Xamarin.Google.Android.Play.Integrity",
+          "nuGetVersion": "1.0.1"
+        }
+      },
+      "license": "Play Core Software Development Kit Terms of Service"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "review",
           "groupId": "com.google.android.play",
           "version": "2.0.0",
@@ -1188,11 +1201,53 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "firebase-appcheck-interop",
+          "artifactId": "firebase-appcheck",
           "groupId": "com.google.firebase",
           "version": "16.0.2",
           "nuGetId": "Xamarin.Firebase.AppCheck.Interop",
           "nuGetVersion": "116.0.2"
+          "version": "16.0.0",
+          "nuGetId": "Xamarin.Firebase.AppCheck",
+          "nuGetVersion": "116.0.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "firebase-appcheck-interop",
+          "groupId": "com.google.firebase",
+          "version": "16.0.1",
+          "nuGetId": "Xamarin.Firebase.AppCheck.Interop",
+          "nuGetVersion": "116.0.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "firebase-appcheck-playintegrity",
+          "groupId": "com.google.firebase",
+          "version": "16.0.0",
+          "nuGetId": "Xamarin.Firebase.AppCheck.PlayIntegrity",
+          "nuGetVersion": "116.0.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "firebase-appcheck-safetynet",
+          "groupId": "com.google.firebase",
+          "version": "16.0.0",
+          "nuGetId": "Xamarin.Firebase.AppCheck.SafetyNet",
+          "nuGetVersion": "116.0.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1294,9 +1349,6 @@
         "maven": {
           "artifactId": "firebase-core",
           "groupId": "com.google.firebase",
-          "version": "21.1.0",
-          "nuGetId": "Xamarin.Firebase.Core",
-          "nuGetVersion": "121.1.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
