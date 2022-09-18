@@ -241,7 +241,6 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Analytics.Impl" Version="117.0.1.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="116.3.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="117.0.1" />
     <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.9.0.1" />
     <PackageReference Update="GoogleGson" Version="2.9.0.1" />
     <PackageReference Update="Xamarin.Firebase.Analytics" Version="116.3.0" />
