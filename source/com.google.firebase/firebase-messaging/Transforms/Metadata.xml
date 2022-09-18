@@ -74,6 +74,12 @@
         >
         Firebase.Messaging.Reporting
     </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.messaging.threads']"
+        name="managedName"
+        >
+        Firebase.Messaging.Threads
+    </attr>
 
 
 </metadata>
