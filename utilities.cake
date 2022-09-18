@@ -539,6 +539,7 @@ Task ("spell-check")
                 "StreamProtect",
                 "Recaptcha",
                 "Compat",
+                "PlayIntegrity",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
