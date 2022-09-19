@@ -92,7 +92,10 @@
     <PackageReference Update="Xamarin.Firebase.Analytics.Impl" Version="116.3.0.7" />
     <PackageReference Update="Xamarin.Firebase.Analytics.Ktx" Version="121.1.0" />
     <PackageReference Update="Xamarin.Firebase.Annotations" Version="116.1.0" />
-    <PackageReference Update="Xamarin.Firebase.AppCheck.Interop" Version="116.0.2" />
+    <PackageReference Update="Xamarin.Firebase.AppCheck" Version="116.0.1" />
+    <PackageReference Update="Xamarin.Firebase.AppCheck.Interop" Version="116.0.1" />
+    <PackageReference Update="Xamarin.Firebase.AppCheck.PlayIntegrity" Version="116.0.0" />
+    <PackageReference Update="Xamarin.Firebase.AppCheck.SafetyNet" Version="116.0.0" />
     <PackageReference Update="Xamarin.Firebase.AppIndexing" Version="120.0.0.9" />
     <PackageReference Update="Xamarin.Firebase.Auth" Version="121.0.8" />
     <PackageReference Update="Xamarin.Firebase.Auth.Interop" Version="120.0.0.7" />
@@ -101,6 +104,7 @@
     <PackageReference Update="Xamarin.Firebase.Components" Version="117.0.1" />
     <PackageReference Update="Xamarin.Firebase.Config" Version="121.1.2" />
     <PackageReference Update="Xamarin.Firebase.Core" Version="121.1.0" />
+    <PackageReference Update="Xamarin.Firebase.Crash" Version="116.2.1.7" />
     <PackageReference Update="Xamarin.Firebase.Crashlytics" Version="118.2.13" />
     <PackageReference Update="Xamarin.Firebase.Crashlytics.NDK" Version="118.2.13" />
     <PackageReference Update="Xamarin.Firebase.Database" Version="120.0.6" />
@@ -242,6 +246,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Analytics.Impl" Version="117.0.1.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="116.3.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk" Version="121.1.0" />
     <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.9.0.1" />
     <PackageReference Update="GoogleGson" Version="2.9.0.1" />
     <PackageReference Update="Xamarin.Firebase.Analytics" Version="116.3.0" />
@@ -260,5 +265,8 @@
     <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.6.6" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
     <PackageReference Update="GoogleGson" Version="2.8.9" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="121.1.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="121.1.0" />
   </ItemGroup>
 </Project>
