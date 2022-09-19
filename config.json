@@ -764,16 +764,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appcheck",
-        "version": "16.0.2",
-        "nugetVersion": "116.0.2",
+        "version": "16.0.1",
+        "nugetVersion": "116.0.1",
         "nugetId": "Xamarin.Firebase.AppCheck",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appcheck-interop",
-        "version": "16.0.2",
-        "nugetVersion": "116.0.2",
+        "version": "16.0.1",
+        "nugetVersion": "116.0.1",
         "nugetId": "Xamarin.Firebase.AppCheck.Interop",
         "dependencyOnly": false
       },
