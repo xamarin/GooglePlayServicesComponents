@@ -1089,6 +1089,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("api-diff-analysis")
     .IsDependentOn ("list-artifacts")
     .IsDependentOn ("generate-markdown-publish-log")
+    .IsDependentOn ("generate-component-governance")    
     .Does
     (
         () =>
