@@ -28,16 +28,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "21.0.0",
-        "nugetVersion": "121.0.0.1",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "21.0.0",
-        "nugetVersion": "121.0.0.1",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -52,8 +52,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "21.0.0",
-        "nugetVersion": "121.0.0.1",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
@@ -164,24 +164,24 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-cast",
-        "version": "21.0.1",
-        "nugetVersion": "121.0.1.2",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Cast",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-cast-framework",
-        "version": "21.0.1",
-        "nugetVersion": "121.0.1.2",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Cast.Framework",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-cast-tv",
-        "version": "19.0.1",
-        "nugetVersion": "119.0.1.2",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Cast.TV",
         "dependencyOnly": false
       },
@@ -300,112 +300,112 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-maps",
-        "version": "18.0.2",
-        "nugetVersion": "118.0.2.2",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Maps",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement",
-        "version": "21.0.0",
-        "nugetVersion": "121.0.0.1",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-api",
-        "version": "21.0.0",
-        "nugetVersion": "121.0.0.1",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
-        "version": "21.0.0",
-        "nugetVersion": "121.0.0.1",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-impl",
-        "version": "21.0.0",
-        "nugetVersion": "121.0.0.1",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Impl",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk",
-        "version": "21.0.0",
-        "nugetVersion": "121.0.0.1",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk-api",
-        "version": "21.0.0",
-        "nugetVersion": "121.0.0.1",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk.Api",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-barcode-scanning",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0.2",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.BarcodeScanning",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-face-detection",
-        "version": "17.0.1",
-        "nugetVersion": "117.0.1.2",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.FaceDetection",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-image-labeling",
-        "version": "16.0.7",
-        "nugetVersion": "116.0.7.1",
+        "version": "16.0.8",
+        "nugetVersion": "116.0.8",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.ImageLabeling",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-language-id",
-        "version": "17.0.0-beta1",
-        "nugetVersion": "117.0.0.2-beta1",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.LanguageId",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-text-recognition",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0.2",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-text-recognition-common",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0.2",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-nearby",
-        "version": "18.2.0",
-        "nugetVersion": "118.2.0.1",
+        "version": "18.3.0",
+        "nugetVersion": "118.3.0",
         "nugetId": "Xamarin.GooglePlayServices.Nearby",
         "dependencyOnly": false
       },
@@ -420,8 +420,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-pal",
-        "version": "19.0.0",
-        "nugetVersion": "119.0.0.2",
+        "version": "20.0.1",
+        "nugetVersion": "120.0.1",
         "nugetId": "Xamarin.GooglePlayServices.PAL",
         "dependencyOnly": false
       },
@@ -1164,8 +1164,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "common",
-        "version": "18.2.0",
-        "nugetVersion": "118.2.0.2",
+        "version": "18.5.0",
+        "nugetVersion": "118.5.0",
         "nugetId": "Xamarin.Google.MLKit.Common",
         "dependencyOnly": false
       },
