@@ -1088,6 +1088,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("api-diff-analysis")
     .IsDependentOn ("list-artifacts")
     .IsDependentOn ("generate-markdown-publish-log")
+    .IsDependentOn ("tools-executive-order")
     .Does
     (
         () =>
@@ -1152,136 +1153,6 @@ Task("dependencies")
         }
     );
 
-Task("tools-executive-order")
-    .IsDependentOn ("tools-executive-oreder-csv")
-    .IsDependentOn ("tools-executive-oreder-detailed-markdown")
-    ;
-
-Task("tools-executive-oreder-csv")
-    .Does
-    (
-        () =>
-        {
-            /*
-                dotnet --info
-                dotnet --list-sdks
-                dotnet --list-runtimes
-
-                too much info
-                let's parse globel.json for now
-            */
-
-
-            /*
-            xamarin-android-binderator --help
-            -c, --config=VALUE         JSON Config File.
-            -b, --basepath=VALUE       Default Base Path.
-            -h, --help                 show this message and exit
-
-            no version info
-
-            let's parse 
-                dotnet tool list --global
-            */
-            StringBuilder sb = new StringBuilder();
-			string process = null;
-			string process_args = null;
-			IEnumerable<string> redirectedStandardOutput = null;
-			int exitCodeWithoutArguments;
-			ProcessSettings process_settings = null;
-
-			process = "dotnet";
-			process_args = "tool list --global";
-            process_settings = new ProcessSettings ()
-			{
-                Arguments = process_args,
-                RedirectStandardOutput = true,
-            };
-			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            sb.AppendLine(new string('=',120));
-            sb.AppendLine($"{process}       {process_args}");
-            sb.AppendLine(redirectedStandardOutput.ToString());
-
-
-			System.IO.File.WriteAllLines("./output/tools-executive-oreder.csv", redirectedStandardOutput.ToArray());
-
-            return;
-        }
-    );
-
-
-Task("tools-executive-oreder-detailed-markdown")
-    .Does
-    (
-        () =>
-        {
-            StringBuilder sb = new StringBuilder();
-			string process = null;
-			string process_args = null;
-			IEnumerable<string> redirectedStandardOutput = null;
-			int exitCodeWithoutArguments;
-			ProcessSettings process_settings = null;
-
-			process = "dotnet";
-			process_args = "--info";
-            process_settings = new ProcessSettings ()
-                                                {
-                                                    Arguments = process_args,
-                                                    RedirectStandardOutput = true,
-                                                }
-                                                .SetRedirectStandardOutput(true);                                               
-            redirectedStandardOutput = null;
-			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            //? System.Diagnostics.Process.ReadToEnd();
-            sb.AppendLine(new string('=',120));
-            sb.AppendLine($"{process}       {process_args}");
-            sb.AppendLine(redirectedStandardOutput.ToString());
-
-			process = "dotnet";
-			process_args = "--list-sdks";
-            process_settings = new ProcessSettings ()
-			{
-                Arguments = process_args,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-            };
-            redirectedStandardOutput = null;
-			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            sb.AppendLine(new string('=',120));
-            sb.AppendLine($"{process}       {process_args}");
-            sb.AppendLine(redirectedStandardOutput.ToString());
-
-			process = "dotnet";
-			process_args = "--list-runtimes";
-            process_settings = new ProcessSettings ()
-			{
-                Arguments = process_args,
-                RedirectStandardOutput = true,
-            };
-            redirectedStandardOutput = null;
-			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            sb.AppendLine(new string('=',120));
-            sb.AppendLine($"{process}       {process_args}");
-            sb.AppendLine(redirectedStandardOutput.ToString());
-
-			process = "dotnet";
-			process_args = "cake --info";
-            process_settings = new ProcessSettings ()
-			{
-                Arguments = process_args,
-                RedirectStandardOutput = true,
-            };
-            redirectedStandardOutput = null;
-			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            sb.AppendLine(new string('=',120));
-            sb.AppendLine($"{process}       {process_args}");
-            sb.AppendLine(redirectedStandardOutput.ToString());
-
-			System.IO.File.WriteAllText("./output/tools-executive-oreder.md", sb.ToString());
-
-            return;
-        }
-    );
 
 // notes for published artifacts by tags collected from CI builds after publishing/pushing
 // it was very handy when we need to delist packages
@@ -1401,6 +1272,272 @@ Rejected / Duplicates: %PackagesRejectedDuplicates.Count%
             System.IO.File.WriteAllText("./output/name-tag.md", markdown);
         }
     );
+
+Task("tools-executive-order")
+    .IsDependentOn ("tools-executive-oreder-csv-and-markdown")
+    ;
+
+Task("tools-executive-oreder-csv-and-markdown")
+    .Does
+    (
+        () =>
+        {
+            StringBuilder sb = new StringBuilder();
+            StringBuilder sb_md = new StringBuilder();
+            sb.AppendLine("BuildToolName,BuildToolVersion");
+            sb_md.AppendLine("# Executive Order Build Tools Inventory");
+            sb_md.AppendLine();
+            sb_md.AppendLine("./buildtoolsinventory.csv");
+            sb_md.AppendLine();
+
+			string process = null;
+			string process_args = null;
+			IEnumerable<string> redirectedStandardOutput = null;
+			int exitCodeWithoutArguments;
+			ProcessSettings process_settings = null;
+
+            /*
+                dotnet --info
+                dotnet --list-sdks
+                dotnet --list-runtimes
+
+                too much info
+                let's parse global.json for now
+            */
+            Newtonsoft.Json.Linq.JObject json_object = null;
+            string global_json = System.IO.File.ReadAllText("./global.json");
+            using (StringReader string_reader = new StringReader(global_json))
+            {
+                Newtonsoft.Json.JsonTextReader jtr = new Newtonsoft.Json.JsonTextReader(string_reader);
+                json_object = (Newtonsoft.Json.Linq.JObject) Newtonsoft.Json.Linq.JToken.ReadFrom(jtr);
+            }
+
+            sb_md.AppendLine("```");
+            sb_md.AppendLine(global_json);
+            sb_md.AppendLine("```");
+            foreach(Newtonsoft.Json.Linq.JProperty jp in json_object["sdk"])
+            {
+                string version  = (string) jp.Value;
+                sb.AppendLine($"dotnet sdk, {version}");
+                sb_md.AppendLine($"{jp.Name}{version}");
+            }
+
+            List
+                <(
+                    string nuget_id, 
+                    string version
+                )> msbuild_sdks = new List
+                                        <(
+                                            string nuget_id, 
+                                            string vetsion
+                                        )>();
+            
+            foreach(Newtonsoft.Json.Linq.JProperty jp in json_object["msbuild-sdks"])
+            {
+                string name  = (string) jp.Name;
+                string value  = (string) jp.Value;
+                msbuild_sdks.Add((name, value));
+                sb.AppendLine($"msbuild-sdks {name}, {value}");
+            }							
+
+            /*
+            mono --version
+            */
+			process = "mono";
+			process_args = "--version";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            foreach (string line in redirectedStandardOutput.ToList())
+            {
+                string tool = null;
+                string version = null;
+
+                if
+                    (
+                        line.Contains("Mono JIT compiler version ")
+                    )
+                {
+                    tool = line.Replace("Mono JIT compiler version ", "");
+                    version = tool;
+                    sb.AppendLine($"Mono JIT compiler, {version}");
+                }
+            }
+
+
+            /*
+            nuget
+            */
+			process = "nuget";
+			process_args = "";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            foreach (string line in redirectedStandardOutput.ToList())
+            {
+                string tool = null;
+                string version = null;
+
+                if
+                    (
+                        line.Contains("NuGet Version: ")
+                    )
+                {
+                    tool = line.Replace("NuGet Version: ", "");
+                    version = tool;
+                    sb.AppendLine($"nuget, {version}");
+                }
+            }
+
+            /*
+            xamarin-android-binderator --help
+            -c, --config=VALUE         JSON Config File.
+            -b, --basepath=VALUE       Default Base Path.
+            -h, --help                 show this message and exit
+
+            no version info
+
+            let's parse 
+                dotnet tool list --global
+            */
+			process = "dotnet";
+			process_args = "tool list --global";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            foreach (string line in redirectedStandardOutput.ToList())
+            {
+                if
+                    (
+                        line.Contains("api-tools")
+                        ||
+                        line.Contains("boots")
+                        ||
+                        line.Contains("xamarin.androidx.migration.tool")
+                        ||
+                        line.Contains("xamarin.androidbinderator.tool")
+                    )
+                {
+                    string line_csv = System.Text.RegularExpressions.Regex.Replace(line, @"\s+", "," );
+                    Information($"line_csv = {line_csv}");
+                    string[] parts = line_csv.Split(new string[] {","}, StringSplitOptions.RemoveEmptyEntries);
+                    sb.AppendLine($"{parts[0]},{parts[1]}");
+                }
+            }
+
+            /*
+            gradle --version
+            */
+			process = "gradle";
+			process_args = "--version";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            foreach (string line in redirectedStandardOutput)
+            {
+                string tool = null;
+                string version = null;
+
+                if (line.Contains("Gradle"))
+                {
+                    tool = line.Replace("Gradle ", "");
+                    version = tool;
+                    sb.AppendLine($"Gradle, {version}");
+                }
+                else if (line.Contains("Kotlin:"))
+                {
+                    tool = line.Replace("Kotlin:", "").Trim();
+                    version = tool;
+                    sb.AppendLine($"Kotlin, {version}");
+                }
+                else if (line.Contains("Groovy:"))
+                {
+                    tool = line.Replace("Groovy:", "").Trim();
+                    version = tool;
+                    sb.AppendLine($"Groovy, {version}");
+                }
+                else if (line.Contains("Ant:"))
+                {
+                    tool = line.Replace("Ant:", "").Trim();
+                    version = tool;
+                    sb.AppendLine($"Ant, {version}");
+                }
+                else if (line.Contains("JVM:"))
+                {
+                    tool = line.Replace("JVM:", "").Trim();
+                    version = tool;
+                    sb.AppendLine($"JVM, {version}");
+                }
+            }
+            /*
+            java --version
+            */
+			process = "java";
+			process_args = "--version";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            foreach (string line in redirectedStandardOutput)
+            {
+                string tool = null;
+                string version = null;
+
+                if (line.Contains("openjdk"))
+                {
+                    tool = line.Replace("openjdk ", "");
+                    version = tool;
+                    sb.AppendLine($"openjdk, {version}");
+                }
+            }
+
+            /*
+            javac --version
+            */
+			process = "javac";
+			process_args = "--version";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            foreach (string line in redirectedStandardOutput)
+            {
+                string tool = null;
+                string version = null;
+
+                if (line.Contains("javac"))
+                {
+                    tool = line.Replace("javac ", "");
+                    version = tool;
+                    sb.AppendLine($"javac, {version}");
+                }
+            }
+
+			System.IO.File.WriteAllText("./output/buildtoolsinventory.csv", sb.ToString());
+			System.IO.File.WriteAllText("./docs/buildtoolsinventory.csv", sb.ToString());
+			System.IO.File.WriteAllText("./output/buildtoolsinventory.md", sb_md.ToString());
+			System.IO.File.WriteAllText("./docs/buildtoolsinventory.md", sb_md.ToString());
+
+            return;
+        }
+    );
+
 
 Task ("Default")
     .IsDependentOn ("read-analysis-files")
