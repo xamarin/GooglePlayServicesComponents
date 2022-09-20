@@ -62,5 +62,11 @@
         >
         Firebase.HeartBeatInfo
     </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.tracing']"
+        name="managedName"
+        >
+        Firebase.Tracing
+    </attr>
     
 </metadata>
