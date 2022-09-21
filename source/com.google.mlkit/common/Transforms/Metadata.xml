@@ -21,4 +21,9 @@
         >        
     </remove-node>
     
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.common.sdkinternal']/class[@name='OptionalModuleUtils']/field[@name='EMPTY_FEATURES']"
+        >        
+    </remove-node>
+
 </metadata>

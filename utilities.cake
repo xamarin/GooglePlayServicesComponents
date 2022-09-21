@@ -539,6 +539,7 @@ Task ("spell-check")
                 "StreamProtect",
                 "Recaptcha",
                 "Compat",
+                "PlayIntegrity",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
@@ -1089,6 +1090,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("list-artifacts")
     .IsDependentOn ("generate-markdown-publish-log")
     .IsDependentOn ("tools-executive-order")
+    .IsDependentOn ("generate-component-governance")    
     .Does
     (
         () =>
