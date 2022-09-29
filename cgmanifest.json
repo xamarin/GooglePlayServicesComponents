@@ -1203,9 +1203,9 @@
         "maven": {
           "artifactId": "firebase-appcheck",
           "groupId": "com.google.firebase",
-          "version": "16.0.0",
+          "version": "16.0.1",
           "nuGetId": "Xamarin.Firebase.AppCheck",
-          "nuGetVersion": "116.0.0"
+          "nuGetVersion": "116.0.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1346,9 +1346,9 @@
         "maven": {
           "artifactId": "firebase-core",
           "groupId": "com.google.firebase",
-          "version": "21.0.0",
+          "version": "21.1.0",
           "nuGetId": "Xamarin.Firebase.Core",
-          "nuGetVersion": "121.0.0"
+          "nuGetVersion": "121.1.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1918,9 +1918,9 @@
         "maven": {
           "artifactId": "common",
           "groupId": "com.google.mlkit",
-          "version": "18.4.0",
+          "version": "18.5.0",
           "nuGetId": "Xamarin.Google.MLKit.Common",
-          "nuGetVersion": "118.4.0"
+          "nuGetVersion": "118.5.0"
         }
       },
       "license": "ML Kit Terms of Service"
@@ -1983,9 +1983,9 @@
         "maven": {
           "artifactId": "image-labeling-common",
           "groupId": "com.google.mlkit",
-          "version": "18.0.0",
+          "version": "18.1.0",
           "nuGetId": "Xamarin.Google.MLKit.ImageLabeling.Common",
-          "nuGetVersion": "118.0.0.2"
+          "nuGetVersion": "118.1.0"
         }
       },
       "license": "ML Kit Terms of Service"
@@ -2048,9 +2048,9 @@
         "maven": {
           "artifactId": "language-id-common",
           "groupId": "com.google.mlkit",
-          "version": "16.0.0",
+          "version": "16.1.0",
           "nuGetId": "Xamarin.Google.MLKit.Language.Id.Common",
-          "nuGetVersion": "116.0.0"
+          "nuGetVersion": "116.1.0"
         }
       },
       "license": "ML Kit Terms of Service"
@@ -2191,9 +2191,9 @@
         "maven": {
           "artifactId": "translate",
           "groupId": "com.google.mlkit",
-          "version": "17.0.0",
+          "version": "17.0.1",
           "nuGetId": "Xamarin.Google.MLKit.Translate",
-          "nuGetVersion": "117.0.0.2"
+          "nuGetVersion": "117.0.1"
         }
       },
       "license": "ML Kit Terms of Service"
@@ -2204,9 +2204,9 @@
         "maven": {
           "artifactId": "vision-common",
           "groupId": "com.google.mlkit",
-          "version": "17.1.0",
+          "version": "17.2.0",
           "nuGetId": "Xamarin.Google.MLKit.Vision.Common",
-          "nuGetVersion": "117.1.0.2"
+          "nuGetVersion": "117.2.0"
         }
       },
       "license": "ML Kit Terms of Service"
