@@ -810,6 +810,25 @@ Task("nuget-dependecies")
 		}
 	);
 
+Task("tools-executive-order")
+    .Does
+    (
+        () =>
+        {
+            CakeExecuteScript
+                        (
+                            "./utilities.cake",
+                            new CakeSettings
+                            { 
+                                Arguments = new Dictionary<string, string>() 
+                                { 
+                                    { "target", "tools-executive-order" } 
+                                } 
+                            }
+                        );        
+        }
+    );
+
 // Task ("genapi")
 // 	.IsDependentOn ("libs")
 // 	.Does (() =>
@@ -886,18 +905,8 @@ Task ("ci")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
 	//.IsDependentOn ("merge")
-	.IsDependentOn ("samples");
+	.IsDependentOn ("samples")
+    .IsDependentOn ("tools-executive-order")
+    ;
 
 RunTarget (TARGET);
-
-CakeExecuteScript
-            (
-                "./utilities.cake",
-                new CakeSettings
-                { 
-                    Arguments = new Dictionary<string, string>() 
-                    { 
-                        { "target", "tools-executive-order" } 
-                    } 
-                }
-            );
