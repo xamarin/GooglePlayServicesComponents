@@ -381,7 +381,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-language-id",
         "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "nugetVersion": "117.0.0.2",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.LanguageId",
         "dependencyOnly": false
       },
