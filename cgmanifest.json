@@ -228,9 +228,9 @@
         "maven": {
           "artifactId": "play-services-cast",
           "groupId": "com.google.android.gms",
-          "version": "21.0.1",
+          "version": "21.1.0",
           "nuGetId": "Xamarin.GooglePlayServices.Cast",
-          "nuGetVersion": "121.0.1.2"
+          "nuGetVersion": "121.1.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -241,9 +241,9 @@
         "maven": {
           "artifactId": "play-services-cast-framework",
           "groupId": "com.google.android.gms",
-          "version": "21.0.1",
+          "version": "21.1.0",
           "nuGetId": "Xamarin.GooglePlayServices.Cast.Framework",
-          "nuGetVersion": "121.0.1.2"
+          "nuGetVersion": "121.1.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -254,9 +254,9 @@
         "maven": {
           "artifactId": "play-services-cast-tv",
           "groupId": "com.google.android.gms",
-          "version": "19.0.1",
+          "version": "20.0.0",
           "nuGetId": "Xamarin.GooglePlayServices.Cast.TV",
-          "nuGetVersion": "119.0.1.2"
+          "nuGetVersion": "120.0.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -449,9 +449,9 @@
         "maven": {
           "artifactId": "play-services-maps",
           "groupId": "com.google.android.gms",
-          "version": "18.0.2",
+          "version": "18.1.0",
           "nuGetId": "Xamarin.GooglePlayServices.Maps",
-          "nuGetVersion": "118.0.2.2"
+          "nuGetVersion": "118.1.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -540,9 +540,9 @@
         "maven": {
           "artifactId": "play-services-mlkit-barcode-scanning",
           "groupId": "com.google.android.gms",
-          "version": "18.0.0",
+          "version": "18.1.0",
           "nuGetId": "Xamarin.GooglePlayServices.MLKit.BarcodeScanning",
-          "nuGetVersion": "118.0.0.2"
+          "nuGetVersion": "118.1.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -553,9 +553,9 @@
         "maven": {
           "artifactId": "play-services-mlkit-face-detection",
           "groupId": "com.google.android.gms",
-          "version": "17.0.1",
+          "version": "17.1.0",
           "nuGetId": "Xamarin.GooglePlayServices.MLKit.FaceDetection",
-          "nuGetVersion": "117.0.1.2"
+          "nuGetVersion": "117.1.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -566,9 +566,9 @@
         "maven": {
           "artifactId": "play-services-mlkit-image-labeling",
           "groupId": "com.google.android.gms",
-          "version": "16.0.7",
+          "version": "16.0.8",
           "nuGetId": "Xamarin.GooglePlayServices.MLKit.ImageLabeling",
-          "nuGetVersion": "116.0.7.1"
+          "nuGetVersion": "116.0.8"
         }
       },
       "license": "Android Software Development Kit License"
@@ -579,9 +579,9 @@
         "maven": {
           "artifactId": "play-services-mlkit-language-id",
           "groupId": "com.google.android.gms",
-          "version": "17.0.0-beta1",
+          "version": "17.0.0",
           "nuGetId": "Xamarin.GooglePlayServices.MLKit.LanguageId",
-          "nuGetVersion": "117.0.0.2-beta1"
+          "nuGetVersion": "117.0.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -592,9 +592,9 @@
         "maven": {
           "artifactId": "play-services-mlkit-text-recognition",
           "groupId": "com.google.android.gms",
-          "version": "18.0.0",
+          "version": "18.0.1",
           "nuGetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition",
-          "nuGetVersion": "118.0.0.2"
+          "nuGetVersion": "118.0.1"
         }
       },
       "license": "Android Software Development Kit License"
@@ -605,9 +605,9 @@
         "maven": {
           "artifactId": "play-services-mlkit-text-recognition-common",
           "groupId": "com.google.android.gms",
-          "version": "17.0.0",
+          "version": "17.1.0",
           "nuGetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Common",
-          "nuGetVersion": "117.0.0.2"
+          "nuGetVersion": "117.1.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -618,9 +618,9 @@
         "maven": {
           "artifactId": "play-services-nearby",
           "groupId": "com.google.android.gms",
-          "version": "18.2.0",
+          "version": "18.3.0",
           "nuGetId": "Xamarin.GooglePlayServices.Nearby",
-          "nuGetVersion": "118.2.0.1"
+          "nuGetVersion": "118.3.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -644,9 +644,9 @@
         "maven": {
           "artifactId": "play-services-pal",
           "groupId": "com.google.android.gms",
-          "version": "19.0.0",
+          "version": "20.0.1",
           "nuGetId": "Xamarin.GooglePlayServices.PAL",
-          "nuGetVersion": "119.0.0.2"
+          "nuGetVersion": "120.0.1"
         }
       },
       "license": "Android Software Development Kit License"
