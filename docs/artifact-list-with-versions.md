@@ -49,7 +49,7 @@
 |  42|com.google.android.gms:play-services-mlkit-barcode-scanning           |18.1.0              |Xamarin.GooglePlayServices.MLKit.BarcodeScanning                      |118.1.0             |
 |  43|com.google.android.gms:play-services-mlkit-face-detection             |17.1.0              |Xamarin.GooglePlayServices.MLKit.FaceDetection                        |117.1.0             |
 |  44|com.google.android.gms:play-services-mlkit-image-labeling             |16.0.8              |Xamarin.GooglePlayServices.MLKit.ImageLabeling                        |116.0.8             |
-|  45|com.google.android.gms:play-services-mlkit-language-id                |17.0.0              |Xamarin.GooglePlayServices.MLKit.LanguageId                           |117.0.0             |
+|  45|com.google.android.gms:play-services-mlkit-language-id                |17.0.0              |Xamarin.GooglePlayServices.MLKit.LanguageId                           |117.0.0.2           |
 |  46|com.google.android.gms:play-services-mlkit-text-recognition           |18.0.1              |Xamarin.GooglePlayServices.MLKit.Text.Recognition                     |118.0.1             |
 |  47|com.google.android.gms:play-services-mlkit-text-recognition-common    |17.1.0              |Xamarin.GooglePlayServices.MLKit.Text.Recognition.Common              |117.1.0             |
 |  48|com.google.android.gms:play-services-nearby                           |18.3.0              |Xamarin.GooglePlayServices.Nearby                                     |118.3.0             |
