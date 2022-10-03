@@ -581,7 +581,7 @@
           "groupId": "com.google.android.gms",
           "version": "17.0.0",
           "nuGetId": "Xamarin.GooglePlayServices.MLKit.LanguageId",
-          "nuGetVersion": "117.0.0"
+          "nuGetVersion": "117.0.0.2"
         }
       },
       "license": "Android Software Development Kit License"
