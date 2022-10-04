@@ -17,9 +17,9 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Awareness" Version="119.0.1.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Base" Version="118.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Basement" Version="118.1.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Cast" Version="121.0.1.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Cast.Framework" Version="121.0.1.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Cast.TV" Version="119.0.1.2" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Cast" Version="121.1.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Cast.Framework" Version="121.1.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Cast.TV" Version="120.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Clearcut" Version="117.0.0.7" />
     <PackageReference Update="Xamarin.GooglePlayServices.CloudMessaging" Version="117.0.2.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.CroNet" Version="118.0.1.2" />
@@ -34,22 +34,22 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Iid" Version="117.0.0.7" />
     <PackageReference Update="Xamarin.GooglePlayServices.InstantApps" Version="118.0.1.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Location" Version="120.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Maps" Version="118.0.2.2" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Maps" Version="118.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement" Version="121.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="121.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="121.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Impl" Version="121.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk" Version="121.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk.Api" Version="121.1.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.BarcodeScanning" Version="118.0.0.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.FaceDetection" Version="117.0.1.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.ImageLabeling" Version="116.0.7.1" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.LanguageId" Version="117.0.0.2-beta1" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition" Version="118.0.0.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition.Common" Version="117.0.0.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Nearby" Version="118.2.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.BarcodeScanning" Version="118.1.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.FaceDetection" Version="117.1.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.ImageLabeling" Version="116.0.8" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.LanguageId" Version="117.0.0.2" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition" Version="118.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition.Common" Version="117.1.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Nearby" Version="118.3.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Oss.Licenses" Version="117.0.0.7" />
-    <PackageReference Update="Xamarin.GooglePlayServices.PAL" Version="119.0.0.2" />
+    <PackageReference Update="Xamarin.GooglePlayServices.PAL" Version="120.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Panorama" Version="117.0.0.7" />
     <PackageReference Update="Xamarin.GooglePlayServices.PasswordComplexity" Version="118.0.1.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Pay" Version="116.0.3.2" />
