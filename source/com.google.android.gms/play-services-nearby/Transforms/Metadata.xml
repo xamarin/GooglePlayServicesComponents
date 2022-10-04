@@ -90,5 +90,9 @@
 		>
 		UwbConfigIdData
 	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.nearby.connection']/class[@name='BandwidthInfo']/method[@name='getQuality' and count(parameter)=0]"
+		name="propertyName"
+		/>
 
 </metadata>
