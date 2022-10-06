@@ -170,7 +170,7 @@
     <PackageReference Update="Xamarin.Google.MLKit.SmartReply" Version="117.0.2" />
     <PackageReference Update="Xamarin.Google.MLKit.SmartReply.Common" Version="116.0.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Translate" Version="117.0.1" />
-    <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="117.2.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="117.2.1" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Interfaces" Version="116.1.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="118.2.2.2" />
     <PackageReference Update="Xamarin.Google.Android.ODML.Image" Version="1.0.0.2-beta1" />
