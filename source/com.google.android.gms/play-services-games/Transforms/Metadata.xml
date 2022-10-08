@@ -518,5 +518,17 @@
         </method>        
     </add-node>    
 
+    <!--
+        copy/remove-node
+    <attr
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.GamesOptions']/method[@name='getImpliedScopes' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.Generic.IList &lt; Android.Gms.Common.Apis.Scope &gt;
+    </attr>
+    -->
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.GamesOptions']/method[@name='getImpliedScopes' and count(parameter)=0]"
+        />
 
 </metadata>
