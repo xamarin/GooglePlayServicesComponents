@@ -1,10 +1,8 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='org.tensorflow.lite.gpu']" 
         name="managedName"
         >
-        Package
-    </attr>
-    -->
+        Xamarin.TensorFlow.Lite.GPU
+  </attr>
 </metadata>

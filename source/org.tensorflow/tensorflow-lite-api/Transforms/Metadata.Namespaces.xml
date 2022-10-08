@@ -1,10 +1,21 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='org.tensorflow.lite']" 
         name="managedName"
         >
-        Package
+        Xamarin.TensorFlow.Lite
     </attr>
-    -->
+    <attr 
+        path="/api/package[@name='org.tensorflow.lite.annotations']" 
+        name="managedName"
+        >
+        Xamarin.TensorFlow.Lite.Annotations
+    </attr>
+    <attr 
+        path="/api/package[@name='org.tensorflow.lite.nmapi']" 
+        name="managedName"
+        >
+        Xamarin.TensorFlow.Lite.Nmapi
+    </attr>
+
 </metadata>
