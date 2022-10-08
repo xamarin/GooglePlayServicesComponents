@@ -9,6 +9,8 @@ namespace Android.Gms.Games {
 	// [global::Android.Runtime.Register ("com/google/android/gms/games/Games", DoNotGenerateAcw=true)]
 	public sealed partial class GamesClass // : global::Java.Lang.Object 
 	{
+		public sealed partial class GamesOptions // : global::Java.Lang.Object, global::Android.Gms.Auth.Api.SignIn.IGoogleSignInOptionsExtension, global::Android.Gms.Common.Apis.Api.IApiOptionsHasGoogleSignInAccountOptions, global::Android.Gms.Common.Apis.Api.IApiOptionsOptional 
+		{
 			public unsafe global::System.Collections.Generic.IList <global:: Android.Gms.Common.Apis.Scope > ImpliedScopes 
 			{
 				// Metadata.xml XPath method reference: path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.GamesOptions']/method[@name='getImpliedScopes' and count(parameter)=0]"
@@ -25,5 +27,6 @@ namespace Android.Gms.Games {
 					}
 				}
 			}
+		}
 	}
 }

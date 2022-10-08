@@ -529,6 +529,6 @@
     -->
     <remove-node
         path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.GamesOptions']/method[@name='getImpliedScopes' and count(parameter)=0]"
-        />
+         />
 
 </metadata>
