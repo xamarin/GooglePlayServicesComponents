@@ -1388,8 +1388,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "vision-common",
-        "version": "17.2.0",
-        "nugetVersion": "117.2.0",
+        "version": "17.2.1",
+        "nugetVersion": "117.2.1",
         "nugetId": "Xamarin.Google.MLKit.Vision.Common",
         "dependencyOnly": false
       },
