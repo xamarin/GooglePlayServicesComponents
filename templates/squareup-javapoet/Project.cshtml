@@ -51,7 +51,7 @@
             </PackageDescription>
             <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
             <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-            <PackageTags>javapoet square square.javapoet bindings xamarin android monodroid</PackageTags>
+            <PackageTags>javapoet square square.javapoet bindings xamarin android monodroid  artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
             break; 
           default:
             break; 
