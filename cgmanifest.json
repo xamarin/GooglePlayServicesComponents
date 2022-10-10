@@ -2204,9 +2204,9 @@
         "maven": {
           "artifactId": "vision-common",
           "groupId": "com.google.mlkit",
-          "version": "17.2.0",
+          "version": "17.2.1",
           "nuGetId": "Xamarin.Google.MLKit.Vision.Common",
-          "nuGetVersion": "117.2.0"
+          "nuGetVersion": "117.2.1"
         }
       },
       "license": "ML Kit Terms of Service"
