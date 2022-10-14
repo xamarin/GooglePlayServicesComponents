@@ -169,14 +169,18 @@ Task("tools-update")
         () =>
         {
             /*
+			      // dotnet cake	
             dotnet tool uninstall   -g Cake.Tool
             dotnet tool install     -g Cake.Tool
+			      // binderator
             dotnet tool uninstall   -g xamarin.androidbinderator.tool
             dotnet tool install     -g xamarin.androidbinderator.tool
+			      // androidx-migrator
             dotnet tool uninstall   -g xamarin.androidx.migration.tool
             dotnet tool install     -g xamarin.androidx.migration.tool
-			dotnet tool uninstall   -g api-tools
-			dotnet tool install     -g api-tools
+      			// apoi-tools
+            dotnet tool uninstall   -g api-tools
+            dotnet tool install     -g api-tools
 
             StartProcess("dotnet", "tool uninstall   -g Cake.Tool");
             StartProcess("dotnet", "tool install     -g Cake.Tool");
@@ -185,6 +189,8 @@ Task("tools-update")
             StartProcess("dotnet", "tool install     -g xamarin.androidbinderator.tool");
             StartProcess("dotnet", "tool uninstall   -g xamarin.androidx.migration.tool");
             StartProcess("dotnet", "tool install     -g xamarin.androidx.migration.tool");
+            StartProcess("dotnet", "tool uninstall   -g api-tools");
+            StartProcess("dotnet", "tool install     -g api-tools");
         }
     );
 
@@ -911,6 +917,25 @@ Task("nuget-dependecies")
 		}
 	);
 
+Task("tools-executive-order")
+    .Does
+    (
+        () =>
+        {
+            CakeExecuteScript
+                        (
+                            "./utilities.cake",
+                            new CakeSettings
+                            { 
+                                Arguments = new Dictionary<string, string>() 
+                                { 
+                                    { "target", "tools-executive-order" } 
+                                } 
+                            }
+                        );        
+        }
+    );
+
 // Task ("genapi")
 // 	.IsDependentOn ("libs")
 // 	.Does (() =>
@@ -987,6 +1012,8 @@ Task ("ci")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
 	//.IsDependentOn ("merge")
-	.IsDependentOn ("samples");
+	.IsDependentOn ("samples")
+    .IsDependentOn ("tools-executive-order")
+    ;
 
 RunTarget (TARGET);
