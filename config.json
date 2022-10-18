@@ -558,7 +558,7 @@
         "artifactId": "play-services-tflite-gpu",
         "version": "16.0.0",
         "nugetVersion": "116.0.0",
-        "nugetId": "Xamarin.GooglePlayServices.TFLite.GPU",
+        "nugetId": "Xamarin.GooglePlayServices.TfLite.Gpu",
         "dependencyOnly": false
       },
       {
@@ -566,7 +566,7 @@
         "artifactId": "play-services-tflite-impl",
         "version": "16.0.0",
         "nugetVersion": "116.0.0",
-        "nugetId": "Xamarin.GooglePlayServices.TFLite.Impl",
+        "nugetId": "Xamarin.GooglePlayServices.TfLite.Impl",
         "dependencyOnly": false
       },
       {
@@ -574,7 +574,7 @@
         "artifactId": "play-services-tflite-java",
         "version": "16.0.0",
         "nugetVersion": "116.0.0",
-        "nugetId": "Xamarin.GooglePlayServices.TFLite.Java",
+        "nugetId": "Xamarin.GooglePlayServices.TfLite.Java",
         "dependencyOnly": false
       },
       {
@@ -582,7 +582,7 @@
         "artifactId": "play-services-tflite-support",
         "version": "16.0.0",
         "nugetVersion": "116.0.0",
-        "nugetId": "Xamarin.GooglePlayServices.TFLite.Support",
+        "nugetId": "Xamarin.GooglePlayServices.TfLite.Support",
         "dependencyOnly": false
       },
       {
