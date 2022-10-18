@@ -66,10 +66,10 @@
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager.Api" Version="118.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager.V4.Impl" Version="118.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Tasks" Version="118.0.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.TFLite.GPU" Version="116.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.TFLite.Impl" Version="116.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.TFLite.Java" Version="116.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.TFLite.Support" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.TfLite.Gpu" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.TfLite.Impl" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.TfLite.Java" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.TfLite.Support" Version="116.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Vision" Version="120.1.3.7" />
     <PackageReference Update="Xamarin.GooglePlayServices.Vision.Common" Version="119.1.3.7" />
     <PackageReference Update="Xamarin.GooglePlayServices.Vision.Face.Contour.Internal" Version="116.1.0.7" />
