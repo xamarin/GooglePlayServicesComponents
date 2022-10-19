@@ -71,10 +71,10 @@
 |  64|com.google.android.gms:play-services-tagmanager-api                   |18.0.2              |Xamarin.GooglePlayServices.TagManager.Api                             |118.0.2             |
 |  65|com.google.android.gms:play-services-tagmanager-v4-impl               |18.0.2              |Xamarin.GooglePlayServices.TagManager.V4.Impl                         |118.0.2             |
 |  66|com.google.android.gms:play-services-tasks                            |18.0.2              |Xamarin.GooglePlayServices.Tasks                                      |118.0.2             |
-|  67|com.google.android.gms:play-services-tflite-gpu                       |16.0.0              |Xamarin.GooglePlayServices.TFLite.GPU                                 |116.0.0             |
-|  68|com.google.android.gms:play-services-tflite-impl                      |16.0.0              |Xamarin.GooglePlayServices.TFLite.Impl                                |116.0.0             |
-|  69|com.google.android.gms:play-services-tflite-java                      |16.0.0              |Xamarin.GooglePlayServices.TFLite.Java                                |116.0.0             |
-|  70|com.google.android.gms:play-services-tflite-support                   |16.0.0              |Xamarin.GooglePlayServices.TFLite.Support                             |116.0.0             |
+|  67|com.google.android.gms:play-services-tflite-gpu                       |16.0.0              |Xamarin.GooglePlayServices.TfLite.Gpu                                 |116.0.0             |
+|  68|com.google.android.gms:play-services-tflite-impl                      |16.0.0              |Xamarin.GooglePlayServices.TfLite.Impl                                |116.0.0             |
+|  69|com.google.android.gms:play-services-tflite-java                      |16.0.0              |Xamarin.GooglePlayServices.TfLite.Java                                |116.0.0             |
+|  70|com.google.android.gms:play-services-tflite-support                   |16.0.0              |Xamarin.GooglePlayServices.TfLite.Support                             |116.0.0             |
 |  71|com.google.android.gms:play-services-vision                           |20.1.3              |Xamarin.GooglePlayServices.Vision                                     |120.1.3.7           |
 |  72|com.google.android.gms:play-services-vision-common                    |19.1.3              |Xamarin.GooglePlayServices.Vision.Common                              |119.1.3.7           |
 |  73|com.google.android.gms:play-services-vision-face-contour-internal     |16.1.0              |Xamarin.GooglePlayServices.Vision.Face.Contour.Internal               |116.1.0.7           |
