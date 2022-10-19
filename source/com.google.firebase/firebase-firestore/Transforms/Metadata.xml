@@ -395,16 +395,55 @@
 
 
     <attr
-        path="/api/package[@name='com.google.firestore.v1']/interface[@name='RunAggregationQueryRequestOrBuilder']/method[@name='getQueryTypeCase' and count(parameter)=0]"
-        name="visibility"
+        path="/api/package[@name='com.google.firestore.v1']/interface[@name='RunAggregationQueryRequestOrBuilder']/method[@name='getConsistencySelectorCase' and count(parameter)=0]"
+        name="propertyName"
         >
-        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/class[@name='RunAggregationQueryRequest.Builder']/method[@name='getConsistencySelectorCase' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/interface[@name='RunAggregationQueryRequestOrBuilder']/method[@name='getQueryTypeCase' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/class[@name='RunAggregationQueryRequest.Builder']/method[@name='getQueryTypeCase' and count(parameter)=0]"
+        name="propertyName"
+        >
     </attr>
     <attr
         path="/api/package[@name='com.google.firestore.v1']/interface[@name='StructuredAggregationQueryOrBuilder']/method[@name='getQueryTypeCase' and count(parameter)=0]"
-        name="visibility"
+        name="propertyName"
         >
-        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/class[@name='StructuredAggregationQuery.Builder']/method[@name='getQueryTypeCase' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/interface[@name='StructuredAggregationQuery.AggregationOrBuilder']/method[@name='getOperatorCase' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/class[@name='StructuredAggregationQuery.Aggregation.Builder']/method[@name='getOperatorCase' and count(parameter)=0]"
+        name="propertyName"
+        >
     </attr>
 
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/class[@name='StructuredAggregationQuery.Aggregation.Builder']/method[@name='getCount' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/interface[@name='StructuredAggregationQuery.AggregationOrBuilder']/method[@name='getCount' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    
 </metadata>
