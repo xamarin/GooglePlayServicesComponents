@@ -28,16 +28,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "21.1.0",
-        "nugetVersion": "121.1.0",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "21.1.0",
-        "nugetVersion": "121.1.0",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -52,8 +52,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "21.1.0",
-        "nugetVersion": "121.1.0",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
@@ -68,16 +68,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-analytics",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1.2",
+        "version": "18.0.2",
+        "nugetVersion": "118.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Analytics",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-analytics-impl",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1.2",
+        "version": "18.0.2",
+        "nugetVersion": "118.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Analytics.Impl",
         "dependencyOnly": false
       },
@@ -108,8 +108,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-auth",
-        "version": "20.2.0",
-        "nugetVersion": "120.2.0.2",
+        "version": "20.3.0",
+        "nugetVersion": "120.3.0",
         "nugetId": "Xamarin.GooglePlayServices.Auth",
         "dependencyOnly": false
       },
@@ -124,8 +124,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-auth-base",
-        "version": "18.0.3",
-        "nugetVersion": "118.0.3.2",
+        "version": "18.0.5",
+        "nugetVersion": "118.0.5",
         "nugetId": "Xamarin.GooglePlayServices.Auth.Base",
         "dependencyOnly": false
       },
@@ -244,9 +244,17 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-games",
-        "version": "22.0.1",
-        "nugetVersion": "122.0.1.2",
+        "version": "23.0.0",
+        "nugetVersion": "123.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Games",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-games-v2",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.Games.V2",
         "dependencyOnly": false
       },
       {
@@ -308,48 +316,48 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement",
-        "version": "21.1.0",
-        "nugetVersion": "121.1.0",
+        "version": "21.1.1",
+        "nugetVersion": "121.1.1",
         "nugetId": "Xamarin.GooglePlayServices.Measurement",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-api",
-        "version": "21.1.0",
-        "nugetVersion": "121.1.0",
+        "version": "21.1.1",
+        "nugetVersion": "121.1.1",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
-        "version": "21.1.0",
-        "nugetVersion": "121.1.0",
+        "version": "21.1.1",
+        "nugetVersion": "121.1.1",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-impl",
-        "version": "21.1.0",
-        "nugetVersion": "121.1.0",
+        "version": "21.1.1",
+        "nugetVersion": "121.1.1",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Impl",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk",
-        "version": "21.1.0",
-        "nugetVersion": "121.1.0",
+        "version": "21.1.1",
+        "nugetVersion": "121.1.1",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk-api",
-        "version": "21.1.0",
-        "nugetVersion": "121.1.0",
+        "version": "21.1.1",
+        "nugetVersion": "121.1.1",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk.Api",
         "dependencyOnly": false
       },
@@ -388,16 +396,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-text-recognition",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1",
+        "version": "18.0.2",
+        "nugetVersion": "118.0.2",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-text-recognition-common",
-        "version": "17.1.0",
-        "nugetVersion": "117.1.0",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Common",
         "dependencyOnly": false
       },
@@ -516,24 +524,24 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tagmanager",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1.2",
+        "version": "18.0.2",
+        "nugetVersion": "118.0.2",
         "nugetId": "Xamarin.GooglePlayServices.TagManager",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tagmanager-api",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1.2",
+        "version": "18.0.2",
+        "nugetVersion": "118.0.2",
         "nugetId": "Xamarin.GooglePlayServices.TagManager.Api",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tagmanager-v4-impl",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1.2",
+        "version": "18.0.2",
+        "nugetVersion": "118.0.2",
         "nugetId": "Xamarin.GooglePlayServices.TagManager.V4.Impl",
         "dependencyOnly": false
       },
@@ -543,6 +551,38 @@
         "version": "18.0.2",
         "nugetVersion": "118.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Tasks",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-tflite-gpu",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.TfLite.Gpu",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-tflite-impl",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.TfLite.Impl",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-tflite-java",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.TfLite.Java",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-tflite-support",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.TfLite.Support",
         "dependencyOnly": false
       },
       {
@@ -596,8 +636,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-wearable",
-        "version": "17.1.0",
-        "nugetVersion": "117.1.0.7",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Wearable",
         "dependencyOnly": false
       },
@@ -1807,18 +1847,45 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0.2",
+        "version": "2.10.0",
+        "nugetVersion": "2.10.0",
         "nugetId": "Xamarin.TensorFlow.Lite",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
       },
       {
         "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-api",
+        "version": "2.10.0",
+        "nugetVersion": "2.10.0",
+        "nugetId": "Xamarin.TensorFlow.Lite.Api",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-gpu",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0.2",
+        "version": "2.10.0",
+        "nugetVersion": "2.10.0",
         "nugetId": "Xamarin.TensorFlow.Lite.Gpu",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-gpu-api",
+        "version": "2.10.0",
+        "nugetVersion": "2.10.0",
+        "nugetId": "Xamarin.TensorFlow.Lite.Gpu.Api",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-support-api",
+        "version": "0.4.2",
+        "nugetVersion": "0.4.2",
+        "nugetId": "Xamarin.TensorFlow.Lite.Support.Api",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
       },
@@ -2217,6 +2284,14 @@
         "version": "21.1.0",
         "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.checkerframework",
+        "artifactId": "checker-qual",
+        "version": "3.25.0",
+        "nugetVersion": "3.25.0",
+        "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "dependencyOnly": true
       }
     ],

@@ -451,4 +451,13 @@
         >
         InstallStateCode
     </attr>
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='EntityBuffer']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="final"
+        >
+        false
+    </attr>
+
+
 </metadata>
