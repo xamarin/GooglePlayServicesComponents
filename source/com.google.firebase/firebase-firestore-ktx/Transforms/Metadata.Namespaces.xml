@@ -1,10 +1,9 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='com.google.firebase.firestore.ktx']" 
         name="managedName"
         >
-        Package
+        Firebase.Firestore.Ktx
     </attr>
-    -->
+
 </metadata>

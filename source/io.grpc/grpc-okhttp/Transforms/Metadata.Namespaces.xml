@@ -17,8 +17,11 @@
         >
         Xamarin.Grpc.OkHttp.Internal.Framed
     </attr>
-
-    
-    
+    <attr 
+        path="/api/package[@name='io.grpc.okhttp.internal.proxy']" 
+        name="managedName"
+        >
+        Xamarin.Grpc.OkHttp.Internal.Proxy
+    </attr>
     
 </metadata>
