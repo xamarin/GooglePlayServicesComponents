@@ -9,13 +9,13 @@
         path="/api/package[@name='com.google.android.gms.tflite.gpu']" 
         name="managedName"
         >
-        Android.Gms.TfLite.TfLite.Gpu
+        Android.Gms.TfLite.Gpu
     </attr>
     <attr 
         path="/api/package[@name='com.google.android.gms.tflite.gpu.support']" 
         name="managedName"
         >
-        Android.Gms.TfLite.TfLite.Gpu.Support
+        Android.Gms.TfLite.Gpu.Support
     </attr>
     
 </metadata>
