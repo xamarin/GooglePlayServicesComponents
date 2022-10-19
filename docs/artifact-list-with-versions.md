@@ -174,7 +174,7 @@
 | 167|com.google.mlkit:smart-reply                                          |17.0.2              |Xamarin.Google.MLKit.SmartReply                                       |117.0.2             |
 | 168|com.google.mlkit:smart-reply-common                                   |16.0.0              |Xamarin.Google.MLKit.SmartReply.Common                                |116.0.0             |
 | 169|com.google.mlkit:translate                                            |17.0.1              |Xamarin.Google.MLKit.Translate                                        |117.0.1             |
-| 170|com.google.mlkit:vision-common                                        |17.2.0              |Xamarin.Google.MLKit.Vision.Common                                    |117.2.0             |
+| 170|com.google.mlkit:vision-common                                        |17.2.1              |Xamarin.Google.MLKit.Vision.Common                                    |117.2.1             |
 | 171|com.google.mlkit:vision-interfaces                                    |16.1.0              |Xamarin.Google.MLKit.Vision.Interfaces                                |116.1.0             |
 | 172|com.google.mlkit:vision-internal-vkp                                  |18.2.2              |Xamarin.Google.MLKit.Vision.Internal.Vkp                              |118.2.2.2           |
 | 173|com.google.android.odml:image                                         |1.0.0-beta1         |Xamarin.Google.Android.ODML.Image                                     |1.0.0.2-beta1       |
