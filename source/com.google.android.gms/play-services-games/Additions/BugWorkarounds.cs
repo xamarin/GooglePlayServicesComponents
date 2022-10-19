@@ -48,14 +48,6 @@ namespace Android.Gms.Games.Event
 
 namespace Android.Gms.Games 
 {
-    public partial class GamesClass
-    {
-        [Obsolete ("Use API instead")]
-        public static Android.Gms.Common.Apis.Api Api {
-            get { return GamesClass.API; }
-        }
-    }
-
 	internal static class FreezeMethodImplementor
 	{
 		internal static Java.Lang.Object Freeze (ref IntPtr id_freeze, IntPtr class_ref, IntPtr Handle)
