@@ -394,5 +394,17 @@
     </attr>
 
 
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/interface[@name='RunAggregationQueryRequestOrBuilder']/method[@name='getQueryTypeCase' and count(parameter)=0]"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firestore.v1']/interface[@name='StructuredAggregationQueryOrBuilder']/method[@name='getQueryTypeCase' and count(parameter)=0]"
+        name="visibility"
+        >
+        public
+    </attr>
 
 </metadata>
