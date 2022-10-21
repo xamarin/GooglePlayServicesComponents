@@ -544,6 +544,7 @@ Task ("spell-check")
                 "PlayIntegrity",
                 "TfLite",
                 "V2",
+                "DirectBoot",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 

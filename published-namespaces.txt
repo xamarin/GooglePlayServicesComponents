@@ -232,6 +232,7 @@ Firebase.AppCheck
 Firebase.AppCheck.Internal
 Firebase.AppCheck.Internal.Util
 Firebase.AppCheck.Interop
+Firebase.AppCheck.Ktx
 Firebase.AppCheck.PlayIntegrity
 Firebase.AppCheck.PlayIntegrity.Internal
 Firebase.AppCheck.SafetyNet
@@ -242,6 +243,7 @@ Firebase.AppIndexing.Internal
 Firebase.AppInvite
 Firebase.Auth
 Firebase.Auth.Internal
+Firebase.Auth.Ktx
 Firebase.Components
 Firebase.Crash
 Firebase.Crash.Component
@@ -258,6 +260,7 @@ Firebase.Crashlytics.Internal.Persistence
 Firebase.Crashlytics.Internal.Send
 Firebase.Crashlytics.Internal.Settings
 Firebase.Crashlytics.Internal.Stacktrace
+Firebase.Crashlytics.Ktx
 Firebase.Crashlytics.NDK
 Firebase.Database
 Firebase.Database.Android
@@ -273,6 +276,7 @@ Firebase.Database.Core.Utilities.Encoding
 Firebase.Database.Core.Utilities.Tuple
 Firebase.Database.Core.View
 Firebase.Database.Core.View.Filter
+Firebase.Database.Ktx
 Firebase.Database.Logging
 Firebase.Database.Snapshot
 Firebase.Database.Tubesock
@@ -280,6 +284,7 @@ Firebase.Database.Util
 Firebase.DataTransport
 Firebase.DynamicLinks
 Firebase.DynamicLinks.Internal
+Firebase.DynamicLinks.Ktx
 Firebase.DynamicLoading
 Firebase.Emulators
 Firebase.Encoders
@@ -292,6 +297,7 @@ Firebase.Firestore.Auth
 Firebase.Firestore.Bundle
 Firebase.Firestore.Core
 Firebase.Firestore.Index
+Firebase.Firestore.Ktx
 Firebase.Firestore.Local
 Firebase.Firestore.Model
 Firebase.Firestore.Model.Mutation
@@ -299,6 +305,7 @@ Firebase.Firestore.Proto
 Firebase.Firestore.Remote
 Firebase.Firestore.Util
 Firebase.Functions
+Firebase.Functions.Ktx
 Firebase.HeartBeatInfo
 Firebase.Iid
 Firebase.Iid.Internal
@@ -316,17 +323,20 @@ Firebase.InAppMessaging.Display.Internal.Injection.Modules
 Firebase.InAppMessaging.Display.Internal.Injection.Scopes
 Firebase.InAppMessaging.Display.Internal.Layout
 Firebase.InAppMessaging.Display.Internal.Layout.Util
+Firebase.InAppMessaging.Display.Ktx
 Firebase.InAppMessaging.Internal
 Firebase.InAppMessaging.Internal.Injection.Components
 Firebase.InAppMessaging.Internal.Injection.Modules
 Firebase.InAppMessaging.Internal.Injection.Qualifiers
 Firebase.InAppMessaging.Internal.Injection.Scopes
 Firebase.InAppMessaging.Internal.Time
+Firebase.InAppMessaging.Ktx
 Firebase.InAppMessaging.Model
 Firebase.Inject
 Firebase.Installations
 Firebase.Installations.Internal
 Firebase.Installations.InterOp
+Firebase.Installations.Ktx
 Firebase.Installations.Local
 Firebase.Installations.Remote
 Firebase.Installations.Time
@@ -334,6 +344,9 @@ Firebase.Internal
 Firebase.Internal.Api
 Firebase.Ktx
 Firebase.Messaging
+Firebase.Messaging.DirectBoot
+Firebase.Messaging.DirectBoot.Threads
+Firebase.Messaging.Ktx
 Firebase.Messaging.Reporting
 Firebase.Messaging.Threads
 Firebase.ML.Common
@@ -368,6 +381,7 @@ Firebase.Perf.Application
 Firebase.Perf.Config
 Firebase.Perf.Injection.Components
 Firebase.Perf.Injection.Modules
+Firebase.Perf.Ktx
 Firebase.Perf.Logging
 Firebase.Perf.Metrics
 Firebase.Perf.Metrics.Resource
@@ -384,8 +398,10 @@ Firebase.ProtoliteWrapper
 Firebase.Provider
 Firebase.RemoteConfig
 Firebase.RemoteConfig.Internal
+Firebase.RemoteConfig.Ktx
 Firebase.Storage
 Firebase.Storage.Internal
+Firebase.Storage.Ktx
 Firebase.Storage.Network
 Firebase.Storage.Network.Connection
 Firebase.Tracing
@@ -608,6 +624,7 @@ Xamarin.Grpc.Core.Util
 Xamarin.Grpc.OkHttp
 Xamarin.Grpc.OkHttp.Internal
 Xamarin.Grpc.OkHttp.Internal.Framed
+Xamarin.Grpc.OkHttp.Internal.Proxy
 Xamarin.Grpc.Protobuf.Lite
 Xamarin.Grpc.Stub
 Xamarin.Grpc.Stub.Annotations
