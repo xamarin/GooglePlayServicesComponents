@@ -2,9 +2,10 @@
 using System.Threading.Tasks;
 using Android.Gms.Extensions;
 
-namespace Android.Gms.Location
+namespace Android.Gms.Location 
 {
-	public partial class FusedLocationProviderClient
+	//[Register ("com/google/android/gms/location/FusedLocationProviderClient", DoNotGenerateAcw=true)]
+	public partial class FusedLocationProviderClient // : Java.Lang.Object {
 	{
         [Obsolete]
         public Android.Gms.Tasks.Task LastLocation { get { return GetLastLocation (); } }
