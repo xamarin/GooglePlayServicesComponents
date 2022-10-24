@@ -13,9 +13,6 @@
     
     <!-- .NET 6+ packages support back to API-21 -->
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
-    
-    <!-- Hold off on JavaTypeSystem until d17-1 for needed bugfixes -->
-    <_AndroidUseJavaLegacyResolver>true</_AndroidUseJavaLegacyResolver>
 
     <!-- Mark .NET6+ packages as supporting trimming -->
     <IsTrimmable>true</IsTrimmable>

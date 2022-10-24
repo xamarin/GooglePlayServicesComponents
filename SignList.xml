@@ -33,6 +33,7 @@
     <FirstParty Include="Xamarin.GoogleAndroid.Libraries.*.dll" />
     <FirstParty Include="Xamarin.Android.Volley.dll" />
     <FirstParty Include="Xamarin.Android.Volley.*.dll" />
+    <FirstParty Include="org.tensorflow.*.dll" />    
   </ItemGroup>
 
   <ItemGroup>
