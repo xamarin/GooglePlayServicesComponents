@@ -2002,10 +2002,55 @@
       },
       {
         "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-select-tf-ops",
+        "version": "2.10.0",
+        "nugetVersion": "2.10.0",
+        "nugetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-android",
+        "version": "1.13.1",
+        "nugetVersion": "1.13.1",
+        "nugetId": "Xamarin.TensorFlow.Android",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-support",
+        "version": "0.4.2",
+        "nugetVersion": "0.4.2",
+        "nugetId": "Xamarin.TensorFlow.Lite.Support",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-support-api",
         "version": "0.4.2",
         "nugetVersion": "0.4.2",
         "nugetId": "Xamarin.TensorFlow.Lite.Support.Api",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-metadata",
+        "version": "0.4.2",
+        "nugetVersion": "0.4.2",
+        "nugetId": "Xamarin.TensorFlow.Lite.Metadata",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-base",
+        "version": "0.4.2",
+        "nugetVersion": "0.4.2",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Base",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
       },
