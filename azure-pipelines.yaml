@@ -40,7 +40,7 @@ jobs:
     parameters:
       timeoutInMinutes: 240
       areaPath: 'DevDiv\Xamarin SDK\Android'
-      macosImage: macOS-12                                    # the name of the macOS VM image (BigSur)
+      macosImage: internal-macos12                            # macOS VM image name, must be "internal" locked down image
       windowsAgentPoolName: android-win-2022
       xcode: $(XcodeVersion)
       dotnet: $(DotNetVersion)                                # the version of .NET Core to use
@@ -65,7 +65,8 @@ jobs:
 
       preBuildSteps:
         - pwsh: |
-            dotnet tool update --global Cake.Tool
+            dotnet tool uninstall --global Cake.Tool
+            dotnet tool install --global Cake.Tool --version 2.2.0
             dotnet tool update --global boots --version $(BootsVersion)
             boots $(LegacyXamarinAndroidPkg)
             sudo xcode-select -s "/Applications/Xcode_$(XcodeVersion).app"
@@ -76,6 +77,10 @@ jobs:
             dotnet tool update --global boots --version $(BootsVersion)
             boots --url $(LegacyXamarinAndroidVsix) --downgrade-first
           condition: eq(variables['System.JobName'], 'windows')
+         
+      postBuildSteps:
+        - pwsh: |
+            dotnet cake utilities.cake -t=verify-namespace-file
       tools:
         - 'xamarin.androidbinderator.tool': '$(AndroidBinderatorVersion)'
         - 'xamarin.androidx.migration.tool': '$(AndroidXMigrationVersion)'
