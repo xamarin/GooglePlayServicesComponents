@@ -1736,6 +1736,15 @@
         "templateSet": "zxing"
       },
       {
+        "groupId": "com.google.flatbuffers",
+        "artifactId": "flatbuffers-java",
+        "version": "1.12.0",
+        "nugetVersion": "1.12.0",
+        "nugetId": "Xamarin.Google.FlatBuffers.Java",
+        "dependencyOnly": false,
+        "templateSet": "flatbuffers"
+      },
+      {
         "groupId": "com.google.protobuf",
         "artifactId": "protobuf-javalite",
         "version": "3.21.1",
@@ -2767,6 +2776,20 @@
         "templates": [
           {
             "templateFile": "templates/zxing/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "flatbuffers",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/flatbuffers/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
