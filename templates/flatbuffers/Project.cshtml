@@ -32,26 +32,29 @@
     @foreach (var art in @Model.MavenArtifacts) 
     {
       <PackageId>@Model.NuGetPackageId</PackageId>
-      <RootNamespace>Google.ZXing</RootNamespace>
-      <AssemblyName>Google.ZXing.Core</AssemblyName>
+      <RootNamespace>Xamarin.Google.FlatBuffers.Java</RootNamespace>
+      <AssemblyName>Xamarin.Google.FlatBuffers.Java</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Xamarin.Google.ZXing.Core":
-            <PackageId>Xamarin.Google.ZXing.Core</PackageId>
-            <Title>Google ZXing (Core)</Title>
+          case "Xamarin.Google.FlatBuffers.Java":
+            <PackageId>Xamarin.Google.FlatBuffers.Java</PackageId>
+            <Title>Xamarin Google FlatBuffers (Java)</Title>
             <Summary>
-              .NET for Android (formerly Xamarin.Android) bindings Google ZXing (Core) bindings
+              .NET for Android (formerly Xamarin.Android) bindings Google FlatBuffers (Java) bindings
             </Summary>
             <Description>
-              .NET for Android (formerly Xamarin.Android) bindings 
-              ZXing ("zebra crossing") is an open-source, multi-format 1D/2D barcode image processing library. 
-              Core barcode encoding/decoding library.
+              .NET for Android (formerly Xamarin.Android) bindings for Google FlatBuffers (Java) library.
+              FlatBuffers (Java) is a cross platform serialization library architected for maximum memory 
+              efficiency. It allows you to directly access serialized data without parsing/unpacking it first, 
+              while still having great forwards/backwards compatibility.
             </Description>
             <PackageDescription>
-              ZXing ("zebra crossing") is an open-source, multi-format 1D/2D barcode image processing library. 
-              Core barcode encoding/decoding library.
+              .NET for Android (formerly Xamarin.Android) bindings for Google FlatBuffers (Java) library.
+              FlatBuffers (Java) is a cross platform serialization library architected for maximum memory 
+              efficiency. It allows you to directly access serialized data without parsing/unpacking it first, 
+              while still having great forwards/backwards compatibility.
             </PackageDescription>
-            <PackageTags>.NET dotnet google zxing zebra crossing bindings 1d 2d barcode qrcode scanning xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
+            <PackageTags>.NET dotnet google FlatBuffers (Java) serialization xamarin android monoandroid monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
             break; 
           default:
             break; 

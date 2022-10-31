@@ -1,15 +1,15 @@
 THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 Do not translate or localize
 
-Xamarin Components for zxing incorporates 
+Xamarin Components for Google FlatBuffers (Java) 
 third party material from the projects listed below. The original copyright 
 notice and the license under which Microsoft received such third party 
 material are set forth below.  Microsoft reserves all other rights not 
 expressly granted, whether by implication, estoppel or otherwise.
 
 ########################################
-# zxing
-# https://github.com/zxing/zxing
+# flatbuffers
+# https://github.com/google/flatbuffers
 ########################################
 
                                  Apache License
@@ -259,8 +259,8 @@ use in the design, construction, operation or maintenance of any
 nuclear facility.
 
 ########################################
-# Multiple files within zxing
-# https://github.com/zxing/zxing
+# Multiple files within flatbuffers
+# https://github.com/google/flatbuffers
 ########################################
 
 Copyright 2006-2007 Jeremias Maerki.
@@ -278,5 +278,5 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ########################################
-# End - Multiple files within GoogleGson
+# End - Multiple files within flatbuffers
 ########################################
