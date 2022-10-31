@@ -96,6 +96,19 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "play-services-appindex",
+          "groupId": "com.google.android.gms",
+          "version": "16.1.0",
+          "nuGetId": "Xamarin.GooglePlayServices.AppIndex",
+          "nuGetVersion": "116.1.0"
+        }
+      },
+      "license": "Android Software Development Kit License"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "play-services-appinvite",
           "groupId": "com.google.android.gms",
           "version": "18.0.0",
