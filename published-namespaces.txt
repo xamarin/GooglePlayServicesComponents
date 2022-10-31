@@ -473,6 +473,7 @@ Microsoft.CodeAnalysis
 Square.JavaPoet
 Square.OkHttp
 Square.OkHttp3
+Square.OkHttp3.Logging
 Square.OkIO
 Square.Picasso
 Square.Retrofit
