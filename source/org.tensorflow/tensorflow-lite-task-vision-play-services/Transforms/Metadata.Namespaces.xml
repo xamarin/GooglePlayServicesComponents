@@ -4,7 +4,7 @@
         path="/api/package[@name='package']" 
         name="managedName"
         >
-        Package
+        Xamarin.TensorFlow.Lite
     </attr>
     -->
 </metadata>
