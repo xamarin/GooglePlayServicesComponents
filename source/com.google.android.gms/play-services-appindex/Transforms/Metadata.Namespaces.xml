@@ -21,6 +21,6 @@
         path="/api/package[@name='com.google.firebase.appindexing.internal']" 
         name="managedName"
         >
-        Firebase.AppIndexing.internal
+        Firebase.AppIndexing.Internal
     </attr>
 </metadata>
