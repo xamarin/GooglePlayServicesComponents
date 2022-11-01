@@ -1,4 +1,7 @@
 Android.Annotation
+Android.BillingClient
+Android.BillingClient.Api
+Android.BillingClient.Ktx
 Android.Gms.Actions
 Android.Gms.Ads
 Android.Gms.Ads.AdManager

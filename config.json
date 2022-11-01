@@ -1602,6 +1602,22 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "com.android.billingclient",
+        "artifactId": "billing",
+        "version": "4.0.0",
+        "nugetVersion": "4.0.0",
+        "nugetId": "Xamarin.Android.Google.BillingClient",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.android.billingclient",
+        "artifactId": "billing-ktx",
+        "version": "4.0.0",
+        "nugetVersion": "4.0.0",
+        "nugetId": "Xamarin.Android.Google.BillingClient.Ktx",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "com.android.volley",
         "artifactId": "volley",
         "version": "1.2.1",
