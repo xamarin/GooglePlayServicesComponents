@@ -545,6 +545,7 @@ Task ("spell-check")
                 "TfLite",
                 "V2",
                 "DirectBoot",
+                "AppIndex",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
@@ -1095,7 +1096,8 @@ Task ("read-analysis-files")
     .IsDependentOn ("list-artifacts")
     .IsDependentOn ("generate-markdown-publish-log")
     .IsDependentOn ("tools-executive-order")
-    .IsDependentOn ("generate-component-governance")    
+    .IsDependentOn ("generate-component-governance")
+    .IsDependentOn ("generate-namespace-file")
     .Does
     (
         () =>
