@@ -1096,6 +1096,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("generate-markdown-publish-log")
     .IsDependentOn ("tools-executive-order")
     .IsDependentOn ("generate-component-governance")    
+    .IsDependentOn ("generate-namespace-file")
     .Does
     (
         () =>
