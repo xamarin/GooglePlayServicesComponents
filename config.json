@@ -1829,6 +1829,42 @@
         "templateSet": "squareup-retrofit"
       },
       {
+        "groupId": "com.squareup.retrofit2",
+        "artifactId": "adapter-rxjava2",
+        "version": "2.9.0",
+        "nugetVersion": "2.9.0",
+        "nugetId": "Square.Retrofit2.AdapterRxJava2",
+        "dependencyOnly": false,
+        "templateSet": "squareup-retrofit2"
+      },
+      {
+        "groupId": "com.squareup.retrofit2",
+        "artifactId": "converter-gson",
+        "version": "2.9.0",
+        "nugetVersion": "2.9.0",
+        "nugetId": "Square.Retrofit2.ConverterGson",
+        "dependencyOnly": false,
+        "templateSet": "squareup-retrofit2"
+      },
+      {
+        "groupId": "com.squareup.retrofit2",
+        "artifactId": "converter-scalars",
+        "version": "2.9.0",
+        "nugetVersion": "2.9.0",
+        "nugetId": "Square.Retrofit2.ConverterScalars",
+        "dependencyOnly": false,
+        "templateSet": "squareup-retrofit2"
+      },
+      {
+        "groupId": "com.squareup.retrofit2",
+        "artifactId": "retrofit",
+        "version": "2.9.0",
+        "nugetVersion": "2.9.0",
+        "nugetId": "Square.Retrofit2",
+        "dependencyOnly": false,
+        "templateSet": "squareup-retrofit2"
+      },
+      {
         "groupId": "com.squareup",
         "artifactId": "javapoet",
         "version": "1.13.0",
@@ -2412,6 +2448,14 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "org.reactivestreams",
+        "artifactId": "reactive-streams",
+        "version": "1.0.4",
+        "nugetVersion": "1.0.4.2",
+        "nugetId": "Xamarin.Android.ReactiveStreams",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "com.google.auto.value",
         "artifactId": "auto-value-annotations",
         "version": "1.6.6",
@@ -2714,6 +2758,20 @@
         "templates": [
           {
             "templateFile": "templates/squareup-retrofit/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "squareup-retrofit2",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/squareup-retrofit2/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
