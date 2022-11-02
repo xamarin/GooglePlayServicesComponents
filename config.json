@@ -83,6 +83,14 @@
       },
       {
         "groupId": "com.google.android.gms",
+        "artifactId": "play-services-appindex",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
+        "nugetId": "Xamarin.GooglePlayServices.AppIndex",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
         "artifactId": "play-services-appinvite",
         "version": "18.0.0",
         "nugetVersion": "118.0.0.7",
