@@ -5,4 +5,16 @@
         >
         Xamarin.TensorFlow
     </attr>
+    <attr 
+        path="/api/package[@name='org.tensorflow.contrib.android']" 
+        name="managedName"
+        >
+        Xamarin.TensorFlow.Contrib.Android
+    </attr>
+    <attr 
+        path="/api/package[@name='org.tensorflow.types']" 
+        name="managedName"
+        >
+        Xamarin.TensorFlow.Types        
+    </attr>
 </metadata>
