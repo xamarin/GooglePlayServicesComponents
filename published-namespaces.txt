@@ -548,6 +548,7 @@ Xamarin.Google.Android.Play.Core.SplitInstall.Testing
 Xamarin.Google.Android.Play.Core.Tasks
 Xamarin.Google.ErrorProne.Annotations
 Xamarin.Google.ErrorProne.Annotations.Concurrent
+Xamarin.Google.FlatBuffers
 Xamarin.Google.MLKit.Barhopper
 Xamarin.Google.MLKit.Common
 Xamarin.Google.MLKit.Common.Internal
@@ -648,10 +649,13 @@ Xamarin.Io.OpenCensus.Trace.Samplers
 Xamarin.Io.OpenCensus.Trace.Unsafe
 Xamarin.Io.Perfmark
 Xamarin.Protobuf.Lite
+Xamarin.TensorFlow
+Xamarin.TensorFlow.Contrib.Android
 Xamarin.TensorFlow.Lite
 Xamarin.TensorFlow.Lite.Annotations
 Xamarin.TensorFlow.Lite.GPU
 Xamarin.TensorFlow.Lite.Nnapi
+Xamarin.TensorFlow.Lite.Schema
 Xamarin.TensorFlow.Lite.Support.Audio
 Xamarin.TensorFlow.Lite.Support.Common
 Xamarin.TensorFlow.Lite.Support.Common.Internal
@@ -660,5 +664,12 @@ Xamarin.TensorFlow.Lite.Support.Image
 Xamarin.TensorFlow.Lite.Support.Image.Ops
 Xamarin.TensorFlow.Lite.Support.Label
 Xamarin.TensorFlow.Lite.Support.Label.Ops
+Xamarin.TensorFlow.Lite.Support.Metadata
+Xamarin.TensorFlow.Lite.Support.Metadata.Schema
 Xamarin.TensorFlow.Lite.Support.Model
 Xamarin.TensorFlow.Lite.Support.TensorBuffer
+Xamarin.TensorFlow.Lite.Task.Core
+Xamarin.TensorFlow.Lite.Task.Core.Annotations
+Xamarin.TensorFlow.Lite.Task.Core.Vision
+Xamarin.TensorFlow.Lite.Task.Processor
+Xamarin.TensorFlow.Types
