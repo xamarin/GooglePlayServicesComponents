@@ -19,6 +19,8 @@ Android.Gms.Ads.RewardedInterstitial
 Android.Gms.Ads.Search
 Android.Gms.Analytics
 Android.Gms.Analytics.Ecommerce
+Android.Gms.AppIndex
+Android.Gms.AppIndex.Builders
 Android.Gms.AppIndexing
 Android.Gms.AppInvite
 Android.Gms.AppSet
