@@ -195,7 +195,7 @@ Task("tools-update")
     );
 
 Task("binderate")
-	.IsDependentOn("javadocs")
+	//.IsDependentOn("javadocs")
 	.IsDependentOn("binderate-config-verify")
 	.Does(() =>
 {
