@@ -217,7 +217,7 @@
 | 210|com.google.dagger:dagger                                              |2.41                |Xamarin.Google.Dagger                                                 |2.41.0.2            |
 | 211|com.google.errorprone:error_prone_annotations                         |2.14.0              |Xamarin.Google.ErrorProne.Annotations                                 |2.14.0              |
 | 212|com.google.zxing:core                                                 |3.5.0               |Xamarin.Google.ZXing.Core                                             |3.5.0.2             |
-| 213|com.google.protobuf:protobuf-javalite                                 |3.21.1              |Xamarin.Protobuf.JavaLite                                             |3.21.1              |
+| 213|com.google.protobuf:protobuf-javalite                                 |3.21.9              |Xamarin.Protobuf.JavaLite                                             |3.21.9              |
 | 214|com.google.protobuf:protobuf-lite                                     |3.0.1               |Xamarin.Protobuf.Lite                                                 |3.0.1.6             |
 | 215|com.squareup.okhttp:okhttp                                            |2.7.5               |Square.OkHttp                                                         |2.7.5.6             |
 | 216|com.squareup.okhttp3:okhttp                                           |4.9.3               |Square.OkHttp3                                                        |4.9.3.2             |
