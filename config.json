@@ -1755,8 +1755,8 @@
       {
         "groupId": "com.google.protobuf",
         "artifactId": "protobuf-javalite",
-        "version": "3.21.1",
-        "nugetVersion": "3.21.1",
+        "version": "3.21.9",
+        "nugetVersion": "3.21.9",
         "nugetId": "Xamarin.Protobuf.JavaLite",
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth",
