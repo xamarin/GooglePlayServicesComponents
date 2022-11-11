@@ -545,6 +545,9 @@ Task ("spell-check")
                 "TfLite",
                 "V2",
                 "DirectBoot",
+                "FlatBuffers",
+                "TF",
+                "Metadata",
                 "AppIndex",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
