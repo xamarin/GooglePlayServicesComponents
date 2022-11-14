@@ -54,9 +54,7 @@
     <Reference Include="Java.Interop" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" >
-      <Version>0.11.3</Version>
-    </PackageReference>
+    <PackageReference Include="Xamarin.Build.Download" />
     <PackageReference Include="Xamarin.Firebase.Auth" />
     <PackageReference Include="Xamarin.Firebase.Storage" />        
     <PackageReference Include="Xamarin.AndroidX.Migration">
