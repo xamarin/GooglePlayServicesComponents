@@ -39,7 +39,7 @@ jobs:
   - template: .ci/build.yml@components
     parameters:
       timeoutInMinutes: 240
-      areaPath: 'DevDiv\Xamarin SDK\Android'
+      areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
       macosImage: internal-macos12                            # macOS VM image name, must be "internal" locked down image
       windowsAgentPoolName: android-win-2022
       xcode: $(XcodeVersion)
