@@ -1,0 +1,8 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.flatbuffers']" 
+        name="managedName"
+        >
+        Xamarin.Google.FlatBuffers
+    </attr>
+</metadata>
