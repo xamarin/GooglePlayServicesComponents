@@ -1,46 +1,23 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <ItemGroup>
-    <FirstParty Include="Xamarin.GooglePlayServices.*.dll" />
-    <FirstParty Include="Xamarin.Firebase.*.dll" />
-    <FirstParty Include="Xamarin.Google.MLKit.*.dll" />
-    <FirstParty Include="Xamarin.Google.Android.Play.*.dll" />
-    <FirstParty Include="Xamarin.Chromium.CroNet.*.dll" />
-    <FirstParty Include="Xamarin.TensorFlow.Lite*.dll" />
-    <FirstParty Include="Xamarin.Google.Dagger*.dll" />
-    <FirstParty Include="Xamarin.Android.Glide.dll" />
-    <FirstParty Include="Xamarin.Android.Glide.*.dll" />
+    <!-- Automatically sign all "Xamarin." assemblies, which all packages *should* use -->
+    <FirstParty Include="Xamarin.*.dll" />
+    
+    <!-- Other names shouldn't be used, but we have to support some historical mistakes -->
     <FirstParty Include="Jsr305Binding.dll" />
-    <FirstParty Include="disklrucache.jar" />
-    <FirstParty Include="annotations.jar" />
-    <FirstParty Include="Xamarin.JavaX.Inject.dll" />
-    <FirstParty Include="Xamarin.Google.UserMessagingPlatform.dll" />
-    <FirstParty Include="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations.dll" />
-    <FirstParty Include="Xamarin.Google.Android.DataTransport.TransportApi.dll" />
-    <FirstParty Include="Xamarin.Google.Android.DataTransport.TransportBackendCct.dll" />
-    <FirstParty Include="Xamarin.Google.Android.DataTransport.TransportRuntime.dll" />
-    <FirstParty Include="Xamarin.Google.ErrorProne.Annotations.dll" />
-    <FirstParty Include="Xamarin.Io.OpenCensus.OpenCensusApi.dll" />
-    <FirstParty Include="Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics.dll" />
-    <FirstParty Include="Xamarin.Io.PerfMark.PerfMarkApi.dll" />
-    <FirstParty Include="Xamarin.Protobuf.Lite.dll" />
-    <FirstParty Include="Xamarin.Protobuf.JavaLite.dll" />
-    <FirstParty Include="Xamarin.GoogleAndroid.Annotations.dll" />
     <FirstParty Include="Square.*.dll" />
-    <FirstParty Include="Xamarin.Grpc.*.dll" />
-    <FirstParty Include="Xamarin.Google.Android.ODML.*.dll" />
     <FirstParty Include="Google.ZXing.*.dll" />
-    <FirstParty Include="Xamarin.GoogleAndroid.Libraries.*.dll" />
-    <FirstParty Include="Xamarin.Android.Volley.dll" />
-    <FirstParty Include="Xamarin.Android.Volley.*.dll" />
     <FirstParty Include="org.tensorflow.*.dll" />
-    <FirstParty Include="Xamarin.Google.FlatBuffers.*.dll" />
   </ItemGroup>
 
   <ItemGroup>
     <ThirdParty Include="ILRepack.dll" />
     <ThirdParty Include="protobuf-net.dll" />
     <ThirdParty Include="Newtonsoft.Json.dll" />
+    
+    <ThirdParty Include="disklrucache.jar" />
+    <ThirdParty Include="annotations.jar" />
   </ItemGroup>
 
   <ItemGroup>
