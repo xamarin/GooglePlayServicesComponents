@@ -1,4 +1,7 @@
 Android.Annotation
+Android.BillingClient
+Android.BillingClient.Api
+Android.BillingClient.Ktx
 Android.Gms.Actions
 Android.Gms.Ads
 Android.Gms.Ads.AdManager
@@ -470,6 +473,7 @@ Javax.Annotation.Meta
 JavaX.Inject
 JWT
 Microsoft.CodeAnalysis
+Retrofit2.Internal
 Square.JavaPoet
 Square.OkHttp
 Square.OkHttp3
@@ -483,6 +487,11 @@ Square.Retrofit.Client
 Square.Retrofit.Converter
 Square.Retrofit.Http
 Square.Retrofit.Mime
+Square.Retrofit2
+Square.Retrofit2.Http
+Square.Retrofit2.Adapter.RxJava2
+Square.Retrofit2.Converter.Gson
+Square.Retrofit2.Converter.Scalars
 System.Runtime.CompilerServices
 System.Runtime.Versioning
 Volley
