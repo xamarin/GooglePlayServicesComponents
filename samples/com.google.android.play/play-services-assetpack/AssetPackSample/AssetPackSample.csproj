@@ -110,7 +110,7 @@
     <PackageReference Include="Xamarin.Google.Android.Material" Version="1.6.1.1" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="Xamarin.Build.Download">
-      <Version>0.11.3</Version>
+      <Version>0.11.4</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Base" />
     <PackageReference Include="Xamarin.Google.Android.Play.Core" /> 
