@@ -621,6 +621,15 @@ Task("samples-directory-build-targets")
 				element_pr.Attributes.Append(attr_version);
 			}
 
+			XmlElement xbd_pr = doc.CreateElement( string.Empty, "PackageReference", string.Empty );
+			element_ig.AppendChild(xbd_pr);
+			XmlAttribute xbd_attr_update = doc.CreateAttribute("Update");
+			xbd_attr_update.Value = "Xamarin.Build.Download";
+			xbd_pr.Attributes.Append(xbd_attr_update);
+			XmlAttribute xbd_attr_version = doc.CreateAttribute("Version");
+			xbd_attr_version.Value = "0.11.4";
+			xbd_pr.Attributes.Append(xbd_attr_version);
+
 			doc.Save( System.IO.Path.Combine("samples", "Directory.Build.targets" ));
 
 			return;

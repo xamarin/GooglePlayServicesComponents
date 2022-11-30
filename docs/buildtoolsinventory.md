@@ -6,7 +6,7 @@
 {
     "sdk": 
     {
-        "version": "6.0.401",
+        "version": "6.0.402",
         "rollForward": "latestMinor"
     },
     "msbuild-sdks": 
@@ -19,5 +19,5 @@
 }
 
 ```
-version6.0.401
+version6.0.402
 rollForwardlatestMinor
