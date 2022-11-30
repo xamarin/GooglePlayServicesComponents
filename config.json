@@ -1800,6 +1800,15 @@
       },
       {
         "groupId": "com.squareup.okhttp3",
+        "artifactId": "logging-interceptor",
+        "version": "4.4.1",
+        "nugetVersion": "4.4.1",
+        "nugetId": "Square.OkHttp3.LoggingInterceptor",
+        "dependencyOnly": false,
+        "templateSet": "squareup-okhttp3"
+      },
+      {
+        "groupId": "com.squareup.okhttp3",
         "artifactId": "okhttp",
         "version": "4.9.3",
         "nugetVersion": "4.9.3.2",
