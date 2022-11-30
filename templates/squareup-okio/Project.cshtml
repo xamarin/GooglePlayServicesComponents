@@ -37,10 +37,17 @@
       switch(@Model.NuGetPackageId)
       {
           case "Square.OkIO":
-            <Title>OkIO bindings for Xamarin.Android</Title>
-            <Summary>A modern I/O API for Java.</Summary>
-            <Description>OkIO is a new library that complements Java.IO and Java.Nio to make it much easier to access, store, and process your data.</Description>
-            <PackageTags>okio square square.okio xamarin android monodroid</PackageTags>
+            <Title>OkIO bindings for .NET for Android (formerly Xamarin.Android)</Title>
+            <Summary>
+              A modern I/O API for Java.
+            </Summary>
+            <Description>
+              OkIO is a new library that complements Java.IO and Java.Nio to make it much easier to access, store, and process your data.
+            </Description>
+            <PackageDescription>
+              OkIO is a new library that complements Java.IO and Java.Nio to make it much easier to access, store, and process your data.
+            </PackageDescription>
+            <PackageTags>.NET dotnet okio square square.okio xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
             break; 
           default:
             break; 

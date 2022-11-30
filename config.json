@@ -83,6 +83,14 @@
       },
       {
         "groupId": "com.google.android.gms",
+        "artifactId": "play-services-appindex",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
+        "nugetId": "Xamarin.GooglePlayServices.AppIndex",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
         "artifactId": "play-services-appinvite",
         "version": "18.0.0",
         "nugetVersion": "118.0.0.7",
@@ -677,7 +685,7 @@
         "groupId": "com.google.android.play",
         "artifactId": "core",
         "version": "1.10.3",
-        "nugetVersion": "1.10.3.2",
+        "nugetVersion": "1.10.3.3",
         "nugetId": "Xamarin.Google.Android.Play.Core",
         "dependencyOnly": false
       },
@@ -1586,6 +1594,22 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "com.android.billingclient",
+        "artifactId": "billing",
+        "version": "4.0.0",
+        "nugetVersion": "4.0.0",
+        "nugetId": "Xamarin.Android.Google.BillingClient",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.android.billingclient",
+        "artifactId": "billing-ktx",
+        "version": "4.0.0",
+        "nugetVersion": "4.0.0",
+        "nugetId": "Xamarin.Android.Google.BillingClient.Ktx",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "com.android.volley",
         "artifactId": "volley",
         "version": "1.2.1",
@@ -1728,10 +1752,19 @@
         "templateSet": "zxing"
       },
       {
+        "groupId": "com.google.flatbuffers",
+        "artifactId": "flatbuffers-java",
+        "version": "1.12.0",
+        "nugetVersion": "1.12.0",
+        "nugetId": "Xamarin.Google.FlatBuffers.Java",
+        "dependencyOnly": false,
+        "templateSet": "flatbuffers"
+      },
+      {
         "groupId": "com.google.protobuf",
         "artifactId": "protobuf-javalite",
-        "version": "3.21.1",
-        "nugetVersion": "3.21.1",
+        "version": "3.21.9",
+        "nugetVersion": "3.21.9",
         "nugetId": "Xamarin.Protobuf.JavaLite",
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth",
@@ -1756,6 +1789,15 @@
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "com.squareup.okio.okio,com.google.android.android",
         "templateSet": "squareup-okhttp"
+      },
+      {
+        "groupId": "com.squareup.okhttp3",
+        "artifactId": "logging-interceptor",
+        "version": "4.4.1",
+        "nugetVersion": "4.4.1",
+        "nugetId": "Square.OkHttp3.LoggingInterceptor",
+        "dependencyOnly": false,
+        "templateSet": "squareup-okhttp3"
       },
       {
         "groupId": "com.squareup.okhttp3",
@@ -1802,6 +1844,42 @@
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "com.squareup.okhttp.okhttp,com.google.code.gson.gson,com.google.android.android,io.reactivex.rxjava,com.google.appengine.appengine-api-1.0-sdk",
         "templateSet": "squareup-retrofit"
+      },
+      {
+        "groupId": "com.squareup.retrofit2",
+        "artifactId": "adapter-rxjava2",
+        "version": "2.9.0",
+        "nugetVersion": "2.9.0",
+        "nugetId": "Square.Retrofit2.AdapterRxJava2",
+        "dependencyOnly": false,
+        "templateSet": "squareup-retrofit2"
+      },
+      {
+        "groupId": "com.squareup.retrofit2",
+        "artifactId": "converter-gson",
+        "version": "2.9.0",
+        "nugetVersion": "2.9.0",
+        "nugetId": "Square.Retrofit2.ConverterGson",
+        "dependencyOnly": false,
+        "templateSet": "squareup-retrofit2"
+      },
+      {
+        "groupId": "com.squareup.retrofit2",
+        "artifactId": "converter-scalars",
+        "version": "2.9.0",
+        "nugetVersion": "2.9.0",
+        "nugetId": "Square.Retrofit2.ConverterScalars",
+        "dependencyOnly": false,
+        "templateSet": "squareup-retrofit2"
+      },
+      {
+        "groupId": "com.squareup.retrofit2",
+        "artifactId": "retrofit",
+        "version": "2.9.0",
+        "nugetVersion": "2.9.0",
+        "nugetId": "Square.Retrofit2",
+        "dependencyOnly": false,
+        "templateSet": "squareup-retrofit2"
       },
       {
         "groupId": "com.squareup",
@@ -1994,10 +2072,55 @@
       },
       {
         "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-select-tf-ops",
+        "version": "2.10.0",
+        "nugetVersion": "2.10.0",
+        "nugetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-android",
+        "version": "1.13.1",
+        "nugetVersion": "1.13.1",
+        "nugetId": "Xamarin.TensorFlow.Android",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-support",
+        "version": "0.4.2",
+        "nugetVersion": "0.4.2",
+        "nugetId": "Xamarin.TensorFlow.Lite.Support",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-support-api",
         "version": "0.4.2",
         "nugetVersion": "0.4.2",
         "nugetId": "Xamarin.TensorFlow.Lite.Support.Api",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-metadata",
+        "version": "0.4.2",
+        "nugetVersion": "0.4.2",
+        "nugetId": "Xamarin.TensorFlow.Lite.Metadata",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-base",
+        "version": "0.4.2",
+        "nugetVersion": "0.4.2",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Base",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
       },
@@ -2350,6 +2473,14 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "org.reactivestreams",
+        "artifactId": "reactive-streams",
+        "version": "1.0.4",
+        "nugetVersion": "1.0.4.2",
+        "nugetId": "Xamarin.Android.ReactiveStreams",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "com.google.auto.value",
         "artifactId": "auto-value-annotations",
         "version": "1.6.6",
@@ -2661,6 +2792,20 @@
         ]
       },
       {
+        "name": "squareup-retrofit2",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/squareup-retrofit2/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
         "name": "squareup-okio",
         "mavenRepositoryType": "MavenCentral",
         "templates": [
@@ -2722,6 +2867,20 @@
         "templates": [
           {
             "templateFile": "templates/zxing/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "flatbuffers",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/flatbuffers/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {

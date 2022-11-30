@@ -96,6 +96,19 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "play-services-appindex",
+          "groupId": "com.google.android.gms",
+          "version": "16.1.0",
+          "nuGetId": "Xamarin.GooglePlayServices.AppIndex",
+          "nuGetVersion": "116.1.0"
+        }
+      },
+      "license": "Android Software Development Kit License"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "play-services-appinvite",
           "groupId": "com.google.android.gms",
           "version": "18.0.0",
@@ -2748,11 +2761,23 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "flatbuffers-java",
+          "groupId": "com.google.flatbuffers",
+          "version": "1.12.0",
+          "nuGetId": "Xamarin.Google.FlatBuffers.Java",
+          "nuGetVersion": "1.12.0"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "protobuf-javalite",
           "groupId": "com.google.protobuf",
-          "version": "3.21.1",
+          "version": "3.21.9",
           "nuGetId": "Xamarin.Protobuf.JavaLite",
-          "nuGetVersion": "3.21.1"
+          "nuGetVersion": "3.21.9"
         }
       },
       "license": "BSD 2 Clause AND BSD 3 Clause"
@@ -3125,10 +3150,75 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "tensorflow-lite-select-tf-ops",
+          "groupId": "org.tensorflow",
+          "version": "2.10.0",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
+          "nuGetVersion": "2.10.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "tensorflow-android",
+          "groupId": "org.tensorflow",
+          "version": "1.13.1",
+          "nuGetId": "Xamarin.TensorFlow.Android",
+          "nuGetVersion": "1.13.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "tensorflow-lite-support",
+          "groupId": "org.tensorflow",
+          "version": "0.4.2",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Support",
+          "nuGetVersion": "0.4.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "tensorflow-lite-support-api",
           "groupId": "org.tensorflow",
           "version": "0.4.2",
           "nuGetId": "Xamarin.TensorFlow.Lite.Support.Api",
+          "nuGetVersion": "0.4.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "tensorflow-lite-metadata",
+          "groupId": "org.tensorflow",
+          "version": "0.4.2",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Metadata",
+          "nuGetVersion": "0.4.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "tensorflow-lite-task-base",
+          "groupId": "org.tensorflow",
+          "version": "0.4.2",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Base",
           "nuGetVersion": "0.4.2"
         }
       },
