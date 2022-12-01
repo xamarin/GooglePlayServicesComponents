@@ -638,6 +638,9 @@ Task("samples-directory-build-targets")
 
 Task("samples")
 	.IsDependentOn("libs")
+	.IsDependentOn("samples-only");
+
+Task("samples-only")
 	.IsDependentOn("samples-directory-build-targets")
 	.IsDependentOn("mergetargets")
 	.IsDependentOn("allbindingprojectrefs")
@@ -908,14 +911,22 @@ Task ("clean")
 });
 
 Task ("ci")
+    .IsDependentOn ("ci-build")
+    .IsDependentOn ("ci-samples")
+    ;
+    
+Task ("ci-build")
 	.IsDependentOn ("ci-setup")
 	//.IsDependentOn ("tools-check")
 	//.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
 	//.IsDependentOn ("merge")
-	.IsDependentOn ("samples")
-    .IsDependentOn ("tools-executive-order")
-    ;
+  .IsDependentOn ("tools-executive-order")
+  ;
+
+Task ("ci-samples")
+	.IsDependentOn ("samples-only")
+  ;
 
 RunTarget (TARGET);
