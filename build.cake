@@ -3,7 +3,7 @@
 
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=5.0.0
-#addin nuget:?package=Newtonsoft.Json&version=13.0.1
+#addin nuget:?package=Newtonsoft.Json&version=13.0.2
 
 //using Cake.Common.Tools.MSBuild;
 
@@ -23,11 +23,11 @@ var MAX_CPU_COUNT = Argument("maxcpucount", 0);
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
 
-var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/play-services-firebase.zip";
-var REF_METADATA_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/play-services-firebase-metadata.xml";
+var REF_DOCS_URL = "https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/main/data/docs/play-services-firebase.zip";
+var REF_METADATA_URL = "https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/main/data/paramnames/play-services-firebase-metadata.xml";
 
 // These are a bunch of parameter names in the txt format which binding projects can use
-var REF_PARAMNAMES_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/play-services-firebase-paramnames.txt";
+var REF_PARAMNAMES_URL = "https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/main/data/paramnames/play-services-firebase-paramnames.txt";
 
 // Resolve Xamarin.Android installation
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
