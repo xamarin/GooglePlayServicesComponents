@@ -212,7 +212,7 @@
     <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Build.Download" Version="0.11.3" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.11.4" />
     <PackageReference Include="xunit.core" Version="2.3.1" />
     <PackageReference Include="xunit.abstractions" Version="2.0.1" />
     <PackageReference Include="xunit.assert" Version="2.3.1" />
