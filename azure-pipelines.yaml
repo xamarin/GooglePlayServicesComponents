@@ -69,14 +69,14 @@ jobs:
       preBuildSteps:
         - pwsh: |
             dotnet tool uninstall --global Cake.Tool
-            dotnet tool install --global Cake.Tool
+            dotnet tool install --global Cake.Tool --version 2.3.0
             dotnet tool update --global boots --version $(BootsVersion)
             boots $(LegacyXamarinAndroidPkg)
             sudo xcode-select -s "/Applications/Xcode_$(XcodeVersion).app"
             sudo xcode-select -p
           condition: eq(variables['System.JobName'], 'macos')
         - pwsh: |
-            dotnet tool update --global Cake.Tool
+            dotnet tool update --global Cake.Tool --version 2.3.0
             dotnet tool update --global boots --version $(BootsVersion)
             boots --url $(LegacyXamarinAndroidVsix) --downgrade-first
           condition: eq(variables['System.JobName'], 'windows')
