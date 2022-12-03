@@ -2099,8 +2099,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-support",
-        "version": "0.4.2",
-        "nugetVersion": "0.4.2",
+        "version": "0.4.3",
+        "nugetVersion": "0.4.3",
         "nugetId": "Xamarin.TensorFlow.Lite.Support",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
@@ -2108,8 +2108,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-support-api",
-        "version": "0.4.2",
-        "nugetVersion": "0.4.2",
+        "version": "0.4.3",
+        "nugetVersion": "0.4.3",
         "nugetId": "Xamarin.TensorFlow.Lite.Support.Api",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
@@ -2117,8 +2117,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-metadata",
-        "version": "0.4.2",
-        "nugetVersion": "0.4.2",
+        "version": "0.4.3",
+        "nugetVersion": "0.4.3",
         "nugetId": "Xamarin.TensorFlow.Lite.Metadata",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
@@ -2126,8 +2126,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-task-base",
-        "version": "0.4.2",
-        "nugetVersion": "0.4.2",
+        "version": "0.4.3",
+        "nugetVersion": "0.4.3",
         "nugetId": "Xamarin.TensorFlow.Lite.Task.Base",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
