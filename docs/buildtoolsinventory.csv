@@ -1,6 +1,6 @@
 BuildToolName,BuildToolVersion
 dotnet sdk, 6.0.402
-dotnet sdk, latestMinor
+dotnet sdk, patch
 msbuild-sdks MSBuild.Sdk.Extras, 3.0.44
 msbuild-sdks Microsoft.Build.Traversal, 3.1.6
 msbuild-sdks Microsoft.Build.NoTargets, 3.4.0
