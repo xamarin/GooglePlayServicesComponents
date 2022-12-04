@@ -552,6 +552,12 @@ Task ("spell-check")
                 "TF",
                 "Metadata",
                 "AppIndex",
+                "BillingClient",
+                "LoggingInterceptor",
+                "AdapterRxJava2",
+                "Retrofit2",
+                "ConverterGson",
+                "ConverterScalars",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
