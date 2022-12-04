@@ -553,7 +553,6 @@ Task ("spell-check")
                 "LoggingInterceptor",
                 "Retrofit2",
                 "AdapterRxJava2",
-                "Retrofit2",
                 "ConverterGson",
                 "ConverterScalars",
             };
