@@ -1075,7 +1075,7 @@
           "groupId": "com.google.android.play",
           "version": "1.10.3",
           "nuGetId": "Xamarin.Google.Android.Play.Core",
-          "nuGetVersion": "1.10.3.2"
+          "nuGetVersion": "1.10.3.3"
         }
       },
       "license": "Play Core Software Development Kit Terms of Service"
@@ -2553,6 +2553,30 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "billing",
+          "groupId": "com.android.billingclient",
+          "version": "4.0.0",
+          "nuGetId": "Xamarin.Android.Google.BillingClient",
+          "nuGetVersion": "4.0.0"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "billing-ktx",
+          "groupId": "com.android.billingclient",
+          "version": "4.0.0",
+          "nuGetId": "Xamarin.Android.Google.BillingClient.Ktx",
+          "nuGetVersion": "4.0.0"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "volley",
           "groupId": "com.android.volley",
           "version": "1.2.1",
@@ -2812,6 +2836,19 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "logging-interceptor",
+          "groupId": "com.squareup.okhttp3",
+          "version": "4.4.1",
+          "nuGetId": "Square.OkHttp3.LoggingInterceptor",
+          "nuGetVersion": "4.4.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "okhttp",
           "groupId": "com.squareup.okhttp3",
           "version": "4.9.3",
@@ -2869,6 +2906,58 @@
           "version": "1.9.0",
           "nuGetId": "Square.Retrofit",
           "nuGetVersion": "1.9.0.6"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "adapter-rxjava2",
+          "groupId": "com.squareup.retrofit2",
+          "version": "2.9.0",
+          "nuGetId": "Square.Retrofit2.AdapterRxJava2",
+          "nuGetVersion": "2.9.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "converter-gson",
+          "groupId": "com.squareup.retrofit2",
+          "version": "2.9.0",
+          "nuGetId": "Square.Retrofit2.ConverterGson",
+          "nuGetVersion": "2.9.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "converter-scalars",
+          "groupId": "com.squareup.retrofit2",
+          "version": "2.9.0",
+          "nuGetId": "Square.Retrofit2.ConverterScalars",
+          "nuGetVersion": "2.9.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "retrofit",
+          "groupId": "com.squareup.retrofit2",
+          "version": "2.9.0",
+          "nuGetId": "Square.Retrofit2",
+          "nuGetVersion": "2.9.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
