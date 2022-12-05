@@ -28,16 +28,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "21.2.0",
-        "nugetVersion": "121.2.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "21.2.0",
-        "nugetVersion": "121.2.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -52,8 +52,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "21.2.0",
-        "nugetVersion": "121.2.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
@@ -172,16 +172,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-cast",
-        "version": "21.1.0",
-        "nugetVersion": "121.1.0",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Cast",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-cast-framework",
-        "version": "21.1.0",
-        "nugetVersion": "121.1.0",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Cast.Framework",
         "dependencyOnly": false
       },
@@ -324,48 +324,48 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement",
-        "version": "21.1.1",
-        "nugetVersion": "121.1.1",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-api",
-        "version": "21.1.1",
-        "nugetVersion": "121.1.1",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
-        "version": "21.1.1",
-        "nugetVersion": "121.1.1",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-impl",
-        "version": "21.1.1",
-        "nugetVersion": "121.1.1",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Impl",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk",
-        "version": "21.1.1",
-        "nugetVersion": "121.1.1",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk-api",
-        "version": "21.1.1",
-        "nugetVersion": "121.1.1",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk.Api",
         "dependencyOnly": false
       },
@@ -572,24 +572,24 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tflite-impl",
-        "version": "16.0.0",
-        "nugetVersion": "116.0.0",
+        "version": "16.0.1",
+        "nugetVersion": "116.0.1",
         "nugetId": "Xamarin.GooglePlayServices.TfLite.Impl",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tflite-java",
-        "version": "16.0.0",
-        "nugetVersion": "116.0.0",
+        "version": "16.0.1",
+        "nugetVersion": "116.0.1",
         "nugetId": "Xamarin.GooglePlayServices.TfLite.Java",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tflite-support",
-        "version": "16.0.0",
-        "nugetVersion": "116.0.0",
+        "version": "16.0.1",
+        "nugetVersion": "116.0.1",
         "nugetId": "Xamarin.GooglePlayServices.TfLite.Support",
         "dependencyOnly": false
       },
@@ -652,8 +652,8 @@
       {
         "groupId": "com.google.android.play",
         "artifactId": "app-update",
-        "version": "2.0.0",
-        "nugetVersion": "2.0.0",
+        "version": "2.0.1",
+        "nugetVersion": "2.0.1",
         "nugetId": "Xamarin.Google.Android.Play.App.Update",
         "dependencyOnly": false
       },
@@ -668,8 +668,8 @@
       {
         "groupId": "com.google.android.play",
         "artifactId": "asset-delivery",
-        "version": "2.0.0",
-        "nugetVersion": "2.0.0",
+        "version": "2.0.1",
+        "nugetVersion": "2.0.1",
         "nugetId": "Xamarin.Google.Android.Play.Asset.Delivery",
         "dependencyOnly": false
       },
@@ -692,8 +692,8 @@
       {
         "groupId": "com.google.android.play",
         "artifactId": "core-common",
-        "version": "2.0.0",
-        "nugetVersion": "2.0.0",
+        "version": "2.0.2",
+        "nugetVersion": "2.0.2",
         "nugetId": "Xamarin.Google.Android.Play.Core.Common",
         "dependencyOnly": false
       },
@@ -703,30 +703,6 @@
         "version": "1.8.1",
         "nugetVersion": "1.8.1",
         "nugetId": "Xamarin.Google.Android.Play.Core.Ktx",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "com.google.android.play",
-        "artifactId": "integrity",
-        "version": "1.0.1",
-        "nugetVersion": "1.0.1",
-        "nugetId": "Xamarin.Google.Android.Play.Integrity",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "com.google.android.play",
-        "artifactId": "review",
-        "version": "2.0.0",
-        "nugetVersion": "2.0.0",
-        "nugetId": "Xamarin.Google.Android.Play.Review",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "com.google.android.play",
-        "artifactId": "review-ktx",
-        "version": "2.0.0",
-        "nugetVersion": "2.0.0",
-        "nugetId": "Xamarin.Google.Android.Play.Review.Ktx",
         "dependencyOnly": false
       },
       {
@@ -748,9 +724,25 @@
       {
         "groupId": "com.google.android.play",
         "artifactId": "integrity",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0.2",
+        "version": "1.0.2",
+        "nugetVersion": "1.0.2",
         "nugetId": "Xamarin.Google.Android.Play.Integrity",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "review",
+        "version": "2.0.1",
+        "nugetVersion": "2.0.1",
+        "nugetId": "Xamarin.Google.Android.Play.Review",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "review-ktx",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.Google.Android.Play.Review.Ktx",
         "dependencyOnly": false
       },
       {
@@ -884,8 +876,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-common",
-        "version": "20.1.2",
-        "nugetVersion": "120.1.2",
+        "version": "20.2.0",
+        "nugetVersion": "120.2.0",
         "nugetId": "Xamarin.Firebase.Common",
         "dependencyOnly": false
       },
@@ -2139,16 +2131,16 @@
       {
         "groupId": "androidx.annotation",
         "artifactId": "annotation",
-        "version": "1.3.0",
-        "nugetVersion": "1.3.0.3",
+        "version": "1.5.0",
+        "nugetVersion": "1.5.0",
         "nugetId": "Xamarin.AndroidX.Annotation",
         "dependencyOnly": true
       },
       {
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat",
-        "version": "1.4.1",
-        "nugetVersion": "1.4.1.1",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.AndroidX.AppCompat",
         "dependencyOnly": true
       },
@@ -2156,7 +2148,7 @@
         "groupId": "androidx.browser",
         "artifactId": "browser",
         "version": "1.4.0",
-        "nugetVersion": "1.4.0.1",
+        "nugetVersion": "1.4.0.2",
         "nugetId": "Xamarin.AndroidX.Browser",
         "dependencyOnly": true
       },
@@ -2164,7 +2156,7 @@
         "groupId": "androidx.cardview",
         "artifactId": "cardview",
         "version": "1.0.0",
-        "nugetVersion": "1.0.0.15",
+        "nugetVersion": "1.0.0.16",
         "nugetId": "Xamarin.AndroidX.CardView",
         "dependencyOnly": true
       },
@@ -2172,39 +2164,47 @@
         "groupId": "androidx.collection",
         "artifactId": "collection",
         "version": "1.2.0",
-        "nugetVersion": "1.2.0.3",
+        "nugetVersion": "1.2.0.4",
         "nugetId": "Xamarin.AndroidX.Collection",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "androidx.concurrent",
+        "artifactId": "concurrent-futures",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0.9",
+        "nugetId": "Xamarin.AndroidX.Concurrent.Futures",
         "dependencyOnly": true
       },
       {
         "groupId": "androidx.constraintlayout",
         "artifactId": "constraintlayout",
-        "version": "2.1.3",
-        "nugetVersion": "2.1.3.1",
+        "version": "2.1.4",
+        "nugetVersion": "2.1.4.1",
         "nugetId": "Xamarin.AndroidX.ConstraintLayout",
         "dependencyOnly": true
       },
       {
         "groupId": "androidx.core",
         "artifactId": "core",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0.2",
+        "version": "1.9.0",
+        "nugetVersion": "1.9.0",
         "nugetId": "Xamarin.AndroidX.Core",
         "dependencyOnly": true
       },
       {
         "groupId": "androidx.exifinterface",
         "artifactId": "exifinterface",
-        "version": "1.3.3",
-        "nugetVersion": "1.3.3.5",
+        "version": "1.3.4",
+        "nugetVersion": "1.3.4",
         "nugetId": "Xamarin.AndroidX.ExifInterface",
         "dependencyOnly": true
       },
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment",
-        "version": "1.4.1",
-        "nugetVersion": "1.4.1.1",
+        "version": "1.5.3",
+        "nugetVersion": "1.5.3",
         "nugetId": "Xamarin.AndroidX.Fragment",
         "dependencyOnly": true
       },
@@ -2212,7 +2212,7 @@
         "groupId": "androidx.legacy",
         "artifactId": "legacy-support-core-utils",
         "version": "1.0.0",
-        "nugetVersion": "1.0.0.13",
+        "nugetVersion": "1.0.0.14",
         "nugetId": "Xamarin.AndroidX.Legacy.Support.Core.Utils",
         "dependencyOnly": true
       },
@@ -2220,7 +2220,7 @@
         "groupId": "androidx.legacy",
         "artifactId": "legacy-support-v4",
         "version": "1.0.0",
-        "nugetVersion": "1.0.0.13",
+        "nugetVersion": "1.0.0.14",
         "nugetId": "Xamarin.AndroidX.Legacy.Support.V4",
         "dependencyOnly": true
       },
@@ -2228,7 +2228,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-extensions",
         "version": "2.2.0",
-        "nugetVersion": "2.2.0.13",
+        "nugetVersion": "2.2.0.14",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Extensions",
         "dependencyOnly": true
       },
@@ -2236,7 +2236,7 @@
         "groupId": "androidx.loader",
         "artifactId": "loader",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0.13",
+        "nugetVersion": "1.1.0.14",
         "nugetId": "Xamarin.AndroidX.Loader",
         "dependencyOnly": true
       },
@@ -2244,23 +2244,23 @@
         "groupId": "androidx.localbroadcastmanager",
         "artifactId": "localbroadcastmanager",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0.1",
+        "nugetVersion": "1.1.0.2",
         "nugetId": "Xamarin.AndroidX.LocalBroadcastManager",
         "dependencyOnly": true
       },
       {
         "groupId": "androidx.media",
         "artifactId": "media",
-        "version": "1.5.0.1",
-        "nugetVersion": "1.5.0.1",
+        "version": "1.6.0.1",
+        "nugetVersion": "1.6.0.1",
         "nugetId": "Xamarin.AndroidX.Media",
         "dependencyOnly": true
       },
       {
         "groupId": "androidx.mediarouter",
         "artifactId": "mediarouter",
-        "version": "1.2.6",
-        "nugetVersion": "1.2.6.1",
+        "version": "1.3.1",
+        "nugetVersion": "1.3.1",
         "nugetId": "Xamarin.AndroidX.MediaRouter",
         "dependencyOnly": true
       },
@@ -2268,15 +2268,15 @@
         "groupId": "androidx.recyclerview",
         "artifactId": "recyclerview",
         "version": "1.2.1",
-        "nugetVersion": "1.2.1.6",
+        "nugetVersion": "1.2.1.7",
         "nugetId": "Xamarin.AndroidX.RecyclerView",
         "dependencyOnly": true
       },
       {
         "groupId": "androidx.tracing",
         "artifactId": "tracing",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0.6",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0.1",
         "nugetId": "Xamarin.AndroidX.Tracing.Tracing",
         "dependencyOnly": true
       },
@@ -2284,7 +2284,7 @@
         "groupId": "androidx.vectordrawable",
         "artifactId": "vectordrawable-animated",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0.13",
+        "nugetVersion": "1.1.0.14",
         "nugetId": "Xamarin.AndroidX.VectorDrawable.Animated",
         "dependencyOnly": true
       },
@@ -2292,7 +2292,7 @@
         "groupId": "androidx.work",
         "artifactId": "work-runtime",
         "version": "2.7.1",
-        "nugetVersion": "2.7.1.3",
+        "nugetVersion": "2.7.1.4",
         "nugetId": "Xamarin.AndroidX.Work.Runtime",
         "dependencyOnly": true
       },
@@ -2396,7 +2396,7 @@
         "groupId": "com.google.guava",
         "artifactId": "listenablefuture",
         "version": "9999.0-empty-to-avoid-conflict-with-guava",
-        "nugetVersion": "1.0.0.6",
+        "nugetVersion": "1.0.0.9",
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
         "dependencyOnly": true
       },
@@ -2427,48 +2427,48 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.20",
+        "nugetVersion": "1.7.20",
         "nugetId": "Xamarin.Kotlin.StdLib",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-common",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.20",
+        "nugetVersion": "1.7.20",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk7",
-        "version": "1.6.21",
-        "nugetVersion": "1.6.21.1",
+        "version": "1.7.20",
+        "nugetVersion": "1.7.20",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk8",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.20",
+        "nugetVersion": "1.7.20",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-android",
-        "version": "1.5.2",
-        "nugetVersion": "1.5.2.5",
+        "version": "1.6.4",
+        "nugetVersion": "1.6.4",
         "nugetId": "Xamarin.KotlinX.Coroutines.Android",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-core",
-        "version": "1.5.2",
-        "nugetVersion": "1.5.2.5",
+        "version": "1.6.4",
+        "nugetVersion": "1.6.4",
         "nugetId": "Xamarin.KotlinX.Coroutines.Core",
         "dependencyOnly": true
       },

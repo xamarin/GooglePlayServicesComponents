@@ -5,10 +5,10 @@
 
 |    |                                                                      |                    |                                                                      |                    |
 |----|----------------------------------------------------------------------|--------------------|----------------------------------------------------------------------|--------------------|
-|   1|com.google.android.gms:play-services-ads                              |21.2.0              |Xamarin.GooglePlayServices.Ads                                        |121.2.0             |
-|   2|com.google.android.gms:play-services-ads-base                         |21.2.0              |Xamarin.GooglePlayServices.Ads.Base                                   |121.2.0             |
+|   1|com.google.android.gms:play-services-ads                              |21.3.0              |Xamarin.GooglePlayServices.Ads                                        |121.3.0             |
+|   2|com.google.android.gms:play-services-ads-base                         |21.3.0              |Xamarin.GooglePlayServices.Ads.Base                                   |121.3.0             |
 |   3|com.google.android.gms:play-services-ads-identifier                   |18.0.1              |Xamarin.GooglePlayServices.Ads.Identifier                             |118.0.1.2           |
-|   4|com.google.android.gms:play-services-ads-lite                         |21.2.0              |Xamarin.GooglePlayServices.Ads.Lite                                   |121.2.0             |
+|   4|com.google.android.gms:play-services-ads-lite                         |21.3.0              |Xamarin.GooglePlayServices.Ads.Lite                                   |121.3.0             |
 |   5|com.google.android.gms:play-services-afs-native                       |19.0.3              |Xamarin.GooglePlayServices.AFS.Native                                 |119.0.3.2           |
 |   6|com.google.android.gms:play-services-analytics                        |18.0.2              |Xamarin.GooglePlayServices.Analytics                                  |118.0.2             |
 |   7|com.google.android.gms:play-services-analytics-impl                   |18.0.2              |Xamarin.GooglePlayServices.Analytics.Impl                             |118.0.2             |
@@ -23,8 +23,8 @@
 |  16|com.google.android.gms:play-services-awareness                        |19.0.1              |Xamarin.GooglePlayServices.Awareness                                  |119.0.1.2           |
 |  17|com.google.android.gms:play-services-base                             |18.1.0              |Xamarin.GooglePlayServices.Base                                       |118.1.0             |
 |  18|com.google.android.gms:play-services-basement                         |18.1.0              |Xamarin.GooglePlayServices.Basement                                   |118.1.0             |
-|  19|com.google.android.gms:play-services-cast                             |21.1.0              |Xamarin.GooglePlayServices.Cast                                       |121.1.0             |
-|  20|com.google.android.gms:play-services-cast-framework                   |21.1.0              |Xamarin.GooglePlayServices.Cast.Framework                             |121.1.0             |
+|  19|com.google.android.gms:play-services-cast                             |21.2.0              |Xamarin.GooglePlayServices.Cast                                       |121.2.0             |
+|  20|com.google.android.gms:play-services-cast-framework                   |21.2.0              |Xamarin.GooglePlayServices.Cast.Framework                             |121.2.0             |
 |  21|com.google.android.gms:play-services-cast-tv                          |20.0.0              |Xamarin.GooglePlayServices.Cast.TV                                    |120.0.0             |
 |  22|com.google.android.gms:play-services-clearcut                         |17.0.0              |Xamarin.GooglePlayServices.Clearcut                                   |117.0.0.7           |
 |  23|com.google.android.gms:play-services-cloud-messaging                  |17.0.2              |Xamarin.GooglePlayServices.CloudMessaging                             |117.0.2.2           |
@@ -42,12 +42,12 @@
 |  35|com.google.android.gms:play-services-instantapps                      |18.0.1              |Xamarin.GooglePlayServices.InstantApps                                |118.0.1.2           |
 |  36|com.google.android.gms:play-services-location                         |20.0.0              |Xamarin.GooglePlayServices.Location                                   |120.0.0             |
 |  37|com.google.android.gms:play-services-maps                             |18.1.0              |Xamarin.GooglePlayServices.Maps                                       |118.1.0             |
-|  38|com.google.android.gms:play-services-measurement                      |21.1.1              |Xamarin.GooglePlayServices.Measurement                                |121.1.1             |
-|  39|com.google.android.gms:play-services-measurement-api                  |21.1.1              |Xamarin.GooglePlayServices.Measurement.Api                            |121.1.1             |
-|  40|com.google.android.gms:play-services-measurement-base                 |21.1.1              |Xamarin.GooglePlayServices.Measurement.Base                           |121.1.1             |
-|  41|com.google.android.gms:play-services-measurement-impl                 |21.1.1              |Xamarin.GooglePlayServices.Measurement.Impl                           |121.1.1             |
-|  42|com.google.android.gms:play-services-measurement-sdk                  |21.1.1              |Xamarin.GooglePlayServices.Measurement.Sdk                            |121.1.1             |
-|  43|com.google.android.gms:play-services-measurement-sdk-api              |21.1.1              |Xamarin.GooglePlayServices.Measurement.Sdk.Api                        |121.1.1             |
+|  38|com.google.android.gms:play-services-measurement                      |21.2.0              |Xamarin.GooglePlayServices.Measurement                                |121.2.0             |
+|  39|com.google.android.gms:play-services-measurement-api                  |21.2.0              |Xamarin.GooglePlayServices.Measurement.Api                            |121.2.0             |
+|  40|com.google.android.gms:play-services-measurement-base                 |21.2.0              |Xamarin.GooglePlayServices.Measurement.Base                           |121.2.0             |
+|  41|com.google.android.gms:play-services-measurement-impl                 |21.2.0              |Xamarin.GooglePlayServices.Measurement.Impl                           |121.2.0             |
+|  42|com.google.android.gms:play-services-measurement-sdk                  |21.2.0              |Xamarin.GooglePlayServices.Measurement.Sdk                            |121.2.0             |
+|  43|com.google.android.gms:play-services-measurement-sdk-api              |21.2.0              |Xamarin.GooglePlayServices.Measurement.Sdk.Api                        |121.2.0             |
 |  44|com.google.android.gms:play-services-mlkit-barcode-scanning           |18.1.0              |Xamarin.GooglePlayServices.MLKit.BarcodeScanning                      |118.1.0             |
 |  45|com.google.android.gms:play-services-mlkit-face-detection             |17.1.0              |Xamarin.GooglePlayServices.MLKit.FaceDetection                        |117.1.0             |
 |  46|com.google.android.gms:play-services-mlkit-image-labeling             |16.0.8              |Xamarin.GooglePlayServices.MLKit.ImageLabeling                        |116.0.8             |
@@ -73,9 +73,9 @@
 |  66|com.google.android.gms:play-services-tagmanager-v4-impl               |18.0.2              |Xamarin.GooglePlayServices.TagManager.V4.Impl                         |118.0.2             |
 |  67|com.google.android.gms:play-services-tasks                            |18.0.2              |Xamarin.GooglePlayServices.Tasks                                      |118.0.2             |
 |  68|com.google.android.gms:play-services-tflite-gpu                       |16.0.0              |Xamarin.GooglePlayServices.TfLite.Gpu                                 |116.0.0             |
-|  69|com.google.android.gms:play-services-tflite-impl                      |16.0.0              |Xamarin.GooglePlayServices.TfLite.Impl                                |116.0.0             |
-|  70|com.google.android.gms:play-services-tflite-java                      |16.0.0              |Xamarin.GooglePlayServices.TfLite.Java                                |116.0.0             |
-|  71|com.google.android.gms:play-services-tflite-support                   |16.0.0              |Xamarin.GooglePlayServices.TfLite.Support                             |116.0.0             |
+|  69|com.google.android.gms:play-services-tflite-impl                      |16.0.1              |Xamarin.GooglePlayServices.TfLite.Impl                                |116.0.1             |
+|  70|com.google.android.gms:play-services-tflite-java                      |16.0.1              |Xamarin.GooglePlayServices.TfLite.Java                                |116.0.1             |
+|  71|com.google.android.gms:play-services-tflite-support                   |16.0.1              |Xamarin.GooglePlayServices.TfLite.Support                             |116.0.1             |
 |  72|com.google.android.gms:play-services-vision                           |20.1.3              |Xamarin.GooglePlayServices.Vision                                     |120.1.3.7           |
 |  73|com.google.android.gms:play-services-vision-common                    |19.1.3              |Xamarin.GooglePlayServices.Vision.Common                              |119.1.3.7           |
 |  74|com.google.android.gms:play-services-vision-face-contour-internal     |16.1.0              |Xamarin.GooglePlayServices.Vision.Face.Contour.Internal               |116.1.0.7           |
@@ -83,9 +83,9 @@
 |  76|com.google.android.gms:play-services-vision-image-labeling-internal   |16.1.0              |Xamarin.GooglePlayServices.Vision.ImageLabelingInternal               |116.1.0.7           |
 |  77|com.google.android.gms:play-services-wallet                           |19.1.0              |Xamarin.GooglePlayServices.Wallet                                     |119.1.0.2           |
 |  78|com.google.android.gms:play-services-wearable                         |18.0.0              |Xamarin.GooglePlayServices.Wearable                                   |118.0.0             |
-|  79|com.google.android.play:app-update                                    |2.0.0               |Xamarin.Google.Android.Play.App.Update                                |2.0.0               |
+|  79|com.google.android.play:app-update                                    |2.0.1               |Xamarin.Google.Android.Play.App.Update                                |2.0.1               |
 |  80|com.google.android.play:app-update-ktx                                |2.0.0               |Xamarin.Google.Android.Play.App.Update.Ktx                            |2.0.0               |
-|  81|com.google.android.play:asset-delivery                                |2.0.0               |Xamarin.Google.Android.Play.Asset.Delivery                            |2.0.0               |
+|  81|com.google.android.play:asset-delivery                                |2.0.1               |Xamarin.Google.Android.Play.Asset.Delivery                            |2.0.1               |
 |  82|com.google.android.play:asset-delivery-ktx                            |2.0.0               |Xamarin.Google.Android.Play.Asset.Delivery.Ktx                        |2.0.0               |
 |  83|com.google.android.play:core                                          |1.10.3              |Xamarin.Google.Android.Play.Core                                      |1.10.3.3            |
 |  84|com.google.android.play:core-common                                   |2.0.0               |Xamarin.Google.Android.Play.Core.Common                               |2.0.0               |
