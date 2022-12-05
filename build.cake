@@ -3,7 +3,7 @@
 
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=5.0.0
-#addin nuget:?package=Newtonsoft.Json&version=13.0.1
+#addin nuget:?package=Newtonsoft.Json&version=13.0.2
 
 //using Cake.Common.Tools.MSBuild;
 
