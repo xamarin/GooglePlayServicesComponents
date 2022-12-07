@@ -3254,9 +3254,9 @@
         "maven": {
           "artifactId": "tensorflow-lite-support",
           "groupId": "org.tensorflow",
-          "version": "0.4.2",
+          "version": "0.4.3",
           "nuGetId": "Xamarin.TensorFlow.Lite.Support",
-          "nuGetVersion": "0.4.2"
+          "nuGetVersion": "0.4.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3267,9 +3267,9 @@
         "maven": {
           "artifactId": "tensorflow-lite-support-api",
           "groupId": "org.tensorflow",
-          "version": "0.4.2",
+          "version": "0.4.3",
           "nuGetId": "Xamarin.TensorFlow.Lite.Support.Api",
-          "nuGetVersion": "0.4.2"
+          "nuGetVersion": "0.4.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3280,9 +3280,9 @@
         "maven": {
           "artifactId": "tensorflow-lite-metadata",
           "groupId": "org.tensorflow",
-          "version": "0.4.2",
+          "version": "0.4.3",
           "nuGetId": "Xamarin.TensorFlow.Lite.Metadata",
-          "nuGetVersion": "0.4.2"
+          "nuGetVersion": "0.4.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3293,9 +3293,9 @@
         "maven": {
           "artifactId": "tensorflow-lite-task-base",
           "groupId": "org.tensorflow",
-          "version": "0.4.2",
+          "version": "0.4.3",
           "nuGetId": "Xamarin.TensorFlow.Lite.Task.Base",
-          "nuGetVersion": "0.4.2"
+          "nuGetVersion": "0.4.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
