@@ -2093,7 +2093,7 @@
         "artifactId": "tensorflow-lite-support",
         "version": "0.4.3",
         "nugetVersion": "0.4.3",
-        "nugetId": "Xamarin.TensorFlow.Lite.Support",
+        "nugetId": "Xamarin.TensorFlow.Lite.Support.Library",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
       },
