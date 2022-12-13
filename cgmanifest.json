@@ -230,7 +230,7 @@
           "groupId": "com.google.android.gms",
           "version": "18.1.0",
           "nuGetId": "Xamarin.GooglePlayServices.Basement",
-          "nuGetVersion": "118.1.0"
+          "nuGetVersion": "118.1.0.1"
         }
       },
       "license": "Android Software Development Kit License"
@@ -1335,7 +1335,7 @@
           "groupId": "com.google.firebase",
           "version": "20.0.0",
           "nuGetId": "Xamarin.Firebase.AppIndexing",
-          "nuGetVersion": "120.0.0.9"
+          "nuGetVersion": "120.0.0.10"
         }
       },
       "license": "The Apache Software License, Version 2.0"

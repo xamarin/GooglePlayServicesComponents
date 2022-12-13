@@ -165,7 +165,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
         "version": "18.1.0",
-        "nugetVersion": "118.1.0",
+        "nugetVersion": "118.1.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Basement",
         "dependencyOnly": false
       },
