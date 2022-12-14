@@ -107,7 +107,7 @@
 | 100|com.google.firebase:firebase-appcheck-ktx                             |16.0.2              |Xamarin.Firebase.AppCheck.Ktx                                         |116.0.2             |
 | 101|com.google.firebase:firebase-appcheck-playintegrity                   |16.0.2              |Xamarin.Firebase.AppCheck.PlayIntegrity                               |116.0.2             |
 | 102|com.google.firebase:firebase-appcheck-safetynet                       |16.0.2              |Xamarin.Firebase.AppCheck.SafetyNet                                   |116.0.2             |
-| 103|com.google.firebase:firebase-appindexing                              |20.0.0              |Xamarin.Firebase.AppIndexing                                          |120.0.0.9           |
+| 103|com.google.firebase:firebase-appindexing                              |20.0.0              |Xamarin.Firebase.AppIndexing                                          |120.0.0.10          |
 | 104|com.google.firebase:firebase-auth                                     |21.0.8              |Xamarin.Firebase.Auth                                                 |121.0.8             |
 | 105|com.google.firebase:firebase-auth-interop                             |20.0.0              |Xamarin.Firebase.Auth.Interop                                         |120.0.0.7           |
 | 106|com.google.firebase:firebase-auth-ktx                                 |21.0.8              |Xamarin.Firebase.Auth.Ktx                                             |121.0.8             |

@@ -102,7 +102,7 @@
     <PackageReference Update="Xamarin.Firebase.AppCheck.Ktx" Version="116.0.2" />
     <PackageReference Update="Xamarin.Firebase.AppCheck.PlayIntegrity" Version="116.0.2" />
     <PackageReference Update="Xamarin.Firebase.AppCheck.SafetyNet" Version="116.0.2" />
-    <PackageReference Update="Xamarin.Firebase.AppIndexing" Version="120.0.0.9" />
+    <PackageReference Update="Xamarin.Firebase.AppIndexing" Version="120.0.0.10" />
     <PackageReference Update="Xamarin.Firebase.Auth" Version="121.0.8" />
     <PackageReference Update="Xamarin.Firebase.Auth.Interop" Version="120.0.0.7" />
     <PackageReference Update="Xamarin.Firebase.Auth.Ktx" Version="121.0.8" />

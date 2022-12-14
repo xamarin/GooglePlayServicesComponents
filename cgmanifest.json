@@ -1335,7 +1335,7 @@
           "groupId": "com.google.firebase",
           "version": "20.0.0",
           "nuGetId": "Xamarin.Firebase.AppIndexing",
-          "nuGetVersion": "120.0.0.9"
+          "nuGetVersion": "120.0.0.10"
         }
       },
       "license": "The Apache Software License, Version 2.0"
