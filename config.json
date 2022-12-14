@@ -2120,7 +2120,7 @@
         "artifactId": "tensorflow-lite-task-base",
         "version": "0.4.3",
         "nugetVersion": "0.4.3",
-        "nugetId": "Xamarin.TensorFlow.Lite.Task.Base",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Base.Library",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
       },
