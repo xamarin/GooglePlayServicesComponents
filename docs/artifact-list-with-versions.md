@@ -200,8 +200,8 @@
 | 193|com.google.android.odml:image                                         |1.0.0-beta1         |Xamarin.Google.Android.ODML.Image                                     |1.0.0.2-beta1       |
 | 194|com.google.android.libraries.places:places                            |2.0.0               |Xamarin.GoogleAndroid.Libraries.Places                                |2.0.0.2             |
 | 195|com.google.android.libraries.places:places-compat                     |2.0.0               |Xamarin.GoogleAndroid.Libraries.Places.Compat                         |2.0.0.2             |
-| 196|com.android.billingclient:billing                                     |4.0.0               |Xamarin.Android.Google.BillingClient                                  |4.0.0               |
-| 197|com.android.billingclient:billing-ktx                                 |4.0.0               |Xamarin.Android.Google.BillingClient.Ktx                              |4.0.0               |
+| 196|com.android.billingclient:billing                                     |5.0.0               |Xamarin.Android.Google.BillingClient                                  |5.0.0               |
+| 197|com.android.billingclient:billing-ktx                                 |5.0.0               |Xamarin.Android.Google.BillingClient.Ktx                              |5.0.0               |
 | 198|com.android.volley:volley                                             |1.2.1               |Xamarin.Android.Volley                                                |1.2.1.2             |
 | 199|com.android.volley:volley-cronet                                      |1.2.1               |Xamarin.Android.Volley.CroNet                                         |1.2.1.2             |
 | 200|com.github.bumptech.glide:annotations                                 |4.13.2              |Xamarin.Android.Glide.Annotations                                     |4.13.2.2            |
@@ -255,7 +255,7 @@
 | 248|org.tensorflow:tensorflow-lite-gpu-api                                |2.10.0              |Xamarin.TensorFlow.Lite.Gpu.Api                                       |2.10.0              |
 | 249|org.tensorflow:tensorflow-lite-select-tf-ops                          |2.10.0              |Xamarin.TensorFlow.Lite.Select.TF.Ops                                 |2.10.0              |
 | 250|org.tensorflow:tensorflow-android                                     |1.13.1              |Xamarin.TensorFlow.Android                                            |1.13.1              |
-| 251|org.tensorflow:tensorflow-lite-support                                |0.4.3               |Xamarin.TensorFlow.Lite.Support                                       |0.4.3               |
+| 251|org.tensorflow:tensorflow-lite-support                                |0.4.3               |Xamarin.TensorFlow.Lite.Support.Library                               |0.4.3               |
 | 252|org.tensorflow:tensorflow-lite-support-api                            |0.4.3               |Xamarin.TensorFlow.Lite.Support.Api                                   |0.4.3               |
 | 253|org.tensorflow:tensorflow-lite-metadata                               |0.4.3               |Xamarin.TensorFlow.Lite.Metadata                                      |0.4.3               |
-| 254|org.tensorflow:tensorflow-lite-task-base                              |0.4.3               |Xamarin.TensorFlow.Lite.Task.Base                                     |0.4.3               |
+| 254|org.tensorflow:tensorflow-lite-task-base                              |0.4.3               |Xamarin.TensorFlow.Lite.Task.Base.Library                             |0.4.3               |

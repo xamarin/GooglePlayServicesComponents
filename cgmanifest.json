@@ -3255,7 +3255,7 @@
           "artifactId": "tensorflow-lite-support",
           "groupId": "org.tensorflow",
           "version": "0.4.3",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Support",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Support.Library",
           "nuGetVersion": "0.4.3"
         }
       },
@@ -3294,7 +3294,7 @@
           "artifactId": "tensorflow-lite-task-base",
           "groupId": "org.tensorflow",
           "version": "0.4.3",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Base",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Base.Library",
           "nuGetVersion": "0.4.3"
         }
       },
