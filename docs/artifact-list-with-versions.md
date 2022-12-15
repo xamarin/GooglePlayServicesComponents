@@ -22,7 +22,7 @@
 |  15|com.google.android.gms:play-services-auth-blockstore                  |16.1.0              |Xamarin.GooglePlayServices.Auth.Blockstore                            |116.1.0.2           |
 |  16|com.google.android.gms:play-services-awareness                        |19.0.1              |Xamarin.GooglePlayServices.Awareness                                  |119.0.1.2           |
 |  17|com.google.android.gms:play-services-base                             |18.1.0              |Xamarin.GooglePlayServices.Base                                       |118.1.0             |
-|  18|com.google.android.gms:play-services-basement                         |18.1.0              |Xamarin.GooglePlayServices.Basement                                   |118.1.0             |
+|  18|com.google.android.gms:play-services-basement                         |18.1.0              |Xamarin.GooglePlayServices.Basement                                   |118.1.0.1           |
 |  19|com.google.android.gms:play-services-cast                             |21.2.0              |Xamarin.GooglePlayServices.Cast                                       |121.2.0             |
 |  20|com.google.android.gms:play-services-cast-framework                   |21.2.0              |Xamarin.GooglePlayServices.Cast.Framework                             |121.2.0             |
 |  21|com.google.android.gms:play-services-cast-tv                          |20.0.0              |Xamarin.GooglePlayServices.Cast.TV                                    |120.0.0             |
@@ -255,7 +255,7 @@
 | 248|org.tensorflow:tensorflow-lite-gpu-api                                |2.10.0              |Xamarin.TensorFlow.Lite.Gpu.Api                                       |2.10.0              |
 | 249|org.tensorflow:tensorflow-lite-select-tf-ops                          |2.10.0              |Xamarin.TensorFlow.Lite.Select.TF.Ops                                 |2.10.0              |
 | 250|org.tensorflow:tensorflow-android                                     |1.13.1              |Xamarin.TensorFlow.Android                                            |1.13.1              |
-| 251|org.tensorflow:tensorflow-lite-support                                |0.4.2               |Xamarin.TensorFlow.Lite.Support                                       |0.4.2               |
-| 252|org.tensorflow:tensorflow-lite-support-api                            |0.4.2               |Xamarin.TensorFlow.Lite.Support.Api                                   |0.4.2               |
-| 253|org.tensorflow:tensorflow-lite-metadata                               |0.4.2               |Xamarin.TensorFlow.Lite.Metadata                                      |0.4.2               |
-| 254|org.tensorflow:tensorflow-lite-task-base                              |0.4.2               |Xamarin.TensorFlow.Lite.Task.Base                                     |0.4.2               |
+| 251|org.tensorflow:tensorflow-lite-support                                |0.4.3               |Xamarin.TensorFlow.Lite.Support                                       |0.4.3               |
+| 252|org.tensorflow:tensorflow-lite-support-api                            |0.4.3               |Xamarin.TensorFlow.Lite.Support.Api                                   |0.4.3               |
+| 253|org.tensorflow:tensorflow-lite-metadata                               |0.4.3               |Xamarin.TensorFlow.Lite.Metadata                                      |0.4.3               |
+| 254|org.tensorflow:tensorflow-lite-task-base                              |0.4.3               |Xamarin.TensorFlow.Lite.Task.Base                                     |0.4.3               |

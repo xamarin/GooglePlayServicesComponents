@@ -17,7 +17,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Auth.Blockstore" Version="116.1.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Awareness" Version="119.0.1.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Base" Version="118.1.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Basement" Version="118.1.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Basement" Version="118.1.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Cast" Version="121.2.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Cast.Framework" Version="121.2.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Cast.TV" Version="120.0.0" />
@@ -251,10 +251,10 @@
     <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu.Api" Version="2.10.0" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Select.TF.Ops" Version="2.10.0" />
     <PackageReference Update="Xamarin.TensorFlow.Android" Version="1.13.1" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Support" Version="0.4.2" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Support.Api" Version="0.4.2" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Metadata" Version="0.4.2" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Base" Version="0.4.2" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite.Support" Version="0.4.3" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite.Support.Api" Version="0.4.3" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite.Metadata" Version="0.4.3" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Base" Version="0.4.3" />
     <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.5.0" />
     <PackageReference Update="Xamarin.AndroidX.AppCompat" Version="1.5.1" />
     <PackageReference Update="Xamarin.AndroidX.Browser" Version="1.4.0.2" />

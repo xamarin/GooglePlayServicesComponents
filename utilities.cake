@@ -552,8 +552,8 @@ Task ("spell-check")
                 "AppIndex",
                 "BillingClient",
                 "LoggingInterceptor",
-                "AdapterRxJava2",
                 "Retrofit2",
+                "AdapterRxJava2",
                 "ConverterGson",
                 "ConverterScalars",
             };
