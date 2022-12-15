@@ -532,7 +532,7 @@ Task ("spell-check")
                 "PerfMark",
                 "PerfMarkApi",
                 "ZXing",
-		        "JavaPoet",
+		            "JavaPoet",
                 "LanguageId",
                 "AppSet",
                 "Ktx",
