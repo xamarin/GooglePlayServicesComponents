@@ -884,8 +884,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-common-ktx",
-        "version": "20.2.0",
-        "nugetVersion": "120.2.0",
+        "version": "20.1.2",
+        "nugetVersion": "120.1.2",
         "nugetId": "Xamarin.Firebase.Common.Ktx",
         "dependencyOnly": false
       },
