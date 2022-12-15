@@ -7,12 +7,12 @@
     "sdk": 
     {
         "version": "6.0.402",
-        "rollForward": "latestMinor"
+        "rollForward": "patch"
     },
     "msbuild-sdks": 
     {
         "MSBuild.Sdk.Extras": "3.0.44",
-        "Microsoft.Build.Traversal": "3.1.6",
+        "Microsoft.Build.Traversal": "3.2.0",
         "Microsoft.Build.NoTargets": "3.4.0",
         "Xamarin.Legacy.Sdk": "0.2.0-alpha2"
     }
@@ -20,4 +20,4 @@
 
 ```
 version6.0.402
-rollForwardlatestMinor
+rollForwardpatch
