@@ -1,5 +1,5 @@
 // Tools needed by cake addins
-#tool nuget:?package=vswhere&version=3.0.2
+#tool nuget:?package=vswhere&version=3.1.1
 
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=5.0.0
