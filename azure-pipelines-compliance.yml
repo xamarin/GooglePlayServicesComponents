@@ -1,0 +1,77 @@
+variables:
+  codeBaseName: 'xamarin_GoogleApisForiOSComponents'
+  areaPath: 'DevDiv\VS Client - Runtime SDKs\[Archived] Components'
+  iterationPath: 'DevDiv\Future Backlog'
+  Codeql.Enabled: true
+  timeoutInMinutes: 360
+  continueOnError: 'true'
+  poolName: 'Azure Pipelines'
+  imageName: 'macOS-latest'
+  verbosity: 'diagnostic'
+
+resources:
+  repositories:
+    - repository: yaml-templates
+      type: github
+      name: xamarin/yaml-templates
+      endpoint: xamarin
+      ref: refs/heads/main
+
+schedules:
+  - cron: '0 12 * * 0'
+    displayName: 'Weekly Compliance Check'
+    branches:
+      include: [ 'main' ]
+    always: false
+
+pool:
+  name: $(poolName)
+  vmImage: $(imageName)
+
+steps:
+    - checkout: self
+
+    # CodeQL Init
+    - task: CodeQL3000Init@0
+      displayName: CodeQL Init
+
+    # Component Governance
+    - template: security/component-governance/v0.yml@yaml-templates
+
+    # CredScan
+    - template: security/credscan/v3.yml@yaml-templates
+
+    # PoliCheck
+    - template: security/policheck/v2.yml@yaml-templates
+
+    # Publish Report
+    - template: security/publish-report/v2.yml@yaml-templates
+
+    # CodeQL Finalize
+    - task: CodeQL3000Finalize@0
+      displayName: CodeQL Finalize
+
+    # TSA Upload
+    - task: TSAUpload@1
+      continueOnError: true
+      inputs:
+        tsaVersion: 'TsaV2'
+        codebase: 'NewOrUpdate'
+        tsaEnvironment: 'PROD'
+        codeBaseName: $(codeBaseName)
+        notifyAlwaysV2: false
+        instanceUrlForTsaV2: 'DEVDIV'
+        projectNameDEVDIV: 'DevDiv'
+        areaPath: $(areaPath)
+        iterationPath: $(iterationPath)
+        uploadAPIScan: false
+        uploadBinSkim: false
+        uploadCredScan: true
+        uploadFortifySCA: false
+        uploadFxCop: false
+        uploadModernCop: false
+        uploadPoliCheck: true
+        uploadPREfast: false
+        uploadRoslyn: false
+        uploadTSLint: false
+        uploadAsync: true
