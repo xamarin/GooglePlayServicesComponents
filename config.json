@@ -1124,24 +1124,24 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-installations",
-        "version": "17.0.3",
-        "nugetVersion": "117.0.3",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0",
         "nugetId": "Xamarin.Firebase.Installations",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-installations-interop",
-        "version": "17.0.2",
-        "nugetVersion": "117.0.2",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0",
         "nugetId": "Xamarin.Firebase.Installations.InterOp",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-installations-ktx",
-        "version": "17.0.3",
-        "nugetVersion": "117.0.3",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0",
         "nugetId": "Xamarin.Firebase.Installations.Ktx",
         "dependencyOnly": false
       },
@@ -1604,16 +1604,16 @@
       {
         "groupId": "com.android.billingclient",
         "artifactId": "billing",
-        "version": "4.0.0",
-        "nugetVersion": "4.0.0",
+        "version": "5.1.0",
+        "nugetVersion": "5.1.0",
         "nugetId": "Xamarin.Android.Google.BillingClient",
         "dependencyOnly": false
       },
       {
         "groupId": "com.android.billingclient",
         "artifactId": "billing-ktx",
-        "version": "4.0.0",
-        "nugetVersion": "4.0.0",
+        "version": "5.1.0",
+        "nugetVersion": "5.1.0",
         "nugetId": "Xamarin.Android.Google.BillingClient.Ktx",
         "dependencyOnly": false
       },
@@ -1699,8 +1699,8 @@
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-backend-cct",
-        "version": "3.1.7",
-        "nugetVersion": "3.1.7",
+        "version": "3.1.8",
+        "nugetVersion": "3.1.8",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
         "dependencyOnly": false,
         "templateSet": "datatransport"
@@ -1708,8 +1708,8 @@
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
-        "version": "3.1.7",
-        "nugetVersion": "3.1.7",
+        "version": "3.1.8",
+        "nugetVersion": "3.1.8",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
         "dependencyOnly": false,
         "templateSet": "datatransport"
@@ -1735,8 +1735,8 @@
       {
         "groupId": "com.google.dagger",
         "artifactId": "dagger",
-        "version": "2.41",
-        "nugetVersion": "2.41.0.2",
+        "version": "2.42",
+        "nugetVersion": "2.42.0",
         "nugetId": "Xamarin.Google.Dagger",
         "dependencyOnly": false,
         "templateSet": "dagger"
@@ -1753,8 +1753,8 @@
       {
         "groupId": "com.google.zxing",
         "artifactId": "core",
-        "version": "3.5.0",
-        "nugetVersion": "3.5.0.2",
+        "version": "3.5.1",
+        "nugetVersion": "3.5.1",
         "nugetId": "Xamarin.Google.ZXing.Core",
         "dependencyOnly": false,
         "templateSet": "zxing"
@@ -1901,8 +1901,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-android",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.Android",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1910,8 +1910,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-api",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.Api",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1919,8 +1919,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-context",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.Context",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1928,8 +1928,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-core",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.Core",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1937,8 +1937,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-okhttp",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.OkHttp",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1946,8 +1946,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-protobuf-lite",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1955,8 +1955,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-stub",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.Stub",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1964,8 +1964,8 @@
       {
         "groupId": "io.opencensus",
         "artifactId": "opencensus-api",
-        "version": "0.29.0",
-        "nugetVersion": "0.29.0.2",
+        "version": "0.30.0",
+        "nugetVersion": "0.30.0",
         "nugetId": "Xamarin.Io.OpenCensus.OpenCensusApi",
         "dependencyOnly": false,
         "templateSet": "opencensus"
@@ -1973,8 +1973,8 @@
       {
         "groupId": "io.opencensus",
         "artifactId": "opencensus-contrib-grpc-metrics",
-        "version": "0.29.0",
-        "nugetVersion": "0.29.0.2",
+        "version": "0.30.0",
+        "nugetVersion": "0.30.0",
         "nugetId": "Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics",
         "dependencyOnly": false,
         "templateSet": "opencensus"
@@ -2299,16 +2299,16 @@
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-backend-cct",
-        "version": "3.1.2",
-        "nugetVersion": "3.1.2",
+        "version": "3.1.8",
+        "nugetVersion": "3.1.8",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
-        "version": "3.1.2",
-        "nugetVersion": "3.1.2",
+        "version": "3.1.8",
+        "nugetVersion": "3.1.8",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
         "dependencyOnly": true
       },
