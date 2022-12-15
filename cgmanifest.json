@@ -2542,9 +2542,9 @@
         "maven": {
           "artifactId": "billing",
           "groupId": "com.android.billingclient",
-          "version": "4.0.0",
+          "version": "5.0.0",
           "nuGetId": "Xamarin.Android.Google.BillingClient",
-          "nuGetVersion": "4.0.0"
+          "nuGetVersion": "5.0.0"
         }
       }
     },
@@ -2554,9 +2554,9 @@
         "maven": {
           "artifactId": "billing-ktx",
           "groupId": "com.android.billingclient",
-          "version": "4.0.0",
+          "version": "5.0.0",
           "nuGetId": "Xamarin.Android.Google.BillingClient.Ktx",
-          "nuGetVersion": "4.0.0"
+          "nuGetVersion": "5.0.0"
         }
       }
     },
