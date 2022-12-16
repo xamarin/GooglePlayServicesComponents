@@ -215,11 +215,11 @@
 | 208|com.google.android.datatransport:transport-runtime                    |3.1.7               |Xamarin.Google.Android.DataTransport.TransportRuntime                 |3.1.7               |
 | 209|com.google.android.ump:user-messaging-platform                        |2.0.0               |Xamarin.Google.UserMessagingPlatform                                  |2.0.0.2             |
 | 210|com.google.code.findbugs:jsr305                                       |3.0.2               |Xamarin.Google.Code.FindBugs.JSR305                                   |3.0.2.6             |
-| 211|com.google.dagger:dagger                                              |2.41                |Xamarin.Google.Dagger                                                 |2.41.0.2            |
-| 212|com.google.errorprone:error_prone_annotations                         |2.14.0              |Xamarin.Google.ErrorProne.Annotations                                 |2.14.0              |
-| 213|com.google.zxing:core                                                 |3.5.0               |Xamarin.Google.ZXing.Core                                             |3.5.0.2             |
-| 214|com.google.flatbuffers:flatbuffers-java                               |1.12.0              |Xamarin.Google.FlatBuffers.Java                                       |1.12.0              |
-| 215|com.google.protobuf:protobuf-javalite                                 |3.21.9              |Xamarin.Protobuf.JavaLite                                             |3.21.9              |
+| 211|com.google.dagger:dagger                                              |2.42                |Xamarin.Google.Dagger                                                 |2.42.0              |
+| 212|com.google.errorprone:error_prone_annotations                         |2.15.0              |Xamarin.Google.ErrorProne.Annotations                                 |2.15.0              |
+| 213|com.google.zxing:core                                                 |3.5.1               |Xamarin.Google.ZXing.Core                                             |3.5.1               |
+| 214|com.google.flatbuffers:flatbuffers-java                               |2.0.8               |Xamarin.Google.FlatBuffers.Java                                       |2.0.8               |
+| 215|com.google.protobuf:protobuf-javalite                                 |3.21.12             |Xamarin.Protobuf.JavaLite                                             |3.21.12             |
 | 216|com.google.protobuf:protobuf-lite                                     |3.0.1               |Xamarin.Protobuf.Lite                                                 |3.0.1.6             |
 | 217|com.squareup.okhttp:okhttp                                            |2.7.5               |Square.OkHttp                                                         |2.7.5.6             |
 | 218|com.squareup.okhttp3:logging-interceptor                              |4.4.1               |Square.OkHttp3.LoggingInterceptor                                     |4.4.1               |
