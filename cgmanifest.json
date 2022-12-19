@@ -2542,9 +2542,9 @@
         "maven": {
           "artifactId": "billing",
           "groupId": "com.android.billingclient",
-          "version": "4.0.0",
+          "version": "5.0.0",
           "nuGetId": "Xamarin.Android.Google.BillingClient",
-          "nuGetVersion": "4.0.0"
+          "nuGetVersion": "5.0.0"
         }
       }
     },
@@ -2554,9 +2554,9 @@
         "maven": {
           "artifactId": "billing-ktx",
           "groupId": "com.android.billingclient",
-          "version": "4.0.0",
+          "version": "5.0.0",
           "nuGetId": "Xamarin.Android.Google.BillingClient.Ktx",
-          "nuGetVersion": "4.0.0"
+          "nuGetVersion": "5.0.0"
         }
       }
     },
@@ -2735,9 +2735,9 @@
         "maven": {
           "artifactId": "dagger",
           "groupId": "com.google.dagger",
-          "version": "2.41",
+          "version": "2.42",
           "nuGetId": "Xamarin.Google.Dagger",
-          "nuGetVersion": "2.41.0.2"
+          "nuGetVersion": "2.42.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2748,9 +2748,9 @@
         "maven": {
           "artifactId": "error_prone_annotations",
           "groupId": "com.google.errorprone",
-          "version": "2.14.0",
+          "version": "2.15.0",
           "nuGetId": "Xamarin.Google.ErrorProne.Annotations",
-          "nuGetVersion": "2.14.0"
+          "nuGetVersion": "2.15.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2761,9 +2761,9 @@
         "maven": {
           "artifactId": "core",
           "groupId": "com.google.zxing",
-          "version": "3.5.0",
+          "version": "3.5.1",
           "nuGetId": "Xamarin.Google.ZXing.Core",
-          "nuGetVersion": "3.5.0.2"
+          "nuGetVersion": "3.5.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2774,9 +2774,9 @@
         "maven": {
           "artifactId": "flatbuffers-java",
           "groupId": "com.google.flatbuffers",
-          "version": "1.12.0",
+          "version": "2.0.8",
           "nuGetId": "Xamarin.Google.FlatBuffers.Java",
-          "nuGetVersion": "1.12.0"
+          "nuGetVersion": "2.0.8"
         }
       }
     },
@@ -2786,9 +2786,9 @@
         "maven": {
           "artifactId": "protobuf-javalite",
           "groupId": "com.google.protobuf",
-          "version": "3.21.9",
+          "version": "3.21.12",
           "nuGetId": "Xamarin.Protobuf.JavaLite",
-          "nuGetVersion": "3.21.9"
+          "nuGetVersion": "3.21.12"
         }
       },
       "license": "BSD 2 Clause AND BSD 3 Clause"
@@ -3255,7 +3255,7 @@
           "artifactId": "tensorflow-lite-support",
           "groupId": "org.tensorflow",
           "version": "0.4.3",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Support",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Support.Library",
           "nuGetVersion": "0.4.3"
         }
       },
@@ -3294,7 +3294,7 @@
           "artifactId": "tensorflow-lite-task-base",
           "groupId": "org.tensorflow",
           "version": "0.4.3",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Base",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Base.Library",
           "nuGetVersion": "0.4.3"
         }
       },
