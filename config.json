@@ -748,32 +748,32 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-abt",
-        "version": "21.0.2",
-        "nugetVersion": "121.0.2",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.Firebase.Abt",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads",
-        "version": "21.2.0",
-        "nugetVersion": "121.2.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0",
         "nugetId": "Xamarin.Firebase.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads-lite",
-        "version": "21.2.0",
-        "nugetVersion": "121.2.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0",
         "nugetId": "Xamarin.Firebase.Ads.Lite",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics",
-        "version": "21.1.1",
-        "nugetVersion": "121.1.1",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.Firebase.Analytics",
         "dependencyOnly": false
       },
@@ -788,8 +788,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics-ktx",
-        "version": "21.1.1",
-        "nugetVersion": "121.1.1",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.Firebase.Analytics.Ktx",
         "dependencyOnly": false
       },
@@ -804,40 +804,40 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appcheck",
-        "version": "16.0.2",
-        "nugetVersion": "116.0.2",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
         "nugetId": "Xamarin.Firebase.AppCheck",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appcheck-interop",
-        "version": "16.0.2",
-        "nugetVersion": "116.0.2",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
         "nugetId": "Xamarin.Firebase.AppCheck.Interop",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appcheck-ktx",
-        "version": "16.0.2",
-        "nugetVersion": "116.0.2",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
         "nugetId": "Xamarin.Firebase.AppCheck.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appcheck-playintegrity",
-        "version": "16.0.2",
-        "nugetVersion": "116.0.2",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
         "nugetId": "Xamarin.Firebase.AppCheck.PlayIntegrity",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appcheck-safetynet",
-        "version": "16.0.2",
-        "nugetVersion": "116.0.2",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
         "nugetId": "Xamarin.Firebase.AppCheck.SafetyNet",
         "dependencyOnly": false
       },
@@ -852,8 +852,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-auth",
-        "version": "21.0.8",
-        "nugetVersion": "121.0.8",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.Firebase.Auth",
         "dependencyOnly": false
       },
@@ -868,8 +868,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-auth-ktx",
-        "version": "21.0.8",
-        "nugetVersion": "121.0.8",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.Firebase.Auth.Ktx",
         "dependencyOnly": false
       },
@@ -884,8 +884,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-common-ktx",
-        "version": "20.1.2",
-        "nugetVersion": "120.1.2",
+        "version": "20.2.0",
+        "nugetVersion": "120.2.0",
         "nugetId": "Xamarin.Firebase.Common.Ktx",
         "dependencyOnly": false
       },
@@ -900,16 +900,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-config",
-        "version": "21.1.2",
-        "nugetVersion": "121.1.2",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.Firebase.Config",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-config-ktx",
-        "version": "21.1.2",
-        "nugetVersion": "121.1.2",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0",
         "nugetId": "Xamarin.Firebase.Config.Ktx",
         "dependencyOnly": false
       },
@@ -932,32 +932,32 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-crashlytics",
-        "version": "18.2.13",
-        "nugetVersion": "118.2.13",
+        "version": "18.3.2",
+        "nugetVersion": "118.3.2",
         "nugetId": "Xamarin.Firebase.Crashlytics",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-crashlytics-ktx",
-        "version": "18.2.13",
-        "nugetVersion": "118.2.13",
+        "version": "18.3.2",
+        "nugetVersion": "118.3.2",
         "nugetId": "Xamarin.Firebase.Crashlytics.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-crashlytics-ndk",
-        "version": "18.2.13",
-        "nugetVersion": "118.2.13",
+        "version": "18.3.2",
+        "nugetVersion": "118.3.2",
         "nugetId": "Xamarin.Firebase.Crashlytics.NDK",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-database",
-        "version": "20.0.6",
-        "nugetVersion": "120.0.6",
+        "version": "20.1.0",
+        "nugetVersion": "120.1.0",
         "nugetId": "Xamarin.Firebase.Database",
         "dependencyOnly": false
       },
@@ -980,32 +980,32 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-database-ktx",
-        "version": "20.0.6",
-        "nugetVersion": "120.0.6",
+        "version": "20.1.0",
+        "nugetVersion": "120.1.0",
         "nugetId": "Xamarin.Firebase.Database.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-datatransport",
-        "version": "18.1.6",
-        "nugetVersion": "118.1.6",
+        "version": "18.1.7",
+        "nugetVersion": "118.1.7",
         "nugetId": "Xamarin.Firebase.Datatransport",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-dynamic-links",
-        "version": "21.0.2",
-        "nugetVersion": "121.0.2",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.Firebase.Dynamic.Links",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-dynamic-links-ktx",
-        "version": "21.0.2",
-        "nugetVersion": "121.0.2",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.Firebase.Dynamic.Links.Ktx",
         "dependencyOnly": false
       },
@@ -1036,32 +1036,32 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-firestore",
-        "version": "24.3.1",
-        "nugetVersion": "124.3.1",
+        "version": "24.4.1",
+        "nugetVersion": "124.4.1",
         "nugetId": "Xamarin.Firebase.Firestore",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-firestore-ktx",
-        "version": "24.3.1",
-        "nugetVersion": "124.3.1",
+        "version": "24.4.1",
+        "nugetVersion": "124.4.1",
         "nugetId": "Xamarin.Firebase.Firestore.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-functions",
-        "version": "20.1.1",
-        "nugetVersion": "120.1.1",
+        "version": "20.2.1",
+        "nugetVersion": "120.2.1",
         "nugetId": "Xamarin.Firebase.Functions",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-functions-ktx",
-        "version": "20.1.1",
-        "nugetVersion": "120.1.1",
+        "version": "20.2.1",
+        "nugetVersion": "120.2.1",
         "nugetId": "Xamarin.Firebase.Functions.Ktx",
         "dependencyOnly": false
       },
@@ -1116,24 +1116,24 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-installations",
-        "version": "17.0.3",
-        "nugetVersion": "117.0.3",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0",
         "nugetId": "Xamarin.Firebase.Installations",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-installations-interop",
-        "version": "17.0.2",
-        "nugetVersion": "117.0.2",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0",
         "nugetId": "Xamarin.Firebase.Installations.InterOp",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-installations-ktx",
-        "version": "17.0.3",
-        "nugetVersion": "117.0.3",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0",
         "nugetId": "Xamarin.Firebase.Installations.Ktx",
         "dependencyOnly": false
       },
@@ -1596,16 +1596,16 @@
       {
         "groupId": "com.android.billingclient",
         "artifactId": "billing",
-        "version": "5.0.0",
-        "nugetVersion": "5.0.0",
+        "version": "5.1.0",
+        "nugetVersion": "5.1.0",
         "nugetId": "Xamarin.Android.Google.BillingClient",
         "dependencyOnly": false
       },
       {
         "groupId": "com.android.billingclient",
         "artifactId": "billing-ktx",
-        "version": "5.0.0",
-        "nugetVersion": "5.0.0",
+        "version": "5.1.0",
+        "nugetVersion": "5.1.0",
         "nugetId": "Xamarin.Android.Google.BillingClient.Ktx",
         "dependencyOnly": false
       },
@@ -1691,8 +1691,8 @@
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-backend-cct",
-        "version": "3.1.7",
-        "nugetVersion": "3.1.7",
+        "version": "3.1.8",
+        "nugetVersion": "3.1.8",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
         "dependencyOnly": false,
         "templateSet": "datatransport"
@@ -1700,8 +1700,8 @@
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
-        "version": "3.1.7",
-        "nugetVersion": "3.1.7",
+        "version": "3.1.8",
+        "nugetVersion": "3.1.8",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
         "dependencyOnly": false,
         "templateSet": "datatransport"
@@ -1893,8 +1893,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-android",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.Android",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1902,8 +1902,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-api",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.Api",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1911,8 +1911,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-context",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.Context",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1920,8 +1920,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-core",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.Core",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1929,8 +1929,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-okhttp",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.OkHttp",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1938,8 +1938,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-protobuf-lite",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1947,8 +1947,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-stub",
-        "version": "1.48.1",
-        "nugetVersion": "1.48.1",
+        "version": "1.50.2",
+        "nugetVersion": "1.50.2",
         "nugetId": "Xamarin.Grpc.Stub",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1956,8 +1956,8 @@
       {
         "groupId": "io.opencensus",
         "artifactId": "opencensus-api",
-        "version": "0.29.0",
-        "nugetVersion": "0.29.0.2",
+        "version": "0.30.0",
+        "nugetVersion": "0.30.0",
         "nugetId": "Xamarin.Io.OpenCensus.OpenCensusApi",
         "dependencyOnly": false,
         "templateSet": "opencensus"
@@ -1965,8 +1965,8 @@
       {
         "groupId": "io.opencensus",
         "artifactId": "opencensus-contrib-grpc-metrics",
-        "version": "0.29.0",
-        "nugetVersion": "0.29.0.2",
+        "version": "0.30.0",
+        "nugetVersion": "0.30.0",
         "nugetId": "Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics",
         "dependencyOnly": false,
         "templateSet": "opencensus"
@@ -2299,24 +2299,24 @@
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-backend-cct",
-        "version": "3.1.2",
-        "nugetVersion": "3.1.2",
+        "version": "3.1.8",
+        "nugetVersion": "3.1.8",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
-        "version": "3.1.2",
-        "nugetVersion": "3.1.2",
+        "version": "3.1.8",
+        "nugetVersion": "3.1.8",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "21.1.0",
-        "nugetVersion": "121.1.0.1",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": true
       },
@@ -2331,8 +2331,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": true
       },
@@ -2427,32 +2427,32 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib",
-        "version": "1.7.20",
-        "nugetVersion": "1.7.20",
+        "version": "1.7.22",
+        "nugetVersion": "1.7.22",
         "nugetId": "Xamarin.Kotlin.StdLib",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-common",
-        "version": "1.7.20",
-        "nugetVersion": "1.7.20",
+        "version": "1.7.22",
+        "nugetVersion": "1.7.22",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk7",
-        "version": "1.7.20",
-        "nugetVersion": "1.7.20",
+        "version": "1.7.22",
+        "nugetVersion": "1.7.22",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk8",
-        "version": "1.7.20",
-        "nugetVersion": "1.7.20",
+        "version": "1.7.22",
+        "nugetVersion": "1.7.22",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": true
       },
@@ -2460,7 +2460,7 @@
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-android",
         "version": "1.6.4",
-        "nugetVersion": "1.6.4",
+        "nugetVersion": "1.6.4.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Android",
         "dependencyOnly": true
       },
@@ -2468,8 +2468,16 @@
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-core",
         "version": "1.6.4",
-        "nugetVersion": "1.6.4",
+        "nugetVersion": "1.6.4.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Core",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-play-services",
+        "version": "1.6.4",
+        "nugetVersion": "1.6.4",
+        "nugetId": "Xamarin.KotlinX.Coroutines.Play.Services",
         "dependencyOnly": true
       },
       {
@@ -2527,6 +2535,14 @@
         "version": "21.1.0",
         "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-appindexing",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0.10",
+        "nugetId": "Xamarin.Firebase.AppIndexing",
         "dependencyOnly": true
       },
       {
