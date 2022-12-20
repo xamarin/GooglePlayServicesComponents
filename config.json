@@ -884,8 +884,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-common-ktx",
-        "version": "20.1.2",
-        "nugetVersion": "120.1.2",
+        "version": "20.2.0",
+        "nugetVersion": "120.2.0",
         "nugetId": "Xamarin.Firebase.Common.Ktx",
         "dependencyOnly": false
       },
@@ -1736,8 +1736,8 @@
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.14.0",
-        "nugetVersion": "2.14.0",
+        "version": "2.15.0",
+        "nugetVersion": "2.15.0",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": false,
         "templateSet": "errorprone"
@@ -2427,32 +2427,32 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib",
-        "version": "1.7.21",
-        "nugetVersion": "1.7.21",
+        "version": "1.7.22",
+        "nugetVersion": "1.7.22",
         "nugetId": "Xamarin.Kotlin.StdLib",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-common",
-        "version": "1.7.21",
-        "nugetVersion": "1.7.21",
+        "version": "1.7.22",
+        "nugetVersion": "1.7.22",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk7",
-        "version": "1.7.21",
-        "nugetVersion": "1.7.21",
+        "version": "1.7.22",
+        "nugetVersion": "1.7.22",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk8",
-        "version": "1.7.21",
-        "nugetVersion": "1.7.21",
+        "version": "1.7.22",
+        "nugetVersion": "1.7.22",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": true
       },
@@ -2470,6 +2470,14 @@
         "version": "1.6.4",
         "nugetVersion": "1.6.4.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Core",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-play-services",
+        "version": "1.6.4",
+        "nugetVersion": "1.6.4",
+        "nugetId": "Xamarin.KotlinX.Coroutines.Play.Services",
         "dependencyOnly": true
       },
       {
@@ -2527,6 +2535,14 @@
         "version": "21.1.0",
         "nugetVersion": "121.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-appindexing",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0.10",
+        "nugetId": "Xamarin.Firebase.AppIndexing",
         "dependencyOnly": true
       },
       {
