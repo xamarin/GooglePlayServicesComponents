@@ -1754,8 +1754,8 @@
       {
         "groupId": "com.google.flatbuffers",
         "artifactId": "flatbuffers-java",
-        "version": "1.12.0",
-        "nugetVersion": "1.12.0",
+        "version": "2.0.8",
+        "nugetVersion": "2.0.8",
         "nugetId": "Xamarin.Google.FlatBuffers.Java",
         "dependencyOnly": false,
         "templateSet": "flatbuffers"
@@ -1763,8 +1763,8 @@
       {
         "groupId": "com.google.protobuf",
         "artifactId": "protobuf-javalite",
-        "version": "3.21.9",
-        "nugetVersion": "3.21.9",
+        "version": "3.21.12",
+        "nugetVersion": "3.21.12",
         "nugetId": "Xamarin.Protobuf.JavaLite",
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth",
