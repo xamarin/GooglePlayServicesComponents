@@ -1580,16 +1580,16 @@
       {
         "groupId": "com.google.android.libraries.places",
         "artifactId": "places",
-        "version": "2.0.0",
-        "nugetVersion": "2.0.0.2",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0",
         "nugetId": "Xamarin.GoogleAndroid.Libraries.Places",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.libraries.places",
         "artifactId": "places-compat",
-        "version": "2.0.0",
-        "nugetVersion": "2.0.0.2",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0",
         "nugetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat",
         "dependencyOnly": false
       },
@@ -1628,8 +1628,8 @@
       {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "annotations",
-        "version": "4.13.2",
-        "nugetVersion": "4.13.2.2",
+        "version": "4.14.2",
+        "nugetVersion": "4.14.2",
         "nugetId": "Xamarin.Android.Glide.Annotations",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -1637,8 +1637,8 @@
       {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "disklrucache",
-        "version": "4.13.2",
-        "nugetVersion": "4.13.2.2",
+        "version": "4.14.2",
+        "nugetVersion": "4.14.2",
         "nugetId": "Xamarin.Android.Glide.DiskLruCache",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -1646,8 +1646,8 @@
       {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "gifdecoder",
-        "version": "4.13.2",
-        "nugetVersion": "4.13.2.2",
+        "version": "4.14.2",
+        "nugetVersion": "4.14.2",
         "nugetId": "Xamarin.Android.Glide.GifDecoder",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -1655,8 +1655,8 @@
       {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "glide",
-        "version": "4.13.2",
-        "nugetVersion": "4.13.2.2",
+        "version": "4.14.2",
+        "nugetVersion": "4.14.2",
         "nugetId": "Xamarin.Android.Glide",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -1664,8 +1664,8 @@
       {
         "groupId": "com.github.bumptech.glide",
         "artifactId": "recyclerview-integration",
-        "version": "4.13.2",
-        "nugetVersion": "4.13.2.2",
+        "version": "4.14.2",
+        "nugetVersion": "4.14.2",
         "nugetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
         "dependencyOnly": false,
         "templateSet": "glide"
@@ -1727,8 +1727,8 @@
       {
         "groupId": "com.google.dagger",
         "artifactId": "dagger",
-        "version": "2.42",
-        "nugetVersion": "2.42.0",
+        "version": "2.43.2",
+        "nugetVersion": "2.43.2",
         "nugetId": "Xamarin.Google.Dagger",
         "dependencyOnly": false,
         "templateSet": "dagger"
@@ -1736,8 +1736,8 @@
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.15.0",
-        "nugetVersion": "2.15.0",
+        "version": "2.16",
+        "nugetVersion": "2.16.0",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": false,
         "templateSet": "errorprone"
@@ -1754,8 +1754,8 @@
       {
         "groupId": "com.google.flatbuffers",
         "artifactId": "flatbuffers-java",
-        "version": "2.0.8",
-        "nugetVersion": "2.0.8",
+        "version": "22.10.26",
+        "nugetVersion": "22.10.26",
         "nugetId": "Xamarin.Google.FlatBuffers.Java",
         "dependencyOnly": false,
         "templateSet": "flatbuffers"
@@ -1793,8 +1793,8 @@
       {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "logging-interceptor",
-        "version": "4.4.1",
-        "nugetVersion": "4.4.1",
+        "version": "4.5.0",
+        "nugetVersion": "4.5.0",
         "nugetId": "Square.OkHttp3.LoggingInterceptor",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
@@ -1802,8 +1802,8 @@
       {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "okhttp",
-        "version": "4.9.3",
-        "nugetVersion": "4.9.3.2",
+        "version": "4.10.0",
+        "nugetVersion": "4.10.0",
         "nugetId": "Square.OkHttp3",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
@@ -1811,8 +1811,8 @@
       {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "okhttp-urlconnection",
-        "version": "4.9.3",
-        "nugetVersion": "4.9.3.2",
+        "version": "4.10.0",
+        "nugetVersion": "4.10.0",
         "nugetId": "Square.OkHttp3.UrlConnection",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
@@ -1820,8 +1820,8 @@
       {
         "groupId": "com.squareup.okio",
         "artifactId": "okio",
-        "version": "2.10.0",
-        "nugetVersion": "2.10.0.5",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
         "nugetId": "Square.OkIO",
         "dependencyOnly": false,
         "templateSet": "squareup-okio"
@@ -2132,7 +2132,7 @@
         "groupId": "androidx.annotation",
         "artifactId": "annotation",
         "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "nugetVersion": "1.5.0.1",
         "nugetId": "Xamarin.AndroidX.Annotation",
         "dependencyOnly": true
       },
@@ -2140,7 +2140,7 @@
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat",
         "version": "1.5.1",
-        "nugetVersion": "1.5.1",
+        "nugetVersion": "1.5.1.1",
         "nugetId": "Xamarin.AndroidX.AppCompat",
         "dependencyOnly": true
       },
@@ -2148,7 +2148,7 @@
         "groupId": "androidx.browser",
         "artifactId": "browser",
         "version": "1.4.0",
-        "nugetVersion": "1.4.0.2",
+        "nugetVersion": "1.4.0.3",
         "nugetId": "Xamarin.AndroidX.Browser",
         "dependencyOnly": true
       },
@@ -2156,7 +2156,7 @@
         "groupId": "androidx.cardview",
         "artifactId": "cardview",
         "version": "1.0.0",
-        "nugetVersion": "1.0.0.16",
+        "nugetVersion": "1.0.0.17",
         "nugetId": "Xamarin.AndroidX.CardView",
         "dependencyOnly": true
       },
@@ -2172,7 +2172,7 @@
         "groupId": "androidx.concurrent",
         "artifactId": "concurrent-futures",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0.9",
+        "nugetVersion": "1.1.0.10",
         "nugetId": "Xamarin.AndroidX.Concurrent.Futures",
         "dependencyOnly": true
       },
@@ -2180,7 +2180,7 @@
         "groupId": "androidx.constraintlayout",
         "artifactId": "constraintlayout",
         "version": "2.1.4",
-        "nugetVersion": "2.1.4.1",
+        "nugetVersion": "2.1.4.2",
         "nugetId": "Xamarin.AndroidX.ConstraintLayout",
         "dependencyOnly": true
       },
@@ -2188,7 +2188,7 @@
         "groupId": "androidx.core",
         "artifactId": "core",
         "version": "1.9.0",
-        "nugetVersion": "1.9.0",
+        "nugetVersion": "1.9.0.1",
         "nugetId": "Xamarin.AndroidX.Core",
         "dependencyOnly": true
       },
@@ -2196,15 +2196,15 @@
         "groupId": "androidx.exifinterface",
         "artifactId": "exifinterface",
         "version": "1.3.4",
-        "nugetVersion": "1.3.4",
+        "nugetVersion": "1.3.5",
         "nugetId": "Xamarin.AndroidX.ExifInterface",
         "dependencyOnly": true
       },
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment",
-        "version": "1.5.3",
-        "nugetVersion": "1.5.3",
+        "version": "1.5.5",
+        "nugetVersion": "1.5.5",
         "nugetId": "Xamarin.AndroidX.Fragment",
         "dependencyOnly": true
       },
@@ -2212,7 +2212,7 @@
         "groupId": "androidx.legacy",
         "artifactId": "legacy-support-core-utils",
         "version": "1.0.0",
-        "nugetVersion": "1.0.0.14",
+        "nugetVersion": "1.0.0.15",
         "nugetId": "Xamarin.AndroidX.Legacy.Support.Core.Utils",
         "dependencyOnly": true
       },
@@ -2220,7 +2220,7 @@
         "groupId": "androidx.legacy",
         "artifactId": "legacy-support-v4",
         "version": "1.0.0",
-        "nugetVersion": "1.0.0.14",
+        "nugetVersion": "1.0.0.15",
         "nugetId": "Xamarin.AndroidX.Legacy.Support.V4",
         "dependencyOnly": true
       },
@@ -2228,7 +2228,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-extensions",
         "version": "2.2.0",
-        "nugetVersion": "2.2.0.14",
+        "nugetVersion": "2.2.0.15",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Extensions",
         "dependencyOnly": true
       },
@@ -2236,7 +2236,7 @@
         "groupId": "androidx.loader",
         "artifactId": "loader",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0.14",
+        "nugetVersion": "1.1.0.15",
         "nugetId": "Xamarin.AndroidX.Loader",
         "dependencyOnly": true
       },
@@ -2244,15 +2244,15 @@
         "groupId": "androidx.localbroadcastmanager",
         "artifactId": "localbroadcastmanager",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0.2",
+        "nugetVersion": "1.1.0.3",
         "nugetId": "Xamarin.AndroidX.LocalBroadcastManager",
         "dependencyOnly": true
       },
       {
         "groupId": "androidx.media",
         "artifactId": "media",
-        "version": "1.6.0.1",
-        "nugetVersion": "1.6.0.1",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0.2",
         "nugetId": "Xamarin.AndroidX.Media",
         "dependencyOnly": true
       },
@@ -2260,7 +2260,7 @@
         "groupId": "androidx.mediarouter",
         "artifactId": "mediarouter",
         "version": "1.3.1",
-        "nugetVersion": "1.3.1",
+        "nugetVersion": "1.3.1.1",
         "nugetId": "Xamarin.AndroidX.MediaRouter",
         "dependencyOnly": true
       },
@@ -2268,7 +2268,7 @@
         "groupId": "androidx.recyclerview",
         "artifactId": "recyclerview",
         "version": "1.2.1",
-        "nugetVersion": "1.2.1.7",
+        "nugetVersion": "1.2.1.8",
         "nugetId": "Xamarin.AndroidX.RecyclerView",
         "dependencyOnly": true
       },
@@ -2276,7 +2276,7 @@
         "groupId": "androidx.tracing",
         "artifactId": "tracing",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0.1",
+        "nugetVersion": "1.1.0.2",
         "nugetId": "Xamarin.AndroidX.Tracing.Tracing",
         "dependencyOnly": true
       },
@@ -2284,7 +2284,7 @@
         "groupId": "androidx.vectordrawable",
         "artifactId": "vectordrawable-animated",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0.14",
+        "nugetVersion": "1.1.0.15",
         "nugetId": "Xamarin.AndroidX.VectorDrawable.Animated",
         "dependencyOnly": true
       },
@@ -2292,7 +2292,7 @@
         "groupId": "androidx.work",
         "artifactId": "work-runtime",
         "version": "2.7.1",
-        "nugetVersion": "2.7.1.4",
+        "nugetVersion": "2.7.1.5",
         "nugetId": "Xamarin.AndroidX.Work.Runtime",
         "dependencyOnly": true
       },
