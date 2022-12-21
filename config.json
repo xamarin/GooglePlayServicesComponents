@@ -1588,8 +1588,8 @@
       {
         "groupId": "com.google.android.libraries.places",
         "artifactId": "places",
-        "version": "2.0.0",
-        "nugetVersion": "2.0.0.2",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.GoogleAndroid.Libraries.Places",
         "dependencyOnly": false
       },
