@@ -5,10 +5,10 @@
 
 |    |                                                                      |                    |                                                                      |                    |
 |----|----------------------------------------------------------------------|--------------------|----------------------------------------------------------------------|--------------------|
-|   1|com.google.android.gms:play-services-ads                              |21.3.0              |Xamarin.GooglePlayServices.Ads                                        |121.3.0             |
-|   2|com.google.android.gms:play-services-ads-base                         |21.3.0              |Xamarin.GooglePlayServices.Ads.Base                                   |121.3.0             |
+|   1|com.google.android.gms:play-services-ads                              |21.4.0              |Xamarin.GooglePlayServices.Ads                                        |121.4.0             |
+|   2|com.google.android.gms:play-services-ads-base                         |21.4.0              |Xamarin.GooglePlayServices.Ads.Base                                   |121.4.0             |
 |   3|com.google.android.gms:play-services-ads-identifier                   |18.0.1              |Xamarin.GooglePlayServices.Ads.Identifier                             |118.0.1.2           |
-|   4|com.google.android.gms:play-services-ads-lite                         |21.3.0              |Xamarin.GooglePlayServices.Ads.Lite                                   |121.3.0             |
+|   4|com.google.android.gms:play-services-ads-lite                         |21.4.0              |Xamarin.GooglePlayServices.Ads.Lite                                   |121.4.0             |
 |   5|com.google.android.gms:play-services-afs-native                       |19.0.3              |Xamarin.GooglePlayServices.AFS.Native                                 |119.0.3.2           |
 |   6|com.google.android.gms:play-services-analytics                        |18.0.2              |Xamarin.GooglePlayServices.Analytics                                  |118.0.2             |
 |   7|com.google.android.gms:play-services-analytics-impl                   |18.0.2              |Xamarin.GooglePlayServices.Analytics.Impl                             |118.0.2             |
@@ -96,8 +96,8 @@
 |  89|com.google.android.play:review                                        |2.0.1               |Xamarin.Google.Android.Play.Review                                    |2.0.1               |
 |  90|com.google.android.play:review-ktx                                    |2.0.0               |Xamarin.Google.Android.Play.Review.Ktx                                |2.0.0               |
 |  91|com.google.firebase:firebase-abt                                      |21.1.0              |Xamarin.Firebase.Abt                                                  |121.1.0             |
-|  92|com.google.firebase:firebase-ads                                      |21.3.0              |Xamarin.Firebase.Ads                                                  |121.3.0             |
-|  93|com.google.firebase:firebase-ads-lite                                 |21.3.0              |Xamarin.Firebase.Ads.Lite                                             |121.3.0             |
+|  92|com.google.firebase:firebase-ads                                      |21.4.0              |Xamarin.Firebase.Ads                                                  |121.4.0             |
+|  93|com.google.firebase:firebase-ads-lite                                 |21.4.0              |Xamarin.Firebase.Ads.Lite                                             |121.4.0             |
 |  94|com.google.firebase:firebase-analytics                                |21.2.0              |Xamarin.Firebase.Analytics                                            |121.2.0             |
 |  95|com.google.firebase:firebase-analytics-impl                           |16.3.0              |Xamarin.Firebase.Analytics.Impl                                       |116.3.0.7           |
 |  96|com.google.firebase:firebase-analytics-ktx                            |21.2.0              |Xamarin.Firebase.Analytics.Ktx                                        |121.2.0             |
@@ -110,7 +110,7 @@
 | 103|com.google.firebase:firebase-appindexing                              |20.0.0              |Xamarin.Firebase.AppIndexing                                          |120.0.0.10          |
 | 104|com.google.firebase:firebase-auth                                     |21.1.0              |Xamarin.Firebase.Auth                                                 |121.1.0             |
 | 105|com.google.firebase:firebase-auth-interop                             |20.0.0              |Xamarin.Firebase.Auth.Interop                                         |120.0.0.7           |
-| 106|com.google.firebase:firebase-auth-ktx                                 |21.0.0              |Xamarin.Firebase.Auth.Ktx                                             |121.0.0             |
+| 106|com.google.firebase:firebase-auth-ktx                                 |21.1.0              |Xamarin.Firebase.Auth.Ktx                                             |121.1.0             |
 | 107|com.google.firebase:firebase-common                                   |20.2.0              |Xamarin.Firebase.Common                                               |120.2.0             |
 | 108|com.google.firebase:firebase-common-ktx                               |20.2.0              |Xamarin.Firebase.Common.Ktx                                           |120.2.0             |
 | 109|com.google.firebase:firebase-components                               |17.0.1              |Xamarin.Firebase.Components                                           |117.0.1             |
@@ -137,18 +137,18 @@
 | 130|com.google.firebase:firebase-functions-ktx                            |20.2.1              |Xamarin.Firebase.Functions.Ktx                                        |120.2.1             |
 | 131|com.google.firebase:firebase-iid                                      |21.1.0              |Xamarin.Firebase.Iid                                                  |121.1.0.7           |
 | 132|com.google.firebase:firebase-iid-interop                              |17.1.0              |Xamarin.Firebase.Iid.Interop                                          |117.1.0.7           |
-| 133|com.google.firebase:firebase-inappmessaging                           |20.1.3              |Xamarin.Firebase.InAppMessaging                                       |120.1.3             |
-| 134|com.google.firebase:firebase-inappmessaging-display                   |20.1.3              |Xamarin.Firebase.InAppMessaging.Display                               |120.1.3             |
-| 135|com.google.firebase:firebase-inappmessaging-display-ktx               |20.1.3              |Xamarin.Firebase.InAppMessaging.Display.Ktx                           |120.1.3             |
-| 136|com.google.firebase:firebase-inappmessaging-ktx                       |20.1.3              |Xamarin.Firebase.InAppMessaging.Ktx                                   |120.1.3             |
+| 133|com.google.firebase:firebase-inappmessaging                           |20.2.0              |Xamarin.Firebase.InAppMessaging                                       |120.2.0             |
+| 134|com.google.firebase:firebase-inappmessaging-display                   |20.2.0              |Xamarin.Firebase.InAppMessaging.Display                               |120.2.0             |
+| 135|com.google.firebase:firebase-inappmessaging-display-ktx               |20.2.0              |Xamarin.Firebase.InAppMessaging.Display.Ktx                           |120.2.0             |
+| 136|com.google.firebase:firebase-inappmessaging-ktx                       |20.2.0              |Xamarin.Firebase.InAppMessaging.Ktx                                   |120.2.0             |
 | 137|com.google.firebase:firebase-installations                            |17.1.0              |Xamarin.Firebase.Installations                                        |117.1.0             |
 | 138|com.google.firebase:firebase-installations-interop                    |17.1.0              |Xamarin.Firebase.Installations.InterOp                                |117.1.0             |
 | 139|com.google.firebase:firebase-installations-ktx                        |17.1.0              |Xamarin.Firebase.Installations.Ktx                                    |117.1.0             |
 | 140|com.google.firebase:firebase-invites                                  |17.0.0              |Xamarin.Firebase.Invites                                              |117.0.0.7           |
 | 141|com.google.firebase:firebase-measurement-connector                    |20.0.0              |Xamarin.Firebase.Measurement.Connector                                |120.0.0             |
-| 142|com.google.firebase:firebase-messaging                                |23.0.8              |Xamarin.Firebase.Messaging                                            |123.0.8             |
-| 143|com.google.firebase:firebase-messaging-directboot                     |23.0.8              |Xamarin.Firebase.Messaging.DirectBoot                                 |123.0.8             |
-| 144|com.google.firebase:firebase-messaging-ktx                            |23.0.8              |Xamarin.Firebase.Messaging.Ktx                                        |123.0.8             |
+| 142|com.google.firebase:firebase-messaging                                |23.1.1              |Xamarin.Firebase.Messaging                                            |123.1.1             |
+| 143|com.google.firebase:firebase-messaging-directboot                     |23.1.1              |Xamarin.Firebase.Messaging.DirectBoot                                 |123.1.1             |
+| 144|com.google.firebase:firebase-messaging-ktx                            |23.1.1              |Xamarin.Firebase.Messaging.Ktx                                        |123.1.1             |
 | 145|com.google.firebase:firebase-ml-common                                |22.1.2              |Xamarin.Firebase.ML.Common                                            |122.1.2.7           |
 | 146|com.google.firebase:firebase-ml-model-interpreter                     |22.0.4              |Xamarin.Firebase.ML.Model.Interpreter                                 |122.0.4.7           |
 | 147|com.google.firebase:firebase-ml-natural-language                      |22.0.1              |Xamarin.Firebase.ML.Natural.Language                                  |122.0.1.7           |
@@ -164,11 +164,11 @@
 | 157|com.google.firebase:firebase-ml-vision-image-label-model              |20.0.2              |Xamarin.Firebase.ML.Vision.Image.Label.Model                          |120.0.2.7           |
 | 158|com.google.firebase:firebase-ml-vision-internal-vkp                   |17.0.2              |Xamarin.Firebase.ML.Vision.Internal.Vkp                               |117.0.2.7           |
 | 159|com.google.firebase:firebase-ml-vision-object-detection-model         |19.0.6              |Xamarin.Firebase.ML.Vision.Object.Detection.Model                     |119.0.6.7           |
-| 160|com.google.firebase:firebase-perf                                     |20.1.1              |Xamarin.Firebase.Perf                                                 |120.1.1             |
-| 161|com.google.firebase:firebase-perf-ktx                                 |20.1.1              |Xamarin.Firebase.Perf.Ktx                                             |120.1.1             |
-| 162|com.google.firebase:firebase-storage                                  |20.0.2              |Xamarin.Firebase.Storage                                              |120.0.2             |
+| 160|com.google.firebase:firebase-perf                                     |20.2.0              |Xamarin.Firebase.Perf                                                 |120.2.0             |
+| 161|com.google.firebase:firebase-perf-ktx                                 |20.2.0              |Xamarin.Firebase.Perf.Ktx                                             |120.2.0             |
+| 162|com.google.firebase:firebase-storage                                  |20.1.0              |Xamarin.Firebase.Storage                                              |120.1.0             |
 | 163|com.google.firebase:firebase-storage-common                           |17.0.0              |Xamarin.Firebase.Storage.Common                                       |117.0.0.7           |
-| 164|com.google.firebase:firebase-storage-ktx                              |20.0.2              |Xamarin.Firebase.Storage.Ktx                                          |120.0.2             |
+| 164|com.google.firebase:firebase-storage-ktx                              |20.1.0              |Xamarin.Firebase.Storage.Ktx                                          |120.1.0             |
 | 165|com.google.firebase:protolite-well-known-types                        |18.0.0              |Xamarin.Firebase.ProtoliteWellKnownTypes                              |118.0.0.7           |
 | 166|com.google.mlkit:barcode-scanning                                     |17.0.2              |Xamarin.Google.MLKit.BarcodeScanning                                  |117.0.2.2           |
 | 167|com.google.mlkit:barcode-scanning-common                              |17.0.0              |Xamarin.Google.MLKit.BarcodeScanning.Common                           |117.0.0.2           |
@@ -218,8 +218,8 @@
 | 211|com.google.dagger:dagger                                              |2.42                |Xamarin.Google.Dagger                                                 |2.42.0              |
 | 212|com.google.errorprone:error_prone_annotations                         |2.15.0              |Xamarin.Google.ErrorProne.Annotations                                 |2.15.0              |
 | 213|com.google.zxing:core                                                 |3.5.1               |Xamarin.Google.ZXing.Core                                             |3.5.1               |
-| 214|com.google.flatbuffers:flatbuffers-java                               |1.12.0              |Xamarin.Google.FlatBuffers.Java                                       |1.12.0              |
-| 215|com.google.protobuf:protobuf-javalite                                 |3.21.9              |Xamarin.Protobuf.JavaLite                                             |3.21.9              |
+| 214|com.google.flatbuffers:flatbuffers-java                               |2.0.8               |Xamarin.Google.FlatBuffers.Java                                       |2.0.8               |
+| 215|com.google.protobuf:protobuf-javalite                                 |3.21.12             |Xamarin.Protobuf.JavaLite                                             |3.21.12             |
 | 216|com.google.protobuf:protobuf-lite                                     |3.0.1               |Xamarin.Protobuf.Lite                                                 |3.0.1.6             |
 | 217|com.squareup.okhttp:okhttp                                            |2.7.5               |Square.OkHttp                                                         |2.7.5.6             |
 | 218|com.squareup.okhttp3:logging-interceptor                              |4.4.1               |Square.OkHttp3.LoggingInterceptor                                     |4.4.1               |
