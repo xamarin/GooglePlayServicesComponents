@@ -1580,16 +1580,16 @@
       {
         "groupId": "com.google.android.libraries.places",
         "artifactId": "places",
-        "version": "2.0.0",
-        "nugetVersion": "2.0.0.2",
+        "version": "2.2.0",
+        "nugetVersion": "2.2.0",
         "nugetId": "Xamarin.GoogleAndroid.Libraries.Places",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.libraries.places",
         "artifactId": "places-compat",
-        "version": "2.0.0",
-        "nugetVersion": "2.0.0.2",
+        "version": "2.2.0",
+        "nugetVersion": "2.2.0",
         "nugetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat",
         "dependencyOnly": false
       },
@@ -1727,8 +1727,8 @@
       {
         "groupId": "com.google.dagger",
         "artifactId": "dagger",
-        "version": "2.42",
-        "nugetVersion": "2.42.0",
+        "version": "2.44.2",
+        "nugetVersion": "2.44.2",
         "nugetId": "Xamarin.Google.Dagger",
         "dependencyOnly": false,
         "templateSet": "dagger"
@@ -1754,8 +1754,8 @@
       {
         "groupId": "com.google.flatbuffers",
         "artifactId": "flatbuffers-java",
-        "version": "2.0.8",
-        "nugetVersion": "2.0.8",
+        "version": "22.11.23",
+        "nugetVersion": "22.11.23",
         "nugetId": "Xamarin.Google.FlatBuffers.Java",
         "dependencyOnly": false,
         "templateSet": "flatbuffers"
@@ -1793,8 +1793,8 @@
       {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "logging-interceptor",
-        "version": "4.4.1",
-        "nugetVersion": "4.4.1",
+        "version": "4.6.0",
+        "nugetVersion": "4.6.0",
         "nugetId": "Square.OkHttp3.LoggingInterceptor",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
@@ -1820,8 +1820,8 @@
       {
         "groupId": "com.squareup.okio",
         "artifactId": "okio",
-        "version": "2.10.0",
-        "nugetVersion": "2.10.0.5",
+        "version": "3.1.0",
+        "nugetVersion": "3.1.0",
         "nugetId": "Square.OkIO",
         "dependencyOnly": false,
         "templateSet": "squareup-okio"
