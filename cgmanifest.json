@@ -1372,9 +1372,9 @@
         "maven": {
           "artifactId": "firebase-auth-ktx",
           "groupId": "com.google.firebase",
-          "version": "21.0.0",
+          "version": "21.1.0",
           "nuGetId": "Xamarin.Firebase.Auth.Ktx",
-          "nuGetVersion": "121.0.0"
+          "nuGetVersion": "121.1.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2074,9 +2074,9 @@
         "maven": {
           "artifactId": "firebase-perf",
           "groupId": "com.google.firebase",
-          "version": "20.1.1",
+          "version": "20.3.0",
           "nuGetId": "Xamarin.Firebase.Perf",
-          "nuGetVersion": "120.1.1"
+          "nuGetVersion": "120.3.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2087,9 +2087,9 @@
         "maven": {
           "artifactId": "firebase-perf-ktx",
           "groupId": "com.google.firebase",
-          "version": "20.1.1",
+          "version": "20.3.0",
           "nuGetId": "Xamarin.Firebase.Perf.Ktx",
-          "nuGetVersion": "120.1.1"
+          "nuGetVersion": "120.3.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2152,9 +2152,9 @@
         "maven": {
           "artifactId": "barcode-scanning",
           "groupId": "com.google.mlkit",
-          "version": "17.0.2",
+          "version": "17.0.3",
           "nuGetId": "Xamarin.Google.MLKit.BarcodeScanning",
-          "nuGetVersion": "117.0.2.2"
+          "nuGetVersion": "117.0.3"
         }
       },
       "license": "ML Kit Terms of Service"
@@ -2178,9 +2178,9 @@
         "maven": {
           "artifactId": "common",
           "groupId": "com.google.mlkit",
-          "version": "18.5.0",
+          "version": "18.6.0",
           "nuGetId": "Xamarin.Google.MLKit.Common",
-          "nuGetVersion": "118.5.0"
+          "nuGetVersion": "118.6.0"
         }
       },
       "license": "ML Kit Terms of Service"
@@ -2438,9 +2438,9 @@
         "maven": {
           "artifactId": "smart-reply-common",
           "groupId": "com.google.mlkit",
-          "version": "16.0.0",
+          "version": "16.1.0",
           "nuGetId": "Xamarin.Google.MLKit.SmartReply.Common",
-          "nuGetVersion": "116.0.0"
+          "nuGetVersion": "116.1.0"
         }
       },
       "license": "ML Kit Terms of Service"
@@ -2464,9 +2464,9 @@
         "maven": {
           "artifactId": "vision-common",
           "groupId": "com.google.mlkit",
-          "version": "17.2.1",
+          "version": "17.3.0",
           "nuGetId": "Xamarin.Google.MLKit.Vision.Common",
-          "nuGetVersion": "117.2.1"
+          "nuGetVersion": "117.3.0"
         }
       },
       "license": "ML Kit Terms of Service"

@@ -1308,16 +1308,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-perf",
-        "version": "20.1.1",
-        "nugetVersion": "120.1.1",
+        "version": "20.3.0",
+        "nugetVersion": "120.3.0",
         "nugetId": "Xamarin.Firebase.Perf",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-perf-ktx",
-        "version": "20.1.1",
-        "nugetVersion": "120.1.1",
+        "version": "20.3.0",
+        "nugetVersion": "120.3.0",
         "nugetId": "Xamarin.Firebase.Perf.Ktx",
         "dependencyOnly": false
       },
@@ -1356,8 +1356,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "barcode-scanning",
-        "version": "17.0.2",
-        "nugetVersion": "117.0.2.2",
+        "version": "17.0.3",
+        "nugetVersion": "117.0.3",
         "nugetId": "Xamarin.Google.MLKit.BarcodeScanning",
         "dependencyOnly": false
       },
@@ -1372,8 +1372,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "common",
-        "version": "18.5.0",
-        "nugetVersion": "118.5.0",
+        "version": "18.6.0",
+        "nugetVersion": "118.6.0",
         "nugetId": "Xamarin.Google.MLKit.Common",
         "dependencyOnly": false
       },
@@ -1532,8 +1532,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "smart-reply-common",
-        "version": "16.0.0",
-        "nugetVersion": "116.0.0",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
         "nugetId": "Xamarin.Google.MLKit.SmartReply.Common",
         "dependencyOnly": false
       },
@@ -1548,8 +1548,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "vision-common",
-        "version": "17.2.1",
-        "nugetVersion": "117.2.1",
+        "version": "17.3.0",
+        "nugetVersion": "117.3.0",
         "nugetId": "Xamarin.Google.MLKit.Vision.Common",
         "dependencyOnly": false
       },
