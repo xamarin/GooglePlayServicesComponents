@@ -101,6 +101,7 @@ Android.Gms.Fido
 Android.Gms.Fido.Common
 Android.Gms.Fido.Fido2
 Android.Gms.Fido.Fido2.Api.Common
+Android.Gms.Fido.SourceDevice
 Android.Gms.Fido.U2F
 Android.Gms.Fido.U2F.Api.Common
 Android.Gms.Fido.U2F.MessageBased
@@ -129,6 +130,12 @@ Android.Gms.Games.Snapshot
 Android.Gms.Games.Stats
 Android.Gms.Games.Video
 Android.Gms.Gcm
+Android.Gms.Home.Matter
+Android.Gms.Home.Matter.Commissioning
+Android.Gms.Home.Matter.Commissioning.Internal
+Android.Gms.Home.Matter.Common
+Android.Gms.Home.Matter.Discovery
+Android.Gms.Home.Matter.Settings
 Android.Gms.Identity.Intents
 Android.Gms.Identity.Intents.Model
 Android.Gms.Iid
@@ -627,6 +634,7 @@ Xamarin.GoogleAndroid.Libraries.Places.Api.Net
 Xamarin.GoogleAndroid.Libraries.Places.Compat
 Xamarin.GoogleAndroid.Libraries.Places.Compat.UI
 Xamarin.GoogleAndroid.Libraries.Places.Widget
+Xamarin.GoogleAndroid.Libraries.Places.Widget.Internal.UI
 Xamarin.GoogleAndroid.Libraries.Places.Widget.Listener
 Xamarin.GoogleAndroid.Libraries.Places.Widget.Model
 Xamarin.Grpc
