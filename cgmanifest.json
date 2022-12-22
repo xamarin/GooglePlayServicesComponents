@@ -2516,9 +2516,9 @@
         "maven": {
           "artifactId": "places",
           "groupId": "com.google.android.libraries.places",
-          "version": "2.0.0",
+          "version": "2.2.0",
           "nuGetId": "Xamarin.GoogleAndroid.Libraries.Places",
-          "nuGetVersion": "2.0.0.2"
+          "nuGetVersion": "2.2.0"
         }
       },
       "license": "Google Maps Platform Terms of Service"
@@ -2529,9 +2529,9 @@
         "maven": {
           "artifactId": "places-compat",
           "groupId": "com.google.android.libraries.places",
-          "version": "2.0.0",
+          "version": "2.2.0",
           "nuGetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat",
-          "nuGetVersion": "2.0.0.2"
+          "nuGetVersion": "2.2.0"
         }
       },
       "license": "Google Maps Platform Terms of Service"
@@ -2735,9 +2735,9 @@
         "maven": {
           "artifactId": "dagger",
           "groupId": "com.google.dagger",
-          "version": "2.42",
+          "version": "2.44.2",
           "nuGetId": "Xamarin.Google.Dagger",
-          "nuGetVersion": "2.42.0"
+          "nuGetVersion": "2.44.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2774,9 +2774,9 @@
         "maven": {
           "artifactId": "flatbuffers-java",
           "groupId": "com.google.flatbuffers",
-          "version": "2.0.8",
+          "version": "22.11.23",
           "nuGetId": "Xamarin.Google.FlatBuffers.Java",
-          "nuGetVersion": "2.0.8"
+          "nuGetVersion": "22.11.23"
         }
       }
     },
@@ -2825,9 +2825,9 @@
         "maven": {
           "artifactId": "logging-interceptor",
           "groupId": "com.squareup.okhttp3",
-          "version": "4.4.1",
+          "version": "4.6.0",
           "nuGetId": "Square.OkHttp3.LoggingInterceptor",
-          "nuGetVersion": "4.4.1"
+          "nuGetVersion": "4.6.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
