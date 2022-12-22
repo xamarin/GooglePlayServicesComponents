@@ -1820,9 +1820,18 @@
       {
         "groupId": "com.squareup.okio",
         "artifactId": "okio",
+        "version": "2.10.0",
+        "nugetVersion": "2.10.0.5",
+        "nugetId": "Square.OkIO",
+        "dependencyOnly": false,
+        "templateSet": "squareup-okio"
+      },
+      {
+        "groupId": "com.squareup.okio",
+        "artifactId": "okio-jvm",
         "version": "3.0.0",
         "nugetVersion": "3.0.0",
-        "nugetId": "Square.OkIO",
+        "nugetId": "Square.OkIO.JVM",
         "dependencyOnly": false,
         "templateSet": "squareup-okio"
       },
@@ -2164,7 +2173,7 @@
         "groupId": "androidx.collection",
         "artifactId": "collection",
         "version": "1.2.0",
-        "nugetVersion": "1.2.0.4",
+        "nugetVersion": "1.2.0.5",
         "nugetId": "Xamarin.AndroidX.Collection",
         "dependencyOnly": true
       },
@@ -2396,7 +2405,7 @@
         "groupId": "com.google.guava",
         "artifactId": "listenablefuture",
         "version": "9999.0-empty-to-avoid-conflict-with-guava",
-        "nugetVersion": "1.0.0.9",
+        "nugetVersion": "1.0.0.10",
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
         "dependencyOnly": true
       },
