@@ -627,6 +627,7 @@ Xamarin.GoogleAndroid.Libraries.Places.Api.Net
 Xamarin.GoogleAndroid.Libraries.Places.Compat
 Xamarin.GoogleAndroid.Libraries.Places.Compat.UI
 Xamarin.GoogleAndroid.Libraries.Places.Widget
+Xamarin.GoogleAndroid.Libraries.Places.Widget.Internal.UI
 Xamarin.GoogleAndroid.Libraries.Places.Widget.Listener
 Xamarin.GoogleAndroid.Libraries.Places.Widget.Model
 Xamarin.Grpc
