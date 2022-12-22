@@ -1820,8 +1820,8 @@
       {
         "groupId": "com.squareup.okio",
         "artifactId": "okio",
-        "version": "3.1.0",
-        "nugetVersion": "3.1.0",
+        "version": "2.10.0",
+        "nugetVersion": "2.10.0.5",
         "nugetId": "Square.OkIO",
         "dependencyOnly": false,
         "templateSet": "squareup-okio"
