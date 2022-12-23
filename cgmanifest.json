@@ -2516,9 +2516,9 @@
         "maven": {
           "artifactId": "places",
           "groupId": "com.google.android.libraries.places",
-          "version": "2.0.0",
+          "version": "2.1.0",
           "nuGetId": "Xamarin.GoogleAndroid.Libraries.Places",
-          "nuGetVersion": "2.0.0.2"
+          "nuGetVersion": "2.1.0"
         }
       },
       "license": "Google Maps Platform Terms of Service"
@@ -2529,9 +2529,9 @@
         "maven": {
           "artifactId": "places-compat",
           "groupId": "com.google.android.libraries.places",
-          "version": "2.0.0",
+          "version": "2.1.0",
           "nuGetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat",
-          "nuGetVersion": "2.0.0.2"
+          "nuGetVersion": "2.1.0"
         }
       },
       "license": "Google Maps Platform Terms of Service"
@@ -2592,9 +2592,9 @@
         "maven": {
           "artifactId": "annotations",
           "groupId": "com.github.bumptech.glide",
-          "version": "4.13.2",
+          "version": "4.14.2",
           "nuGetId": "Xamarin.Android.Glide.Annotations",
-          "nuGetVersion": "4.13.2.2"
+          "nuGetVersion": "4.14.2"
         }
       },
       "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
@@ -2605,9 +2605,9 @@
         "maven": {
           "artifactId": "disklrucache",
           "groupId": "com.github.bumptech.glide",
-          "version": "4.13.2",
+          "version": "4.14.2",
           "nuGetId": "Xamarin.Android.Glide.DiskLruCache",
-          "nuGetVersion": "4.13.2.2"
+          "nuGetVersion": "4.14.2"
         }
       },
       "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
@@ -2618,9 +2618,9 @@
         "maven": {
           "artifactId": "gifdecoder",
           "groupId": "com.github.bumptech.glide",
-          "version": "4.13.2",
+          "version": "4.14.2",
           "nuGetId": "Xamarin.Android.Glide.GifDecoder",
-          "nuGetVersion": "4.13.2.2"
+          "nuGetVersion": "4.14.2"
         }
       },
       "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
@@ -2631,9 +2631,9 @@
         "maven": {
           "artifactId": "glide",
           "groupId": "com.github.bumptech.glide",
-          "version": "4.13.2",
+          "version": "4.14.2",
           "nuGetId": "Xamarin.Android.Glide",
-          "nuGetVersion": "4.13.2.2"
+          "nuGetVersion": "4.14.2"
         }
       },
       "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
@@ -2644,9 +2644,9 @@
         "maven": {
           "artifactId": "recyclerview-integration",
           "groupId": "com.github.bumptech.glide",
-          "version": "4.13.2",
+          "version": "4.14.2",
           "nuGetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
-          "nuGetVersion": "4.13.2.2"
+          "nuGetVersion": "4.14.2"
         }
       },
       "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
@@ -2735,9 +2735,9 @@
         "maven": {
           "artifactId": "dagger",
           "groupId": "com.google.dagger",
-          "version": "2.42",
+          "version": "2.43.2",
           "nuGetId": "Xamarin.Google.Dagger",
-          "nuGetVersion": "2.42.0"
+          "nuGetVersion": "2.43.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2748,9 +2748,9 @@
         "maven": {
           "artifactId": "error_prone_annotations",
           "groupId": "com.google.errorprone",
-          "version": "2.15.0",
+          "version": "2.16",
           "nuGetId": "Xamarin.Google.ErrorProne.Annotations",
-          "nuGetVersion": "2.15.0"
+          "nuGetVersion": "2.16.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2774,9 +2774,9 @@
         "maven": {
           "artifactId": "flatbuffers-java",
           "groupId": "com.google.flatbuffers",
-          "version": "2.0.8",
+          "version": "22.10.26",
           "nuGetId": "Xamarin.Google.FlatBuffers.Java",
-          "nuGetVersion": "2.0.8"
+          "nuGetVersion": "22.10.26"
         }
       }
     },
@@ -2825,9 +2825,9 @@
         "maven": {
           "artifactId": "logging-interceptor",
           "groupId": "com.squareup.okhttp3",
-          "version": "4.4.1",
+          "version": "4.5.0",
           "nuGetId": "Square.OkHttp3.LoggingInterceptor",
-          "nuGetVersion": "4.4.1"
+          "nuGetVersion": "4.5.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2838,9 +2838,9 @@
         "maven": {
           "artifactId": "okhttp",
           "groupId": "com.squareup.okhttp3",
-          "version": "4.9.3",
+          "version": "4.10.0",
           "nuGetId": "Square.OkHttp3",
-          "nuGetVersion": "4.9.3.2"
+          "nuGetVersion": "4.10.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2851,9 +2851,9 @@
         "maven": {
           "artifactId": "okhttp-urlconnection",
           "groupId": "com.squareup.okhttp3",
-          "version": "4.9.3",
+          "version": "4.10.0",
           "nuGetId": "Square.OkHttp3.UrlConnection",
-          "nuGetVersion": "4.9.3.2"
+          "nuGetVersion": "4.10.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2867,6 +2867,19 @@
           "version": "2.10.0",
           "nuGetId": "Square.OkIO",
           "nuGetVersion": "2.10.0.5"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "okio-jvm",
+          "groupId": "com.squareup.okio",
+          "version": "3.0.0",
+          "nuGetId": "Square.OkIO.JVM",
+          "nuGetVersion": "3.0.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
