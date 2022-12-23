@@ -1,3 +1,191 @@
 ﻿<metadata>
+    <!--
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='buffer']"
+        name="managedName"
+        >
+        GetBuffer
+    </attr>
+    -->
+    <attr
+        path="/api/package[@name='okio']/class[@name='ByteString']/method[@name='compareTo']/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <remove-node
+        path="/api/package[@name='okio']/interface[@name='BufferedSource']/method[@name='buffer' and count(parameter)=0]"
+        />
+        <attr
+        path="/api/package[@name='okio']//method[@name='getBuffer']"
+        name="propertyName"
+        ></attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='getBuffer']"
+        name="propertyName"
+        ></attr>
+
+    <!--
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[starts-with(@name,'write')]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    -->
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='write' and count(parameter)=1 and parameter[1][@type='byte[]']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='byte[]'] and parameter[2][@type='int'] and parameter[3][@type='int']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='write' and count(parameter)=1 and parameter[1][@type='okio.ByteString']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='write' and count(parameter)=3 and parameter[1][@type='okio.ByteString'] and parameter[2][@type='int'] and parameter[3][@type='int']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='write' and count(parameter)=2 and parameter[1][@type='okio.Source'] and parameter[2][@type='long']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeByte' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeDecimalLong' and count(parameter)=1 and parameter[1][@type='long']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeHexadecimalUnsignedLong' and count(parameter)=1 and parameter[1][@type='long']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeInt' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeIntLe' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeLong' and count(parameter)=1 and parameter[1][@type='long']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeLongLe' and count(parameter)=1 and parameter[1][@type='long']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeShort' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeShortLe' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeString' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.nio.charset.Charset']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeString' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='java.nio.charset.Charset']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeUtf8' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeUtf8' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='int']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='writeUtf8CodePoint' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='emit' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Buffer']/method[@name='emitCompleteSegments' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Square.OkIO.IBufferedSink
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='okio']/interface[@name='BufferedSink']/method[@name='buffer' and count(parameter)=0]"
+        />
+
+    <attr
+        path="/api/package[@name='okio']/class[@name='Path']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='okio.Path']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='okio']/class[@name='Options']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='okio']/class[@name='Options']/method[@name='getSize' and count(parameter)=0]"
+        name="propertyName"></attr>
+
+    <remove-node
+        path="/api/package[@name='okio']/interface[@name='Sink']/method[@name='close' and count(parameter)=0]"
+        />
+        <remove-node
+        path="/api/package[@name='okio']/interface[@name='Source']/method[@name='close' and count(parameter)=0]"
+        />
 
 </metadata>

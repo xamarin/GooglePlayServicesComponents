@@ -1,10 +1,16 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='okio']" 
         name="managedName"
         >
-        Package
+        Square.OkIO
     </attr>
-    -->
+    <attr 
+        path="/api/package[@name='okio.internal']" 
+        name="managedName"
+        >
+        Square.OkIO.Internal
+    </attr>
+    
+    
 </metadata>
