@@ -558,6 +558,7 @@ Task ("spell-check")
                 "AdapterRxJava2",
                 "ConverterGson",
                 "ConverterScalars",
+                "JVM",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
