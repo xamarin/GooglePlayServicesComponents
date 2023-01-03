@@ -16,9 +16,9 @@
 |   9|com.google.android.gms:play-services-appinvite                        |18.0.0              |Xamarin.GooglePlayServices.AppInvite                                  |118.0.0.7           |
 |  10|com.google.android.gms:play-services-appset                           |16.0.2              |Xamarin.GooglePlayServices.AppSet                                     |16.0.2.2            |
 |  11|com.google.android.gms:play-services-audience                         |17.0.0              |Xamarin.GooglePlayServices.Audience                                   |117.0.0.7           |
-|  12|com.google.android.gms:play-services-auth                             |20.3.0              |Xamarin.GooglePlayServices.Auth                                       |120.3.0             |
+|  12|com.google.android.gms:play-services-auth                             |20.4.0              |Xamarin.GooglePlayServices.Auth                                       |120.4.0             |
 |  13|com.google.android.gms:play-services-auth-api-phone                   |18.0.1              |Xamarin.GooglePlayServices.Auth.Api.Phone                             |118.0.1.2           |
-|  14|com.google.android.gms:play-services-auth-base                        |18.0.5              |Xamarin.GooglePlayServices.Auth.Base                                  |118.0.5             |
+|  14|com.google.android.gms:play-services-auth-base                        |18.0.6              |Xamarin.GooglePlayServices.Auth.Base                                  |118.0.6             |
 |  15|com.google.android.gms:play-services-auth-blockstore                  |16.1.0              |Xamarin.GooglePlayServices.Auth.Blockstore                            |116.1.0.2           |
 |  16|com.google.android.gms:play-services-awareness                        |19.0.1              |Xamarin.GooglePlayServices.Awareness                                  |119.0.1.2           |
 |  17|com.google.android.gms:play-services-base                             |18.1.0              |Xamarin.GooglePlayServices.Base                                       |118.1.0             |
@@ -30,10 +30,10 @@
 |  23|com.google.android.gms:play-services-cloud-messaging                  |17.0.2              |Xamarin.GooglePlayServices.CloudMessaging                             |117.0.2.2           |
 |  24|com.google.android.gms:play-services-cronet                           |18.0.1              |Xamarin.GooglePlayServices.CroNet                                     |118.0.1.2           |
 |  25|com.google.android.gms:play-services-drive                            |17.0.0              |Xamarin.GooglePlayServices.Drive                                      |117.0.0.8           |
-|  26|com.google.android.gms:play-services-fido                             |18.1.0              |Xamarin.GooglePlayServices.Fido                                       |118.1.0.7           |
+|  26|com.google.android.gms:play-services-fido                             |19.0.0              |Xamarin.GooglePlayServices.Fido                                       |119.0.0             |
 |  27|com.google.android.gms:play-services-fitness                          |21.1.0              |Xamarin.GooglePlayServices.Fitness                                    |121.1.0.1           |
 |  28|com.google.android.gms:play-services-flags                            |18.0.1              |Xamarin.GooglePlayServices.Flags                                      |118.0.1.5           |
-|  29|com.google.android.gms:play-services-games                            |23.0.0              |Xamarin.GooglePlayServices.Games                                      |123.0.0             |
+|  29|com.google.android.gms:play-services-games                            |23.1.0              |Xamarin.GooglePlayServices.Games                                      |123.1.0             |
 |  30|com.google.android.gms:play-services-games-v2                         |17.0.0              |Xamarin.GooglePlayServices.Games.V2                                   |117.0.0             |
 |  31|com.google.android.gms:play-services-gass                             |20.0.0              |Xamarin.GooglePlayServices.Gass                                       |120.0.0.7           |
 |  32|com.google.android.gms:play-services-gcm                              |17.0.0              |Xamarin.GooglePlayServices.Gcm                                        |117.0.0.7           |

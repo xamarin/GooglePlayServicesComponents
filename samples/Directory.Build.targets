@@ -11,9 +11,9 @@
     <PackageReference Update="Xamarin.GooglePlayServices.AppInvite" Version="118.0.0.7" />
     <PackageReference Update="Xamarin.GooglePlayServices.AppSet" Version="16.0.2.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Audience" Version="117.0.0.7" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Auth" Version="120.3.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Auth" Version="120.4.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Auth.Api.Phone" Version="118.0.1.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Auth.Base" Version="118.0.5" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Auth.Base" Version="118.0.6" />
     <PackageReference Update="Xamarin.GooglePlayServices.Auth.Blockstore" Version="116.1.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Awareness" Version="119.0.1.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Base" Version="118.1.0" />
@@ -25,13 +25,14 @@
     <PackageReference Update="Xamarin.GooglePlayServices.CloudMessaging" Version="117.0.2.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.CroNet" Version="118.0.1.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Drive" Version="117.0.0.8" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Fido" Version="118.1.0.7" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Fido" Version="119.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Fitness" Version="121.1.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Flags" Version="118.0.1.5" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Games" Version="123.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Games" Version="123.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Games.V2" Version="117.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Gass" Version="120.0.0.7" />
     <PackageReference Update="Xamarin.GooglePlayServices.Gcm" Version="117.0.0.7" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Home" Version="116.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Identity" Version="118.0.1.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Iid" Version="117.0.0.7" />
     <PackageReference Update="Xamarin.GooglePlayServices.InstantApps" Version="118.0.1.2" />
@@ -67,7 +68,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager.Api" Version="118.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager.V4.Impl" Version="118.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Tasks" Version="118.0.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.TfLite.Gpu" Version="116.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.TfLite.Gpu" Version="116.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.TfLite.Impl" Version="116.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.TfLite.Java" Version="116.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.TfLite.Support" Version="116.0.1" />
@@ -194,8 +195,8 @@
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Interfaces" Version="116.1.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="118.2.2.2" />
     <PackageReference Update="Xamarin.Google.Android.ODML.Image" Version="1.0.0.2-beta1" />
-    <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places" Version="2.1.0" />
-    <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places.Compat" Version="2.1.0" />
+    <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places" Version="2.3.0" />
+    <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places.Compat" Version="2.0.0.2" />
     <PackageReference Update="Xamarin.Android.Google.BillingClient" Version="5.1.0" />
     <PackageReference Update="Xamarin.Android.Google.BillingClient.Ktx" Version="5.1.0" />
     <PackageReference Update="Xamarin.Android.Volley" Version="1.2.1.2" />

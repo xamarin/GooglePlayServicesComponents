@@ -116,8 +116,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-auth",
-        "version": "20.3.0",
-        "nugetVersion": "120.3.0",
+        "version": "20.4.0",
+        "nugetVersion": "120.4.0",
         "nugetId": "Xamarin.GooglePlayServices.Auth",
         "dependencyOnly": false
       },
@@ -132,8 +132,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-auth-base",
-        "version": "18.0.5",
-        "nugetVersion": "118.0.5",
+        "version": "18.0.6",
+        "nugetVersion": "118.0.6",
         "nugetId": "Xamarin.GooglePlayServices.Auth.Base",
         "dependencyOnly": false
       },
@@ -228,8 +228,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-fido",
-        "version": "18.1.0",
-        "nugetVersion": "118.1.0.7",
+        "version": "19.0.0",
+        "nugetVersion": "119.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Fido",
         "dependencyOnly": false
       },
@@ -252,8 +252,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-games",
-        "version": "23.0.0",
-        "nugetVersion": "123.0.0",
+        "version": "23.1.0",
+        "nugetVersion": "123.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Games",
         "dependencyOnly": false
       },
@@ -279,6 +279,14 @@
         "version": "17.0.0",
         "nugetVersion": "117.0.0.7",
         "nugetId": "Xamarin.GooglePlayServices.Gcm",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-home",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.Home",
         "dependencyOnly": false
       },
       {
@@ -564,8 +572,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tflite-gpu",
-        "version": "16.0.0",
-        "nugetVersion": "116.0.0",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
         "nugetId": "Xamarin.GooglePlayServices.TfLite.Gpu",
         "dependencyOnly": false
       },
