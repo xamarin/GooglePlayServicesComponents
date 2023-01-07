@@ -1762,8 +1762,8 @@
       {
         "groupId": "com.google.flatbuffers",
         "artifactId": "flatbuffers-java",
-        "version": "22.11.23",
-        "nugetVersion": "22.11.23",
+        "version": "22.10.26",
+        "nugetVersion": "22.10.26",
         "nugetId": "Xamarin.Google.FlatBuffers.Java",
         "dependencyOnly": false,
         "templateSet": "flatbuffers"
