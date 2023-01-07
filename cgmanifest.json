@@ -2529,9 +2529,9 @@
         "maven": {
           "artifactId": "places",
           "groupId": "com.google.android.libraries.places",
-          "version": "2.3.0",
+          "version": "2.1.0",
           "nuGetId": "Xamarin.GoogleAndroid.Libraries.Places",
-          "nuGetVersion": "2.3.0"
+          "nuGetVersion": "2.1.0"
         }
       },
       "license": "Google Maps Platform Terms of Service"
