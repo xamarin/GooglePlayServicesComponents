@@ -161,15 +161,15 @@
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Image.Label.Model" Version="120.0.2.7" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Internal.Vkp" Version="117.0.2.7" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Object.Detection.Model" Version="119.0.6.7" />
-    <PackageReference Update="Xamarin.Firebase.Perf" Version="120.1.1" />
-    <PackageReference Update="Xamarin.Firebase.Perf.Ktx" Version="120.1.1" />
+    <PackageReference Update="Xamarin.Firebase.Perf" Version="120.3.0" />
+    <PackageReference Update="Xamarin.Firebase.Perf.Ktx" Version="120.3.0" />
     <PackageReference Update="Xamarin.Firebase.Storage" Version="120.0.2" />
     <PackageReference Update="Xamarin.Firebase.Storage.Common" Version="117.0.0.7" />
     <PackageReference Update="Xamarin.Firebase.Storage.Ktx" Version="120.0.2" />
     <PackageReference Update="Xamarin.Firebase.ProtoliteWellKnownTypes" Version="118.0.0.7" />
-    <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning" Version="117.0.2.2" />
+    <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning" Version="117.0.3" />
     <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning.Common" Version="117.0.0.2" />
-    <PackageReference Update="Xamarin.Google.MLKit.Common" Version="118.5.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.Common" Version="118.6.0" />
     <PackageReference Update="Xamarin.Google.MLKit.DigitalInk.Recognition" Version="118.0.0.2" />
     <PackageReference Update="Xamarin.Google.MLKit.FaceDetection" Version="116.1.5.2" />
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling" Version="117.0.7.2" />
@@ -189,14 +189,14 @@
     <PackageReference Update="Xamarin.Google.MLKit.PoseDetection.Accurate" Version="117.0.0.7" />
     <PackageReference Update="Xamarin.Google.MLKit.PoseDetection.Common" Version="117.0.0.7" />
     <PackageReference Update="Xamarin.Google.MLKit.SmartReply" Version="117.0.2" />
-    <PackageReference Update="Xamarin.Google.MLKit.SmartReply.Common" Version="116.0.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.SmartReply.Common" Version="116.1.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Translate" Version="117.0.1" />
-    <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="117.2.1" />
+    <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="117.3.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Interfaces" Version="116.1.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="118.2.2.2" />
     <PackageReference Update="Xamarin.Google.Android.ODML.Image" Version="1.0.0.2-beta1" />
-    <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places" Version="2.3.0" />
-    <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places.Compat" Version="2.0.0.2" />
+    <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places" Version="2.2.0" />
+    <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places.Compat" Version="2.2.0" />
     <PackageReference Update="Xamarin.Android.Google.BillingClient" Version="5.1.0" />
     <PackageReference Update="Xamarin.Android.Google.BillingClient.Ktx" Version="5.1.0" />
     <PackageReference Update="Xamarin.Android.Volley" Version="1.2.1.2" />
@@ -212,14 +212,14 @@
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="3.1.8" />
     <PackageReference Update="Xamarin.Google.UserMessagingPlatform" Version="2.0.0.2" />
     <PackageReference Update="Xamarin.Google.Code.FindBugs.JSR305" Version="3.0.2.6" />
-    <PackageReference Update="Xamarin.Google.Dagger" Version="2.42.0" />
+    <PackageReference Update="Xamarin.Google.Dagger" Version="2.44.2" />
     <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.15.0" />
     <PackageReference Update="Xamarin.Google.ZXing.Core" Version="3.5.1" />
-    <PackageReference Update="Xamarin.Google.FlatBuffers.Java" Version="2.0.8" />
+    <PackageReference Update="Xamarin.Google.FlatBuffers.Java" Version="22.11.23" />
     <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.21.12" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1.6" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.6" />
-    <PackageReference Update="Square.OkHttp3.LoggingInterceptor" Version="4.4.1" />
+    <PackageReference Update="Square.OkHttp3.LoggingInterceptor" Version="4.6.0" />
     <PackageReference Update="Square.OkHttp3" Version="4.9.3.2" />
     <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.9.3.2" />
     <PackageReference Update="Square.OkIO" Version="2.10.0.5" />

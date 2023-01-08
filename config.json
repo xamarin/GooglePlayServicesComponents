@@ -1316,16 +1316,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-perf",
-        "version": "20.1.1",
-        "nugetVersion": "120.1.1",
+        "version": "20.3.0",
+        "nugetVersion": "120.3.0",
         "nugetId": "Xamarin.Firebase.Perf",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-perf-ktx",
-        "version": "20.1.1",
-        "nugetVersion": "120.1.1",
+        "version": "20.3.0",
+        "nugetVersion": "120.3.0",
         "nugetId": "Xamarin.Firebase.Perf.Ktx",
         "dependencyOnly": false
       },
@@ -1364,8 +1364,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "barcode-scanning",
-        "version": "17.0.2",
-        "nugetVersion": "117.0.2.2",
+        "version": "17.0.3",
+        "nugetVersion": "117.0.3",
         "nugetId": "Xamarin.Google.MLKit.BarcodeScanning",
         "dependencyOnly": false
       },
@@ -1380,8 +1380,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "common",
-        "version": "18.5.0",
-        "nugetVersion": "118.5.0",
+        "version": "18.6.0",
+        "nugetVersion": "118.6.0",
         "nugetId": "Xamarin.Google.MLKit.Common",
         "dependencyOnly": false
       },
@@ -1540,8 +1540,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "smart-reply-common",
-        "version": "16.0.0",
-        "nugetVersion": "116.0.0",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
         "nugetId": "Xamarin.Google.MLKit.SmartReply.Common",
         "dependencyOnly": false
       },
@@ -1556,8 +1556,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "vision-common",
-        "version": "17.2.1",
-        "nugetVersion": "117.2.1",
+        "version": "17.3.0",
+        "nugetVersion": "117.3.0",
         "nugetId": "Xamarin.Google.MLKit.Vision.Common",
         "dependencyOnly": false
       },
@@ -1588,16 +1588,16 @@
       {
         "groupId": "com.google.android.libraries.places",
         "artifactId": "places",
-        "version": "2.1.0",
-        "nugetVersion": "2.1.0",
+        "version": "2.2.0",
+        "nugetVersion": "2.2.0",
         "nugetId": "Xamarin.GoogleAndroid.Libraries.Places",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.libraries.places",
         "artifactId": "places-compat",
-        "version": "2.0.0",
-        "nugetVersion": "2.0.0.2",
+        "version": "2.2.0",
+        "nugetVersion": "2.2.0",
         "nugetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat",
         "dependencyOnly": false
       },
@@ -1735,8 +1735,8 @@
       {
         "groupId": "com.google.dagger",
         "artifactId": "dagger",
-        "version": "2.42",
-        "nugetVersion": "2.42.0",
+        "version": "2.44.2",
+        "nugetVersion": "2.44.2",
         "nugetId": "Xamarin.Google.Dagger",
         "dependencyOnly": false,
         "templateSet": "dagger"
@@ -1762,8 +1762,8 @@
       {
         "groupId": "com.google.flatbuffers",
         "artifactId": "flatbuffers-java",
-        "version": "2.0.8",
-        "nugetVersion": "2.0.8",
+        "version": "22.10.26",
+        "nugetVersion": "22.10.26",
         "nugetId": "Xamarin.Google.FlatBuffers.Java",
         "dependencyOnly": false,
         "templateSet": "flatbuffers"
@@ -1801,8 +1801,8 @@
       {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "logging-interceptor",
-        "version": "4.4.1",
-        "nugetVersion": "4.4.1",
+        "version": "4.6.0",
+        "nugetVersion": "4.6.0",
         "nugetId": "Square.OkHttp3.LoggingInterceptor",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
