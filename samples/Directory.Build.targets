@@ -195,7 +195,7 @@
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Interfaces" Version="116.1.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="118.2.2.2" />
     <PackageReference Update="Xamarin.Google.Android.ODML.Image" Version="1.0.0.2-beta1" />
-    <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places" Version="2.1.0" />
+    <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places" Version="2.2.0" />
     <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places.Compat" Version="2.1.0" />
     <PackageReference Update="Xamarin.Android.Google.BillingClient" Version="5.1.0" />
     <PackageReference Update="Xamarin.Android.Google.BillingClient.Ktx" Version="5.1.0" />
@@ -219,7 +219,7 @@
     <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.21.12" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1.6" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.6" />
-    <PackageReference Update="Square.OkHttp3.LoggingInterceptor" Version="4.7.2" />
+    <PackageReference Update="Square.OkHttp3.LoggingInterceptor" Version="4.5.0" />
     <PackageReference Update="Square.OkHttp3" Version="4.10.0" />
     <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.10.0" />
     <PackageReference Update="Square.OkIO" Version="2.10.0.5" />
