@@ -167,9 +167,9 @@
     <PackageReference Update="Xamarin.Firebase.Storage.Common" Version="117.0.0.7" />
     <PackageReference Update="Xamarin.Firebase.Storage.Ktx" Version="120.1.0" />
     <PackageReference Update="Xamarin.Firebase.ProtoliteWellKnownTypes" Version="118.0.0.7" />
-    <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning" Version="117.0.2.2" />
+    <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning" Version="117.0.3" />
     <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning.Common" Version="117.0.0.2" />
-    <PackageReference Update="Xamarin.Google.MLKit.Common" Version="118.5.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.Common" Version="118.6.0" />
     <PackageReference Update="Xamarin.Google.MLKit.DigitalInk.Recognition" Version="118.0.0.2" />
     <PackageReference Update="Xamarin.Google.MLKit.FaceDetection" Version="116.1.5.2" />
     <PackageReference Update="Xamarin.Google.MLKit.ImageLabeling" Version="117.0.7.2" />
@@ -189,9 +189,9 @@
     <PackageReference Update="Xamarin.Google.MLKit.PoseDetection.Accurate" Version="117.0.0.7" />
     <PackageReference Update="Xamarin.Google.MLKit.PoseDetection.Common" Version="117.0.0.7" />
     <PackageReference Update="Xamarin.Google.MLKit.SmartReply" Version="117.0.2" />
-    <PackageReference Update="Xamarin.Google.MLKit.SmartReply.Common" Version="116.0.0" />
+    <PackageReference Update="Xamarin.Google.MLKit.SmartReply.Common" Version="116.1.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Translate" Version="117.0.1" />
-    <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="117.2.1" />
+    <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="117.3.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Interfaces" Version="116.1.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="118.2.2.2" />
     <PackageReference Update="Xamarin.Google.Android.ODML.Image" Version="1.0.0.2-beta1" />

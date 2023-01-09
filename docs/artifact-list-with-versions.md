@@ -171,9 +171,9 @@
 | 164|com.google.firebase:firebase-storage-common                           |17.0.0              |Xamarin.Firebase.Storage.Common                                       |117.0.0.7           |
 | 165|com.google.firebase:firebase-storage-ktx                              |20.1.0              |Xamarin.Firebase.Storage.Ktx                                          |120.1.0             |
 | 166|com.google.firebase:protolite-well-known-types                        |18.0.0              |Xamarin.Firebase.ProtoliteWellKnownTypes                              |118.0.0.7           |
-| 167|com.google.mlkit:barcode-scanning                                     |17.0.2              |Xamarin.Google.MLKit.BarcodeScanning                                  |117.0.2.2           |
+| 167|com.google.mlkit:barcode-scanning                                     |17.0.3              |Xamarin.Google.MLKit.BarcodeScanning                                  |117.0.3             |
 | 168|com.google.mlkit:barcode-scanning-common                              |17.0.0              |Xamarin.Google.MLKit.BarcodeScanning.Common                           |117.0.0.2           |
-| 169|com.google.mlkit:common                                               |18.5.0              |Xamarin.Google.MLKit.Common                                           |118.5.0             |
+| 169|com.google.mlkit:common                                               |18.6.0              |Xamarin.Google.MLKit.Common                                           |118.6.0             |
 | 170|com.google.mlkit:digital-ink-recognition                              |18.0.0              |Xamarin.Google.MLKit.DigitalInk.Recognition                           |118.0.0.2           |
 | 171|com.google.mlkit:face-detection                                       |16.1.5              |Xamarin.Google.MLKit.FaceDetection                                    |116.1.5.2           |
 | 172|com.google.mlkit:image-labeling                                       |17.0.7              |Xamarin.Google.MLKit.ImageLabeling                                    |117.0.7.2           |
@@ -193,9 +193,9 @@
 | 186|com.google.mlkit:pose-detection-accurate                              |17.0.0              |Xamarin.Google.MLKit.PoseDetection.Accurate                           |117.0.0.7           |
 | 187|com.google.mlkit:pose-detection-common                                |17.0.0              |Xamarin.Google.MLKit.PoseDetection.Common                             |117.0.0.7           |
 | 188|com.google.mlkit:smart-reply                                          |17.0.2              |Xamarin.Google.MLKit.SmartReply                                       |117.0.2             |
-| 189|com.google.mlkit:smart-reply-common                                   |16.0.0              |Xamarin.Google.MLKit.SmartReply.Common                                |116.0.0             |
+| 189|com.google.mlkit:smart-reply-common                                   |16.1.0              |Xamarin.Google.MLKit.SmartReply.Common                                |116.1.0             |
 | 190|com.google.mlkit:translate                                            |17.0.1              |Xamarin.Google.MLKit.Translate                                        |117.0.1             |
-| 191|com.google.mlkit:vision-common                                        |17.2.1              |Xamarin.Google.MLKit.Vision.Common                                    |117.2.1             |
+| 191|com.google.mlkit:vision-common                                        |17.3.0              |Xamarin.Google.MLKit.Vision.Common                                    |117.3.0             |
 | 192|com.google.mlkit:vision-interfaces                                    |16.1.0              |Xamarin.Google.MLKit.Vision.Interfaces                                |116.1.0             |
 | 193|com.google.mlkit:vision-internal-vkp                                  |18.2.2              |Xamarin.Google.MLKit.Vision.Internal.Vkp                              |118.2.2.2           |
 | 194|com.google.android.odml:image                                         |1.0.0-beta1         |Xamarin.Google.Android.ODML.Image                                     |1.0.0.2-beta1       |
