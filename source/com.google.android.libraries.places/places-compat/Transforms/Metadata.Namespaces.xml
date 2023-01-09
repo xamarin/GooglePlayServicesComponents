@@ -23,7 +23,7 @@
         name="managedName"
         >
         Xamarin.GoogleAndroid.Libraries.Places.Widget
-    </attr>    
+    </attr>
     <attr 
         path="/api/package[@name='com.google.android.libraries.places.widget.internal']" 
         name="managedName"
@@ -35,6 +35,6 @@
         name="managedName"
         >
         Xamarin.GoogleAndroid.Libraries.Places.Widget.Internal.UI
-    </attr>
+    </attr>    
 
 </metadata>
