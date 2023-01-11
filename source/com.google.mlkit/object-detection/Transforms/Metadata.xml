@@ -10,11 +10,11 @@
     
     removing `build` with return="com.google.mlkit.vision.objects.ObjectDetectorOptionsBase"
     renaming in Addditions
-    -->    
     <remove-node
         path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='build' and count(parameter)=0 and @return='com.google.mlkit.vision.objects.ObjectDetectorOptionsBase' ]"
         >        
     </remove-node>
+    -->    
     
     <!--
     TODO: possible problems! return type covariance/contravariance (needs investigation)
@@ -23,11 +23,11 @@
     
     removing `enableClassification` with 
     renaming in Addditions
-    -->        
     <remove-node
         path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='enableClassification' and count(parameter)=0]"
         >        
     </remove-node>
+    -->        
     
     <!--
     TODO: possible problems! return type covariance/contravariance (needs investigation)
@@ -36,11 +36,11 @@
     
     removing `enableClassification` with 
     renaming in Addditions
-    -->        
     <remove-node
         path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='enableMultipleObjects' and count(parameter)=0]"
         >        
     </remove-node>
+    -->        
     
     <!--
     TODO: possible problems! return type covariance/contravariance (needs investigation)
@@ -49,18 +49,19 @@
     
     removing `setDetectorMode` with 
     renaming in Addditions
-    -->        
     <remove-node
         path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int']]"
         >        
     </remove-node>
+    -->        
 
-
+    <!--
     <remove-node
         path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
         />        
     <remove-node
         path="/api/package[@name='com.google.mlkit.vision.objects.defaults.internal']/class[@name='DefaultObjectsRegistrar']/implements"
         />
+    -->
 
-    </metadata>
+</metadata>
