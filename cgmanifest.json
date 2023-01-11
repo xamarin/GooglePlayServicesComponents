@@ -2787,9 +2787,9 @@
         "maven": {
           "artifactId": "flatbuffers-java",
           "groupId": "com.google.flatbuffers",
-          "version": "22.11.23",
+          "version": "22.10.26",
           "nuGetId": "Xamarin.Google.FlatBuffers.Java",
-          "nuGetVersion": "22.11.23"
+          "nuGetVersion": "22.10.26"
         }
       }
     },
