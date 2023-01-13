@@ -2559,7 +2559,8 @@
           "nuGetId": "Xamarin.Android.Google.BillingClient",
           "nuGetVersion": "5.1.0"
         }
-      }
+      },
+      "license": "Android Software Development Kit License"
     },
     {
       "component": {
@@ -2571,7 +2572,8 @@
           "nuGetId": "Xamarin.Android.Google.BillingClient.Ktx",
           "nuGetVersion": "5.1.0"
         }
-      }
+      },
+      "license": "Android Software Development Kit License"
     },
     {
       "component": {
@@ -2791,7 +2793,8 @@
           "nuGetId": "Xamarin.Google.FlatBuffers.Java",
           "nuGetVersion": "22.10.26"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
