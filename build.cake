@@ -1,9 +1,9 @@
 // Tools needed by cake addins
-#tool nuget:?package=vswhere&version=3.0.2
+#tool nuget:?package=vswhere&version=3.1.1
 
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=5.0.0
-#addin nuget:?package=Newtonsoft.Json&version=13.0.1
+#addin nuget:?package=Newtonsoft.Json&version=13.0.2
 
 //using Cake.Common.Tools.MSBuild;
 
@@ -638,6 +638,9 @@ Task("samples-directory-build-targets")
 
 Task("samples")
 	.IsDependentOn("libs")
+	.IsDependentOn("samples-only");
+
+Task("samples-only")
 	.IsDependentOn("samples-directory-build-targets")
 	.IsDependentOn("mergetargets")
 	.IsDependentOn("allbindingprojectrefs")
@@ -908,14 +911,22 @@ Task ("clean")
 });
 
 Task ("ci")
+    .IsDependentOn ("ci-build")
+    .IsDependentOn ("ci-samples")
+    ;
+    
+Task ("ci-build")
 	.IsDependentOn ("ci-setup")
 	//.IsDependentOn ("tools-check")
 	//.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
 	//.IsDependentOn ("merge")
-	.IsDependentOn ("samples")
-    .IsDependentOn ("tools-executive-order")
-    ;
+  .IsDependentOn ("tools-executive-order")
+  ;
+
+Task ("ci-samples")
+	.IsDependentOn ("samples-only")
+  ;
 
 RunTarget (TARGET);
