@@ -89,6 +89,8 @@ Manifest.Defaults.VersionBasedOnFullyQualifiedArtifactIdDelegate = delegate(stri
             fully_qualified_artifact_id.StartsWith("org.tensorflow")
             ||
             fully_qualified_artifact_id.StartsWith("com.android.volley")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.flatbuffers")
         )
     {
         const string l = "The Apache Software License, Version 2.0";
@@ -159,6 +161,8 @@ Manifest.Defaults.VersionBasedOnFullyQualifiedArtifactIdDelegate = delegate(stri
             fully_qualified_artifact_id.StartsWith("com.google.android.odml")
             ||
             fully_qualified_artifact_id.StartsWith("com.google.android.ump")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.android.billingclient")
         )
     {
         const string l = "Android Software Development Kit License";
@@ -532,7 +536,7 @@ Task ("spell-check")
                 "PerfMark",
                 "PerfMarkApi",
                 "ZXing",
-		        "JavaPoet",
+		            "JavaPoet",
                 "LanguageId",
                 "AppSet",
                 "Ktx",
@@ -558,6 +562,7 @@ Task ("spell-check")
                 "AdapterRxJava2",
                 "ConverterGson",
                 "ConverterScalars",
+                "JVM",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
