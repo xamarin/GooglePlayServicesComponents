@@ -637,7 +637,10 @@ Task("samples-directory-build-targets")
 	);
 
 Task("samples")
-    .IsDependentOn("nuget")
+	.IsDependentOn("libs")
+	.IsDependentOn("samples-only");
+
+Task("samples-only")
 	.IsDependentOn("samples-directory-build-targets")
 	.IsDependentOn("mergetargets")
 	.IsDependentOn("allbindingprojectrefs")
@@ -669,8 +672,6 @@ Task("samples")
 				}
 				if
 				(
-					sampleSln.ToString().Contains("samples-dotnet")
-					||
 					sampleSln.ToString().Contains("com.google.android.gms/play-services-cast/CastingCall.sln")
 					||
 					sampleSln.ToString().Contains("com.google.android.gms/play-services-games/BeGenerous.sln")
@@ -686,12 +687,9 @@ Task("samples")
 					continue;
 				}
 				Information($"Solution: {filename_sln}");
-				string bl = MakeAbsolute(new FilePath($"./output/{filename_sln}{config}.sample.msbuild.{DateTime.Now.ToString("yyyyMMddHHmmss")}.binlog")).FullPath;
+				string bl = MakeAbsolute(new FilePath($"./output/{filename_sln}{config}.sample.binlog")).FullPath;
 				try
 				{
-					string filename = sampleSln.GetFilenameWithoutExtension().ToString();
-					Information($"=====================================================================================================");
-					Information($"MSBuild          {sampleSln} / {filename}");    
 					MSBuild
 						(
 							sampleSln,
@@ -725,83 +723,20 @@ Task("samples")
 			}
 		}
 
-	    RunTarget("samples-dotnet");
-
-		DeleteFiles("./output/system.*/nupkg");
-		DeleteFiles("./output/microsoft.*/nupkg");
-		DeleteFiles("./output/xamarin.android.support.*/nupkg");
-		DeleteFiles("./output/xamarin.android.arch.*/nupkg");
-		DeleteFiles("./output/xamarin.build.download.*/nupkg");
-
-});
-
-Task("samples-dotnet")
-	.IsDependentOn("samples-directory-build-targets")
-	.IsDependentOn("mergetargets")
-	.IsDependentOn("allbindingprojectrefs")
-    .Does
-(
-	() =>
-	{
-		Configs = new string[] { "Debug", "Release" };
-
-		var sampleSlns = GetFiles("./samples/dotnet/**/*.sln");
-
-		foreach(string config in Configs)
-		{
-			foreach (var sampleSln in sampleSlns)
-			{
-				string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
-
-				// clear the packages folder so we always use the latest
-				var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages-dotnet").FullPath;
-				EnsureDirectoryExists(packagesPath);
-				CleanDirectories(packagesPath);
-
-				var settings = new DotNetMSBuildSettings()
-					.SetConfiguration(config)
-					.SetMaxCpuCount(0)
-					.WithProperty("RestorePackagesPath", packagesPath)
-					.WithProperty("DesignTimeBuild", "false")
-					.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
-
-				if (!string.IsNullOrEmpty(ANDROID_HOME))
-					settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
-
-				string filename = sampleSln.GetFilenameWithoutExtension().ToString();
-				Information($"=====================================================================================================");
-				Information($"DotNetMSBuild        {sampleSln} / {filename}");    
-				DotNetRestore(sampleSln.ToString(), new DotNetRestoreSettings
-				{
-					MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-restore-{filename}.binlog")
-				});
-				DotNetBuild
-				(
-					sampleSln.ToString(), 
-					new DotNetBuildSettings()
-					{
-						Configuration = config,
-						MSBuildSettings = settings
-											.EnableBinaryLogger($"./output/samples-dotnet-dotnet-build-{filename}.binlog")
-					}
-				);
-			}
-		}
+		DeleteFiles(".output/system.*/nupkg");
+		DeleteFiles(".output/microsoft.*/nupkg");
+		DeleteFiles(".output/xamarin.android.support.*/nupkg");
+		DeleteFiles(".output/xamarin.android.arch.*/nupkg");
+		DeleteFiles(".output/xamarin.build.download.*/nupkg");
 });
 
 Task("allbindingprojectrefs")
 	.Does(() =>
 {
-	Action<string, string[]> generateTargets = (string file, string[] patterns) => 
-	{
-		FilePath[] nupkgs = new FilePath[]{};
-		foreach(string p in patterns)
-		{
-			nupkgs = nupkgs.Concat(GetFiles(p)).ToArray();
-		}
+	Action<string,string> generateTargets = (string pattern, string file) => {
 		var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
 		var itemGroup = new XElement(xmlns + "ItemGroup");
-		foreach (var nupkg in nupkgs) {
+		foreach (var nupkg in GetFiles(pattern)) {
 			var filename = nupkg.GetFilenameWithoutExtension();
 		var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
 		itemGroup.Add(new XElement(xmlns + "PackageReference",
@@ -813,49 +748,10 @@ Task("allbindingprojectrefs")
 
 	};
 
-	generateTargets("./output/FirebasePackages.targets", new string[] {"./output/Xamarin.Firebase.*.nupkg"} );
-	generateTargets("./output/PlayServicesPackages.targets", new string[] {"./output/Xamarin.GooglePlayServices.*.nupkg"} );
-	generateTargets("./output/Google.MLKit.targets", new string[] {"./output/Xamarin.Google.MLKit.*.nupkg"} );
-	generateTargets("./output/Google.Play.targets", new string[] {"./output/Xamarin.Google.Android.Play.*.nupkg"});
-	generateTargets("./output/Diverse.targets", new string[] { 
-																"./output/Square.*.nupkg",
-																"./output/Xamarin.GoogleAndroid.*.nupkg",
-																"./output/Xamarin.Google.Code.*.nupkg",
-																"./output/Xamarin.Google.Dagger.*.nupkg",
-																"./output/Xamarin.Google.Android.*.nupkg",
-																"./output/Xamarin.Google.UserMessagingPlatform.*.nupkg",
-																"./output/Xamarin.Grpc.*.nupkg",
-																"./output/Xamarin.JavaX.*.nupkg",
-																"./output/Xamarin.Protobuf.*.nupkg",
-																"./output/Xamarin.TensorFlow.*.nupkg",
-																"./output/Xamarin.Google.Io.OpenCensus.*.nupkg",
-																"./output/Xamarin.Google.ZXing.*.nupkg"});
-
-    // ... and Directory.packages.props for central package management
-    // 
-    string content_original = null;
-    string content_new      = null;
-
-    content_original = System.IO.File.ReadAllText("./output/FirebasePackages.targets");
-    content_new      = content_original.Replace("PackageReference", "PackageVersion");
-    System.IO.File.WriteAllText("./output/Directory.FB.packages.props", content_new);
-
-    content_original = System.IO.File.ReadAllText("./output/PlayServicesPackages.targets");
-    content_new      = content_original.Replace("PackageReference", "PackageVersion");
-    System.IO.File.WriteAllText("./output/Directory.GPS.packages.props", content_new);
-
-    content_original = System.IO.File.ReadAllText("./output/Google.MLKit.targets");
-    content_new      = content_original.Replace("PackageReference", "PackageVersion");
-    System.IO.File.WriteAllText("./output/Directory.MLKit.packages.props", content_new);
-
-    content_original = System.IO.File.ReadAllText("./output/Google.Play.targets");
-    content_new      = content_original.Replace("PackageReference", "PackageVersion");
-    System.IO.File.WriteAllText("./output/Directory.Play.packages.props", content_new);
-
-    content_original = System.IO.File.ReadAllText("./output/Diverse.targets");
-    content_new      = content_original.Replace("PackageReference", "PackageVersion");
-    System.IO.File.WriteAllText("./output/Directory.Diverse.packages.props", content_new);
-
+	generateTargets("./output/Xamarin.Firebase.*.nupkg", "./output/FirebasePackages.targets");
+	generateTargets("./output/Xamarin.GooglePlayServices.*.nupkg", "./output/PlayServicesPackages.targets");
+	generateTargets("./output/Xamarin.Google.MLKit.*.nupkg", "./output/Google.MLKit.targets");
+	generateTargets("./output/Xamarin.Google.Play.*.nupkg", "./output/Google.Play.targets");
 });
 
 
@@ -1015,14 +911,22 @@ Task ("clean")
 });
 
 Task ("ci")
+    .IsDependentOn ("ci-build")
+    .IsDependentOn ("ci-samples")
+    ;
+    
+Task ("ci-build")
 	.IsDependentOn ("ci-setup")
 	//.IsDependentOn ("tools-check")
 	//.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
 	//.IsDependentOn ("merge")
-	.IsDependentOn ("samples")
-    .IsDependentOn ("tools-executive-order")
-    ;
+  .IsDependentOn ("tools-executive-order")
+  ;
+
+Task ("ci-samples")
+	.IsDependentOn ("samples-only")
+  ;
 
 RunTarget (TARGET);

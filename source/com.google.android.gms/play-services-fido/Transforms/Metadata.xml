@@ -10,7 +10,11 @@
     <attr path="/api/package[@name='com.google.android.gms.fido.fido2.api.common']" name="managedName">Android.Gms.Fido.Fido2.Api.Common</attr>
     <attr path="/api/package[@name='com.google.android.gms.internal.fido']" name="managedName">Android.Gms.Internal.Fido</attr>
 
-
-
+	<attr 
+		path="/api/package[@name='com.google.android.gms.fido.sourcedevice']" 
+		name="managedName"
+		>
+		Android.Gms.Fido.SourceDevice
+	</attr>
     
 </metadata>
