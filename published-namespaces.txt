@@ -486,6 +486,7 @@ Square.OkHttp
 Square.OkHttp3
 Square.OkHttp3.Logging
 Square.OkIO
+Square.OkIO.Internal
 Square.Picasso
 Square.Retrofit
 Square.Retrofit.Android

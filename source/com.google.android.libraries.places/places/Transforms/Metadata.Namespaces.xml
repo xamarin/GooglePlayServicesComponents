@@ -42,6 +42,12 @@
         Xamarin.GoogleAndroid.Libraries.Places.Widget.Model
     </attr>
     <attr 
+        path="/api/package[@name='com.google.android.libraries.places.widget.internal']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Places.Widget.Internal
+    </attr>
+    <attr 
         path="/api/package[@name='com.google.android.libraries.places.widget.internal.ui']"
         name="managedName"
         >
