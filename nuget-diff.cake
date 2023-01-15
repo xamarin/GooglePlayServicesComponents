@@ -20,22 +20,30 @@ Information("");
 
 // SECTION: Diff NuGets
 
-if (!GetFiles($"{ARTIFACTS_DIR}/**/*.nupkg").Any()) {
+var nupkgs = GetFiles($"{ARTIFACTS_DIR}/**/*.nupkg");
+if (!nupkgs.Any()) {
 	Warning($"##vso[task.logissue type=warning]No NuGet packages were found.");
 } else {
-	var exitCode = StartProcess("api-tools", new ProcessSettings {
-		Arguments = new ProcessArgumentBuilder()
-			.Append("nuget-diff")
-			.AppendQuoted(ARTIFACTS_DIR.FullPath)
-			.Append("--latest")
-			.Append("--prerelease")
-			.Append("--group-ids")
-			.Append("--ignore-unchanged")
-			.AppendSwitchQuoted("--output", OUTPUT_DIR.FullPath)
-			.AppendSwitchQuoted("--cache", CACHE_DIR.Combine("package-cache").FullPath)
+	Parallel.ForEach (nupkgs, nupkg => {
+		var version = "--latest";
+		var versionFile = nupkg.FullPath + ".baseversion";
+		if (FileExists(versionFile)) {
+			version = "--version=" + System.IO.File.ReadAllText(versionFile).Trim();
+		}
+		var exitCode = StartProcess("api-tools", new ProcessSettings {
+			Arguments = new ProcessArgumentBuilder()
+				.Append("nuget-diff")
+				.AppendQuoted(nupkg.FullPath)
+				.Append(version)
+				.Append("--prerelease")
+				.Append("--group-ids")
+				.Append("--ignore-unchanged")
+				.AppendSwitchQuoted("--output", OUTPUT_DIR.FullPath)
+				.AppendSwitchQuoted("--cache", CACHE_DIR.Combine("package-cache").FullPath)
+		});
+		if (exitCode != 0)
+			throw new Exception ($"api-tools exited with error code {exitCode}.");
 	});
-	if (exitCode != 0)
-		throw new Exception ($"api-tools exited with error code {exitCode}.");
 }
 
 
@@ -61,8 +69,6 @@ if (!diffs.Any()) {
 		var newPath = temp.CombineWithFilePath(newName);
 
 		CopyFile(diff, newPath);
-		// for github PR summary (markdown files are not accepted, so copy to text files)
-		CopyFile(diff, $"{diff}.txt");
 	}
 
 	var temps = GetFiles($"{temp}/**/*.md");
@@ -70,31 +76,3 @@ if (!diffs.Any()) {
 		Information($"##vso[task.uploadsummary]{t}");
 	}
 }
-
-Task("tools-update")
-    .Does
-    (
-        () =>
-        {
-            /*
-			// dotnet cake	
-            dotnet tool uninstall   -g Cake.Tool
-            dotnet tool install     -g Cake.Tool
-			// binderator
-            dotnet tool uninstall   -g xamarin.androidbinderator.tool
-            dotnet tool install     -g xamarin.androidbinderator.tool
-			// androidx-migrator
-            dotnet tool uninstall   -g xamarin.androidx.migration.tool
-            dotnet tool install     -g xamarin.androidx.migration.tool
-
-            StartProcess("dotnet", "tool uninstall   -g Cake.Tool");
-            StartProcess("dotnet", "tool install     -g Cake.Tool");
-            */
-            StartProcess("dotnet", "tool uninstall   -g xamarin.androidbinderator.tool");
-            StartProcess("dotnet", "tool install     -g xamarin.androidbinderator.tool");
-            StartProcess("dotnet", "tool uninstall   -g xamarin.androidx.migration.tool");
-            StartProcess("dotnet", "tool install     -g xamarin.androidx.migration.tool");
-            StartProcess("dotnet", "tool uninstall   -g api-tools");
-            StartProcess("dotnet", "tool install     -g api-tools");
-        }
-    );
