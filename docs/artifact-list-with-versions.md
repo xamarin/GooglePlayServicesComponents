@@ -199,7 +199,7 @@
 | 192|com.google.mlkit:vision-interfaces                                    |16.1.0              |Xamarin.Google.MLKit.Vision.Interfaces                                |116.1.0             |
 | 193|com.google.mlkit:vision-internal-vkp                                  |18.2.2              |Xamarin.Google.MLKit.Vision.Internal.Vkp                              |118.2.2.2           |
 | 194|com.google.android.odml:image                                         |1.0.0-beta1         |Xamarin.Google.Android.ODML.Image                                     |1.0.0.2-beta1       |
-| 195|com.google.android.libraries.places:places                            |2.1.0               |Xamarin.GoogleAndroid.Libraries.Places                                |2.1.0               |
+| 195|com.google.android.libraries.places:places                            |2.2.0               |Xamarin.GoogleAndroid.Libraries.Places                                |2.2.0               |
 | 196|com.google.android.libraries.places:places-compat                     |2.1.0               |Xamarin.GoogleAndroid.Libraries.Places.Compat                         |2.1.0               |
 | 197|com.android.billingclient:billing                                     |5.1.0               |Xamarin.Android.Google.BillingClient                                  |5.1.0               |
 | 198|com.android.billingclient:billing-ktx                                 |5.1.0               |Xamarin.Android.Google.BillingClient.Ktx                              |5.1.0               |
@@ -219,7 +219,7 @@
 | 212|com.google.dagger:dagger                                              |2.43.2              |Xamarin.Google.Dagger                                                 |2.43.2              |
 | 213|com.google.errorprone:error_prone_annotations                         |2.16                |Xamarin.Google.ErrorProne.Annotations                                 |2.16.0              |
 | 214|com.google.zxing:core                                                 |3.5.1               |Xamarin.Google.ZXing.Core                                             |3.5.1               |
-| 215|com.google.flatbuffers:flatbuffers-java                               |22.10.26            |Xamarin.Google.FlatBuffers.Java                                       |22.10.26            |
+| 215|com.google.flatbuffers:flatbuffers-java                               |22.11.23            |Xamarin.Google.FlatBuffers.Java                                       |22.11.23            |
 | 216|com.google.protobuf:protobuf-javalite                                 |3.21.12             |Xamarin.Protobuf.JavaLite                                             |3.21.12             |
 | 217|com.google.protobuf:protobuf-lite                                     |3.0.1               |Xamarin.Protobuf.Lite                                                 |3.0.1.6             |
 | 218|com.squareup.okhttp:okhttp                                            |2.7.5               |Square.OkHttp                                                         |2.7.5.6             |
