@@ -2529,9 +2529,9 @@
         "maven": {
           "artifactId": "places",
           "groupId": "com.google.android.libraries.places",
-          "version": "2.1.0",
+          "version": "2.2.0",
           "nuGetId": "Xamarin.GoogleAndroid.Libraries.Places",
-          "nuGetVersion": "2.1.0"
+          "nuGetVersion": "2.2.0"
         }
       },
       "license": "Google Maps Platform Terms of Service"
@@ -2789,9 +2789,9 @@
         "maven": {
           "artifactId": "flatbuffers-java",
           "groupId": "com.google.flatbuffers",
-          "version": "22.10.26",
+          "version": "22.11.23",
           "nuGetId": "Xamarin.Google.FlatBuffers.Java",
-          "nuGetVersion": "22.10.26"
+          "nuGetVersion": "22.11.23"
         }
       },
       "license": "The Apache Software License, Version 2.0"
