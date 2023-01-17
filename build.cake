@@ -730,6 +730,52 @@ Task("samples-only")
 		DeleteFiles(".output/xamarin.build.download.*/nupkg");
 });
 
+Task("samples-dotnet")
+    .IsDependentOn("nuget")
+    .IsDependentOn("samples-only")
+    .IsDependentOn("samples-only-dotnet")
+	;
+
+Task("samples-only-dotnet")
+	.IsDependentOn("samples-directory-build-targets")
+	.IsDependentOn("mergetargets")
+	.IsDependentOn("allbindingprojectrefs")
+    .Does(() =>
+{
+    // clear the packages folder so we always use the latest
+    var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages-dotnet").FullPath;
+    EnsureDirectoryExists(packagesPath);
+    CleanDirectories(packagesPath);
+
+    var settings = new DotNetMSBuildSettings()
+        .SetConfiguration("Debug") // We don't need to run linking
+        .WithProperty("RestorePackagesPath", packagesPath)
+        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
+
+    if (!string.IsNullOrEmpty(ANDROID_HOME))
+        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+
+    string[] solutions = new string[]
+    {
+        "./samples/dotnet/BuildAllDotNet.sln",
+        "./samples/dotnet/BuildAllMauiApp.sln",
+        "./samples/dotnet/BuildAllXamarinForms.sln",
+    };
+
+    foreach(string solution in solutions)
+    {
+        FilePath fp_solution = new FilePath(solution);
+        string filename = fp_solution.GetFilenameWithoutExtension().ToString();
+        Information($"=====================================================================================================");
+        Information($"DotNetMSBuild        {solution} / {filename}");    
+        DotNetBuild(solution, new DotNetBuildSettings
+        {
+            MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
+        });
+    }
+});
+
+
 Task("allbindingprojectrefs")
 	.Does(() =>
 {
