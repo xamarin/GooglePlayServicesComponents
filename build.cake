@@ -595,10 +595,10 @@ Task("samples-directory-build-targets")
 				Information($"nugetId       = {jo["nugetId"]}");
 			}
 
-	        XmlDocument doc = new XmlDocument();
-	        XmlElement element_p = doc.CreateElement( string.Empty, "Project", string.Empty );
-        	doc.AppendChild( element_p );
-	       	XmlElement element_ig = doc.CreateElement( string.Empty, "ItemGroup", string.Empty );
+			XmlDocument doc_all = new XmlDocument();
+	        XmlElement element_p = doc_all.CreateElement( string.Empty, "Project", string.Empty );
+        	doc_all.AppendChild( element_p );
+	       	XmlElement element_ig = doc_all.CreateElement( string.Empty, "ItemGroup", string.Empty );
         	element_p.AppendChild(element_ig);
 
 			foreach(JObject jo in binderator_json_array[0]["artifacts"])
@@ -611,29 +611,35 @@ Task("samples-directory-build-targets")
 				Information($"nuget_version = {nuget_version}");
 				Information($"nugetId       = {jo["nugetId"]}");
 
-				XmlElement element_pr = doc.CreateElement( string.Empty, "PackageReference", string.Empty );
+				XmlElement element_pr = doc_all.CreateElement( string.Empty, "PackageReference", string.Empty );
 	        	element_ig.AppendChild(element_pr);
-				XmlAttribute attr_update = doc.CreateAttribute("Update");
+				XmlAttribute attr_update = doc_all.CreateAttribute("Update");
 				attr_update.Value = (string) jo["nugetId"];
 				element_pr.Attributes.Append(attr_update);
-				XmlAttribute attr_version = doc.CreateAttribute("Version");
+				XmlAttribute attr_version = doc_all.CreateAttribute("Version");
 				attr_version.Value = nuget_version;
 				element_pr.Attributes.Append(attr_version);
 			}
 
-			XmlElement xbd_pr = doc.CreateElement( string.Empty, "PackageReference", string.Empty );
+			XmlElement xbd_pr = doc_all.CreateElement( string.Empty, "PackageReference", string.Empty );
 			element_ig.AppendChild(xbd_pr);
-			XmlAttribute xbd_attr_update = doc.CreateAttribute("Update");
+			XmlAttribute xbd_attr_update = doc_all.CreateAttribute("Update");
 			xbd_attr_update.Value = "Xamarin.Build.Download";
 			xbd_pr.Attributes.Append(xbd_attr_update);
-			XmlAttribute xbd_attr_version = doc.CreateAttribute("Version");
+			XmlAttribute xbd_attr_version = doc_all.CreateAttribute("Version");
 			xbd_attr_version.Value = "0.11.4";
 			xbd_pr.Attributes.Append(xbd_attr_version);
 
-			doc.Save( System.IO.Path.Combine("samples", "Directory.Build.targets" ));
+			doc_all.Save( System.IO.Path.Combine("samples", "Directory.Build.targets" ));
+			doc_all.Save( System.IO.Path.Combine("output", "Directory.GPS.packages.props" ));
+			doc_all.Save( System.IO.Path.Combine("output", "Directory.FB.packages.props" ));
+			doc_all.Save( System.IO.Path.Combine("output", "Directory.MLKit.packages.props" ));
+			doc_all.Save( System.IO.Path.Combine("output", "Directory.Play.packages.props" ));
+			doc_all.Save( System.IO.Path.Combine("output", "Directory.Diverse.packages.props" ));
 
 			return;
 		}
+		
 	);
 
 Task("samples")
