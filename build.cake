@@ -596,6 +596,7 @@ Task("samples-directory-build-targets")
 			}
 
 			XmlDocument doc_all = new XmlDocument();
+
 	        XmlElement element_p = doc_all.CreateElement( string.Empty, "Project", string.Empty );
         	doc_all.AppendChild( element_p );
 	       	XmlElement element_ig = doc_all.CreateElement( string.Empty, "ItemGroup", string.Empty );
@@ -631,20 +632,196 @@ Task("samples-directory-build-targets")
 			xbd_pr.Attributes.Append(xbd_attr_version);
 
 			doc_all.Save( System.IO.Path.Combine("samples", "Directory.Build.targets" ));
-			doc_all.Save( System.IO.Path.Combine("output", "Directory.GPS.packages.props" ));
-			doc_all.Save( System.IO.Path.Combine("output", "Directory.FB.packages.props" ));
-			doc_all.Save( System.IO.Path.Combine("output", "Directory.MLKit.packages.props" ));
-			doc_all.Save( System.IO.Path.Combine("output", "Directory.Play.packages.props" ));
-			doc_all.Save( System.IO.Path.Combine("output", "Directory.Diverse.packages.props" ));
+			doc_all.Save( System.IO.Path.Combine("output", "Directory.Build.targets" ));
+
+			string[] lines = System.IO.File.ReadAllLines("./output/Directory.Build.targets");
+			List<string> lines_gps = new List<string>();
+			List<string> lines_fb = new List<string>();
+			List<string> lines_mlkit = new List<string>();
+			List<string> lines_gp = new List<string>();
+			List<string> lines_diverse = new List<string>();
+
+			Parallel.Invoke
+						(
+							() =>
+							{
+								foreach(string line in lines)
+								{
+									if
+										( 
+											line.Contains("Project")
+											||
+											line.Contains("ItemGroup")
+										)
+									{
+										lines_gps.Add(line);
+									}
+									
+									if
+										( 
+											line.Contains("Xamarin.GooglePlayServices.")
+										)
+									{
+										lines_gps.Add(line);
+									}
+									else
+									{
+										continue;
+									}
+								}
+
+								System.IO.File.WriteAllLines("./output/Directory.GPS.packages.props", lines_gps.ToArray());
+
+								return;
+							},
+							() =>
+							{								
+								foreach(string line in lines)
+								{
+									if
+										( 
+											line.Contains("Project")
+											||
+											line.Contains("ItemGroup")
+										)
+									{
+										lines_fb.Add(line);
+									}
+
+									if
+										( 
+											line.Contains("Xamarin.Firebase.")
+										)
+									{
+										lines_fb.Add(line);
+									}
+									else
+									{
+										continue;
+									}
+								}
+
+								System.IO.File.WriteAllLines("./output/Directory.FB.packages.props", lines_fb.ToArray());
+
+								return;
+							},
+							() =>
+							{
+								foreach(string line in lines)
+								{
+									if
+										( 
+											line.Contains("Project")
+											||
+											line.Contains("ItemGroup")
+										)
+									{
+										lines_mlkit.Add(line);
+									}
+
+									if
+										( 
+											line.Contains("Xamarin.Google.MLKit.")
+										)
+									{
+										lines_mlkit.Add(line);
+									}
+									else
+									{
+										continue;
+									}
+								}
+
+								System.IO.File.WriteAllLines("./output/Directory.MLKit.packages.props", lines_mlkit.ToArray());
+
+								return;
+							},
+							() =>
+							{
+								foreach(string line in lines)
+								{
+									if
+										( 
+											line.Contains("Project")
+											||
+											line.Contains("ItemGroup")
+										)
+									{
+										lines_play.Add(line);
+									}
+
+									if
+										( 
+											line.Contains("Xamarin.Google.Android.Play.")
+										)
+									{
+										lines_play.Add(line);
+									}
+									else
+									{
+										continue;
+									}
+								}
+								
+								System.IO.File.WriteAllLines("./output/Directory.GP.packages.props", lines_diverse.ToArray());
+
+								return;
+							},
+							() =>
+							{
+								foreach(string line in lines)
+								{
+									if
+										( 
+											line.Contains("Project")
+											||
+											line.Contains("ItemGroup")
+										)
+									{
+										lines_diverse.Add(line);
+									}
+
+									if
+										( 
+											line.Contains("Square")
+											&&
+											line.Contains("Xamarin.Grpc.")
+											&&
+											line.Contains("Xamarin.Io.")
+											&&
+											line.Contains("Xamarin.JavaX.")
+											&&
+											line.Contains("Xamarin.Chromium.")
+											&&
+											line.Contains("Xamarin.CodeHaus.")
+											&&
+											line.Contains("Xamarin.TensorFlow.")
+										)
+									{
+										lines_diverse.Add(line);
+									}
+									else
+									{
+										continue;
+									}
+								}
+
+								System.IO.File.WriteAllLines("./output/Directory.Diverse.packages.props", lines_diverse.ToArray());
+
+								return;
+							}
+						);
 
 			return;
 		}
-		
 	);
 
 Task("samples")
 	.IsDependentOn("libs")
-	.IsDependentOn("samples-only");
+	.IsDependentOn("samples-directory-build-targets")
+	.IsDependentOn("samples-only")
+    .IsDependentOn("samples-only-dotnet")
+	;
 
 Task("samples-only")
 	.IsDependentOn("samples-directory-build-targets")
@@ -738,7 +915,6 @@ Task("samples-only")
 
 Task("samples-dotnet")
     .IsDependentOn("nuget")
-    .IsDependentOn("samples-only")
     .IsDependentOn("samples-only-dotnet")
 	;
 
