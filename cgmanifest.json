@@ -2362,7 +2362,7 @@
           "groupId": "com.google.mlkit",
           "version": "17.0.0",
           "nuGetId": "Xamarin.Google.MLKit.ObjectDetection",
-          "nuGetVersion": "117.0.0.2"
+          "nuGetVersion": "117.0.0.3"
         }
       },
       "license": "ML Kit Terms of Service"
@@ -2375,7 +2375,7 @@
           "groupId": "com.google.mlkit",
           "version": "18.0.0",
           "nuGetId": "Xamarin.Google.MLKit.ObjectDetection.Common",
-          "nuGetVersion": "118.0.0.2"
+          "nuGetVersion": "118.0.0.3"
         }
       },
       "license": "ML Kit Terms of Service"
@@ -2388,7 +2388,7 @@
           "groupId": "com.google.mlkit",
           "version": "17.0.0",
           "nuGetId": "Xamarin.Google.MLKit.ObjectDetection.Custom",
-          "nuGetVersion": "117.0.0.2"
+          "nuGetVersion": "117.0.0.3"
         }
       },
       "license": "ML Kit Terms of Service"

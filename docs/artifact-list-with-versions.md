@@ -186,9 +186,9 @@
 | 179|com.google.mlkit:language-id-common                                   |16.1.0              |Xamarin.Google.MLKit.Language.Id.Common                               |116.1.0             |
 | 180|com.google.mlkit:linkfirebase                                         |17.0.0              |Xamarin.Google.MLKit.LinkFirebase                                     |117.0.0.2           |
 | 181|com.google.mlkit:mediapipe-internal                                   |16.0.0              |Xamarin.Google.MLKit.MediaPipe.Internal                               |116.0.0.7           |
-| 182|com.google.mlkit:object-detection                                     |17.0.0              |Xamarin.Google.MLKit.ObjectDetection                                  |117.0.0.2           |
-| 183|com.google.mlkit:object-detection-common                              |18.0.0              |Xamarin.Google.MLKit.ObjectDetection.Common                           |118.0.0.2           |
-| 184|com.google.mlkit:object-detection-custom                              |17.0.0              |Xamarin.Google.MLKit.ObjectDetection.Custom                           |117.0.0.2           |
+| 182|com.google.mlkit:object-detection                                     |17.0.0              |Xamarin.Google.MLKit.ObjectDetection                                  |117.0.0.3           |
+| 183|com.google.mlkit:object-detection-common                              |18.0.0              |Xamarin.Google.MLKit.ObjectDetection.Common                           |118.0.0.3           |
+| 184|com.google.mlkit:object-detection-custom                              |17.0.0              |Xamarin.Google.MLKit.ObjectDetection.Custom                           |117.0.0.3           |
 | 185|com.google.mlkit:pose-detection                                       |17.0.0              |Xamarin.Google.MLKit.PoseDetection                                    |117.0.0.7           |
 | 186|com.google.mlkit:pose-detection-accurate                              |17.0.0              |Xamarin.Google.MLKit.PoseDetection.Accurate                           |117.0.0.7           |
 | 187|com.google.mlkit:pose-detection-common                                |17.0.0              |Xamarin.Google.MLKit.PoseDetection.Common                             |117.0.0.7           |
