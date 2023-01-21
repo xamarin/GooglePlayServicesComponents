@@ -647,12 +647,7 @@ Task("samples-directory-build-targets")
 							{
 								foreach(string line in lines)
 								{
-									if
-										( 
-											line.Contains("Project")
-											||
-											line.Contains("ItemGroup")
-										)
+									if( line.Contains("Project") || line.Contains("ItemGroup") )
 									{
 										lines_gps.Add(line);
 									}
@@ -678,12 +673,7 @@ Task("samples-directory-build-targets")
 							{								
 								foreach(string line in lines)
 								{
-									if
-										( 
-											line.Contains("Project")
-											||
-											line.Contains("ItemGroup")
-										)
+									if( line.Contains("Project") || line.Contains("ItemGroup") )
 									{
 										lines_fb.Add(line);
 									}
@@ -709,12 +699,7 @@ Task("samples-directory-build-targets")
 							{
 								foreach(string line in lines)
 								{
-									if
-										( 
-											line.Contains("Project")
-											||
-											line.Contains("ItemGroup")
-										)
+									if( line.Contains("Project") || line.Contains("ItemGroup") )
 									{
 										lines_mlkit.Add(line);
 									}
@@ -740,14 +725,9 @@ Task("samples-directory-build-targets")
 							{
 								foreach(string line in lines)
 								{
-									if
-										( 
-											line.Contains("Project")
-											||
-											line.Contains("ItemGroup")
-										)
+									if( line.Contains("Project") || line.Contains("ItemGroup") )
 									{
-										lines_play.Add(line);
+										lines_gp.Add(line);
 									}
 
 									if
@@ -755,7 +735,7 @@ Task("samples-directory-build-targets")
 											line.Contains("Xamarin.Google.Android.Play.")
 										)
 									{
-										lines_play.Add(line);
+										lines_gp.Add(line);
 									}
 									else
 									{
@@ -763,7 +743,7 @@ Task("samples-directory-build-targets")
 									}
 								}
 								
-								System.IO.File.WriteAllLines("./output/Directory.GP.packages.props", lines_diverse.ToArray());
+								System.IO.File.WriteAllLines("./output/Directory.GP.packages.props", lines_gp.ToArray());
 
 								return;
 							},
@@ -771,12 +751,7 @@ Task("samples-directory-build-targets")
 							{
 								foreach(string line in lines)
 								{
-									if
-										( 
-											line.Contains("Project")
-											||
-											line.Contains("ItemGroup")
-										)
+									if( line.Contains("Project") || line.Contains("ItemGroup") )
 									{
 										lines_diverse.Add(line);
 									}
@@ -784,17 +759,17 @@ Task("samples-directory-build-targets")
 									if
 										( 
 											line.Contains("Square")
-											&&
+											||
 											line.Contains("Xamarin.Grpc.")
-											&&
+											||
 											line.Contains("Xamarin.Io.")
-											&&
+											||
 											line.Contains("Xamarin.JavaX.")
-											&&
+											||
 											line.Contains("Xamarin.Chromium.")
-											&&
+											||
 											line.Contains("Xamarin.CodeHaus.")
-											&&
+											||
 											line.Contains("Xamarin.TensorFlow.")
 										)
 									{
@@ -928,15 +903,7 @@ Task("samples-only-dotnet")
     var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages-dotnet").FullPath;
     EnsureDirectoryExists(packagesPath);
     CleanDirectories(packagesPath);
-
-    var settings = new DotNetMSBuildSettings()
-        .SetConfiguration("Debug") // We don't need to run linking
-        .WithProperty("RestorePackagesPath", packagesPath)
-        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
-
-    if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
-
+ 
     string[] solutions = new string[]
     {
         "./samples/dotnet/BuildAllDotNet.sln",
@@ -944,17 +911,49 @@ Task("samples-only-dotnet")
         "./samples/dotnet/BuildAllXamarinForms.sln",
     };
 
+    DotNetMSBuildSettings settings = null;
+
+	settings = new DotNetMSBuildSettings()
+						.SetConfiguration("Debug") // We don't need to run linking
+						.WithProperty("RestorePackagesPath", packagesPath)
+						.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}")
+						;
+
+   if (!string.IsNullOrEmpty(ANDROID_HOME))
+        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+
     foreach(string solution in solutions)
     {
         FilePath fp_solution = new FilePath(solution);
         string filename = fp_solution.GetFilenameWithoutExtension().ToString();
         Information($"=====================================================================================================");
-        Information($"DotNetMSBuild        {solution} / {filename}");    
+        Information($"DotNetBuild        {solution} / {filename}");    
         DotNetBuild(solution, new DotNetBuildSettings
         {
-            MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
+            MSBuildSettings = settings
+								.EnableBinaryLogger($"./output/samples-dotnet-dotnet-debug-{filename}.binlog")
         });
     }
+
+	settings = new DotNetMSBuildSettings()
+						.SetConfiguration("Release") // We don't need to run linking
+						.WithProperty("RestorePackagesPath", packagesPath)
+						.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}")
+						;
+
+    foreach(string solution in solutions)
+    {
+        FilePath fp_solution = new FilePath(solution);
+        string filename = fp_solution.GetFilenameWithoutExtension().ToString();
+        Information($"=====================================================================================================");
+        Information($"DotNetBuild        {solution} / {filename}");    
+        DotNetBuild(solution, new DotNetBuildSettings
+        {
+            MSBuildSettings = settings
+								.EnableBinaryLogger($"./output/samples-dotnet-dotnet-release-{filename}.binlog")
+        });
+    }
+
 });
 
 
@@ -1155,6 +1154,7 @@ Task ("ci-build")
 
 Task ("ci-samples")
 	.IsDependentOn ("samples-only")
-  ;
+	.IsDependentOn ("samples-only-dotnet")
+  	;
 
 RunTarget (TARGET);
