@@ -13,7 +13,7 @@
     />
   <Import 
     Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
-    Project="..\..\output\Directory.Play.packages.props" 
+    Project="..\..\output\Directory.GP.packages.props" 
     />
     <Import 
     Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"

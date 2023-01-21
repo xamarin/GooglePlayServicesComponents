@@ -38,7 +38,7 @@
 		Project="..\..\..\output\Directory.MLKit.packages.props" 
 		/>
 	<Import 
-		Project="..\..\..\output\Directory.Play.packages.props" 
+		Project="..\..\..\output\Directory.GP.packages.props" 
 		/>
     <Import 
 		Project="..\..\..\output\Directory.Diverse.packages.props" 
