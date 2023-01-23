@@ -1485,7 +1485,7 @@
         "groupId": "com.google.mlkit",
         "artifactId": "object-detection",
         "version": "17.0.0",
-        "nugetVersion": "117.0.0.2",
+        "nugetVersion": "117.0.0.3",
         "nugetId": "Xamarin.Google.MLKit.ObjectDetection",
         "dependencyOnly": false
       },
@@ -1493,7 +1493,7 @@
         "groupId": "com.google.mlkit",
         "artifactId": "object-detection-common",
         "version": "18.0.0",
-        "nugetVersion": "118.0.0.2",
+        "nugetVersion": "118.0.0.3",
         "nugetId": "Xamarin.Google.MLKit.ObjectDetection.Common",
         "dependencyOnly": false
       },
@@ -1501,7 +1501,7 @@
         "groupId": "com.google.mlkit",
         "artifactId": "object-detection-custom",
         "version": "17.0.0",
-        "nugetVersion": "117.0.0.2",
+        "nugetVersion": "117.0.0.3",
         "nugetId": "Xamarin.Google.MLKit.ObjectDetection.Custom",
         "dependencyOnly": false
       },
