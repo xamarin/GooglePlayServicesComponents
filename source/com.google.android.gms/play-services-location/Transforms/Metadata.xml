@@ -80,12 +80,4 @@
 	<!-- We are renaming this class so we can create our own subclass which will be used instead of this class and adds some extra functionality -->
 	<attr path="/api/package[@name='com.google.android.gms.location']/class[@name='LocationCallback']" name="managedName">LocationCallbackBase</attr>
 
-	<!--
-	Android.Gms.Location.IFusedLocationProviderClient.cs(9,24): error CS0260: 
-	Missing partial modifier on declaration of type 'FusedLocationProviderClient'; another partial declaration of this type exists 
-	-->
-	<remove-node
-		path="/api/package[@name='com.google.android.gms.location']/interface[@name='FusedLocationProviderClient']"
-		/>
-
 </metadata>
