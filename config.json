@@ -2428,8 +2428,8 @@
       {
         "groupId": "io.reactivex.rxjava2",
         "artifactId": "rxjava",
-        "version": "2.2.1.2",
-        "nugetVersion": "2.2.1.2",
+        "version": "2.2.21",
+        "nugetVersion": "2.2.21.9",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava",
         "dependencyOnly": true
       },
