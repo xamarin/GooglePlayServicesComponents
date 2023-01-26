@@ -1316,16 +1316,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-perf",
-        "version": "20.2.0",
-        "nugetVersion": "120.2.0.1",
+        "version": "20.3.0",
+        "nugetVersion": "120.3.0.1",
         "nugetId": "Xamarin.Firebase.Perf",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-perf-ktx",
-        "version": "20.2.0",
-        "nugetVersion": "120.2.0.1",
+        "version": "20.3.0",
+        "nugetVersion": "120.3.0.1",
         "nugetId": "Xamarin.Firebase.Perf.Ktx",
         "dependencyOnly": false
       },
@@ -1596,8 +1596,8 @@
       {
         "groupId": "com.google.android.libraries.places",
         "artifactId": "places-compat",
-        "version": "2.1.0",
-        "nugetVersion": "2.1.0.1",
+        "version": "2.2.0",
+        "nugetVersion": "2.2.0.1",
         "nugetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat",
         "dependencyOnly": false
       },
@@ -1735,8 +1735,8 @@
       {
         "groupId": "com.google.dagger",
         "artifactId": "dagger",
-        "version": "2.43.2",
-        "nugetVersion": "2.43.2.1",
+        "version": "2.44.2",
+        "nugetVersion": "2.44.2.1",
         "nugetId": "Xamarin.Google.Dagger",
         "dependencyOnly": false,
         "templateSet": "dagger"
@@ -1801,8 +1801,8 @@
       {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "logging-interceptor",
-        "version": "4.5.0",
-        "nugetVersion": "4.5.0.1",
+        "version": "4.6.0",
+        "nugetVersion": "4.6.0.1",
         "nugetId": "Square.OkHttp3.LoggingInterceptor",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
