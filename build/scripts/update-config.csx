@@ -2,7 +2,7 @@
 
 #r "nuget: MavenNet, 2.2.13"
 #r "nuget: Newtonsoft.Json, 13.0.1"
-#r "nuget: NuGet.Versioning, 5.11.0"
+#r "nuget: NuGet.Versioning, 6.4.0"
 
 // Usage:
 //   dotnet tool install -g dotnet-script
@@ -210,6 +210,10 @@ static SemanticVersion GetVersion (string s)
 	if (version.Count (c => c == '.') > 2)
 		return new SemanticVersion (0, 0, 0);
 
+	// Leading zeros are forbidden in SemanticVersion
+	if (version == "22.12.06")
+		return new SemanticVersion (0, 0, 0);
+    
 	return SemanticVersion.Parse (version + tag);
 }
 	
