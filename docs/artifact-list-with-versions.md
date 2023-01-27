@@ -150,7 +150,7 @@
 | 143|com.google.firebase:firebase-messaging                                |23.1.1              |Xamarin.Firebase.Messaging                                            |123.1.1.1           |
 | 144|com.google.firebase:firebase-messaging-directboot                     |23.1.1              |Xamarin.Firebase.Messaging.DirectBoot                                 |123.1.1.1           |
 | 145|com.google.firebase:firebase-messaging-ktx                            |23.1.1              |Xamarin.Firebase.Messaging.Ktx                                        |123.1.1.1           |
-| 146|com.google.firebase:firebase-ml-common                                |22.1.2              |Xamarin.Firebase.ML.Common                                            |122.1.2.0           |
+| 146|com.google.firebase:firebase-ml-common                                |22.1.2              |Xamarin.Firebase.ML.Common                                            |122.1.2.7           |
 | 147|com.google.firebase:firebase-ml-model-interpreter                     |22.0.4              |Xamarin.Firebase.ML.Model.Interpreter                                 |122.0.4.8           |
 | 148|com.google.firebase:firebase-ml-natural-language                      |22.0.1              |Xamarin.Firebase.ML.Natural.Language                                  |122.0.1.8           |
 | 149|com.google.firebase:firebase-ml-natural-language-language-id-model    |20.0.8              |Xamarin.Firebase.ML.Natural.Language.Id.Model                         |120.0.8.8           |

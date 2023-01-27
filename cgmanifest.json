@@ -1894,7 +1894,7 @@
           "groupId": "com.google.firebase",
           "version": "22.1.2",
           "nuGetId": "Xamarin.Firebase.ML.Common",
-          "nuGetVersion": "122.1.2.0"
+          "nuGetVersion": "122.1.2.7"
         }
       },
       "license": "The Apache Software License, Version 2.0"
