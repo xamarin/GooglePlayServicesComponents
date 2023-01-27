@@ -1197,7 +1197,7 @@
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ml-common",
         "version": "22.1.2",
-        "nugetVersion": "122.1.2.0",
+        "nugetVersion": "122.1.2.7",
         "nugetId": "Xamarin.Firebase.ML.Common",
         "dependencyOnly": false
       },
