@@ -9,6 +9,7 @@ variables:
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
   ComponentDetection.Timeout: 900
+  CodeQL.Cadence: 0
 
 resources:
   repositories:
@@ -26,8 +27,8 @@ resources:
 jobs:
   - template: build/ci/build.yml@androidx
     parameters: 
-      skipUnitTests: true
-        
+      timeoutInMinutes: 240
+
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
       parameters:
