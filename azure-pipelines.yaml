@@ -8,7 +8,7 @@ pr:
 variables:
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
-  ComponentDetection.Timeout: 900
+  ComponentDetection.Timeout: 1200
 
 resources:
   repositories:
@@ -21,7 +21,7 @@ resources:
       type: github
       name: xamarin/androidx
       endpoint: xamarin
-      ref: refs/heads/test-codeql-timeout
+      ref: refs/heads/main
 
 jobs:
   - template: build/ci/build.yml@androidx
