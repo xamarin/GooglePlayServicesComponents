@@ -9,7 +9,6 @@ variables:
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
   ComponentDetection.Timeout: 900
-  CodeQL.Cadence: 0
 
 resources:
   repositories:
