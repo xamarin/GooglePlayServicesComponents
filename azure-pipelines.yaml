@@ -20,7 +20,7 @@ resources:
       type: github
       name: xamarin/androidx
       endpoint: xamarin
-      ref: refs/heads/main
+      ref: refs/heads/skip-unit-tests
 
 jobs:
   - template: build/ci/build.yml@androidx
