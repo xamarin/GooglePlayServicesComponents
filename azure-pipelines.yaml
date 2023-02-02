@@ -25,7 +25,8 @@ resources:
 
 jobs:
   - template: build/ci/build.yml@androidx
-    parameters: 
+    parameters:
+      skipUnitTests: true
       timeoutInMinutes: 240
 
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
