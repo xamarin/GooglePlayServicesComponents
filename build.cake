@@ -595,10 +595,11 @@ Task("samples-directory-build-targets")
 				Information($"nugetId       = {jo["nugetId"]}");
 			}
 
-	        XmlDocument doc = new XmlDocument();
-	        XmlElement element_p = doc.CreateElement( string.Empty, "Project", string.Empty );
-        	doc.AppendChild( element_p );
-	       	XmlElement element_ig = doc.CreateElement( string.Empty, "ItemGroup", string.Empty );
+			XmlDocument doc_all = new XmlDocument();
+
+	        XmlElement element_p = doc_all.CreateElement( string.Empty, "Project", string.Empty );
+        	doc_all.AppendChild( element_p );
+	       	XmlElement element_ig = doc_all.CreateElement( string.Empty, "ItemGroup", string.Empty );
         	element_p.AppendChild(element_ig);
 
 			foreach(JObject jo in binderator_json_array[0]["artifacts"])
@@ -611,26 +612,180 @@ Task("samples-directory-build-targets")
 				Information($"nuget_version = {nuget_version}");
 				Information($"nugetId       = {jo["nugetId"]}");
 
-				XmlElement element_pr = doc.CreateElement( string.Empty, "PackageReference", string.Empty );
+				XmlElement element_pr = doc_all.CreateElement( string.Empty, "PackageReference", string.Empty );
 	        	element_ig.AppendChild(element_pr);
-				XmlAttribute attr_update = doc.CreateAttribute("Update");
+				XmlAttribute attr_update = doc_all.CreateAttribute("Update");
 				attr_update.Value = (string) jo["nugetId"];
 				element_pr.Attributes.Append(attr_update);
-				XmlAttribute attr_version = doc.CreateAttribute("Version");
+				XmlAttribute attr_version = doc_all.CreateAttribute("Version");
 				attr_version.Value = nuget_version;
 				element_pr.Attributes.Append(attr_version);
 			}
 
-			XmlElement xbd_pr = doc.CreateElement( string.Empty, "PackageReference", string.Empty );
+			XmlElement xbd_pr = doc_all.CreateElement( string.Empty, "PackageReference", string.Empty );
 			element_ig.AppendChild(xbd_pr);
-			XmlAttribute xbd_attr_update = doc.CreateAttribute("Update");
+			XmlAttribute xbd_attr_update = doc_all.CreateAttribute("Update");
 			xbd_attr_update.Value = "Xamarin.Build.Download";
 			xbd_pr.Attributes.Append(xbd_attr_update);
-			XmlAttribute xbd_attr_version = doc.CreateAttribute("Version");
+			XmlAttribute xbd_attr_version = doc_all.CreateAttribute("Version");
 			xbd_attr_version.Value = "0.11.4";
 			xbd_pr.Attributes.Append(xbd_attr_version);
 
-			doc.Save( System.IO.Path.Combine("samples", "Directory.Build.targets" ));
+			doc_all.Save( System.IO.Path.Combine("samples", "Directory.Build.targets" ));
+			doc_all.Save( System.IO.Path.Combine("output", "Directory.Build.targets" ));
+
+			string[] lines = System.IO.File.ReadAllLines("./output/Directory.Build.targets");
+			List<string> lines_gps = new List<string>();
+			List<string> lines_fb = new List<string>();
+			List<string> lines_mlkit = new List<string>();
+			List<string> lines_gp = new List<string>();
+			List<string> lines_diverse = new List<string>();
+
+			Parallel.Invoke
+						(
+							() =>
+							{
+								foreach(string line in lines)
+								{
+									if( line.Contains("Project") || line.Contains("ItemGroup") )
+									{
+										lines_gps.Add(line);
+									}
+									
+									if
+										( 
+											line.Contains("Xamarin.GooglePlayServices.")
+										)
+									{
+										lines_gps.Add(line);
+									}
+									else
+									{
+										continue;
+									}
+								}
+
+								System.IO.File.WriteAllLines("./output/Directory.GPS.packages.props", lines_gps.ToArray());
+
+								return;
+							},
+							() =>
+							{								
+								foreach(string line in lines)
+								{
+									if( line.Contains("Project") || line.Contains("ItemGroup") )
+									{
+										lines_fb.Add(line);
+									}
+
+									if
+										( 
+											line.Contains("Xamarin.Firebase.")
+										)
+									{
+										lines_fb.Add(line);
+									}
+									else
+									{
+										continue;
+									}
+								}
+
+								System.IO.File.WriteAllLines("./output/Directory.FB.packages.props", lines_fb.ToArray());
+
+								return;
+							},
+							() =>
+							{
+								foreach(string line in lines)
+								{
+									if( line.Contains("Project") || line.Contains("ItemGroup") )
+									{
+										lines_mlkit.Add(line);
+									}
+
+									if
+										( 
+											line.Contains("Xamarin.Google.MLKit.")
+										)
+									{
+										lines_mlkit.Add(line);
+									}
+									else
+									{
+										continue;
+									}
+								}
+
+								System.IO.File.WriteAllLines("./output/Directory.MLKit.packages.props", lines_mlkit.ToArray());
+
+								return;
+							},
+							() =>
+							{
+								foreach(string line in lines)
+								{
+									if( line.Contains("Project") || line.Contains("ItemGroup") )
+									{
+										lines_gp.Add(line);
+									}
+
+									if
+										( 
+											line.Contains("Xamarin.Google.Android.Play.")
+										)
+									{
+										lines_gp.Add(line);
+									}
+									else
+									{
+										continue;
+									}
+								}
+								
+								System.IO.File.WriteAllLines("./output/Directory.GP.packages.props", lines_gp.ToArray());
+
+								return;
+							},
+							() =>
+							{
+								foreach(string line in lines)
+								{
+									if( line.Contains("Project") || line.Contains("ItemGroup") )
+									{
+										lines_diverse.Add(line);
+									}
+
+									if
+										( 
+											line.Contains("Square")
+											||
+											line.Contains("Xamarin.Grpc.")
+											||
+											line.Contains("Xamarin.Io.")
+											||
+											line.Contains("Xamarin.JavaX.")
+											||
+											line.Contains("Xamarin.Chromium.")
+											||
+											line.Contains("Xamarin.CodeHaus.")
+											||
+											line.Contains("Xamarin.TensorFlow.")
+										)
+									{
+										lines_diverse.Add(line);
+									}
+									else
+									{
+										continue;
+									}
+								}
+
+								System.IO.File.WriteAllLines("./output/Directory.Diverse.packages.props", lines_diverse.ToArray());
+
+								return;
+							}
+						);
 
 			return;
 		}
@@ -638,7 +793,10 @@ Task("samples-directory-build-targets")
 
 Task("samples")
 	.IsDependentOn("libs")
-	.IsDependentOn("samples-only");
+	.IsDependentOn("samples-directory-build-targets")
+	.IsDependentOn("samples-only")
+    .IsDependentOn("samples-only-dotnet")
+	;
 
 Task("samples-only")
 	.IsDependentOn("samples-directory-build-targets")
@@ -729,6 +887,75 @@ Task("samples-only")
 		DeleteFiles(".output/xamarin.android.arch.*/nupkg");
 		DeleteFiles(".output/xamarin.build.download.*/nupkg");
 });
+
+Task("samples-dotnet")
+    .IsDependentOn("nuget")
+    .IsDependentOn("samples-only-dotnet")
+	;
+
+Task("samples-only-dotnet")
+	.IsDependentOn("samples-directory-build-targets")
+	.IsDependentOn("mergetargets")
+	.IsDependentOn("allbindingprojectrefs")
+    .Does(() =>
+{
+    // clear the packages folder so we always use the latest
+    var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages-dotnet").FullPath;
+    EnsureDirectoryExists(packagesPath);
+    CleanDirectories(packagesPath);
+ 
+    string[] solutions = new string[]
+    {
+        "./samples/dotnet/BuildAllDotNet.sln",
+        "./samples/dotnet/BuildAllMauiApp.sln",
+        "./samples/dotnet/BuildAllXamarinForms.sln",
+    };
+
+    DotNetMSBuildSettings settings = null;
+
+	settings = new DotNetMSBuildSettings()
+						.SetConfiguration("Debug") // We don't need to run linking
+						.WithProperty("RestorePackagesPath", packagesPath)
+						.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}")
+						;
+
+   if (!string.IsNullOrEmpty(ANDROID_HOME))
+        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+
+    foreach(string solution in solutions)
+    {
+        FilePath fp_solution = new FilePath(solution);
+        string filename = fp_solution.GetFilenameWithoutExtension().ToString();
+        Information($"=====================================================================================================");
+        Information($"DotNetBuild        {solution} / {filename}");    
+        DotNetBuild(solution, new DotNetBuildSettings
+        {
+            MSBuildSettings = settings
+								.EnableBinaryLogger($"./output/samples-dotnet-dotnet-debug-{filename}.binlog")
+        });
+    }
+
+	settings = new DotNetMSBuildSettings()
+						.SetConfiguration("Release") // We don't need to run linking
+						.WithProperty("RestorePackagesPath", packagesPath)
+						.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}")
+						;
+
+    foreach(string solution in solutions)
+    {
+        FilePath fp_solution = new FilePath(solution);
+        string filename = fp_solution.GetFilenameWithoutExtension().ToString();
+        Information($"=====================================================================================================");
+        Information($"DotNetBuild        {solution} / {filename}");    
+        DotNetBuild(solution, new DotNetBuildSettings
+        {
+            MSBuildSettings = settings
+								.EnableBinaryLogger($"./output/samples-dotnet-dotnet-release-{filename}.binlog")
+        });
+    }
+
+});
+
 
 Task("allbindingprojectrefs")
 	.Does(() =>
@@ -927,6 +1154,7 @@ Task ("ci-build")
 
 Task ("ci-samples")
 	.IsDependentOn ("samples-only")
-  ;
+	.IsDependentOn ("samples-only-dotnet")
+  	;
 
 RunTarget (TARGET);

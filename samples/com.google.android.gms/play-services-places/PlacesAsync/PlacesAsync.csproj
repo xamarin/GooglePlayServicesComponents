@@ -54,13 +54,13 @@
     <Reference Include="Java.Interop" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.2.0" />
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.10" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.5.1" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.14" />
     <PackageReference Include="Xamarin.GooglePlayServices.Maps" />
     <PackageReference Include="Xamarin.GooglePlayServices.Places" />
 
     <PackageReference Include="Xamarin.AndroidX.Migration">
-      <Version>1.0.7.1</Version>
+      <Version>1.0.10</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Build.Download" />
   </ItemGroup>
