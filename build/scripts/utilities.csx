@@ -47,41 +47,7 @@ Manifest.Defaults.VersionBasedOnFullyQualifiedArtifactIdDelegate = delegate(stri
             ||
             fully_qualified_artifact_id.StartsWith("io.reactivex.rxjava3")
             ||
-            fully_qualified_artifact_id.StartsWith("io.reactivex.rxjava2")
-            ||
-            fully_qualified_artifact_id.StartsWith("com.google.j2objc")
-            ||
-            fully_qualified_artifact_id.StartsWith("com.google.guava")
-            ||
-            fully_qualified_artifact_id.StartsWith("com.google.auto.value")
-            ||
-            fully_qualified_artifact_id.StartsWith("com.google.code.gson")
-            ||
-            fully_qualified_artifact_id.StartsWith("com.google.crypto.tink")
-            ||
-            fully_qualified_artifact_id.StartsWith("com.google.android:annotations")
-            ||
-            fully_qualified_artifact_id.StartsWith("com.google.android.datatransport")
-            ||
-            fully_qualified_artifact_id.StartsWith("com.google.code.findbugs")
-            ||
-            fully_qualified_artifact_id.StartsWith("com.google.dagger")
-            ||
-            fully_qualified_artifact_id.StartsWith("com.google.errorprone")
-            ||
-            fully_qualified_artifact_id.StartsWith("com.google.zxing")
-            ||
-            fully_qualified_artifact_id.StartsWith("io.opencensus")
-            ||
-            fully_qualified_artifact_id.StartsWith("io.perfmark")
-            ||
-            fully_qualified_artifact_id.StartsWith("javax.inject")
-            ||
-            fully_qualified_artifact_id.StartsWith("org.tensorflow")
-            ||
-            fully_qualified_artifact_id.StartsWith("com.android.volley")
-        )
-    {
+            fully_qualified_artifact_id.StartsWith("io.reactivex.rxj   
         const string l = "The Apache Software License, Version 2.0";
         const string u = "https://www.apache.org/licenses/LICENSE-2.0.txt";
 
