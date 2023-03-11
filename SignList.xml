@@ -5,10 +5,9 @@
     <FirstParty Include="Xamarin.*.dll" />
     
     <!-- Other names shouldn't be used, but we have to support some historical mistakes -->
-    <FirstParty Include="Jsr305Binding.dll" />
-    <FirstParty Include="Square.*.dll" />
-    <FirstParty Include="Google.ZXing.*.dll" />
-    <FirstParty Include="org.tensorflow.*.dll" />
+    <FirstParty Include="Square.dll" />
+    <FirstParty Include="Google.ZXing.dll" />
+    <FirstParty Include="org.tensorflow.dll" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,11 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Skip Include="System.*.dll" />
-    <Skip Include="NuGet.*.dll" />
-    <Skip Include="Mono.*.dll" />
+    <Skip Include="System.dll" />
+    <Skip Include="NuGet.dll" />
+    <Skip Include="Mono.dll" />
     <Skip Include="MonoPosixHelper.dll" />
     <Skip Include="libMonoPosixHelper.dll" />
   </ItemGroup>
 
 </Project>
+
