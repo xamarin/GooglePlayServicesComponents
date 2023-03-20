@@ -16,8 +16,9 @@
 	<attr path="/api/package[@name='com.android.billingclient.api']/class[@name='BillingClient']/method[@name='queryProductDetailsAsync']" name="managedName">QueryProductDetails</attr>
 	<attr path="/api/package[@name='com.android.billingclient.api']/class[@name='BillingClient']/method[@name='queryPurchasesAsync']" name="managedName">QueryPurchases</attr>
 
-	<remove-node
+	<attr
 		path="/api/package[@name='com.android.billingclient.api']/class[@name='BillingClient']/method[@name='getConnectionState' and count(parameter)=0]"
-		/>
+		name="propertyName"
+		></attr>
 
 </metadata>
