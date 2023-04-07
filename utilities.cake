@@ -1433,21 +1433,21 @@ Task("tools-executive-oreder-csv-and-markdown")
 
             List
                 <(
-                    string nuget_id, 
+                    string nuget_id,
                     string version
                 )> msbuild_sdks = new List
                                         <(
-                                            string nuget_id, 
+                                            string nuget_id,
                                             string vetsion
                                         )>();
-            
+
             foreach(Newtonsoft.Json.Linq.JProperty jp in json_object["msbuild-sdks"])
             {
                 string name  = (string) jp.Name;
                 string value  = (string) jp.Value;
                 msbuild_sdks.Add((name, value));
                 sb.AppendLine($"msbuild-sdks {name}, {value}");
-            }							
+            }
 
             /*
             mono --version
@@ -1480,7 +1480,7 @@ Task("tools-executive-oreder-csv-and-markdown")
             }
             catch
             {
-                sb.AppendLine($"Mono JIT compiler, Not installed");   
+                sb.AppendLine($"Mono JIT compiler, Not installed");
             }
 
 
@@ -1519,7 +1519,7 @@ Task("tools-executive-oreder-csv-and-markdown")
 
             no version info
 
-            let's parse 
+            let's parse
                 dotnet tool list --global
             */
 			process = "dotnet";
