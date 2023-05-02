@@ -1,6 +1,6 @@
 <Project>
 
-  <PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
 
