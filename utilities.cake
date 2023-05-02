@@ -1,5 +1,3 @@
-#tool nuget:?package=Cake.CoreCLR
-
 /*
     dotnet cake spell-check.cake
     dotnet cake spell-check.cake -t=spell-check
@@ -7,11 +5,11 @@
 #addin nuget:?package=WeCantSpell.Hunspell&version=4.0.0
 #addin nuget:?package=Newtonsoft.Json&version=13.0.2
 #addin nuget:?package=Cake.FileHelpers&version=5.0.0
+#addin nuget:?package=Mono.Cecil&version=0.11.4
 
 #addin nuget:?package=HolisticWare.Xamarin.Tools.ComponentGovernance&version=0.0.1.2
 #addin nuget:?package=HolisticWare.Core.Net.HTTP&version=0.0.1
 #addin nuget:?package=HolisticWare.Core.IO&version=0.0.1
-#addin nuget:?package=Mono.Cecil&version=0.11.4
 
 using System.Collections.Generic;
 
@@ -1435,21 +1433,21 @@ Task("tools-executive-oreder-csv-and-markdown")
 
             List
                 <(
-                    string nuget_id, 
+                    string nuget_id,
                     string version
                 )> msbuild_sdks = new List
                                         <(
-                                            string nuget_id, 
+                                            string nuget_id,
                                             string vetsion
                                         )>();
-            
+
             foreach(Newtonsoft.Json.Linq.JProperty jp in json_object["msbuild-sdks"])
             {
                 string name  = (string) jp.Name;
                 string value  = (string) jp.Value;
                 msbuild_sdks.Add((name, value));
                 sb.AppendLine($"msbuild-sdks {name}, {value}");
-            }							
+            }
 
             /*
             mono --version
@@ -1482,7 +1480,7 @@ Task("tools-executive-oreder-csv-and-markdown")
             }
             catch
             {
-                sb.AppendLine($"Mono JIT compiler, Not installed");   
+                sb.AppendLine($"Mono JIT compiler, Not installed");
             }
 
 
@@ -1521,7 +1519,7 @@ Task("tools-executive-oreder-csv-and-markdown")
 
             no version info
 
-            let's parse 
+            let's parse
                 dotnet tool list --global
             */
 			process = "dotnet";
