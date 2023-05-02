@@ -332,48 +332,48 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement",
-        "version": "21.2.0",
-        "nugetVersion": "121.2.0",
+        "version": "21.2.2",
+        "nugetVersion": "121.2.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-api",
-        "version": "21.2.0",
-        "nugetVersion": "121.2.0",
+        "version": "21.2.2",
+        "nugetVersion": "121.2.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
-        "version": "21.2.0",
-        "nugetVersion": "121.2.0",
+        "version": "21.2.2",
+        "nugetVersion": "121.2.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-impl",
-        "version": "21.2.0",
-        "nugetVersion": "121.2.0",
+        "version": "21.2.2",
+        "nugetVersion": "121.2.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Impl",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk",
-        "version": "21.2.0",
-        "nugetVersion": "121.2.0",
+        "version": "21.2.2",
+        "nugetVersion": "121.2.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk-api",
-        "version": "21.2.0",
-        "nugetVersion": "121.2.0",
+        "version": "21.2.2",
+        "nugetVersion": "121.2.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk.Api",
         "dependencyOnly": false
       },
