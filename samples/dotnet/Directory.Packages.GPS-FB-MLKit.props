@@ -1,0 +1,22 @@
+<Project >
+  <Import 
+    Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+    Project="..\..\output\Directory.GPS.packages.props" 
+    />
+  <Import 
+    Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+    Project="..\..\output\Directory.FB.packages.props" 
+    />
+  <Import 
+    Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+    Project="..\..\output\Directory.MLKit.packages.props" 
+    />
+  <Import 
+    Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+    Project="..\..\output\Directory.GP.packages.props" 
+    />
+    <Import 
+    Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+    Project="..\..\output\Directory.Diverse.packages.props" 
+    />
+</Project>
