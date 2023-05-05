@@ -4,7 +4,7 @@
     <RepositoryType>git</RepositoryType>
 
     <!-- Default TFM's we build for -->
-    <_DefaultTargetFrameworks>MonoAndroid12.0;net6.0-android</_DefaultTargetFrameworks>
+    <_DefaultTargetFrameworks>net8.0-android</_DefaultTargetFrameworks>
 
     <!-- Opt out of C#8 features to maintain compatibility with legacy -->
     <AndroidBoundInterfacesContainConstants>false</AndroidBoundInterfacesContainConstants>

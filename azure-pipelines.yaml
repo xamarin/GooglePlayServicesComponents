@@ -21,7 +21,7 @@ resources:
       type: github
       name: xamarin/androidx
       endpoint: xamarin
-      ref: refs/heads/main
+      ref: refs/heads/net8-test
 
 jobs:
   - template: build/ci/build.yml@androidx
