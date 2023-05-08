@@ -1110,7 +1110,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("api-diff-analysis")
     .IsDependentOn ("list-artifacts")
     .IsDependentOn ("generate-markdown-publish-log")
-    .IsDependentOn ("tools-executive-order")
+    //.IsDependentOn ("tools-executive-order")
     .IsDependentOn ("generate-component-governance")
     .IsDependentOn ("generate-namespace-file")
     .Does
@@ -1383,7 +1383,7 @@ static List<string> FindNamespaces (string assembly)
 }
 
 Task("tools-executive-order")
-    .WithCriteria(IsRunningOnWindows())
+    // .WithCriteria(IsRunningOnWindows()) // did not help as workaround for Error: Bad IL format.
     .IsDependentOn ("tools-executive-oreder-csv-and-markdown")
     ;
 
