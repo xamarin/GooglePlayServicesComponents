@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android</TargetFrameworks>
+		<TargetFrameworks>$(_DefaultDotNetSampleTargetFrameworks)</TargetFrameworks>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>BuildAllMauiApp</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -46,23 +46,23 @@
 	</ItemGroup>
 
 	<Import 
-		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+		Condition="$(TargetFramework.StartsWith('$(_DefaultDotNetSampleTargetFrameworks)')) == true"
 		Project="..\..\..\output\Directory.GPS.packages.props" 
 		/>
 	<Import 
-		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+		Condition="$(TargetFramework.StartsWith('$(_DefaultDotNetSampleTargetFrameworks)')) == true"
 		Project="..\..\..\output\Directory.FB.packages.props" 
 		/>
 	<Import 
-		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+		Condition="$(TargetFramework.StartsWith('$(_DefaultDotNetSampleTargetFrameworks)')) == true"
 		Project="..\..\..\output\Directory.MLKit.packages.props" 
 		/>
 	<Import 
-		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+		Condition="$(TargetFramework.StartsWith('$(_DefaultDotNetSampleTargetFrameworks)')) == true"
 		Project="..\..\..\output\Directory.GP.packages.props" 
 		/>
 		<Import 
-		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+		Condition="$(TargetFramework.StartsWith('$(_DefaultDotNetSampleTargetFrameworks)')) == true"
 		Project="..\..\..\output\Directory.Diverse.packages.props" 
 		/>
 	
@@ -79,7 +79,7 @@
 	[./samples/dotnet/BuildAllMauiApp.sln]
 	-->
 	<ItemGroup
-		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+		Condition="$(TargetFramework.StartsWith('$(_DefaultDotNetSampleTargetFrameworks)')) == true"
 		>
 		<PackageReference Include="Xamarin.AndroidX.Security.SecurityCrypto" Version="[1.1.0-alpha03]" />
 	</ItemGroup>
