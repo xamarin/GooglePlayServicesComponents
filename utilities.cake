@@ -1383,7 +1383,7 @@ static List<string> FindNamespaces (string assembly)
 }
 
 Task("tools-executive-order")
-    .WithCriteria( !IsRunningOnMacOs() )
+    .WithCriteria(IsRunningOnWindows())
     .IsDependentOn ("tools-executive-oreder-csv-and-markdown")
     ;
 
