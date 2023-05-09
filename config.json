@@ -211,6 +211,14 @@
       },
       {
         "groupId": "com.google.android.gms",
+        "artifactId": "play-services-code-scanner",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.Code.Scanner",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
         "artifactId": "play-services-cronet",
         "version": "18.0.1",
         "nugetVersion": "118.0.1.3",
@@ -1380,8 +1388,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "common",
-        "version": "18.6.0",
-        "nugetVersion": "118.6.0.1",
+        "version": "18.7.0",
+        "nugetVersion": "118.7.0",
         "nugetId": "Xamarin.Google.MLKit.Common",
         "dependencyOnly": false
       },
@@ -2145,6 +2153,14 @@
       // nuget dependencies
 
       // AndroidX
+      {
+        "groupId": "androidx.activity",
+        "artifactId": "activity",
+        "version": "1.7.0",
+        "nugetVersion": "1.7.0.1",
+        "nugetId": "Xamarin.AndroidX.Activity",
+        "dependencyOnly": true
+      },
       {
         "groupId": "androidx.annotation",
         "artifactId": "annotation",
