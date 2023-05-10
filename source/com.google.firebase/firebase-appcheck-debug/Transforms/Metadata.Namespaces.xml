@@ -1,10 +1,15 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='com.google.firebase.appcheck.debug']" 
         name="managedName"
         >
-        Package
+        Firebase.AppCheck.Debug
     </attr>
-    -->
+    <attr 
+        path="/api/package[@name='com.google.firebase.appcheck.debug.internal']" 
+        name="managedName"
+        >
+        Firebase.AppCheck.Debug.Internal
+    </attr>
+
 </metadata>

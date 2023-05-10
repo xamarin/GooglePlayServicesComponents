@@ -18,5 +18,17 @@
 		>
 		Firebase.Functions.Dagger
 	</attr>
+	<attr 
+		path="/api/package[@name='com.google.firebase.functions.dagger.internal']" 
+		name="managedName"
+		>
+		Firebase.Functions.Dagger.Interal
+	</attr>
+	<attr 
+		path="/api/package[@name='com.google.firebase.functions.dagger.assisted']" 
+		name="managedName"
+		>
+		Firebase.Functions.Dagger.Assisted
+	</attr>
 
 </metadata>
