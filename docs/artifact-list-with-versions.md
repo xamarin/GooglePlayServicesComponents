@@ -49,7 +49,7 @@
 |  42|com.google.android.gms:play-services-measurement-impl                 |21.2.0              |Xamarin.GooglePlayServices.Measurement.Impl                           |121.2.0.1           |
 |  43|com.google.android.gms:play-services-measurement-sdk                  |21.2.0              |Xamarin.GooglePlayServices.Measurement.Sdk                            |121.2.0.1           |
 |  44|com.google.android.gms:play-services-measurement-sdk-api              |21.2.0              |Xamarin.GooglePlayServices.Measurement.Sdk.Api                        |121.2.0.1           |
-|  45|com.google.android.gms:play-services-mlkit-barcode-scanning           |18.1.0              |Xamarin.GooglePlayServices.MLKit.BarcodeScanning                      |118.1.0.1           |
+|  45|com.google.android.gms:play-services-mlkit-barcode-scanning           |18.2.0              |Xamarin.GooglePlayServices.MLKit.BarcodeScanning                      |118.2.0             |
 |  46|com.google.android.gms:play-services-mlkit-face-detection             |17.1.0              |Xamarin.GooglePlayServices.MLKit.FaceDetection                        |117.1.0.1           |
 |  47|com.google.android.gms:play-services-mlkit-image-labeling             |16.0.8              |Xamarin.GooglePlayServices.MLKit.ImageLabeling                        |116.0.8.1           |
 |  48|com.google.android.gms:play-services-mlkit-language-id                |17.0.0              |Xamarin.GooglePlayServices.MLKit.LanguageId                           |117.0.0.3           |
@@ -171,10 +171,10 @@
 | 164|com.google.firebase:firebase-storage-common                           |17.0.0              |Xamarin.Firebase.Storage.Common                                       |117.0.0.8           |
 | 165|com.google.firebase:firebase-storage-ktx                              |20.1.0              |Xamarin.Firebase.Storage.Ktx                                          |120.1.0.1           |
 | 166|com.google.firebase:protolite-well-known-types                        |18.0.0              |Xamarin.Firebase.ProtoliteWellKnownTypes                              |118.0.0.8           |
-| 167|com.google.mlkit:barcode-scanning                                     |17.0.3              |Xamarin.Google.MLKit.BarcodeScanning                                  |117.0.3.1           |
+| 167|com.google.mlkit:barcode-scanning                                     |17.1.0              |Xamarin.Google.MLKit.BarcodeScanning                                  |117.1.0             |
 | 168|com.google.mlkit:barcode-scanning-common                              |17.0.0              |Xamarin.Google.MLKit.BarcodeScanning.Common                           |117.0.0.3           |
-| 169|com.google.mlkit:common                                               |18.6.0              |Xamarin.Google.MLKit.Common                                           |118.6.0.1           |
-| 170|com.google.mlkit:digital-ink-recognition                              |18.0.0              |Xamarin.Google.MLKit.DigitalInk.Recognition                           |118.0.0.3           |
+| 169|com.google.mlkit:common                                               |18.7.0              |Xamarin.Google.MLKit.Common                                           |118.7.0             |
+| 170|com.google.mlkit:digital-ink-recognition                              |18.1.0              |Xamarin.Google.MLKit.DigitalInk.Recognition                           |118.1.0             |
 | 171|com.google.mlkit:face-detection                                       |16.1.5              |Xamarin.Google.MLKit.FaceDetection                                    |116.1.5.3           |
 | 172|com.google.mlkit:image-labeling                                       |17.0.7              |Xamarin.Google.MLKit.ImageLabeling                                    |117.0.7.3           |
 | 173|com.google.mlkit:image-labeling-automl                                |16.2.1              |Xamarin.Google.MLKit.ImageLabeling.AutoML                             |116.2.1.9           |
@@ -196,7 +196,7 @@
 | 189|com.google.mlkit:smart-reply-common                                   |16.1.0              |Xamarin.Google.MLKit.SmartReply.Common                                |116.1.0.1           |
 | 190|com.google.mlkit:translate                                            |17.0.1              |Xamarin.Google.MLKit.Translate                                        |117.0.1.1           |
 | 191|com.google.mlkit:vision-common                                        |17.3.0              |Xamarin.Google.MLKit.Vision.Common                                    |117.3.0.1           |
-| 192|com.google.mlkit:vision-interfaces                                    |16.1.0              |Xamarin.Google.MLKit.Vision.Interfaces                                |116.1.0.1           |
+| 192|com.google.mlkit:vision-interfaces                                    |16.2.0              |Xamarin.Google.MLKit.Vision.Interfaces                                |116.2.0             |
 | 193|com.google.mlkit:vision-internal-vkp                                  |18.2.2              |Xamarin.Google.MLKit.Vision.Internal.Vkp                              |118.2.2.3           |
 | 194|com.google.android.odml:image                                         |1.0.0-beta1         |Xamarin.Google.Android.ODML.Image                                     |1.0.0.3-beta1       |
 | 195|com.google.android.libraries.places:places                            |2.2.0               |Xamarin.GoogleAndroid.Libraries.Places                                |2.2.0.1             |
@@ -217,7 +217,7 @@
 | 210|com.google.android.ump:user-messaging-platform                        |2.0.0               |Xamarin.Google.UserMessagingPlatform                                  |2.0.0.3             |
 | 211|com.google.code.findbugs:jsr305                                       |3.0.2               |Xamarin.Google.Code.FindBugs.JSR305                                   |3.0.2.7             |
 | 212|com.google.dagger:dagger                                              |2.44.2              |Xamarin.Google.Dagger                                                 |2.44.2.1            |
-| 213|com.google.errorprone:error_prone_annotations                         |2.16                |Xamarin.Google.ErrorProne.Annotations                                 |2.16.0.1            |
+| 213|com.google.errorprone:error_prone_annotations                         |2.18.0              |Xamarin.Google.ErrorProne.Annotations                                 |2.18.0              |
 | 214|com.google.zxing:core                                                 |3.5.1               |Xamarin.Google.ZXing.Core                                             |3.5.1.1             |
 | 215|com.google.flatbuffers:flatbuffers-java                               |22.11.23            |Xamarin.Google.FlatBuffers.Java                                       |22.11.23.1          |
 | 216|com.google.protobuf:protobuf-javalite                                 |3.21.12             |Xamarin.Protobuf.JavaLite                                             |3.21.12.1           |
