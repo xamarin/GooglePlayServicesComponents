@@ -3,7 +3,7 @@
         path="/api/package[@name='com.google.android.recaptcha']" 
         name="managedName"
         >
-        Xamarin.GoogleAndroid.Recaptcha
+        Xamarin.Google.Android.Recaptcha
     </attr>
 
 </metadata>

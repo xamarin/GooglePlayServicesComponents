@@ -1646,7 +1646,7 @@
         "artifactId": "recaptcha",
         "version": "18.0.1",
         "nugetVersion": "18.0.1",
-        "nugetId": "Xamarin.GoogleAndroid.Recaptcha",
+        "nugetId": "Xamarin.Google.Android.Recaptcha",
         "dependencyOnly": false
       },
       {
