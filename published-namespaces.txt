@@ -570,6 +570,7 @@ Xamarin.Google.Android.Play.Core.SplitInstall
 Xamarin.Google.Android.Play.Core.SplitInstall.Model
 Xamarin.Google.Android.Play.Core.SplitInstall.Testing
 Xamarin.Google.Android.Play.Core.Tasks
+Xamarin.Google.Android.Recaptcha
 Xamarin.Google.ErrorProne.Annotations
 Xamarin.Google.ErrorProne.Annotations.Concurrent
 Xamarin.Google.FlatBuffers
@@ -642,7 +643,6 @@ Xamarin.GoogleAndroid.Libraries.Places.Widget
 Xamarin.GoogleAndroid.Libraries.Places.Widget.Internal.UI
 Xamarin.GoogleAndroid.Libraries.Places.Widget.Listener
 Xamarin.GoogleAndroid.Libraries.Places.Widget.Model
-Xamarin.GoogleAndroid.Recaptcha
 Xamarin.Grpc
 Xamarin.Grpc.Android
 Xamarin.Grpc.Core.InProcess
