@@ -202,7 +202,7 @@
     <PackageReference Update="Xamarin.Android.Google.BillingClient.Ktx" Version="5.2.0" />
     <PackageReference Update="Xamarin.Android.Volley" Version="1.2.1.3" />
     <PackageReference Update="Xamarin.Android.Volley.CroNet" Version="1.2.1.3" />
-    <PackageReference Update="Xamarin.GoogleAndroid.Recaptcha" Version="18.0.1" />
+    <PackageReference Update="Xamarin.Google.Android.Recaptcha" Version="18.0.1" />
     <PackageReference Update="Xamarin.Android.Glide.Annotations" Version="4.15.1" />
     <PackageReference Update="Xamarin.Android.Glide.DiskLruCache" Version="4.15.1" />
     <PackageReference Update="Xamarin.Android.Glide.GifDecoder" Version="4.15.1" />
