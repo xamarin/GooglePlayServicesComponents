@@ -2621,7 +2621,7 @@
           "artifactId": "recaptcha",
           "groupId": "com.google.android.recaptcha",
           "version": "18.0.1",
-          "nuGetId": "Xamarin.GoogleAndroid.Recaptcha",
+          "nuGetId": "Xamarin.Google.Android.Recaptcha",
           "nuGetVersion": "18.0.1"
         }
       }
