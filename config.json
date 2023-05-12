@@ -228,8 +228,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-fido",
-        "version": "19.0.0",
-        "nugetVersion": "119.0.0.1",
+        "version": "19.0.1",
+        "nugetVersion": "119.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Fido",
         "dependencyOnly": false
       },
@@ -2070,8 +2070,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite",
-        "version": "2.10.0",
-        "nugetVersion": "2.10.0.1",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0",
         "nugetId": "Xamarin.TensorFlow.Lite",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
@@ -2079,8 +2079,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-api",
-        "version": "2.10.0",
-        "nugetVersion": "2.10.0.1",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0",
         "nugetId": "Xamarin.TensorFlow.Lite.Api",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
@@ -2088,8 +2088,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-gpu",
-        "version": "2.10.0",
-        "nugetVersion": "2.10.0.1",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0",
         "nugetId": "Xamarin.TensorFlow.Lite.Gpu",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
@@ -2097,8 +2097,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-gpu-api",
-        "version": "2.10.0",
-        "nugetVersion": "2.10.0.1",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0",
         "nugetId": "Xamarin.TensorFlow.Lite.Gpu.Api",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
@@ -2106,8 +2106,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-select-tf-ops",
-        "version": "2.10.0",
-        "nugetVersion": "2.10.0.1",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0",
         "nugetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
