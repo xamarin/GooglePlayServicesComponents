@@ -240,7 +240,10 @@ Firebase.Analytics.Connector
 Firebase.Analytics.Connector.Internal
 Firebase.Analytics.Ktx
 Firebase.Annotations
+Firebase.Annotations.Concurrent
 Firebase.AppCheck
+Firebase.AppCheck.Debug
+Firebase.AppCheck.Debug.Internal
 Firebase.AppCheck.Internal
 Firebase.AppCheck.Internal.Util
 Firebase.AppCheck.Interop
@@ -257,6 +260,7 @@ Firebase.Auth
 Firebase.Auth.Internal
 Firebase.Auth.Ktx
 Firebase.Components
+Firebase.Concurrent
 Firebase.Crash
 Firebase.Crash.Component
 Firebase.Crashlytics
@@ -317,13 +321,15 @@ Firebase.Firestore.Proto
 Firebase.Firestore.Remote
 Firebase.Firestore.Util
 Firebase.Functions
+Firebase.Functions.Dagger
+Firebase.Functions.Dagger.Assisted
+Firebase.Functions.Dagger.Interal
 Firebase.Functions.Ktx
 Firebase.HeartBeatInfo
 Firebase.Iid
 Firebase.Iid.Internal
 Firebase.InAppMessaging
 Firebase.InAppMessaging.Dagger
-Firebase.InAppMessaging.Dagger.MultiBindings
 Firebase.InAppMessaging.Display
 Firebase.InAppMessaging.Display.Dagger
 Firebase.InAppMessaging.Display.Dagger.MultiBindings
@@ -357,7 +363,6 @@ Firebase.Internal.Api
 Firebase.Ktx
 Firebase.Messaging
 Firebase.Messaging.DirectBoot
-Firebase.Messaging.DirectBoot.Threads
 Firebase.Messaging.Ktx
 Firebase.Messaging.Reporting
 Firebase.Messaging.Threads
@@ -399,7 +404,6 @@ Firebase.Perf.Metrics
 Firebase.Perf.Metrics.Resource
 Firebase.Perf.Metrics.Validator
 Firebase.Perf.Network
-Firebase.Perf.Provider
 Firebase.Perf.Session
 Firebase.Perf.Session.Gauges
 Firebase.Perf.Transport
@@ -566,6 +570,7 @@ Xamarin.Google.Android.Play.Core.SplitInstall
 Xamarin.Google.Android.Play.Core.SplitInstall.Model
 Xamarin.Google.Android.Play.Core.SplitInstall.Testing
 Xamarin.Google.Android.Play.Core.Tasks
+Xamarin.Google.Android.Recaptcha
 Xamarin.Google.ErrorProne.Annotations
 Xamarin.Google.ErrorProne.Annotations.Concurrent
 Xamarin.Google.FlatBuffers
