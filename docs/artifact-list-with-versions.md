@@ -30,7 +30,7 @@
 |  23|com.google.android.gms:play-services-cloud-messaging                  |17.0.2              |Xamarin.GooglePlayServices.CloudMessaging                             |117.0.2.3           |
 |  24|com.google.android.gms:play-services-cronet                           |18.0.1              |Xamarin.GooglePlayServices.CroNet                                     |118.0.1.3           |
 |  25|com.google.android.gms:play-services-drive                            |17.0.0              |Xamarin.GooglePlayServices.Drive                                      |117.0.0.9           |
-|  26|com.google.android.gms:play-services-fido                             |19.0.0              |Xamarin.GooglePlayServices.Fido                                       |119.0.0.1           |
+|  26|com.google.android.gms:play-services-fido                             |19.0.1              |Xamarin.GooglePlayServices.Fido                                       |119.0.1             |
 |  27|com.google.android.gms:play-services-fitness                          |21.1.0              |Xamarin.GooglePlayServices.Fitness                                    |121.1.0.2           |
 |  28|com.google.android.gms:play-services-flags                            |18.0.1              |Xamarin.GooglePlayServices.Flags                                      |118.0.1.6           |
 |  29|com.google.android.gms:play-services-games                            |23.1.0              |Xamarin.GooglePlayServices.Games                                      |123.1.0.1           |
@@ -49,7 +49,7 @@
 |  42|com.google.android.gms:play-services-measurement-impl                 |21.2.2              |Xamarin.GooglePlayServices.Measurement.Impl                           |121.2.2             |
 |  43|com.google.android.gms:play-services-measurement-sdk                  |21.2.2              |Xamarin.GooglePlayServices.Measurement.Sdk                            |121.2.2             |
 |  44|com.google.android.gms:play-services-measurement-sdk-api              |21.2.2              |Xamarin.GooglePlayServices.Measurement.Sdk.Api                        |121.2.2             |
-|  45|com.google.android.gms:play-services-mlkit-barcode-scanning           |18.1.0              |Xamarin.GooglePlayServices.MLKit.BarcodeScanning                      |118.1.0.1           |
+|  45|com.google.android.gms:play-services-mlkit-barcode-scanning           |18.2.0              |Xamarin.GooglePlayServices.MLKit.BarcodeScanning                      |118.2.0             |
 |  46|com.google.android.gms:play-services-mlkit-face-detection             |17.1.0              |Xamarin.GooglePlayServices.MLKit.FaceDetection                        |117.1.0.1           |
 |  47|com.google.android.gms:play-services-mlkit-image-labeling             |16.0.8              |Xamarin.GooglePlayServices.MLKit.ImageLabeling                        |116.0.8.1           |
 |  48|com.google.android.gms:play-services-mlkit-language-id                |17.0.0              |Xamarin.GooglePlayServices.MLKit.LanguageId                           |117.0.0.3           |
@@ -172,10 +172,10 @@
 | 165|com.google.firebase:firebase-storage-common                           |17.0.0              |Xamarin.Firebase.Storage.Common                                       |117.0.0.8           |
 | 166|com.google.firebase:firebase-storage-ktx                              |20.1.0              |Xamarin.Firebase.Storage.Ktx                                          |120.1.0.1           |
 | 167|com.google.firebase:protolite-well-known-types                        |18.0.0              |Xamarin.Firebase.ProtoliteWellKnownTypes                              |118.0.0.8           |
-| 168|com.google.mlkit:barcode-scanning                                     |17.0.3              |Xamarin.Google.MLKit.BarcodeScanning                                  |117.0.3.1           |
+| 168|com.google.mlkit:barcode-scanning                                     |17.1.0              |Xamarin.Google.MLKit.BarcodeScanning                                  |117.1.0             |
 | 169|com.google.mlkit:barcode-scanning-common                              |17.0.0              |Xamarin.Google.MLKit.BarcodeScanning.Common                           |117.0.0.3           |
-| 170|com.google.mlkit:common                                               |18.6.0              |Xamarin.Google.MLKit.Common                                           |118.6.0.1           |
-| 171|com.google.mlkit:digital-ink-recognition                              |18.0.0              |Xamarin.Google.MLKit.DigitalInk.Recognition                           |118.0.0.3           |
+| 170|com.google.mlkit:common                                               |18.7.0              |Xamarin.Google.MLKit.Common                                           |118.7.0             |
+| 171|com.google.mlkit:digital-ink-recognition                              |18.1.0              |Xamarin.Google.MLKit.DigitalInk.Recognition                           |118.1.0             |
 | 172|com.google.mlkit:face-detection                                       |16.1.5              |Xamarin.Google.MLKit.FaceDetection                                    |116.1.5.3           |
 | 173|com.google.mlkit:image-labeling                                       |17.0.7              |Xamarin.Google.MLKit.ImageLabeling                                    |117.0.7.3           |
 | 174|com.google.mlkit:image-labeling-automl                                |16.2.1              |Xamarin.Google.MLKit.ImageLabeling.AutoML                             |116.2.1.9           |
@@ -197,7 +197,7 @@
 | 190|com.google.mlkit:smart-reply-common                                   |16.1.0              |Xamarin.Google.MLKit.SmartReply.Common                                |116.1.0.1           |
 | 191|com.google.mlkit:translate                                            |17.0.1              |Xamarin.Google.MLKit.Translate                                        |117.0.1.1           |
 | 192|com.google.mlkit:vision-common                                        |17.3.0              |Xamarin.Google.MLKit.Vision.Common                                    |117.3.0.1           |
-| 193|com.google.mlkit:vision-interfaces                                    |16.1.0              |Xamarin.Google.MLKit.Vision.Interfaces                                |116.1.0.1           |
+| 193|com.google.mlkit:vision-interfaces                                    |16.2.0              |Xamarin.Google.MLKit.Vision.Interfaces                                |116.2.0             |
 | 194|com.google.mlkit:vision-internal-vkp                                  |18.2.2              |Xamarin.Google.MLKit.Vision.Internal.Vkp                              |118.2.2.3           |
 | 195|com.google.android.odml:image                                         |1.0.0-beta1         |Xamarin.Google.Android.ODML.Image                                     |1.0.0.3-beta1       |
 | 196|com.google.android.libraries.places:places                            |2.7.0               |Xamarin.GoogleAndroid.Libraries.Places                                |2.7.0               |
@@ -219,7 +219,7 @@
 | 212|com.google.android.ump:user-messaging-platform                        |2.0.0               |Xamarin.Google.UserMessagingPlatform                                  |2.0.0.3             |
 | 213|com.google.code.findbugs:jsr305                                       |3.0.2               |Xamarin.Google.Code.FindBugs.JSR305                                   |3.0.2.7             |
 | 214|com.google.dagger:dagger                                              |2.44.2              |Xamarin.Google.Dagger                                                 |2.44.2.1            |
-| 215|com.google.errorprone:error_prone_annotations                         |2.17.0              |Xamarin.Google.ErrorProne.Annotations                                 |2.17.0              |
+| 215|com.google.errorprone:error_prone_annotations                         |2.18.0              |Xamarin.Google.ErrorProne.Annotations                                 |2.18.0              |
 | 216|com.google.zxing:core                                                 |3.5.1               |Xamarin.Google.ZXing.Core                                             |3.5.1.1             |
 | 217|com.google.flatbuffers:flatbuffers-java                               |22.11.23            |Xamarin.Google.FlatBuffers.Java                                       |22.11.23.1          |
 | 218|com.google.protobuf:protobuf-javalite                                 |3.21.12             |Xamarin.Protobuf.JavaLite                                             |3.21.12.1           |
@@ -253,11 +253,11 @@
 | 246|org.chromium.net:cronet-embedded                                      |92.4515.131         |Xamarin.Chromium.CroNet.Embedded                                      |92.4515.131.3       |
 | 247|org.chromium.net:cronet-fallback                                      |92.4515.131         |Xamarin.Chromium.CroNet.Fallback                                      |92.4515.131.3       |
 | 248|org.codehaus.mojo:animal-sniffer-annotations                          |1.21                |Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations                        |1.21.0.1            |
-| 249|org.tensorflow:tensorflow-lite                                        |2.10.0              |Xamarin.TensorFlow.Lite                                               |2.10.0.1            |
-| 250|org.tensorflow:tensorflow-lite-api                                    |2.10.0              |Xamarin.TensorFlow.Lite.Api                                           |2.10.0.1            |
-| 251|org.tensorflow:tensorflow-lite-gpu                                    |2.10.0              |Xamarin.TensorFlow.Lite.Gpu                                           |2.10.0.1            |
-| 252|org.tensorflow:tensorflow-lite-gpu-api                                |2.10.0              |Xamarin.TensorFlow.Lite.Gpu.Api                                       |2.10.0.1            |
-| 253|org.tensorflow:tensorflow-lite-select-tf-ops                          |2.10.0              |Xamarin.TensorFlow.Lite.Select.TF.Ops                                 |2.10.0.1            |
+| 249|org.tensorflow:tensorflow-lite                                        |2.11.0              |Xamarin.TensorFlow.Lite                                               |2.11.0              |
+| 250|org.tensorflow:tensorflow-lite-api                                    |2.11.0              |Xamarin.TensorFlow.Lite.Api                                           |2.11.0              |
+| 251|org.tensorflow:tensorflow-lite-gpu                                    |2.11.0              |Xamarin.TensorFlow.Lite.Gpu                                           |2.11.0              |
+| 252|org.tensorflow:tensorflow-lite-gpu-api                                |2.11.0              |Xamarin.TensorFlow.Lite.Gpu.Api                                       |2.11.0              |
+| 253|org.tensorflow:tensorflow-lite-select-tf-ops                          |2.11.0              |Xamarin.TensorFlow.Lite.Select.TF.Ops                                 |2.11.0              |
 | 254|org.tensorflow:tensorflow-android                                     |1.13.1              |Xamarin.TensorFlow.Android                                            |1.13.1.1            |
 | 255|org.tensorflow:tensorflow-lite-support                                |0.4.3               |Xamarin.TensorFlow.Lite.Support.Library                               |0.4.3.1             |
 | 256|org.tensorflow:tensorflow-lite-support-api                            |0.4.3               |Xamarin.TensorFlow.Lite.Support.Api                                   |0.4.3.1             |

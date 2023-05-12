@@ -228,8 +228,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-fido",
-        "version": "19.0.0",
-        "nugetVersion": "119.0.0.1",
+        "version": "19.0.1",
+        "nugetVersion": "119.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Fido",
         "dependencyOnly": false
       },
@@ -380,8 +380,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-mlkit-barcode-scanning",
-        "version": "18.1.0",
-        "nugetVersion": "118.1.0.1",
+        "version": "18.2.0",
+        "nugetVersion": "118.2.0",
         "nugetId": "Xamarin.GooglePlayServices.MLKit.BarcodeScanning",
         "dependencyOnly": false
       },
@@ -1372,8 +1372,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "barcode-scanning",
-        "version": "17.0.3",
-        "nugetVersion": "117.0.3.1",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0",
         "nugetId": "Xamarin.Google.MLKit.BarcodeScanning",
         "dependencyOnly": false
       },
@@ -1388,16 +1388,16 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "common",
-        "version": "18.6.0",
-        "nugetVersion": "118.6.0.1",
+        "version": "18.7.0",
+        "nugetVersion": "118.7.0",
         "nugetId": "Xamarin.Google.MLKit.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.mlkit",
         "artifactId": "digital-ink-recognition",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0.3",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0",
         "nugetId": "Xamarin.Google.MLKit.DigitalInk.Recognition",
         "dependencyOnly": false
       },
@@ -1572,8 +1572,8 @@
       {
         "groupId": "com.google.mlkit",
         "artifactId": "vision-interfaces",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0.1",
+        "version": "16.2.0",
+        "nugetVersion": "116.2.0",
         "nugetId": "Xamarin.Google.MLKit.Vision.Interfaces",
         "dependencyOnly": false
       },
@@ -1760,8 +1760,8 @@
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.17.0",
-        "nugetVersion": "2.17.0",
+        "version": "2.18.0",
+        "nugetVersion": "2.18.0",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": false,
         "templateSet": "errorprone"
@@ -2070,8 +2070,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite",
-        "version": "2.10.0",
-        "nugetVersion": "2.10.0.1",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0",
         "nugetId": "Xamarin.TensorFlow.Lite",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
@@ -2079,8 +2079,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-api",
-        "version": "2.10.0",
-        "nugetVersion": "2.10.0.1",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0",
         "nugetId": "Xamarin.TensorFlow.Lite.Api",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
@@ -2088,8 +2088,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-gpu",
-        "version": "2.10.0",
-        "nugetVersion": "2.10.0.1",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0",
         "nugetId": "Xamarin.TensorFlow.Lite.Gpu",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
@@ -2097,8 +2097,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-gpu-api",
-        "version": "2.10.0",
-        "nugetVersion": "2.10.0.1",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0",
         "nugetId": "Xamarin.TensorFlow.Lite.Gpu.Api",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
@@ -2106,8 +2106,8 @@
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-select-tf-ops",
-        "version": "2.10.0",
-        "nugetVersion": "2.10.0.1",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0",
         "nugetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
