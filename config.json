@@ -2105,8 +2105,6 @@
         "artifactId": "tensorflow-lite-api",
         "version": "2.12.0",
         "nugetVersion": "2.12.0",
-        "version": "2.11.0",
-        "nugetVersion": "2.11.0",
         "nugetId": "Xamarin.TensorFlow.Lite.Api",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
