@@ -345,9 +345,9 @@
         "maven": {
           "artifactId": "play-services-fido",
           "groupId": "com.google.android.gms",
-          "version": "19.0.0",
+          "version": "19.0.1",
           "nuGetId": "Xamarin.GooglePlayServices.Fido",
-          "nuGetVersion": "119.0.0.1"
+          "nuGetVersion": "119.0.1"
         }
       },
       "license": "Android Software Development Kit License"
@@ -592,9 +592,9 @@
         "maven": {
           "artifactId": "play-services-mlkit-barcode-scanning",
           "groupId": "com.google.android.gms",
-          "version": "18.1.0",
+          "version": "18.2.0",
           "nuGetId": "Xamarin.GooglePlayServices.MLKit.BarcodeScanning",
-          "nuGetVersion": "118.1.0.1"
+          "nuGetVersion": "118.2.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -2191,9 +2191,9 @@
         "maven": {
           "artifactId": "barcode-scanning",
           "groupId": "com.google.mlkit",
-          "version": "17.0.3",
+          "version": "17.1.0",
           "nuGetId": "Xamarin.Google.MLKit.BarcodeScanning",
-          "nuGetVersion": "117.0.3.1"
+          "nuGetVersion": "117.1.0"
         }
       },
       "license": "ML Kit Terms of Service"
@@ -2230,9 +2230,9 @@
         "maven": {
           "artifactId": "digital-ink-recognition",
           "groupId": "com.google.mlkit",
-          "version": "18.0.0",
+          "version": "18.1.0",
           "nuGetId": "Xamarin.Google.MLKit.DigitalInk.Recognition",
-          "nuGetVersion": "118.0.0.3"
+          "nuGetVersion": "118.1.0"
         }
       },
       "license": "ML Kit Terms of Service"
@@ -2516,9 +2516,9 @@
         "maven": {
           "artifactId": "vision-interfaces",
           "groupId": "com.google.mlkit",
-          "version": "16.1.0",
+          "version": "16.2.0",
           "nuGetId": "Xamarin.Google.MLKit.Vision.Interfaces",
-          "nuGetVersion": "116.1.0.1"
+          "nuGetVersion": "116.2.0"
         }
       },
       "license": "ML Kit Terms of Service"
@@ -2801,9 +2801,9 @@
         "maven": {
           "artifactId": "error_prone_annotations",
           "groupId": "com.google.errorprone",
-          "version": "2.17.0",
+          "version": "2.18.0",
           "nuGetId": "Xamarin.Google.ErrorProne.Annotations",
-          "nuGetVersion": "2.17.0"
+          "nuGetVersion": "2.18.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3243,9 +3243,9 @@
         "maven": {
           "artifactId": "tensorflow-lite",
           "groupId": "org.tensorflow",
-          "version": "2.10.0",
+          "version": "2.11.0",
           "nuGetId": "Xamarin.TensorFlow.Lite",
-          "nuGetVersion": "2.10.0.1"
+          "nuGetVersion": "2.11.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3256,9 +3256,9 @@
         "maven": {
           "artifactId": "tensorflow-lite-api",
           "groupId": "org.tensorflow",
-          "version": "2.10.0",
+          "version": "2.11.0",
           "nuGetId": "Xamarin.TensorFlow.Lite.Api",
-          "nuGetVersion": "2.10.0.1"
+          "nuGetVersion": "2.11.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3269,9 +3269,9 @@
         "maven": {
           "artifactId": "tensorflow-lite-gpu",
           "groupId": "org.tensorflow",
-          "version": "2.10.0",
+          "version": "2.11.0",
           "nuGetId": "Xamarin.TensorFlow.Lite.Gpu",
-          "nuGetVersion": "2.10.0.1"
+          "nuGetVersion": "2.11.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3282,9 +3282,9 @@
         "maven": {
           "artifactId": "tensorflow-lite-gpu-api",
           "groupId": "org.tensorflow",
-          "version": "2.10.0",
+          "version": "2.11.0",
           "nuGetId": "Xamarin.TensorFlow.Lite.Gpu.Api",
-          "nuGetVersion": "2.10.0.1"
+          "nuGetVersion": "2.11.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3295,9 +3295,9 @@
         "maven": {
           "artifactId": "tensorflow-lite-select-tf-ops",
           "groupId": "org.tensorflow",
-          "version": "2.10.0",
+          "version": "2.11.0",
           "nuGetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
-          "nuGetVersion": "2.10.0.1"
+          "nuGetVersion": "2.11.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"

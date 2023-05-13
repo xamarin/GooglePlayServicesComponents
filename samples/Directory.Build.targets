@@ -169,7 +169,7 @@
     <PackageReference Update="Xamarin.Firebase.Storage.Common" Version="117.0.0.8" />
     <PackageReference Update="Xamarin.Firebase.Storage.Ktx" Version="120.1.0.1" />
     <PackageReference Update="Xamarin.Firebase.ProtoliteWellKnownTypes" Version="118.0.0.8" />
-    <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning" Version="117.0.3.1" />
+    <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning" Version="117.1.0" />
     <PackageReference Update="Xamarin.Google.MLKit.BarcodeScanning.Common" Version="117.0.0.3" />
     <PackageReference Update="Xamarin.Google.MLKit.Common" Version="118.7.0" />
     <PackageReference Update="Xamarin.Google.MLKit.DigitalInk.Recognition" Version="118.0.0.3" />
@@ -194,7 +194,7 @@
     <PackageReference Update="Xamarin.Google.MLKit.SmartReply.Common" Version="116.1.0.1" />
     <PackageReference Update="Xamarin.Google.MLKit.Translate" Version="117.0.1.1" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="117.3.0.1" />
-    <PackageReference Update="Xamarin.Google.MLKit.Vision.Interfaces" Version="116.1.0.1" />
+    <PackageReference Update="Xamarin.Google.MLKit.Vision.Interfaces" Version="116.2.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="118.2.2.3" />
     <PackageReference Update="Xamarin.Google.Android.ODML.Image" Version="1.0.0.3-beta1" />
     <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places" Version="2.7.0" />
@@ -216,7 +216,7 @@
     <PackageReference Update="Xamarin.Google.UserMessagingPlatform" Version="2.0.0.3" />
     <PackageReference Update="Xamarin.Google.Code.FindBugs.JSR305" Version="3.0.2.7" />
     <PackageReference Update="Xamarin.Google.Dagger" Version="2.44.2.1" />
-    <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.17.0" />
+    <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.18.0" />
     <PackageReference Update="Xamarin.Google.ZXing.Core" Version="3.5.1.1" />
     <PackageReference Update="Xamarin.Google.FlatBuffers.Java" Version="22.11.23.1" />
     <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.21.12.1" />
