@@ -230,7 +230,7 @@
         "artifactId": "play-services-deviceperformance",
         "version": "16.0.0",
         "nugetVersion": "116.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.DevicePerformnace",
+        "nugetId": "Xamarin.GooglePlayServices.DevicePerformance",
         "dependencyOnly": false
       },
       {
