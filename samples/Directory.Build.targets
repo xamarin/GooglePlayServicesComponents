@@ -25,7 +25,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.CloudMessaging" Version="117.0.2.3" />
     <PackageReference Update="Xamarin.GooglePlayServices.Code.Scanner" Version="116.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.CroNet" Version="118.0.1.3" />
-    <PackageReference Update="Xamarin.GooglePlayServices.DevicePerformnace" Version="116.0.1" />
+    <PackageReference Update="Xamarin.GooglePlayServices.DevicePerformance" Version="116.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Drive" Version="117.0.0.9" />
     <PackageReference Update="Xamarin.GooglePlayServices.Fido" Version="120.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Fitness" Version="121.1.0.2" />

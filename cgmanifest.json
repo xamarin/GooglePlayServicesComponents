@@ -333,7 +333,7 @@
           "artifactId": "play-services-deviceperformance",
           "groupId": "com.google.android.gms",
           "version": "16.0.0",
-          "nuGetId": "Xamarin.GooglePlayServices.DevicePerformnace",
+          "nuGetId": "Xamarin.GooglePlayServices.DevicePerformance",
           "nuGetVersion": "116.0.1"
         }
       },
