@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0-android</TargetFramework>    
+    <TargetFramework>$(_DefaultDotNetSampleTargetFrameworks)</TargetFramework>    
     
     <!-- Some packages specify a minimum of 29 (eg: StreamProtect) -->
     <SupportedOSPlatformVersion>29</SupportedOSPlatformVersion>

@@ -446,4 +446,8 @@
         >
     </attr>
     
+    <remove-node 
+        path="/api/package[@name='com.google.firestore.v1']/class[@name='StructuredAggregationQuery.Aggregation']/implements"
+        />
+
 </metadata>

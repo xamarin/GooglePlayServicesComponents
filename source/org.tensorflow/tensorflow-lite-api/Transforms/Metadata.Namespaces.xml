@@ -23,5 +23,11 @@
         >
         Xamarin.TensorFlow.Lite.Nnapi
     </attr>
+    <attr 
+        path="/api/package[@name='org.tensorflow.lite.acceleration']" 
+        name="managedName"
+        >
+        Xamarin.TensorFlow.Lite.Acceleration
+    </attr>
 
 </metadata>
