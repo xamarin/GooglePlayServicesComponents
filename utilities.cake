@@ -534,7 +534,7 @@ Task ("spell-check")
                 "PerfMark",
                 "PerfMarkApi",
                 "ZXing",
-		            "JavaPoet",
+		        "JavaPoet",
                 "LanguageId",
                 "AppSet",
                 "Ktx",
@@ -561,6 +561,8 @@ Task ("spell-check")
                 "ConverterGson",
                 "ConverterScalars",
                 "JVM",
+                "DevicePerformance",
+                "ThreadNetwork",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
