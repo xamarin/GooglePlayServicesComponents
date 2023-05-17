@@ -17,5 +17,17 @@
         >
         Android.Gms.TfLite.Dynamite
     </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.tflite.dynamite.acceleration']" 
+        name="managedName"
+        >
+        Android.Gms.TfLite.Dynamite.Acceleration
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.tflite.dynamite.internal']" 
+        name="managedName"
+        >
+        Android.Gms.TfLite.Dynamite.Internal
+    </attr>
 
 </metadata>
