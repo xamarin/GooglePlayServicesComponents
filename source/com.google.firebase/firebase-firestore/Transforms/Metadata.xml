@@ -450,4 +450,17 @@
         path="/api/package[@name='com.google.firestore.v1']/class[@name='StructuredAggregationQuery.Aggregation']/implements"
         />
 
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.local']/class[@name='Persistence']/method[@name='getReferenceDelegate' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.firestore.local']/class[@name='MemoryPersistence']/method[@name='getReferenceDelegate' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
 </metadata>
