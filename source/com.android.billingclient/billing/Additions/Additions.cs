@@ -196,20 +196,6 @@ namespace Android.BillingClient.Api
 
 			StartConnection(listener);
 		}
-
-		public Task<BillingResult> LaunchPriceChangeConfirmationFlowAsync(Activity activity, PriceChangeFlowParams priceChangeFlowParams)
-		{
-			var tcs = new TaskCompletionSource<BillingResult>();
-
-			var listener = new InternalPriceChangeConfirmationListener
-			{
-				PriceChangeConfirmationHandler = r => tcs.TrySetResult(r)
-			};
-
-			LaunchPriceChangeConfirmationFlow(activity, priceChangeFlowParams, listener);
-
-			return tcs.Task;
-		}
 	}
 
 	internal class InternalAcknowledgePurchaseResponseListener : Java.Lang.Object, IAcknowledgePurchaseResponseListener
@@ -240,7 +226,7 @@ namespace Android.BillingClient.Api
 			=> ConsumeResponseHandler?.Invoke(result, str);
 	}
 
-	internal class InternalPriceChangeConfirmationListener : Java.Lang.Object, IPriceChangeConfirmationListener
+	internal class InternalPriceChangeConfirmationListener : Java.Lang.Object //, IPriceChangeConfirmationListener
 	{
 		public Action<BillingResult> PriceChangeConfirmationHandler { get; set; }
 		public void OnPriceChangeConfirmationResult(BillingResult result)

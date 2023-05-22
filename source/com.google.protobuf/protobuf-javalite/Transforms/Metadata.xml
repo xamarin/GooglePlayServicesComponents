@@ -2,23 +2,23 @@
 
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='LazyField.LazyIterator']/implements[@name='java.util.Iterator']"
-        >        
+        >
     </remove-node>
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='AbstractMessageLite.Builder']/implements[@name='com.google.protobuf.MessageLite.Builder']"
-        >        
+        >
     </remove-node>
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='AbstractProtobufList']/implements[@name='com.google.protobuf.Internal.ProtobufList']"
-        >        
+        >
     </remove-node>
     <remove-node
         path="/api/package[@name='com.google.protobuf']/interface[@name='MessageLite']/implements[@name='com.google.protobuf.MessageLiteOrBuilder']"
-        >        
+        >
     </remove-node>
     <remove-node
         path="/api/package[@name='com.google.protobuf']/interface[@name='MessageLite.Builder']/implements[@name='com.google.protobuf.MessageLiteOrBuilder']"
-        >        
+        >
     </remove-node>
 
     <attr
@@ -34,15 +34,15 @@
         >
         com.google.protobuf.MessageLite
     </attr>
-    
+
     <attr
         path="/api/package[@name='com.google.protobuf']/class[@name='GeneratedMessageLite']/method[@name='newBuilderForType' and count(parameter)=0]"
         name="return"
         >
         com.google.protobuf.MessageLite.Builder
     </attr>
-  
-    
+
+
     <attr
         path="/api/package[@name='com.google.protobuf']/class[@name='GeneratedMessageLite']/method[@name='toBuilder' and count(parameter)=0]"
         name="return"
@@ -64,7 +64,7 @@
         >
         com.google.protobuf.MessageLite
     </attr>
-    
+
     <attr
         path="/api/package[@name='com.google.protobuf']/class[@name='GeneratedMessageLite.Builder']/method[@name='clear' and count(parameter)=0]"
         name="return"
@@ -113,7 +113,7 @@
 
 <!--    <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/implements[@name='RandomAccess']"
-        >        
+        >
     </remove-node>
 -->
     <remove-node
@@ -163,8 +163,8 @@
     </attr>
 
     <remove-node
-        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='remove' and count(parameter)=1 and parameter[1][@type='int' and @name='p0']]"
-        >        
+        path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='remove' and count(parameter)=1 and parameter[1][@type='int']]"
+        >
     </remove-node>
 
     <attr
@@ -201,19 +201,19 @@
     </attr>
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/implements[@name='com.google.protobuf.LazyStringList']"
-        >        
+        >
     </remove-node>
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
         >
     </remove-node>
-    
+
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='ByteString']/implements[@name='java.lang.Iterable']"
-        >        
+        >
     </remove-node>
 
-<!--    
+<!--
     <attr
         path="/api/package[@name='com.google.protobuf']/class[@name='AbstractParser']/method[@name='parsePartialFrom' and count(parameter)=2 and parameter[1][@type='java.io.InputStream'] and parameter[2][@type='com.google.protobuf.ExtensionRegistryLite']]/parameter[1]"
         name="managedType"
@@ -223,7 +223,7 @@
 -->
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='AbstractParser']/implements[@name='com.google.protobuf.Parser']"
-        >        
+        >
     </remove-node>
 
     <attr
@@ -234,19 +234,19 @@
     </attr>
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='Field']/implements"
-        >        
+        >
     </remove-node>
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='Value']/implements"
-        >        
+        >
     </remove-node>
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='AbstractProtobufList']/method[@name='retainAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;?&gt;']]"
-        >        
+        >
     </remove-node>
     <remove-node
         path="/api/package[@name='com.google.protobuf']/class[@name='AbstractProtobufList']/method[@name='removeAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;?&gt;']]"
-        >        
+        >
     </remove-node>
 
 
@@ -275,4 +275,5 @@
         >
         Get
     </attr>
+
 </metadata>
