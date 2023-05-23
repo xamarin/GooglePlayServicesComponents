@@ -4,12 +4,11 @@
 
 @{
   var targetFrameworkMoniker = "MonoAndroid12.0";
-  var dotnetFrameworkMoniker = "net6.0-android31.0";
 }
 
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>@(targetFrameworkMoniker);@(dotnetFrameworkMoniker)</TargetFrameworks>
+    <TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     @if (!string.IsNullOrEmpty(Model.AssemblyName)) {
     <AssemblyName>@(Model.AssemblyName)</AssemblyName>
@@ -167,19 +166,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\@(targetFrameworkMoniker)" />
-    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\@(dotnetFrameworkMoniker)" />
-    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="buildTransitive\@(targetFrameworkMoniker)" />
-    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="buildTransitive\@(dotnetFrameworkMoniker)" />    
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(_TargetFrameworkNugetBuildFolders)" />
   </ItemGroup>
 
   @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.Basement")
   {
     <ItemGroup>
-      <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="build\@(targetFrameworkMoniker)" />
-      <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="build\@(dotnetFrameworkMoniker)" />
-      <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="buildTransitive\@(targetFrameworkMoniker)" />
-      <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="buildTransitive\@(dotnetFrameworkMoniker)" />      
+      <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="@@(_TargetFrameworkNugetBuildFolders)" />
     </ItemGroup>
   }
 
@@ -217,8 +210,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if (1==2 && art.MavenArtifactPackaging == "aar") {
-    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar\@(targetFrameworkMoniker)" />
-    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar\@(dotnetFrameworkMoniker)" />
+    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="@@(_TargetFrameworkNugetAarFolders)" />
       }
     }
   </ItemGroup>
@@ -274,19 +266,19 @@
     @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.SafetyNet")
     {
       <Reference Include="System.Net.Http" />
-      <PackageReference Include="System.Text.Json" Version="7.0.0" />
+      <PackageReference Include="System.Text.Json" Version="7.0.2" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Firestore")
     {
-      <PackageReference Include="Xamarin.Google.Guava" Version="31.1.0.5" />
+      <PackageReference Include="Xamarin.Google.Guava" Version="31.1.0.6" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Crashlytics")
     {
-      <PackageReference Include="Xamarin.Google.Dagger" Version="2.41.0.2" />
+      <PackageReference Include="Xamarin.Google.Dagger" Version="2.44.2.1" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Measurement.Connector.Impl")
     {
-      <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base" Version="121.2.0" />
+      <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base" Version="121.2.0.1" />
     }
     <!-- Reference -->
     <Reference Include="System.Net.Http" Condition=" '$(TargetFramework)' == '@(targetFrameworkMoniker)' " />

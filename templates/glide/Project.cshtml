@@ -1,6 +1,6 @@
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid12.0;net6.0-android31</TargetFrameworks>
+    <TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <!--
       No warnings for:
@@ -72,13 +72,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <GlideBuildFolders Include="build\monoandroid12.0" />
-    <GlideBuildFolders Include="build\net6.0-android31.0" />
-    <GlideBuildFolders Include="buildTransitive\monoandroid12.0" />
-    <GlideBuildFolders Include="buildTransitive\net6.0-android31.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) 
     {
       switch(@Model.NuGetPackageId)
@@ -99,7 +92,7 @@
           default:
             break; 
       }
-      <None Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\$(PackageId).targets" Pack="True" PackagePath="@@(GlideBuildFolders)" />
+      <None Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\$(PackageId).targets" Pack="True" PackagePath="@@(_TargetFrameworkNugetBuildFolders)" />
       <JavaSourcesJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Link="Jars\%(Filename)%(Extension)" />
     }
   </ItemGroup>
