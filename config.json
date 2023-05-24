@@ -28,16 +28,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "22.0.0",
-        "nugetVersion": "122.0.0",
+        "version": "22.1.0",
+        "nugetVersion": "122.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "22.0.0",
-        "nugetVersion": "122.0.0",
+        "version": "22.1.0",
+        "nugetVersion": "122.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -52,8 +52,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "22.0.0",
-        "nugetVersion": "122.0.0",
+        "version": "22.1.0",
+        "nugetVersion": "122.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
@@ -684,32 +684,32 @@
       {
         "groupId": "com.google.android.play",
         "artifactId": "app-update",
-        "version": "2.0.1",
-        "nugetVersion": "2.0.1.2",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0",
         "nugetId": "Xamarin.Google.Android.Play.App.Update",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.play",
         "artifactId": "app-update-ktx",
-        "version": "2.0.1",
-        "nugetVersion": "2.0.1",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0",
         "nugetId": "Xamarin.Google.Android.Play.App.Update.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.play",
         "artifactId": "asset-delivery",
-        "version": "2.0.2",
-        "nugetVersion": "2.0.2",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0",
         "nugetId": "Xamarin.Google.Android.Play.Asset.Delivery",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.play",
         "artifactId": "asset-delivery-ktx",
-        "version": "2.0.1",
-        "nugetVersion": "2.0.1",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0",
         "nugetId": "Xamarin.Google.Android.Play.Asset.Delivery.Ktx",
         "dependencyOnly": false
       },
@@ -740,16 +740,16 @@
       {
         "groupId": "com.google.android.play",
         "artifactId": "feature-delivery",
-        "version": "2.0.1",
-        "nugetVersion": "2.0.1",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0",
         "nugetId": "Xamarin.Google.Android.Play.Feature.Delivery",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.play",
         "artifactId": "feature-delivery-ktx",
-        "version": "2.0.1",
-        "nugetVersion": "2.0.1",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0",
         "nugetId": "Xamarin.Google.Android.Play.Feature.Delivery.Ktx",
         "dependencyOnly": false
       },
@@ -772,8 +772,8 @@
       {
         "groupId": "com.google.android.play",
         "artifactId": "review-ktx",
-        "version": "2.0.0",
-        "nugetVersion": "2.0.0.1",
+        "version": "2.0.1",
+        "nugetVersion": "2.0.1",
         "nugetId": "Xamarin.Google.Android.Play.Review.Ktx",
         "dependencyOnly": false
       },
@@ -788,16 +788,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads",
-        "version": "22.0.0",
-        "nugetVersion": "122.0.0",
+        "version": "22.1.0",
+        "nugetVersion": "122.1.0",
         "nugetId": "Xamarin.Firebase.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads-lite",
-        "version": "22.0.0",
-        "nugetVersion": "122.0.0",
+        "version": "22.1.0",
+        "nugetVersion": "122.1.0",
         "nugetId": "Xamarin.Firebase.Ads.Lite",
         "dependencyOnly": false
       },
@@ -1620,8 +1620,8 @@
       {
         "groupId": "com.google.android.libraries.places",
         "artifactId": "places",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0",
+        "version": "3.1.0",
+        "nugetVersion": "3.1.0",
         "nugetId": "Xamarin.GoogleAndroid.Libraries.Places",
         "dependencyOnly": false
       },
@@ -1802,8 +1802,8 @@
       {
         "groupId": "com.google.flatbuffers",
         "artifactId": "flatbuffers-java",
-        "version": "22.12.06",
-        "nugetVersion": "22.12.06",
+        "version": "23.1.21",
+        "nugetVersion": "23.1.21",
         "nugetId": "Xamarin.Google.FlatBuffers.Java",
         "dependencyOnly": false,
         "templateSet": "flatbuffers"
@@ -1811,8 +1811,8 @@
       {
         "groupId": "com.google.protobuf",
         "artifactId": "protobuf-javalite",
-        "version": "3.22.5",
-        "nugetVersion": "3.22.5",
+        "version": "3.23.1",
+        "nugetVersion": "3.23.1",
         "nugetId": "Xamarin.Protobuf.JavaLite",
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth",
@@ -1841,8 +1841,8 @@
       {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "logging-interceptor",
-        "version": "4.7.2",
-        "nugetVersion": "4.7.2",
+        "version": "4.8.1",
+        "nugetVersion": "4.8.1",
         "nugetId": "Square.OkHttp3.LoggingInterceptor",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
@@ -1868,8 +1868,8 @@
       {
         "groupId": "com.squareup.okio",
         "artifactId": "okio",
-        "version": "3.2.0",
-        "nugetVersion": "3.2.0",
+        "version": "3.3.0",
+        "nugetVersion": "3.3.0",
         "nugetId": "Square.OkIO",
         "dependencyOnly": false,
         "templateSet": "squareup-okio"
@@ -1877,8 +1877,8 @@
       {
         "groupId": "com.squareup.okio",
         "artifactId": "okio-jvm",
-        "version": "3.2.0",
-        "nugetVersion": "3.2.0",
+        "version": "3.3.0",
+        "nugetVersion": "3.3.0",
         "nugetId": "Square.OkIO.JVM",
         "dependencyOnly": false,
         "templateSet": "squareup-okio"
@@ -1950,8 +1950,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-android",
-        "version": "1.53.0",
-        "nugetVersion": "1.53.0",
+        "version": "1.54.1",
+        "nugetVersion": "1.54.1",
         "nugetId": "Xamarin.Grpc.Android",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1959,8 +1959,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-api",
-        "version": "1.53.0",
-        "nugetVersion": "1.53.0",
+        "version": "1.54.1",
+        "nugetVersion": "1.54.1",
         "nugetId": "Xamarin.Grpc.Api",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1968,8 +1968,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-context",
-        "version": "1.53.0",
-        "nugetVersion": "1.53.0",
+        "version": "1.54.1",
+        "nugetVersion": "1.54.1",
         "nugetId": "Xamarin.Grpc.Context",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1977,8 +1977,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-core",
-        "version": "1.53.0",
-        "nugetVersion": "1.53.0",
+        "version": "1.54.1",
+        "nugetVersion": "1.54.1",
         "nugetId": "Xamarin.Grpc.Core",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1986,8 +1986,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-okhttp",
-        "version": "1.53.0",
-        "nugetVersion": "1.53.0",
+        "version": "1.54.1",
+        "nugetVersion": "1.54.1",
         "nugetId": "Xamarin.Grpc.OkHttp",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1995,8 +1995,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-protobuf-lite",
-        "version": "1.53.0",
-        "nugetVersion": "1.53.0",
+        "version": "1.54.1",
+        "nugetVersion": "1.54.1",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2004,8 +2004,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-stub",
-        "version": "1.53.0",
-        "nugetVersion": "1.53.0",
+        "version": "1.54.1",
+        "nugetVersion": "1.54.1",
         "nugetId": "Xamarin.Grpc.Stub",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2049,8 +2049,8 @@
       {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-api",
-        "version": "94.4606.61",
-        "nugetVersion": "94.4606.61",
+        "version": "95.4638.50",
+        "nugetVersion": "95.4638.50",
         "nugetId": "Xamarin.Chromium.CroNet.Api",
         "dependencyOnly": false,
         "templateSet": "chromium-cronet"
@@ -2058,8 +2058,8 @@
       {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-common",
-        "version": "94.4606.61",
-        "nugetVersion": "94.4606.61.3",
+        "version": "95.4638.50",
+        "nugetVersion": "95.4638.50.3",
         "nugetId": "Xamarin.Chromium.CroNet.Common",
         "dependencyOnly": false,
         "templateSet": "chromium-cronet"
@@ -2067,8 +2067,8 @@
       {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-embedded",
-        "version": "94.4606.61",
-        "nugetVersion": "94.4606.61.3",
+        "version": "95.4638.50",
+        "nugetVersion": "95.4638.50.3",
         "nugetId": "Xamarin.Chromium.CroNet.Embedded",
         "dependencyOnly": false,
         "templateSet": "chromium-cronet"
@@ -2076,8 +2076,8 @@
       {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-fallback",
-        "version": "94.4606.61",
-        "nugetVersion": "94.4606.61.3",
+        "version": "95.4638.50",
+        "nugetVersion": "95.4638.50.3",
         "nugetId": "Xamarin.Chromium.CroNet.Fallback",
         "dependencyOnly": false,
         "templateSet": "chromium-cronet"
