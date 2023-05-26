@@ -79,6 +79,18 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <!-- Include symbol files (*.pdb) in the built .nupkg -->
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+
+    @switch (@Model.NuGetPackageId)
+    {
+      case "Xamarin.Google.MLKit.ObjectDetection":
+      case "Xamarin.Google.MLKit.ObjectDetection.Custom":
+      case "Xamarin.Google.MLKit.PoseDetection":
+      case "Xamarin.Google.MLKit.PoseDetection.Accurate":
+    <!-- Filed as https://github.com/xamarin/java.interop/issues/1116 -->
+    <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>false</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
+      break;
+    }
+
   </PropertyGroup>
 
   <PropertyGroup>
