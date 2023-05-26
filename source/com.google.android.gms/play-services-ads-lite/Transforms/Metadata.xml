@@ -556,11 +556,15 @@
         >
         Android.Gms.Ads.H5
     </attr>
+
+    <!--
+    better in Transforms/EnumMethods.xml
     <attr
         path="/api/package[@name='com.google.android.gms.ads']/class[@name='AdActivity']/method[@name='onRequestPermissionsResult' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='java.lang.String[]'] and parameter[3][@type='int[]']]/parameter[3]"
         name="managedType"
         >
         Android.Content.PM.Permission[]
     </attr>
+    -->
 
 </metadata>
