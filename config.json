@@ -1660,8 +1660,8 @@
       {
         "groupId": "com.google.android.recaptcha",
         "artifactId": "recaptcha",
-        "version": "18.1.2",
-        "nugetVersion": "18.1.2.1",
+        "version": "18.2.1",
+        "nugetVersion": "18.2.1",
         "nugetId": "Xamarin.Google.Android.Recaptcha",
         "dependencyOnly": false
       },
@@ -1794,8 +1794,8 @@
       {
         "groupId": "com.google.flatbuffers",
         "artifactId": "flatbuffers-java",
-        "version": "23.1.21",
-        "nugetVersion": "23.1.21.1",
+        "version": "23.3.3",
+        "nugetVersion": "23.3.3",
         "nugetId": "Xamarin.Google.FlatBuffers.Java",
         "dependencyOnly": false,
         "templateSet": "flatbuffers"
@@ -1803,8 +1803,8 @@
       {
         "groupId": "com.google.protobuf",
         "artifactId": "protobuf-javalite",
-        "version": "3.23.1",
-        "nugetVersion": "3.23.1.1",
+        "version": "3.23.2",
+        "nugetVersion": "3.23.2",
         "nugetId": "Xamarin.Protobuf.JavaLite",
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth",
@@ -1833,8 +1833,8 @@
       {
         "groupId": "com.squareup.okhttp3",
         "artifactId": "logging-interceptor",
-        "version": "4.8.1",
-        "nugetVersion": "4.8.1.1",
+        "version": "4.9.3",
+        "nugetVersion": "4.9.3",
         "nugetId": "Square.OkHttp3.LoggingInterceptor",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
@@ -1942,8 +1942,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-android",
-        "version": "1.54.1",
-        "nugetVersion": "1.54.1.1",
+        "version": "1.55.1",
+        "nugetVersion": "1.55.1",
         "nugetId": "Xamarin.Grpc.Android",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1951,8 +1951,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-api",
-        "version": "1.54.1",
-        "nugetVersion": "1.54.1.1",
+        "version": "1.55.1",
+        "nugetVersion": "1.55.1",
         "nugetId": "Xamarin.Grpc.Api",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1960,8 +1960,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-context",
-        "version": "1.54.1",
-        "nugetVersion": "1.54.1.1",
+        "version": "1.55.1",
+        "nugetVersion": "1.55.1",
         "nugetId": "Xamarin.Grpc.Context",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1969,8 +1969,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-core",
-        "version": "1.54.1",
-        "nugetVersion": "1.54.1.1",
+        "version": "1.55.1",
+        "nugetVersion": "1.55.1",
         "nugetId": "Xamarin.Grpc.Core",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1978,8 +1978,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-okhttp",
-        "version": "1.54.1",
-        "nugetVersion": "1.54.1.1",
+        "version": "1.55.1",
+        "nugetVersion": "1.55.1",
         "nugetId": "Xamarin.Grpc.OkHttp",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1987,8 +1987,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-protobuf-lite",
-        "version": "1.54.1",
-        "nugetVersion": "1.54.1.1",
+        "version": "1.55.1",
+        "nugetVersion": "1.55.1",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -1996,8 +1996,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-stub",
-        "version": "1.54.1",
-        "nugetVersion": "1.54.1.1",
+        "version": "1.55.1",
+        "nugetVersion": "1.55.1",
         "nugetId": "Xamarin.Grpc.Stub",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2041,8 +2041,8 @@
       {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-api",
-        "version": "95.4638.50",
-        "nugetVersion": "95.4638.50.1",
+        "version": "98.4758.101",
+        "nugetVersion": "98.4758.101",
         "nugetId": "Xamarin.Chromium.CroNet.Api",
         "dependencyOnly": false,
         "templateSet": "chromium-cronet"
@@ -2050,8 +2050,8 @@
       {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-common",
-        "version": "95.4638.50",
-        "nugetVersion": "95.4638.50.4",
+        "version": "98.4758.101",
+        "nugetVersion": "98.4758.101",
         "nugetId": "Xamarin.Chromium.CroNet.Common",
         "dependencyOnly": false,
         "templateSet": "chromium-cronet"
@@ -2059,8 +2059,8 @@
       {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-embedded",
-        "version": "95.4638.50",
-        "nugetVersion": "95.4638.50.4",
+        "version": "98.4758.101",
+        "nugetVersion": "98.4758.101",
         "nugetId": "Xamarin.Chromium.CroNet.Embedded",
         "dependencyOnly": false,
         "templateSet": "chromium-cronet"
@@ -2068,8 +2068,8 @@
       {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-fallback",
-        "version": "95.4638.50",
-        "nugetVersion": "95.4638.50.4",
+        "version": "98.4758.101",
+        "nugetVersion": "98.4758.101",
         "nugetId": "Xamarin.Chromium.CroNet.Fallback",
         "dependencyOnly": false,
         "templateSet": "chromium-cronet"
@@ -2077,8 +2077,8 @@
       {
         "groupId": "org.codehaus.mojo",
         "artifactId": "animal-sniffer-annotations",
-        "version": "1.21",
-        "nugetVersion": "1.21.0.2",
+        "version": "1.22",
+        "nugetVersion": "1.22",
         "nugetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
         "dependencyOnly": false,
         "templateSet": "codehaus-mojo"
