@@ -578,6 +578,7 @@ Xamarin.Google.Android.Recaptcha
 Xamarin.Google.ErrorProne.Annotations
 Xamarin.Google.ErrorProne.Annotations.Concurrent
 Xamarin.Google.FlatBuffers
+Xamarin.Google.FlatBuffers.Reflection
 Xamarin.Google.MLKit.Barhopper
 Xamarin.Google.MLKit.Common
 Xamarin.Google.MLKit.Common.Internal
