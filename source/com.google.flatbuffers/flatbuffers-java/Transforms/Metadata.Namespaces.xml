@@ -5,4 +5,10 @@
         >
         Xamarin.Google.FlatBuffers
     </attr>
+    <attr 
+        path="/api/package[@name='com.google.flatbuffers.reflection']" 
+        name="managedName"
+        >
+        Xamarin.Google.FlatBuffers.Reflection
+    </attr>
 </metadata>

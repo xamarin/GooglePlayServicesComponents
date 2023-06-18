@@ -494,7 +494,6 @@ Square.OkHttp
 Square.OkHttp3
 Square.OkHttp3.Logging
 Square.OkIO
-Square.OkIO.Internal
 Square.Picasso
 Square.Retrofit
 Square.Retrofit.Android
@@ -519,6 +518,7 @@ Xamarin.Android.Libraries.Vision.VisionKit.Pipeline
 Xamarin.Chromium.Base
 Xamarin.Chromium.Base.Annotations
 Xamarin.Chromium.Base.Compat
+Xamarin.Chromium.Base.Lifetime
 Xamarin.Chromium.Base.Memory
 Xamarin.Chromium.Base.Metrics
 Xamarin.Chromium.Base.Natives
@@ -578,6 +578,7 @@ Xamarin.Google.Android.Recaptcha
 Xamarin.Google.ErrorProne.Annotations
 Xamarin.Google.ErrorProne.Annotations.Concurrent
 Xamarin.Google.FlatBuffers
+Xamarin.Google.FlatBuffers.Reflection
 Xamarin.Google.MLKit.Barhopper
 Xamarin.Google.MLKit.Common
 Xamarin.Google.MLKit.Common.Internal
