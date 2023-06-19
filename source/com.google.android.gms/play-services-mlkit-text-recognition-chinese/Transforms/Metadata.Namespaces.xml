@@ -1,8 +1,10 @@
 ﻿<metadata>
+    <!--
     <attr 
-        path="/api/package[@name='com.google.mlkit.vision.text.chinese']"
+        path="/api/package[@name='package']" 
         name="managedName"
         >
-        Xamarin.Google.MLKit.Vision.Text.Chinese
+        Package
     </attr>
+    -->
 </metadata>
