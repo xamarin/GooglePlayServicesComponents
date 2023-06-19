@@ -443,6 +443,38 @@
       },
       {
         "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-text-recognition-chinese",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Chinese",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-text-recognition-devanagari",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Devanagari",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-text-recognition-japanese",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Japanese",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-text-recognition-korean",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Korean",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.gms",
         "artifactId": "play-services-nearby",
         "version": "18.5.0",
         "nugetVersion": "118.5.0.1",
@@ -1571,6 +1603,54 @@
       },
       {
         "groupId": "com.google.mlkit",
+        "artifactId": "text-recognition",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.Google.MLKit.TextRecognition",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "text-recognition-bundled-common",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.Google.MLKit.TextRecognition.Bundled.Common",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "text-recognition-chinese",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.Google.MLKit.TextRecognition.Chinese",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "text-recognition-devanagari",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.Google.MLKit.TextRecognition.Devanagari",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "text-recognition-japanese",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.Google.MLKit.TextRecognition.Japanese",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "text-recognition-korean",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0",
+        "nugetId": "Xamarin.Google.MLKit.TextRecognition.Korean",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.mlkit",
         "artifactId": "translate",
         "version": "17.0.1",
         "nugetVersion": "117.0.1.2",
@@ -2170,6 +2250,42 @@
         "version": "0.4.3",
         "nugetVersion": "0.4.3.2",
         "nugetId": "Xamarin.TensorFlow.Lite.Task.Base.Library",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-audio",
+        "version": "0.4.3",
+        "nugetVersion": "0.4.3",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Audio.Library",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-vision",
+        "version": "0.4.3",
+        "nugetVersion": "0.4.3",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Vision.Library",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-text",
+        "version": "0.4.3",
+        "nugetVersion": "0.4.3",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Text.Library",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-text-play-services",
+        "version": "0.4.3",
+        "nugetVersion": "0.4.3",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
       },
