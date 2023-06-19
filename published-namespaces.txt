@@ -79,6 +79,8 @@ Android.Gms.Common.Stats
 Android.Gms.Common.Util
 Android.Gms.Common.Util.Concurrent
 Android.Gms.Common.Util.Wrappers
+Android.Gms.DevicePerformance
+Android.Gms.DevicePerformance.Internal
 Android.Gms.Drive
 Android.Gms.Drive.Events
 Android.Gms.Drive.MetadataTypes
@@ -101,7 +103,6 @@ Android.Gms.Fido
 Android.Gms.Fido.Common
 Android.Gms.Fido.Fido2
 Android.Gms.Fido.Fido2.Api.Common
-Android.Gms.Fido.SourceDevice
 Android.Gms.Fido.U2F
 Android.Gms.Fido.U2F.Api.Common
 Android.Gms.Fido.U2F.MessageBased
@@ -178,11 +179,14 @@ Android.Gms.TagManager
 Android.Gms.Tasks
 Android.Gms.TfLite.Client
 Android.Gms.TfLite.Dynamite
+Android.Gms.TfLite.Dynamite.Acceleration
+Android.Gms.TfLite.Dynamite.Internal
 Android.Gms.TfLite.Gpu
 Android.Gms.TfLite.Gpu.Support
 Android.Gms.TfLite.Java
 Android.Gms.TfLite.NnApi
 Android.Gms.TfLite.Support
+Android.Gms.ThreadNetwork
 Android.Gms.Vision
 Android.Gms.Vision.Barcodes
 Android.Gms.Vision.Clearcut
@@ -240,7 +244,10 @@ Firebase.Analytics.Connector
 Firebase.Analytics.Connector.Internal
 Firebase.Analytics.Ktx
 Firebase.Annotations
+Firebase.Annotations.Concurrent
 Firebase.AppCheck
+Firebase.AppCheck.Debug
+Firebase.AppCheck.Debug.Internal
 Firebase.AppCheck.Internal
 Firebase.AppCheck.Internal.Util
 Firebase.AppCheck.Interop
@@ -257,6 +264,7 @@ Firebase.Auth
 Firebase.Auth.Internal
 Firebase.Auth.Ktx
 Firebase.Components
+Firebase.Concurrent
 Firebase.Crash
 Firebase.Crash.Component
 Firebase.Crashlytics
@@ -317,13 +325,15 @@ Firebase.Firestore.Proto
 Firebase.Firestore.Remote
 Firebase.Firestore.Util
 Firebase.Functions
+Firebase.Functions.Dagger
+Firebase.Functions.Dagger.Assisted
+Firebase.Functions.Dagger.Interal
 Firebase.Functions.Ktx
 Firebase.HeartBeatInfo
 Firebase.Iid
 Firebase.Iid.Internal
 Firebase.InAppMessaging
 Firebase.InAppMessaging.Dagger
-Firebase.InAppMessaging.Dagger.MultiBindings
 Firebase.InAppMessaging.Display
 Firebase.InAppMessaging.Display.Dagger
 Firebase.InAppMessaging.Display.Dagger.MultiBindings
@@ -357,7 +367,6 @@ Firebase.Internal.Api
 Firebase.Ktx
 Firebase.Messaging
 Firebase.Messaging.DirectBoot
-Firebase.Messaging.DirectBoot.Threads
 Firebase.Messaging.Ktx
 Firebase.Messaging.Reporting
 Firebase.Messaging.Threads
@@ -399,7 +408,6 @@ Firebase.Perf.Metrics
 Firebase.Perf.Metrics.Resource
 Firebase.Perf.Metrics.Validator
 Firebase.Perf.Network
-Firebase.Perf.Provider
 Firebase.Perf.Session
 Firebase.Perf.Session.Gauges
 Firebase.Perf.Transport
@@ -486,7 +494,6 @@ Square.OkHttp
 Square.OkHttp3
 Square.OkHttp3.Logging
 Square.OkIO
-Square.OkIO.Internal
 Square.Picasso
 Square.Retrofit
 Square.Retrofit.Android
@@ -511,6 +518,7 @@ Xamarin.Android.Libraries.Vision.VisionKit.Pipeline
 Xamarin.Chromium.Base
 Xamarin.Chromium.Base.Annotations
 Xamarin.Chromium.Base.Compat
+Xamarin.Chromium.Base.Lifetime
 Xamarin.Chromium.Base.Memory
 Xamarin.Chromium.Base.Metrics
 Xamarin.Chromium.Base.Natives
@@ -566,9 +574,11 @@ Xamarin.Google.Android.Play.Core.SplitInstall
 Xamarin.Google.Android.Play.Core.SplitInstall.Model
 Xamarin.Google.Android.Play.Core.SplitInstall.Testing
 Xamarin.Google.Android.Play.Core.Tasks
+Xamarin.Google.Android.Recaptcha
 Xamarin.Google.ErrorProne.Annotations
 Xamarin.Google.ErrorProne.Annotations.Concurrent
 Xamarin.Google.FlatBuffers
+Xamarin.Google.FlatBuffers.Reflection
 Xamarin.Google.MLKit.Barhopper
 Xamarin.Google.MLKit.Common
 Xamarin.Google.MLKit.Common.Internal
@@ -592,6 +602,8 @@ Xamarin.Google.MLKit.Vision.BarCode
 Xamarin.Google.MLKit.Vision.Barcode.Common
 Xamarin.Google.MLKit.Vision.Barcode.Common.Internal
 Xamarin.Google.MLKit.Vision.BarCode.Internal
+Xamarin.Google.MLKit.Vision.CodeScanner
+Xamarin.Google.MLKit.Vision.CodeScanner.Internal
 Xamarin.Google.MLKit.Vision.Common
 Xamarin.Google.MLKit.Vision.Common.Internal
 Xamarin.Google.MLKit.Vision.DigitalInk
@@ -673,6 +685,7 @@ Xamarin.Protobuf.Lite
 Xamarin.TensorFlow
 Xamarin.TensorFlow.Contrib.Android
 Xamarin.TensorFlow.Lite
+Xamarin.TensorFlow.Lite.Acceleration
 Xamarin.TensorFlow.Lite.Annotations
 Xamarin.TensorFlow.Lite.GPU
 Xamarin.TensorFlow.Lite.Nnapi

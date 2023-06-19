@@ -534,7 +534,7 @@ Task ("spell-check")
                 "PerfMark",
                 "PerfMarkApi",
                 "ZXing",
-		            "JavaPoet",
+		        "JavaPoet",
                 "LanguageId",
                 "AppSet",
                 "Ktx",
@@ -561,6 +561,8 @@ Task ("spell-check")
                 "ConverterGson",
                 "ConverterScalars",
                 "JVM",
+                "DevicePerformance",
+                "ThreadNetwork",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
@@ -1362,7 +1364,7 @@ static List<string> FindNamespacesInDirectory (string directory)
 {
     var list = new SortedSet<string> ();
 
-    foreach (var file in System.IO.Directory.EnumerateFiles (directory, "*.dll", SearchOption.AllDirectories))
+    foreach (var file in System.IO.Directory.EnumerateFiles (directory, "*.dll", SearchOption.AllDirectories).Where (f => f.Replace ('\\', '/').Contains ("/obj/")))
         foreach (var ns in FindNamespaces (file))
             list.Add (ns);
 

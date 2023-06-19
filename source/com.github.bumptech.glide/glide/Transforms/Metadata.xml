@@ -146,4 +146,32 @@
   <remove-node path="/api/package[@name='com.bumptech.glide.load.resource.gif']/class[@name='StreamGifDecoder']/implements[@name='com.bumptech.glide.load.ResourceDecoder']" />
   <remove-node path="/api/package[@name='com.bumptech.glide.load.resource.bitmap']/class[@name='InputStreamBitmapImageDecoderResourceDecoder']/implements[@name='com.bumptech.glide.load.ResourceDecoder']" />
   <remove-node path="/api/package[@name='com.bumptech.glide.request']/class[@name='ExperimentalRequestListener']" />
+
+
+  <attr
+    path="/api/package[@name='com.bumptech.glide.load.model']/class[@name='DirectResourceLoader']/method[@name='buildLoadData' and count(parameter)=4 and parameter[1][@type='java.lang.Integer'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='com.bumptech.glide.load.Options']]/parameter[1]"
+    name="managedType"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='com.bumptech.glide.load.model']/class[@name='DirectResourceLoader']/method[@name='handles' and count(parameter)=1 and parameter[1][@type='java.lang.Integer']]/parameter[1]"
+    name="managedType"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='com.bumptech.glide.load.model']/class[@name='ResourceUriLoader']/method[@name='buildLoadData' and count(parameter)=4 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='com.bumptech.glide.load.Options']]/parameter[1]"
+    name="managedType"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='com.bumptech.glide.load.model']/class[@name='ResourceUriLoader']/method[@name='handles' and count(parameter)=1 and parameter[1][@type='android.net.Uri']]/parameter[1]"
+    name="managedType"
+    >
+    Java.Lang.Object
+  </attr>
+  
+
 </metadata>

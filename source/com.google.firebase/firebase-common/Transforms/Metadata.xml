@@ -68,5 +68,17 @@
         >
         Firebase.Tracing
     </attr>
-    
+    <attr
+        path="/api/package[@name='com.google.firebase.concurrent']"
+        name="managedName"
+        >
+        Firebase.Concurrent
+    </attr>
+    <remove-node
+        path="/api/package[@name='com.google.firebase.concurrent']/interface[@name='PausableExecutorService']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.firebase.concurrent']/interface[@name='PausableScheduledExecutorService']/implements"
+        />
+
 </metadata>
