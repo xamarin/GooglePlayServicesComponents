@@ -52,10 +52,6 @@
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.LanguageId" Version="117.0.0.4" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition" Version="119.0.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition.Common" Version="119.0.0.1" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition.Chinese" Version="116.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition.Devanagari" Version="116.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition.Japanese" Version="116.0.0" />
-    <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition.Korean" Version="116.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Nearby" Version="118.5.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Oss.Licenses" Version="117.0.1.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.PAL" Version="120.0.1.2" />
@@ -197,12 +193,6 @@
     <PackageReference Update="Xamarin.Google.MLKit.PoseDetection.Common" Version="117.0.0.9" />
     <PackageReference Update="Xamarin.Google.MLKit.SmartReply" Version="117.0.2.2" />
     <PackageReference Update="Xamarin.Google.MLKit.SmartReply.Common" Version="116.1.0.2" />
-    <PackageReference Update="Xamarin.Google.MLKit.TextRecognition" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.TextRecognition.Bundled.Common" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.TextRecognition.Chinese" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.TextRecognition.Devanagari" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.TextRecognition.Japanese" Version="116.0.0" />
-    <PackageReference Update="Xamarin.Google.MLKit.TextRecognition.Korean" Version="116.0.0" />
     <PackageReference Update="Xamarin.Google.MLKit.Translate" Version="117.0.1.2" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Common" Version="117.3.0.2" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Interfaces" Version="116.2.0.1" />
@@ -271,10 +261,6 @@
     <PackageReference Update="Xamarin.TensorFlow.Lite.Support.Api" Version="0.4.3.2" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Metadata" Version="0.4.3.2" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Base.Library" Version="0.4.3.2" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Audio.Library" Version="0.4.3" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Vision.Library" Version="0.4.3" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Text.Library" Version="0.4.3" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library" Version="0.4.3" />
     <PackageReference Update="Xamarin.AndroidX.Activity" Version="1.7.0.1" />
     <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.6.0.1" />
     <PackageReference Update="Xamarin.AndroidX.AppCompat" Version="1.6.1.1" />

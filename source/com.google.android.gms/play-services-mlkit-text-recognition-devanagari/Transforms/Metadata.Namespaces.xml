@@ -1,8 +1,0 @@
-﻿<metadata>
-    <attr 
-        path="/api/package[@name='com.google.mlkit.vision.text.devanagari']"
-        name="managedName"
-        >
-        Xamarin.Google.MLKit.Vision.Text.Devanagari
-    </attr>
-</metadata>
