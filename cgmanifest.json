@@ -681,58 +681,6 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "play-services-mlkit-text-recognition-chinese",
-          "groupId": "com.google.android.gms",
-          "version": "16.0.0",
-          "nuGetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Chinese",
-          "nuGetVersion": "116.0.0"
-        }
-      },
-      "license": "Android Software Development Kit License"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "play-services-mlkit-text-recognition-devanagari",
-          "groupId": "com.google.android.gms",
-          "version": "16.0.0",
-          "nuGetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Devanagari",
-          "nuGetVersion": "116.0.0"
-        }
-      },
-      "license": "Android Software Development Kit License"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "play-services-mlkit-text-recognition-japanese",
-          "groupId": "com.google.android.gms",
-          "version": "16.0.0",
-          "nuGetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Japanese",
-          "nuGetVersion": "116.0.0"
-        }
-      },
-      "license": "Android Software Development Kit License"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "play-services-mlkit-text-recognition-korean",
-          "groupId": "com.google.android.gms",
-          "version": "16.0.0",
-          "nuGetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Korean",
-          "nuGetVersion": "116.0.0"
-        }
-      },
-      "license": "Android Software Development Kit License"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
           "artifactId": "play-services-nearby",
           "groupId": "com.google.android.gms",
           "version": "18.5.0",
@@ -2566,84 +2514,6 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "text-recognition",
-          "groupId": "com.google.mlkit",
-          "version": "16.0.0",
-          "nuGetId": "Xamarin.Google.MLKit.TextRecognition",
-          "nuGetVersion": "116.0.0"
-        }
-      },
-      "license": "ML Kit Terms of Service"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "text-recognition-bundled-common",
-          "groupId": "com.google.mlkit",
-          "version": "16.0.0",
-          "nuGetId": "Xamarin.Google.MLKit.TextRecognition.Bundled.Common",
-          "nuGetVersion": "116.0.0"
-        }
-      },
-      "license": "ML Kit Terms of Service"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "text-recognition-chinese",
-          "groupId": "com.google.mlkit",
-          "version": "16.0.0",
-          "nuGetId": "Xamarin.Google.MLKit.TextRecognition.Chinese",
-          "nuGetVersion": "116.0.0"
-        }
-      },
-      "license": "ML Kit Terms of Service"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "text-recognition-devanagari",
-          "groupId": "com.google.mlkit",
-          "version": "16.0.0",
-          "nuGetId": "Xamarin.Google.MLKit.TextRecognition.Devanagari",
-          "nuGetVersion": "116.0.0"
-        }
-      },
-      "license": "ML Kit Terms of Service"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "text-recognition-japanese",
-          "groupId": "com.google.mlkit",
-          "version": "16.0.0",
-          "nuGetId": "Xamarin.Google.MLKit.TextRecognition.Japanese",
-          "nuGetVersion": "116.0.0"
-        }
-      },
-      "license": "ML Kit Terms of Service"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "text-recognition-korean",
-          "groupId": "com.google.mlkit",
-          "version": "16.0.0",
-          "nuGetId": "Xamarin.Google.MLKit.TextRecognition.Korean",
-          "nuGetVersion": "116.0.0"
-        }
-      },
-      "license": "ML Kit Terms of Service"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
           "artifactId": "translate",
           "groupId": "com.google.mlkit",
           "version": "17.0.1",
@@ -3519,58 +3389,6 @@
           "version": "0.4.3",
           "nuGetId": "Xamarin.TensorFlow.Lite.Task.Base.Library",
           "nuGetVersion": "0.4.3.2"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "tensorflow-lite-task-audio",
-          "groupId": "org.tensorflow",
-          "version": "0.4.3",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Audio.Library",
-          "nuGetVersion": "0.4.3"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "tensorflow-lite-task-vision",
-          "groupId": "org.tensorflow",
-          "version": "0.4.3",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Vision.Library",
-          "nuGetVersion": "0.4.3"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "tensorflow-lite-task-text",
-          "groupId": "org.tensorflow",
-          "version": "0.4.3",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Text.Library",
-          "nuGetVersion": "0.4.3"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "tensorflow-lite-task-text-play-services",
-          "groupId": "org.tensorflow",
-          "version": "0.4.3",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library",
-          "nuGetVersion": "0.4.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"

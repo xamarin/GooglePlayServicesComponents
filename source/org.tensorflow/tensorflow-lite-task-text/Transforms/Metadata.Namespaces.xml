@@ -1,27 +1,10 @@
 ﻿<metadata>
+    <!--
     <attr 
-        path="/api/package[@name='org.tensorflow.lite.task.text.bertclu']" 
+        path="/api/package[@name='package']" 
         name="managedName"
         >
-        Xamarin.TensorFlow.Lite.Task.Text.BertClu
+        Xamarin.TensorFlow.Lite.
     </attr>
-    <attr 
-        path="/api/package[@name='org.tensorflow.lite.task.text.nlclassifier']" 
-        name="managedName"
-        >
-        Xamarin.TensorFlow.Lite.Task.Text.NLClassifier
-    </attr>
-    <attr 
-        path="/api/package[@name='org.tensorflow.lite.task.text.qa']" 
-        name="managedName"
-        >
-        Xamarin.TensorFlow.Lite.Task.Text.Qa
-    </attr>
-    <attr 
-        path="/api/package[@name='org.tensorflow.lite.task.text.searcher']" 
-        name="managedName"
-        >
-        Xamarin.TensorFlow.Lite.Task.Text.Searcher
-    </attr>
-
+    -->
 </metadata>

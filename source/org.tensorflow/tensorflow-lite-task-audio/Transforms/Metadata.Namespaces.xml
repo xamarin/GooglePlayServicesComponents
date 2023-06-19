@@ -1,10 +1,10 @@
 ﻿<metadata>
+    <!--
     <attr 
-        path="/api/package[@name='org.tensorflow.lite.task.audio.classifier']" 
+        path="/api/package[@name='package']" 
         name="managedName"
         >
-        Xamarin.TensorFlow.Lite.Task.Audio.Classifier
+        Xamarin.TensorFlow.Lite.
     </attr>
-
-
+    -->
 </metadata>

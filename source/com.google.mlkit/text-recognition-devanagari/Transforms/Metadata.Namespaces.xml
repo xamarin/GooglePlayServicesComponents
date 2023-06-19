@@ -1,8 +1,0 @@
-﻿<metadata>
-    <attr 
-        path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.mlkit.dynamite.text.devanagari']" 
-        name="managedName"
-        >
-        Android.Gms.Vision.Dynamite.Descriptors.Google.MLKit.Dynamite.Text.Devanagari
-    </attr>
-</metadata>
