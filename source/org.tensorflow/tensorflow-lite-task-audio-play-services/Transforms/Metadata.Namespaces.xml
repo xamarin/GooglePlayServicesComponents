@@ -1,9 +1,15 @@
 ﻿<metadata>
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='org.tensorflow.lite.task.gms.audio']" 
         name="managedName"
         >
-        Xamarin.TensorFlow.Lite
+        Xamarin.TensorFlow.Lite.Gms.Audio
+    </attr>
+    <attr 
+        path="/api/package[@name='org.tensorflow.lite.task.gms.audio.classifier']" 
+        name="managedName"
+        >
+        Xamarin.TensorFlow.Gms.Audio.Classifier
     </attr>
 
 
