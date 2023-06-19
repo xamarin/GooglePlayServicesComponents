@@ -1,21 +1,10 @@
 ﻿<metadata>
+    <!--
     <attr 
-        path="/api/package[@name='org.tensorflow.lite.task.gms.text']" 
+        path="/api/package[@name='package']" 
         name="managedName"
         >
-        Xamarin.TensorFlow.Lite.Task.Gms.Text
+        Xamarin.TensorFlow.Lite.
     </attr>
-    <attr 
-        path="/api/package[@name='org.tensorflow.lite.task.gms.text.nlclassifier']" 
-        name="managedName"
-        >
-        Xamarin.TensorFlow.Lite.Task.Gms.Text.NLClassifier
-    </attr>
-    <attr 
-        path="/api/package[@name='org.tensorflow.lite.task.gms.text.qa']" 
-        name="managedName"
-        >
-        Xamarin.TensorFlow.Lite.Task.Gms.Text.Qa
-    </attr>
-
+-->
 </metadata>
