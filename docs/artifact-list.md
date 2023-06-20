@@ -279,4 +279,6 @@
 | 272|org.tensorflow:tensorflow-lite-task-audio                             |Xamarin.TensorFlow.Lite.Task.Audio.Library                            |
 | 273|org.tensorflow:tensorflow-lite-task-vision                            |Xamarin.TensorFlow.Lite.Task.Vision.Library                           |
 | 274|org.tensorflow:tensorflow-lite-task-text                              |Xamarin.TensorFlow.Lite.Task.Text.Library                             |
-| 275|org.tensorflow:tensorflow-lite-task-text-play-services                |Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library                |
+| 275|org.tensorflow:tensorflow-lite-task-audio-play-services               |Xamarin.TensorFlow.Lite.Task.Audio.PlayServices.Library               |
+| 276|org.tensorflow:tensorflow-lite-task-vision-play-services              |Xamarin.TensorFlow.Lite.Task.Vision.PlayServices.Library              |
+| 277|org.tensorflow:tensorflow-lite-task-text-play-services                |Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library                |

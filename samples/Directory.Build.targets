@@ -274,6 +274,8 @@
     <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Audio.Library" Version="0.4.3" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Vision.Library" Version="0.4.3" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Text.Library" Version="0.4.3" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Audio.PlayServices.Library" Version="0.4.3" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Vision.PlayServices.Library" Version="0.4.3" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library" Version="0.4.3" />
     <PackageReference Update="Xamarin.AndroidX.Activity" Version="1.7.0.1" />
     <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.6.0.1" />
