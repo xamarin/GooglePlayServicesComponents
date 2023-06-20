@@ -696,9 +696,16 @@ Xamarin.Io.Perfmark
 Xamarin.Protobuf.Lite
 Xamarin.TensorFlow
 Xamarin.TensorFlow.Contrib.Android
+Xamarin.TensorFlow.Gms.Audio.Classifier
 Xamarin.TensorFlow.Lite
 Xamarin.TensorFlow.Lite.Acceleration
 Xamarin.TensorFlow.Lite.Annotations
+Xamarin.TensorFlow.Lite.Gms.Audio
+Xamarin.TensorFlow.Lite.Gms.Vision
+Xamarin.TensorFlow.Lite.Gms.Vision.Classifier
+Xamarin.TensorFlow.Lite.Gms.Vision.Core
+Xamarin.TensorFlow.Lite.Gms.Vision.Detector
+Xamarin.TensorFlow.Lite.Gms.Vision.Segmenter
 Xamarin.TensorFlow.Lite.GPU
 Xamarin.TensorFlow.Lite.Nnapi
 Xamarin.TensorFlow.Lite.Schema
