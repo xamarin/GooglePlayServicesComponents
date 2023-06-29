@@ -1,10 +1,34 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='org.tensorflow.lite.task.gms.vision']" 
         name="managedName"
         >
-        Xamarin.TensorFlow.Lite
+        Xamarin.TensorFlow.Lite.Gms.Vision
     </attr>
-    -->
+    <attr 
+        path="/api/package[@name='org.tensorflow.lite.task.gms.vision.classifier']" 
+        name="managedName"
+        >
+        Xamarin.TensorFlow.Lite.Gms.Vision.Classifier
+    </attr>
+    <attr 
+        path="/api/package[@name='org.tensorflow.lite.task.gms.vision.core']" 
+        name="managedName"
+        >
+        Xamarin.TensorFlow.Lite.Gms.Vision.Core
+    </attr>
+    <attr 
+        path="/api/package[@name='org.tensorflow.lite.task.gms.vision.detector']" 
+        name="managedName"
+        >
+        Xamarin.TensorFlow.Lite.Gms.Vision.Detector
+    </attr>
+    <attr 
+        path="/api/package[@name='org.tensorflow.lite.task.gms.vision.segmenter']" 
+        name="managedName"
+        >
+        Xamarin.TensorFlow.Lite.Gms.Vision.Segmenter
+    </attr>
+
+
 </metadata>

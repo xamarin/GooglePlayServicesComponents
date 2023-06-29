@@ -2282,6 +2282,24 @@
       },
       {
         "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-audio-play-services",
+        "version": "0.4.3",
+        "nugetVersion": "0.4.3",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Audio.PlayServices.Library",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-vision-play-services",
+        "version": "0.4.3",
+        "nugetVersion": "0.4.3",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Vision.PlayServices.Library",
+        "dependencyOnly": false,
+        "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-task-text-play-services",
         "version": "0.4.3",
         "nugetVersion": "0.4.3",

@@ -3,7 +3,7 @@
         path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_text_bundled_common']" 
         name="managedName"
         >
-        Package
+        Android.Gms.Internal.MLKitVisionTextBundledCommon
     </attr>
     <attr 
         path="/api/package[@name='com.google.android.libraries.vision.visionkit.pipeline']" 
@@ -21,7 +21,7 @@
         path="/api/package[@name='com.google.mlkit.vision.text.pipeline']" 
         name="managedName"
         >
-      Xamarin.Google.MLKit.Vision.Text.Pipeline
+        Xamarin.Google.MLKit.Vision.Text.Pipeline
     </attr>
 
 </metadata>
