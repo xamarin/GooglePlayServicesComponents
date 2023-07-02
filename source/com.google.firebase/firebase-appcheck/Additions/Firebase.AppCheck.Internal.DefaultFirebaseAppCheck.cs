@@ -9,7 +9,7 @@ namespace Firebase.AppCheck.Internal
 	// [global::Android.Runtime.Register ("com/google/firebase/appcheck/internal/DefaultFirebaseAppCheck", DoNotGenerateAcw=true)]
 	public partial class DefaultFirebaseAppCheck // : global::Firebase.AppCheck.FirebaseAppCheck 
     {
-		public global::Android.Gms.Tasks.Task LimitedUseToken
+		public override global::Android.Gms.Tasks.Task LimitedUseToken
         {
             get
             {
