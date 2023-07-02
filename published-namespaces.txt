@@ -156,6 +156,8 @@ Android.Gms.Nearby.Connection
 Android.Gms.Nearby.ExposureNotification
 Android.Gms.Nearby.Messages
 Android.Gms.Nearby.Messages.Audio
+Android.Gms.Nearby.Presence
+Android.Gms.Nearby.Presence.Log
 Android.Gms.Nearby.Uwb
 Android.Gms.Net
 Android.Gms.Oss.Licenses
