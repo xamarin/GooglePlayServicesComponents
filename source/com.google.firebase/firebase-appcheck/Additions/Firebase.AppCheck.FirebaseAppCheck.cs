@@ -10,12 +10,9 @@ namespace Firebase.AppCheck
 	// [global::Android.Runtime.Register ("com/google/firebase/appcheck/FirebaseAppCheck", DoNotGenerateAcw=true)]
 	public abstract partial class FirebaseAppCheck // : global::Java.Lang.Object, global::Firebase.AppCheck.Interop.IInteropAppCheckTokenProvider 
     {
-		public global::Android.Gms.Tasks.Task IInteropAppCheckTokenProvider.GetLimitedUseToken()
+		public global::Android.Gms.Tasks.Task GetLimitedUseToken()
         {
-            get
-            {
-                return this.LimitedUseToken;
-            }
+            return this.LimitedUseToken;
         }
     }
 }
