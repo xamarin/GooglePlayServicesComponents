@@ -206,7 +206,7 @@ Android.Gms.Vision.Label
 Android.Gms.Vision.Label.Internal.Client
 Android.Gms.Vision.Texts
 Android.Gms.Wallet
-Android.Gms.Wallet.Callback
+Android.Gms.Wallet.Button
 Android.Gms.Wallet.Wobs
 Android.Gms.Wearable
 Android.Libraries.Vision.VisionKit.Pipeline
