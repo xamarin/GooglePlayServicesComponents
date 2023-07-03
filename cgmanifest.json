@@ -5,175 +5,6 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "billing",
-          "groupId": "com.android.billingclient",
-          "version": "6.0.1",
-          "nuGetId": "Xamarin.Android.Google.BillingClient",
-          "nuGetVersion": "6.0.1"
-        }
-      },
-      "license": "Android Software Development Kit License"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "billing-ktx",
-          "groupId": "com.android.billingclient",
-          "version": "6.0.1",
-          "nuGetId": "Xamarin.Android.Google.BillingClient.Ktx",
-          "nuGetVersion": "6.0.1"
-        }
-      },
-      "license": "Android Software Development Kit License"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "volley",
-          "groupId": "com.android.volley",
-          "version": "1.2.1",
-          "nuGetId": "Xamarin.Android.Volley",
-          "nuGetVersion": "1.2.1.4"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "volley-cronet",
-          "groupId": "com.android.volley",
-          "version": "1.2.1",
-          "nuGetId": "Xamarin.Android.Volley.CroNet",
-          "nuGetVersion": "1.2.1.4"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "annotations",
-          "groupId": "com.github.bumptech.glide",
-          "version": "4.15.1",
-          "nuGetId": "Xamarin.Android.Glide.Annotations",
-          "nuGetVersion": "4.15.1.1"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "disklrucache",
-          "groupId": "com.github.bumptech.glide",
-          "version": "4.15.1",
-          "nuGetId": "Xamarin.Android.Glide.DiskLruCache",
-          "nuGetVersion": "4.15.1.1"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "gifdecoder",
-          "groupId": "com.github.bumptech.glide",
-          "version": "4.15.1",
-          "nuGetId": "Xamarin.Android.Glide.GifDecoder",
-          "nuGetVersion": "4.15.1.1"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "glide",
-          "groupId": "com.github.bumptech.glide",
-          "version": "4.15.1",
-          "nuGetId": "Xamarin.Android.Glide",
-          "nuGetVersion": "4.15.1.1"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "recyclerview-integration",
-          "groupId": "com.github.bumptech.glide",
-          "version": "4.15.1",
-          "nuGetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
-          "nuGetVersion": "4.15.1.1"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "annotations",
-          "groupId": "com.google.android",
-          "version": "4.1.1.4",
-          "nuGetId": "Xamarin.GoogleAndroid.Annotations",
-          "nuGetVersion": "4.1.1.10"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "transport-api",
-          "groupId": "com.google.android.datatransport",
-          "version": "3.0.0",
-          "nuGetId": "Xamarin.Google.Android.DataTransport.TransportApi",
-          "nuGetVersion": "3.0.0.7"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "transport-backend-cct",
-          "groupId": "com.google.android.datatransport",
-          "version": "3.1.9",
-          "nuGetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
-          "nuGetVersion": "3.1.9.1"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "transport-runtime",
-          "groupId": "com.google.android.datatransport",
-          "version": "3.1.9",
-          "nuGetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
-          "nuGetVersion": "3.1.9.1"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
           "artifactId": "play-services-ads",
           "groupId": "com.google.android.gms",
           "version": "22.1.0",
@@ -837,11 +668,11 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "play-services-mlkit-text-recognition-chinese",
+          "artifactId": "play-services-mlkit-text-recognition-common",
           "groupId": "com.google.android.gms",
-          "version": "16.0.0",
-          "nuGetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Chinese",
-          "nuGetVersion": "116.0.0"
+          "version": "19.0.0",
+          "nuGetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Common",
+          "nuGetVersion": "119.0.0.1"
         }
       },
       "license": "Android Software Development Kit License"
@@ -850,11 +681,11 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "play-services-mlkit-text-recognition-common",
+          "artifactId": "play-services-mlkit-text-recognition-chinese",
           "groupId": "com.google.android.gms",
-          "version": "19.0.0",
-          "nuGetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Common",
-          "nuGetVersion": "119.0.0.1"
+          "version": "16.0.0",
+          "nuGetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Chinese",
+          "nuGetVersion": "116.0.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -1268,9 +1099,9 @@
         "maven": {
           "artifactId": "play-services-wallet",
           "groupId": "com.google.android.gms",
-          "version": "19.1.0",
+          "version": "19.2.0",
           "nuGetId": "Xamarin.GooglePlayServices.Wallet",
-          "nuGetVersion": "119.1.0.4"
+          "nuGetVersion": "119.2.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -1284,45 +1115,6 @@
           "version": "18.0.0",
           "nuGetId": "Xamarin.GooglePlayServices.Wearable",
           "nuGetVersion": "118.0.0.2"
-        }
-      },
-      "license": "Android Software Development Kit License"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "places",
-          "groupId": "com.google.android.libraries.places",
-          "version": "3.1.0",
-          "nuGetId": "Xamarin.GoogleAndroid.Libraries.Places",
-          "nuGetVersion": "3.1.0.1"
-        }
-      },
-      "license": "Google Maps Platform Terms of Service"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "places-compat",
-          "groupId": "com.google.android.libraries.places",
-          "version": "2.6.0",
-          "nuGetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat",
-          "nuGetVersion": "2.6.0.1"
-        }
-      },
-      "license": "Google Maps Platform Terms of Service"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "image",
-          "groupId": "com.google.android.odml",
-          "version": "1.0.0-beta1",
-          "nuGetId": "Xamarin.Google.Android.ODML.Image",
-          "nuGetVersion": "1.0.0.4-beta1"
         }
       },
       "license": "Android Software Development Kit License"
@@ -1482,70 +1274,6 @@
         }
       },
       "license": "Play Core Software Development Kit Terms of Service"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "recaptcha",
-          "groupId": "com.google.android.recaptcha",
-          "version": "18.2.1",
-          "nuGetId": "Xamarin.Google.Android.Recaptcha",
-          "nuGetVersion": "18.2.1"
-        }
-      }
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "user-messaging-platform",
-          "groupId": "com.google.android.ump",
-          "version": "2.0.0",
-          "nuGetId": "Xamarin.Google.UserMessagingPlatform",
-          "nuGetVersion": "2.0.0.4"
-        }
-      },
-      "license": "Android Software Development Kit License"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "jsr305",
-          "groupId": "com.google.code.findbugs",
-          "version": "3.0.2",
-          "nuGetId": "Xamarin.Google.Code.FindBugs.JSR305",
-          "nuGetVersion": "3.0.2.8"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "dagger",
-          "groupId": "com.google.dagger",
-          "version": "2.46.1",
-          "nuGetId": "Xamarin.Google.Dagger",
-          "nuGetVersion": "2.46.1.1"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "error_prone_annotations",
-          "groupId": "com.google.errorprone",
-          "version": "2.20.0",
-          "nuGetId": "Xamarin.Google.ErrorProne.Annotations",
-          "nuGetVersion": "2.20.0"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2539,19 +2267,6 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "flatbuffers-java",
-          "groupId": "com.google.flatbuffers",
-          "version": "23.5.26",
-          "nuGetId": "Xamarin.Google.FlatBuffers.Java",
-          "nuGetVersion": "23.5.26"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
           "artifactId": "barcode-scanning",
           "groupId": "com.google.mlkit",
           "version": "17.1.0",
@@ -2981,6 +2696,304 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "image",
+          "groupId": "com.google.android.odml",
+          "version": "1.0.0-beta1",
+          "nuGetId": "Xamarin.Google.Android.ODML.Image",
+          "nuGetVersion": "1.0.0.4-beta1"
+        }
+      },
+      "license": "Android Software Development Kit License"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "places",
+          "groupId": "com.google.android.libraries.places",
+          "version": "3.1.0",
+          "nuGetId": "Xamarin.GoogleAndroid.Libraries.Places",
+          "nuGetVersion": "3.1.0.1"
+        }
+      },
+      "license": "Google Maps Platform Terms of Service"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "places-compat",
+          "groupId": "com.google.android.libraries.places",
+          "version": "2.6.0",
+          "nuGetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat",
+          "nuGetVersion": "2.6.0.1"
+        }
+      },
+      "license": "Google Maps Platform Terms of Service"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "billing",
+          "groupId": "com.android.billingclient",
+          "version": "6.0.1",
+          "nuGetId": "Xamarin.Android.Google.BillingClient",
+          "nuGetVersion": "6.0.1"
+        }
+      },
+      "license": "Android Software Development Kit License"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "billing-ktx",
+          "groupId": "com.android.billingclient",
+          "version": "6.0.1",
+          "nuGetId": "Xamarin.Android.Google.BillingClient.Ktx",
+          "nuGetVersion": "6.0.1"
+        }
+      },
+      "license": "Android Software Development Kit License"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "volley",
+          "groupId": "com.android.volley",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.Android.Volley",
+          "nuGetVersion": "1.2.1.4"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "volley-cronet",
+          "groupId": "com.android.volley",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.Android.Volley.CroNet",
+          "nuGetVersion": "1.2.1.4"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "recaptcha",
+          "groupId": "com.google.android.recaptcha",
+          "version": "18.2.1",
+          "nuGetId": "Xamarin.Google.Android.Recaptcha",
+          "nuGetVersion": "18.2.1"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "annotations",
+          "groupId": "com.github.bumptech.glide",
+          "version": "4.15.1",
+          "nuGetId": "Xamarin.Android.Glide.Annotations",
+          "nuGetVersion": "4.15.1.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "disklrucache",
+          "groupId": "com.github.bumptech.glide",
+          "version": "4.15.1",
+          "nuGetId": "Xamarin.Android.Glide.DiskLruCache",
+          "nuGetVersion": "4.15.1.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "gifdecoder",
+          "groupId": "com.github.bumptech.glide",
+          "version": "4.15.1",
+          "nuGetId": "Xamarin.Android.Glide.GifDecoder",
+          "nuGetVersion": "4.15.1.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "glide",
+          "groupId": "com.github.bumptech.glide",
+          "version": "4.15.1",
+          "nuGetId": "Xamarin.Android.Glide",
+          "nuGetVersion": "4.15.1.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "recyclerview-integration",
+          "groupId": "com.github.bumptech.glide",
+          "version": "4.15.1",
+          "nuGetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
+          "nuGetVersion": "4.15.1.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "annotations",
+          "groupId": "com.google.android",
+          "version": "4.1.1.4",
+          "nuGetId": "Xamarin.GoogleAndroid.Annotations",
+          "nuGetVersion": "4.1.1.10"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "transport-api",
+          "groupId": "com.google.android.datatransport",
+          "version": "3.0.0",
+          "nuGetId": "Xamarin.Google.Android.DataTransport.TransportApi",
+          "nuGetVersion": "3.0.0.7"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "transport-backend-cct",
+          "groupId": "com.google.android.datatransport",
+          "version": "3.1.9",
+          "nuGetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
+          "nuGetVersion": "3.1.9.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "transport-runtime",
+          "groupId": "com.google.android.datatransport",
+          "version": "3.1.9",
+          "nuGetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
+          "nuGetVersion": "3.1.9.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "user-messaging-platform",
+          "groupId": "com.google.android.ump",
+          "version": "2.0.0",
+          "nuGetId": "Xamarin.Google.UserMessagingPlatform",
+          "nuGetVersion": "2.0.0.4"
+        }
+      },
+      "license": "Android Software Development Kit License"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "jsr305",
+          "groupId": "com.google.code.findbugs",
+          "version": "3.0.2",
+          "nuGetId": "Xamarin.Google.Code.FindBugs.JSR305",
+          "nuGetVersion": "3.0.2.8"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "dagger",
+          "groupId": "com.google.dagger",
+          "version": "2.46.1",
+          "nuGetId": "Xamarin.Google.Dagger",
+          "nuGetVersion": "2.46.1.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "error_prone_annotations",
+          "groupId": "com.google.errorprone",
+          "version": "2.20.0",
+          "nuGetId": "Xamarin.Google.ErrorProne.Annotations",
+          "nuGetVersion": "2.20.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "core",
+          "groupId": "com.google.zxing",
+          "version": "3.5.1",
+          "nuGetId": "Xamarin.Google.ZXing.Core",
+          "nuGetVersion": "3.5.1.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "flatbuffers-java",
+          "groupId": "com.google.flatbuffers",
+          "version": "23.5.26",
+          "nuGetId": "Xamarin.Google.FlatBuffers.Java",
+          "nuGetVersion": "23.5.26"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "protobuf-javalite",
           "groupId": "com.google.protobuf",
           "version": "3.23.3",
@@ -3002,32 +3015,6 @@
         }
       },
       "license": "BSD 2 Clause AND BSD 3 Clause"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "core",
-          "groupId": "com.google.zxing",
-          "version": "3.5.1",
-          "nuGetId": "Xamarin.Google.ZXing.Core",
-          "nuGetVersion": "3.5.1.2"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "javapoet",
-          "groupId": "com.squareup",
-          "version": "1.13.0",
-          "nuGetId": "Square.JavaPoet",
-          "nuGetVersion": "1.13.0.4"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -3115,7 +3102,7 @@
           "groupId": "com.squareup.picasso",
           "version": "2.8",
           "nuGetId": "Square.Picasso",
-          "nuGetVersion": "2.8.0"
+          "nuGetVersion": "2.8.0.7"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3189,11 +3176,24 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "javapoet",
+          "groupId": "com.squareup",
+          "version": "1.13.0",
+          "nuGetId": "Square.JavaPoet",
+          "nuGetVersion": "1.13.0.4"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "grpc-android",
           "groupId": "io.grpc",
-          "version": "1.56.0",
+          "version": "1.56.1",
           "nuGetId": "Xamarin.Grpc.Android",
-          "nuGetVersion": "1.56.0"
+          "nuGetVersion": "1.56.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3204,9 +3204,9 @@
         "maven": {
           "artifactId": "grpc-api",
           "groupId": "io.grpc",
-          "version": "1.56.0",
+          "version": "1.56.1",
           "nuGetId": "Xamarin.Grpc.Api",
-          "nuGetVersion": "1.56.0"
+          "nuGetVersion": "1.56.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3217,9 +3217,9 @@
         "maven": {
           "artifactId": "grpc-context",
           "groupId": "io.grpc",
-          "version": "1.56.0",
+          "version": "1.56.1",
           "nuGetId": "Xamarin.Grpc.Context",
-          "nuGetVersion": "1.56.0"
+          "nuGetVersion": "1.56.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3230,9 +3230,9 @@
         "maven": {
           "artifactId": "grpc-core",
           "groupId": "io.grpc",
-          "version": "1.56.0",
+          "version": "1.56.1",
           "nuGetId": "Xamarin.Grpc.Core",
-          "nuGetVersion": "1.56.0"
+          "nuGetVersion": "1.56.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3243,9 +3243,9 @@
         "maven": {
           "artifactId": "grpc-okhttp",
           "groupId": "io.grpc",
-          "version": "1.56.0",
+          "version": "1.56.1",
           "nuGetId": "Xamarin.Grpc.OkHttp",
-          "nuGetVersion": "1.56.0"
+          "nuGetVersion": "1.56.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3256,9 +3256,9 @@
         "maven": {
           "artifactId": "grpc-protobuf-lite",
           "groupId": "io.grpc",
-          "version": "1.56.0",
+          "version": "1.56.1",
           "nuGetId": "Xamarin.Grpc.Protobuf.Lite",
-          "nuGetVersion": "1.56.0"
+          "nuGetVersion": "1.56.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3269,9 +3269,9 @@
         "maven": {
           "artifactId": "grpc-stub",
           "groupId": "io.grpc",
-          "version": "1.56.0",
+          "version": "1.56.1",
           "nuGetId": "Xamarin.Grpc.Stub",
-          "nuGetVersion": "1.56.0"
+          "nuGetVersion": "1.56.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3397,19 +3397,6 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "tensorflow-android",
-          "groupId": "org.tensorflow",
-          "version": "1.13.1",
-          "nuGetId": "Xamarin.TensorFlow.Android",
-          "nuGetVersion": "1.13.1.2"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
           "artifactId": "tensorflow-lite",
           "groupId": "org.tensorflow",
           "version": "2.12.0",
@@ -3462,11 +3449,11 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "tensorflow-lite-metadata",
+          "artifactId": "tensorflow-lite-select-tf-ops",
           "groupId": "org.tensorflow",
-          "version": "0.4.3",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Metadata",
-          "nuGetVersion": "0.4.3.2"
+          "version": "2.12.0",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
+          "nuGetVersion": "2.12.0.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3475,11 +3462,11 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "tensorflow-lite-select-tf-ops",
+          "artifactId": "tensorflow-android",
           "groupId": "org.tensorflow",
-          "version": "2.12.0",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
-          "nuGetVersion": "2.12.0.1"
+          "version": "1.13.1",
+          "nuGetId": "Xamarin.TensorFlow.Android",
+          "nuGetVersion": "1.13.1.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3514,24 +3501,11 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "tensorflow-lite-task-audio",
+          "artifactId": "tensorflow-lite-metadata",
           "groupId": "org.tensorflow",
           "version": "0.4.3",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Audio.Library",
-          "nuGetVersion": "0.4.3"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "tensorflow-lite-task-audio-play-services",
-          "groupId": "org.tensorflow",
-          "version": "0.4.3",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Audio.PlayServices.Library",
-          "nuGetVersion": "0.4.3"
+          "nuGetId": "Xamarin.TensorFlow.Lite.Metadata",
+          "nuGetVersion": "0.4.3.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3553,23 +3527,10 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "tensorflow-lite-task-text",
+          "artifactId": "tensorflow-lite-task-audio",
           "groupId": "org.tensorflow",
           "version": "0.4.3",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Text.Library",
-          "nuGetVersion": "0.4.3"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "tensorflow-lite-task-text-play-services",
-          "groupId": "org.tensorflow",
-          "version": "0.4.3",
-          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Audio.Library",
           "nuGetVersion": "0.4.3"
         }
       },
@@ -3592,10 +3553,49 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "tensorflow-lite-task-text",
+          "groupId": "org.tensorflow",
+          "version": "0.4.3",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Text.Library",
+          "nuGetVersion": "0.4.3"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "tensorflow-lite-task-audio-play-services",
+          "groupId": "org.tensorflow",
+          "version": "0.4.3",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Audio.PlayServices.Library",
+          "nuGetVersion": "0.4.3"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "tensorflow-lite-task-vision-play-services",
           "groupId": "org.tensorflow",
           "version": "0.4.3",
           "nuGetId": "Xamarin.TensorFlow.Lite.Task.Vision.PlayServices.Library",
+          "nuGetVersion": "0.4.3"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "tensorflow-lite-task-text-play-services",
+          "groupId": "org.tensorflow",
+          "version": "0.4.3",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library",
           "nuGetVersion": "0.4.3"
         }
       },
