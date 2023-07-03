@@ -2157,8 +2157,8 @@
       {
         "groupId": "org.codehaus.mojo",
         "artifactId": "animal-sniffer-annotations",
-        "version": "1.22",
-        "nugetVersion": "1.22.0",
+        "version": "1.23",
+        "nugetVersion": "1.23.0",
         "nugetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
         "dependencyOnly": false,
         "templateSet": "codehaus-mojo"
