@@ -4,7 +4,7 @@ using Android.Gms.Extensions;
 
 namespace Android.Gms.Location
 {
-	public partial class FusedLocationProviderClient
+	public partial interface IFusedLocationProviderClient
 	{
         [Obsolete]
         public Android.Gms.Tasks.Task LastLocation { get { return GetLastLocation (); } }
@@ -56,7 +56,7 @@ namespace Android.Gms.Location
 		}
 	}
 
-	public partial class GeofencingClient
+	public partial interface IGeofencingClient
 	{
 		public Task AddGeofencesAsync (GeofencingRequest geofenceRequest, Android.App.PendingIntent pendingIntent)
 		{
@@ -74,7 +74,7 @@ namespace Android.Gms.Location
 		}
 	}
 
-	public partial class SettingsClient
+	public partial interface ISettingsClient
 	{
 		public Task<LocationSettingsResponse> CheckLocationSettingsAsync (LocationSettingsRequest locationSettings)
 		{
@@ -82,7 +82,7 @@ namespace Android.Gms.Location
 		}
 	}
 
-	public partial class ActivityRecognitionClient
+	public partial interface IActivityRecognitionClient
 	{
 		public Task RemoveActivityUpdatesAsync(Android.App.PendingIntent callbackIntent)
 		{

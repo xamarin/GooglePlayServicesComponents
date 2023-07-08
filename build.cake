@@ -830,6 +830,8 @@ Task("samples-only")
 				}
 				if
 				(
+					sampleSln.ToString().Contains("com.google.android.gms/play-services-location/LocationSample.sln")
+					||
 					sampleSln.ToString().Contains("com.google.android.gms/play-services-cast/CastingCall.sln")
 					||
 					sampleSln.ToString().Contains("com.google.android.gms/play-services-games/BeGenerous.sln")

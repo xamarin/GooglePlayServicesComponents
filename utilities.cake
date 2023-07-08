@@ -563,6 +563,8 @@ Task ("spell-check")
                 "JVM",
                 "DevicePerformance",
                 "ThreadNetwork",
+                "TextRecognition",
+                "PlayServices",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
