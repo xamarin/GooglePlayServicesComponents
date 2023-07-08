@@ -95,4 +95,24 @@
 		name="propertyName"
 		/>
 
+
+	<attr
+		path="/api/package[@name='com.google.android.gms.nearby.presence']"
+		name="managedName"
+		>
+		Android.Gms.Nearby.Presence
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.nearby.presence.log']"
+		name="managedName"
+		>
+		Android.Gms.Nearby.Presence.Log
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.nearby.presence.log']/interface[@name='DtdiAttribution.DtdiSource']"
+		name="managedName"
+		>
+		DtdiSourceData
+	</attr>
+
 </metadata>
