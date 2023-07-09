@@ -12,6 +12,7 @@
 #addin nuget:?package=HolisticWare.Core.IO&version=0.0.1
 
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 
 using Cake.FileHelpers;
 
@@ -1687,8 +1688,11 @@ Task("java-resolution-analysis")
                                     string,                         // maven artifact
                                     Dictionary
                                             <
-                                                string ,             // error
-                                                string[]             // lines
+                                                string,             // error
+                                                (
+                                                    string[] lines, // lines
+                                                    string[] types  // types
+                                                )
                                             >
                                 >
                     > java_resolution_analysis;
@@ -1696,14 +1700,17 @@ Task("java-resolution-analysis")
             java_resolution_analysis =
                         new ConcurrentDictionary
                                     <
-                                        string,                     // TFM
+                                        string,                                     // TFM
                                         ConcurrentDictionary
                                                 <
-                                                    string,         // maven artifact
+                                                    string,                         // maven artifact
                                                     Dictionary
                                                             <
-                                                                string,
-                                                                string[]
+                                                                string,             // error
+                                                                (
+                                                                    string[] lines, // lines
+                                                                    string[] types  // types
+                                                                )
                                                             >
                                                 >
                                     >();
@@ -1711,12 +1718,34 @@ Task("java-resolution-analysis")
             java_resolution_analysis.TryAdd
                                         (
                                             "net6.0-android", 
-                                            new ConcurrentDictionary<string, Dictionary<string, string[]>>()
+                                            new ConcurrentDictionary
+                                                        <
+                                                            string, 
+                                                            Dictionary
+                                                            <
+                                                                string, 
+                                                                (
+                                                                    string[] lines, // lines
+                                                                    string[] types  // types
+                                                                )
+                                                            >
+                                                        >()
                                         );
             java_resolution_analysis.TryAdd
                                         (
-                                            "monoandroid12.0", 
-                                            new ConcurrentDictionary<string, Dictionary<string, string[]>>()
+                                            "monoandroid12.0",
+                                            new ConcurrentDictionary
+                                                        <
+                                                            string, 
+                                                            Dictionary
+                                                            <
+                                                                string, 
+                                                                (
+                                                                    string[] lines, // lines
+                                                                    string[] types  // types
+                                                                )
+                                                            >
+                                                        >()
                                         );
 
             Parallel.ForEach
@@ -1763,6 +1792,7 @@ Task("java-resolution-analysis")
 
                                 // List<string> errors_dollar_sign = new List<string>();
                                 List<string> errors_not_dollar_sign = new List<string>();
+                                List<string> java_resolution_types = new List<string>();
     
                                 foreach(string line in lines)
                                 {
@@ -1771,47 +1801,118 @@ Task("java-resolution-analysis")
                                         case string a when a.Contains(string_dollar_sign): 
                                             break;
                                         default:
+                                            int idx = line.IndexOf("type '");
+                                            if(idx != -1)
+                                            {
+                                                string type_java = line.Substring(idx + 6);
+                                                type_java = type_java
+                                                                    .Replace("' could not be found.", "")
+                                                                    ;
+                                                java_resolution_types.Add(type_java);
+                                            }
                                             errors_not_dollar_sign.Add(line);
                                             break;
                                     }
                                 }
                                 
-                                Dictionary<string, string[]> error_type_w_lines = new Dictionary<string, string[]>();
+                                Dictionary
+                                        <
+                                            string, 
+                                            (
+                                                string[] lines,
+                                                string[] types
+                                            )
+                                        > error_type_w_lines;
+                                error_type_w_lines = new Dictionary<string, (string[], string[])>();
                                 error_type_w_lines.Add
                                                     (
                                                         "non dollar sign errors", 
-                                                        errors_not_dollar_sign.ToArray()
+                                                        (
+                                                            errors_not_dollar_sign.ToArray(),
+                                                            java_resolution_types.Distinct().ToArray()
+                                                        )
                                                     );
 
                                 java_resolution_analysis[tfm].TryAdd
                                                                 (
                                                                     maven_artifact,
-                                                                    error_type_w_lines
+                                                                    error_type_w_lines                                                                        
                                                                 );
 
                                 return;
                             }                   
                         );
 
+            StringBuilder sb_java_resolution_analysis = new StringBuilder();
+            StringBuilder sb_java_resolution_analysis_types_only = new StringBuilder();
+
             foreach(var kvp_tfm in java_resolution_analysis)
             {
+                sb_java_resolution_analysis
+                                    .AppendLine($"TFM: {kvp_tfm.Key}");
+                sb_java_resolution_analysis_types_only
+                                    .AppendLine($"TFM: {kvp_tfm.Key}");
+
                 Information($"TFM: {kvp_tfm.Key}");
 
                 foreach(var kvp_maven_artifact in kvp_tfm.Value)
                 {                    
+                    sb_java_resolution_analysis
+                                    .AppendLine($"      Artifact: {kvp_maven_artifact.Key}");
+                    sb_java_resolution_analysis_types_only
+                                    .AppendLine($"      Artifact: {kvp_maven_artifact.Key}");
+
                     Information($"      Artifact: {kvp_maven_artifact.Key}");
 
                     foreach(var kvp_errors in kvp_maven_artifact.Value)
-                    {                    
+                    {
+                        sb_java_resolution_analysis
+                                        .AppendLine($"          Error: {kvp_errors.Key}");
+                        sb_java_resolution_analysis_types_only
+                                        .AppendLine($"          Error: {kvp_errors.Key}");
+
                         Information($"          Error: {kvp_errors.Key}");
 
-                        foreach(var lines in kvp_errors.Value)
+                        foreach(string line in kvp_errors.Value.lines)
                         {                    
-                            Information($"                  : {lines}");
+                            sb_java_resolution_analysis
+                                            .AppendLine($"                  line : {line}");
+                            
+                            Information($"                  : {line}");
+                        }
+                        foreach(string type in kvp_errors.Value.types)
+                        {                    
+                            sb_java_resolution_analysis
+                                            .AppendLine($"                  type : {type}");
+                            sb_java_resolution_analysis_types_only
+                                            .AppendLine($"                  type : {type}");
+
+                            Information($"                  : {type}");
                         }
                     }
                 }
             }
+
+            System.IO.File.WriteAllText
+                                    (
+                                        System.IO.Path.Combine
+                                                            (
+                                                                "output", 
+                                                                "java-resolution-analysis",
+                                                                "errors-types.txt"
+                                                            ), 
+                                        sb_java_resolution_analysis.ToString()
+                                    );
+            System.IO.File.WriteAllText
+                                    (
+                                        System.IO.Path.Combine
+                                                            (
+                                                                "output", 
+                                                                "java-resolution-analysis",
+                                                                "types.txt"
+                                                            ), 
+                                        sb_java_resolution_analysis_types_only.ToString()
+                                    );
 
             return;
         }
