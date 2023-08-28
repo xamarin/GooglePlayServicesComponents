@@ -32,5 +32,11 @@
 
 	<attr path="/api/package[@name='com.google.android.gms.wallet.wobs']/class[@name='LoyaltyPointsBalance']/method[@name='getType' and count(parameter)=0]" name="managedName">LoyaltyPointsBalanceType</attr>
 
+	<attr 
+		path="/api/package[@name='com.google.android.gms.wallet.button']"
+		name="managedName"
+		>
+		Android.Gms.Wallet.Button
+	</attr>
     
 </metadata>

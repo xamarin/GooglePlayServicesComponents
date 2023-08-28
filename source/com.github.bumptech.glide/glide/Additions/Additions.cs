@@ -38,9 +38,9 @@ namespace Bumptech.Glide
 
         public virtual RequestBuilder Downsample(DownsampleStrategy strategy) => (RequestBuilder)Downsample_T(strategy);
 
-        public virtual RequestBuilder DontAnimate(RequestBuilder strategy) => (RequestBuilder)DontAnimate_T(strategy);
+        public virtual RequestBuilder DontAnimate() => (RequestBuilder)DontAnimate_T();
 
-        public virtual RequestBuilder DontTransform(RequestBuilder strategy) => (RequestBuilder)DontTransform_T(strategy);
+        public virtual RequestBuilder DontTransform() => (RequestBuilder)DontTransform_T();
 
         public virtual RequestBuilder EncodeFormat(Bitmap.CompressFormat format) => (RequestBuilder)EncodeFormat_T(format);
 
