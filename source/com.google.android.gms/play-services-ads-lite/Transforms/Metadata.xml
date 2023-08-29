@@ -31,8 +31,10 @@
 
 
     <!-- Remove some internal namespaces -->
+    <!--
     <remove-node path="/api/package[@name='com.google.android.gms.ads.internal.offline.buffering']" />
-  
+    -->
+    
     <!--
     <remove-node path="/api/package[contains(@name, 'android.gms.internal')]" />
     <remove-node path="/api/package[contains(@name, 'com.google.android.gms.ads.internal')]" />
@@ -124,12 +126,12 @@
 <!--    <attr path="/api/package[@name='com.google.ads.doubleclick']/interface[@name='OnCustomRenderedAdLoadedListener']/method[@name='onCustomRenderedAdLoaded']/parameter[1]" name="managedName">ad</attr>-->
 
 
+    <!--    
     <remove-node path="/api/package[@name='com.google.android.gms.ads']/class[@name='AdSize']/field[@name='zzako']" />
 
-<!--    
     <remove-node path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationBannerListener']" /> 
     <remove-node path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']" />
--->
+    -->
 
     <attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='zza']" name="obfuscated">false</attr>
     <attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='zza']" name="obfuscated">false</attr>
@@ -352,11 +354,6 @@
     
     
     
-
-    
-    <remove-node
-        path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']"
-        />
     <!--
     <attr
         path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='onAdLoaded' and count(parameter)=2 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='com.google.android.gms.ads.mediation.NativeAdMapper']]"
@@ -566,5 +563,12 @@
         Android.Content.PM.Permission[]
     </attr>
     -->
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='onAdFailedToLoad' and count(parameter)=2 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='int']]"
+        name="managedName"
+        >
+        OnAdFailedToLoadWithErrorCode
+    </attr>
 
 </metadata>

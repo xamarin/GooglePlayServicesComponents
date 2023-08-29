@@ -31,9 +31,11 @@
 
 
 	<!-- Remove some internal namespaces -->
+	<!--
 	<remove-node path="/api/package[contains(@name, 'android.gms.internal')]" />
 	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.ads.internal')]" />
-
+	-->
+	
 	<!-- Remove *zz* obfuscated items -->
 	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
 <!--	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />-->
