@@ -2030,8 +2030,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-android",
-        "version": "1.57.2",
-        "nugetVersion": "1.57.2",
+        "version": "1.56.1",
+        "nugetVersion": "1.56.1.1",
         "nugetId": "Xamarin.Grpc.Android",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2039,8 +2039,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-api",
-        "version": "1.57.2",
-        "nugetVersion": "1.57.2",
+        "version": "1.56.1",
+        "nugetVersion": "1.56.1.1",
         "nugetId": "Xamarin.Grpc.Api",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2048,8 +2048,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-context",
-        "version": "1.57.2",
-        "nugetVersion": "1.57.2",
+        "version": "1.56.1",
+        "nugetVersion": "1.56.1.1",
         "nugetId": "Xamarin.Grpc.Context",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2057,8 +2057,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-core",
-        "version": "1.57.2",
-        "nugetVersion": "1.57.2",
+        "version": "1.56.1",
+        "nugetVersion": "1.56.1.1",
         "nugetId": "Xamarin.Grpc.Core",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2066,8 +2066,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-okhttp",
-        "version": "1.57.2",
-        "nugetVersion": "1.57.2",
+        "version": "1.56.1",
+        "nugetVersion": "1.56.1.1",
         "nugetId": "Xamarin.Grpc.OkHttp",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2075,8 +2075,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-protobuf-lite",
-        "version": "1.57.2",
-        "nugetVersion": "1.57.2",
+        "version": "1.56.1",
+        "nugetVersion": "1.56.1.1",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2084,8 +2084,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-stub",
-        "version": "1.57.2",
-        "nugetVersion": "1.57.2",
+        "version": "1.56.1",
+        "nugetVersion": "1.56.1.1",
         "nugetId": "Xamarin.Grpc.Stub",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2339,7 +2339,7 @@
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat",
         "version": "1.6.1",
-        "nugetVersion": "1.6.1.4",
+        "nugetVersion": "1.6.1.3",
         "nugetId": "Xamarin.AndroidX.AppCompat",
         "dependencyOnly": true
       },
@@ -2586,8 +2586,8 @@
       {
         "groupId": "com.google.guava",
         "artifactId": "guava",
-        "version": "32.0.1-android",
-        "nugetVersion": "32.0.1",
+        "version": "31.1.0-android",
+        "nugetVersion": "31.1.0.8",
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": true
       },
@@ -2595,7 +2595,7 @@
         "groupId": "com.google.guava",
         "artifactId": "listenablefuture",
         "version": "9999.0-empty-to-avoid-conflict-with-guava",
-        "nugetVersion": "1.0.0.13",
+        "nugetVersion": "1.0.0.14",
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
         "dependencyOnly": true
       },
@@ -2691,16 +2691,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "22.1.0",
-        "nugetVersion": "122.1.0.2",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "22.1.0",
-        "nugetVersion": "122.1.0.2",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": true
       },
