@@ -426,6 +426,8 @@ Firebase.Provider
 Firebase.RemoteConfig
 Firebase.RemoteConfig.Internal
 Firebase.RemoteConfig.Ktx
+Firebase.Sessions
+Firebase.Sessions.API
 Firebase.Storage
 Firebase.Storage.Internal
 Firebase.Storage.Ktx
@@ -440,6 +442,7 @@ Gen._net._android._net_java__rjava_resources.Srcjar
 Google.Ads
 Google.Ads.Identifier
 Google.Ads.InteractiveMedia.PAL
+Google.Ads.InteractiveMedia.PAL.Utils
 Google.Ads.Mediation
 Google.Ads.Mediation.Admob
 Google.AndroidLibraries.BarHopper
