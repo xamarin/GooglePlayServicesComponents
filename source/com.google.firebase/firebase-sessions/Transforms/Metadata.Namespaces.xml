@@ -1,10 +1,15 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='com.google.firebase.sessions']"
         name="managedName"
         >
-        Package
+        Firebase.Sessions
     </attr>
-    -->
+    <attr 
+        path="/api/package[@name='com.google.firebase.sessions.api']"
+        name="managedName"
+        >
+        Firebase.Sessions.API
+    </attr>
+    
 </metadata>
