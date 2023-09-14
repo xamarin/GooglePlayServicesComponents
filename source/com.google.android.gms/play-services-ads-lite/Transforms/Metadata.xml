@@ -571,4 +571,12 @@
         OnAdFailedToLoadWithErrorCode
     </attr>
 
+
+	<attr
+        path="/api/package[@name='com.google.android.gms.ads.internal.offline.buffering']"
+		name="managedName"
+		>
+		Google.Ads.Internal.Offline.Buffering
+	</attr>
+
 </metadata>
