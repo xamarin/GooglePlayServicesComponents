@@ -427,7 +427,7 @@ Firebase.RemoteConfig
 Firebase.RemoteConfig.Internal
 Firebase.RemoteConfig.Ktx
 Firebase.Sessions
-Firebase.Sessions.API
+Firebase.Sessions.Api
 Firebase.Storage
 Firebase.Storage.Internal
 Firebase.Storage.Ktx
