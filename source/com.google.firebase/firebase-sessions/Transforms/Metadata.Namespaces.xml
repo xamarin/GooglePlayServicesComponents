@@ -9,7 +9,7 @@
         path="/api/package[@name='com.google.firebase.sessions.api']"
         name="managedName"
         >
-        Firebase.Sessions.API
+        Firebase.Sessions.Api
     </attr>
     
 </metadata>
