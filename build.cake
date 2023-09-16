@@ -1135,8 +1135,7 @@ Task ("ci-build")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
 	//.IsDependentOn ("merge")
-  .IsDependentOn ("tools-executive-order")
-  ;
+  	;
 
 Task ("ci-samples")
 	.IsDependentOn ("samples-only")
