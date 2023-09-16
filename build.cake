@@ -1,9 +1,11 @@
 // Tools needed by cake addins
+#tool nuget:?package=Cake.CoreCLR               // needed for debugging
 #tool nuget:?package=vswhere&version=3.1.1
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=5.0.0
-#addin nuget:?package=Newtonsoft.Json&version=13.0.2
+#addin "Cake.FileHelpers"
+#addin nuget:?package=Newtonsoft.Json&version=13.0.3
+
 
 //using Cake.Common.Tools.MSBuild;
 
@@ -1051,24 +1053,6 @@ Task("nuget-dependecies")
 		}
 	);
 
-Task("tools-executive-order")
-    .Does
-    (
-        () =>
-        {
-            CakeExecuteScript
-                        (
-                            "./utilities.cake",
-                            new CakeSettings
-                            { 
-                                Arguments = new Dictionary<string, string>() 
-                                { 
-                                    { "target", "tools-executive-order" } 
-                                } 
-                            }
-                        );        
-        }
-    );
 
 // Task ("genapi")
 // 	.IsDependentOn ("libs")
