@@ -179,6 +179,7 @@
 
   <ItemGroup>
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(_TargetFrameworkNugetBuildFolders)" />
+    <None Include=".\readme.md" Pack="True" PackagePath="readme.md" />
   </ItemGroup>
 
   @if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.Basement")
