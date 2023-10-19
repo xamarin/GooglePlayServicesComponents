@@ -2,9 +2,9 @@
     dotnet cake spell-check.cake
     dotnet cake spell-check.cake -t=spell-check
  */
-#addin nuget:?package=WeCantSpell.Hunspell&version=3.0.1
-#addin nuget:?package=Newtonsoft.Json&version=12.0.3
-#addin nuget:?package=Cake.FileHelpers&version=3.2.1
+#addin nuget:?package=WeCantSpell.Hunspell&version=4.0.0
+#addin nuget:?package=Newtonsoft.Json&version=13.0.2
+#addin nuget:?package=Cake.FileHelpers&version=5.0.0
 #addin nuget:?package=Mono.Cecil&version=0.11.4
 
 #addin nuget:?package=HolisticWare.Xamarin.Tools.ComponentGovernance&version=0.0.1.2
@@ -1397,7 +1397,6 @@ Task("tools-executive-oreder-csv-and-markdown")
     (
         () =>
         {
-         Console.WriteLine ("2");
            StringBuilder sb = new StringBuilder();
             StringBuilder sb_md = new StringBuilder();
             sb.AppendLine("BuildToolName,BuildToolVersion");
@@ -1411,7 +1410,6 @@ Task("tools-executive-oreder-csv-and-markdown")
 			IEnumerable<string> redirectedStandardOutput = null;
 			int exitCodeWithoutArguments;
 			ProcessSettings process_settings = null;
-        Console.WriteLine ("3");
 
             /*
                 dotnet --info
@@ -1438,7 +1436,6 @@ Task("tools-executive-oreder-csv-and-markdown")
                 sb.AppendLine($"dotnet sdk, {version}");
                 sb_md.AppendLine($"{jp.Name}{version}");
             }
-        Console.WriteLine ("4");
 
             List
                 <(
@@ -1457,7 +1454,6 @@ Task("tools-executive-oreder-csv-and-markdown")
                 msbuild_sdks.Add((name, value));
                 sb.AppendLine($"msbuild-sdks {name}, {value}");
             }
-        Console.WriteLine ("5");
 
             /*
             mono --version
@@ -1493,7 +1489,6 @@ Task("tools-executive-oreder-csv-and-markdown")
                 sb.AppendLine($"Mono JIT compiler, Not installed");
             }
 
-        Console.WriteLine ("6");
 
             /*
             nuget
@@ -1521,7 +1516,6 @@ Task("tools-executive-oreder-csv-and-markdown")
                     sb.AppendLine($"nuget, {version}");
                 }
             }
-        Console.WriteLine ("7");
 
             /*
             xamarin-android-binderator --help
@@ -1561,7 +1555,6 @@ Task("tools-executive-oreder-csv-and-markdown")
                     sb.AppendLine($"{parts[0]},{parts[1]}");
                 }
             }
-        Console.WriteLine ("8");
 
             /*
             gradle --version
@@ -1610,7 +1603,6 @@ Task("tools-executive-oreder-csv-and-markdown")
                     sb.AppendLine($"JVM, {version}");
                 }
             }
-        Console.WriteLine ("9");
             /*
             java --version
             */

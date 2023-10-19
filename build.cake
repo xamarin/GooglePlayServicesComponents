@@ -1056,7 +1056,9 @@ Task("tools-executive-order")
     (
         () =>
         {
-        Console.WriteLine ("1");
+          // Temporarily disable on Mac until a newer Cake is available
+          // https://github.com/cake-build/cake/issues/3996#issuecomment-1540282182
+          if (Environment.OSVersion.Platform == PlatformID.Win32NT)
             CakeExecuteScript
                         (
                             "./utilities.cake",
