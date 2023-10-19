@@ -1397,7 +1397,8 @@ Task("tools-executive-oreder-csv-and-markdown")
     (
         () =>
         {
-            StringBuilder sb = new StringBuilder();
+         Console.WriteLine ("2");
+           StringBuilder sb = new StringBuilder();
             StringBuilder sb_md = new StringBuilder();
             sb.AppendLine("BuildToolName,BuildToolVersion");
             sb_md.AppendLine("# Executive Order Build Tools Inventory");
@@ -1410,6 +1411,7 @@ Task("tools-executive-oreder-csv-and-markdown")
 			IEnumerable<string> redirectedStandardOutput = null;
 			int exitCodeWithoutArguments;
 			ProcessSettings process_settings = null;
+        Console.WriteLine ("3");
 
             /*
                 dotnet --info
@@ -1436,6 +1438,7 @@ Task("tools-executive-oreder-csv-and-markdown")
                 sb.AppendLine($"dotnet sdk, {version}");
                 sb_md.AppendLine($"{jp.Name}{version}");
             }
+        Console.WriteLine ("4");
 
             List
                 <(
@@ -1454,6 +1457,7 @@ Task("tools-executive-oreder-csv-and-markdown")
                 msbuild_sdks.Add((name, value));
                 sb.AppendLine($"msbuild-sdks {name}, {value}");
             }
+        Console.WriteLine ("5");
 
             /*
             mono --version
@@ -1489,6 +1493,7 @@ Task("tools-executive-oreder-csv-and-markdown")
                 sb.AppendLine($"Mono JIT compiler, Not installed");
             }
 
+        Console.WriteLine ("6");
 
             /*
             nuget
@@ -1516,6 +1521,7 @@ Task("tools-executive-oreder-csv-and-markdown")
                     sb.AppendLine($"nuget, {version}");
                 }
             }
+        Console.WriteLine ("7");
 
             /*
             xamarin-android-binderator --help
@@ -1555,6 +1561,7 @@ Task("tools-executive-oreder-csv-and-markdown")
                     sb.AppendLine($"{parts[0]},{parts[1]}");
                 }
             }
+        Console.WriteLine ("8");
 
             /*
             gradle --version
@@ -1603,6 +1610,7 @@ Task("tools-executive-oreder-csv-and-markdown")
                     sb.AppendLine($"JVM, {version}");
                 }
             }
+        Console.WriteLine ("9");
             /*
             java --version
             */

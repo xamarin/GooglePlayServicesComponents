@@ -1056,6 +1056,7 @@ Task("tools-executive-order")
     (
         () =>
         {
+        Console.WriteLine ("1");
             CakeExecuteScript
                         (
                             "./utilities.cake",
