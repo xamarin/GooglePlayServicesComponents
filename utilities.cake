@@ -1397,7 +1397,7 @@ Task("tools-executive-oreder-csv-and-markdown")
     (
         () =>
         {
-           StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             StringBuilder sb_md = new StringBuilder();
             sb.AppendLine("BuildToolName,BuildToolVersion");
             sb_md.AppendLine("# Executive Order Build Tools Inventory");
