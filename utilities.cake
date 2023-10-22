@@ -1,5 +1,5 @@
 // debugging prerequisity
-#tool nuget:?package=Cake.CoreCLR
+//#tool nuget:?package=Cake.CoreCLR
 /*
      dotnet cake spell-check.cake
     dotnet cake spell-check.cake -t=spell-check
