@@ -4,7 +4,7 @@
     <RepositoryType>git</RepositoryType>
 
     <!-- Default TFM's we build for -->
-    <_DefaultTargetFrameworks>MonoAndroid12.0;net6.0-android</_DefaultTargetFrameworks>
+    <_DefaultTargetFrameworks>net8.0-android</_DefaultTargetFrameworks>
 
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
@@ -25,14 +25,11 @@
 
   <!-- Folders that various files get placed into -->
   <ItemGroup>
-    <_TargetFrameworkNugetBuildFolders Include="build\monoandroid12.0" />
-    <_TargetFrameworkNugetBuildFolders Include="build\net6.0-android31.0" />
-    <_TargetFrameworkNugetBuildFolders Include="buildTransitive\monoandroid12.0" />
-    <_TargetFrameworkNugetBuildFolders Include="buildTransitive\net6.0-android31.0" />
+    <_TargetFrameworkNugetBuildFolders Include="build\net8.0-android34.0" />
+    <_TargetFrameworkNugetBuildFolders Include="buildTransitive\net8.0-android34.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <_TargetFrameworkNugetAarFolders Include="aar\monoandroid12.0" />
-    <_TargetFrameworkNugetAarFolders Include="aar\net6.0-android31.0" />
+    <_TargetFrameworkNugetAarFolders Include="aar\net8.0-android34.0" />
   </ItemGroup>
 </Project>
