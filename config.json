@@ -17,7 +17,7 @@
       },
       {
         "templateFile": "source/GooglePlayServicesPom.cshtml",
-        "outputFileRule": "generated/{groupid}.{artifactid}/pom.xml"
+        "outputFileRule": "generated/{groupid}.{artifactid}/dependencies.pom"
       },
       {
         "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
