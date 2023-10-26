@@ -35,4 +35,43 @@
         SetExecutorAlternative
     </attr>
 
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='setExecutor' and @return='java.lang.Object' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
+        />
+    <!-- 
+        error CS0102: 
+        The type 'ObjectDetectorOptions.Builder' already contains a definition for 
+            'cb_setExecutor_Ljava_util_concurrent_Executor_'
+    -->
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
+        />
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int']]"
+        />
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='enableMultipleObjects' and count(parameter)=0]"
+        />
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='enableClassification' and count(parameter)=0]"
+        />
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='build' and count(parameter)=0]"
+        />
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='build' and count(parameter)=0]"
+        />
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='build' and count(parameter)=0]"
+        name="abstract"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']"
+        name="abstract"
+        >
+        true
+    </attr>
+
 </metadata>
