@@ -228,8 +228,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-deviceperformance",
-        "version": "16.0.1",
-        "nugetVersion": "116.0.1.2",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.2",
         "nugetId": "Xamarin.GooglePlayServices.DevicePerformance",
         "dependencyOnly": false
       },
