@@ -282,15 +282,15 @@
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Firestore")
     {
-      <PackageReference Include="Xamarin.Google.Guava" Version="31.1.0.8" />
+      <PackageReference Include="Xamarin.Google.Guava" Version="31.1.0.10" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Crashlytics")
     {
-      <PackageReference Include="Xamarin.Google.Dagger" Version="2.46.1.2" />
+      <PackageReference Include="Xamarin.Google.Dagger" Version="2.47.0" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Measurement.Connector.Impl")
     {
-      <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base" Version="121.3.0.1" />
+      <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base" Version="121.3.0.2" />
     }
     <!-- Reference -->
     <Reference Include="System.Net.Http" Condition=" '$(TargetFramework)' == '@(targetFrameworkMoniker)' " />
