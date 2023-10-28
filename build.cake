@@ -1,4 +1,5 @@
 // Tools needed by cake addins
+// #tool nuget:?package=Cake.CoreCLR               // needed for debugging
 #tool nuget:?package=vswhere&version=3.1.4
 
 // Cake Addins
@@ -1070,6 +1071,7 @@ Task("tools-executive-order")
         }
     );
 
+
 // Task ("genapi")
 // 	.IsDependentOn ("libs")
 // 	.Does (() =>
@@ -1151,8 +1153,8 @@ Task ("ci-build")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
 	//.IsDependentOn ("merge")
-  .IsDependentOn ("tools-executive-order")
-  ;
+  	.IsDependentOn ("tools-executive-order")
+	;
 
 Task ("ci-samples")
 	.IsDependentOn ("samples-only")
