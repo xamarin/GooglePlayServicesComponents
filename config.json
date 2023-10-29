@@ -2719,7 +2719,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/glide/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2737,7 +2737,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/findbugs/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2755,7 +2755,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/chromium-cronet/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2773,7 +2773,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/tensorflow-lite/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2791,7 +2791,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/dagger/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2809,7 +2809,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/javax-inject/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2827,7 +2827,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/protobuf-lite/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2845,7 +2845,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/datatransport/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2863,7 +2863,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/user-messaging-platform/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2881,7 +2881,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/errorprone/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2899,7 +2899,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/annotations/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2917,7 +2917,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/opencensus/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2935,7 +2935,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/perfmark/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2953,7 +2953,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/squareup-okhttp/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2971,7 +2971,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/squareup-okhttp3/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -2989,7 +2989,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/squareup-picasso/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -3007,7 +3007,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/squareup-retrofit/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -3025,7 +3025,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/squareup-retrofit2/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -3043,7 +3043,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/squareup-okio/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -3061,7 +3061,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/squareup-javapoet/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -3079,7 +3079,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/grpc/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -3093,11 +3093,11 @@
         "mavenRepositoryType": "MavenCentral",
         "templates": [
           {
-            "templateFile": "templates/codehaus-mojo/Project.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/codehaus-mojo/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -3115,7 +3115,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/zxing/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
@@ -3133,7 +3133,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/flatbuffers/NuGetReadMe.cshtml",
+            "templateFile": "templates/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
