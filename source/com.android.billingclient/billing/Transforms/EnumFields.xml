@@ -20,6 +20,7 @@
     <field clr-name="ItemAlreadyOwned" jni-name="ITEM_ALREADY_OWNED" value="7" />
     <field clr-name="ItemNotOwned" jni-name="ITEM_NOT_OWNED" value="8" />
     <field clr-name="ItemUnavailable" jni-name="ITEM_UNAVAILABLE" value="4" />
+    <field clr-name="NetworkError" jni-name="NETWORK_ERROR" value="12" />
     <field clr-name="Ok" jni-name="OK" value="0" />
     <field clr-name="ServiceDisconnected" jni-name="SERVICE_DISCONNECTED" value="-1" />
     <field clr-name="ServiceTimeout" jni-name="SERVICE_TIMEOUT" value="-3" />
