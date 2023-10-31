@@ -421,6 +421,19 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "play-services-gass",
+          "groupId": "com.google.android.gms",
+          "version": "20.0.0",
+          "nuGetId": "Xamarin.GooglePlayServices.Gass",
+          "nuGetVersion": "120.0.0.12"
+        }
+      },
+      "license": "Android Software Development Kit License"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "play-services-gcm",
           "groupId": "com.google.android.gms",
           "version": "17.0.0",
@@ -1310,6 +1323,19 @@
           "version": "21.3.0",
           "nuGetId": "Xamarin.Firebase.Analytics",
           "nuGetVersion": "121.3.0.3"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "firebase-analytics-impl",
+          "groupId": "com.google.firebase",
+          "version": "16.3.0",
+          "nuGetId": "Xamarin.Firebase.Analytics.Impl",
+          "nuGetVersion": "116.3.0.12"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3178,9 +3204,9 @@
         "maven": {
           "artifactId": "grpc-android",
           "groupId": "io.grpc",
-          "version": "1.56.1",
+          "version": "1.57.2",
           "nuGetId": "Xamarin.Grpc.Android",
-          "nuGetVersion": "1.56.1.2"
+          "nuGetVersion": "1.57.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3191,9 +3217,9 @@
         "maven": {
           "artifactId": "grpc-api",
           "groupId": "io.grpc",
-          "version": "1.56.1",
+          "version": "1.57.2",
           "nuGetId": "Xamarin.Grpc.Api",
-          "nuGetVersion": "1.56.1.2"
+          "nuGetVersion": "1.57.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3204,9 +3230,9 @@
         "maven": {
           "artifactId": "grpc-context",
           "groupId": "io.grpc",
-          "version": "1.56.1",
+          "version": "1.57.2",
           "nuGetId": "Xamarin.Grpc.Context",
-          "nuGetVersion": "1.56.1.2"
+          "nuGetVersion": "1.57.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3217,9 +3243,9 @@
         "maven": {
           "artifactId": "grpc-core",
           "groupId": "io.grpc",
-          "version": "1.56.1",
+          "version": "1.57.2",
           "nuGetId": "Xamarin.Grpc.Core",
-          "nuGetVersion": "1.56.1.2"
+          "nuGetVersion": "1.57.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3230,9 +3256,9 @@
         "maven": {
           "artifactId": "grpc-okhttp",
           "groupId": "io.grpc",
-          "version": "1.56.1",
+          "version": "1.57.2",
           "nuGetId": "Xamarin.Grpc.OkHttp",
-          "nuGetVersion": "1.56.1.2"
+          "nuGetVersion": "1.57.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3243,9 +3269,9 @@
         "maven": {
           "artifactId": "grpc-protobuf-lite",
           "groupId": "io.grpc",
-          "version": "1.56.1",
+          "version": "1.57.2",
           "nuGetId": "Xamarin.Grpc.Protobuf.Lite",
-          "nuGetVersion": "1.56.1.2"
+          "nuGetVersion": "1.57.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3256,9 +3282,9 @@
         "maven": {
           "artifactId": "grpc-stub",
           "groupId": "io.grpc",
-          "version": "1.56.1",
+          "version": "1.57.2",
           "nuGetId": "Xamarin.Grpc.Stub",
-          "nuGetVersion": "1.56.1.2"
+          "nuGetVersion": "1.57.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3321,9 +3347,9 @@
         "maven": {
           "artifactId": "cronet-api",
           "groupId": "org.chromium.net",
-          "version": "105.5195.68",
+          "version": "106.5249.126",
           "nuGetId": "Xamarin.Chromium.CroNet.Api",
-          "nuGetVersion": "105.5195.68.1"
+          "nuGetVersion": "106.5249.126"
         }
       },
       "license": "Chromium and built-in dependencies"
@@ -3334,9 +3360,9 @@
         "maven": {
           "artifactId": "cronet-common",
           "groupId": "org.chromium.net",
-          "version": "105.5195.68",
+          "version": "106.5249.126",
           "nuGetId": "Xamarin.Chromium.CroNet.Common",
-          "nuGetVersion": "105.5195.68.1"
+          "nuGetVersion": "106.5249.126"
         }
       },
       "license": "Chromium and built-in dependencies"
@@ -3347,9 +3373,9 @@
         "maven": {
           "artifactId": "cronet-embedded",
           "groupId": "org.chromium.net",
-          "version": "105.5195.68",
+          "version": "106.5249.126",
           "nuGetId": "Xamarin.Chromium.CroNet.Embedded",
-          "nuGetVersion": "105.5195.68.1"
+          "nuGetVersion": "106.5249.126"
         }
       },
       "license": "Chromium and built-in dependencies"
@@ -3360,9 +3386,9 @@
         "maven": {
           "artifactId": "cronet-fallback",
           "groupId": "org.chromium.net",
-          "version": "105.5195.68",
+          "version": "106.5249.126",
           "nuGetId": "Xamarin.Chromium.CroNet.Fallback",
-          "nuGetVersion": "105.5195.68.1"
+          "nuGetVersion": "106.5249.126"
         }
       },
       "license": "Chromium and built-in dependencies"
