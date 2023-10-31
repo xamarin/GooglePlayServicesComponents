@@ -22,6 +22,10 @@
       {
         "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
         "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+      },
+      {
+        "templateFile": "source/GooglePlayServicesNuGetReadMe.cshtml",
+        "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
       }
     ],
     "artifacts": [
@@ -2754,6 +2758,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2766,6 +2774,10 @@
           {
             "templateFile": "templates/findbugs/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
@@ -2782,6 +2794,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2794,6 +2810,10 @@
           {
             "templateFile": "templates/tensorflow-lite/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
@@ -2810,6 +2830,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2822,6 +2846,10 @@
           {
             "templateFile": "templates/javax-inject/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
@@ -2838,6 +2866,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2852,6 +2884,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2864,6 +2900,10 @@
           {
             "templateFile": "templates/user-messaging-platform/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
@@ -2880,6 +2920,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2894,18 +2938,8 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "user-messaging-platform",
-        "mavenRepositoryType": "Google",
-        "templates": [
-          {
-            "templateFile": "templates/user-messaging-platform/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
@@ -2922,6 +2956,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2934,6 +2972,10 @@
           {
             "templateFile": "templates/perfmark/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
@@ -2950,6 +2992,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2962,6 +3008,10 @@
           {
             "templateFile": "templates/squareup-okhttp3/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
@@ -2978,6 +3028,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2990,6 +3044,10 @@
           {
             "templateFile": "templates/squareup-retrofit/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
@@ -3006,6 +3064,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -3018,6 +3080,10 @@
           {
             "templateFile": "templates/squareup-okio/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
@@ -3034,6 +3100,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -3046,6 +3116,10 @@
           {
             "templateFile": "templates/grpc/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
@@ -3062,6 +3136,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -3076,6 +3154,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -3088,6 +3170,10 @@
           {
             "templateFile": "templates/flatbuffers/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
