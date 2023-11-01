@@ -437,8 +437,8 @@ Firebase.Tracing
 Firebse.ML.Vision.Dynamite.Objects
 Firestore.Admin.V1
 Firestore.Bundle
-Gen._base._base_java__rjava_resources.Srcjar
-Gen._net._android._net_java__rjava_resources.Srcjar
+Gen._base._base_java__assetres.Srcjar
+Gen._net._android._net_java__assetres.Srcjar
 Google.Ads
 Google.Ads.Identifier
 Google.Ads.InteractiveMedia.PAL
