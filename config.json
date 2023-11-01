@@ -1970,8 +1970,8 @@
       {
         "groupId": "com.squareup.picasso",
         "artifactId": "picasso",
-        "version": "2.71828.0",
-        "nugetVersion": "2.71828.0",
+        "version": "2.8",
+        "nugetVersion": "2.8.0.9",
         "nugetId": "Square.Picasso",
         "dependencyOnly": false,
         "templateSet": "squareup-picasso"
