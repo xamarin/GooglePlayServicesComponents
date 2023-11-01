@@ -38,7 +38,7 @@
     <remove-node 
         path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='setExecutor' and @return='java.lang.Object' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
         />
-    <!-- 
+    <!-- w
         error CS0102: 
         The type 'ObjectDetectorOptions.Builder' already contains a definition for 
             'cb_setExecutor_Ljava_util_concurrent_Executor_'

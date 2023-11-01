@@ -20,7 +20,9 @@
       Xamarin.Google.MLKit.Vision.Objects.Defaults.Internal
   </attr>
   
+  <remove-node
   
+    />  
   
 
 </metadata>
