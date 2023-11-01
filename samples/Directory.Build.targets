@@ -293,9 +293,9 @@
     <PackageReference Update="Xamarin.AndroidX.Fragment" Version="1.6.1.2" />
     <PackageReference Update="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0.19" />
     <PackageReference Update="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.21" />
-    <PackageReference Update="Xamarin.AndroidX.Lifecycle.Extensions" Version="2.2.0.21" />
     <PackageReference Update="Xamarin.AndroidX.Lifecycle.Process" Version="2.6.2.2" />
     <PackageReference Update="Xamarin.AndroidX.Lifecycle.ViewModel" Version="2.6.2.2" />
+    <PackageReference Update="Xamarin.AndroidX.Lifecycle.Extensions" Version="2.2.0.21" />
     <PackageReference Update="Xamarin.AndroidX.Loader" Version="1.1.0.21" />
     <PackageReference Update="Xamarin.AndroidX.LocalBroadcastManager" Version="1.1.0.9" />
     <PackageReference Update="Xamarin.AndroidX.Media" Version="1.6.0.8" />
