@@ -2548,14 +2548,6 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-ads-base",
-        "version": "22.3.0",
-        "nugetVersion": "122.3.0",
-        "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
-        "dependencyOnly": true
-      },
-      {
         "groupId": "com.google.auto.value",
         "artifactId": "auto-value-annotations",
         "version": "1.10.4",
@@ -2577,14 +2569,6 @@
         "version": "16.3.0",
         "nugetVersion": "116.3.0",
         "nugetId": "Xamarin.Firebase.Analytics",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.firebase",
-        "artifactId": "firebase-appindexing",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0.14",
-        "nugetId": "Xamarin.Firebase.AppIndexing",
         "dependencyOnly": true
       },
       {
@@ -2625,14 +2609,6 @@
         "version": "2.2.21",
         "nugetVersion": "2.2.21.14",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "org.checkerframework",
-        "artifactId": "checker-qual",
-        "version": "3.39.0",
-        "nugetVersion": "3.39.0.1",
-        "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "dependencyOnly": true
       },
       {
@@ -2718,22 +2694,6 @@
       },
       {
         "groupId": "com.google.android.gms",
-        "artifactId": "play-services-ads-lite",
-        "version": "22.3.0",
-        "nugetVersion": "122.3.0",
-        "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-analytics-impl",
-        "version": "18.0.3",
-        "nugetVersion": "118.0.3.2",
-        "nugetId": "Xamarin.GooglePlayServices.Analytics.Impl",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
         "version": "16.3.0",
         "nugetVersion": "116.3.0",
@@ -2741,11 +2701,19 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-measurement-sdk",
-        "version": "21.3.0",
-        "nugetVersion": "121.3.0.2",
-        "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk",
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-appindexing",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0.14",
+        "nugetId": "Xamarin.Firebase.AppIndexing",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.checkerframework",
+        "artifactId": "checker-qual",
+        "version": "3.39.0",
+        "nugetVersion": "3.39.0.1",
+        "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "dependencyOnly": true
       }
     ],
