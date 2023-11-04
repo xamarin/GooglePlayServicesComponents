@@ -296,4 +296,11 @@
         OnTokenChangeString
     </attr>
 
+	<attr 
+		path="/api/package[@name='com.google.firebase.database.ktx']" 
+		name="managedName"
+		>
+		Firebase.Database.Ktx
+	</attr>
+
 </metadata>

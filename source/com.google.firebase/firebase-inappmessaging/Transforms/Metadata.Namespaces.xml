@@ -86,5 +86,11 @@
          >
         Firebase.InAppMessaging.Dagger.MultiBindings
     </attr>
+	<attr 
+		path="/api/package[@name='com.google.firebase.inappmessaging.ktx']" 
+		name="managedName"
+		>
+		Firebase.InAppMessaging.Ktx
+	</attr>
 
 </metadata>

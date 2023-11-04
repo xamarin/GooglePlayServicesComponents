@@ -81,5 +81,11 @@
         Firebase.Messaging.Threads
     </attr>
 
+	<attr 
+		path="/api/package[@name='com.google.firebase.messaging.ktx']" 
+		name="managedName"
+		>
+		Firebase.Messaging.Ktx
+	</attr>
 
 </metadata>
