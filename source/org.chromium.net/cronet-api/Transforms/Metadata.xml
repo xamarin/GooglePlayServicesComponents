@@ -200,4 +200,15 @@
         >
         false
     </attr>
+
+    <remove-node
+        path="/api/package[@name='org.chromium.net.apihelpers']/class[@name='StringCronetCallback']/method[@name='transformBodyBytes' and count(parameter)=2 and parameter[1][@type='org.chromium.net.UrlResponseInfo'] and parameter[2][@type='byte[]']]"
+        />
+    <remove-node
+        path="/api/package[@name='org.chromium.net.apihelpers']/class[@name='JsonCronetCallback']/method[@name='transformBodyBytes' and count(parameter)=2 and parameter[1][@type='org.chromium.net.UrlResponseInfo'] and parameter[2][@type='byte[]']]"        
+        />
+    <remove-node
+        path="/api/package[@name='org.chromium.net.apihelpers']/class[@name='ByteArrayCronetCallback']/method[@name='transformBodyBytes' and count(parameter)=2 and parameter[1][@type='org.chromium.net.UrlResponseInfo'] and parameter[2][@type='byte[]']]"
+        />
+        
 </metadata>
