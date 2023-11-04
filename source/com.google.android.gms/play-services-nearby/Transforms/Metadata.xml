@@ -114,5 +114,11 @@
 		>
 		DtdiSourceData
 	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.nearby.uwb']/interface[@name='RangingParameters.SlotDuration']"
+		name="managedName"
+		>
+		ISlotDurationContract
+	</attr>
 
 </metadata>
