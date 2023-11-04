@@ -92,6 +92,14 @@
             <Summary>.NET for Android (formerly Xamarin.Android) Bindings for Google's GRPC Stub package</Summary>
             <PackageTags>.NET, dotnet, xamarin, android, bindings, google, grpc, stub, artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
             break; 
+          case "Xamarin.Grpc.Util":
+            <Title>Xamarin.Grpc.Util</Title>
+            <PackageDescription>
+                .NET for Android (formerly Xamarin.Android) Bindings for Google's GRPC Util package
+            </PackageDescription>
+            <Summary>.NET for Android (formerly Xamarin.Android) Bindings for Google's GRPC Util package</Summary>
+            <PackageTags>.NET, dotnet, xamarin, android, bindings, google, grpc, util, artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
+            break;
           default:
             break; 
       }
