@@ -156,8 +156,6 @@ Android.Gms.Nearby.Connection
 Android.Gms.Nearby.ExposureNotification
 Android.Gms.Nearby.Messages
 Android.Gms.Nearby.Messages.Audio
-Android.Gms.Nearby.Presence
-Android.Gms.Nearby.Presence.Log
 Android.Gms.Nearby.Uwb
 Android.Gms.Net
 Android.Gms.Oss.Licenses
@@ -535,7 +533,9 @@ Xamarin.Chromium.Base.Natives
 Xamarin.Chromium.Base.Supplier
 Xamarin.Chromium.Base.Task
 Xamarin.Chromium.Build
+Xamarin.Chromium.Build.Annotations
 Xamarin.Chromium.CroNet
+Xamarin.Chromium.CroNet.ApiHelpers
 Xamarin.Chromium.CroNet.Impl
 Xamarin.Chromium.CroNet.UrlConnection
 Xamarin.Chromium.J
@@ -671,7 +671,6 @@ Xamarin.Grpc
 Xamarin.Grpc.Android
 Xamarin.Grpc.Core.InProcess
 Xamarin.Grpc.Core.Internal
-Xamarin.Grpc.Core.Util
 Xamarin.Grpc.OkHttp
 Xamarin.Grpc.OkHttp.Internal
 Xamarin.Grpc.OkHttp.Internal.Framed
@@ -679,6 +678,7 @@ Xamarin.Grpc.OkHttp.Internal.Proxy
 Xamarin.Grpc.Protobuf.Lite
 Xamarin.Grpc.Stub
 Xamarin.Grpc.Stub.Annotations
+Xamarin.Grpc.Util
 Xamarin.Io.OpenCensus.Common
 Xamarin.Io.OpenCensus.Contrib.Grpc.Metrics
 Xamarin.Io.OpenCensus.Internal
