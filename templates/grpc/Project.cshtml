@@ -141,6 +141,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    @if ("Xamarin.Grpc.Core") 
+    {
+      <PackageReference Include="Xamarin.Grpc.Util" Version="@(dep.NuGetVersion)" />
+    }
+  </ItemGroup>
+  <ItemGroup>
     <None Include="..\..\templates\grpc\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
     <None Include="..\..\templates\grpc\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
