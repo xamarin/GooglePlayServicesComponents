@@ -93,17 +93,17 @@
         >
         EnableClassificationAlternative
     </attr>    
-    <attr
-        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor'] and @return='com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions.Builder']"
-        name="managedName"
-        >
-        SetExecutorAlternative
-    </attr>
-    <attr
+    <remove-node
         path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int'] and @return='com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions.Builder']"
-        name="managedName"
-        >
-        SetExecutorAlternative
-    </attr>
+        />
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor'] and @return='com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions.Builder']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='build']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='enableClassification' and count(parameter)=0 and @return='com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions.Builder']"
+        />
 
 </metadata>
