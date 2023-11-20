@@ -671,6 +671,7 @@ Xamarin.Grpc
 Xamarin.Grpc.Android
 Xamarin.Grpc.Core.InProcess
 Xamarin.Grpc.Core.Internal
+Xamarin.Grpc.Core.Util
 Xamarin.Grpc.OkHttp
 Xamarin.Grpc.OkHttp.Internal
 Xamarin.Grpc.OkHttp.Internal.Framed
@@ -678,7 +679,6 @@ Xamarin.Grpc.OkHttp.Internal.Proxy
 Xamarin.Grpc.Protobuf.Lite
 Xamarin.Grpc.Stub
 Xamarin.Grpc.Stub.Annotations
-Xamarin.Grpc.Util
 Xamarin.Io.OpenCensus.Common
 Xamarin.Io.OpenCensus.Contrib.Grpc.Metrics
 Xamarin.Io.OpenCensus.Internal
