@@ -2065,7 +2065,6 @@
         "nugetVersion": "1.57.2",
         "nugetId": "Xamarin.Grpc.Core",
         "dependencyOnly": false,
-        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
