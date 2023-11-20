@@ -140,11 +140,25 @@
     }
   </ItemGroup>
 
+  <!--
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-core",
+        "version": "1.57.2",
+        "nugetVersion": "1.57.2",
+        "nugetId": "Xamarin.Grpc.Core",
+        "dependencyOnly": false,
+        "excludedRuntimeDependencies": "io.grpc.grpc-util",
+        "templateSet": "grpc"
+      },
+  -->
   <ItemGroup>
-    @if ("Xamarin.Grpc.Core") 
+  @*
+    @if (@Model.NuGetPackageId == "Xamarin.Grpc.Core") 
     {
-      <PackageReference Include="Xamarin.Grpc.Util" Version="@(dep.NuGetVersion)" />
+      <PackageReference Include="Xamarin.Grpc.Util" Version="@(@Model.NuGetVersion)" />
     }
+  *@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\templates\grpc\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
