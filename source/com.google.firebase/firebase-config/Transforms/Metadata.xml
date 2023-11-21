@@ -36,5 +36,11 @@
         >
         Firebase.RemoteConfig.Proto
     </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.remoteconfig.ktx']" 
+        name="managedName"
+        >
+        Firebase.RemoteConfig.Ktx
+    </attr>
     
 </metadata>

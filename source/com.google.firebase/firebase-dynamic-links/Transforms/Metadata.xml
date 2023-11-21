@@ -42,4 +42,12 @@
         path="/api/package[@name='com.google.firebase.dynamiclinks.internal']/class[@name='WarningImplCreator']/implements"
         >
     </remove-node>
+
+    <attr
+        path="/api/package[@name='com.google.firebase.dynamiclinks.ktx']"
+        name="managedName"
+        >
+        Firebase.DynamicLinks.Ktx
+    </attr>
+
 </metadata>

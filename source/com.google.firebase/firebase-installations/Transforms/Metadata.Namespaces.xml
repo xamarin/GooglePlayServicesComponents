@@ -31,5 +31,11 @@
         >
         Firebase.Installations.Time
     </attr>
-    
+    <attr
+        path="/api/package[@name='com.google.firebase.installations.ktx']"
+        name="managedName"
+        >
+        Firebase.Installations.Ktx
+</attr>
+
 </metadata>

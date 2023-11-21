@@ -569,6 +569,7 @@ Task ("spell-check")
                 "ThreadNetwork",
                 "TextRecognition",
                 "PlayServices",
+                "Util",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 

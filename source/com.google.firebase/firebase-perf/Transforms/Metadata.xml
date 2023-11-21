@@ -148,4 +148,13 @@
 		>
 		Java.Lang.Object
 	</attr>
+
+	<attr 
+		path="/api/package[@name='com.google.firebase.perf.ktx']" 
+		name="managedName"
+		>
+		Firebase.Perf.Ktx
+	</attr>
+
+
 </metadata>
