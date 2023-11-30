@@ -570,6 +570,7 @@ Task ("spell-check")
                 "TextRecognition",
                 "PlayServices",
                 "Util",
+                "GoogleId",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
