@@ -209,6 +209,7 @@
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Interfaces" Version="116.2.0.4" />
     <PackageReference Update="Xamarin.Google.MLKit.Vision.Internal.Vkp" Version="118.2.2.7" />
     <PackageReference Update="Xamarin.Google.Android.ODML.Image" Version="1.0.0.6-beta1" />
+    <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Identity.GoogleId" Version="1.1.0" />
     <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places" Version="3.2.0.2" />
     <PackageReference Update="Xamarin.GoogleAndroid.Libraries.Places.Compat" Version="2.6.0.4" />
     <PackageReference Update="Xamarin.Android.Google.BillingClient" Version="6.0.1.3" />
