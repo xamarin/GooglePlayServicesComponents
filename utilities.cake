@@ -1682,6 +1682,7 @@ Task("java-resolution-analysis")
             string dir = "output/java-resolution-analysis";
             EnsureDirectoryExists(dir);
             EnsureDirectoryExists($"{dir}/net6.0-android");
+            EnsureDirectoryExists($"{dir}/net7.0-android");
             EnsureDirectoryExists($"{dir}/monoandroid12.0");
 
             ConcurrentDictionary
@@ -1721,6 +1722,23 @@ Task("java-resolution-analysis")
                                                 >
                                     >();
 
+            java_resolution_analysis.TryAdd
+                                        (
+                                            "net7.0-android", 
+                                            new ConcurrentDictionary
+                                                        <
+                                                            string, 
+                                                            Dictionary
+                                                            <
+                                                                string, 
+                                                                (
+                                                                    string[] lines,                         // lines
+                                                                    Dictionary<string, int> types,          // types
+                                                                    Dictionary<string, int> types_filtered  // types
+                                                                )
+                                                            >
+                                                        >()
+                                        );
             java_resolution_analysis.TryAdd
                                         (
                                             "net6.0-android", 
