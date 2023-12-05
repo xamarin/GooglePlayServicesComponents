@@ -6,6 +6,10 @@
     <!-- Default TFM's we build for -->
     <_DefaultTargetFrameworks>MonoAndroid12.0;net6.0-android;net7.0-android</_DefaultTargetFrameworks>
     
+    <!-- Use an updated 'generator' -->
+    <!-- It's ok to use "Windows" here because we only use managed code from this package -->
+    <_BindingsToolsLocation>$(MSBuildThisFileDirectory)/tools/Microsoft.Android.Sdk.Windows.34.0.43/tools/</_BindingsToolsLocation>
+        
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
 
@@ -21,6 +25,12 @@
 
     <!-- Mark .NET6+ packages as supporting trimming -->
     <IsTrimmable>true</IsTrimmable>
+    
+    <!-- Suppress warnings about `net6.0-android` being EOL -->
+    <CheckEolWorkloads>false</CheckEolWorkloads>
+
+    <!-- Exclude TF-specific transform files by default -->
+    <DefaultTransformExcludes>**/*.MonoAndroid*.0.xml;**/*.net*.0-android.xml</DefaultTransformExcludes>
   </PropertyGroup>
 
   <!-- Folders that various files get placed into -->

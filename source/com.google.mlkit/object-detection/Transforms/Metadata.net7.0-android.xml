@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>    
+	<!-- Fix public class inheriting from protected class causing duplicate methods -->
+	<attr
+		path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']"
+		name="extends"
+		>
+		java.lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']"
+		name="extends-generic-aware"
+		>
+		java.lang.Object
+	</attr>
+</metadata>
