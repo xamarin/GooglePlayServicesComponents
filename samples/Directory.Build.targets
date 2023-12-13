@@ -329,7 +329,7 @@
     <PackageReference Update="Xamarin.KotlinX.Coroutines.Android" Version="1.7.3.3" />
     <PackageReference Update="Xamarin.KotlinX.Coroutines.Core" Version="1.7.3.3" />
     <PackageReference Update="Xamarin.KotlinX.Coroutines.Play.Services" Version="1.7.3.3" />
-    <PackageReference Update="Xamarin.Android.ReactiveStreams" Version="1.0.4.8" />
+    <PackageReference Update="Xamarin.Android.ReactiveStreams" Version="1.0.4.9" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Base" Version="120.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Ads.Lite" Version="120.0.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Base" Version="116.3.0" />
