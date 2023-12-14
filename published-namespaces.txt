@@ -656,6 +656,7 @@ Xamarin.Google.MLKit.Vision.Text.Pipeline
 Xamarin.Google.MLKit.Vision.Vkp
 Xamarin.Google.Research.Xeno.Effect
 Xamarin.Google.UserMesssagingPlatform
+Xamarin.GoogleAndroid.Libraries.Identity.GoogleId
 Xamarin.GoogleAndroid.Libraries.Places.Api
 Xamarin.GoogleAndroid.Libraries.Places.Api.Model
 Xamarin.GoogleAndroid.Libraries.Places.Api.Net
