@@ -27,7 +27,7 @@ jobs:
   - template: build/ci/build.yml@androidx
     parameters:
       skipUnitTests: true
-      timeoutInMinutes: 240
+      timeoutInMinutes: 300
 
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
