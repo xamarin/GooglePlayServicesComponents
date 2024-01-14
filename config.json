@@ -32,8 +32,6 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "22.5.0",
-        "nugetVersion": "122.5.0",
         "version": "22.3.0",
         "nugetVersion": "122.3.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
@@ -42,8 +40,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "22.5.0",
-        "nugetVersion": "122.5.0",
+        "version": "22.3.0",
+        "nugetVersion": "122.3.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -58,8 +56,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "22.5.0",
-        "nugetVersion": "122.5.0",
+        "version": "22.3.0",
+        "nugetVersion": "122.3.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
@@ -354,48 +352,48 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement",
-        "version": "21.5.0",
-        "nugetVersion": "121.5.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0.4",
         "nugetId": "Xamarin.GooglePlayServices.Measurement",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-api",
-        "version": "21.5.0",
-        "nugetVersion": "121.5.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0.4",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
-        "version": "21.5.0",
-        "nugetVersion": "121.5.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0.4",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-impl",
-        "version": "21.5.0",
-        "nugetVersion": "121.5.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0.4",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Impl",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk",
-        "version": "21.5.0",
-        "nugetVersion": "121.5.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0.4",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk-api",
-        "version": "21.5.0",
-        "nugetVersion": "121.5.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0.4",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk.Api",
         "dependencyOnly": false
       },
@@ -826,24 +824,24 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads",
-        "version": "22.5.0",
-        "nugetVersion": "122.5.0",
+        "version": "22.3.0",
+        "nugetVersion": "122.3.0.2",
         "nugetId": "Xamarin.Firebase.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads-lite",
-        "version": "22.5.0",
-        "nugetVersion": "122.5.0",
+        "version": "22.3.0",
+        "nugetVersion": "122.3.0.2",
         "nugetId": "Xamarin.Firebase.Ads.Lite",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics",
-        "version": "21.5.0",
-        "nugetVersion": "121.5.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0.2",
         "nugetId": "Xamarin.Firebase.Analytics",
         "dependencyOnly": false
       },
@@ -858,8 +856,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics-ktx",
-        "version": "21.5.0",
-        "nugetVersion": "121.5.0",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0.2",
         "nugetId": "Xamarin.Firebase.Analytics.Ktx",
         "dependencyOnly": false
       },
