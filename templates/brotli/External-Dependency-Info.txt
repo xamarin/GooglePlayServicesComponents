@@ -1,15 +1,15 @@
 THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 Do not translate or localize
 
-Xamarin Components for Xamarin.GoogleAndroid.Annotations incorporates 
+Xamarin Components for Xamarin.Brotli.Dec incorporates 
 third party material from the projects listed below. The original copyright 
 notice and the license under which Microsoft received such third party 
 material are set forth below.  Microsoft reserves all other rights not 
 expressly granted, whether by implication, estoppel or otherwise.
 
 ########################################
-# Xamarin.GoogleAndroid.Annotations
-# http://source.android.com/
+# Xamarin.Brotli.Dec
+# https://mvnrepository.com/artifact/org.brotli/dec
 ########################################
 
 
@@ -216,7 +216,7 @@ expressly granted, whether by implication, estoppel or otherwise.
    limitations under the License.
 
 ########################################
-# End - Xamarin.GoogleAndroid.Annotations
+# End - Xamarin.Brotli.Dec
 ########################################
 
 
