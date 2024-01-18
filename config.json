@@ -1932,6 +1932,15 @@
       },
       {
         "groupId": "com.squareup.okhttp3",
+        "artifactId": "okhttp-brotli",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0",
+        "nugetId": "Square.OkHttp3.OkHttp.Brotli",
+        "dependencyOnly": false,
+        "templateSet": "squareup-okhttp3"
+      },
+      {
+        "groupId": "com.squareup.okhttp3",
         "artifactId": "logging-interceptor",
         "version": "4.12.0",
         "nugetVersion": "4.12.0.1",
@@ -2326,6 +2335,15 @@
         "nugetId": "Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library",
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
+      },
+      {
+        "groupId": "org.brotli",
+        "artifactId": "dec",
+        "version": "0.1.2",
+        "nugetVersion": "0.1.2",
+        "nugetId": "Xamarin.Brotli.Dec",
+        "dependencyOnly": false,
+        "templateSet": "brotli"
       },
       //=======================================================================
       // nuget dependencies
@@ -3185,6 +3203,24 @@
         "templates": [
           {
             "templateFile": "templates/flatbuffers/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "brotli",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/brotli/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
