@@ -496,6 +496,7 @@ Javax.Annotation.Meta
 JavaX.Inject
 JWT
 Microsoft.CodeAnalysis
+Okhttp3.Brotli
 Retrofit2.Internal
 Square.JavaPoet
 Square.OkHttp
@@ -523,6 +524,7 @@ Volley.Toolbox
 Xamarin.Android.Libraries.Intelligence.Acceleration
 Xamarin.Android.Libraries.Intelligence.Acceleration.Process
 Xamarin.Android.Libraries.Vision.VisionKit.Pipeline
+Xamarin.Brotli.Dec
 Xamarin.Chromium.Base
 Xamarin.Chromium.Base.Annotations
 Xamarin.Chromium.Base.Compat
