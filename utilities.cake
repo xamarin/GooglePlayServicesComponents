@@ -571,6 +571,7 @@ Task ("spell-check")
                 "PlayServices",
                 "Util",
                 "GoogleId",
+                "Brotli",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
