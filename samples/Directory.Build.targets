@@ -238,6 +238,7 @@
     <PackageReference Update="Square.OkHttp3.OkHttp.Brotli" Version="4.12.0" />
     <PackageReference Update="Square.OkHttp3.LoggingInterceptor" Version="4.12.0.1" />
     <PackageReference Update="Square.OkHttp3" Version="4.12.0.1" />
+    <PackageReference Update="Square.OkHttp3.OkHttp.TLS" Version="4.12.0" />
     <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.12.0.1" />
     <PackageReference Update="Square.OkIO" Version="3.6.0.1" />
     <PackageReference Update="Square.OkIO.JVM" Version="3.6.0.1" />
