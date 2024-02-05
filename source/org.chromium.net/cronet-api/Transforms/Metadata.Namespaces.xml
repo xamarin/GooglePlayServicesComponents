@@ -7,5 +7,11 @@
         >
         Xamarin.Chromium.CroNet
     </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.apihelpers']"
+        name="managedName"
+        >
+        Xamarin.Chromium.CroNet.ApiHelpers
+    </attr>
     
 </metadata>

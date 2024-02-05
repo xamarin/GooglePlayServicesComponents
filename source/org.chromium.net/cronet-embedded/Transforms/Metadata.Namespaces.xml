@@ -118,5 +118,11 @@
         >
         Xamarin.Chromium.Base.Lifetime
     </attr>    
+    <attr
+        path="/api/package[@name='org.chromium.build.annotations']"
+        name="managedName"
+        >
+        Xamarin.Chromium.Build.Annotations
+    </attr>
     
 </metadata>

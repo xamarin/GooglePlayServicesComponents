@@ -81,4 +81,11 @@
         path="/api/package[@name='com.google.firebase.concurrent']/interface[@name='PausableScheduledExecutorService']/implements"
         />
 
+    <attr 
+		path="/api/package[@name='com.google.firebase.ktx']" 
+		name="managedName"
+		>
+		Firebase.Ktx
+	</attr>
+
 </metadata>

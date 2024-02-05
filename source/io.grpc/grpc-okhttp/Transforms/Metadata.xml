@@ -67,4 +67,12 @@
 
     </add-node>
 
+
+    <attr
+      path="/api/package[@name='io.grpc.okhttp']/class[@name='OkHttpServerProvider']/method[@name='builderForPort' and count(parameter)=1 and parameter[1][@type='int']]"
+      name="managedReturn"
+      >
+      Xamarin.Grpc.ServerBuilder
+    </attr>
+
 </metadata>
