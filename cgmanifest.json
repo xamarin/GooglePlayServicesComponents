@@ -2827,9 +2827,9 @@
         "maven": {
           "artifactId": "recaptcha",
           "groupId": "com.google.android.recaptcha",
-          "version": "18.3.0",
+          "version": "18.4.0",
           "nuGetId": "Xamarin.Google.Android.Recaptcha",
-          "nuGetVersion": "18.3.0.3"
+          "nuGetVersion": "18.4.0"
         }
       }
     },

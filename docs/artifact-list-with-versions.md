@@ -222,7 +222,7 @@
 | 215|com.android.billingclient:billing-ktx                                 |6.1.0               |Xamarin.Android.Google.BillingClient.Ktx                              |6.1.0               |
 | 216|com.android.volley:volley                                             |1.2.1               |Xamarin.Android.Volley                                                |1.2.1.8             |
 | 217|com.android.volley:volley-cronet                                      |1.2.1               |Xamarin.Android.Volley.CroNet                                         |1.2.1.8             |
-| 218|com.google.android.recaptcha:recaptcha                                |18.3.0              |Xamarin.Google.Android.Recaptcha                                      |18.3.0.3            |
+| 218|com.google.android.recaptcha:recaptcha                                |18.4.0              |Xamarin.Google.Android.Recaptcha                                      |18.4.0              |
 | 219|com.github.bumptech.glide:annotations                                 |4.16.0              |Xamarin.Android.Glide.Annotations                                     |4.16.0.2            |
 | 220|com.github.bumptech.glide:disklrucache                                |4.16.0              |Xamarin.Android.Glide.DiskLruCache                                    |4.16.0.2            |
 | 221|com.github.bumptech.glide:gifdecoder                                  |4.16.0              |Xamarin.Android.Glide.GifDecoder                                      |4.16.0.2            |
