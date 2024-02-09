@@ -67,6 +67,12 @@
     </attr>
     
     
+	<attr 
+		path="/api/package[@name='com.google.firebase.storage.ktx']" 
+		name="managedName"
+		>
+		Firebase.Storage.Ktx
+	</attr>
     
     
     

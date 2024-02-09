@@ -17,6 +17,12 @@
         >
         Firebase.AppCheck.Internal.Util
     </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.appcheck.ktx']" 
+        name="managedName"
+        >
+        Firebase.AppCheck.Ktx
+    </attr>
     
     
 </metadata>

@@ -4,8 +4,12 @@
     <RepositoryType>git</RepositoryType>
 
     <!-- Default TFM's we build for -->
-    <_DefaultTargetFrameworks>MonoAndroid12.0;net6.0-android</_DefaultTargetFrameworks>
-
+    <_DefaultTargetFrameworks>MonoAndroid12.0;net6.0-android;net7.0-android</_DefaultTargetFrameworks>
+    
+    <!-- Use an updated 'generator' -->
+    <!-- It's ok to use "Windows" here because we only use managed code from this package -->
+    <_BindingsToolsLocation>$(MSBuildThisFileDirectory)/tools/Microsoft.Android.Sdk.Windows.34.0.43/tools/</_BindingsToolsLocation>
+        
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
 
@@ -21,18 +25,27 @@
 
     <!-- Mark .NET6+ packages as supporting trimming -->
     <IsTrimmable>true</IsTrimmable>
+    
+    <!-- Suppress warnings about `net6.0-android` being EOL -->
+    <CheckEolWorkloads>false</CheckEolWorkloads>
+
+    <!-- Exclude TF-specific transform files by default -->
+    <DefaultTransformExcludes>**/*.MonoAndroid*.0.xml;**/*.net*.0-android.xml</DefaultTransformExcludes>
   </PropertyGroup>
 
   <!-- Folders that various files get placed into -->
   <ItemGroup>
     <_TargetFrameworkNugetBuildFolders Include="build\monoandroid12.0" />
     <_TargetFrameworkNugetBuildFolders Include="build\net6.0-android31.0" />
+    <_TargetFrameworkNugetBuildFolders Include="build\net7.0-android33.0" />
     <_TargetFrameworkNugetBuildFolders Include="buildTransitive\monoandroid12.0" />
     <_TargetFrameworkNugetBuildFolders Include="buildTransitive\net6.0-android31.0" />
+    <_TargetFrameworkNugetBuildFolders Include="buildTransitive\net7.0-android33.0" />
   </ItemGroup>
 
   <ItemGroup>
     <_TargetFrameworkNugetAarFolders Include="aar\monoandroid12.0" />
     <_TargetFrameworkNugetAarFolders Include="aar\net6.0-android31.0" />
+    <_TargetFrameworkNugetAarFolders Include="aar\net7.0-android33.0" />
   </ItemGroup>
 </Project>

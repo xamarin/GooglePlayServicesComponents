@@ -92,4 +92,10 @@
 		path="/api/package[@name='com.google.android.gms.maps.model']/class[@name='TextureStyle.Builder']/method[@name='self' and count(parameter)=0]"	
 		/>
 	
+	<attr
+		path="/api/package[@name='com.google.android.gms.maps.model']/interface[@name='AdvancedMarkerOptions.CollisionBehavior']"
+		name="managedName"
+		>
+		ICollisionBehaviorContract
+	</attr>
 </metadata>

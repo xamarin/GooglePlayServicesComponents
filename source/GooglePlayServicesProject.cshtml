@@ -215,7 +215,10 @@
     <TransformFile Include="..\..\source\Metadata.Common.xml" >
       <Link>Transforms/Metadata.Common.xml</Link>
     </TransformFile>
-    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.xml">
+    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.xml" Exclude="$(DefaultTransformExcludes)">
+        <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
+    </TransformFile>
+    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.$(TargetFramework).xml">
         <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </TransformFile>
   </ItemGroup>
@@ -287,11 +290,11 @@
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Crashlytics")
     {
-      <PackageReference Include="Xamarin.Google.Dagger" Version="2.47.0" />
+      <PackageReference Include="Xamarin.Google.Dagger" Version="2.47.0.1" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Measurement.Connector.Impl")
     {
-      <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base" Version="121.3.0.2" />
+      <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base" Version="121.3.0.3" />
     }
     <!-- Reference -->
     <Reference Include="System.Net.Http" Condition=" '$(TargetFramework)' == '@(targetFrameworkMoniker)' " />
