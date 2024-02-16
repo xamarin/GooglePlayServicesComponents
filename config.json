@@ -26,8 +26,12 @@
       {
         "templateFile": "source/GooglePlayServicesNuGetReadMe.cshtml",
         "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+      },
+      {
+        "templateFile": "source/GooglePlayServicesDirectoryBuildRsp.cshtml",
+        "outputFileRule": "generated/{groupid}.{artifactid}/Directory.Build.rsp"
       }
-    ],
+      ],
     "artifacts": [
       {
         "groupId": "com.google.android.gms",
