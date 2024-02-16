@@ -841,7 +841,7 @@
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics",
         "version": "21.3.0",
-        "nugetVersion": "121.3.0.2",
+        "nugetVersion": "121.3.0.4",
         "nugetId": "Xamarin.Firebase.Analytics",
         "dependencyOnly": false
       },
@@ -857,7 +857,7 @@
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics-ktx",
         "version": "21.3.0",
-        "nugetVersion": "121.3.0.2",
+        "nugetVersion": "121.3.0.4",
         "nugetId": "Xamarin.Firebase.Analytics.Ktx",
         "dependencyOnly": false
       },
