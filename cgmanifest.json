@@ -1322,7 +1322,7 @@
           "groupId": "com.google.firebase",
           "version": "21.3.0",
           "nuGetId": "Xamarin.Firebase.Analytics",
-          "nuGetVersion": "121.3.0.2"
+          "nuGetVersion": "121.3.0.4"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1348,7 +1348,7 @@
           "groupId": "com.google.firebase",
           "version": "21.3.0",
           "nuGetId": "Xamarin.Firebase.Analytics.Ktx",
-          "nuGetVersion": "121.3.0.2"
+          "nuGetVersion": "121.3.0.4"
         }
       },
       "license": "The Apache Software License, Version 2.0"

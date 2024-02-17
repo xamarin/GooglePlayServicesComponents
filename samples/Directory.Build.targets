@@ -101,9 +101,9 @@
     <PackageReference Update="Xamarin.Firebase.Abt" Version="121.1.1.5" />
     <PackageReference Update="Xamarin.Firebase.Ads" Version="122.3.0.2" />
     <PackageReference Update="Xamarin.Firebase.Ads.Lite" Version="122.3.0.2" />
-    <PackageReference Update="Xamarin.Firebase.Analytics" Version="121.3.0.2" />
+    <PackageReference Update="Xamarin.Firebase.Analytics" Version="121.3.0.4" />
     <PackageReference Update="Xamarin.Firebase.Analytics.Impl" Version="116.3.0.13" />
-    <PackageReference Update="Xamarin.Firebase.Analytics.Ktx" Version="121.3.0.2" />
+    <PackageReference Update="Xamarin.Firebase.Analytics.Ktx" Version="121.3.0.4" />
     <PackageReference Update="Xamarin.Firebase.Annotations" Version="116.2.0.5" />
     <PackageReference Update="Xamarin.Firebase.AppCheck" Version="117.1.1.1" />
     <PackageReference Update="Xamarin.Firebase.AppCheck.Debug" Version="117.1.1.1" />
