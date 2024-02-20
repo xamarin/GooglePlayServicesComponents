@@ -423,7 +423,11 @@ Firebase.ProtoliteWrapper
 Firebase.Provider
 Firebase.RemoteConfig
 Firebase.RemoteConfig.Internal
+Firebase.RemoteConfig.Internal.Rollouts
+Firebase.RemoteConfig.InterOp
+Firebase.RemoteConfig.InterOp.Rollouts
 Firebase.RemoteConfig.Ktx
+Firebase.RemoteConfigInterOp
 Firebase.Sessions
 Firebase.Sessions.Api
 Firebase.Storage
@@ -550,7 +554,6 @@ Xamarin.Google.Android.DataTransport.Runtime
 Xamarin.Google.Android.DataTransport.Runtime.Backends
 Xamarin.Google.Android.DataTransport.Runtime.Dagger
 Xamarin.Google.Android.DataTransport.Runtime.Dagger.Internal
-Xamarin.Google.Android.DataTransport.Runtime.Dagger.MultiBindings
 Xamarin.Google.Android.DataTransport.Runtime.Firebase.Transport
 Xamarin.Google.Android.DataTransport.Runtime.Logging
 Xamarin.Google.Android.DataTransport.Runtime.Persistence
