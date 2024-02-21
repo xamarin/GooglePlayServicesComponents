@@ -2058,6 +2058,7 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.Android",
         "dependencyOnly": false,
+        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2067,6 +2068,7 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.Api",
         "dependencyOnly": false,
+        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2076,6 +2078,7 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.Context",
         "dependencyOnly": false,
+        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2085,6 +2088,7 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.Core",
         "dependencyOnly": false,
+        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2094,6 +2098,7 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.OkHttp",
         "dependencyOnly": false,
+        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2103,6 +2108,7 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
         "dependencyOnly": false,
+        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2112,6 +2118,7 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.Stub",
         "dependencyOnly": false,
+        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2356,6 +2363,24 @@
         "nugetId": "Xamarin.Google.Inject.Guice",
         "dependencyOnly": false,
         "templateSet": "inject-guice"
+      },
+      {
+        "groupId": "aopalliance",
+        "artifactId": "aopalliance",
+        "version": "1.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.APOAlliance",
+        "dependencyOnly": false,
+        "templateSet": "aopalliance"
+      },
+      {
+        "groupId": "org.ow2.asm",
+        "artifactId": "asm",
+        "version": "9.2",
+        "nugetVersion": "9.2.0",
+        "nugetId": "Xamarin.OW2.ASM",
+        "dependencyOnly": false,
+        "templateSet": "ow2-asm"
       },
       //=======================================================================
       // nuget dependencies
@@ -3216,6 +3241,42 @@
         "templates": [
           {
             "templateFile": "templates/inject-guice/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "aopalliance",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/aopalliance/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
+            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "ow2-asm",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/ow2-asm/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
