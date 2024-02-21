@@ -2349,7 +2349,7 @@
         "templateSet": "tensorflow-lite"
       },
       {
-        "groupId": "org.google.inject",
+        "groupId": "com.google.inject",
         "artifactId": "guice",
         "version": "5.1.0",
         "nugetVersion": "5.1.0",
