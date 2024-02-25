@@ -106,4 +106,8 @@
         path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='enableClassification' and count(parameter)=0 and @return='com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions.Builder']"
         />
 
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='build' and count(parameter)=0]"
+        />
+        
 </metadata>
