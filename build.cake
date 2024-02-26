@@ -541,7 +541,7 @@ Task("libs-native")
 	Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
 	MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
 
-	root = "./source/com.google.android.play/asset-delivery.extensions/";
+	root = "./source/com.google.android.play/asset.delivery.extensions/";
 
 	RunGradle(root, "build");
 
