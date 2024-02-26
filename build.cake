@@ -545,7 +545,7 @@ Task("libs-native")
 
 	RunGradle(root, "build");
 
-	outputDir = "./externals/com.xamarin.google.android.play.asset.delivery/";
+	outputDir = "./externals/com.xamarin.google.android.play.asset.delivery.extensions/";
 	EnsureDirectoryExists(outputDir);
 	CleanDirectories(outputDir);
 
