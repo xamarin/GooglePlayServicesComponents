@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.google.android.play>
+  <app-update versions="2.0.0,2.0.1,2.1.0"/>
+  <app-update-ktx versions="2.0.0,2.0.1,2.1.0"/>
+  <asset-delivery versions="2.0.0,2.0.1,2.0.2,2.1.0,2.2.0"/>
+  <asset-delivery-ktx versions="2.0.0,2.0.1,2.1.0,2.2.0"/>
+  <core versions="1.2.0,1.3.0,1.3.1,1.3.2,1.3.3,1.3.4,1.3.5,1.3.6,1.3.7,1.4.0,1.4.1,1.5.0,1.6.0,1.6.1,1.6.2,1.6.3,1.6.4,1.6.5,1.7.0,1.7.1,1.7.2,1.7.3,1.8.0,1.8.2,1.8.3,1.9.0,1.9.1,1.10.0,1.10.1,1.10.2,1.10.3"/>
+  <core-common versions="2.0.0,2.0.1,2.0.2,2.0.3"/>
+  <core-ktx versions="1.6.4,1.6.5,1.7.0,1.8.0,1.8.1"/>
+  <feature-delivery versions="2.0.0,2.0.1,2.1.0"/>
+  <feature-delivery-ktx versions="2.0.0,2.0.1,2.1.0"/>
+  <integrity versions="1.0.0,1.0.1,1.0.2,1.1.0-beta01,1.1.0-beta02,1.1.0,1.2.0,1.3.0"/>
+  <review versions="2.0.0,2.0.1"/>
+  <review-ktx versions="2.0.0,2.0.1"/>
+</com.google.android.play>
