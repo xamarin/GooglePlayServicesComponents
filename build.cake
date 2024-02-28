@@ -551,7 +551,7 @@ Task("libs-native")
 
 	CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
 	Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
-	MoveFile($"{outputDir}/classes.jar", $"{outputDir}/asset.delivery.extensions.jar");
+	MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
 });
 
 
