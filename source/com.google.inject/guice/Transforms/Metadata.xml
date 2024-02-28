@@ -1,48 +1,5 @@
 ﻿<metadata>
     <attr
-        path="/api/package[@name='com.google.inject']"
-        name="manaegdName"
-        >
-        Xamarin.Google.Inject
-    </attr>
-    <attr
-        path="/api/package[@name='com.google.inject.internal']"
-        name="manaegdName"
-        >
-        Xamarin.Google.Inject.Internal
-    </attr>
-    <attr
-        path="/api/package[@name='com.google.inject.internal.util']"
-        name="manaegdName"
-        >
-        Xamarin.Google.Inject.Internal.Util
-    </attr>
-    <attr
-        path="/api/package[@name='com.google.inject.matcher']"
-        name="manaegdName"
-        >
-        Xamarin.Google.Inject.Matcher
-    </attr>
-    <attr
-        path="/api/package[@name='com.google.inject.name']"
-        name="manaegdName"
-        >
-        Xamarin.Google.Inject.Name
-    </attr>
-    <attr
-        path="/api/package[@name='com.google.inject.spi']"
-        name="manaegdName"
-        >
-        Xamarin.Google.Inject.SPI
-    </attr>
-    <attr
-        path="/api/package[@name='com.google.inject.util']"
-        name="manaegdName"
-        >
-        Xamarin.Google.Inject.Util
-    </attr>
-
-    <attr
         path="/api/package[@name='com.google.inject.internal']/class[@name='ProviderMethod']/method[@name='getDependencies' and count(parameter)=0]"
         name="managedReturn"
         >
@@ -64,5 +21,14 @@
         >
         System.Collections.Generic.ICollection &lt; Dependency &gt;
     </attr>
+    <remove-node
+        path="/api/package[@name='com.google.inject.matcher']/class[@name='AbstractMatcher']/typeParameters"
+        />
 
+    <attr
+        path="/api/package[@name='com.google.inject']/interface[@name='PrivateBinder']/method[@name='skipSources' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;?&gt;...']]"
+        name="managedReturn"
+        >
+        Com.Google.Inject.IBinder
+    </attr>
 </metadata>
