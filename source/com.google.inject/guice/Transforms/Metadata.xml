@@ -29,6 +29,13 @@
         path="/api/package[@name='com.google.inject']/interface[@name='PrivateBinder']/method[@name='skipSources' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;?&gt;...']]"
         name="managedReturn"
         >
-        Com.Google.Inject.IBinder
+        Xamarin.Google.Inject.IBinder
     </attr>
+    <attr
+        path="/api/package[@name='com.google.inject']/interface[@name='PrivateBinder']/method[@name='withSource' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Inject.IBinder
+    </attr>
+
 </metadata>

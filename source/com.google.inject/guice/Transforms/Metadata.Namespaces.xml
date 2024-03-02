@@ -1,43 +1,55 @@
 ﻿<metadata>
     <attr
         path="/api/package[@name='com.google.inject']"
-        name="manaegdName"
+        name="managedName"
         >
         Xamarin.Google.Inject
     </attr>
     <attr
+        path="/api/package[@name='com.google.inject.binder']"
+        name="managedName"
+        >
+        Xamarin.Google.Inject.Binder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.inject.multibindings']"
+        name="managedName"
+        >
+        Xamarin.Google.Inject.Multibindings
+    </attr>
+    <attr
         path="/api/package[@name='com.google.inject.internal']"
-        name="manaegdName"
+        name="managedName"
         >
         Xamarin.Google.Inject.Internal
     </attr>
     <attr
         path="/api/package[@name='com.google.inject.internal.util']"
-        name="manaegdName"
+        name="managedName"
         >
         Xamarin.Google.Inject.Internal.Util
     </attr>
     <attr
         path="/api/package[@name='com.google.inject.matcher']"
-        name="manaegdName"
+        name="managedName"
         >
         Xamarin.Google.Inject.Matcher
     </attr>
     <attr
         path="/api/package[@name='com.google.inject.name']"
-        name="manaegdName"
+        name="managedName"
         >
         Xamarin.Google.Inject.Name
     </attr>
     <attr
         path="/api/package[@name='com.google.inject.spi']"
-        name="manaegdName"
+        name="managedName"
         >
         Xamarin.Google.Inject.SPI
     </attr>
     <attr
         path="/api/package[@name='com.google.inject.util']"
-        name="manaegdName"
+        name="managedName"
         >
         Xamarin.Google.Inject.Util
     </attr>
