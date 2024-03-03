@@ -109,5 +109,23 @@
     <remove-node 
         path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='build' and count(parameter)=0]"
         />
-        
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='build' and count(parameter)=0]"
+        name="abstract"
+        >
+        false
+    </attr>
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='enableClassification' and count(parameter)=0]"
+        />
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='enableMultipleObjects' and count(parameter)=0]"
+        />
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
+        />
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int']]"
+        />
+
 </metadata>
