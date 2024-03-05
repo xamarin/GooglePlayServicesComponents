@@ -2339,6 +2339,14 @@
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
       },
+      {
+        "groupId": "com.google.ads.interactivemedia.v3",
+        "artifactId": "interactivemedia",
+        "version": "3.29.0",
+        "nugetVersion": "3.29.0",
+        "nugetId": "Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia",
+        "dependencyOnly": false
+      },
       //=======================================================================
       // nuget dependencies
       // AndroidX
