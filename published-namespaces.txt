@@ -570,7 +570,6 @@ Xamarin.Google.Android.Play.Core.AppUpdate
 Xamarin.Google.Android.Play.Core.AppUpdate.Install
 Xamarin.Google.Android.Play.Core.AppUpdate.Install.Model
 Xamarin.Google.Android.Play.Core.AppUpdate.Testing
-Xamarin.Google.Android.Play.Core.Assetpacks
 Xamarin.Google.Android.Play.Core.AssetPacks
 Xamarin.Google.Android.Play.Core.AssetPacks.Model
 Xamarin.Google.Android.Play.Core.Common
