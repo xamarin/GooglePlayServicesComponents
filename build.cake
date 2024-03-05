@@ -540,6 +540,18 @@ Task("libs-native")
 	CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
 	Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
 	MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
+
+	root = "./source/com.google.android.play/feature.delivery.extensions/";
+
+	RunGradle(root, "build");
+
+	outputDir = "./externals/com.xamarin.google.android.play.feature.delivery.extensions/";
+	EnsureDirectoryExists(outputDir);
+	CleanDirectories(outputDir);
+
+	CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
+	Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
+	MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
 });
 
 
