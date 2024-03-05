@@ -252,11 +252,6 @@
       }
     }
     <!-- Pull in the play core extensions helpers -->
-    @if (@Model.NuGetPackageId == "Xamarin.Google.Android.Play.Core")
-    {
-    <EmbeddedJar Include="..\..\externals\com.xamarin.google.android.play.core.extensions\extensions.jar" />
-    }
-
     @if (@Model.NuGetPackageId == "Xamarin.Google.Android.Play.Asset.Delivery")
     {
     <EmbeddedJar Include="..\..\externals\com.xamarin.google.android.play.asset.delivery.extensions\extensions.jar" />

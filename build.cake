@@ -529,23 +529,11 @@ Task("mergetargets")
 Task("libs-native")
 	.Does(() =>
 {
-	string root = "./source/com.google.android.play/core.extensions/";
+	string root = "./source/com.google.android.play/asset.delivery.extensions/";
 
 	RunGradle(root, "build");
 
-	string outputDir = "./externals/com.xamarin.google.android.play.core.extensions/";
-	EnsureDirectoryExists(outputDir);
-	CleanDirectories(outputDir);
-
-	CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
-	Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
-	MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
-
-	root = "./source/com.google.android.play/asset.delivery.extensions/";
-
-	RunGradle(root, "build");
-
-	outputDir = "./externals/com.xamarin.google.android.play.asset.delivery.extensions/";
+	string outputDir = "./externals/com.xamarin.google.android.play.asset.delivery.extensions/";
 	EnsureDirectoryExists(outputDir);
 	CleanDirectories(outputDir);
 
