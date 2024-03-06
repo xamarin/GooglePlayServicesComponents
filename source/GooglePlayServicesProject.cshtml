@@ -256,6 +256,10 @@
     {
     <EmbeddedJar Include="..\..\externals\com.xamarin.google.android.play.asset.delivery.extensions\extensions.jar" />
     }
+    @if (@Model.NuGetPackageId == "Xamarin.Google.Android.Play.Feature.Delivery")
+    {
+    <EmbeddedJar Include="..\..\externals\com.xamarin.google.android.play.feature.delivery.extensions\extensions.jar" />
+    }
   </ItemGroup>
   }
   <ItemGroup>
