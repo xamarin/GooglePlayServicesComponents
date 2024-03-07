@@ -587,6 +587,7 @@ Xamarin.Google.Android.Play.Core.SplitInstall
 Xamarin.Google.Android.Play.Core.SplitInstall.Model
 Xamarin.Google.Android.Play.Core.SplitInstall.Testing
 Xamarin.Google.Android.Play.Core.Tasks
+Xamarin.Google.Android.Play.Feature.Delivery
 Xamarin.Google.Android.Recaptcha
 Xamarin.Google.ErrorProne.Annotations
 Xamarin.Google.ErrorProne.Annotations.Concurrent
