@@ -26,11 +26,28 @@ public class MainActivity : Activity
         // Create our Wrapper and set up the event handler.
         listener = new AssetPackStateUpdateListenerWrapper();
         listener.StateUpdate += Listener_StateUpdate;
+
+        var location = assetPackManager.GetPackLocation ("installtimepack");
+        assetPackManager.Fetch (new string[] {"fastfollowpack"});
+        assetPackManager.Fetch (new string[] {"ondemandpack"});
     }
 
     void Listener_StateUpdate(object? sender, AssetPackStateEventArgs e)
     {
         var status = e.State.Status();
         Android.Util.Log.Info ("Listener_StateUpdate", status.ToString ());
+    }
+
+    protected override void OnResume()
+    {
+        // regsiter our Listener Wrapper with the IAssetPackManager so we get feedback.
+        assetPackManager?.RegisterListener(listener?.Listener);
+        base.OnResume();
+    }
+
+    protected override void OnPause()
+    {
+        assetPackManager?.UnregisterListener(listener?.Listener);
+        base.OnPause();
     }
 }

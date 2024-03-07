@@ -12,9 +12,8 @@
     <ApplicationId>com.companyname.BuildAllDotNet</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-   
+     <AndroidBundleToolExtraArgs Condition=" '$(Configuration)' == 'Debug' ">--local-testing</AndroidBundleToolExtraArgs>
 
-    
     <!-- Override property from 'Directory.Build.props' -->
     <!--
     <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
@@ -29,7 +28,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AndroidAsset Update="Assets/InstallTimeAsset.txt" AssetPack="myinstalltime" DeliveryType="InstallTime" />
+    <AndroidAsset Update="Assets/InstallTimeAsset.txt" AssetPack="installtimepack" DeliveryType="InstallTime" />
+    <AndroidAsset Update="Assets/FastFollowAsset.txt" AssetPack="fastfollowpack" DeliveryType="FastFollow" />
+    <AndroidAsset Update="Assets/OnDemandAsset.txt" AssetPack="ondemandpack" DeliveryType="OnDemand" />
   </ItemGroup>
 
   <ItemGroup>
