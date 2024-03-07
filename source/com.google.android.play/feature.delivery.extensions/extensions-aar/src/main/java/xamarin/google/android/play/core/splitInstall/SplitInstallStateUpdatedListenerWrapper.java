@@ -1,4 +1,4 @@
-package xamarin.google.android.play.core.splitInstall;
+package xamarin.google.android.play.core.splitinstall;
 
 import com.google.android.play.core.splitinstall.SplitInstallManager;
 import com.google.android.play.core.splitinstall.SplitInstallManagerFactory;
