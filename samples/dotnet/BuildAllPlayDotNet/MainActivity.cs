@@ -7,7 +7,7 @@ using Xamarin.Google.Android.Play.Core.AssetPacks;
 using Xamarin.Google.Android.Play.Core.AssetPacks.Model;
 using static Xamarin.Google.Android.Play.Core.AssetPacks.AssetPackStateUpdateListenerWrapper;
 
-namespace BuildAllDotNet;
+namespace BuildAllPlayDotNet;
 
 [Activity(Label = "@string/app_name", MainLauncher = true)]
 public class MainActivity : Activity
