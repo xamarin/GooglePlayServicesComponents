@@ -540,6 +540,30 @@ Task("libs-native")
 	CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
 	Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
 	MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
+
+	root = "./source/com.google.android.play/asset.delivery.extensions/";
+
+	RunGradle(root, "build");
+
+	outputDir = "./externals/com.xamarin.google.android.play.asset.delivery.extensions/";
+	EnsureDirectoryExists(outputDir);
+	CleanDirectories(outputDir);
+
+	CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
+	Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
+	MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
+
+	root = "./source/com.google.android.play/feature.delivery.extensions/";
+
+	RunGradle(root, "build");
+
+	outputDir = "./externals/com.xamarin.google.android.play.feature.delivery.extensions/";
+	EnsureDirectoryExists(outputDir);
+	CleanDirectories(outputDir);
+
+	CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
+	Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
+	MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
 });
 
 
@@ -913,6 +937,7 @@ Task("samples-only-dotnet")
         "./samples/dotnet/BuildAllDotNet.sln",
         "./samples/dotnet/BuildAllMauiApp.sln",
         "./samples/dotnet/BuildAllXamarinForms.sln",
+        "./samples/dotnet/BuildAllPlayDotNet.sln",
     };
 
     DotNetMSBuildSettings settings = null;
@@ -982,7 +1007,7 @@ Task("allbindingprojectrefs")
 	generateTargets("./output/Xamarin.Firebase.*.nupkg", "./output/FirebasePackages.targets");
 	generateTargets("./output/Xamarin.GooglePlayServices.*.nupkg", "./output/PlayServicesPackages.targets");
 	generateTargets("./output/Xamarin.Google.MLKit.*.nupkg", "./output/Google.MLKit.targets");
-	generateTargets("./output/Xamarin.Google.Play.*.nupkg", "./output/Google.Play.targets");
+	generateTargets("./output/Xamarin.Google.Android.Play.*.nupkg", "./output/Google.Play.targets");
 });
 
 
