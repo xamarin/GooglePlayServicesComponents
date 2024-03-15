@@ -2235,9 +2235,10 @@
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-select-tf-ops",
         "version": "2.14.0",
-        "nugetVersion": "2.14.0.1",
+        "nugetVersion": "2.14.0",
         "nugetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
         "dependencyOnly": false,
+        "frozen" : true,
         "templateSet": "tensorflow-lite"
       },
       {

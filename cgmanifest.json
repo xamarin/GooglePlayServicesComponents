@@ -3491,7 +3491,7 @@
           "groupId": "org.tensorflow",
           "version": "2.14.0",
           "nuGetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
-          "nuGetVersion": "2.14.0.1"
+          "nuGetVersion": "2.14.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"

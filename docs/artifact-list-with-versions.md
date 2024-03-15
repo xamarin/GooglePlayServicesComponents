@@ -273,7 +273,7 @@
 | 266|org.tensorflow:tensorflow-lite-api                                    |2.14.0              |Xamarin.TensorFlow.Lite.Api                                           |2.14.0.1            |
 | 267|org.tensorflow:tensorflow-lite-gpu                                    |2.14.0              |Xamarin.TensorFlow.Lite.Gpu                                           |2.14.0.1            |
 | 268|org.tensorflow:tensorflow-lite-gpu-api                                |2.14.0              |Xamarin.TensorFlow.Lite.Gpu.Api                                       |2.14.0.1            |
-| 269|org.tensorflow:tensorflow-lite-select-tf-ops                          |2.14.0              |Xamarin.TensorFlow.Lite.Select.TF.Ops                                 |2.14.0.1            |
+| 269|org.tensorflow:tensorflow-lite-select-tf-ops                          |2.14.0              |Xamarin.TensorFlow.Lite.Select.TF.Ops                                 |2.14.0              |
 | 270|org.tensorflow:tensorflow-android                                     |1.13.1              |Xamarin.TensorFlow.Android                                            |1.13.1.5            |
 | 271|org.tensorflow:tensorflow-lite-support                                |0.4.4               |Xamarin.TensorFlow.Lite.Support.Library                               |0.4.4.2             |
 | 272|org.tensorflow:tensorflow-lite-support-api                            |0.4.4               |Xamarin.TensorFlow.Lite.Support.Api                                   |0.4.4.2             |
