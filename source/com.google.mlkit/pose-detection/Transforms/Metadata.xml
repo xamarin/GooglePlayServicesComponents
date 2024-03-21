@@ -1,14 +1,51 @@
 ﻿<metadata>
+    <!-- 
+    already contains a definition for 'cb_build'
+    -->
     <remove-node
         path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='build' and count(parameter)=0 and @return='com.google.mlkit.vision.pose.defaults.PoseDetectorOptions']"
         />
 
+
+    <!-- 
+    TODO:
+    path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int']]"
+    path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int']]"
+
+      <method abstract="false" deprecated="not deprecated" final="false" name="setDetectorMode" jni-signature="(I)Lcom/google/mlkit/vision/pose/defaults/PoseDetectorOptions$Builder;" bridge="false" native="false" return="com.google.mlkit.vision.pose.defaults.PoseDetectorOptions.Builder" jni-return="Lcom/google/mlkit/vision/pose/defaults/PoseDetectorOptions$Builder;" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="p0" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setDetectorMode" jni-signature="(I)Lcom/google/mlkit/vision/pose/PoseDetectorOptionsBase$Builder;" bridge="true" native="false" return="java.lang.Object" jni-return="Lcom/google/mlkit/vision/pose/PoseDetectorOptionsBase$Builder;" static="false" synchronized="false" synthetic="true" visibility="public" return-not-null="true">
+        <parameter name="p0" type="int" jni-type="I" />
+      </method>
+
+    already contains a definition for 'cb_setDetectorMode_I'
+    -->
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedName"
+        >
+        SetDetectorModeAsObject
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int'] and @return='com.google.mlkit.vision.pose.defaults.PoseDetectorOptions.Builder']"
+        name="managedName"
+        >
+        SetDetectorModeAsBuilder
+    </attr>
     <remove-node
         path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int'] and @return='com.google.mlkit.vision.pose.defaults.PoseDetectorOptions.Builder']"
-        />
-
+        />        
     <remove-node
-        path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor'] and @return='com.google.mlkit.vision.pose.defaults.PoseDetectorOptions.Builder']"
-        />
+        path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int']]"
+        />        
+    <!--
+        'PoseDetectorOptions.Builder' already contains a definition for 'cb_setExecutor_Ljava_util_concurrent_Executor_'
+    -->    
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
+        />        
+
+
 
 </metadata>
