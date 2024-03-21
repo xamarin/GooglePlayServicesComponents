@@ -2247,6 +2247,8 @@
         "dependencyOnly": false,
         "templateSet": "tensorflow-lite"
       },
+      /*
+      Frozen does not prevent attempt to push 300+ MBs to NuGet Gallery
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-lite-select-tf-ops",
@@ -2254,8 +2256,10 @@
         "nugetVersion": "2.15.0",
         "nugetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
         "dependencyOnly": false,
+        "frozen" : true,
         "templateSet": "tensorflow-lite"
       },
+      */
       {
         "groupId": "org.tensorflow",
         "artifactId": "tensorflow-android",
