@@ -17,5 +17,10 @@
         >
         Xamarin.Google.Android.Play.Core.AssetPacks.Model
     </attr>
+    <attr
+        path="/api/package[@name='xamarin.google.android.play.core.assetpacks']"
+        name="managedName">
+        Xamarin.Google.Android.Play.Core.AssetPacks
+    </attr>
 
 </metadata>
