@@ -573,6 +573,7 @@ Task ("spell-check")
                 "Util",
                 "GoogleId",
                 "Brotli",
+                "TLS",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
