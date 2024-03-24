@@ -5,5 +5,11 @@
         >
         Xamarin.ObjectWeb.Asm
     </attr>
+    <attr
+        path="/api/package[@name='org.objectweb.asm.signature']"
+        name="managedName"
+        >
+        Xamarin.ObjectWeb.Asm.Signature
+    </attr>
 
 </metadata>
