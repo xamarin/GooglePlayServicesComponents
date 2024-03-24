@@ -53,5 +53,11 @@
         >
         Xamarin.Google.Inject.Util
     </attr>
+    <attr
+        path="/api/package[@name='com.google.inject.internal.aop']"
+        name="managedName"
+        >
+        Xamarin.Google.Inject.Internal.AOP
+    </attr>
 
 </metadata>
