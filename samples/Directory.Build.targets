@@ -269,7 +269,6 @@
     <PackageReference Update="Xamarin.TensorFlow.Lite.Api" Version="2.15.0" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu" Version="2.15.0" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu.Api" Version="2.15.0" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Select.TF.Ops" Version="2.15.0" />
     <PackageReference Update="Xamarin.TensorFlow.Android" Version="1.13.1.5" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Support.Library" Version="0.4.4.2" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Support.Api" Version="0.4.4.2" />
