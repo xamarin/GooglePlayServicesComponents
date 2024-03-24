@@ -572,6 +572,10 @@ Task ("spell-check")
                 "PlayServices",
                 "Util",
                 "GoogleId",
+                "Guice",
+                "APOAlliance",
+                "OW2",
+                "ASM",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
