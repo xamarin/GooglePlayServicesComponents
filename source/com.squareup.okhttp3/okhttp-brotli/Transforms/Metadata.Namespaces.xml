@@ -1,10 +1,9 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='okhttp3.brotli']" 
         name="managedName"
         >
-        Package
+        Square.OkHttp3.Brotli
     </attr>
-    -->
+
 </metadata>

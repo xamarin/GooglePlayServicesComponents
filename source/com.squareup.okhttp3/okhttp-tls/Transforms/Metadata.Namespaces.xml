@@ -1,10 +1,14 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='okhttp3.tls']" 
         name="managedName"
         >
-        Package
+        Square.OkHttp3.TLS
     </attr>
-    -->
+    <attr 
+        path="/api/package[@name='okhttp3.tls.internal']" 
+        name="managedName"
+        >
+        Square.OkHttp3.TLS.Internal
+    </attr>
 </metadata>
