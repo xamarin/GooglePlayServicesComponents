@@ -1,3 +1,15 @@
 ﻿<metadata>
+    <attr
+        path="/api/package[@name='org.aopalliance.intercept']"
+        name="managedName"
+        >
+        Xamarin.AopAlliance.Intercept
+    </attr>
+    <attr
+        path="/api/package[@name='org.aopalliance.aop']"
+        name="managedName"
+        >
+        Xamarin.AopAlliance.Aop
+    </attr>
 
 </metadata>

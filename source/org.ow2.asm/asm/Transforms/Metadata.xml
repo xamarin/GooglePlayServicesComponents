@@ -1,3 +1,9 @@
 ﻿<metadata>
+    <attr
+        path="/api/package[@name='org.objectweb.asm']"
+        name="managedName"
+        >
+        Xamarin.ObjectWeb.Asm
+    </attr>
 
 </metadata>
