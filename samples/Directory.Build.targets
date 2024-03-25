@@ -236,8 +236,10 @@
     <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.25.1" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1.11" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.11" />
+    <PackageReference Update="Square.OkHttp3.OkHttp.Brotli" Version="4.12.0" />
     <PackageReference Update="Square.OkHttp3.LoggingInterceptor" Version="4.12.0.1" />
     <PackageReference Update="Square.OkHttp3" Version="4.12.0.1" />
+    <PackageReference Update="Square.OkHttp3.OkHttp.TLS" Version="4.12.0" />
     <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.12.0.1" />
     <PackageReference Update="Square.OkIO" Version="3.6.0.1" />
     <PackageReference Update="Square.OkIO.JVM" Version="3.6.0.1" />
@@ -279,6 +281,7 @@
     <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Audio.PlayServices.Library" Version="0.4.4.2" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Vision.PlayServices.Library" Version="0.4.4.2" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library" Version="0.4.4.2" />
+    <PackageReference Update="Xamarin.Brotli.Dec" Version="0.1.2" />
     <PackageReference Update="Xamarin.AndroidX.Activity" Version="1.8.1.1" />
     <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.7.0.3" />
     <PackageReference Update="Xamarin.AndroidX.AppCompat" Version="1.6.1.6" />
