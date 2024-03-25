@@ -40,21 +40,24 @@
             <PackageId>Xamarin.Google.Inject.Guice</PackageId>
             <Title>Xamarin Google Inject Guice</Title>
             <Summary>
-              .NET for Android (formerly Xamarin.Android) bindings Google Inject Guice bindings
+              .NET for Android (formerly Xamarin.Android) bindings Google Inject Guice bindings.
+
+              Guice alleviates the need for factories and the use of new in your Java code. Think of 
+              Guice's Inject as the new new. User will still need to write factories in some cases, but 
+              the code will not depend directly on them. The code will be easier to change, unit test 
+              and reuse in other contexts.
             </Summary>
             <Description>
-              .NET for Android (formerly Xamarin.Android) bindings for Google Inject Guice library.
-              FlatBuffers (Java) is a cross platform serialization library architected for maximum memory 
-              efficiency. It allows you to directly access serialized data without parsing/unpacking it first, 
-              while still having great forwards/backwards compatibility.
+              .NET for Android (formerly Xamarin.Android) bindings Google Inject Guice bindings.
+
+              Guice alleviates the need for factories and the use of new in your Java code. Think of 
+              Guice's Inject as the new new. User will still need to write factories in some cases, but 
+              the code will not depend directly on them. The code will be easier to change, unit test 
+              and reuse in other contexts.
             </Description>
             <PackageDescription>
-              .NET for Android (formerly Xamarin.Android) bindings for Google Inject Guice library.
-              FlatBuffers (Java) is a cross platform serialization library architected for maximum memory 
-              efficiency. It allows you to directly access serialized data without parsing/unpacking it first, 
-              while still having great forwards/backwards compatibility.
             </PackageDescription>
-            <PackageTags>.NET dotnet Google Inject Guice serialization xamarin android monoandroid monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
+            <PackageTags>.NET dotnet Google Inject Guice dependency injection xamarin android monoandroid monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
             break; 
           default:
             break; 
@@ -97,8 +100,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\flatbuffers\License.md" Pack="true" PackagePath="LICENSE.md" />
-    <None Include="..\..\templates\flatbuffers\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\templates\inject-guice\License.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\inject-guice\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
   <ItemGroup>

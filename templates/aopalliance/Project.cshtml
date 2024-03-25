@@ -27,7 +27,7 @@
     <RepositoryUrl>https://go.microsoft.com/fwlink/?linkid=865435</RepositoryUrl>
     <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
+    <PackageLicenseExpression>MIT AND public</PackageLicenseExpression>
 
     @foreach (var art in @Model.MavenArtifacts) 
     {
@@ -44,13 +44,13 @@
             </Summary>
             <Description>
               .NET for Android (formerly Xamarin.Android) bindings for Google Inject Guice library.
-              FlatBuffers (Java) is a cross platform serialization library architected for maximum memory 
+              aopalliance (Java) is a cross platform serialization library architected for maximum memory 
               efficiency. It allows you to directly access serialized data without parsing/unpacking it first, 
               while still having great forwards/backwards compatibility.
             </Description>
             <PackageDescription>
               .NET for Android (formerly Xamarin.Android) bindings for Google Inject Guice library.
-              FlatBuffers (Java) is a cross platform serialization library architected for maximum memory 
+              aopalliance (Java) is a cross platform serialization library architected for maximum memory 
               efficiency. It allows you to directly access serialized data without parsing/unpacking it first, 
               while still having great forwards/backwards compatibility.
             </PackageDescription>
@@ -97,8 +97,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\flatbuffers\License.md" Pack="true" PackagePath="LICENSE.md" />
-    <None Include="..\..\templates\flatbuffers\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\templates\aopalliance\License.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\aopalliance\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
   <ItemGroup>

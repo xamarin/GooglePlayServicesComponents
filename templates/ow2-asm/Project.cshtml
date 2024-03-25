@@ -27,34 +27,30 @@
     <RepositoryUrl>https://go.microsoft.com/fwlink/?linkid=865435</RepositoryUrl>
     <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
+    <PackageLicenseExpression>MIT AND BSD-3-Clause</PackageLicenseExpression>
 
     @foreach (var art in @Model.MavenArtifacts) 
     {
       <PackageId>@Model.NuGetPackageId</PackageId>
-      <RootNamespace>Xamarin.Google.Inject.Guice</RootNamespace>
-      <AssemblyName>Xamarin.Google.Inject.Guice</AssemblyName>
+      <RootNamespace>Xamarin.OW2.ASM</RootNamespace>
+      <AssemblyName>Xamarin.OW2.ASM</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Xamarin.Google.Inject.Guice":
-            <PackageId>Xamarin.Google.Inject.Guice</PackageId>
-            <Title>Xamarin Google Inject Guice</Title>
+          case "Xamarin.OW2.ASM":
+            <PackageId>Xamarin.OW2.ASM</PackageId>
+            <Title>Xamarin OW2 ASM</Title>
             <Summary>
-              .NET for Android (formerly Xamarin.Android) bindings Google Inject Guice bindings
+              .NET for Android (formerly Xamarin.Android) bindings OW2 ASM bindings
             </Summary>
             <Description>
-              .NET for Android (formerly Xamarin.Android) bindings for Google Inject Guice library.
-              FlatBuffers (Java) is a cross platform serialization library architected for maximum memory 
-              efficiency. It allows you to directly access serialized data without parsing/unpacking it first, 
-              while still having great forwards/backwards compatibility.
+              .NET for Android (formerly Xamarin.Android) bindings for OW2 ASM library.
+              ow2-asm (Java) ASM: a very small and fast Java bytecode manipulation framework
             </Description>
             <PackageDescription>
-              .NET for Android (formerly Xamarin.Android) bindings for Google Inject Guice library.
-              FlatBuffers (Java) is a cross platform serialization library architected for maximum memory 
-              efficiency. It allows you to directly access serialized data without parsing/unpacking it first, 
-              while still having great forwards/backwards compatibility.
+              .NET for Android (formerly Xamarin.Android) bindings for OW2 ASM library.
+              ow2-asm (Java) ASM: a very small and fast Java bytecode manipulation framework
             </PackageDescription>
-            <PackageTags>.NET dotnet Google Inject Guice serialization xamarin android monoandroid monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
+            <PackageTags>.NET dotnet OW2 ASM bytecode manipulation framework xamarin android monoandroid monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
             break; 
           default:
             break; 
@@ -97,8 +93,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\flatbuffers\License.md" Pack="true" PackagePath="LICENSE.md" />
-    <None Include="..\..\templates\flatbuffers\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\templates\ow2-asm\License.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\ow2-asm\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
   <ItemGroup>
