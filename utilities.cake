@@ -576,6 +576,8 @@ Task ("spell-check")
                 "APOAlliance",
                 "OW2",
                 "ASM",
+                "Brotli",
+                "TLS",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 

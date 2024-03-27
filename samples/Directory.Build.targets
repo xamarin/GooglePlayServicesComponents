@@ -236,8 +236,10 @@
     <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.25.3" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1.11" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.11" />
+    <PackageReference Update="Square.OkHttp3.OkHttp.Brotli" Version="4.12.0" />
     <PackageReference Update="Square.OkHttp3.LoggingInterceptor" Version="4.12.0.1" />
     <PackageReference Update="Square.OkHttp3" Version="4.12.0.1" />
+    <PackageReference Update="Square.OkHttp3.OkHttp.TLS" Version="4.12.0" />
     <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.12.0.1" />
     <PackageReference Update="Square.OkIO" Version="3.8.0" />
     <PackageReference Update="Square.OkIO.JVM" Version="3.8.0" />
@@ -283,6 +285,7 @@
     <PackageReference Update="Xamarin.Google.Inject.Guice" Version="5.1.0" />
     <PackageReference Update="Xamarin.APOAlliance" Version="1.0.0" />
     <PackageReference Update="Xamarin.OW2.ASM" Version="9.2.0" />
+    <PackageReference Update="Xamarin.Brotli.Dec" Version="0.1.2" />
     <PackageReference Update="Xamarin.AndroidX.Activity" Version="1.8.1.1" />
     <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.7.0.3" />
     <PackageReference Update="Xamarin.AndroidX.AppCompat" Version="1.6.1.6" />
