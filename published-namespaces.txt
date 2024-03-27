@@ -504,7 +504,10 @@ Retrofit2.Internal
 Square.JavaPoet
 Square.OkHttp
 Square.OkHttp3
+Square.OkHttp3.Brotli
 Square.OkHttp3.Logging
+Square.OkHttp3.TLS
+Square.OkHttp3.TLS.Internal
 Square.OkIO
 Square.Picasso
 Square.Retrofit
@@ -527,6 +530,7 @@ Volley.Toolbox
 Xamarin.Android.Libraries.Intelligence.Acceleration
 Xamarin.Android.Libraries.Intelligence.Acceleration.Process
 Xamarin.Android.Libraries.Vision.VisionKit.Pipeline
+Xamarin.Brotli.Dec
 Xamarin.Chromium.Base
 Xamarin.Chromium.Base.Annotations
 Xamarin.Chromium.Base.Compat
