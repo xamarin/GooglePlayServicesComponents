@@ -572,6 +572,10 @@ Task ("spell-check")
                 "PlayServices",
                 "Util",
                 "GoogleId",
+                "Guice",
+                "APOAlliance",
+                "OW2",
+                "ASM",
                 "Brotli",
                 "TLS",
             };

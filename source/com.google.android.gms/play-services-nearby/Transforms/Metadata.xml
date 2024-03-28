@@ -120,5 +120,11 @@
 		>
 		ISlotDurationContract
 	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.nearby.fastpair']"
+		name="managedName"
+		>
+		Android.Gms.Nearby.FastPair
+	</attr>
 
 </metadata>
