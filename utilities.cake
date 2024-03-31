@@ -573,7 +573,7 @@ Task ("spell-check")
                 "Util",
                 "GoogleId",
                 "Guice",
-                "APOAlliance",
+                "AopAlliance",
                 "OW2",
                 "ASM",
                 "Brotli",
