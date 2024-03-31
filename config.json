@@ -2391,7 +2391,7 @@
         "artifactId": "aopalliance",
         "version": "1.0",
         "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.APOAlliance",
+        "nugetId": "Xamarin.AopAlliance",
         "dependencyOnly": false,
         "templateSet": "aopalliance"
       },
