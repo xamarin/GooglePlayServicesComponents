@@ -146,13 +146,13 @@
         path="/api/package[@name='gen._base._base_java__assetres.srcjar']"
         name="managedName"
         >
-        Xamarin.Chromium.Gen.Base.BaseJavaAsstress.SrcJAR
+        Xamarin.Chromium.Gen.Base.BaseJavaAsstRes.SrcJAR
     </attr>
     <attr
         path="/api/package[@name='gen._net._android._net_java__assetres.srcjar']"    
         name="managedName"
         >
-        Xamarin.Chromium.Gen.Net.Android.NetJavaAsstress.SrcJAR
+        Xamarin.Chromium.Gen.Net.Android.NetJavaAsstRes.SrcJAR
     </attr>
 
 
