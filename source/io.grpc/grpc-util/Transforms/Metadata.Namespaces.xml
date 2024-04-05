@@ -3,7 +3,7 @@
         path="/api/package[@name='io.grpc.util']" 
         name="managedName"
         >
-        Xamarin.Grpc.Util
+        Xamarin.Grpc.Core.Util
     </attr>
 
 </metadata>
