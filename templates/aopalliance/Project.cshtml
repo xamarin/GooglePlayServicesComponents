@@ -32,29 +32,23 @@
     @foreach (var art in @Model.MavenArtifacts) 
     {
       <PackageId>@Model.NuGetPackageId</PackageId>
-      <RootNamespace>Xamarin.Google.Inject.Guice</RootNamespace>
-      <AssemblyName>Xamarin.Google.Inject.Guice</AssemblyName>
+      <RootNamespace>Xamarin.AopAlliance</RootNamespace>
+      <AssemblyName>Xamarin.AopAlliance</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Xamarin.Google.Inject.Guice":
-            <PackageId>Xamarin.Google.Inject.Guice</PackageId>
-            <Title>Xamarin Google Inject Guice</Title>
+          case "Xamarin.AopAlliance":
+            <PackageId>Xamarin.AopAlliance</PackageId>
+            <Title>Xamarin AOP Alliance Bindings</Title>
             <Summary>
-              .NET for Android (formerly Xamarin.Android) bindings Google Inject Guice bindings
+              .NET for Android (formerly Xamarin.Android) bindings AOP Alliance bindings
             </Summary>
             <Description>
-              .NET for Android (formerly Xamarin.Android) bindings for Google Inject Guice library.
-              aopalliance (Java) is a cross platform serialization library architected for maximum memory 
-              efficiency. It allows you to directly access serialized data without parsing/unpacking it first, 
-              while still having great forwards/backwards compatibility.
+              .NET for Android (formerly Xamarin.Android) bindings for AOP Alliance library.
             </Description>
             <PackageDescription>
-              .NET for Android (formerly Xamarin.Android) bindings for Google Inject Guice library.
-              aopalliance (Java) is a cross platform serialization library architected for maximum memory 
-              efficiency. It allows you to directly access serialized data without parsing/unpacking it first, 
-              while still having great forwards/backwards compatibility.
+              .NET for Android (formerly Xamarin.Android) bindings for AOP Alliance library.
             </PackageDescription>
-            <PackageTags>.NET dotnet Google Inject Guice serialization xamarin android monoandroid monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
+            <PackageTags>.NET dotnet AOP Alliance serialization xamarin android monoandroid monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
             break; 
           default:
             break; 
