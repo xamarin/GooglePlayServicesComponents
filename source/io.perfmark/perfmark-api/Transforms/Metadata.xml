@@ -1,8 +1,5 @@
 <metadata>
-    <attr
-        path="/api/package[@name='io.perfmark']/interface[@name='StringFunction']/method[@name='apply' and count(parameter)=1 and parameter[1][@type='T']]"
-        name="return"
-        >
-        java.lang.Object
-    </attr>
+    <remove-node 
+        path="/api/package[@name='io.perfmark']/interface[@name='StringFunction']/typeParameters"
+        />    
 </metadata>
