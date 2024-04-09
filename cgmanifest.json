@@ -1465,7 +1465,7 @@
           "groupId": "com.google.firebase",
           "version": "22.3.1",
           "nuGetId": "Xamarin.Firebase.Auth",
-          "nuGetVersion": "22.3.1"
+          "nuGetVersion": "122.3.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1491,7 +1491,7 @@
           "groupId": "com.google.firebase",
           "version": "22.3.1",
           "nuGetId": "Xamarin.Firebase.Auth.Ktx",
-          "nuGetVersion": "22.3.1"
+          "nuGetVersion": "122.3.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1543,7 +1543,7 @@
           "groupId": "com.google.firebase",
           "version": "21.6.1",
           "nuGetId": "Xamarin.Firebase.Config",
-          "nuGetVersion": "21.6.1"
+          "nuGetVersion": "121.6.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1556,7 +1556,7 @@
           "groupId": "com.google.firebase",
           "version": "21.6.1",
           "nuGetId": "Xamarin.Firebase.Config.Ktx",
-          "nuGetVersion": "21.6.1"
+          "nuGetVersion": "121.6.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1569,7 +1569,7 @@
           "groupId": "com.google.firebase",
           "version": "16.0.1",
           "nuGetId": "Xamarin.Firebase.Config.Interop",
-          "nuGetVersion": "16.0.1"
+          "nuGetVersion": "116.0.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1608,7 +1608,7 @@
           "groupId": "com.google.firebase",
           "version": "18.6.2",
           "nuGetId": "Xamarin.Firebase.Crashlytics",
-          "nuGetVersion": "18.6.2"
+          "nuGetVersion": "118.6.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1621,7 +1621,7 @@
           "groupId": "com.google.firebase",
           "version": "18.6.2",
           "nuGetId": "Xamarin.Firebase.Crashlytics.Ktx",
-          "nuGetVersion": "18.6.2"
+          "nuGetVersion": "118.6.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1634,7 +1634,7 @@
           "groupId": "com.google.firebase",
           "version": "18.6.2",
           "nuGetId": "Xamarin.Firebase.Crashlytics.NDK",
-          "nuGetVersion": "18.6.2"
+          "nuGetVersion": "118.6.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2206,7 +2206,7 @@
           "groupId": "com.google.firebase",
           "version": "20.5.2",
           "nuGetId": "Xamarin.Firebase.Perf",
-          "nuGetVersion": "20.5.2"
+          "nuGetVersion": "120.5.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2219,7 +2219,7 @@
           "groupId": "com.google.firebase",
           "version": "20.5.2",
           "nuGetId": "Xamarin.Firebase.Perf.Ktx",
-          "nuGetVersion": "20.5.2"
+          "nuGetVersion": "120.5.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2232,7 +2232,7 @@
           "groupId": "com.google.firebase",
           "version": "1.2.2",
           "nuGetId": "Xamarin.Firebase.Sessions",
-          "nuGetVersion": "1.2.2"
+          "nuGetVersion": "101.2.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"

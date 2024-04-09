@@ -546,8 +546,8 @@ Xamarin.Chromium.CroNet
 Xamarin.Chromium.CroNet.ApiHelpers
 Xamarin.Chromium.CroNet.Impl
 Xamarin.Chromium.CroNet.UrlConnection
-Xamarin.Chromium.Gen.Base.BaseJavaAsstress.SrcJAR
-Xamarin.Chromium.Gen.Net.Android.NetJavaAsstress.SrcJAR
+Xamarin.Chromium.Gen.Base.BaseJavaAsstRes.SrcJAR
+Xamarin.Chromium.Gen.Net.Android.NetJavaAsstRes.SrcJAR
 Xamarin.Chromium.HttpFlags
 Xamarin.Chromium.J
 Xamarin.Chromium.JNI.Zero
@@ -694,6 +694,7 @@ Xamarin.Grpc
 Xamarin.Grpc.Android
 Xamarin.Grpc.Core.InProcess
 Xamarin.Grpc.Core.Internal
+Xamarin.Grpc.Core.Util
 Xamarin.Grpc.OkHttp
 Xamarin.Grpc.OkHttp.Internal
 Xamarin.Grpc.OkHttp.Internal.Framed
@@ -701,7 +702,6 @@ Xamarin.Grpc.OkHttp.Internal.Proxy
 Xamarin.Grpc.Protobuf.Lite
 Xamarin.Grpc.Stub
 Xamarin.Grpc.Stub.Annotations
-Xamarin.Grpc.Util
 Xamarin.Io.OpenCensus.Common
 Xamarin.Io.OpenCensus.Contrib.Grpc.Metrics
 Xamarin.Io.OpenCensus.Internal
