@@ -1,5 +1,8 @@
 using System.Runtime.CompilerServices;
 
+/*
+Adding TypeForwardedTo introduces cyclic dependency between Xamarin.Grpc.Core and Xamarin.Grpc.Core.Util
+
 [assembly: TypeForwardedTo (typeof (Xamarin.Grpc.Core.Util.AdvancedTlsX509KeyManager))]
 [assembly: TypeForwardedTo (typeof (Xamarin.Grpc.Core.Util.AdvancedTlsX509TrustManager))]
 [assembly: TypeForwardedTo (typeof (Xamarin.Grpc.Core.Util.CertificateUtils))]
@@ -13,3 +16,4 @@ using System.Runtime.CompilerServices;
 [assembly: TypeForwardedTo (typeof (Xamarin.Grpc.Core.Util.OutlierDetectionLoadBalancerProvider))]
 [assembly: TypeForwardedTo (typeof (Xamarin.Grpc.Core.Util.RoundRobinLoadBalancer))]
 [assembly: TypeForwardedTo (typeof (Xamarin.Grpc.Core.Util.TransmitStatusRuntimeExceptionInterceptor))]
+*/
