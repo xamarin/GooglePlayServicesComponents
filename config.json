@@ -2076,7 +2076,6 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.Android",
         "dependencyOnly": false,
-        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2086,7 +2085,6 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.Api",
         "dependencyOnly": false,
-        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2096,7 +2094,6 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.Context",
         "dependencyOnly": false,
-        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2106,7 +2103,6 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.Core",
         "dependencyOnly": false,
-        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2116,7 +2112,6 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.OkHttp",
         "dependencyOnly": false,
-        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2126,7 +2121,6 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
         "dependencyOnly": false,
-        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2136,7 +2130,6 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.Stub",
         "dependencyOnly": false,
-        "excludedRuntimeDependencies": "io.grpc.grpc-util",
         "templateSet": "grpc"
       },
       {
@@ -2146,6 +2139,7 @@
         "nugetVersion": "1.58.1",
         "nugetId": "Xamarin.Grpc.Util",
         "dependencyOnly": false,
+        "excludedRuntimeDependencies": "io.grpc.grpc-core",
         "templateSet": "grpc"
       },
       {
