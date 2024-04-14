@@ -1,10 +1,10 @@
 // Tools needed by cake addins
 // #tool nuget:?package=Cake.CoreCLR               // needed for debugging
-#tool nuget:?package=vswhere&version=3.1.4
+#tool nuget:?package=vswhere&version=3.1.7
 #tool nuget:?package=Microsoft.Android.Sdk.Windows&version=34.0.43
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=5.0.0
+#addin nuget:?package=Cake.FileHelpers&version=7.0.0
 #addin nuget:?package=Newtonsoft.Json&version=13.0.3
 
 //using Cake.Common.Tools.MSBuild;
