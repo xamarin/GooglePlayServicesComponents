@@ -1,3 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      <TargetFramework>net8.0-android</TargetFramework>
+      <IsPackable>false</IsPackable>
+      <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+      <PackageReference Include="NUnit" Version="3.13.3" />
+      <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+      <PackageReference Include="NUnit.Analyzers" Version="3.6.1" />
+      <PackageReference Include="coverlet.collector" Version="3.2.0" />
+      <PackageReference Include="SharpZipLib" Version="1.4.2" />
+      <PackageReference Include="Xamarin.UITest" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdMobSample\AdMobSample.csproj">
+    </ProjectReference>
+  </ItemGroup>
+
+</Project>
+<!--
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -49,3 +74,4 @@
     </ProjectReference>
   </ItemGroup>
 </Project>
+-->
