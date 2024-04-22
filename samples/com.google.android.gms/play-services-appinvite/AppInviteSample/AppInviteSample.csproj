@@ -5,8 +5,8 @@
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationId>AdMobSample</ApplicationId>
-    <RootNamespace>AdMob</RootNamespace>
+    <ApplicationId>AppInviteSample</ApplicationId>
+    <RootNamespace>AppInviteSample</RootNamespace>
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 
