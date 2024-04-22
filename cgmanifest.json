@@ -3663,6 +3663,18 @@
           "nuGetVersion": "0.1.2"
         }
       }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "interactivemedia",
+          "groupId": "com.google.ads.interactivemedia.v3",
+          "version": "3.29.0",
+          "nuGetId": "Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia",
+          "nuGetVersion": "3.29.0"
+        }
+      }
     }
   ],
   "version": 0
