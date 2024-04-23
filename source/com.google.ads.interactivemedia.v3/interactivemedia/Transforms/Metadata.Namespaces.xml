@@ -1,30 +1,30 @@
 ﻿<metadata>
     <attr 
-        path="/api/package[@name='com..google.ads.interactivemedia.v3.api']" 
+        path="/api/package[@name='com.google.ads.interactivemedia.v3.api']" 
         name="managedName"
         >
         Google.Ads.InteractiveMedia.V3.API
     </attr>
     <attr 
-        path="/api/package[@name='com..google.ads.interactivemedia.v3.api.player']" 
+        path="/api/package[@name='com.google.ads.interactivemedia.v3.api.player']" 
         name="managedName"
         >
         Google.Ads.InteractiveMedia.V3.API.Player
     </attr>
     <attr 
-        path="/api/package[@name='com..google.ads.interactivemedia.v3.api.signals']" 
+        path="/api/package[@name='com.google.ads.interactivemedia.v3.api.signals']" 
         name="managedName"
         >
         Google.Ads.InteractiveMedia.V3.API.Signals
     </attr>
     <attr 
-        path="/api/package[@name='com..google.ads.interactivemedia.v3.impl']" 
+        path="/api/package[@name='com.google.ads.interactivemedia.v3.impl']" 
         name="managedName"
         >
         Google.Ads.InteractiveMedia.V3.Impl
     </attr>
     <attr 
-        path="/api/package[@name='com..google.ads.interactivemedia.v3.impl.data']" 
+        path="/api/package[@name='com.google.ads.interactivemedia.v3.impl.data']" 
         name="managedName"
         >
         Google.Ads.InteractiveMedia.V3.Impl.Data
