@@ -1888,8 +1888,8 @@
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.25.0",
-        "nugetVersion": "2.25.0",
+        "version": "2.26.1",
+        "nugetVersion": "2.26.1",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": false,
         "templateSet": "errorprone"
