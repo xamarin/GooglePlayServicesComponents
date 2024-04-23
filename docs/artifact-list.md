@@ -287,3 +287,4 @@
 | 280|org.tensorflow:tensorflow-lite-task-vision-play-services              |Xamarin.TensorFlow.Lite.Task.Vision.PlayServices.Library              |
 | 281|org.tensorflow:tensorflow-lite-task-text-play-services                |Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library                |
 | 282|org.brotli:dec                                                        |Xamarin.Brotli.Dec                                                    |
+| 283|com.google.ads.interactivemedia.v3:interactivemedia                   |Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia               |
