@@ -3,19 +3,19 @@
         path="/api/package[@name='com.google.ads.interactivemedia.v3.api']" 
         name="managedName"
         >
-        Google.Ads.InteractiveMedia.V3.API
+        Google.Ads.InteractiveMedia.V3.Api
     </attr>
     <attr 
         path="/api/package[@name='com.google.ads.interactivemedia.v3.api.player']" 
         name="managedName"
         >
-        Google.Ads.InteractiveMedia.V3.API.Player
+        Google.Ads.InteractiveMedia.V3.Api.Player
     </attr>
     <attr 
         path="/api/package[@name='com.google.ads.interactivemedia.v3.api.signals']" 
         name="managedName"
         >
-        Google.Ads.InteractiveMedia.V3.API.Signals
+        Google.Ads.InteractiveMedia.V3.Api.Signals
     </attr>
     <attr 
         path="/api/package[@name='com.google.ads.interactivemedia.v3.impl']" 
