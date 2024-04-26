@@ -574,6 +574,8 @@ Task ("spell-check")
                 "GoogleId",
                 "Brotli",
                 "TLS",
+                "InteractiveMedia",
+                "V3",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 

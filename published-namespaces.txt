@@ -445,6 +445,10 @@ Google.Ads
 Google.Ads.Identifier
 Google.Ads.InteractiveMedia.PAL
 Google.Ads.InteractiveMedia.PAL.Utils
+Google.Ads.InteractiveMedia.V3.Api
+Google.Ads.InteractiveMedia.V3.Api.Player
+Google.Ads.InteractiveMedia.V3.Api.Signals
+Google.Ads.InteractiveMedia.V3.Impl.Data
 Google.Ads.Mediation
 Google.Ads.Mediation.Admob
 Google.AndroidLibraries.BarHopper
