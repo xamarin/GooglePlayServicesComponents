@@ -45,7 +45,7 @@
         path="/api/package[@name='com.google.inject.spi']"
         name="managedName"
         >
-        Xamarin.Google.Inject.SPI
+        Xamarin.Google.Inject.Spi
     </attr>
     <attr
         path="/api/package[@name='com.google.inject.util']"
@@ -57,7 +57,7 @@
         path="/api/package[@name='com.google.inject.internal.aop']"
         name="managedName"
         >
-        Xamarin.Google.Inject.Internal.AOP
+        Xamarin.Google.Inject.Internal.Aop
     </attr>
 
 </metadata>
