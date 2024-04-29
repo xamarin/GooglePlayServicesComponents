@@ -2995,9 +2995,9 @@
         "maven": {
           "artifactId": "error_prone_annotations",
           "groupId": "com.google.errorprone",
-          "version": "2.25.0",
+          "version": "2.26.1",
           "nuGetId": "Xamarin.Google.ErrorProne.Annotations",
-          "nuGetVersion": "2.25.0"
+          "nuGetVersion": "2.26.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"

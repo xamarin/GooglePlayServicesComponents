@@ -235,7 +235,7 @@
 | 228|com.google.android.ump:user-messaging-platform                        |2.2.0               |Xamarin.Google.UserMessagingPlatform                                  |2.2.0               |
 | 229|com.google.code.findbugs:jsr305                                       |3.0.2               |Xamarin.Google.Code.FindBugs.JSR305                                   |3.0.2.12            |
 | 230|com.google.dagger:dagger                                              |2.49                |Xamarin.Google.Dagger                                                 |2.49.0              |
-| 231|com.google.errorprone:error_prone_annotations                         |2.25.0              |Xamarin.Google.ErrorProne.Annotations                                 |2.25.0              |
+| 231|com.google.errorprone:error_prone_annotations                         |2.26.1              |Xamarin.Google.ErrorProne.Annotations                                 |2.26.1              |
 | 232|com.google.zxing:core                                                 |3.5.3               |Xamarin.Google.ZXing.Core                                             |3.5.3               |
 | 233|com.google.flatbuffers:flatbuffers-java                               |23.5.26             |Xamarin.Google.FlatBuffers.Java                                       |23.5.26.4           |
 | 234|com.google.protobuf:protobuf-javalite                                 |3.25.3              |Xamarin.Protobuf.JavaLite                                             |3.25.3              |
