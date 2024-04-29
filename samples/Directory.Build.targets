@@ -286,8 +286,9 @@
     <PackageReference Update="Xamarin.AopAlliance" Version="1.0.0" />
     <PackageReference Update="Xamarin.OW2.ASM" Version="9.2.0" />
     <PackageReference Update="Xamarin.Brotli.Dec" Version="0.1.2" />
+    <PackageReference Update="Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia" Version="3.29.0" />
     <PackageReference Update="Xamarin.AndroidX.Activity" Version="1.8.1.1" />
-    <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.7.0.3" />
+    <PackageReference Update="Xamarin.AndroidX.Annotation" Version="1.7.1.1" />
     <PackageReference Update="Xamarin.AndroidX.AppCompat" Version="1.6.1.6" />
     <PackageReference Update="Xamarin.AndroidX.Browser" Version="1.7.0.1" />
     <PackageReference Update="Xamarin.AndroidX.CardView" Version="1.0.0.24" />
@@ -309,9 +310,11 @@
     <PackageReference Update="Xamarin.AndroidX.LocalBroadcastManager" Version="1.1.0.10" />
     <PackageReference Update="Xamarin.AndroidX.Media" Version="1.7.0" />
     <PackageReference Update="Xamarin.AndroidX.MediaRouter" Version="1.6.0.2" />
+    <PackageReference Update="Xamarin.AndroidX.Preference" Version="1.2.1.4" />
     <PackageReference Update="Xamarin.AndroidX.RecyclerView" Version="1.3.2.1" />
     <PackageReference Update="Xamarin.AndroidX.Tracing.Tracing" Version="1.2.0" />
     <PackageReference Update="Xamarin.AndroidX.VectorDrawable.Animated" Version="1.1.0.22" />
+    <PackageReference Update="Xamarin.AndroidX.WebKit" Version="1.10.0.1" />
     <PackageReference Update="Xamarin.AndroidX.Work.Runtime" Version="2.9.0" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="3.1.9.2" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="3.1.9.2" />
@@ -328,10 +331,10 @@
     <PackageReference Update="Xamarin.Android.ReactiveX.RxAndroid" Version="2.1.1.8" />
     <PackageReference Update="Xamarin.Android.ReactiveX.RxJava" Version="2.2.21.15" />
     <PackageReference Update="Xamarin.CheckerFramework.CheckerQual" Version="3.40.0.1" />
-    <PackageReference Update="Xamarin.Kotlin.StdLib" Version="1.9.21.1" />
-    <PackageReference Update="Xamarin.Kotlin.StdLib.Common" Version="1.9.21.1" />
-    <PackageReference Update="Xamarin.Kotlin.StdLib.Jdk7" Version="1.9.21.1" />
-    <PackageReference Update="Xamarin.Kotlin.StdLib.Jdk8" Version="1.9.21.1" />
+    <PackageReference Update="Xamarin.Kotlin.StdLib" Version="1.9.22.1" />
+    <PackageReference Update="Xamarin.Kotlin.StdLib.Common" Version="1.9.22.1" />
+    <PackageReference Update="Xamarin.Kotlin.StdLib.Jdk7" Version="1.9.22.1" />
+    <PackageReference Update="Xamarin.Kotlin.StdLib.Jdk8" Version="1.9.22.1" />
     <PackageReference Update="Xamarin.KotlinX.Coroutines.Android" Version="1.7.3.3" />
     <PackageReference Update="Xamarin.KotlinX.Coroutines.Core" Version="1.7.3.3" />
     <PackageReference Update="Xamarin.KotlinX.Coroutines.Play.Services" Version="1.7.3.3" />
