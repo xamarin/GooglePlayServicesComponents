@@ -140,7 +140,7 @@
         path="/api/package[@name='org.jni_zero']"
         name="managedName"
         >
-        Xamarin.Chromium.JNI.Zero
+        Xamarin.Chromium.Jni.Zero
     </attr>
     <attr
         path="/api/package[@name='gen._base._base_java__assetres.srcjar']"
