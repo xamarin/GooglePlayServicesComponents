@@ -554,7 +554,7 @@ Xamarin.Chromium.Gen.Base.BaseJavaAsstRes.SrcJAR
 Xamarin.Chromium.Gen.Net.Android.NetJavaAsstRes.SrcJAR
 Xamarin.Chromium.HttpFlags
 Xamarin.Chromium.J
-Xamarin.Chromium.JNI.Zero
+Xamarin.Chromium.Jni.Zero
 Xamarin.Chromium.Native_Test
 Xamarin.Chromium.Url
 Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations
@@ -608,12 +608,12 @@ Xamarin.Google.FlatBuffers
 Xamarin.Google.FlatBuffers.Reflection
 Xamarin.Google.Inject
 Xamarin.Google.Inject.Binder
-Xamarin.Google.Inject.Internal.AOP
+Xamarin.Google.Inject.Internal.Aop
 Xamarin.Google.Inject.Internal.Util
 Xamarin.Google.Inject.Matcher
 Xamarin.Google.Inject.Multibindings
 Xamarin.Google.Inject.Name
-Xamarin.Google.Inject.SPI
+Xamarin.Google.Inject.Spi
 Xamarin.Google.Inject.Util
 Xamarin.Google.MLKit.Barhopper
 Xamarin.Google.MLKit.Common
