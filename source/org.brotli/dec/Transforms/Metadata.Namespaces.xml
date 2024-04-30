@@ -1,9 +1,8 @@
 ﻿<metadata>
     <attr 
-        path="/api/package[@name='io.grpc.util']" 
+        path="/api/package[@name='org.brotli.dec']" 
         name="managedName"
         >
-        Xamarin.Grpc.Core.Util
+        Xamarin.Brotli.Dec
     </attr>
-
 </metadata>

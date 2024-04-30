@@ -34,9 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Google.Android.Play.Asset.Delivery" Version="2.1.0.5" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Asset.Delivery" Version="2.1.0.6" />
     <!-- Remove the old Conflicting Package otherwise this causes build errors. -->
-    <PackageReference Remove="Xamarin.Google.Android.Play.Core" Version="2.1.0.5" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Core" Version="1.10.3.10" />
   </ItemGroup>
     
 </Project>

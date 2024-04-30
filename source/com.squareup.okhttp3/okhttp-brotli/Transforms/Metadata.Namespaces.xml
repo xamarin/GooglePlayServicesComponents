@@ -1,9 +1,9 @@
 ﻿<metadata>
     <attr 
-        path="/api/package[@name='io.grpc.util']" 
+        path="/api/package[@name='okhttp3.brotli']" 
         name="managedName"
         >
-        Xamarin.Grpc.Core.Util
+        Square.OkHttp3.Brotli
     </attr>
 
 </metadata>

@@ -32,55 +32,32 @@
     @foreach (var art in @Model.MavenArtifacts) 
     {
       <PackageId>@Model.NuGetPackageId</PackageId>
-      <RootNamespace>@Model.NuGetPackageId</RootNamespace>
-      <AssemblyName>@Model.NuGetPackageId</AssemblyName>
+      <RootNamespace>Xamarin.Google.Inject.Guice</RootNamespace>
+      <AssemblyName>Xamarin.Google.Inject.Guice</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Square.OkHttp3":
-            <Title>OkHttp v3 bindings for .NET for Android (formerly Xamarin.Android)</Title>
+          case "Xamarin.Google.Inject.Guice":
+            <PackageId>Xamarin.Google.Inject.Guice</PackageId>
+            <Title>Xamarin Google Inject Guice</Title>
             <Summary>
-              An HTTP+HTTP/2 client for Android and Java applications.
+              .NET for Android (formerly Xamarin.Android) bindings Google Inject Guice bindings.
+
+              Guice alleviates the need for factories and the use of new in your Java code. Think of 
+              Guice's Inject as the new new. User will still need to write factories in some cases, but 
+              the code will not depend directly on them. The code will be easier to change, unit test 
+              and reuse in other contexts.
             </Summary>
             <Description>
-              An HTTP+HTTP/2 client for Android and Java applications.
+              .NET for Android (formerly Xamarin.Android) bindings Google Inject Guice bindings.
+
+              Guice alleviates the need for factories and the use of new in your Java code. Think of 
+              Guice's Inject as the new new. User will still need to write factories in some cases, but 
+              the code will not depend directly on them. The code will be easier to change, unit test 
+              and reuse in other contexts.
             </Description>
             <PackageDescription>
-              An HTTP+HTTP/2 client for Android and Java applications.
             </PackageDescription>
-            <PackageTags>.NET dotnet okhttp square square.okhttp xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
-            break; 
-          case "Square.OkHttp3.UrlConnection":
-            <Title>OkHttp v3 UrlConnection bindings for .NET for Android (formerly Xamarin.Android)</Title>
-            <Summary>
-              OkHttp ability to be used with HttpURLConnection.
-            </Summary>
-            <Description>
-              OkHttp ability to be used with HttpURLConnection.
-            </Description>
-            <PackageDescription>
-              OkHttp ability to be used with HttpURLConnection.
-            </PackageDescription>
-            <PackageTags>.NET dotnet okhttp square square.okhttp xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
-           break;             
-          case "Square.OkHttp3.LoggingInterceptor":
-            <Title>OkHttp v3 LoggingInterceptor bindings for .NET for Android (formerly Xamarin.Android)</Title>
-            <Description>
-              OkHttp ability to be used with HttpURLConnection.
-            </Description>
-            <PackageTags>.NET dotnet okhttp square square.okhttp xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
-            break;
-          case "Square.OkHttp3.OkHttp.Brotli":
-            <Title>OkHttp v3 bindings for .NET for Android (formerly Xamarin.Android)</Title>
-            <Summary>
-              An HTTP+HTTP/2 client for Android and Java applications.
-            </Summary>
-            <Description>
-              An HTTP+HTTP/2 client for Android and Java applications.
-            </Description>
-            <PackageDescription>
-              An HTTP+HTTP/2 client for Android and Java applications.
-            </PackageDescription>
-            <PackageTags>.NET dotnet okhttp square square.okhttp xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
+            <PackageTags>.NET dotnet Google Inject Guice dependency injection xamarin android monoandroid monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
             break; 
           default:
             break; 
@@ -123,8 +100,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\squareup-okhttp3\License.md" Pack="true" PackagePath="LICENSE.md" />
-    <None Include="..\..\templates\squareup-okhttp3\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\templates\inject-guice\License.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\inject-guice\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
   <ItemGroup>

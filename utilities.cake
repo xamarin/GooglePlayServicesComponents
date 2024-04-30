@@ -572,6 +572,14 @@ Task ("spell-check")
                 "PlayServices",
                 "Util",
                 "GoogleId",
+                "Guice",
+                "AopAlliance",
+                "OW2",
+                "ASM",
+                "Brotli",
+                "TLS",
+                "InteractiveMedia",
+                "V3",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 

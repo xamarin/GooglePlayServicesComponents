@@ -27,60 +27,28 @@
     <RepositoryUrl>https://go.microsoft.com/fwlink/?linkid=865435</RepositoryUrl>
     <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
+    <PackageLicenseExpression>MIT AND public</PackageLicenseExpression>
 
     @foreach (var art in @Model.MavenArtifacts) 
     {
       <PackageId>@Model.NuGetPackageId</PackageId>
-      <RootNamespace>@Model.NuGetPackageId</RootNamespace>
-      <AssemblyName>@Model.NuGetPackageId</AssemblyName>
+      <RootNamespace>Xamarin.AopAlliance</RootNamespace>
+      <AssemblyName>Xamarin.AopAlliance</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Square.OkHttp3":
-            <Title>OkHttp v3 bindings for .NET for Android (formerly Xamarin.Android)</Title>
+          case "Xamarin.AopAlliance":
+            <PackageId>Xamarin.AopAlliance</PackageId>
+            <Title>Xamarin AOP Alliance Bindings</Title>
             <Summary>
-              An HTTP+HTTP/2 client for Android and Java applications.
+              .NET for Android (formerly Xamarin.Android) bindings AOP Alliance bindings
             </Summary>
             <Description>
-              An HTTP+HTTP/2 client for Android and Java applications.
+              .NET for Android (formerly Xamarin.Android) bindings for AOP Alliance library.
             </Description>
             <PackageDescription>
-              An HTTP+HTTP/2 client for Android and Java applications.
+              .NET for Android (formerly Xamarin.Android) bindings for AOP Alliance library.
             </PackageDescription>
-            <PackageTags>.NET dotnet okhttp square square.okhttp xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
-            break; 
-          case "Square.OkHttp3.UrlConnection":
-            <Title>OkHttp v3 UrlConnection bindings for .NET for Android (formerly Xamarin.Android)</Title>
-            <Summary>
-              OkHttp ability to be used with HttpURLConnection.
-            </Summary>
-            <Description>
-              OkHttp ability to be used with HttpURLConnection.
-            </Description>
-            <PackageDescription>
-              OkHttp ability to be used with HttpURLConnection.
-            </PackageDescription>
-            <PackageTags>.NET dotnet okhttp square square.okhttp xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
-           break;             
-          case "Square.OkHttp3.LoggingInterceptor":
-            <Title>OkHttp v3 LoggingInterceptor bindings for .NET for Android (formerly Xamarin.Android)</Title>
-            <Description>
-              OkHttp ability to be used with HttpURLConnection.
-            </Description>
-            <PackageTags>.NET dotnet okhttp square square.okhttp xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
-            break;
-          case "Square.OkHttp3.OkHttp.Brotli":
-            <Title>OkHttp v3 bindings for .NET for Android (formerly Xamarin.Android)</Title>
-            <Summary>
-              An HTTP+HTTP/2 client for Android and Java applications.
-            </Summary>
-            <Description>
-              An HTTP+HTTP/2 client for Android and Java applications.
-            </Description>
-            <PackageDescription>
-              An HTTP+HTTP/2 client for Android and Java applications.
-            </PackageDescription>
-            <PackageTags>.NET dotnet okhttp square square.okhttp xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
+            <PackageTags>.NET dotnet AOP Alliance serialization xamarin android monoandroid monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
             break; 
           default:
             break; 
@@ -123,8 +91,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\squareup-okhttp3\License.md" Pack="true" PackagePath="LICENSE.md" />
-    <None Include="..\..\templates\squareup-okhttp3\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\templates\aopalliance\License.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\aopalliance\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
   <ItemGroup>

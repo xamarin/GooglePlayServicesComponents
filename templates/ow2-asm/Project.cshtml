@@ -27,60 +27,30 @@
     <RepositoryUrl>https://go.microsoft.com/fwlink/?linkid=865435</RepositoryUrl>
     <RequireLicenceAcceptance>true</RequireLicenceAcceptance>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
+    <PackageLicenseExpression>MIT AND BSD-3-Clause</PackageLicenseExpression>
 
     @foreach (var art in @Model.MavenArtifacts) 
     {
       <PackageId>@Model.NuGetPackageId</PackageId>
-      <RootNamespace>@Model.NuGetPackageId</RootNamespace>
-      <AssemblyName>@Model.NuGetPackageId</AssemblyName>
+      <RootNamespace>Xamarin.OW2.ASM</RootNamespace>
+      <AssemblyName>Xamarin.OW2.ASM</AssemblyName>
       switch(@Model.NuGetPackageId)
       {
-          case "Square.OkHttp3":
-            <Title>OkHttp v3 bindings for .NET for Android (formerly Xamarin.Android)</Title>
+          case "Xamarin.OW2.ASM":
+            <PackageId>Xamarin.OW2.ASM</PackageId>
+            <Title>Xamarin OW2 ASM</Title>
             <Summary>
-              An HTTP+HTTP/2 client for Android and Java applications.
+              .NET for Android (formerly Xamarin.Android) bindings OW2 ASM bindings
             </Summary>
             <Description>
-              An HTTP+HTTP/2 client for Android and Java applications.
+              .NET for Android (formerly Xamarin.Android) bindings for OW2 ASM library.
+              ow2-asm (Java) ASM: a very small and fast Java bytecode manipulation framework
             </Description>
             <PackageDescription>
-              An HTTP+HTTP/2 client for Android and Java applications.
+              .NET for Android (formerly Xamarin.Android) bindings for OW2 ASM library.
+              ow2-asm (Java) ASM: a very small and fast Java bytecode manipulation framework
             </PackageDescription>
-            <PackageTags>.NET dotnet okhttp square square.okhttp xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
-            break; 
-          case "Square.OkHttp3.UrlConnection":
-            <Title>OkHttp v3 UrlConnection bindings for .NET for Android (formerly Xamarin.Android)</Title>
-            <Summary>
-              OkHttp ability to be used with HttpURLConnection.
-            </Summary>
-            <Description>
-              OkHttp ability to be used with HttpURLConnection.
-            </Description>
-            <PackageDescription>
-              OkHttp ability to be used with HttpURLConnection.
-            </PackageDescription>
-            <PackageTags>.NET dotnet okhttp square square.okhttp xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
-           break;             
-          case "Square.OkHttp3.LoggingInterceptor":
-            <Title>OkHttp v3 LoggingInterceptor bindings for .NET for Android (formerly Xamarin.Android)</Title>
-            <Description>
-              OkHttp ability to be used with HttpURLConnection.
-            </Description>
-            <PackageTags>.NET dotnet okhttp square square.okhttp xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
-            break;
-          case "Square.OkHttp3.OkHttp.Brotli":
-            <Title>OkHttp v3 bindings for .NET for Android (formerly Xamarin.Android)</Title>
-            <Summary>
-              An HTTP+HTTP/2 client for Android and Java applications.
-            </Summary>
-            <Description>
-              An HTTP+HTTP/2 client for Android and Java applications.
-            </Description>
-            <PackageDescription>
-              An HTTP+HTTP/2 client for Android and Java applications.
-            </PackageDescription>
-            <PackageTags>.NET dotnet okhttp square square.okhttp xamarin android monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
+            <PackageTags>.NET dotnet OW2 ASM bytecode manipulation framework xamarin android monoandroid monodroid artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
             break; 
           default:
             break; 
@@ -123,8 +93,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\squareup-okhttp3\License.md" Pack="true" PackagePath="LICENSE.md" />
-    <None Include="..\..\templates\squareup-okhttp3\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\templates\ow2-asm\License.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\ow2-asm\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
   <ItemGroup>
