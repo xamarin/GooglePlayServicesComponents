@@ -291,3 +291,4 @@
 | 284|aopalliance:aopalliance                                               |Xamarin.AopAlliance                                                   |
 | 285|org.ow2.asm:asm                                                       |Xamarin.OW2.ASM                                                       |
 | 286|org.brotli:dec                                                        |Xamarin.Brotli.Dec                                                    |
+| 287|com.google.ads.interactivemedia.v3:interactivemedia                   |Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia               |
