@@ -124,5 +124,36 @@
         >
         Xamarin.Chromium.Build.Annotations
     </attr>
-    
+    <attr
+        path="/api/package[@name='org.chromium.net.httpflags']"
+        name="managedName"
+        >
+        Xamarin.Chromium.HttpFlags
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.base.test']"
+        name="managedName"
+        >
+        Xamarin.Chromium.Base.Test
+    </attr>
+    <attr
+        path="/api/package[@name='org.jni_zero']"
+        name="managedName"
+        >
+        Xamarin.Chromium.Jni.Zero
+    </attr>
+    <attr
+        path="/api/package[@name='gen._base._base_java__assetres.srcjar']"
+        name="managedName"
+        >
+        Xamarin.Chromium.Gen.Base.BaseJavaAsstRes.SrcJAR
+    </attr>
+    <attr
+        path="/api/package[@name='gen._net._android._net_java__assetres.srcjar']"    
+        name="managedName"
+        >
+        Xamarin.Chromium.Gen.Net.Android.NetJavaAsstRes.SrcJAR
+    </attr>
+
+
 </metadata>

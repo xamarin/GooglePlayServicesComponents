@@ -11,16 +11,16 @@
     <PackageReference Update="Xamarin.GooglePlayServices.AppInvite" Version="118.0.0.14" />
     <PackageReference Update="Xamarin.GooglePlayServices.AppSet" Version="16.0.2.9" />
     <PackageReference Update="Xamarin.GooglePlayServices.Audience" Version="117.0.0.14" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Auth" Version="120.7.0.3" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Auth.Api.Phone" Version="118.0.1.9" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Auth.Base" Version="118.0.10.3" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Auth" Version="121.0.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Auth.Api.Phone" Version="118.0.2" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Auth.Base" Version="118.0.11" />
     <PackageReference Update="Xamarin.GooglePlayServices.Auth.Blockstore" Version="116.2.0.6" />
     <PackageReference Update="Xamarin.GooglePlayServices.Awareness" Version="119.0.1.9" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Base" Version="118.2.0.6" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Basement" Version="118.2.0.6" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Cast" Version="121.3.0.6" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Cast.Framework" Version="121.3.0.6" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Cast.TV" Version="121.0.0.6" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Base" Version="118.3.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Basement" Version="118.3.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Cast" Version="121.4.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Cast.Framework" Version="121.4.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Cast.TV" Version="121.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Clearcut" Version="117.0.0.14" />
     <PackageReference Update="Xamarin.GooglePlayServices.CloudMessaging" Version="117.1.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Code.Scanner" Version="116.1.0.4" />
@@ -38,7 +38,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Identity" Version="118.0.1.9" />
     <PackageReference Update="Xamarin.GooglePlayServices.Iid" Version="117.0.0.14" />
     <PackageReference Update="Xamarin.GooglePlayServices.InstantApps" Version="118.0.1.9" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Location" Version="121.0.1.5" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Location" Version="121.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Maps" Version="118.2.0.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement" Version="121.3.0.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Api" Version="121.3.0.5" />
@@ -56,7 +56,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition.Devanagari" Version="116.0.0.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition.Japanese" Version="116.0.0.5" />
     <PackageReference Update="Xamarin.GooglePlayServices.MLKit.Text.Recognition.Korean" Version="116.0.0.5" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Nearby" Version="119.0.0.2" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Nearby" Version="119.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Oss.Licenses" Version="117.0.1.6" />
     <PackageReference Update="Xamarin.GooglePlayServices.PAL" Version="120.2.0.1" />
     <PackageReference Update="Xamarin.GooglePlayServices.Panorama" Version="117.1.0.4" />
@@ -73,7 +73,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager" Version="118.0.4.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager.Api" Version="118.0.4.2" />
     <PackageReference Update="Xamarin.GooglePlayServices.TagManager.V4.Impl" Version="118.0.4.2" />
-    <PackageReference Update="Xamarin.GooglePlayServices.Tasks" Version="118.0.2.7" />
+    <PackageReference Update="Xamarin.GooglePlayServices.Tasks" Version="118.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.TfLite.Gpu" Version="116.2.0.6" />
     <PackageReference Update="Xamarin.GooglePlayServices.TfLite.Impl" Version="116.1.0.6" />
     <PackageReference Update="Xamarin.GooglePlayServices.TfLite.Java" Version="116.1.0.6" />
@@ -98,46 +98,46 @@
     <PackageReference Update="Xamarin.Google.Android.Play.Integrity" Version="1.3.0.1" />
     <PackageReference Update="Xamarin.Google.Android.Play.Review" Version="2.0.1.7" />
     <PackageReference Update="Xamarin.Google.Android.Play.Review.Ktx" Version="2.0.1.7" />
-    <PackageReference Update="Xamarin.Firebase.Abt" Version="121.1.1.6" />
+    <PackageReference Update="Xamarin.Firebase.Abt" Version="121.1.2" />
     <PackageReference Update="Xamarin.Firebase.Ads" Version="122.3.0.3" />
     <PackageReference Update="Xamarin.Firebase.Ads.Lite" Version="122.3.0.3" />
     <PackageReference Update="Xamarin.Firebase.Analytics" Version="121.3.0.5" />
     <PackageReference Update="Xamarin.Firebase.Analytics.Impl" Version="116.3.0.14" />
     <PackageReference Update="Xamarin.Firebase.Analytics.Ktx" Version="121.3.0.5" />
     <PackageReference Update="Xamarin.Firebase.Annotations" Version="116.2.0.6" />
-    <PackageReference Update="Xamarin.Firebase.AppCheck" Version="117.1.1.2" />
-    <PackageReference Update="Xamarin.Firebase.AppCheck.Debug" Version="117.1.1.2" />
+    <PackageReference Update="Xamarin.Firebase.AppCheck" Version="117.1.2" />
+    <PackageReference Update="Xamarin.Firebase.AppCheck.Debug" Version="117.1.2" />
     <PackageReference Update="Xamarin.Firebase.AppCheck.Interop" Version="117.1.0.2" />
-    <PackageReference Update="Xamarin.Firebase.AppCheck.Ktx" Version="117.1.1.2" />
-    <PackageReference Update="Xamarin.Firebase.AppCheck.PlayIntegrity" Version="117.1.1.2" />
+    <PackageReference Update="Xamarin.Firebase.AppCheck.Ktx" Version="117.1.2" />
+    <PackageReference Update="Xamarin.Firebase.AppCheck.PlayIntegrity" Version="117.1.2" />
     <PackageReference Update="Xamarin.Firebase.AppCheck.SafetyNet" Version="116.1.2.6" />
     <PackageReference Update="Xamarin.Firebase.AppIndexing" Version="120.0.0.17" />
-    <PackageReference Update="Xamarin.Firebase.Auth" Version="122.3.0.1" />
+    <PackageReference Update="Xamarin.Firebase.Auth" Version="122.3.1" />
     <PackageReference Update="Xamarin.Firebase.Auth.Interop" Version="120.0.0.14" />
-    <PackageReference Update="Xamarin.Firebase.Auth.Ktx" Version="122.3.0.1" />
+    <PackageReference Update="Xamarin.Firebase.Auth.Ktx" Version="122.3.1" />
     <PackageReference Update="Xamarin.Firebase.Common" Version="120.4.2.2" />
     <PackageReference Update="Xamarin.Firebase.Common.Ktx" Version="120.4.2.2" />
     <PackageReference Update="Xamarin.Firebase.Components" Version="117.1.5.2" />
-    <PackageReference Update="Xamarin.Firebase.Config" Version="121.6.0.1" />
-    <PackageReference Update="Xamarin.Firebase.Config.Ktx" Version="121.6.0.1" />
-    <PackageReference Update="Xamarin.Firebase.Config.Interop" Version="116.0.0.1" />
+    <PackageReference Update="Xamarin.Firebase.Config" Version="121.6.1" />
+    <PackageReference Update="Xamarin.Firebase.Config.Ktx" Version="121.6.1" />
+    <PackageReference Update="Xamarin.Firebase.Config.Interop" Version="116.0.1" />
     <PackageReference Update="Xamarin.Firebase.Core" Version="121.1.1.7" />
     <PackageReference Update="Xamarin.Firebase.Crash" Version="116.2.1.14" />
-    <PackageReference Update="Xamarin.Firebase.Crashlytics" Version="118.6.0.1" />
-    <PackageReference Update="Xamarin.Firebase.Crashlytics.Ktx" Version="118.6.0.1" />
-    <PackageReference Update="Xamarin.Firebase.Crashlytics.NDK" Version="118.6.0.1" />
+    <PackageReference Update="Xamarin.Firebase.Crashlytics" Version="118.6.2" />
+    <PackageReference Update="Xamarin.Firebase.Crashlytics.Ktx" Version="118.6.2" />
+    <PackageReference Update="Xamarin.Firebase.Crashlytics.NDK" Version="118.6.2" />
     <PackageReference Update="Xamarin.Firebase.Database" Version="120.3.0.2" />
     <PackageReference Update="Xamarin.Firebase.Database.Collection" Version="118.0.1.7" />
     <PackageReference Update="Xamarin.Firebase.Database.Connection" Version="116.0.2.14" />
     <PackageReference Update="Xamarin.Firebase.Database.Ktx" Version="120.3.0.2" />
-    <PackageReference Update="Xamarin.Firebase.Datatransport" Version="118.2.0.4" />
+    <PackageReference Update="Xamarin.Firebase.Datatransport" Version="118.2.1" />
     <PackageReference Update="Xamarin.Firebase.Dynamic.Links" Version="121.2.0.2" />
     <PackageReference Update="Xamarin.Firebase.Dynamic.Links.Ktx" Version="121.2.0.2" />
     <PackageReference Update="Xamarin.Firebase.Encoders" Version="117.0.0.14" />
     <PackageReference Update="Xamarin.Firebase.Encoders.JSON" Version="118.0.1.6" />
     <PackageReference Update="Xamarin.Firebase.Encoders.Proto" Version="116.0.0.9" />
-    <PackageReference Update="Xamarin.Firebase.Firestore" Version="124.9.1.2" />
-    <PackageReference Update="Xamarin.Firebase.Firestore.Ktx" Version="124.9.1.2" />
+    <PackageReference Update="Xamarin.Firebase.Firestore" Version="124.10.2" />
+    <PackageReference Update="Xamarin.Firebase.Firestore.Ktx" Version="124.10.2" />
     <PackageReference Update="Xamarin.Firebase.Functions" Version="120.4.0.2" />
     <PackageReference Update="Xamarin.Firebase.Functions.Ktx" Version="120.4.0.2" />
     <PackageReference Update="Xamarin.Firebase.Iid" Version="121.1.0.14" />
@@ -151,9 +151,9 @@
     <PackageReference Update="Xamarin.Firebase.Installations.Ktx" Version="117.2.0.2" />
     <PackageReference Update="Xamarin.Firebase.Invites" Version="117.0.0.14" />
     <PackageReference Update="Xamarin.Firebase.Measurement.Connector" Version="120.0.1.2" />
-    <PackageReference Update="Xamarin.Firebase.Messaging" Version="123.3.1.2" />
-    <PackageReference Update="Xamarin.Firebase.Messaging.DirectBoot" Version="123.3.1.2" />
-    <PackageReference Update="Xamarin.Firebase.Messaging.Ktx" Version="123.3.1.2" />
+    <PackageReference Update="Xamarin.Firebase.Messaging" Version="123.4.1" />
+    <PackageReference Update="Xamarin.Firebase.Messaging.DirectBoot" Version="123.4.1" />
+    <PackageReference Update="Xamarin.Firebase.Messaging.Ktx" Version="123.4.1" />
     <PackageReference Update="Xamarin.Firebase.ML.Common" Version="122.1.2.14" />
     <PackageReference Update="Xamarin.Firebase.ML.Model.Interpreter" Version="122.0.4.14" />
     <PackageReference Update="Xamarin.Firebase.ML.Natural.Language" Version="122.0.1.14" />
@@ -169,9 +169,9 @@
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Image.Label.Model" Version="120.0.2.14" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Internal.Vkp" Version="117.0.2.14" />
     <PackageReference Update="Xamarin.Firebase.ML.Vision.Object.Detection.Model" Version="119.0.6.14" />
-    <PackageReference Update="Xamarin.Firebase.Perf" Version="120.5.1.1" />
-    <PackageReference Update="Xamarin.Firebase.Perf.Ktx" Version="120.5.1.1" />
-    <PackageReference Update="Xamarin.Firebase.Sessions" Version="101.2.0.1" />
+    <PackageReference Update="Xamarin.Firebase.Perf" Version="120.5.2" />
+    <PackageReference Update="Xamarin.Firebase.Perf.Ktx" Version="120.5.2" />
+    <PackageReference Update="Xamarin.Firebase.Sessions" Version="101.2.2" />
     <PackageReference Update="Xamarin.Firebase.Storage" Version="120.3.0.2" />
     <PackageReference Update="Xamarin.Firebase.Storage.Common" Version="117.0.0.14" />
     <PackageReference Update="Xamarin.Firebase.Storage.Ktx" Version="120.3.0.2" />
@@ -227,13 +227,13 @@
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportApi" Version="3.1.0.1" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="3.2.0.1" />
     <PackageReference Update="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="3.2.0.1" />
-    <PackageReference Update="Xamarin.Google.UserMessagingPlatform" Version="2.1.0.3" />
+    <PackageReference Update="Xamarin.Google.UserMessagingPlatform" Version="2.2.0" />
     <PackageReference Update="Xamarin.Google.Code.FindBugs.JSR305" Version="3.0.2.12" />
-    <PackageReference Update="Xamarin.Google.Dagger" Version="2.48.1.2" />
+    <PackageReference Update="Xamarin.Google.Dagger" Version="2.49.0" />
     <PackageReference Update="Xamarin.Google.ErrorProne.Annotations" Version="2.26.1" />
-    <PackageReference Update="Xamarin.Google.ZXing.Core" Version="3.5.2.3" />
+    <PackageReference Update="Xamarin.Google.ZXing.Core" Version="3.5.3" />
     <PackageReference Update="Xamarin.Google.FlatBuffers.Java" Version="23.5.26.4" />
-    <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.25.1.1" />
+    <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="3.25.3" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1.12" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.12" />
     <PackageReference Update="Square.OkHttp3.OkHttp.Brotli" Version="4.12.0" />
@@ -241,8 +241,8 @@
     <PackageReference Update="Square.OkHttp3" Version="4.12.0.2" />
     <PackageReference Update="Square.OkHttp3.OkHttp.TLS" Version="4.12.0" />
     <PackageReference Update="Square.OkHttp3.UrlConnection" Version="4.12.0.2" />
-    <PackageReference Update="Square.OkIO" Version="3.6.0.2" />
-    <PackageReference Update="Square.OkIO.JVM" Version="3.6.0.2" />
+    <PackageReference Update="Square.OkIO" Version="3.8.0" />
+    <PackageReference Update="Square.OkIO.JVM" Version="3.8.0" />
     <PackageReference Update="Square.Picasso" Version="2.8.0.11" />
     <PackageReference Update="Square.Retrofit" Version="1.9.0.12" />
     <PackageReference Update="Square.Retrofit2.AdapterRxJava2" Version="2.9.0.6" />
@@ -250,26 +250,27 @@
     <PackageReference Update="Square.Retrofit2.ConverterScalars" Version="2.9.0.6" />
     <PackageReference Update="Square.Retrofit2" Version="2.9.0.6" />
     <PackageReference Update="Square.JavaPoet" Version="1.13.0.8" />
-    <PackageReference Update="Xamarin.Grpc.Android" Version="1.57.2.2" />
-    <PackageReference Update="Xamarin.Grpc.Api" Version="1.57.2.2" />
-    <PackageReference Update="Xamarin.Grpc.Context" Version="1.57.2.2" />
-    <PackageReference Update="Xamarin.Grpc.Core" Version="1.57.2.2" />
-    <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.57.2.2" />
-    <PackageReference Update="Xamarin.Grpc.Protobuf.Lite" Version="1.57.2.2" />
-    <PackageReference Update="Xamarin.Grpc.Stub" Version="1.57.2.2" />
+    <PackageReference Update="Xamarin.Grpc.Android" Version="1.58.1" />
+    <PackageReference Update="Xamarin.Grpc.Api" Version="1.58.1" />
+    <PackageReference Update="Xamarin.Grpc.Context" Version="1.58.1" />
+    <PackageReference Update="Xamarin.Grpc.Core" Version="1.58.1" />
+    <PackageReference Update="Xamarin.Grpc.OkHttp" Version="1.58.1" />
+    <PackageReference Update="Xamarin.Grpc.Protobuf.Lite" Version="1.58.1" />
+    <PackageReference Update="Xamarin.Grpc.Stub" Version="1.58.1" />
+    <PackageReference Update="Xamarin.Grpc.Util" Version="1.58.1" />
     <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusApi" Version="0.31.1.5" />
     <PackageReference Update="Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics" Version="0.31.1.5" />
-    <PackageReference Update="Xamarin.Io.PerfMark.PerfMarkApi" Version="0.26.0.5" />
+    <PackageReference Update="Xamarin.Io.PerfMark.PerfMarkApi" Version="0.27.0" />
     <PackageReference Update="Xamarin.JavaX.Inject" Version="1.0.0.12" />
-    <PackageReference Update="Xamarin.Chromium.CroNet.Api" Version="113.5672.61.1" />
-    <PackageReference Update="Xamarin.Chromium.CroNet.Common" Version="113.5672.61.1" />
-    <PackageReference Update="Xamarin.Chromium.CroNet.Embedded" Version="113.5672.61.1" />
-    <PackageReference Update="Xamarin.Chromium.CroNet.Fallback" Version="113.5672.61.1" />
+    <PackageReference Update="Xamarin.Chromium.CroNet.Api" Version="119.6045.31" />
+    <PackageReference Update="Xamarin.Chromium.CroNet.Common" Version="119.6045.31" />
+    <PackageReference Update="Xamarin.Chromium.CroNet.Embedded" Version="119.6045.31" />
+    <PackageReference Update="Xamarin.Chromium.CroNet.Fallback" Version="119.6045.31" />
     <PackageReference Update="Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations" Version="1.23.0.4" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite" Version="2.14.0.2" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Api" Version="2.14.0.2" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu" Version="2.14.0.2" />
-    <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu.Api" Version="2.14.0.2" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite" Version="2.15.0" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite.Api" Version="2.15.0" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu" Version="2.15.0" />
+    <PackageReference Update="Xamarin.TensorFlow.Lite.Gpu.Api" Version="2.15.0" />
     <PackageReference Update="Xamarin.TensorFlow.Android" Version="1.13.1.6" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Support.Library" Version="0.4.4.3" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Support.Api" Version="0.4.4.3" />
@@ -281,6 +282,9 @@
     <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Audio.PlayServices.Library" Version="0.4.4.3" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Vision.PlayServices.Library" Version="0.4.4.3" />
     <PackageReference Update="Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library" Version="0.4.4.3" />
+    <PackageReference Update="Xamarin.Google.Inject.Guice" Version="5.1.0" />
+    <PackageReference Update="Xamarin.AopAlliance" Version="1.0.0" />
+    <PackageReference Update="Xamarin.OW2.ASM" Version="9.2.0" />
     <PackageReference Update="Xamarin.Brotli.Dec" Version="0.1.2" />
     <PackageReference Update="Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia" Version="3.29.0" />
     <PackageReference Update="Xamarin.AndroidX.Activity" Version="1.8.1.1" />
