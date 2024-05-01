@@ -4,7 +4,7 @@
     <RepositoryType>git</RepositoryType>
 
     <!-- Default TFM's we build for -->
-    <_DefaultTargetFrameworks>MonoAndroid12.0;net6.0-android;net7.0-android</_DefaultTargetFrameworks>
+    <_DefaultTargetFrameworks>net7.0-android</_DefaultTargetFrameworks>
     
     <!-- Use an updated 'generator' -->
     <!-- It's ok to use "Windows" here because we only use managed code from this package -->
