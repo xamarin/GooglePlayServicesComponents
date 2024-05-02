@@ -39,7 +39,7 @@ resources:
       type: github
       name: xamarin/androidx
       endpoint: xamarin
-      ref: refs/heads/no-classic
+      ref: refs/heads/main
 
 extends:
   template: v1/1ES.Official.PipelineTemplate.yml@1esPipelines
