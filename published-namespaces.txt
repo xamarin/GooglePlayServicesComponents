@@ -525,7 +525,6 @@ Square.Retrofit2.Converter.Gson
 Square.Retrofit2.Converter.Scalars
 Square.Retrofit2.Http
 System.Runtime.CompilerServices
-System.Runtime.Versioning
 Volley
 Volley.CroNet
 Volley.Toolbox

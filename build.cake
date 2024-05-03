@@ -817,105 +817,6 @@ Task("samples-directory-build-targets")
 		}
 	);
 
-Task("samples")
-	.IsDependentOn("libs")
-	.IsDependentOn("samples-directory-build-targets")
-	.IsDependentOn("samples-only")
-    .IsDependentOn("samples-only-dotnet")
-	;
-
-Task("samples-only")
-	.IsDependentOn("samples-directory-build-targets")
-	.IsDependentOn("mergetargets")
-	.IsDependentOn("allbindingprojectrefs")
-	.Does
-(
-	() =>
-	{
-		Configs = new string[] { "Debug", "Release" };
-
-		DeleteDirectories(GetDirectories("./samples/**/bin/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
-		DeleteDirectories(GetDirectories("./samples/**/obj/"), new DeleteDirectorySettings() { Force = true, Recursive = true });
-
-		EnsureDirectoryExists($@"./output/failed/");
-
-		var sampleSlns = GetFiles("./samples/all/**/*.sln")
-							.Concat(GetFiles("./samples/com.google.android.gms/**/*.sln"))
-							.Concat(GetFiles("./samples/com.google.firebase/**/*.sln"))
-							;
-
-		foreach(string config in Configs)
-		{
-			foreach (var sampleSln in sampleSlns)
-			{
-				string filename_sln = sampleSln.GetFilenameWithoutExtension().ToString();
-
-				if ( ! filename_sln.Contains("BuildAll") )
-				{
-					NuGetRestore(sampleSln, new NuGetRestoreSettings { }); // R8 errors
-				}
-				if
-				(
-					sampleSln.ToString().Contains("com.google.android.gms/play-services-location/LocationSample.sln")
-					||
-					sampleSln.ToString().Contains("com.google.android.gms/play-services-cast/CastingCall.sln")
-					||
-					sampleSln.ToString().Contains("com.google.android.gms/play-services-games/BeGenerous.sln")
-					||
-					sampleSln.ToString().Contains("com.google.android.gms/play-services-wallet/AndroidPayQuickstart.sln")
-					||
-					sampleSln.ToString().Contains("com.google.firebase/firebase-analytics/FirebaseAnalyticsQuickstart.sln")
-					||
-					sampleSln.ToString().Contains("com.google.firebase/firebase-storage/FirebaseStorageQuickstart.sln")
-				)
-				{
-					// skip problematic samples for now
-					continue;
-				}
-				Information($"Solution: {filename_sln}");
-				string bl = MakeAbsolute(new FilePath($"./output/{filename_sln}{config}.sample.binlog")).FullPath;
-				try
-				{
-					MSBuild
-						(
-							sampleSln,
-							c =>
-							{
-								c.Configuration = config;
-								c.Properties.Add("DesignTimeBuild", new [] { "false" });
-								c.BinaryLogger = new MSBuildBinaryLogSettings
-														{
-															Enabled = true,
-															FileName = bl
-														};
-								if (! string.IsNullOrEmpty(ANDROID_HOME))
-								{
-									c.Properties.Add("AndroidSdkDirectory", new [] { $"{ANDROID_HOME}" } );
-								}
-							}
-						);
-				}
-				catch (Exception exc)
-				{
-					Error($"Error: 	{exc}");
-					Error($"   bl:	{bl}");
-					Error($"   bl:	{bl.Replace($@"output", $@"output/failed")}");
-					if ( FileExists(bl) )
-					{
-						DeleteFile(bl);
-					}
-					MoveFile(bl, bl.Replace($@"output", $@"output/failed"));
-				}
-			}
-		}
-
-		DeleteFiles(".output/system.*/nupkg");
-		DeleteFiles(".output/microsoft.*/nupkg");
-		DeleteFiles(".output/xamarin.android.support.*/nupkg");
-		DeleteFiles(".output/xamarin.android.arch.*/nupkg");
-		DeleteFiles(".output/xamarin.build.download.*/nupkg");
-});
-
 Task("samples-dotnet")
     .IsDependentOn("nuget")
     .IsDependentOn("samples-only-dotnet")
@@ -936,7 +837,6 @@ Task("samples-only-dotnet")
     {
         "./samples/dotnet/BuildAllDotNet.sln",
         "./samples/dotnet/BuildAllMauiApp.sln",
-        "./samples/dotnet/BuildAllXamarinForms.sln",
         "./samples/dotnet/BuildAllPlayDotNet.sln",
     };
 
@@ -1183,7 +1083,6 @@ Task ("ci-build")
 	;
 
 Task ("ci-samples")
-	.IsDependentOn ("samples-only")
 	.IsDependentOn ("samples-only-dotnet")
   	;
 
