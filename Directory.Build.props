@@ -5,6 +5,8 @@
 
     <!-- Default TFM's we build for -->
     <_DefaultTargetFrameworks>net8.0-android</_DefaultTargetFrameworks>
+    
+
     <!-- Use an updated 'generator' -->
     <!-- It's ok to use "Windows" here because we only use managed code from this package -->
     <_BindingsToolsLocation>$(MSBuildThisFileDirectory)/tools/Microsoft.Android.Sdk.Windows.34.0.95/tools/</_BindingsToolsLocation>
@@ -42,8 +44,4 @@
     <_TargetFrameworkNugetAarFolders Include="aar\net8.0-android34.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <_TargetFrameworkNugetAarFolders Include="aar\monoandroid12.0" />
-    <_TargetFrameworkNugetAarFolders Include="aar\net8.0-android34.0" />
-  </ItemGroup>
 </Project>
