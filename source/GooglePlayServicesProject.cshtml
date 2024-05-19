@@ -17,7 +17,12 @@
     }
   </PropertyGroup>
 
-  @{
+  <PropertyGroup>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>moderate</NuGetAuditLevel>
+  </PropertyGroup>
+  
+    @{
       string name_short = Model.NuGetPackageId.Replace("Xamarin.GooglePlayServices.", "");
       string key = Model.NuGetPackageId;
       string project_url = "https://github.com/xamarin/GooglePlayServicesComponents";
@@ -278,6 +283,13 @@
       }
     }
     <!-- some additional fixes -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SecurityCodeScan.VS2019" Version="5.6.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
