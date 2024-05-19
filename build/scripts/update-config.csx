@@ -157,6 +157,8 @@ static Artifact FindMavenArtifact (List<MyArray> config, ArtifactModel artifact)
 
 static bool NeedsUpdate (ArtifactModel model, Artifact artifact)
 {
+	Console.WriteLine($"mc++ {model.GroupId}:{model.ArtifactId}");
+
 	// Don't update package if it's "Frozen"
 	if (model.Frozen)
 		return false;
@@ -195,6 +197,11 @@ static SemanticVersion GetVersion (string s)
 	var hyphen = s.IndexOf ('-');
 	var version = hyphen >= 0 ? s.Substring (0, hyphen) : s;
 	var tag = hyphen >= 0 ? s.Substring (hyphen) : string.Empty;
+
+	if (tag.Contains("_"))
+	{
+		tag = String.Empty;
+	}
 
 	// Stuff like: 1.1.1d-alpha-1
 	if (version.Any (c => char.IsLetter (c)))
