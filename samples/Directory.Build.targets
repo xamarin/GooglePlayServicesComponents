@@ -323,7 +323,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Measurement.Sdk" Version="121.3.0.2" />
     <PackageReference Update="Xamarin.Google.AutoValue.Annotations" Version="1.10.4.1" />
     <PackageReference Update="GoogleGson" Version="2.10.1.6" />
-    <PackageReference Update="Xamarin.Firebase.Analytics" Version="121.3.0.6" />
+    <PackageReference Update="Xamarin.Firebase.Analytics" Version="116.3.0.15" />
     <PackageReference Update="Xamarin.Firebase.AppIndexing" Version="120.0.0.14" />
     <PackageReference Update="Xamarin.Google.Guava" Version="32.0.1" />
     <PackageReference Update="Xamarin.Google.Guava.ListenableFuture" Version="1.0.0.17" />

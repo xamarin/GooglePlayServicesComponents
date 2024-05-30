@@ -1,46 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EE524EE4-64BB-42C4-877B-FBCEAA29D3A4}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>FirebaseMessagingQuickstart.UITests</RootNamespace>
-    <AssemblyName>FirebaseMessagingQuickstart.UITests</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+      <TargetFramework>net8.0-android</TargetFramework>
+      <IsPackable>false</IsPackable>
+      <IsTestProject>true</IsTestProject>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
+      <PackageReference Include="NUnit" Version="4.1.0" />
+      <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+      <PackageReference Include="NUnit.Analyzers" Version="4.2.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="coverlet.collector" Version="6.0.2">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="SharpZipLib" Version="1.4.2" />
+      <PackageReference Include="Xamarin.UITest" Version="4.3.4" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="NUnit" Version="3.12.0" />
-    <PackageReference Include="Xamarin.UITest" Version="3.0.7" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Tests.cs" />
-  </ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\FirebaseMessagingQuickstart\FirebaseMessagingQuickstart.csproj">
-      <Project>{8DA9B5D6-9B2C-4432-B9DE-8EBDECEB3E53}</Project>
-      <Name>FirebaseMessagingQuickstart</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
 </Project>

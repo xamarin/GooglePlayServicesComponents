@@ -21,7 +21,7 @@
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">28.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
@@ -85,10 +85,10 @@
 		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto.Ktx" Version="[1.1.0.1-alpha06]" />
 		
 		<!-- Should match version of the referenced 'Xamarin.AndroidX.Collection' package -->
-		<PackageReference Include="Xamarin.AndroidX.Collection.Jvm" Version="1.3.0.2" />
-		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.3.0.2" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Jvm" Version="1.4.0.2" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.4.0.2" />
 
 		<!-- Should match version of the referenced 'Xamarin.AndroidX.Activity' package -->
-		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.8.1.1" />
+		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.9.0.1" />
 	</ItemGroup>
 </Project>
