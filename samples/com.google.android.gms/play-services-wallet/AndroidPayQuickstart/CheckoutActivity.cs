@@ -11,7 +11,7 @@ namespace AndroidPayQuickstart
     {
         const int REQUEST_CODE_MASKED_WALLET = 1001;
 
-        Android.Gms.Wallet.Fragment.SupportWalletFragment mWalletFragment;
+        //mc++ Android.Gms.Wallet.Fragment.SupportWalletFragment mWalletFragment;
         int mItemId;
         Button mReturnToShopping;
         Button mContinueCheckout;
@@ -42,7 +42,7 @@ namespace AndroidPayQuickstart
                 if (e.IsChecked && ValidateStripeConfiguration ()) {
                     
                     mPaymentMethodParameters = Android.Gms.Wallet.PaymentMethodTokenizationParameters.NewBuilder ()
-                        .SetPaymentMethodTokenizationType (Android.Gms.Wallet.PaymentMethodTokenizationType.PaymentGateway)
+                        .SetPaymentMethodTokenizationType (-1) //mc++ Android.Gms.Wallet.PaymentMethodTokenizationType.PaymentGateway)
                         .AddParameter ("gateway", "stripe")
                         .AddParameter ("stripe:publishableKey", GetString (Resource.String.stripe_publishable_key))
                         .AddParameter ("stripe:version", GetString (Resource.String.stripe_version))
@@ -68,8 +68,10 @@ namespace AndroidPayQuickstart
             case REQUEST_CODE_MASKED_WALLET:
                 switch (resultCode) {
                 case Android.App.Result.Ok:
-                    var maskedWallet = data.GetParcelableExtra (Android.Gms.Wallet.WalletConstants.ExtraMaskedWallet).JavaCast<Android.Gms.Wallet.MaskedWallet> ();
-                    launchConfirmationPage(maskedWallet);
+                    var maskedWallet = data.GetParcelableExtra(null);
+                                                    /* mc++ (Android.Gms.Wallet.WalletConstants.ExtraMaskedWallet).JavaCast<Android.Gms.Wallet.MaskedWallet> ();
+                                                     */
+                    launchConfirmationPage(null); // mc++ (maskedWallet);
                     break;
                 case Android.App.Result.Canceled:
                     break;
@@ -128,6 +130,7 @@ namespace AndroidPayQuickstart
         }
 
         private void createAndAddWalletFragment() {
+            /*
             var walletFragmentStyle = new Android.Gms.Wallet.Fragment.WalletFragmentStyle()
                 .SetBuyButtonText (Android.Gms.Wallet.Fragment.BuyButtonText.BuyWithGoogle)
                 .SetBuyButtonAppearance (Android.Gms.Wallet.Fragment.BuyButtonAppearance.Classic)
@@ -157,11 +160,12 @@ namespace AndroidPayQuickstart
                 .SetAccountName(accountName);
 
             mWalletFragment.Initialize (startParamsBuilder.Build ());
-
+            
             // add Wallet fragment to the UI
             SupportFragmentManager.BeginTransaction ()
                 .Replace (Resource.Id.dynamic_wallet_button_fragment, mWalletFragment)
                 .Commit();
+            */
         }
 
         private void launchConfirmationPage (Android.Gms.Wallet.MaskedWallet maskedWallet) {

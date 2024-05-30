@@ -217,6 +217,7 @@ namespace AndroidPayQuickstart
             case REQUEST_CODE_RESOLVE_LOAD_FULL_WALLET:
                 switch (resultCode) {
                 case (int)Result.Ok:
+                    /*
                     if (data.HasExtra(Android.Gms.Wallet.WalletConstants.ExtraFullWallet)) {
                                 Android.Gms.Wallet.FullWallet fullWallet =
                             data.GetParcelableExtra (Android.Gms.Wallet.WalletConstants.ExtraFullWallet).JavaCast<Android.Gms.Wallet.FullWallet> ();
@@ -231,6 +232,7 @@ namespace AndroidPayQuickstart
 
                         StartActivity(mActivityLaunchIntent);
                     }
+                    */
                     break;
                 case (int)Result.Canceled:
                     // nothing to do here
@@ -317,9 +319,11 @@ namespace AndroidPayQuickstart
 
         void getFullWallet() 
         {
+            /*
             Android.Gms.Wallet.WalletClass.Payments.LoadFullWallet (mGoogleApiClient,
                 WalletUtil.CreateFullWalletRequest (mItemInfo, mMaskedWallet.GoogleTransactionId),
                 REQUEST_CODE_RESOLVE_LOAD_FULL_WALLET);
+            */
         }
 
         /**
@@ -332,12 +336,14 @@ namespace AndroidPayQuickstart
                 mProgressDialog.Dismiss();
 
             // Log Stripe payment method token, if it exists
+            /*
             Android.Gms.Wallet.PaymentMethodToken token = fullWallet.PaymentMethodToken;
             if (token != null) {
                 // getToken returns a JSON object as a String.  Replace newlines to make LogCat output
                 // nicer.  The 'id' field of the object contains the Stripe token we are interested in.
                 Android.Util.Log.Debug (TAG, "PaymentMethodToken:" + token.Token.Replace ('\n', ' '));
             }
+            */
 
             // NOTE: Send details such as fullWallet.getProxyCard() or fullWallet.getBillingAddress()
             // to your server and get back success or failure. If you used Stripe for processing,

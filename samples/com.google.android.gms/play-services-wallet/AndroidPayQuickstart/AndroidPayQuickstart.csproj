@@ -1,179 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{5F3BCF9B-707B-475E-A0DD-B1A532B88F20}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>AndroidPayQuickstart</RootNamespace>
-    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
-    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <AndroidResgenClass>Resource</AndroidResgenClass>
-    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
-    <AndroidApplication>True</AndroidApplication>
-    <AssemblyName>AndroidPayQuickstart</AssemblyName>
-    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
-    <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>None</AndroidLinkMode>
-    <ConsolePause>false</ConsolePause>
-     <AndroidDexTool>d8</AndroidDexTool>
-    <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
- </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <ConsolePause>false</ConsolePause>
-    <AndroidDexTool>d8</AndroidDexTool>
-    <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Mono.Android" />
-    <Reference Include="Java.Interop" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.5.1" />
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.14" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Wallet" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Maps" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Plus" />
+    <TargetFramework>net8.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 
-    <PackageReference Include="Xamarin.AndroidX.Migration">
-      <Version>1.0.10</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Build.Download" />
-    <PackageReference Include="Xamarin.AndroidX.Fragment">
-      <Version>1.5.1</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BikestoreApplication.cs" />
-    <Compile Include="BikestoreFragmentActivity.cs" />
-    <Compile Include="CartDetailFragment.cs" />
-    <Compile Include="CheckoutActivity.cs" />
-    <Compile Include="ConfirmationActivity.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="ItemInfo.cs" />
-    <Compile Include="ItemListActivity.cs" />
-    <Compile Include="ItemListFragment.cs" />
-    <Compile Include="LoginActivity.cs" />
-    <Compile Include="OrderCompleteActivity.cs" />
-    <Compile Include="Util.cs" />
-    <Compile Include="WalletUtil.cs" />
-    <Compile Include="FullWalletConfirmationButtonFragment.cs" />
-    <Compile Include="ItemDetailsFragment.cs" />
-    <Compile Include="LoginFragment.cs" />
-    <Compile Include="PromoAddressLookupFragment.cs" />
-    <Compile Include="ItemDetailsActivity.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
-    <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Assets\AboutAssets.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable\bike000.png" />
-    <AndroidResource Include="Resources\drawable\bike001.png" />
-    <AndroidResource Include="Resources\drawable\bike002.png" />
-    <AndroidResource Include="Resources\drawable\bikestore_btn_default_holo_light.xml" />
-    <AndroidResource Include="Resources\drawable-ldpi\divider.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\home_promo.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\bikestore_btn_default_disabled_focused_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\bikestore_btn_default_disabled_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\bikestore_btn_default_focused_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\bikestore_btn_default_normal_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\bikestore_btn_default_pressed_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\divider.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\home_promo.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_action_search.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\sso_with_google_full.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\sso_with_google_half.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\bikestore_btn_default_disabled_focused_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\bikestore_btn_default_disabled_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\bikestore_btn_default_focused_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\bikestore_btn_default_normal_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\bikestore_btn_default_pressed_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\divider.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\home_promo.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_action_search.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\bikestore_btn_default_disabled_focused_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\bikestore_btn_default_disabled_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\bikestore_btn_default_focused_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\bikestore_btn_default_normal_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\bikestore_btn_default_pressed_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\divider.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\home_promo.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_search.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\wallet_logo.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\bikestore_btn_default_disabled_focused_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\bikestore_btn_default_disabled_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\bikestore_btn_default_focused_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\bikestore_btn_default_normal_holo_light.9.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\bikestore_btn_default_pressed_holo_light.9.png" />
-    <AndroidResource Include="Resources\layout-xlarge-land\activity_item_list.xml" />
-    <AndroidResource Include="Resources\layout\activity_checkout.xml" />
-    <AndroidResource Include="Resources\layout\activity_confirmation.xml" />
-    <AndroidResource Include="Resources\layout\activity_item_details.xml" />
-    <AndroidResource Include="Resources\layout\activity_item_list.xml" />
-    <AndroidResource Include="Resources\layout\activity_login.xml" />
-    <AndroidResource Include="Resources\layout\activity_order_complete.xml" />
-    <AndroidResource Include="Resources\layout\fragment_cart_detail.xml" />
-    <AndroidResource Include="Resources\layout\fragment_full_wallet_confirmation_button.xml" />
-    <AndroidResource Include="Resources\layout\fragment_item_details.xml" />
-    <AndroidResource Include="Resources\layout\fragment_item_list.xml" />
-    <AndroidResource Include="Resources\layout\fragment_login.xml" />
-    <AndroidResource Include="Resources\layout\fragment_promo_address_lookup.xml" />
-    <AndroidResource Include="Resources\layout\horizontal_divider.xml" />
-    <AndroidResource Include="Resources\layout\list_item.xml" />
-    <AndroidResource Include="Resources\layout\vertical_divider.xml" />
-    <AndroidResource Include="Resources\menu\activity_main.xml" />
-    <AndroidResource Include="Resources\menu\menu_login.xml" />
-    <AndroidResource Include="Resources\menu\menu_logout.xml" />
-    <AndroidResource Include="Resources\values-v11\themes.xml" />
-    <AndroidResource Include="Resources\values-v14\themes.xml" />
-    <AndroidResource Include="Resources\values\colors.xml" />
-    <AndroidResource Include="Resources\values\dimens.xml" />
-    <AndroidResource Include="Resources\values\ids.xml" />
-    <AndroidResource Include="Resources\values\styles.xml" />
-    <AndroidResource Include="Resources\values\themes.xml" />
-    <AndroidResource Include="Resources\values\strings.xml" />
-  </ItemGroup>
+    <RootNamespace>AndroidPayQuickstart</RootNamespace>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProguardConfiguration Include="proguard.cfg" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.7.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common" Version="2.7.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" Version="2.7.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.23" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.7" />
+
+    <PackageReference Include="Xamarin.GooglePlayServices.Wallet" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Maps" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Plus" />
+        
+    <PackageReference Include="Xamarin.AndroidX.Migration">
+    </PackageReference>
+    <PackageReference Include="Xamarin.Build.Download" />
+  </ItemGroup>
+
 </Project>

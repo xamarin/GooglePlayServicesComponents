@@ -149,7 +149,7 @@ namespace BeGenerous
         }
 
         // Count GameRequests in a GameRequestBuffer that have not yet expired
-        int countNotExpired (GameRequestBuffer buf) 
+        int countNotExpired (/*GameRequestBuffer*/ object buf) 
         {
             if (buf == null)
                 return 0;
@@ -166,7 +166,7 @@ namespace BeGenerous
         }
 
 
-        void LoadRequestsCallback (IRequestsLoadRequestsResult result)
+        void LoadRequestsCallback (/*IRequestsLoadRequestsResult*/object result)
         {
             var giftCount = countNotExpired(result.GetRequests (GameRequest.TypeGift));
             var wishCount = countNotExpired(result.GetRequests(GameRequest.TypeWish));
