@@ -1,3 +1,4 @@
+_Microsoft.Android.Resource.Designer
 Android.Annotation
 Android.BillingClient
 Android.BillingClient.Api
@@ -501,7 +502,6 @@ Javax.Annotation.Concurrent
 Javax.Annotation.Meta
 JavaX.Inject
 JWT
-Microsoft.CodeAnalysis
 Retrofit2.Internal
 Square.JavaPoet
 Square.OkHttp
@@ -524,7 +524,6 @@ Square.Retrofit2.Adapter.RxJava2
 Square.Retrofit2.Converter.Gson
 Square.Retrofit2.Converter.Scalars
 Square.Retrofit2.Http
-System.Runtime.CompilerServices
 Volley
 Volley.CroNet
 Volley.Toolbox
