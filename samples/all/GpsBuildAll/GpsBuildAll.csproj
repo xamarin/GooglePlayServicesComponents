@@ -1,93 +1,47 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{feb70ddb-8ece-4086-b111-2ea410b8165c}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>GpsBuildAll</RootNamespace>
-    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
-    <AndroidResgenClass>Resource</AndroidResgenClass>
-    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
-    <AndroidApplication>True</AndroidApplication>
-    <AssemblyName>GpsBuildAll</AssemblyName>
-    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
-    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
+    <TargetFrameworks>$(_DefaultDotNetSampleTargetFrameworks)</TargetFrameworks>
+    
+    <!-- Some packages specify a minimum of 28 (eg: Xamarin.AndroidX.HeifWriter) -->
+    <!--
+    <SupportedOSPlatformVersion>28</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationId>com.companyname.BuildAllDotNet</ApplicationId>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    -->
+
+    
+    <!-- Override property from 'Directory.Build.props' -->
+    <!--
+    <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
+    -->
+
+    <!-- Prevent linking, since that would remove ~everything -->
+    <!--
+    <PublishTrimmed>False</PublishTrimmed>
+    <RunAOTCompilation>False</RunAOTCompilation>
+    -->
+    
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>None</AndroidLinkMode>
-    <ConsolePause>false</ConsolePause>
-    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidDexTool>d8</AndroidDexTool>
-    <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <ConsolePause>false</ConsolePause>
-    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidDexTool>d8</AndroidDexTool>
-    <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Mono.Android" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.6.1.3" />
-    <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.5.0.3" />
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.19" />
-    <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.4.0.2" />
-    <PackageReference Include="Xamarin.Build.Download" Version="0.11.4" />
-    <PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.10" />
-    <PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.9.0.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="MainActivity.cs" />
-    <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\AndroidManifest.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
-    <AndroidResource Include="Resources\values\Strings.xml" />
-    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProguardConfiguration Include="proguard.cfg" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <Import Project="..\..\..\output\PlayServicesPackages.targets" />
+  
+	<Import 
+		Project="..\..\..\output\Directory.GPS.packages.props" 
+		/>
+	<Import 
+		Project="..\..\..\output\Directory.FB.packages.props" 
+		/>
+	<Import 
+		Project="..\..\..\output\Directory.MLKit.packages.props" 
+		/>
+	<Import 
+		Project="..\..\..\output\Directory.GP.packages.props" 
+		/>
+    <Import 
+		Project="..\..\..\output\Directory.Diverse.packages.props" 
+		/>
+    
 </Project>
