@@ -865,7 +865,7 @@ Task("samples-only-dotnet")
 
 		"./samples/com.google.firebase/firebase-invites/FirebaseInvitesQuickstart.sln",
 		"./samples/com.google.firebase/firebase-messaging/FirebaseMessagingQuickstart.sln",
-		"./samples/com.google.firebase/firebase-analytics/FirebaseAnalyticsQuickstart.sln",
+		//"./samples/com.google.firebase/firebase-analytics/FirebaseAnalyticsQuickstart.sln",
 		"./samples/com.google.firebase/firebase-auth/FirebaseAuthQuickstart.sln",
 		"./samples/com.google.firebase/firebase-config/FirebaseConfigQuickstart.sln",
 		"./samples/com.google.firebase/firebase-storage/FirebaseStorageQuickstart.sln",
