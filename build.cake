@@ -838,6 +838,42 @@ Task("samples-only-dotnet")
         "./samples/dotnet/BuildAllDotNet.sln",
         "./samples/dotnet/BuildAllMauiApp.sln",
         "./samples/dotnet/BuildAllPlayDotNet.sln",
+
+		"./samples/all/BuildAll.sln",
+
+		"./samples/dotnet/BuildAllMauiApp.sln",
+		"./samples/dotnet/BuildAllDotNet.sln",
+		"./samples/dotnet/BuildAllPlayDotNet.sln",
+		"./samples/com.google.android.gms/play-services-nearby/NearbySample.sln",
+		"./samples/com.google.android.gms/play-services-vision/VisionSample.sln",
+		"./samples/com.google.android.gms/play-services-safetynet/SafetyNetSample.sln",
+		"./samples/com.google.android.gms/play-services-gcm/GCMSample.sln",
+		"./samples/com.google.android.gms/play-services-places/PlacesAsync.sln",
+		"./samples/com.google.android.gms/play-services-plus/PlusSample.sln",
+		"./samples/com.google.android.gms/play-services-ads/AdMobSample.sln",
+		"./samples/com.google.android.gms/play-services-ads-lite/AdsLiteSample.sln",
+		"./samples/com.google.android.gms/play-services-panorama/PanoramaSample.sln",
+		"./samples/com.google.android.gms/play-services-analytics/AnalyticsSample.sln",
+		"./samples/com.google.android.gms/play-services-fitness/BasicSensorsApi.sln",
+		"./samples/com.google.android.gms/play-services-location/LocationSample.sln",
+		//"./samples/com.google.android.gms/play-services-games/BeGenerous.sln",
+		"./samples/com.google.android.gms/play-services-appinvite/AppInviteSample.sln",
+		"./samples/com.google.android.gms/play-services-drive/DriveSample.sln",
+		"./samples/com.google.android.gms/play-services-maps/MapsSample.sln",
+		"./samples/com.google.android.gms/play-services-wallet/AndroidPayQuickstart.sln",
+		"./samples/com.google.android.gms/play-services-cast/CastingCall.sln",
+
+		"./samples/com.google.firebase/firebase-invites/FirebaseInvitesQuickstart.sln",
+		"./samples/com.google.firebase/firebase-messaging/FirebaseMessagingQuickstart.sln",
+		"./samples/com.google.firebase/firebase-analytics/FirebaseAnalyticsQuickstart.sln",
+		"./samples/com.google.firebase/firebase-auth/FirebaseAuthQuickstart.sln",
+		"./samples/com.google.firebase/firebase-config/FirebaseConfigQuickstart.sln",
+		"./samples/com.google.firebase/firebase-storage/FirebaseStorageQuickstart.sln",
+		"./samples/com.google.firebase/firebase-crash/FirebaseCrashReportingQuickstart.sln",
+		"./samples/com.google.firebase/firebase-appindexing/AppIndexingSample.sln",
+		"./samples/com.google.firebase/firebase-ads/FirebaseAdmobQuickstart.sln",
+
+		"./samples/com.google.android.play/play-services-assetpack/AssetPackSample.sln",
     };
 
     DotNetMSBuildSettings settings = null;
