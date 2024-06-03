@@ -56,22 +56,5 @@
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.OW2.ASM.packages.props" />
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Protobuf.packages.props" />
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.TensorFlow.packages.props" />
-  <!-- 
-  <Import 
-		Project="..\..\..\output\Directory.GPS.packages.props" 
-		/>
-	<Import 
-		Project="..\..\..\output\Directory.FB.packages.props" 
-		/>
-	<Import 
-		Project="..\..\..\output\Directory.MLKit.packages.props" 
-		/>
-	<Import 
-		Project="..\..\..\output\Directory.GP.packages.props" 
-		/>
-    <Import 
-		Project="..\..\..\output\Directory.Diverse.packages.props" 
-		/>
-  -->
     
 </Project>

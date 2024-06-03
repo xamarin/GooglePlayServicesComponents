@@ -66,5 +66,33 @@
 		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.9.0.1" />
 	</ItemGroup>
 	
-
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GPS.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.FB.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.MLKit.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GooglePlay.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Square.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Glide.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.BillingClient.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Volley.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.AopAlliance.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Brotli.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Chromium.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.CodeHaus.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.FindBugs.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Dagger.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.ErrorProne.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.FlatBuffers.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Inject.Guice.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.UserMessagingPlatform.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.ZXing.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GoogleAndroid.Annotations.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Identity.GoogleId.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Grpc.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.OpenCensus.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.PerfMark.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.JavaX.Inject.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.OW2.ASM.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Protobuf.packages.props" />
+	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.TensorFlow.packages.props" />
+  
 </Project>
