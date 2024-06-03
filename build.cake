@@ -638,9 +638,9 @@ Task("samples-directory-build-targets")
 				Information($"nuget_version = {nuget_version}");
 				Information($"nugetId       = {jo["nugetId"]}");
 
-				XmlElement element_pr = doc_all.CreateElement( string.Empty, "PackageReference", string.Empty );
+				XmlElement element_pr = doc_all.CreateElement( string.Empty, "PackageVersion", string.Empty );
 	        	element_ig.AppendChild(element_pr);
-				XmlAttribute attr_update = doc_all.CreateAttribute("Update");
+				XmlAttribute attr_update = doc_all.CreateAttribute("Include");
 				attr_update.Value = (string) jo["nugetId"];
 				element_pr.Attributes.Append(attr_update);
 				XmlAttribute attr_version = doc_all.CreateAttribute("Version");
@@ -648,9 +648,9 @@ Task("samples-directory-build-targets")
 				element_pr.Attributes.Append(attr_version);
 			}
 
-			XmlElement xbd_pr = doc_all.CreateElement( string.Empty, "PackageReference", string.Empty );
+			XmlElement xbd_pr = doc_all.CreateElement( string.Empty, "PackageVersion", string.Empty );
 			element_ig.AppendChild(xbd_pr);
-			XmlAttribute xbd_attr_update = doc_all.CreateAttribute("Update");
+			XmlAttribute xbd_attr_update = doc_all.CreateAttribute("Include");
 			xbd_attr_update.Value = "Xamarin.Build.Download";
 			xbd_pr.Attributes.Append(xbd_attr_update);
 			XmlAttribute xbd_attr_version = doc_all.CreateAttribute("Version");
@@ -927,23 +927,56 @@ Task("allbindingprojectrefs")
 {
 	Action<string,string> generateTargets = (string pattern, string file) => {
 		var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
-		var itemGroup = new XElement(xmlns + "ItemGroup");
+		var itemGroup1 = new XElement(xmlns + "ItemGroup");
+		var itemGroup2 = new XElement(xmlns + "ItemGroup");
 		foreach (var nupkg in GetFiles(pattern)) {
 			var filename = nupkg.GetFilenameWithoutExtension();
 		var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
-		itemGroup.Add(new XElement(xmlns + "PackageReference",
+		itemGroup1.Add(new XElement(xmlns + "PackageVersion",
 			new XAttribute("Include", match.Groups[1]),
 			new XAttribute("Version", match.Groups[2])));
+
+		itemGroup2.Add(new XElement(xmlns + "PackageReference",
+			new XAttribute("Include", match.Groups[1])));
 		}
-		var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
-		xdoc.Save(file);
+		var xdoc1 = new XDocument(new XElement(xmlns + "Project", itemGroup1));
+		var xdoc2 = new XDocument(new XElement(xmlns + "Project", itemGroup2));
+
+		string file1 = file.Replace("./output/", "./output/Directory.").Replace(".targets", ".packages.props");
+		string file2 = file.Replace("./output/", "./output/Directory.").Replace(".targets", ".packages.targets");
+		xdoc1.Save(file1);
+		xdoc2.Save(file2);
 
 	};
 
-	generateTargets("./output/Xamarin.Firebase.*.nupkg", "./output/FirebasePackages.targets");
-	generateTargets("./output/Xamarin.GooglePlayServices.*.nupkg", "./output/PlayServicesPackages.targets");
-	generateTargets("./output/Xamarin.Google.MLKit.*.nupkg", "./output/Google.MLKit.targets");
-	generateTargets("./output/Xamarin.Google.Android.Play.*.nupkg", "./output/Google.Play.targets");
+	generateTargets("./output/Xamarin.GooglePlayServices.*.nupkg", "./output/GPS.targets");
+	generateTargets("./output/Xamarin.Firebase.*.nupkg", "./output/FB.targets");
+	generateTargets("./output/Xamarin.Google.MLKit.*.nupkg", "./output/MLKit.targets");
+	generateTargets("./output/Xamarin.Google.Android.Play.*.nupkg", "./output/GooglePlay.targets");
+	generateTargets("./output/Square.*.nupkg", "./output/Square.targets");
+	generateTargets("./output/Xamarin.AndroidGlide.*.nupkg", "./output/Glide.targets");
+	generateTargets("./output/Xamarin.Android.Google.BillingClient.*.nupkg", "./output/BillingClient.targets");
+	generateTargets("./output/Xamarin.Android.Volley.*.nupkg", "./output/Volley.targets");
+	generateTargets("./output/Xamarin.AopAlliance.*.nupkg", "./output/AopAlliance.targets");
+	generateTargets("./output/Xamarin.Brotli.*.nupkg", "./output/Brotli.targets");
+	generateTargets("./output/Xamarin.Chromium.*.nupkg", "./output/Chromium.targets");
+	generateTargets("./output/Xamarin.CodeHaus.*.nupkg", "./output/CodeHaus.targets");
+	generateTargets("./output/Xamarin.Google.Code.FindBugs.*.nupkg", "./output/FindBugs.targets");
+	generateTargets("./output/Xamarin.Google.Dagger.*.nupkg", "./output/Dagger.targets");
+	generateTargets("./output/Xamarin.Google.ErrorProne.*.nupkg", "./output/ErrorProne.targets");
+	generateTargets("./output/Xamarin.Google.FlatBuffers.*.nupkg", "./output/FlatBuffers.targets");
+	generateTargets("./output/Xamarin.Google.Inject.Guice.*.nupkg", "./output/Inject.Guice.targets");
+	generateTargets("./output/Xamarin.Google.UserMessagingPlatform.*.nupkg", "./output/UserMessagingPlatform.targets");
+	generateTargets("./output/Xamarin.Google.ZXing.*.nupkg", "./output/ZXing.targets");
+	generateTargets("./output/Xamarin.GoogleAndroid.Annotations.*.nupkg", "./output/GoogleAndroid.Annotations.targets");
+	generateTargets("./output/Xamarin.GoogleAndroid.Libraries.Identity.GoogleId.*.nupkg", "./output/Identity.GoogleId.targets");
+	generateTargets("./output/Xamarin.Grpc.*.nupkg", "./output/Grpc.targets");
+	generateTargets("./output/Xamarin.Io.OpenCensus.*.nupkg", "./output/OpenCensus.targets");
+	generateTargets("./output/Xamarin.Io.PerfMark.*.nupkg", "./output/PerfMark.targets");
+	generateTargets("./output/Xamarin.JavaX.Inject.*.nupkg", "./output/JavaX.Inject.targets");
+	generateTargets("./output/Xamarin.OW2.ASM.*.nupkg", "./output/OW2.ASM.targets");
+	generateTargets("./output/Xamarin.Protobuf.*.nupkg", "./output/Protobuf.targets");
+	generateTargets("./output/Xamarin.TensorFlow.*.nupkg", "./output/TensorFlow.targets");
 });
 
 
