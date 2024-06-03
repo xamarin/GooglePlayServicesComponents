@@ -3,6 +3,7 @@
   <!-- Default TFM's we build for -->
   <PropertyGroup>
     <_DefaultDotNetSampleTargetFrameworks>net8.0-android</_DefaultDotNetSampleTargetFrameworks>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

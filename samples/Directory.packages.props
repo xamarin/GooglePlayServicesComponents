@@ -1,0 +1,32 @@
+<Project>
+
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.GPS.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.FB.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.MLKit.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.GooglePlay.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.Square.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.Glide.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.BillingClient.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.Volley.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.AopAlliance.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.Brotli.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.Chromium.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.CodeHaus.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.FindBugs.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.Dagger.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.ErrorProne.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.FlatBuffers.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.Inject.Guice.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.UserMessagingPlatform.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.ZXing.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.GoogleAndroid.Annotations.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.Identity.GoogleId.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.Grpc.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.OpenCensus.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.PerfMark.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.JavaX.Inject.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.OW2.ASM.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.Protobuf.packages.props" />
+    <Import Include="$(MSBuildThisFileDirectory)/../output/Directory.TensorFlow.packages.props" />
+
+</Project>
