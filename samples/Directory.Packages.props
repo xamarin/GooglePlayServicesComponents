@@ -1,0 +1,72 @@
+<Project>
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    </PropertyGroup>
+      
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.GPS.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.FB.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.MLKit.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.GooglePlay.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.Square.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.Glide.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.BillingClient.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.Volley.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.AopAlliance.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.Brotli.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.Chromium.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.CodeHaus.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.FindBugs.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.Dagger.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.ErrorProne.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.FlatBuffers.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.Inject.Guice.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.UserMessagingPlatform.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.ZXing.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.GoogleAndroid.Annotations.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.Identity.GoogleId.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.Grpc.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.OpenCensus.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.PerfMark.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.JavaX.Inject.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.OW2.ASM.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.Protobuf.packages.props" />
+    <Import Project="$(MSBuildThisFileDirectory)/../output/Directory.TensorFlow.packages.props" />
+    
+    <ItemGroup>
+        <PackageVersion Include="Xamarin.AndroidX.Lifecycle.Common" Version="2.6.2.3" />
+        <PackageVersion Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.6.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageVersion Include="Xamarin.AndroidX.Activity" Version="1.8.1.1" />
+        <PackageVersion Include="Xamarin.AndroidX.Annotation" Version="1.7.1.1" />
+        <PackageVersion Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.6" />
+        <PackageVersion Include="Xamarin.AndroidX.Browser" Version="1.7.0.1" />
+        <PackageVersion Include="Xamarin.AndroidX.CardView" Version="1.0.0.24" />
+        <PackageVersion Include="Xamarin.AndroidX.Collection" Version="1.3.0.2" />
+        <PackageVersion Include="Xamarin.AndroidX.Concurrent.Futures" Version="1.1.0.17" />
+        <PackageVersion Include="Xamarin.AndroidX.ConstraintLayout" Version="2.1.4.9" />
+        <PackageVersion Include="Xamarin.AndroidX.Core" Version="1.12.0.3" />
+        <PackageVersion Include="Xamarin.AndroidX.Credentials" Version="1.2.0" />
+        <PackageVersion Include="Xamarin.AndroidX.DataStore" Version="1.0.0.3" />
+        <PackageVersion Include="Xamarin.AndroidX.DataStore.Preferences" Version="1.0.0.3" />
+        <PackageVersion Include="Xamarin.AndroidX.ExifInterface" Version="1.3.6.6" />
+        <PackageVersion Include="Xamarin.AndroidX.Fragment" Version="1.6.2.1" />
+        <PackageVersion Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0.22" />
+        <PackageVersion Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.22" />
+        <PackageVersion Include="Xamarin.AndroidX.Lifecycle.Process" Version="2.6.2.3" />
+        <PackageVersion Include="Xamarin.AndroidX.Lifecycle.ViewModel" Version="2.6.2.3" />
+        <PackageVersion Include="Xamarin.AndroidX.Lifecycle.Extensions" Version="2.2.0.22" />
+        <PackageVersion Include="Xamarin.AndroidX.Loader" Version="1.1.0.22" />
+        <PackageVersion Include="Xamarin.AndroidX.LocalBroadcastManager" Version="1.1.0.10" />
+        <PackageVersion Include="Xamarin.AndroidX.Media" Version="1.7.0" />
+        <PackageVersion Include="Xamarin.AndroidX.MediaRouter" Version="1.6.0.2" />
+        <PackageVersion Include="Xamarin.AndroidX.Preference" Version="1.2.1.4" />
+        <PackageVersion Include="Xamarin.AndroidX.RecyclerView" Version="1.3.2.1" />
+        <PackageVersion Include="Xamarin.AndroidX.Tracing.Tracing" Version="1.2.0" />
+        <PackageVersion Include="Xamarin.AndroidX.VectorDrawable.Animated" Version="1.1.0.22" />
+        <PackageVersion Include="Xamarin.AndroidX.WebKit" Version="1.10.0.1" />
+        <PackageVersion Include="Xamarin.AndroidX.Work.Runtime" Version="2.9.0" />
+        </ItemGroup>
+
+</Project>
