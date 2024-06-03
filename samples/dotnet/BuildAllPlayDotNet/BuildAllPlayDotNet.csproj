@@ -34,9 +34,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Google.Android.Play.Asset.Delivery" Version="2.1.0.7" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Asset.Delivery" />
+
     <!-- Remove the old Conflicting Package otherwise this causes build errors. -->
-    <PackageReference Remove="Xamarin.Google.Android.Play.Core" Version="1.10.3.11" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Core" />
+
+
+    <!-- 
+    -->
+    <PackageReference Include="Xamarin.Google.Android.Play.App.Update" />
+    <PackageReference Include="Xamarin.Google.Android.Play.App.Update.Ktx" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Asset.Delivery" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Asset.Delivery.Ktx" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Core" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Core.Common" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Core.Ktx" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Feature.Delivery" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Feature.Delivery.Ktx" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Integrity" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Review" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Review" />
   </ItemGroup>
     
 </Project>

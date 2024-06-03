@@ -47,23 +47,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Maui.Controls" VersionOverride="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" VersionOverride="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" VersionOverride="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup
 		Condition="$(TargetFramework.StartsWith('$(_DefaultDotNetSampleTargetFrameworks)')) == true"
 		>
-		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto" Version="[1.1.0.1-alpha06]" />
-		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto.Ktx" Version="[1.1.0.1-alpha06]" />
+		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto" VersionOverride="[1.1.0.1-alpha06]" />
+		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto.Ktx" VersionOverride="[1.1.0.1-alpha06]" />
 		
 		<!-- Should match version of the referenced 'Xamarin.AndroidX.Collection' package -->
-		<PackageReference Include="Xamarin.AndroidX.Collection.Jvm" Version="1.4.0.2" />
-		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.4.0.2" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Jvm" VersionOverride="1.4.0.2" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" VersionOverride="1.4.0.2" />
 
 		<!-- Should match version of the referenced 'Xamarin.AndroidX.Activity' package -->
-		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.9.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" VersionOverride="1.9.0.1" />
+
 	</ItemGroup>
 	
 	<Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GPS.packages.props" />
