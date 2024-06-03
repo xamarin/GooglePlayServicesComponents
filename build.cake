@@ -657,7 +657,7 @@ Task("samples-directory-build-targets")
 			xbd_attr_version.Value = "0.11.4";
 			xbd_pr.Attributes.Append(xbd_attr_version);
 
-			doc_all.Save( System.IO.Path.Combine("samples", "Directory.Build.targets" ));
+			//doc_all.Save( System.IO.Path.Combine("samples", "Directory.Build.targets" ));
 			doc_all.Save( System.IO.Path.Combine("output", "Directory.Build.targets" ));
 
 			string[] lines = System.IO.File.ReadAllLines("./output/Directory.Build.targets");
