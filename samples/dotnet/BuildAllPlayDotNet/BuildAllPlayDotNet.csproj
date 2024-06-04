@@ -16,14 +16,14 @@
 
     <!-- Override property from 'Directory.Build.props' -->
     <!--
-    <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
     -->
+    <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
 
     <!-- Prevent linking, since that would remove ~everything -->
     <!--
+    -->
     <PublishTrimmed>False</PublishTrimmed>
     <RunAOTCompilation>False</RunAOTCompilation>
-    -->
     
   </PropertyGroup>
 
@@ -36,12 +36,7 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Google.Android.Play.Asset.Delivery" />
 
-    <!-- Remove the old Conflicting Package otherwise this causes build errors. -->
-    <PackageReference Include="Xamarin.Google.Android.Play.Core" />
-
-
     <!-- 
-    -->
     <PackageReference Include="Xamarin.Google.Android.Play.App.Update" />
     <PackageReference Include="Xamarin.Google.Android.Play.App.Update.Ktx" />
     <PackageReference Include="Xamarin.Google.Android.Play.Asset.Delivery" />
@@ -54,6 +49,12 @@
     <PackageReference Include="Xamarin.Google.Android.Play.Integrity" />
     <PackageReference Include="Xamarin.Google.Android.Play.Review" />
     <PackageReference Include="Xamarin.Google.Android.Play.Review" />
+    -->
+
+    <!-- Remove the old Conflicting Package otherwise this causes build errors. -->
+    <PackageReference Remove="Xamarin.Google.Android.Play.Core" />
   </ItemGroup>
     
+
+
 </Project>

@@ -35,6 +35,7 @@
     <ItemGroup>
         <PackageVersion Include="Xamarin.AndroidX.Lifecycle.Common" Version="2.6.2.3" />
         <PackageVersion Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.6.2.3" />
+        <PackageVersion Include="Microsoft.Maui.Essentials" Version="8.0.40" />
     </ItemGroup>
 
     <ItemGroup>
@@ -67,6 +68,6 @@
         <PackageVersion Include="Xamarin.AndroidX.VectorDrawable.Animated" Version="1.1.0.22" />
         <PackageVersion Include="Xamarin.AndroidX.WebKit" Version="1.10.0.1" />
         <PackageVersion Include="Xamarin.AndroidX.Work.Runtime" Version="2.9.0" />
-        </ItemGroup>
+    </ItemGroup>
 
 </Project>
