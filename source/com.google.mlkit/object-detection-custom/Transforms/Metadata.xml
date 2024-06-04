@@ -93,39 +93,31 @@
         >
         EnableClassificationAlternative
     </attr>    
-    <remove-node
-        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int'] and @return='com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions.Builder']"
-        />
-    <remove-node
-        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor'] and @return='com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions.Builder']"
-        />
-    <remove-node
-        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='build']"
-        />
-    <remove-node
-        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='enableClassification' and count(parameter)=0 and @return='com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions.Builder']"
-        />
-
-    <remove-node 
-        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='build' and count(parameter)=0]"
-        />
     <attr
-        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='build' and count(parameter)=0]"
-        name="abstract"
+        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor'] and @return='com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions.Builder']"
+        name="managedName"
         >
-        false
+        SetExecutorAlternative
     </attr>
-    <remove-node 
-        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='enableClassification' and count(parameter)=0]"
-        />
-    <remove-node 
-        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='enableMultipleObjects' and count(parameter)=0]"
-        />
-    <remove-node 
-        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
-        />
-    <remove-node 
-        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int']]"
-        />
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int'] and @return='com.google.mlkit.vision.objects.custom.CustomObjectDetectorOptions.Builder']"
+        name="managedName"
+        >
+        SetExecutorAlternative
+    </attr>
+    
+    <!-- Fix public class inheriting from protected class causing duplicate methods -->
+    <attr
+      path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']"
+      name="extends"
+      >
+      java.lang.Object
+    </attr>
+    <attr
+      path="/api/package[@name='com.google.mlkit.vision.objects.custom']/class[@name='CustomObjectDetectorOptions.Builder']"
+      name="extends-generic-aware"
+      >
+      java.lang.Object
+    </attr>
 
 </metadata>

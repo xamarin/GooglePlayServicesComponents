@@ -1,4 +1,3 @@
-_Microsoft.Android.Resource.Designer
 Android.Annotation
 Android.BillingClient
 Android.BillingClient.Api
