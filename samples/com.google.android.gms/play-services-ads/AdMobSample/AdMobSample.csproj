@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-android</TargetFramework>
+    <TargetFrameworks>$(_DefaultDotNetSampleTargetFrameworks)</TargetFrameworks>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
@@ -12,18 +12,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.7.0.1" />
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common" Version="2.7.0.1" />
-    <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.8.0" />
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.23" />
-    <PackageReference Include="Xamarin.Build.Download">
-      <Version>0.11.4</Version>
-    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData"/>
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common"/>
+    <PackageReference Include="Xamarin.AndroidX.Browser"/>
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4"/>
     <PackageReference Include="Xamarin.GooglePlayServices.Ads.Lite">
-      <Version>122.3.0.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Basement">
-      <Version>117.6.0</Version>
     </PackageReference>
   </ItemGroup>
 </Project>
