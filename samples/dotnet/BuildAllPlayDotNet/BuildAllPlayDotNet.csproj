@@ -12,7 +12,7 @@
     <ApplicationId>com.companyname.BuildAllDotNet</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-     <AndroidBundleToolExtraArgs Condition=" '$(Configuration)' == 'Debug' ">--local-testing</AndroidBundleToolExtraArgs>
+    <AndroidBundleToolExtraArgs Condition=" '$(Configuration)' == 'Debug' ">--local-testing</AndroidBundleToolExtraArgs>
 
     <!-- Override property from 'Directory.Build.props' -->
     <!--
@@ -24,6 +24,7 @@
     -->
     <PublishTrimmed>False</PublishTrimmed>
     <RunAOTCompilation>False</RunAOTCompilation>
+    <RootNamespace>BuildAllPlayDotNet</RootNamespace>
     
   </PropertyGroup>
 
