@@ -35,7 +35,25 @@
     <ItemGroup>
         <PackageVersion Include="Xamarin.AndroidX.Lifecycle.Common" Version="2.6.2.3" />
         <PackageVersion Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.6.2.3" />
+        <PackageVersion Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" Version="2.6.2.3" />
+        <PackageVersion Include="System.Json" Version="4.7.1" />
         <PackageVersion Include="Microsoft.Maui.Essentials" Version="8.0.40" />
+
+        <PackageVersion Include="Xamarin.Build.Download" Version="0.11.4" />
+ 
+        <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
+        <PackageVersion Include="NUnit" Version="4.1.0" />
+        <PackageVersion Include="NUnit3TestAdapter" Version="4.5.0" />
+        <PackageVersion Include="NUnit.Analyzers" Version="4.2.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageVersion>
+        <PackageVersion Include="coverlet.collector" Version="6.0.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageVersion>
+        <PackageVersion Include="SharpZipLib" Version="1.4.2" />
+        <PackageVersion Include="Xamarin.UITest" Version="4.2.0" />
     </ItemGroup>
 
     <ItemGroup>
