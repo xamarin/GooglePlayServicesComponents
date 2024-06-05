@@ -846,7 +846,8 @@ Task("samples-only-dotnet")
 		"./samples/dotnet/BuildAllPlayDotNet.sln",
 		"./samples/com.google.android.gms/play-services-nearby/NearbySample.sln",
 		"./samples/com.google.android.gms/play-services-vision/VisionSample.sln",
-		"./samples/com.google.android.gms/play-services-safetynet/SafetyNetSample.sln",
+		// System.Json ???
+		//"./samples/com.google.android.gms/play-services-safetynet/SafetyNetSample.sln",
 		"./samples/com.google.android.gms/play-services-gcm/GCMSample.sln",
 		"./samples/com.google.android.gms/play-services-places/PlacesAsync.sln",
 		"./samples/com.google.android.gms/play-services-plus/PlusSample.sln",
