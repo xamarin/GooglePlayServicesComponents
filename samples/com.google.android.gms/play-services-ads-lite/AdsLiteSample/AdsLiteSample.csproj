@@ -20,13 +20,14 @@
     <PackageReference Include="Xamarin.AndroidX.Browser" />
     <PackageReference Include="Xamarin.Google.Android.Material" />
     <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" />
+    <PackageReference Include="Xamarin.AndroidX.Work.Runtime" />        
+    <PackageReference Include="Microsoft.Maui.Essentials" />
+
     <PackageReference Include="Xamarin.Build.Download">
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Ads.Lite">
-      <Version>122.3.0.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Basement">
-      <Version>117.6.0</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

@@ -14,45 +14,40 @@
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 
-    
-    <!-- Override property from 'Directory.Build.props' -->
-    <!--
-    -->
-    <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
- 
+   
     <!-- Prevent linking, since that would remove ~everything -->
     <PublishTrimmed>False</PublishTrimmed>
     <RunAOTCompilation>False</RunAOTCompilation>
     <RootNamespace>BuildAllDotNet</RootNamespace>
   </PropertyGroup>
   
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GPS.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.FB.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.MLKit.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GooglePlay.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Square.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Glide.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.BillingClient.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Volley.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.AopAlliance.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Brotli.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Chromium.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.CodeHaus.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.FindBugs.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Dagger.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.ErrorProne.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.FlatBuffers.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Inject.Guice.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.UserMessagingPlatform.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.ZXing.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GoogleAndroid.Annotations.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Identity.GoogleId.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Grpc.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.OpenCensus.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.PerfMark.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.JavaX.Inject.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.OW2.ASM.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Protobuf.packages.props" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.TensorFlow.packages.props" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GPS.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.FB.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.MLKit.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GooglePlay.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Square.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Glide.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.BillingClient.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Volley.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.AopAlliance.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Brotli.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Chromium.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.CodeHaus.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.FindBugs.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Dagger.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.ErrorProne.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.FlatBuffers.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Inject.Guice.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.UserMessagingPlatform.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.ZXing.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GoogleAndroid.Annotations.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Identity.GoogleId.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Grpc.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.OpenCensus.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.PerfMark.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.JavaX.Inject.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.OW2.ASM.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Protobuf.packages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.TensorFlow.packages.targets" />
     
 </Project>

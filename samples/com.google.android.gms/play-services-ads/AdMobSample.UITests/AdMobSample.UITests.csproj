@@ -23,6 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AdMobSample\AdMobSample.csproj">
     </ProjectReference>
   </ItemGroup>

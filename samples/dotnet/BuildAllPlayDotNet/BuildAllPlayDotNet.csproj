@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFrameworks>$(_DefaultDotNetSampleTargetFrameworks)</TargetFrameworks>
+    
+    <!-- Some packages specify a minimum of 28 (eg: Xamarin.AndroidX.HeifWriter) -->
+    <!--
+    -->
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <!-- Some packages specify a minimum of 28 (eg: Xamarin.AndroidX.HeifWriter) -->
     
@@ -9,10 +13,23 @@
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationId>com.companyname.BuildAllDotNet</ApplicationId>
+    <ApplicationId>com.companyname.BuildAllPlayDotNet</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <AndroidBundleToolExtraArgs Condition=" '$(Configuration)' == 'Debug' ">--local-testing</AndroidBundleToolExtraArgs>
+
+   
+    <!-- Prevent linking, since that would remove ~everything -->
+    <PublishTrimmed>False</PublishTrimmed>
+    <RunAOTCompilation>False</RunAOTCompilation>
+    <RootNamespace>BuildAllDotNet</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>$(_DefaultDotNetSampleTargetFrameworks)</TargetFrameworks>
+    <ApplicationId>com.companyname.BuildAllDotNet</ApplicationId>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 
     <!-- Override property from 'Directory.Build.props' -->
     <!--

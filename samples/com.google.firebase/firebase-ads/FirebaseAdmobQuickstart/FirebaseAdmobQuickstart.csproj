@@ -18,6 +18,7 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" />
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime" />
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" />
     <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" />
     <PackageReference Include="Xamarin.AndroidX.AppCompat" />
