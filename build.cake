@@ -628,20 +628,57 @@ Task("samples-directory-build-targets")
 	       	XmlElement element_ig = doc_all.CreateElement( string.Empty, "ItemGroup", string.Empty );
         	element_p.AppendChild(element_ig);
 
+
 			foreach(JObject jo in binderator_json_array[0]["artifacts"])
 			{
+				bool? dependency_only = (bool?) jo["dependencyOnly"];
+				if ( dependency_only == true)
+				{
+					continue;
+				}
+
+				string nuget_id		 = (string) jo["nugetId"];
+				/* 
+				ACW errors
+					type is defined multiple times
+				*/
+				if 
+					(
+						nuget_id == "Xamarin.GooglePlayServices.Games" 
+						|| 
+						nuget_id == "Xamarin.GooglePlayServices.Measurement"
+						||
+						nuget_id == "Xamarin.Firebase.ML.Vision.Internal.Vkp"
+						|| 
+						nuget_id == "Xamarin.Google.MLKit.Vision.Internal.Vkp"
+						|| 
+						nuget_id == "Xamarin.Google.MLKit.ImageLabeling"
+						|| 
+						nuget_id == "Xamarin.Google.MLKit.ImageLabeling.Custom"
+						|| 
+						nuget_id == "Xamarin.Google.MLKit.ObjectDetection"
+						|| 
+						nuget_id == "Xamarin.Google.MLKit.ObjectDetection.Custom"
+						|| 
+						nuget_id == "Xamarin.Protobuf.Lite" 
+					)
+				{
+					continue;
+				}
+
+
 				string version       = (string) jo["version"];
 				string nuget_version = (string) jo["nugetVersion"];
 				Information($"groupId       = {jo["groupId"]}");
 				Information($"artifactId    = {jo["artifactId"]}");
 				Information($"version       = {version}");
 				Information($"nuget_version = {nuget_version}");
-				Information($"nugetId       = {jo["nugetId"]}");
+				Information($"nugetId       = {nuget_id}");
 
 				XmlElement element_pr = doc_all.CreateElement( string.Empty, "PackageVersion", string.Empty );
 	        	element_ig.AppendChild(element_pr);
 				XmlAttribute attr_update = doc_all.CreateAttribute("Include");
-				attr_update.Value = (string) jo["nugetId"];
+				attr_update.Value = nuget_id;
 				element_pr.Attributes.Append(attr_update);
 				XmlAttribute attr_version = doc_all.CreateAttribute("Version");
 				attr_version.Value = nuget_version;
@@ -667,6 +704,7 @@ Task("samples-directory-build-targets")
 			List<string> lines_gp = new List<string>();
 			List<string> lines_diverse = new List<string>();
 
+			throw new Exception("");
 			Parallel.Invoke
 						(
 							() =>
@@ -683,6 +721,19 @@ Task("samples-directory-build-targets")
 											line.Contains("Xamarin.GooglePlayServices.")
 										)
 									{
+										if 
+										(
+											line.Contains("Xamarin.GooglePlayServices.Games")
+											||
+											line.Contains("Xamarin.GooglePlayServices.Measurement")
+										)
+										{
+											Information($"{new string('-', 120)}");
+											Information($"Skipping {line}");
+
+											continue;											
+										}
+										
 										lines_gps.Add(line);
 									}
 									else
@@ -709,6 +760,17 @@ Task("samples-directory-build-targets")
 											line.Contains("Xamarin.Firebase.")
 										)
 									{
+										if 
+										(
+											line.Contains("Xamarin.Firebase.ML.Vision.Internal.Vkp")
+										)
+										{
+											Information($"{new string('-', 120)}");
+											Information($"Skipping {line}");
+
+											continue;											
+										}
+
 										lines_fb.Add(line);
 									}
 									else
@@ -735,6 +797,25 @@ Task("samples-directory-build-targets")
 											line.Contains("Xamarin.Google.MLKit.")
 										)
 									{
+										if 
+										(
+											line.Contains("Xamarin.Google.MLKit.Vision.Internal.Vkp")
+											|| 
+											line.Contains("Xamarin.Google.MLKit.ImageLabeling")
+											|| 
+											line.Contains("Xamarin.Google.MLKit.ImageLabeling.Custom")
+											|| 
+											line.Contains("Xamarin.Google.MLKit.ObjectDetection")
+											|| 
+											line.Contains("Xamarin.Google.MLKit.ObjectDetection.Custom")
+										)
+										{
+											Information($"{new string('-', 120)}");
+											Information($"Skipping {line}");
+
+											continue;											
+										}
+
 										lines_mlkit.Add(line);
 									}
 									else
@@ -796,9 +877,22 @@ Task("samples-directory-build-targets")
 											||
 											line.Contains("Xamarin.CodeHaus.")
 											||
+											line.Contains("Xamarin.Protobuf.")
+											||
 											line.Contains("Xamarin.TensorFlow.")
 										)
 									{
+										if 
+											(
+												line == "Xamarin.Protobuf.Lite"
+											)
+										{
+											Information($"{new string('-', 120)}");
+											Information($"Skipping {line}");
+
+											continue;	
+										}
+
 										lines_diverse.Add(line);
 									}
 									else
@@ -933,12 +1027,28 @@ Task("allbindingprojectrefs")
 		foreach (var nupkg in GetFiles(pattern)) {
 			var filename = nupkg.GetFilenameWithoutExtension();
 		var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
+
+		string nuget_id = match.Groups[1].Value;
+		/* 
+		ACW errors
+		*/
+		if (
+				nuget_id == "Xamarin.GooglePlayServices.Games" 
+				|| 
+				nuget_id == "Xamarin.Protobuf.Lite" 
+				|| 
+				nuget_id == "Xamarin.GooglePlayServices.Measurement"
+			)
+		{
+			continue;
+		}
+
 		itemGroup1.Add(new XElement(xmlns + "PackageVersion",
-			new XAttribute("Include", match.Groups[1]),
+			new XAttribute("Include", nuget_id),
 			new XAttribute("Version", match.Groups[2])));
 
 		itemGroup2.Add(new XElement(xmlns + "PackageReference",
-			new XAttribute("Include", match.Groups[1])));
+			new XAttribute("Include", nuget_id)));
 		}
 		var xdoc1 = new XDocument(new XElement(xmlns + "Project", itemGroup1));
 		var xdoc2 = new XDocument(new XElement(xmlns + "Project", itemGroup2));
