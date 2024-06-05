@@ -640,11 +640,13 @@ Task("samples-directory-build-targets")
 				string nuget_id		 = (string) jo["nugetId"];
 				/* 
 				ACW errors
-					type is defined multiple times
+					java error JAVA0000: Type X is defined multiple times:
 				*/
 				if 
 					(
 						nuget_id == "Xamarin.GooglePlayServices.Games" 
+						|| 
+						nuget_id.Contains("Xamarin.GooglePlayServices.Ads")
 						|| 
 						nuget_id == "Xamarin.GooglePlayServices.Measurement"
 						||
@@ -704,7 +706,6 @@ Task("samples-directory-build-targets")
 			List<string> lines_gp = new List<string>();
 			List<string> lines_diverse = new List<string>();
 
-			throw new Exception("");
 			Parallel.Invoke
 						(
 							() =>
@@ -716,16 +717,15 @@ Task("samples-directory-build-targets")
 										lines_gps.Add(line);
 									}
 									
-									if
-										( 
-											line.Contains("Xamarin.GooglePlayServices.")
-										)
+									if (line.Contains("Xamarin.GooglePlayServices.") )
 									{
 										if 
 										(
 											line.Contains("Xamarin.GooglePlayServices.Games")
 											||
 											line.Contains("Xamarin.GooglePlayServices.Measurement")
+											||
+											line.Contains("Xamarin.GooglePlayServices.Ads")
 										)
 										{
 											Information($"{new string('-', 120)}");
@@ -755,19 +755,13 @@ Task("samples-directory-build-targets")
 										lines_fb.Add(line);
 									}
 
-									if
-										( 
-											line.Contains("Xamarin.Firebase.")
-										)
+									if ( line.Contains("Xamarin.Firebase.") )
 									{
 										if 
 										(
 											line.Contains("Xamarin.Firebase.ML.Vision.Internal.Vkp")
 										)
 										{
-											Information($"{new string('-', 120)}");
-											Information($"Skipping {line}");
-
 											continue;											
 										}
 
@@ -792,10 +786,7 @@ Task("samples-directory-build-targets")
 										lines_mlkit.Add(line);
 									}
 
-									if
-										( 
-											line.Contains("Xamarin.Google.MLKit.")
-										)
+									if ( line.Contains("Xamarin.Google.MLKit.") )
 									{
 										if 
 										(
@@ -810,9 +801,6 @@ Task("samples-directory-build-targets")
 											line.Contains("Xamarin.Google.MLKit.ObjectDetection.Custom")
 										)
 										{
-											Information($"{new string('-', 120)}");
-											Information($"Skipping {line}");
-
 											continue;											
 										}
 
@@ -837,10 +825,7 @@ Task("samples-directory-build-targets")
 										lines_gp.Add(line);
 									}
 
-									if
-										( 
-											line.Contains("Xamarin.Google.Android.Play.")
-										)
+									if ( line.Contains("Xamarin.Google.Android.Play.") )
 									{
 										lines_gp.Add(line);
 									}

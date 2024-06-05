@@ -28,8 +28,8 @@
   
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GPS.packages.targets" />
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.FB.packages.targets" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.MLKit.packages.targets" />
   <!-- 
+  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.MLKit.packages.targets" />
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GooglePlay.packages.targets" />
   -->
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Square.packages.targets" />
