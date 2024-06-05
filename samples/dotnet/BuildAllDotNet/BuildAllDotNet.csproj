@@ -6,7 +6,7 @@
     <!-- Some packages specify a minimum of 28 (eg: Xamarin.AndroidX.HeifWriter) -->
     <!--
     -->
-    <SupportedOSPlatformVersion>28</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>29</SupportedOSPlatformVersion>
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -15,6 +15,11 @@
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 
    
+    <!-- Override property from 'Directory.Build.props' -->
+    <!--
+    -->
+    <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
+
     <!-- Prevent linking, since that would remove ~everything -->
     <PublishTrimmed>False</PublishTrimmed>
     <RunAOTCompilation>False</RunAOTCompilation>
@@ -24,7 +29,9 @@
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GPS.packages.targets" />
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.FB.packages.targets" />
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.MLKit.packages.targets" />
+  <!-- 
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GooglePlay.packages.targets" />
+  -->
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Square.packages.targets" />
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Glide.packages.targets" />
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.BillingClient.packages.targets" />
