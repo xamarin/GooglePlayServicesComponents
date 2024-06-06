@@ -78,6 +78,7 @@
         <PackageVersion Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.24" />
         <PackageVersion Include="Xamarin.AndroidX.Lifecycle.Process" Version="2.7.0.2" />
         <PackageVersion Include="Xamarin.AndroidX.Lifecycle.ViewModel" Version="2.7.0.2" />
+        <PackageVersion Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" Version="2.7.0.2" />
         <PackageVersion Include="Xamarin.AndroidX.Lifecycle.Extensions" Version="2.2.0.22" />
         <PackageVersion Include="Xamarin.AndroidX.Loader" Version="1.1.0.24" />
         <PackageVersion Include="Xamarin.AndroidX.LocalBroadcastManager" Version="1.1.0.12" />
