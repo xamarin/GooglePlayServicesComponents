@@ -922,7 +922,7 @@ Task("samples-only-dotnet")
 		// "./samples/all/BuildAll.sln",
         // "./samples/dotnet/BuildAllDotNet.sln",
         //"./samples/dotnet/BuildAllMauiApp.sln",
-        "./samples/dotnet/BuildAllPlayDotNet.sln",
+        //"./samples/dotnet/BuildAllPlayDotNet.sln",
 
 		"./samples/com.google.android.gms/play-services-nearby/NearbySample.sln",
 		"./samples/com.google.android.gms/play-services-vision/VisionSample.sln",
