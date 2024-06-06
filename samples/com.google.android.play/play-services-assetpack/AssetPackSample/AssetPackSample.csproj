@@ -9,6 +9,17 @@
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 
     <RootNamespace>AssetPackSample</RootNamespace>
+
+    <!-- Override property from 'Directory.Build.props' -->
+    <!--
+    -->
+    <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
+
+    <!-- Prevent linking, since that would remove ~everything -->
+    <!--
+    -->
+    <PublishTrimmed>False</PublishTrimmed>
+    <RunAOTCompilation>False</RunAOTCompilation>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,7 +36,10 @@
     <PackageReference Include="Microsoft.Maui.Essentials" />
     
     <PackageReference Include="Xamarin.GooglePlayServices.Base" />
-    <PackageReference Include="Xamarin.Google.Android.Play.Core" /> 
+    
+    <PackageReference Include="Xamarin.Google.Android.Play.Asset.Delivery" />
+    <!-- Remove the old Conflicting Package otherwise this causes build errors. -->
+    <PackageReference Remove="Xamarin.Google.Android.Play.Core" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AssetPacks\InstallTimeAssetPack\InstallTimeAssetPack.csproj">
