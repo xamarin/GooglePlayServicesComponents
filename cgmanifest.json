@@ -3539,6 +3539,19 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "tensorflow-lite-select-tf-ops",
+          "groupId": "org.tensorflow",
+          "version": "2.15.0",
+          "nuGetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
+          "nuGetVersion": "2.15.0.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "tensorflow-lite-support",
           "groupId": "org.tensorflow",
           "version": "0.4.4",
