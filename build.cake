@@ -954,7 +954,9 @@ Task("samples-only-dotnet")
 		"./samples/com.google.firebase/firebase-appindexing/AppIndexingSample.sln",
 		"./samples/com.google.firebase/firebase-ads/FirebaseAdmobQuickstart.sln",
 
-		"./samples/com.google.android.play/play-services-assetpack/AssetPackSample.sln",
+		// Release mode
+		// error XAGJS7001: System.NullReferenceException: Object reference not set to an instance of an object.
+		//"./samples/com.google.android.play/play-services-assetpack/AssetPackSample.sln",
     };
 
     DotNetMSBuildSettings settings = null;
