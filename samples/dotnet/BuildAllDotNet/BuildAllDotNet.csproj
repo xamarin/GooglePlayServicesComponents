@@ -54,7 +54,6 @@
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/PlayServicesPackages.targets" />
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/FirebasePackages.targets" />
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Google.MLKit.targets" />
-  <Import Project="$(MSBuildThisFileDirectory)/../../../output/Google.Play.targets" />
   <!-- 
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.MLKit.packages.targets" />
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.GooglePlay.packages.targets" />
