@@ -4,7 +4,7 @@
     <RepositoryType>git</RepositoryType>
 
     <!-- Default TFM's we build for -->
-    <_DefaultTargetFrameworks>net8.0-android</_DefaultTargetFrameworks>
+    <_DefaultTargetFrameworks>net9.0-android</_DefaultTargetFrameworks>
     
 
     <!-- Use an updated 'generator' -->
