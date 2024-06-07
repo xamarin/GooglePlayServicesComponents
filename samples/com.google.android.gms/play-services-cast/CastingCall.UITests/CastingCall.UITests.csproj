@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-      <TargetFramework>net8.0-android</TargetFramework>
+    <TargetFrameworks>$(_DefaultDotNetSampleTargetFrameworks)</TargetFrameworks>
       <IsPackable>false</IsPackable>
       <IsTestProject>true</IsTestProject>
   </PropertyGroup>
