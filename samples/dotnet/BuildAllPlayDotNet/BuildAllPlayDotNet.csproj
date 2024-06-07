@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFrameworks>$(_DefaultDotNetSampleTargetFrameworks)</TargetFrameworks>
+    
+    <!-- Some packages specify a minimum of 28 (eg: Xamarin.AndroidX.HeifWriter) -->
+    <!--
+    -->
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <!-- Some packages specify a minimum of 28 (eg: Xamarin.AndroidX.HeifWriter) -->
     
@@ -9,21 +13,35 @@
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationId>com.companyname.BuildAllPlayDotNet</ApplicationId>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <AndroidBundleToolExtraArgs Condition=" '$(Configuration)' == 'Debug' ">--local-testing</AndroidBundleToolExtraArgs>
+
+   
+    <!-- Prevent linking, since that would remove ~everything -->
+    <PublishTrimmed>False</PublishTrimmed>
+    <RunAOTCompilation>False</RunAOTCompilation>
+    <RootNamespace>BuildAllDotNet</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>$(_DefaultDotNetSampleTargetFrameworks)</TargetFrameworks>
     <ApplicationId>com.companyname.BuildAllDotNet</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-     <AndroidBundleToolExtraArgs Condition=" '$(Configuration)' == 'Debug' ">--local-testing</AndroidBundleToolExtraArgs>
 
     <!-- Override property from 'Directory.Build.props' -->
     <!--
-    <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
     -->
+    <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
 
     <!-- Prevent linking, since that would remove ~everything -->
     <!--
+    -->
     <PublishTrimmed>False</PublishTrimmed>
     <RunAOTCompilation>False</RunAOTCompilation>
-    -->
+    <RootNamespace>BuildAllPlayDotNet</RootNamespace>
     
   </PropertyGroup>
 
@@ -34,9 +52,27 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Google.Android.Play.Asset.Delivery" Version="2.1.0.6" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Asset.Delivery" />
+
+    <!-- 
+    <PackageReference Include="Xamarin.Google.Android.Play.App.Update" />
+    <PackageReference Include="Xamarin.Google.Android.Play.App.Update.Ktx" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Asset.Delivery" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Asset.Delivery.Ktx" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Core" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Core.Common" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Core.Ktx" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Feature.Delivery" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Feature.Delivery.Ktx" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Integrity" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Review" />
+    <PackageReference Include="Xamarin.Google.Android.Play.Review" />
+    -->
+
     <!-- Remove the old Conflicting Package otherwise this causes build errors. -->
-    <PackageReference Remove="Xamarin.Google.Android.Play.Core" Version="1.10.3.10" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Core" />
   </ItemGroup>
     
+
+
 </Project>

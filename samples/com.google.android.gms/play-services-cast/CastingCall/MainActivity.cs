@@ -20,7 +20,7 @@ namespace CastingCall
 
         GoogleApiClient googleApiClient;
 
-        MediaRouteButton mediaRouteButton;
+        AndroidX.MediaRouter.App.MediaRouteButton mediaRouteButton;
 
         MediaRouter mediaRouter;
         MediaRouteSelector mediaRouteSelector;
@@ -35,7 +35,7 @@ namespace CastingCall
             // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
 
-            mediaRouteButton = FindViewById<MediaRouteButton> (Resource.Id.mediaRouteButton);
+            mediaRouteButton = FindViewById<AndroidX.MediaRouter.App.MediaRouteButton> (Resource.Id.mediaRouteButton);
 
             Init ();
         }

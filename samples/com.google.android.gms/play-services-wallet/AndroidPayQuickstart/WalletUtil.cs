@@ -17,10 +17,12 @@ namespace AndroidPayQuickstart
      * @return {@link MaskedWalletRequest} instance
      */
         // removed https://developers.google.com/android/guides/releases#august_27_2019
-        public static Android.Gms.Wallet.MaskedWalletRequest CreateMaskedWalletRequest (ItemInfo itemInfo) 
+        /*
+        public static Android.Gms.Wallet.MaskedWalletRequest CreateMaskedWalletRequest (ItemInfo itemInfo)
         {
             return CreateMaskedWalletRequest (itemInfo, null);
         }
+        */ 
 
         /**
      * Creates a MaskedWalletRequest for processing payments with Stripe
@@ -32,6 +34,7 @@ namespace AndroidPayQuickstart
      * @return {@link MaskedWalletRequest} instance
      */
         // removed https://developers.google.com/android/guides/releases#august_27_2019
+        /*
         public static MaskedWalletRequest CreateStripeMaskedWalletRequest (ItemInfo itemInfo, PaymentMethodTokenizationParameters parameters) 
         {
             return CreateMaskedWalletRequest (itemInfo, parameters);
@@ -65,6 +68,7 @@ namespace AndroidPayQuickstart
 
             return builder.Build ();
         }
+        */
 
         /**
      * Build a list of line items based on the {@link ItemInfo} and a boolean that indicates
@@ -77,6 +81,7 @@ namespace AndroidPayQuickstart
      *                   shipping and tax values.
      * @return list of line items
      */
+        /*
         // removed https://developers.google.com/android/guides/releases#august_27_2019
         private static List<LineItem> buildLineItems (ItemInfo itemInfo, bool isEstimate) 
         {
@@ -119,6 +124,7 @@ namespace AndroidPayQuickstart
 
             return list;
         }
+        */
 
         /**
      *
@@ -126,6 +132,7 @@ namespace AndroidPayQuickstart
      *                  the cart total.
      * @return cart total.
      */
+        /*
         private static String calculateCartTotal(List<LineItem> lineItems) 
         {
             BigDecimal cartTotal = BigDecimal.Zero;
@@ -142,6 +149,7 @@ namespace AndroidPayQuickstart
 
             return cartTotal.SetScale (2, RoundingMode.HalfEven).ToString ();
         }
+        */
 
         /**
      *
@@ -151,6 +159,7 @@ namespace AndroidPayQuickstart
      * @return {@link FullWalletRequest} instance
      */
         // removed https://developers.google.com/android/guides/releases#august_27_2019
+        /*
         public static FullWalletRequest CreateFullWalletRequest(ItemInfo itemInfo, string googleTransactionId) {
 
             // removed https://developers.google.com/android/guides/releases#august_27_2019
@@ -168,6 +177,7 @@ namespace AndroidPayQuickstart
                     .Build ())
                 .Build ();
         }
+        */
 
         /**
      * @param googleTransactionId

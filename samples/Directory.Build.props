@@ -1,8 +1,15 @@
 <Project>
 
+  <Import Project="$(MSBuildThisFileDirectory)/../Directory.Build.props" />
+
   <!-- Default TFM's we build for -->
   <PropertyGroup>
-    <_DefaultDotNetSampleTargetFrameworks>net7.0-android</_DefaultDotNetSampleTargetFrameworks>
+    <_DefaultDotNetSampleTargetFrameworks>$(_DefaultTargetFrameworks)</_DefaultDotNetSampleTargetFrameworks>
+    
+    <!-- Override property from 'Directory.Build.props' -->
+    <!--
+    -->
+    <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

@@ -1,118 +1,43 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{64ADFD05-882E-41D9-B045-935CD0D08CD4}</ProjectGuid>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <OutputType>Library</OutputType>
+    <TargetFrameworks>$(_DefaultDotNetSampleTargetFrameworks)</TargetFrameworks>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+
     <RootNamespace>FirebaseAnalyticsQuickstart</RootNamespace>
-    <AssemblyName>FirebaseAnalyticsQuickstart</AssemblyName>
-    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
-    <AndroidApplication>True</AndroidApplication>
-    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
-    <AndroidResgenClass>Resource</AndroidResgenClass>
-    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
-    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <AndroidLinkMode>None</AndroidLinkMode>
-    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
-    <AndroidDexTool>d8</AndroidDexTool>
-    <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <AndroidDexTool>d8</AndroidDexTool>
-    <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Mono.Android" />
-    <Reference Include="Java.Interop" />
+    <ProguardConfiguration Include="proguard.cfg" />
   </ItemGroup>
+
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.5.1" />
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.14" />
-    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.6.1.1" />
-    <PackageReference Include="Xamarin.Firebase.Analytics">
-      <Version>120.0.1.2</Version>
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" />
+    <PackageReference Include="Xamarin.AndroidX.Browser" />
+    <PackageReference Include="Xamarin.Google.Android.Material" />
+
+    <PackageReference Include="Xamarin.Firebase.Analytics" >
     </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.Migration">
-      <Version>1.0.10</Version>
-    </PackageReference>
+        
+    <PackageReference Include="Xamarin.GooglePlayServices.Basement" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Stats" />
+    <PackageReference Include="Xamarin.Firebase.Common" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Base" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Api" />
+
     <PackageReference Include="Xamarin.Build.Download" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="MainActivity.cs" />
-    <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ImageFragment.cs" />
-    <Compile Include="ImageInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
-    <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Assets\AboutAssets.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\strings.xml" />
-    <AndroidResource Include="Resources\drawable\circle.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\face.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\favorite.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\flash.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\whitebalance.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\face.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\favorite.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\flash.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\whitebalance.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\face.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\favorite.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\flash.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\whitebalance.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\face.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\favorite.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\flash.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\whitebalance.png" />
-    <AndroidResource Include="Resources\layout\activity_main.xml" />
-    <AndroidResource Include="Resources\layout\fragment_main.xml" />
-    <AndroidResource Include="Resources\menu\main.xml" />
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\values\styles.xml" />
-    <AndroidResource Include="Resources\values\colors.xml" />
-    <AndroidResource Include="Resources\values\dimens.xml" />
-    <AndroidResource Include="Resources\values-w820dp\dimens.xml" />
-  </ItemGroup>
-  <ItemGroup />
+
   <ItemGroup>
     <GoogleServicesJson Include="google-services.json" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+
 </Project>

@@ -31,7 +31,7 @@ namespace LocationSample
 			textLocationUpdates = FindViewById<TextView>(Resource.Id.textLocationUpdates);
 
 			// Create our client and location callback
-			fusedClient = new Android.Gms.Location.FusedLocationProviderClient(this);
+			fusedClient = null; //new Android.Gms.Location.FusedLocationProviderClient(this);
 			locationCallback = new Android.Gms.Location.LocationCallback();
 		}
 
@@ -49,12 +49,12 @@ namespace LocationSample
 				.SetPriority(Android.Gms.Location.LocationRequest.PriorityHighAccuracy);
 
 			// Start receiving location updates
-			await fusedClient.RequestLocationUpdatesAsync(locationRequest, locationCallback);
+			// await fusedClient.RequestLocationUpdatesAsync(locationRequest, locationCallback);
 
 			// Get the last known location so we can show the user something immediately
-			var lastLocation = await fusedClient.GetLastLocationAsync();
-			if (lastLocation != null)
-				textLastLocation.Text = DescribeLocation(lastLocation);
+			// var lastLocation = await fusedClient.GetLastLocationAsync();
+			// if (lastLocation != null)
+			// 	textLastLocation.Text = DescribeLocation(lastLocation);
 		}
 
 		protected override async void OnPause()
@@ -67,7 +67,7 @@ namespace LocationSample
 			// the returned Android.Gms.Tasks.Task never actually completes, even though
 			// location updates do seem to be removed and stop happening.
 			// For now we'll just fire and forget as a workaround.
-			fusedClient.RemoveLocationUpdatesAsync(locationCallback);
+			// fusedClient.RemoveLocationUpdatesAsync(locationCallback);
 
 			base.OnPause();
 		}

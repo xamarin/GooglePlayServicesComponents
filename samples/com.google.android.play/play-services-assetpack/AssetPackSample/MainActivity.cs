@@ -25,10 +25,10 @@ namespace AssetPackSample
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
-			Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+			Microsoft.Maui.ApplicationModel.Platform.Init(this, savedInstanceState);
 			SetContentView(Resource.Layout.activity_main);
 
-			Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+			AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
 			SetSupportActionBar(toolbar);
 
 			FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
@@ -79,7 +79,7 @@ namespace AssetPackSample
 
 		public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
 		{
-			Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+			Microsoft.Maui.ApplicationModel.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
 			base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 		}

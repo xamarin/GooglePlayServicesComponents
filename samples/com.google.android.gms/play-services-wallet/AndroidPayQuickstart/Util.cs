@@ -13,7 +13,7 @@ namespace AndroidPayQuickstart
      */
         public static string FormatPaymentDescriptions (Android.Gms.Wallet.MaskedWallet maskedWallet) 
         {
-            return string.Join ("\n", maskedWallet.GetPaymentDescriptions ());
+            return string.Join ("\n", new string[]{} /* mc++ maskedWallet.GetPaymentDescriptions ()*/);
         }
 
         /**
