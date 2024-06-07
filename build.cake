@@ -638,7 +638,9 @@ Task("samples-directory-build-targets")
 					(
 						nuget_id == "Xamarin.Google.Android.Play.App.Include"
 						||
-						nuget_id == "Xamarin.Protobuf.JavaLite" // PR comment error #1
+						nuget_id == "Xamarin.Protobuf.JavaLite" 		// PR comment error #1
+						||
+						nuget_id == "Xamarin.GooglePlayServices.Games" 	// PR comment error #1
 					)
 				{
 					continue;
