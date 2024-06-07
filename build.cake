@@ -632,6 +632,18 @@ Task("samples-directory-build-targets")
 			{
 				string version       = (string) jo["version"];
 				string nuget_version = (string) jo["nugetVersion"];
+				string nuget_id	  	 = (string) jo["nugetId"];
+
+				if 
+					(
+						nuget_id == "Xamarin.Google.Android.Play.App.Include"
+						||
+						nuget_id == "Xamarin.Protobuf.JavaLite" // PR comment error #1
+					)
+				{
+					continue;
+				}
+
 				Information($"groupId       = {jo["groupId"]}");
 				Information($"artifactId    = {jo["artifactId"]}");
 				Information($"version       = {version}");
@@ -640,7 +652,7 @@ Task("samples-directory-build-targets")
 
 				XmlElement element_pr = doc_all.CreateElement( string.Empty, "PackageReference", string.Empty );
 	        	element_ig.AppendChild(element_pr);
-				XmlAttribute attr_update = doc_all.CreateAttribute("Update");
+				XmlAttribute attr_update = doc_all.CreateAttribute("Include");
 				attr_update.Value = (string) jo["nugetId"];
 				element_pr.Attributes.Append(attr_update);
 				XmlAttribute attr_version = doc_all.CreateAttribute("Version");
