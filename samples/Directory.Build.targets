@@ -30,7 +30,6 @@
     <PackageReference Include="Xamarin.GooglePlayServices.Fido" Version="120.1.0.3" />
     <PackageReference Include="Xamarin.GooglePlayServices.Fitness" Version="121.1.0.9" />
     <PackageReference Include="Xamarin.GooglePlayServices.Flags" Version="118.0.1.13" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Games" Version="123.1.0.8" />
     <PackageReference Include="Xamarin.GooglePlayServices.Games.V2" Version="119.0.0.4" />
     <PackageReference Include="Xamarin.GooglePlayServices.Gass" Version="120.0.0.15" />
     <PackageReference Include="Xamarin.GooglePlayServices.Gcm" Version="117.0.0.15" />
@@ -233,7 +232,6 @@
     <PackageReference Include="Xamarin.Google.ErrorProne.Annotations" Version="2.26.1.1" />
     <PackageReference Include="Xamarin.Google.ZXing.Core" Version="3.5.3.1" />
     <PackageReference Include="Xamarin.Google.FlatBuffers.Java" Version="23.5.26.5" />
-    <PackageReference Include="Xamarin.Protobuf.JavaLite" Version="3.25.3.1" />
     <PackageReference Include="Xamarin.Protobuf.Lite" Version="3.0.1.13" />
     <PackageReference Include="Square.OkHttp" Version="2.7.5.13" />
     <PackageReference Include="Square.OkHttp3.OkHttp.Brotli" Version="4.12.0.1" />
