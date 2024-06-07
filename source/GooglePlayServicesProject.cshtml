@@ -294,15 +294,15 @@
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Firestore")
     {
-      <PackageReference Include="Xamarin.Google.Guava" Version="33.1.0" />
+      <PackageReference Include="Xamarin.Google.Guava" Version="33.1.0.1" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Crashlytics")
     {
-      <PackageReference Include="Xamarin.Google.Dagger" Version="2.49.0" />
+      <PackageReference Include="Xamarin.Google.Dagger" Version="2.49.0.1" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Measurement.Connector.Impl")
     {
-      <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base" Version="121.3.0.5" />
+      <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base" Version="121.3.0.6" />
     }
     @if 
       (
@@ -321,9 +321,13 @@
     }
     @if 
       (
+        @Model.NuGetPackageId == "Xamarin.Google.MLKit.DigitalInk.Recognition"
+        ||
         @Model.NuGetPackageId == "Xamarin.GooglePlayServices.Ads"
         ||
         @Model.NuGetPackageId == "Xamarin.Firebase.Ads.Lite"
+        ||
+        @Model.NuGetPackageId == "Xamarin.GooglePlayServices.Ads.Lite"
       )
     {
       <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime" Version="2.7.0.1" />
