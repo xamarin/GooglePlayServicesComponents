@@ -14,8 +14,6 @@
     
   </PropertyGroup>
 
-	<Import 
-		Project="..\..\..\output\Directory.MLKit.packages.props" 
-		/>
+	<Import Project="$(PackagesMLKit)" />
     
 </Project>

@@ -14,8 +14,6 @@
     
   </PropertyGroup>
 
-	<Import 
-		Project="..\..\..\output\Directory.FB.packages.props" 
-		/>
+	<Import Project="$(PackagesFB)" />
     
 </Project>
