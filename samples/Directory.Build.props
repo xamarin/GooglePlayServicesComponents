@@ -1,8 +1,17 @@
 <Project>
 
-  <!-- Default TFM's we build for -->
   <PropertyGroup>
-    <_DefaultDotNetSampleTargetFrameworks>net7.0-android</_DefaultDotNetSampleTargetFrameworks>
+    <!-- Default TFM's we build for -->
+    <_DefaultDotNetSampleTargetFrameworks>net8.0-android</_DefaultDotNetSampleTargetFrameworks>
+    
+    <!-- Package downgrade detected -->
+    <NoWarn>$(NoWarn);NU1605</NoWarn>
+    
+    <!-- Locations for PackageReferences -->
+    <PackagesGPS>$(MSBuildThisFileDirectory)../output/PlayServicesPackages.targets</PackagesGPS>
+    <PackagesFB>$(MSBuildThisFileDirectory)../output/FirebasePackages.targets</PackagesFB>
+    <PackagesMLKit>$(MSBuildThisFileDirectory)../output/Google.MLKit.targets</PackagesMLKit>
+    <PackagesGP>$(MSBuildThisFileDirectory)../output/Google.Play.targets</PackagesGP>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

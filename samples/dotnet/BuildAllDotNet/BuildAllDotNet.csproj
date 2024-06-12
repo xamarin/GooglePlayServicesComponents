@@ -3,45 +3,61 @@
   <PropertyGroup>
     <TargetFrameworks>$(_DefaultDotNetSampleTargetFrameworks)</TargetFrameworks>
     
-    <!-- Some packages specify a minimum of 28 (eg: Xamarin.AndroidX.HeifWriter) -->
-    <!--
-    <SupportedOSPlatformVersion>28</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>29</SupportedOSPlatformVersion>
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationId>com.companyname.BuildAllDotNet</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
-    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-    -->
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>   
+  </PropertyGroup>  
 
-    
-    <!-- Override property from 'Directory.Build.props' -->
-    <!--
-    <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
-    -->
+  <Import Project="$(PackagesGPS)" />
+  <Import Project="$(PackagesFB)" />
+  <Import Project="$(PackagesMLKit)" />	
+  <Import Project="$(PackagesGP)" />
 
-    <!-- Prevent linking, since that would remove ~everything -->
-    <!--
-    <PublishTrimmed>False</PublishTrimmed>
-    <RunAOTCompilation>False</RunAOTCompilation>
-    -->
-    
-  </PropertyGroup>
-  
-	<Import 
-		Project="..\..\..\output\Directory.GPS.packages.props" 
-		/>
-	<Import 
-		Project="..\..\..\output\Directory.FB.packages.props" 
-		/>
-	<Import 
-		Project="..\..\..\output\Directory.MLKit.packages.props" 
-		/>
-	<Import 
-		Project="..\..\..\output\Directory.GP.packages.props" 
-		/>
-    <Import 
-		Project="..\..\..\output\Directory.Diverse.packages.props" 
-		/>
+  <ItemGroup>
+    <!-- PlayServicePackages.targets -->
+    <!-- Duplicate managed types (due to Games.V2) -->
+    <PackageReference Remove="Xamarin.GooglePlayServices.Games" />
+
+    <!-- Duplicate Java types -->
+    <PackageReference Remove="Xamarin.GooglePlayServices.Ads.Base" />
+    <PackageReference Remove="Xamarin.GooglePlayServices.Ads.Lite" />
+    <PackageReference Remove="Xamarin.GooglePlayServices.Gass" />
+    <PackageReference Remove="Xamarin.GooglePlayServices.Measurement.Base" />
+
+    <!-- FirebasePackages.targets -->
+    <!-- Duplicate Java types -->
+    <PackageReference Remove="Xamarin.Firebase.Analytics" />
+    <PackageReference Remove="Xamarin.Firebase.Analytics.Impl" />
+    <PackageReference Remove="Xamarin.Firebase.Analytics.Ktx" />
+    <PackageReference Remove="Xamarin.Firebase.AppIndexing" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision.AutoML" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision.BarCode.Model" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision.Face.Model" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision.Image.Label.Model" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision.Internal.Vkp" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision.Object.Detection.Model" />
+
+    <!-- Google.MLKit.targets -->
+    <!-- Duplicate Java types -->
+    <PackageReference Remove="Xamarin.Google.MLKit.FaceDetection" />
+
+    <!-- Google.Play.targets -->
+    <!-- Split into separate packages, these older ones cause duplicate bound types -->
+    <PackageReference Remove="Xamarin.Google.Android.Play.Core" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Core.Common" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Core.Ktx" />
+
+    <!-- Causes Kotlin.Stdlib version conflicts -->
+    <PackageReference Remove="Xamarin.Google.Android.Play.App.Update.Ktx" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Asset.Delivery.Ktx" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Core.Ktx" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Feature.Delivery.Ktx" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Review.Ktx" />
+  </ItemGroup>
     
 </Project>
