@@ -2770,56 +2770,56 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib",
-        "version": "1.9.22",
-        "nugetVersion": "1.9.22.1",
+        "version": "1.9.23",
+        "nugetVersion": "1.9.23.3",
         "nugetId": "Xamarin.Kotlin.StdLib",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-common",
-        "version": "1.9.22",
-        "nugetVersion": "1.9.22.1",
+        "version": "1.9.23",
+        "nugetVersion": "1.9.23.3",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk7",
-        "version": "1.9.22",
-        "nugetVersion": "1.9.22.1",
+        "version": "1.9.23",
+        "nugetVersion": "1.9.23.3",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk8",
-        "version": "1.9.22",
-        "nugetVersion": "1.9.22.1",
+        "version": "1.9.23",
+        "nugetVersion": "1.9.23.3",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-android",
-        "version": "1.7.3",
-        "nugetVersion": "1.7.3.3",
+        "version": "1.8.0",
+        "nugetVersion": "1.8.0.4",
         "nugetId": "Xamarin.KotlinX.Coroutines.Android",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-core",
-        "version": "1.7.3",
-        "nugetVersion": "1.7.3.3",
+        "version": "1.8.0",
+        "nugetVersion": "1.8.0.4",
         "nugetId": "Xamarin.KotlinX.Coroutines.Core",
         "dependencyOnly": true
       },
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-play-services",
-        "version": "1.7.3",
-        "nugetVersion": "1.7.3.3",
+        "version": "1.8.0",
+        "nugetVersion": "1.8.0.4",
         "nugetId": "Xamarin.KotlinX.Coroutines.Play.Services",
         "dependencyOnly": true
       },
