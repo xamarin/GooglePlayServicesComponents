@@ -14,8 +14,6 @@
     
   </PropertyGroup>
 
-	<Import 
-		Project="..\..\..\output\Directory.GPS.packages.props" 
-		/>
+	<Import Project="$(PackagesGPS)" />
     
 </Project>

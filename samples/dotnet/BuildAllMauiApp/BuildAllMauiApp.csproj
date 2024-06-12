@@ -4,7 +4,6 @@
 		<TargetFrameworks>$(_DefaultDotNetSampleTargetFrameworks)</TargetFrameworks>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>BuildAllMauiApp</RootNamespace>
-		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 
@@ -21,13 +20,15 @@
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">29.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.21" />
+	  
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
@@ -45,27 +46,54 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
-	<Import 
-		Condition="$(TargetFramework.StartsWith('$(_DefaultDotNetSampleTargetFrameworks)')) == true"
-		Project="..\..\..\output\Directory.GPS.packages.props" 
-		/>
-	<Import 
-		Condition="$(TargetFramework.StartsWith('$(_DefaultDotNetSampleTargetFrameworks)')) == true"
-		Project="..\..\..\output\Directory.FB.packages.props" 
-		/>
-	<Import 
-		Condition="$(TargetFramework.StartsWith('$(_DefaultDotNetSampleTargetFrameworks)')) == true"
-		Project="..\..\..\output\Directory.MLKit.packages.props" 
-		/>
-	<Import 
-		Condition="$(TargetFramework.StartsWith('$(_DefaultDotNetSampleTargetFrameworks)')) == true"
-		Project="..\..\..\output\Directory.GP.packages.props" 
-		/>
-		<Import 
-		Condition="$(TargetFramework.StartsWith('$(_DefaultDotNetSampleTargetFrameworks)')) == true"
-		Project="..\..\..\output\Directory.Diverse.packages.props" 
-		/>
-	
+  <Import Project="$(PackagesGPS)" />
+  <Import Project="$(PackagesFB)" />
+  <Import Project="$(PackagesMLKit)" />	
+  <Import Project="$(PackagesGP)" />
+
+  <ItemGroup>
+    <!-- PlayServicePackages.targets -->
+    <!-- Duplicate managed types (due to Games.V2) -->
+    <PackageReference Remove="Xamarin.GooglePlayServices.Games" />
+
+    <!-- Duplicate Java types -->
+    <PackageReference Remove="Xamarin.GooglePlayServices.Ads.Base" />
+    <PackageReference Remove="Xamarin.GooglePlayServices.Ads.Lite" />
+    <PackageReference Remove="Xamarin.GooglePlayServices.Gass" />
+    <PackageReference Remove="Xamarin.GooglePlayServices.Measurement.Base" />
+
+    <!-- FirebasePackages.targets -->
+    <!-- Duplicate Java types -->
+    <PackageReference Remove="Xamarin.Firebase.Analytics" />
+    <PackageReference Remove="Xamarin.Firebase.Analytics.Impl" />
+    <PackageReference Remove="Xamarin.Firebase.Analytics.Ktx" />
+    <PackageReference Remove="Xamarin.Firebase.AppIndexing" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision.AutoML" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision.BarCode.Model" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision.Face.Model" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision.Image.Label.Model" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision.Internal.Vkp" />
+    <PackageReference Remove="Xamarin.Firebase.ML.Vision.Object.Detection.Model" />
+
+    <!-- Google.MLKit.targets -->
+    <!-- Duplicate Java types -->
+    <PackageReference Remove="Xamarin.Google.MLKit.FaceDetection" />
+
+    <!-- Google.Play.targets -->
+    <!-- Split into separate packages, these older ones cause duplicate bound types -->
+    <PackageReference Remove="Xamarin.Google.Android.Play.Core" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Core.Common" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Core.Ktx" />
+
+    <!-- Causes Kotlin.Stdlib version conflicts -->
+    <PackageReference Remove="Xamarin.Google.Android.Play.App.Update.Ktx" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Asset.Delivery.Ktx" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Core.Ktx" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Feature.Delivery.Ktx" />
+    <PackageReference Remove="Xamarin.Google.Android.Play.Review.Ktx" />
+  </ItemGroup>
+  
 	<!--
 	./samples/dotnet/BuildAllMauiApp/BuildAllMauiApp.csproj : 
 	error NU1605: Detected package downgrade: Xamarin.AndroidX.Security.SecurityCrypto from 1.1.0-alpha03 to 1.0.0.7. 

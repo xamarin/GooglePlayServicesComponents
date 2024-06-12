@@ -4,7 +4,7 @@
     <RepositoryType>git</RepositoryType>
 
     <!-- Default TFM's we build for -->
-    <_DefaultTargetFrameworks>net7.0-android</_DefaultTargetFrameworks>
+    <_DefaultTargetFrameworks>net8.0-android</_DefaultTargetFrameworks>
     
     <!-- Use an updated 'generator' -->
     <!-- It's ok to use "Windows" here because we only use managed code from this package -->
@@ -35,11 +35,11 @@
 
   <!-- Folders that various files get placed into -->
   <ItemGroup>
-    <_TargetFrameworkNugetBuildFolders Include="build\net7.0-android33.0" />
-    <_TargetFrameworkNugetBuildFolders Include="buildTransitive\net7.0-android33.0" />
+    <_TargetFrameworkNugetBuildFolders Include="build\net8.0-android34.0" />
+    <_TargetFrameworkNugetBuildFolders Include="buildTransitive\net8.0-android34.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <_TargetFrameworkNugetAarFolders Include="aar\net7.0-android33.0" />
+    <_TargetFrameworkNugetAarFolders Include="aar\net8.0-android34.0" />
   </ItemGroup>
 </Project>
