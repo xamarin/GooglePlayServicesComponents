@@ -6,6 +6,7 @@
     <!-- Some packages specify a minimum of 28 (eg: Xamarin.AndroidX.HeifWriter) -->
     <!--
     -->
+
     <SupportedOSPlatformVersion>29</SupportedOSPlatformVersion>
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
@@ -56,5 +57,5 @@
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.OW2.ASM.packages.targets" />
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.Protobuf.packages.targets" />
   <Import Project="$(MSBuildThisFileDirectory)/../../../output/Directory.TensorFlow.packages.targets" />
-    
+
 </Project>

@@ -1,15 +1,18 @@
 <Project>
 
-  <Import Project="$(MSBuildThisFileDirectory)/../Directory.Build.props" />
-
-  <!-- Default TFM's we build for -->
   <PropertyGroup>
+    <!-- Default TFM's we build for -->
     <_DefaultDotNetSampleTargetFrameworks>$(_DefaultTargetFrameworks)</_DefaultDotNetSampleTargetFrameworks>
     
-    <!-- Override property from 'Directory.Build.props' -->
-    <!--
-    -->
+    <!-- Package downgrade detected -->
+    <NoWarn>$(NoWarn);NU1605</NoWarn>
     <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
+    
+    <!-- Locations for PackageReferences -->
+    <PackagesGPS>$(MSBuildThisFileDirectory)../output/PlayServicesPackages.targets</PackagesGPS>
+    <PackagesFB>$(MSBuildThisFileDirectory)../output/FirebasePackages.targets</PackagesFB>
+    <PackagesMLKit>$(MSBuildThisFileDirectory)../output/Google.MLKit.targets</PackagesMLKit>
+    <PackagesGP>$(MSBuildThisFileDirectory)../output/Google.Play.targets</PackagesGP>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
