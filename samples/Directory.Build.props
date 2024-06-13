@@ -10,6 +10,15 @@
     <!--
     -->
     <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
+    
+    <!-- Package downgrade detected -->
+    <NoWarn>$(NoWarn);NU1605</NoWarn>
+    
+    <!-- Locations for PackageReferences -->
+    <PackagesGPS>$(MSBuildThisFileDirectory)../output/PlayServicesPackages.targets</PackagesGPS>
+    <PackagesFB>$(MSBuildThisFileDirectory)../output/FirebasePackages.targets</PackagesFB>
+    <PackagesMLKit>$(MSBuildThisFileDirectory)../output/Google.MLKit.targets</PackagesMLKit>
+    <PackagesGP>$(MSBuildThisFileDirectory)../output/Google.Play.targets</PackagesGP>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
