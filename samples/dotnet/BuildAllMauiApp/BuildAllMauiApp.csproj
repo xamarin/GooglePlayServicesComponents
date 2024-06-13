@@ -63,6 +63,14 @@
     <PackageReference Remove="Xamarin.GooglePlayServices.Measurement.Base" />
 
     <!-- FirebasePackages.targets -->
+    <!-- Duplicate managed types (due to Xamarin.AndroidX.DataStore.Core.Android and Xamarin.AndroidX.DataStore.Core.Jvm) -->
+    <PackageReference Remove="Xamarin.Firebase.Crashlytics" />
+    <PackageReference Remove="Xamarin.Firebase.Crashlytics.Ktx" />
+    <PackageReference Remove="Xamarin.Firebase.Crashlytics.NDK" />
+    <PackageReference Remove="Xamarin.Firebase.Perf" />
+    <PackageReference Remove="Xamarin.Firebase.Perf.Ktx" />
+    <PackageReference Remove="Xamarin.Firebase.Sessions" />
+    
     <!-- Duplicate Java types -->
     <PackageReference Remove="Xamarin.Firebase.Analytics" />
     <PackageReference Remove="Xamarin.Firebase.Analytics.Impl" />
@@ -117,6 +125,6 @@
 		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.3.0.2" />
 
 		<!-- Should match version of the referenced 'Xamarin.AndroidX.Activity' package -->
-		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.8.1.1" />
+		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.9.0.3" />
 	</ItemGroup>
 </Project>
