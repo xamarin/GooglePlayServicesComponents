@@ -94,6 +94,18 @@
 		>
         Java.Lang.Object
 	</attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.util']"
+        name="managedName"
+        >
+        Firebase.Util
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.logger']"
+        name="managedName"
+        >
+        Firebase.Logger
+    </attr>
 
 
 </metadata>
