@@ -580,6 +580,7 @@ Task ("spell-check")
                 "TLS",
                 "InteractiveMedia",
                 "V3",
+                "InjectApi",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
@@ -1697,9 +1698,7 @@ Task("java-resolution-analysis")
 
             string dir = "output/java-resolution-analysis";
             EnsureDirectoryExists(dir);
-            EnsureDirectoryExists($"{dir}/net6.0-android");
-            EnsureDirectoryExists($"{dir}/net7.0-android");
-            EnsureDirectoryExists($"{dir}/monoandroid12.0");
+            EnsureDirectoryExists($"{dir}/net8.0-android");
 
             ConcurrentDictionary
                     <
@@ -1740,7 +1739,7 @@ Task("java-resolution-analysis")
 
             java_resolution_analysis.TryAdd
                                         (
-                                            "net7.0-android", 
+                                            "net8.0-android", 
                                             new ConcurrentDictionary
                                                         <
                                                             string, 
@@ -1755,6 +1754,7 @@ Task("java-resolution-analysis")
                                                             >
                                                         >()
                                         );
+            /*                            
             java_resolution_analysis.TryAdd
                                         (
                                             "net6.0-android", 
@@ -1772,23 +1772,7 @@ Task("java-resolution-analysis")
                                                             >
                                                         >()
                                         );
-            java_resolution_analysis.TryAdd
-                                        (
-                                            "monoandroid12.0",
-                                            new ConcurrentDictionary
-                                                        <
-                                                            string, 
-                                                            Dictionary
-                                                            <
-                                                                string, 
-                                                                (
-                                                                    string[] lines,                         // lines
-                                                                    Dictionary<string, int> types,          // types
-                                                                    Dictionary<string, int> types_filtered  // types
-                                                                )
-                                                            >
-                                                        >()
-                                        );
+            */
 
             Parallel.ForEach
                         (
