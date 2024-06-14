@@ -3,26 +3,22 @@ trigger:
   - refs/tags/*
 
 pr:
-  - main
+  - main  
+  
+parameters:
+  # Note extended tests have not been enabled for GPS yet
+- name: RunExtendedTests
+  displayName: Run Extended Tests? (disabled)
+  type: boolean
+  default: false
   
 variables:
-  BUILD_NUMBER: $(Build.BuildNumber)
-  BUILD_COMMIT: $(Build.SourceVersion)
-  ComponentDetection.Timeout: 1200
-
-  # Build variables
-  mainBranchName: main                                                                  # Name of Git "main" branch
-  configuration: Release                                                                # Build configuration: 'Debug', 'Release'
-
-  # Windows specific variables
-  windowsAgentPoolName: Maui-1ESPT                                                      # Windows VM pool name
-  windowsImage: 1ESPT-Windows2022                                                       # Windows VM image name
-  windowsClassicInstaller: https://aka.ms/xamarin-android-commercial-d17-8-windows      # Windows Classic XA installer URL
+  # Variables used by both AndroidX/GPS go in the template
+  - template: build/ci/variables.yml@androidx
   
-  # macOS specific variables
-  macosAgentPoolName: Azure Pipelines                                                   # macOS VM pool name
-  macosImage: internal-macos12                                                          # macOS VM image name
-  macosClassicInstaller:  https://aka.ms/xamarin-android-commercial-d17-8-macos         # macOS Classic XA installer URL
+  # Variables only used by GPS go here
+  - name: skipUnitTests
+    value: true
 
 resources:
   repositories:
@@ -50,7 +46,8 @@ extends:
       os: windows
       
     stages:
-    - stage: Build
+    - stage: build_windows
+      displayName: Build - Windows
 
       jobs:
       - template: build/ci/build.yml@androidx
@@ -60,13 +57,20 @@ extends:
             name: $(windowsAgentPoolName)
             image: $(windowsImage)
             os: windows
-          classicInstallerUrl: $(windowsClassicInstaller)
-          mainBranchName: $(mainBranchName)
-          configuration: $(configuration)
           runAPIScan: true
-          skipUnitTests: true
-          timeoutInMinutes: 300
 
+      - template: sign-artifacts/jobs/v2.yml@internal-templates
+        parameters:
+          artifactName: output-windows
+          usePipelineArtifactTasks: true
+          use1ESTemplate: true
+          condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+          
+    - stage: build_mac
+      displayName: Build - Mac
+      dependsOn:
+      
+      jobs:
       - template: build/ci/build.yml@androidx
         parameters:
           name: macos
@@ -74,16 +78,11 @@ extends:
             name: $(macosAgentPoolName)
             vmImage: $(macosImage)
             os: macOS
-          classicInstallerUrl: $(macosClassicInstaller)
-          mainBranchName: $(mainBranchName)
-          configuration: $(configuration)
-          skipUnitTests: true
-          timeoutInMinutes: 300
 
-      - template: sign-artifacts/jobs/v2.yml@internal-templates
-        parameters:
-          dependsOn: [ 'build_windows' ]
-          artifactName: output-windows
-          usePipelineArtifactTasks: true
-          use1ESTemplate: true
-          condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+    - template: build/ci/stage-extended-tests.yml@androidx
+      parameters:
+        stageCondition: and(succeeded(), eq('${{ parameters.RunExtendedTests }}', 'true'))
+        buildPool:
+          name: $(windowsAgentPoolName)
+          image: $(windowsImage)
+          os: windows
