@@ -40,7 +40,10 @@
         <PackageVersion Include="Xamarin.AndroidX.Work.Runtime" Version="2.9.0.2" />        
         <PackageVersion Include="Xamarin.Google.Android.Material" Version="1.10.0.4" />
         <PackageVersion Include="System.Json" Version="4.7.1" />
-        <PackageVersion Include="Microsoft.Maui.Essentials" Version="8.0.40" />
+
+        <PackageVersion Include="Microsoft.Maui.Controls" Version="8.0.60" />
+        <PackageVersion Include="Microsoft.Maui.Essentials" Version="8.0.60" />
+        <PackageVersion Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.60" />
 
         <PackageVersion Include="Xamarin.Build.Download" Version="0.11.4" />
  

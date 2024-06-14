@@ -1,5 +1,7 @@
 <Project>
 
+  <Import Project="$(MSBuildThisFileDirectory)/../Directory.Build.props" />
+
   <PropertyGroup>
     <!-- Default TFM's we build for -->
     <_DefaultDotNetSampleTargetFrameworks>$(_DefaultTargetFrameworks)</_DefaultDotNetSampleTargetFrameworks>
