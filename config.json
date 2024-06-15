@@ -1946,7 +1946,7 @@
         "groupId": "com.squareup.okhttp3",
         "artifactId": "okhttp",
         "version": "4.12.0",
-        "nugetVersion": "4.12.0.3",
+        "nugetVersion": "4.12.0.4",
         "nugetId": "Square.OkHttp3",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
