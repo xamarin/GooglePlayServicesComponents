@@ -241,7 +241,7 @@
 | 234|com.google.protobuf:protobuf-javalite                                 |4.26.1              |Xamarin.Protobuf.JavaLite                                             |4.26.1              |
 | 235|com.google.protobuf:protobuf-lite                                     |3.0.1               |Xamarin.Protobuf.Lite                                                 |3.0.1.14            |
 | 236|com.squareup.okhttp:okhttp                                            |2.7.5               |Square.OkHttp                                                         |2.7.5.14            |
-| 237|com.squareup.okhttp3:okhttp                                           |4.12.0              |Square.OkHttp3                                                        |4.12.0.3            |
+| 237|com.squareup.okhttp3:okhttp                                           |4.12.0              |Square.OkHttp3                                                        |4.12.0.4            |
 | 238|com.squareup.okhttp3:logging-interceptor                              |4.12.0              |Square.OkHttp3.LoggingInterceptor                                     |4.12.0.4            |
 | 239|com.squareup.okhttp3:okhttp-brotli                                    |4.12.0              |Square.OkHttp3.OkHttp.Brotli                                          |4.12.0.1            |
 | 240|com.squareup.okhttp3:okhttp-tls                                       |4.12.0              |Square.OkHttp3.OkHttp.TLS                                             |4.12.0.2            |

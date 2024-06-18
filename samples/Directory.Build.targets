@@ -236,7 +236,7 @@
     <PackageReference Update="Xamarin.Protobuf.JavaLite" Version="4.26.1" />
     <PackageReference Update="Xamarin.Protobuf.Lite" Version="3.0.1.14" />
     <PackageReference Update="Square.OkHttp" Version="2.7.5.14" />
-    <PackageReference Update="Square.OkHttp3" Version="4.12.0.3" />
+    <PackageReference Update="Square.OkHttp3" Version="4.12.0.4" />
     <PackageReference Update="Square.OkHttp3.LoggingInterceptor" Version="4.12.0.4" />
     <PackageReference Update="Square.OkHttp3.OkHttp.Brotli" Version="4.12.0.1" />
     <PackageReference Update="Square.OkHttp3.OkHttp.TLS" Version="4.12.0.2" />
