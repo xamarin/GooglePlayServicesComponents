@@ -243,7 +243,7 @@
 | 236|com.squareup.okhttp:okhttp                                            |2.7.5               |Square.OkHttp                                                         |2.7.5.14            |
 | 237|com.squareup.okhttp3:okhttp                                           |4.12.0              |Square.OkHttp3                                                        |4.12.0.4            |
 | 238|com.squareup.okhttp3:logging-interceptor                              |4.12.0              |Square.OkHttp3.LoggingInterceptor                                     |4.12.0.4            |
-| 239|com.squareup.okhttp3:okhttp-brotli                                    |4.12.0              |Square.OkHttp3.OkHttp.Brotli                                          |4.12.0.1            |
+| 239|com.squareup.okhttp3:okhttp-brotli                                    |4.12.0              |Square.OkHttp3.OkHttp.Brotli                                          |4.12.0.2            |
 | 240|com.squareup.okhttp3:okhttp-tls                                       |4.12.0              |Square.OkHttp3.OkHttp.TLS                                             |4.12.0.2            |
 | 241|com.squareup.okhttp3:okhttp-urlconnection                             |4.12.0              |Square.OkHttp3.UrlConnection                                          |4.12.0.4            |
 | 242|com.squareup.okio:okio                                                |3.9.0               |Square.OkIO                                                           |3.9.0               |

@@ -3101,7 +3101,7 @@
           "groupId": "com.squareup.okhttp3",
           "version": "4.12.0",
           "nuGetId": "Square.OkHttp3.OkHttp.Brotli",
-          "nuGetVersion": "4.12.0.1"
+          "nuGetVersion": "4.12.0.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
