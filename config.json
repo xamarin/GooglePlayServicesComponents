@@ -1964,7 +1964,7 @@
         "groupId": "com.squareup.okhttp3",
         "artifactId": "okhttp-brotli",
         "version": "4.12.0",
-        "nugetVersion": "4.12.0.1",
+        "nugetVersion": "4.12.0.2",
         "nugetId": "Square.OkHttp3.OkHttp.Brotli",
         "dependencyOnly": false,
         "templateSet": "squareup-okhttp3"
