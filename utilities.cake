@@ -580,6 +580,7 @@ Task ("spell-check")
                 "TLS",
                 "InteractiveMedia",
                 "V3",
+                "InjectApi",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
