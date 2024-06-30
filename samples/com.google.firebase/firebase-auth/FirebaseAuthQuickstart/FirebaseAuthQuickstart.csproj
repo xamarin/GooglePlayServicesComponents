@@ -1,123 +1,37 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FF73A476-28EE-462C-866C-3C1C8EE07F53}</ProjectGuid>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <OutputType>Library</OutputType>
-    <RootNamespace>FirebaseAuthQuickstart</RootNamespace>
-    <AssemblyName>FirebaseAuthQuickstart</AssemblyName>
-    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
-    <AndroidApplication>True</AndroidApplication>
-    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
-    <AndroidResgenClass>Resource</AndroidResgenClass>
-    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
-    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidDexTool>d8</AndroidDexTool>
-    <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <AndroidDexTool>d8</AndroidDexTool>
-    <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Mono.Android" />
-    <Reference Include="Java.Interop" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BaseActivity.cs" />
-    <Compile Include="ChooserActivity.cs" />
-    <Compile Include="AnonymousAuthActivity.cs" />
-    <Compile Include="CustomAuthActivity.cs" />
-    <Compile Include="EmailPasswordActivity.cs" />
-    <Compile Include="GoogleSignInActivity.cs" />
-    <Compile Include="TokenBroadcastReceiver.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
-    <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Assets\AboutAssets.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\strings.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\firebase_lockup_400.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_person_white.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\firebase_lockup_400.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_person_white.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\firebase_lockup_400.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_person_white.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\firebase_lockup_400.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_person_white.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_person_white.png" />
-    <AndroidResource Include="Resources\layout\activity_anonymous_auth.xml" />
-    <AndroidResource Include="Resources\layout\activity_chooser.xml" />
-    <AndroidResource Include="Resources\layout\activity_custom.xml" />
-    <AndroidResource Include="Resources\layout\activity_emailpassword.xml" />
-    <AndroidResource Include="Resources\layout\activity_facebook.xml" />
-    <AndroidResource Include="Resources\layout\activity_google.xml" />
-    <AndroidResource Include="Resources\layout\activity_twitter.xml" />
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
-    <AndroidResource Include="Resources\values\colors.xml" />
-    <AndroidResource Include="Resources\values\dimens.xml" />
-    <AndroidResource Include="Resources\values\ids.xml" />
-    <AndroidResource Include="Resources\values\styles.xml" />
-    <AndroidResource Include="Resources\values-land\dimens.xml" />
-    <AndroidResource Include="Resources\values-v21\styles.xml" />
-    <AndroidResource Include="Resources\values-w820dp\dimens.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.5.1" />
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.14" />
-    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.6.1.1" />
-    <PackageReference Include="Xamarin.Firebase.Auth" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Auth" />
+    <TargetFrameworks>$(_DefaultDotNetSampleTargetFrameworks)</TargetFrameworks>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 
-    <PackageReference Include="Xamarin.AndroidX.Migration">
-      <Version>1.0.10</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Build.Download" />
-  </ItemGroup>
-  <ItemGroup>
-    <GoogleServicesJson Include="google-services.json" />
-  </ItemGroup>
+    <RootNamespace>FirebaseAuthQuickstart</RootNamespace>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProguardConfiguration Include="proguard.cfg" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" />
+    <PackageReference Include="Xamarin.AndroidX.Browser" />
+    <PackageReference Include="Xamarin.Google.Android.Material" />
+
+    <PackageReference Include="Xamarin.Firebase.Auth" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Auth" />
+        
+    <PackageReference Include="Xamarin.Build.Download" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <GoogleServicesJson Include="google-services.json" />
+  </ItemGroup>
+
 </Project>

@@ -104,7 +104,7 @@ namespace AndroidPayQuickstart
      *
      * @return The Fragment that should handle result. Some implementations can return null.
      */
-        protected abstract Fragment ResultTargetFragment { get; }
+        protected abstract AndroidX.Fragment.App.Fragment ResultTargetFragment { get; }
     }
 }
 

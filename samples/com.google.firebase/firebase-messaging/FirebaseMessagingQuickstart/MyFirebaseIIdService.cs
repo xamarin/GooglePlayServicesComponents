@@ -4,7 +4,7 @@ using Firebase.Iid;
 
 namespace FirebaseMessagingQuickstart
 {
-    [Service]
+    [Service(Exported = true)]
     [IntentFilter (new [] { "com.google.firebase.INSTANCE_ID_EVENT" })]
     public class MyFirebaseIIDService : Firebase.Messaging.FirebaseMessagingService
     {

@@ -8,7 +8,9 @@ using AndroidX.AppCompat.App;
 
 namespace FirebaseInviteQuickstart
 {
-	[Activity(Label = "FirebaseInvitesQuickstart", MainLauncher = true), IntentFilter(new[] { Intent.ActionView }, Categories = new[] { Intent.ActionView, Intent.CategoryDefault, Intent.CategoryBrowsable })]
+	[Activity(Label = "FirebaseInvitesQuickstart", MainLauncher = true ), 
+		IntentFilter(new[] { Intent.ActionView }, Categories = new[] { Intent.ActionView, Intent.CategoryDefault, Intent.CategoryBrowsable })
+	]
 	public class DeepLinkActivity : AppCompatActivity, View.IOnClickListener
 	{
 		private static string TAG = typeof(DeepLinkActivity).Name;

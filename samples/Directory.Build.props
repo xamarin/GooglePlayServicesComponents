@@ -1,8 +1,15 @@
 <Project>
 
+  <Import Project="$(MSBuildThisFileDirectory)/../Directory.Build.props" />
+
+  <!-- Default TFM's we build for -->
   <PropertyGroup>
-    <!-- Default TFM's we build for -->
-    <_DefaultDotNetSampleTargetFrameworks>net8.0-android</_DefaultDotNetSampleTargetFrameworks>
+    <_DefaultDotNetSampleTargetFrameworks>$(_DefaultTargetFrameworks)</_DefaultDotNetSampleTargetFrameworks>
+    
+    <!-- Override property from 'Directory.Build.props' -->
+    <!--
+    -->
+    <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
     
     <!-- Package downgrade detected -->
     <NoWarn>$(NoWarn);NU1605</NoWarn>

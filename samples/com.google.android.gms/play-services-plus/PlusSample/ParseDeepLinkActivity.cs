@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace PlusSample
 {    
-    [Activity (Label = "Parse Deep Link")]			
+    [Activity (Label = "Parse Deep Link", Exported=false)]			
     [IntentFilter (new string [] { "com.google.android.apps.plus.VIEW_DEEP_LINK" },
         DataScheme="vnd.google.deeplink",
         Categories=new string[] { "android.intent.category.DEFAULT", "android.intent.category.BROWSABLE" })]

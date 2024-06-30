@@ -1754,25 +1754,6 @@ Task("java-resolution-analysis")
                                                             >
                                                         >()
                                         );
-            /*                            
-            java_resolution_analysis.TryAdd
-                                        (
-                                            "net6.0-android", 
-                                            new ConcurrentDictionary
-                                                        <
-                                                            string, 
-                                                            Dictionary
-                                                            <
-                                                                string, 
-                                                                (
-                                                                    string[] lines,                         // lines
-                                                                    Dictionary<string, int> types,          // types
-                                                                    Dictionary<string, int> types_filtered  // types
-                                                                )
-                                                            >
-                                                        >()
-                                        );
-            */
 
             Parallel.ForEach
                         (
