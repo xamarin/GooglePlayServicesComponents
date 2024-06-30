@@ -95,7 +95,18 @@
         >
         Android.Gms.Internal.Games.V2
     </attr>
-
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.games_v2']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.Games.V2
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games.internal.v2.appshortcuts']"
+        name="managedName"
+        >
+        Android.Gms.Games.Internal.V2.AppShortcuts
+    </attr>
 
 
 </metadata>

@@ -119,6 +119,7 @@ Android.Gms.Games.Internal
 Android.Gms.Games.Internal.Experience
 Android.Gms.Games.Internal.Game
 Android.Gms.Games.Internal.Player
+Android.Gms.Games.Internal.V2.AppShortcuts
 Android.Gms.Games.Internal.V2.Resolution
 Android.Gms.Games.Leaderboard
 Android.Gms.Games.LeaderBoard
@@ -152,7 +153,6 @@ Android.Gms.Measurement.Api
 Android.Gms.Measurement.Dynamite
 Android.Gms.Nearby
 Android.Gms.Nearby.Connection
-Android.Gms.Nearby.ExposureNotification
 Android.Gms.Nearby.FastPair
 Android.Gms.Nearby.Messages
 Android.Gms.Nearby.Messages.Audio
@@ -205,6 +205,7 @@ Android.Gms.Vision.Label.Internal.Client
 Android.Gms.Vision.Texts
 Android.Gms.Wallet
 Android.Gms.Wallet.Button
+Android.Gms.Wallet.Contract
 Android.Gms.Wallet.Wobs
 Android.Gms.Wearable
 Android.Libraries.Vision.VisionKit.Pipeline
@@ -370,6 +371,7 @@ Firebase.Installations.Time
 Firebase.Internal
 Firebase.Internal.Api
 Firebase.Ktx
+Firebase.Logger
 Firebase.Messaging
 Firebase.Messaging.DirectBoot
 Firebase.Messaging.Ktx
@@ -436,6 +438,7 @@ Firebase.Storage.Ktx
 Firebase.Storage.Network
 Firebase.Storage.Network.Connection
 Firebase.Tracing
+Firebase.Util
 Firebse.ML.Vision.Dynamite.Objects
 Firestore.Admin.V1
 Firestore.Bundle
@@ -495,6 +498,7 @@ Google.ZXing.QRCode
 Google.ZXing.QRCode.Decoder
 Google.ZXing.QRCode.Detector
 Google.ZXing.QRCode.Encoder
+Jakarta.Inject
 Java.Interop
 Javax.Annotation
 Javax.Annotation.Concurrent
@@ -626,8 +630,8 @@ Xamarin.Google.MLKit.NL.LanguageId.Bundled.Internal
 Xamarin.Google.MLKit.NL.LanguageId.Internal
 Xamarin.Google.MLKit.NL.LanguageId.Thin.Internal
 Xamarin.Google.MLKit.NL.SmartReply
-Xamarin.Google.MLKit.NL.SmartReply.Bundled.Internal
 Xamarin.Google.MLKit.NL.SmartReply.Internal
+Xamarin.Google.MLKit.NL.SmartReply.JNI
 Xamarin.Google.MLKit.NL.Translate
 Xamarin.Google.MLKit.NL.Translate.Internal
 Xamarin.Google.MLKit.ObjectDetection.Additions
