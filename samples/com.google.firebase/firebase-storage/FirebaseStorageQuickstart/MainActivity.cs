@@ -161,8 +161,8 @@ namespace FirebaseStorageQuickstart
 			string perm = Manifest.Permission.WriteExternalStorage;
 
 			// Choose file storage location, must be listed in res/xml/file_paths.xml
-			File dir = new File(Android.OS.Environment.ExternalStorageDirectory + "/photos");
-			File file = new File(dir, UUID.RandomUUID().ToString() + ".jpg");
+			Java.IO.File dir = new (Android.OS.Environment.ExternalStorageDirectory + "/photos");
+			Java.IO.File file = new (dir, UUID.RandomUUID().ToString() + ".jpg");
 			try
 			{
 				// Create directory if it does not exist.
@@ -173,7 +173,7 @@ namespace FirebaseStorageQuickstart
 				bool created = file.CreateNewFile();
 				Log.Debug(TAG, "file.createNewFile:" + file.AbsolutePath + ":" + created);
 			}
-			catch (IOException e)
+			catch (Java.IO.IOException e)
 			{
 				Log.Error(TAG, "file.createNewFile" + file.AbsolutePath + ":FAILED", e);
 			}

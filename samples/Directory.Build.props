@@ -1,11 +1,14 @@
 <Project>
 
+  <Import Project="$(MSBuildThisFileDirectory)/../Directory.Build.props" />
+
   <PropertyGroup>
     <!-- Default TFM's we build for -->
-    <_DefaultDotNetSampleTargetFrameworks>net8.0-android</_DefaultDotNetSampleTargetFrameworks>
+    <_DefaultDotNetSampleTargetFrameworks>$(_DefaultTargetFrameworks)</_DefaultDotNetSampleTargetFrameworks>
     
     <!-- Package downgrade detected -->
     <NoWarn>$(NoWarn);NU1605</NoWarn>
+    <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
     
     <!-- Locations for PackageReferences -->
     <PackagesGPS>$(MSBuildThisFileDirectory)../output/PlayServicesPackages.targets</PackagesGPS>

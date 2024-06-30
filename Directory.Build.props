@@ -38,4 +38,5 @@
   <ItemGroup>
     <_TargetFrameworkNugetAarFolders Include="aar\net8.0-android34.0" />
   </ItemGroup>
+
 </Project>
