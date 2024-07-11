@@ -126,7 +126,7 @@
           "groupId": "com.google.android.gms",
           "version": "16.1.0",
           "nuGetId": "Xamarin.GooglePlayServices.AppSet",
-          "nuGetVersion": "16.1.0"
+          "nuGetVersion": "116.1.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -152,7 +152,7 @@
           "groupId": "com.google.android.gms",
           "version": "21.2.0",
           "nuGetId": "Xamarin.GooglePlayServices.Auth",
-          "nuGetVersion": "21.2.0"
+          "nuGetVersion": "121.2.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -178,7 +178,7 @@
           "groupId": "com.google.android.gms",
           "version": "18.0.13",
           "nuGetId": "Xamarin.GooglePlayServices.Auth.Base",
-          "nuGetVersion": "18.0.13"
+          "nuGetVersion": "118.0.13"
         }
       },
       "license": "Android Software Development Kit License"
@@ -217,7 +217,7 @@
           "groupId": "com.google.android.gms",
           "version": "18.5.0",
           "nuGetId": "Xamarin.GooglePlayServices.Base",
-          "nuGetVersion": "18.5.0"
+          "nuGetVersion": "118.5.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -295,7 +295,7 @@
           "groupId": "com.google.android.gms",
           "version": "17.3.0",
           "nuGetId": "Xamarin.GooglePlayServices.CloudMessaging",
-          "nuGetVersion": "17.3.0"
+          "nuGetVersion": "117.3.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -360,7 +360,7 @@
           "groupId": "com.google.android.gms",
           "version": "21.1.0",
           "nuGetId": "Xamarin.GooglePlayServices.Fido",
-          "nuGetVersion": "21.1.0"
+          "nuGetVersion": "121.1.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -412,7 +412,7 @@
           "groupId": "com.google.android.gms",
           "version": "20.1.0",
           "nuGetId": "Xamarin.GooglePlayServices.Games.V2",
-          "nuGetVersion": "20.1.0"
+          "nuGetVersion": "120.1.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -503,7 +503,7 @@
           "groupId": "com.google.android.gms",
           "version": "21.3.0",
           "nuGetId": "Xamarin.GooglePlayServices.Location",
-          "nuGetVersion": "21.3.0"
+          "nuGetVersion": "121.3.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -737,7 +737,7 @@
           "groupId": "com.google.android.gms",
           "version": "19.3.0",
           "nuGetId": "Xamarin.GooglePlayServices.Nearby",
-          "nuGetVersion": "19.3.0"
+          "nuGetVersion": "119.3.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -1101,7 +1101,7 @@
           "groupId": "com.google.android.gms",
           "version": "19.4.0",
           "nuGetId": "Xamarin.GooglePlayServices.Wallet",
-          "nuGetVersion": "19.4.0"
+          "nuGetVersion": "119.4.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -1620,7 +1620,7 @@
           "groupId": "com.google.firebase",
           "version": "19.0.1",
           "nuGetId": "Xamarin.Firebase.Crashlytics",
-          "nuGetVersion": "19.0.1"
+          "nuGetVersion": "119.0.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1633,7 +1633,7 @@
           "groupId": "com.google.firebase",
           "version": "19.0.1",
           "nuGetId": "Xamarin.Firebase.Crashlytics.Ktx",
-          "nuGetVersion": "19.0.1"
+          "nuGetVersion": "119.0.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1646,7 +1646,7 @@
           "groupId": "com.google.firebase",
           "version": "19.0.1",
           "nuGetId": "Xamarin.Firebase.Crashlytics.NDK",
-          "nuGetVersion": "19.0.1"
+          "nuGetVersion": "119.0.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1724,7 +1724,7 @@
           "groupId": "com.google.firebase",
           "version": "22.1.0",
           "nuGetId": "Xamarin.Firebase.Dynamic.Links",
-          "nuGetVersion": "22.1.0"
+          "nuGetVersion": "122.1.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1737,7 +1737,7 @@
           "groupId": "com.google.firebase",
           "version": "22.1.0",
           "nuGetId": "Xamarin.Firebase.Dynamic.Links.Ktx",
-          "nuGetVersion": "22.1.0"
+          "nuGetVersion": "122.1.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2218,7 +2218,7 @@
           "groupId": "com.google.firebase",
           "version": "21.0.1",
           "nuGetId": "Xamarin.Firebase.Perf",
-          "nuGetVersion": "21.0.1"
+          "nuGetVersion": "121.0.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2231,7 +2231,7 @@
           "groupId": "com.google.firebase",
           "version": "21.0.1",
           "nuGetId": "Xamarin.Firebase.Perf.Ktx",
-          "nuGetVersion": "21.0.1"
+          "nuGetVersion": "121.0.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
