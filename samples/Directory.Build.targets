@@ -9,7 +9,7 @@
     <PackageReference Update="Xamarin.GooglePlayServices.Analytics.Impl" Version="118.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.AppIndex" Version="116.2.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.AppInvite" Version="118.0.0.16" />
-    <PackageReference Update="Xamarin.GooglePlayServices.AppSet" Version="16.1.0" />
+    <PackageReference Update="Xamarin.GooglePlayServices.AppSet" Version="116.1.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Audience" Version="117.0.0.16" />
     <PackageReference Update="Xamarin.GooglePlayServices.Auth" Version="121.2.0" />
     <PackageReference Update="Xamarin.GooglePlayServices.Auth.Api.Phone" Version="118.1.0" />
