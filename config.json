@@ -109,7 +109,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-appset",
         "version": "16.1.0",
-        "nugetVersion": "16.1.0",
+        "nugetVersion": "116.1.0",
         "nugetId": "Xamarin.GooglePlayServices.AppSet",
         "dependencyOnly": false
       },
