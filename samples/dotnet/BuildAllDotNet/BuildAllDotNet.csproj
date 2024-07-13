@@ -27,6 +27,7 @@
     <PackageReference Remove="Xamarin.GooglePlayServices.Ads.Lite" />
     <PackageReference Remove="Xamarin.GooglePlayServices.Gass" />
     <PackageReference Remove="Xamarin.GooglePlayServices.Measurement.Base" />
+    <PackageReference Remove="Xamarin.GooglePlayServices.Measurement.Sdk" />
 
     <!-- FirebasePackages.targets -->
     <!-- Duplicate managed types (due to Xamarin.AndroidX.DataStore.Core.Android and Xamarin.AndroidX.DataStore.Core.Jvm) -->
@@ -42,6 +43,12 @@
     <PackageReference Remove="Xamarin.Firebase.Analytics.Impl" />
     <PackageReference Remove="Xamarin.Firebase.Analytics.Ktx" />
     <PackageReference Remove="Xamarin.Firebase.AppIndexing" />
+    <PackageReference Remove="Xamarin.Firebase.Firestore" />
+    <PackageReference Remove="Xamarin.Firebase.Firestore.Ktx" />
+    <PackageReference Remove="Xamarin.Firebase.InAppMessaging" />
+    <PackageReference Remove="Xamarin.Firebase.InAppMessaging.Display" />
+    <PackageReference Remove="Xamarin.Firebase.InAppMessaging.Display.Ktx" />
+    <PackageReference Remove="Xamarin.Firebase.InAppMessaging.Ktx" />
     <PackageReference Remove="Xamarin.Firebase.ML.Vision" />
     <PackageReference Remove="Xamarin.Firebase.ML.Vision.AutoML" />
     <PackageReference Remove="Xamarin.Firebase.ML.Vision.BarCode.Model" />
@@ -49,6 +56,7 @@
     <PackageReference Remove="Xamarin.Firebase.ML.Vision.Image.Label.Model" />
     <PackageReference Remove="Xamarin.Firebase.ML.Vision.Internal.Vkp" />
     <PackageReference Remove="Xamarin.Firebase.ML.Vision.Object.Detection.Model" />
+    <PackageReference Remove="Xamarin.Firebase.ProtoliteWellKnownTypes" />
 
     <!-- Google.MLKit.targets -->
     <!-- Duplicate Java types -->
@@ -66,6 +74,7 @@
     <PackageReference Remove="Xamarin.Google.Android.Play.Core.Ktx" />
     <PackageReference Remove="Xamarin.Google.Android.Play.Feature.Delivery.Ktx" />
     <PackageReference Remove="Xamarin.Google.Android.Play.Review.Ktx" />
+
   </ItemGroup>
     
 </Project>

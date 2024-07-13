@@ -6,11 +6,14 @@
     <attr path="/api/package[@name='dagger.internal']/class[@name='ProviderOfLazy']/method[@name='get' and count(parameter)=0]" name="managedName">GetLazy</attr>
     <remove-node path="/api/package[@name='dagger.internal']/class[@name='MapProviderFactory']/implements" />
 
-    <remove-node 
+    <remove-node
         path="/api/package[@name='dagger.internal']/class[@name='DoubleCheck']"
         />
-        <remove-node 
+    <remove-node
         path="/api/package[@name='dagger.internal']/class[@name='SingleCheck']"
+        />
+    <remove-node
+        path="/api/package[@name='dagger.internal']/class[@name='LazyClassKeyMap']"
         />
 
 </metadata>
