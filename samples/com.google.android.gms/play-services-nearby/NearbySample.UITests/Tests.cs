@@ -48,7 +48,7 @@ namespace NearbySample.UITests
 
             app.Screenshot ("Advertise");
 
-            Assert.Greater (GetDebugTextLength (), beforeLength);
+            NUnit.Framework.Legacy.ClassicAssert.Greater (GetDebugTextLength (), beforeLength);
         }
 
         [Test]
@@ -64,7 +64,7 @@ namespace NearbySample.UITests
 
             app.Screenshot ("Discover");
 
-            Assert.Greater (GetDebugTextLength (), beforeLength);
+            NUnit.Framework.Legacy.ClassicAssert.Greater (GetDebugTextLength (), beforeLength);
         }
 
         int GetDebugTextLength ()

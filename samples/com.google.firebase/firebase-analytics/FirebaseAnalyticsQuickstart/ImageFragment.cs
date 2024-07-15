@@ -9,7 +9,7 @@ namespace FirebaseAnalyticsQuickstart
     /**
  * This fragment displays a featured, specified image.
  */
-    public class ImageFragment : Fragment
+    public class ImageFragment : AndroidX.Fragment.App.Fragment
     {
         const string ARG_PATTERN = "pattern";
         int resId;

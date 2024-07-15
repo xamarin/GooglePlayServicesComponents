@@ -3,20 +3,29 @@
   <PropertyGroup>
     <TargetFrameworks>$(_DefaultDotNetSampleTargetFrameworks)</TargetFrameworks>
     
+    <!-- Some packages specify a minimum of 28 (eg: Xamarin.AndroidX.HeifWriter) -->
+    <!--
+    -->
     <SupportedOSPlatformVersion>29</SupportedOSPlatformVersion>
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationId>com.companyname.BuildAllDotNet</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
-    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>   
-  </PropertyGroup>  
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 
-  <Import Project="$(PackagesGPS)" />
-  <Import Project="$(PackagesFB)" />
-  <Import Project="$(PackagesMLKit)" />	
-  <Import Project="$(PackagesGP)" />
+   
+    <!-- Override property from 'Directory.Build.props' -->
+    <!--
+    -->
+    <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
 
+    <!-- Prevent linking, since that would remove ~everything -->
+    <PublishTrimmed>False</PublishTrimmed>
+    <RunAOTCompilation>False</RunAOTCompilation>
+    <RootNamespace>BuildAllDotNet</RootNamespace>
+  </PropertyGroup>
+  
   <ItemGroup>
     <!-- PlayServicePackages.targets -->
     <!-- Duplicate managed types (due to Games.V2) -->

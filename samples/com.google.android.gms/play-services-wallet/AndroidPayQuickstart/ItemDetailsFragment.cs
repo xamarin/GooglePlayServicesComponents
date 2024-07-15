@@ -6,7 +6,7 @@ using AndroidX.Fragment.App;
 
 namespace AndroidPayQuickstart
 {
-    public class ItemDetailsFragment : Fragment
+    public class ItemDetailsFragment : AndroidX.Fragment.App.Fragment
     {
         private View mRoot;
         protected int mItemId;

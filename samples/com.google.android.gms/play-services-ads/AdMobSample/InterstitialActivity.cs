@@ -41,7 +41,7 @@ namespace AdMob
                 Resources.GetString(Resource.String.ad_unit_id),
                 //interstitial,
                 new AdRequest.Builder().Build(),
-                new InterstitialAdLoadCallback(showButton)
+                null // new InterstitialAdLoadCallback(showButton)
                 );
  
             showButton = FindViewById<Button> (Resource.Id.showButton);
