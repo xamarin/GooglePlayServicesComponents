@@ -57,5 +57,11 @@
         >
         Firebase.Analytics.Ktx.KtxTesting
     </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.analytics.ktxtesting']" 
+        name="managedName"
+        >
+        Firebase.Analytics.KtxTesting
+    </attr>
     
 </metadata>
