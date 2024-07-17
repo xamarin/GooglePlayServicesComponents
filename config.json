@@ -940,8 +940,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-auth",
-        "version": "23.0.0",
-        "nugetVersion": "123.0.0",
+        "version": "22.3.1",
+        "nugetVersion": "122.3.1.2",
         "nugetId": "Xamarin.Firebase.Auth",
         "dependencyOnly": false
       },
@@ -956,8 +956,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-auth-ktx",
-        "version": "23.0.0",
-        "nugetVersion": "123.0.0",
+        "version": "22.3.1",
+        "nugetVersion": "122.3.1.2",
         "nugetId": "Xamarin.Firebase.Auth.Ktx",
         "dependencyOnly": false
       },
