@@ -37,6 +37,7 @@ Android.Gms.Auth.Api.Proxy
 Android.Gms.Auth.Api.SignIn
 Android.Gms.Auth.Api.SignIn.Internal
 Android.Gms.Auth.Managed.Blockstore
+Android.Gms.Auth.Managed.Blockstore.RestoreCredential
 Android.Gms.Auth.Managed.Password
 Android.Gms.Awareness
 Android.Gms.Awareness.Fence
@@ -250,6 +251,7 @@ Firebase.Analytics.Connector
 Firebase.Analytics.Connector.Internal
 Firebase.Analytics.Ktx
 Firebase.Analytics.Ktx.KtxTesting
+Firebase.Analytics.KtxTesting
 Firebase.Annotations
 Firebase.Annotations.Concurrent
 Firebase.AppCheck
@@ -453,7 +455,6 @@ Google.Ads.InteractiveMedia.V3.Api.Player
 Google.Ads.InteractiveMedia.V3.Api.Signals
 Google.Ads.InteractiveMedia.V3.Impl
 Google.Ads.InteractiveMedia.V3.Impl.Data
-Google.Ads.InteractiveMedia.V3.Impl.Util
 Google.Ads.Mediation
 Google.Ads.Mediation.Admob
 Google.AndroidLibraries.BarHopper
