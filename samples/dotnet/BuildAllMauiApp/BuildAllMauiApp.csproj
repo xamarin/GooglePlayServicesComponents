@@ -71,7 +71,7 @@
     <PackageReference Remove="Xamarin.Firebase.Perf" />
     <PackageReference Remove="Xamarin.Firebase.Perf.Ktx" />
     <PackageReference Remove="Xamarin.Firebase.Sessions" />
-    
+
     <!-- Duplicate Java types -->
     <PackageReference Remove="Xamarin.Firebase.Analytics" />
     <PackageReference Remove="Xamarin.Firebase.Analytics.Impl" />
@@ -109,7 +109,7 @@
     <PackageReference Remove="Xamarin.Google.Android.Play.Feature.Delivery.Ktx" />
     <PackageReference Remove="Xamarin.Google.Android.Play.Review.Ktx" />
   </ItemGroup>
-  
+
 	<!--
 	./samples/dotnet/BuildAllMauiApp/BuildAllMauiApp.csproj : 
 	error NU1605: Detected package downgrade: Xamarin.AndroidX.Security.SecurityCrypto from 1.1.0-alpha03 to 1.0.0.7. 
@@ -125,14 +125,14 @@
 	<ItemGroup
 		Condition="$(TargetFramework.StartsWith('$(_DefaultDotNetSampleTargetFrameworks)')) == true"
 		>
-		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto" Version="[1.1.0.1-alpha06]" />
-		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto.Ktx" Version="[1.1.0.1-alpha06]" />
+		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto" Version="[1.1.0.2-alpha06]" />
+		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto.Ktx" Version="[1.1.0.2-alpha06]" />
 		
 		<!-- Should match version of the referenced 'Xamarin.AndroidX.Collection' package -->
-		<PackageReference Include="Xamarin.AndroidX.Collection.Jvm" Version="1.3.0.2" />
-		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.3.0.2" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Jvm" Version="1.4.0.5" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.4.0.5" />
 
 		<!-- Should match version of the referenced 'Xamarin.AndroidX.Activity' package -->
-		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.9.0.3" />
+		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.9.0.4" />
 	</ItemGroup>
 </Project>
