@@ -1,12 +1,4 @@
 ﻿<metadata>
-    <remove-node
-        path="/api/package[@name='org.tensorflow.lite.support.image']/class[@name='ImageProcessor.Builder']/method[@name='build' and count(parameter)=0]"
-        />
-
-    <remove-node
-        path="/api/package[@name='org.tensorflow.lite.support.common']/class[@name='TensorProcessor.Builder']/method[@name='build' and count(parameter)=0]"
-        />
-
     <attr
         path="/api/package[@name='org.tensorflow.lite.support.image']/interface[@name='ImageOperator']/method[@name='apply' and count(parameter)=1 and parameter[1][@type='org.tensorflow.lite.support.image.TensorImage']]"
         name="managedReturn"
@@ -122,5 +114,28 @@
         >
         Java.Lang.Object
     </attr>
+
+    <!-- 
+    cb_build
+
+    <attr
+        path="/api/package[@name='org.tensorflow.lite.support.common']/class[@name='TensorProcessor.Builder']/method[@name='build' and count(parameter)=0 and @return='org.tensorflow.lite.support.common.TensorProcessor']"
+        name="managedName"
+        >
+        BuildTensorProcessor
+    </attr>
+    <attr
+        path="/api/package[@name='org.tensorflow.lite.support.image']/class[@name='ImageProcessor.Builder']/method[@name='build' and count(parameter)=0  and @return='org.tensorflow.lite.support.common.image.ImageProcessor']"
+        name="managedName"
+        >
+        BuildImageProcessor
+    </attr>
+    -->
+    <remove-node
+        path="/api/package[@name='org.tensorflow.lite.support.common']/class[@name='TensorProcessor.Builder']/method[@name='build' and count(parameter)=0 and @return='org.tensorflow.lite.support.common.TensorProcessor']"
+        />
+    <remove-node
+        path="/api/package[@name='org.tensorflow.lite.support.image']/class[@name='ImageProcessor.Builder']/method[@name='build' and count(parameter)=0  and @return='org.tensorflow.lite.support.common.image.ImageProcessor']"
+        />
 
 </metadata>
