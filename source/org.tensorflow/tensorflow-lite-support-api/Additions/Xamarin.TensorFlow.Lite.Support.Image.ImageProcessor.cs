@@ -43,4 +43,5 @@ namespace Xamarin.TensorFlow.Lite.Support.Image
 				}
 			}
         }
+	}
 }
