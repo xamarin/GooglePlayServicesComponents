@@ -124,9 +124,9 @@
     <PackageReference Update="Xamarin.Firebase.Config.Interop" Version="116.0.1.2" />
     <PackageReference Update="Xamarin.Firebase.Core" Version="121.1.1.9" />
     <PackageReference Update="Xamarin.Firebase.Crash" Version="116.2.1.16" />
-    <PackageReference Update="Xamarin.Firebase.Crashlytics" Version="19.0.3" />
-    <PackageReference Update="Xamarin.Firebase.Crashlytics.Ktx" Version="19.0.3" />
-    <PackageReference Update="Xamarin.Firebase.Crashlytics.NDK" Version="19.0.3" />
+    <PackageReference Update="Xamarin.Firebase.Crashlytics" Version="119.0.3" />
+    <PackageReference Update="Xamarin.Firebase.Crashlytics.Ktx" Version="119.0.3" />
+    <PackageReference Update="Xamarin.Firebase.Crashlytics.NDK" Version="119.0.3" />
     <PackageReference Update="Xamarin.Firebase.Database" Version="121.0.0" />
     <PackageReference Update="Xamarin.Firebase.Database.Collection" Version="118.0.1.9" />
     <PackageReference Update="Xamarin.Firebase.Database.Connection" Version="116.0.2.16" />
