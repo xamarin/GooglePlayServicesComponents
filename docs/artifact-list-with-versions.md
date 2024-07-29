@@ -129,9 +129,9 @@
 | 122|com.google.firebase:firebase-config-interop                           |16.0.1              |Xamarin.Firebase.Config.Interop                                       |116.0.1.2           |
 | 123|com.google.firebase:firebase-core                                     |21.1.1              |Xamarin.Firebase.Core                                                 |121.1.1.9           |
 | 124|com.google.firebase:firebase-crash                                    |16.2.1              |Xamarin.Firebase.Crash                                                |116.2.1.16          |
-| 125|com.google.firebase:firebase-crashlytics                              |19.0.3              |Xamarin.Firebase.Crashlytics                                          |19.0.3              |
-| 126|com.google.firebase:firebase-crashlytics-ktx                          |19.0.3              |Xamarin.Firebase.Crashlytics.Ktx                                      |19.0.3              |
-| 127|com.google.firebase:firebase-crashlytics-ndk                          |19.0.3              |Xamarin.Firebase.Crashlytics.NDK                                      |19.0.3              |
+| 125|com.google.firebase:firebase-crashlytics                              |19.0.3              |Xamarin.Firebase.Crashlytics                                          |119.0.3             |
+| 126|com.google.firebase:firebase-crashlytics-ktx                          |19.0.3              |Xamarin.Firebase.Crashlytics.Ktx                                      |119.0.3             |
+| 127|com.google.firebase:firebase-crashlytics-ndk                          |19.0.3              |Xamarin.Firebase.Crashlytics.NDK                                      |119.0.3             |
 | 128|com.google.firebase:firebase-database                                 |21.0.0              |Xamarin.Firebase.Database                                             |121.0.0             |
 | 129|com.google.firebase:firebase-database-collection                      |18.0.1              |Xamarin.Firebase.Database.Collection                                  |118.0.1.9           |
 | 130|com.google.firebase:firebase-database-connection                      |16.0.2              |Xamarin.Firebase.Database.Connection                                  |116.0.2.16          |

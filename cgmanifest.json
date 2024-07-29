@@ -1620,7 +1620,7 @@
           "groupId": "com.google.firebase",
           "version": "19.0.3",
           "nuGetId": "Xamarin.Firebase.Crashlytics",
-          "nuGetVersion": "19.0.3"
+          "nuGetVersion": "119.0.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1633,7 +1633,7 @@
           "groupId": "com.google.firebase",
           "version": "19.0.3",
           "nuGetId": "Xamarin.Firebase.Crashlytics.Ktx",
-          "nuGetVersion": "19.0.3"
+          "nuGetVersion": "119.0.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1646,7 +1646,7 @@
           "groupId": "com.google.firebase",
           "version": "19.0.3",
           "nuGetId": "Xamarin.Firebase.Crashlytics.NDK",
-          "nuGetVersion": "19.0.3"
+          "nuGetVersion": "119.0.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
