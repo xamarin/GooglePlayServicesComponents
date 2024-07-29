@@ -445,7 +445,6 @@ Firebase.Util
 Firebse.ML.Vision.Dynamite.Objects
 Firestore.Admin.V1
 Firestore.Bundle
-Google.Ads
 Google.Ads.Identifier
 Google.Ads.InteractiveMedia.Omid.Library.AdSession
 Google.Ads.InteractiveMedia.PAL
