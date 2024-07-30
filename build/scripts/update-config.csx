@@ -61,7 +61,7 @@ foreach (var art in config[0].Artifacts.Where (a => !a.DependencyOnly)) {
 		if (options.Update)
 		{
 			var new_version = GetLatestVersion (a)?.ToString ();
-			var prefix = art.NugetVersion.StartsWith ("1" + art.Version + ".") ? "1" : string.Empty;
+			var prefix = GetThreePartVersion (art.NugetVersion) == "1" + GetThreePartVersion (art.Version) ? "1" : string.Empty;
 
 			art.Version = new_version;
 			art.NugetVersion = prefix + new_version;
@@ -222,6 +222,20 @@ static SemanticVersion GetVersion (string s)
 		return new SemanticVersion (0, 0, 0);
     
 	return SemanticVersion.Parse (version + tag);
+}
+
+static string GetThreePartVersion (string version)
+{
+  // Change 121.0.0.0-beta1 to 121.0.0
+ 	var hyphen = version.IndexOf ('-');
+ 	version = hyphen >= 0 ? version.Substring (0, hyphen) : version;
+  
+ 	var parts = version.Split ('.');
+  
+ 	if (parts.Count () < 3)
+ 	 	return version;
+
+ 	return $"{parts[0]}.{parts[1]}.{parts[2]}";
 }
 	
 public static async Task<bool> DoesNuGetPackageAlreadyExist (string package, string version)
