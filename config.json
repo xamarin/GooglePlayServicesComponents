@@ -36,16 +36,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "22.6.0",
-        "nugetVersion": "122.6.0.1",
+        "version": "23.0.0",
+        "nugetVersion": "123.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "22.6.0",
-        "nugetVersion": "122.6.0.1",
+        "version": "23.0.0",
+        "nugetVersion": "123.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -60,8 +60,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "22.6.0",
-        "nugetVersion": "122.6.0.1",
+        "version": "23.0.0",
+        "nugetVersion": "123.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
@@ -148,8 +148,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-auth-blockstore",
-        "version": "16.3.0",
-        "nugetVersion": "116.3.0.1",
+        "version": "16.3.1",
+        "nugetVersion": "116.3.1",
         "nugetId": "Xamarin.GooglePlayServices.Auth.Blockstore",
         "dependencyOnly": false
       },
@@ -356,48 +356,48 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement",
-        "version": "21.5.1",
-        "nugetVersion": "121.5.1.1",
+        "version": "21.6.2",
+        "nugetVersion": "121.6.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-api",
-        "version": "21.5.1",
-        "nugetVersion": "121.5.1.1",
+        "version": "21.6.2",
+        "nugetVersion": "121.6.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
-        "version": "21.5.1",
-        "nugetVersion": "121.5.1.1",
+        "version": "21.6.2",
+        "nugetVersion": "121.6.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-impl",
-        "version": "21.5.1",
-        "nugetVersion": "121.5.1.1",
+        "version": "21.6.2",
+        "nugetVersion": "121.6.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Impl",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk",
-        "version": "21.5.1",
-        "nugetVersion": "121.5.1.1",
+        "version": "21.6.2",
+        "nugetVersion": "121.6.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk-api",
-        "version": "21.5.1",
-        "nugetVersion": "121.5.1.1",
+        "version": "21.6.2",
+        "nugetVersion": "121.6.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk.Api",
         "dependencyOnly": false
       },
@@ -836,24 +836,24 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads",
-        "version": "22.5.0",
-        "nugetVersion": "122.5.0.1",
+        "version": "22.6.0",
+        "nugetVersion": "122.6.0",
         "nugetId": "Xamarin.Firebase.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-ads-lite",
-        "version": "22.5.0",
-        "nugetVersion": "122.5.0.1",
+        "version": "22.6.0",
+        "nugetVersion": "122.6.0",
         "nugetId": "Xamarin.Firebase.Ads.Lite",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics",
-        "version": "21.5.1",
-        "nugetVersion": "121.5.1.1",
+        "version": "21.6.2",
+        "nugetVersion": "121.6.2",
         "nugetId": "Xamarin.Firebase.Analytics",
         "dependencyOnly": false
       },
@@ -868,8 +868,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics-ktx",
-        "version": "21.5.1",
-        "nugetVersion": "121.5.1.1",
+        "version": "21.6.2",
+        "nugetVersion": "121.6.2",
         "nugetId": "Xamarin.Firebase.Analytics.Ktx",
         "dependencyOnly": false
       },
@@ -1869,8 +1869,8 @@
       {
         "groupId": "com.google.android.ump",
         "artifactId": "user-messaging-platform",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0.3",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
         "nugetId": "Xamarin.Google.UserMessagingPlatform",
         "dependencyOnly": false,
         "templateSet": "user-messaging-platform"
@@ -1896,8 +1896,8 @@
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.28.0",
-        "nugetVersion": "2.28.0.1",
+        "version": "2.29.2",
+        "nugetVersion": "2.29.2",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": false,
         "templateSet": "errorprone"
@@ -2080,8 +2080,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-android",
-        "version": "1.61.1",
-        "nugetVersion": "1.61.1.1",
+        "version": "1.62.2",
+        "nugetVersion": "1.62.2",
         "nugetId": "Xamarin.Grpc.Android",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2089,8 +2089,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-api",
-        "version": "1.61.1",
-        "nugetVersion": "1.61.1.1",
+        "version": "1.62.2",
+        "nugetVersion": "1.62.2",
         "nugetId": "Xamarin.Grpc.Api",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2098,8 +2098,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-context",
-        "version": "1.61.1",
-        "nugetVersion": "1.61.1.1",
+        "version": "1.62.2",
+        "nugetVersion": "1.62.2",
         "nugetId": "Xamarin.Grpc.Context",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2107,8 +2107,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-core",
-        "version": "1.61.1",
-        "nugetVersion": "1.61.1.1",
+        "version": "1.62.2",
+        "nugetVersion": "1.62.2",
         "nugetId": "Xamarin.Grpc.Core",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2116,8 +2116,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-okhttp",
-        "version": "1.61.1",
-        "nugetVersion": "1.61.1.1",
+        "version": "1.62.2",
+        "nugetVersion": "1.62.2",
         "nugetId": "Xamarin.Grpc.OkHttp",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2125,8 +2125,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-protobuf-lite",
-        "version": "1.61.1",
-        "nugetVersion": "1.61.1.1",
+        "version": "1.62.2",
+        "nugetVersion": "1.62.2",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2134,8 +2134,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-stub",
-        "version": "1.61.1",
-        "nugetVersion": "1.61.1.1",
+        "version": "1.62.2",
+        "nugetVersion": "1.62.2",
         "nugetId": "Xamarin.Grpc.Stub",
         "dependencyOnly": false,
         "templateSet": "grpc"
@@ -2143,8 +2143,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-util",
-        "version": "1.61.1",
-        "nugetVersion": "1.61.1.1",
+        "version": "1.62.2",
+        "nugetVersion": "1.62.2",
         "nugetId": "Xamarin.Grpc.Util",
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "io.grpc.grpc-core,junit.junit,io.grpc.grpc-testing,org.mockito.mockito-core",
@@ -2415,8 +2415,8 @@
       {
         "groupId": "com.google.ads.interactivemedia.v3",
         "artifactId": "interactivemedia",
-        "version": "3.31.0",
-        "nugetVersion": "3.31.0.1",
+        "version": "3.32.0",
+        "nugetVersion": "3.32.0",
         "nugetId": "Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia",
         "dependencyOnly": false
       },
