@@ -27,13 +27,4 @@ namespace Dagger.Internal
             return Lazy as Java.Lang.Object;
         }
     }
-
-    partial class MapProviderFactory : global::Dagger.ILazy, global::Dagger.Internal.IFactory
-    {
-        // This method is explicitly implemented as a member of an instantiated Dagger.ILazy
-        public global::Java.Lang.Object Get()
-        {
-            return Dictionary as global::Java.Lang.Object;
-        }
-    }
 }

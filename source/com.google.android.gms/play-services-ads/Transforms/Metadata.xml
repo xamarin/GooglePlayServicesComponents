@@ -104,4 +104,11 @@
 	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onDismissScreen']/parameter[1]" name="managedName">adapter</attr>
 	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onLeaveApplication']/parameter[1]" name="managedName">adapter</attr>
 
+	<attr 
+		path="/api/package[@name='com.google.android.gms.ads.nonagon.util.logging.csi']" 
+		name="managedName"
+		>
+		Google.Ads.Nonagon.Util.Logging.Csi
+	</attr>
+
 </metadata>
