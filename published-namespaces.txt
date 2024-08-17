@@ -11,6 +11,7 @@ Android.Gms.Ads.AppOpen
 Android.Gms.Ads.Formats
 Android.Gms.Ads.H5
 Android.Gms.Ads.Initialization
+Android.Gms.Ads.Internal.Util.Client
 Android.Gms.Ads.Interstitial
 Android.Gms.Ads.Mediation
 Android.Gms.Ads.Mediation.CustomEvent
@@ -38,6 +39,7 @@ Android.Gms.Auth.Api.SignIn
 Android.Gms.Auth.Api.SignIn.Internal
 Android.Gms.Auth.Managed.Blockstore
 Android.Gms.Auth.Managed.Blockstore.RestoreCredential
+Android.Gms.Auth.Managed.Blockstore.RestoreCredential.Internal
 Android.Gms.Auth.Managed.Password
 Android.Gms.Awareness
 Android.Gms.Awareness.Fence
@@ -456,6 +458,7 @@ Google.Ads.InteractiveMedia.V3.Impl
 Google.Ads.InteractiveMedia.V3.Impl.Data
 Google.Ads.Mediation
 Google.Ads.Mediation.Admob
+Google.Ads.Nonagon.Util.Logging.Csi
 Google.AndroidLibraries.BarHopper
 Google.Api
 Google.Cloud.Audit
