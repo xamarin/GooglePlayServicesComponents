@@ -5,10 +5,10 @@
 
 |    |                                                                      |                    |                                                                      |                    |
 |----|----------------------------------------------------------------------|--------------------|----------------------------------------------------------------------|--------------------|
-|   1|com.google.android.gms:play-services-ads                              |23.2.0              |Xamarin.GooglePlayServices.Ads                                        |123.2.0             |
-|   2|com.google.android.gms:play-services-ads-base                         |23.2.0              |Xamarin.GooglePlayServices.Ads.Base                                   |123.2.0             |
+|   1|com.google.android.gms:play-services-ads                              |23.1.0              |Xamarin.GooglePlayServices.Ads                                        |123.1.0             |
+|   2|com.google.android.gms:play-services-ads-base                         |23.1.0              |Xamarin.GooglePlayServices.Ads.Base                                   |123.1.0             |
 |   3|com.google.android.gms:play-services-ads-identifier                   |18.1.0              |Xamarin.GooglePlayServices.Ads.Identifier                             |118.1.0.1           |
-|   4|com.google.android.gms:play-services-ads-lite                         |23.2.0              |Xamarin.GooglePlayServices.Ads.Lite                                   |123.2.0             |
+|   4|com.google.android.gms:play-services-ads-lite                         |23.1.0              |Xamarin.GooglePlayServices.Ads.Lite                                   |123.1.0             |
 |   5|com.google.android.gms:play-services-afs-native                       |19.1.0              |Xamarin.GooglePlayServices.AFS.Native                                 |119.1.0.1           |
 |   6|com.google.android.gms:play-services-analytics                        |18.1.0              |Xamarin.GooglePlayServices.Analytics                                  |118.1.0.1           |
 |   7|com.google.android.gms:play-services-analytics-impl                   |18.1.0              |Xamarin.GooglePlayServices.Analytics.Impl                             |118.1.0.1           |
@@ -105,8 +105,8 @@
 |  98|com.google.android.play:review-ktx                                    |2.0.1               |Xamarin.Google.Android.Play.Review.Ktx                                |2.0.1.10            |
 |  99|com.google.android.tv:tv-ads                                          |1.0.0               |Xamarin.GoogleAndroid.TV.Ads                                          |1.0.0.1             |
 | 100|com.google.firebase:firebase-abt                                      |22.0.0              |Xamarin.Firebase.Abt                                                  |122.0.0.1           |
-| 101|com.google.firebase:firebase-ads                                      |23.2.0              |Xamarin.Firebase.Ads                                                  |123.2.0             |
-| 102|com.google.firebase:firebase-ads-lite                                 |23.2.0              |Xamarin.Firebase.Ads.Lite                                             |123.2.0             |
+| 101|com.google.firebase:firebase-ads                                      |23.0.0              |Xamarin.Firebase.Ads                                                  |123.0.0             |
+| 102|com.google.firebase:firebase-ads-lite                                 |23.0.0              |Xamarin.Firebase.Ads.Lite                                             |123.0.0             |
 | 103|com.google.firebase:firebase-analytics                                |22.0.2              |Xamarin.Firebase.Analytics                                            |122.0.2             |
 | 104|com.google.firebase:firebase-analytics-impl                           |16.3.0              |Xamarin.Firebase.Analytics.Impl                                       |116.3.0.17          |
 | 105|com.google.firebase:firebase-analytics-ktx                            |22.0.2              |Xamarin.Firebase.Analytics.Ktx                                        |122.0.2             |

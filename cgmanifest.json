@@ -7,9 +7,9 @@
         "maven": {
           "artifactId": "play-services-ads",
           "groupId": "com.google.android.gms",
-          "version": "23.2.0",
+          "version": "23.1.0",
           "nuGetId": "Xamarin.GooglePlayServices.Ads",
-          "nuGetVersion": "123.2.0"
+          "nuGetVersion": "123.1.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -20,9 +20,9 @@
         "maven": {
           "artifactId": "play-services-ads-base",
           "groupId": "com.google.android.gms",
-          "version": "23.2.0",
+          "version": "23.1.0",
           "nuGetId": "Xamarin.GooglePlayServices.Ads.Base",
-          "nuGetVersion": "123.2.0"
+          "nuGetVersion": "123.1.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -46,9 +46,9 @@
         "maven": {
           "artifactId": "play-services-ads-lite",
           "groupId": "com.google.android.gms",
-          "version": "23.2.0",
+          "version": "23.1.0",
           "nuGetId": "Xamarin.GooglePlayServices.Ads.Lite",
-          "nuGetVersion": "123.2.0"
+          "nuGetVersion": "123.1.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -1306,9 +1306,9 @@
         "maven": {
           "artifactId": "firebase-ads",
           "groupId": "com.google.firebase",
-          "version": "23.2.0",
+          "version": "23.0.0",
           "nuGetId": "Xamarin.Firebase.Ads",
-          "nuGetVersion": "123.2.0"
+          "nuGetVersion": "123.0.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1319,9 +1319,9 @@
         "maven": {
           "artifactId": "firebase-ads-lite",
           "groupId": "com.google.firebase",
-          "version": "23.2.0",
+          "version": "23.0.0",
           "nuGetId": "Xamarin.Firebase.Ads.Lite",
-          "nuGetVersion": "123.2.0"
+          "nuGetVersion": "123.0.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
