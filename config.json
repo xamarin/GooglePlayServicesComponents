@@ -36,16 +36,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads",
-        "version": "23.2.0",
-        "nugetVersion": "123.2.0",
+        "version": "23.1.0",
+        "nugetVersion": "123.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads",
         "dependencyOnly": false
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-base",
-        "version": "23.2.0",
-        "nugetVersion": "123.2.0",
+        "version": "23.1.0",
+        "nugetVersion": "123.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": false
       },
@@ -60,8 +60,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-lite",
-        "version": "23.2.0",
-        "nugetVersion": "123.2.0",
+        "version": "23.1.0",
+        "nugetVersion": "123.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": false
       },
