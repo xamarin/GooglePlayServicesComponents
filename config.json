@@ -725,7 +725,7 @@
         "groupId": "com.google.android.play",
         "artifactId": "app-update",
         "version": "2.1.0",
-        "nugetVersion": "2.1.0.9",
+        "nugetVersion": "2.1.0.10",
         "nugetId": "Xamarin.Google.Android.Play.App.Update",
         "dependencyOnly": false
       },
@@ -733,7 +733,7 @@
         "groupId": "com.google.android.play",
         "artifactId": "app-update-ktx",
         "version": "2.1.0",
-        "nugetVersion": "2.1.0.9",
+        "nugetVersion": "2.1.0.10",
         "nugetId": "Xamarin.Google.Android.Play.App.Update.Ktx",
         "dependencyOnly": false
       },
