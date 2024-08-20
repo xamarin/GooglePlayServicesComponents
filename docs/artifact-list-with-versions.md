@@ -216,7 +216,7 @@
 | 209|com.google.mlkit:vision-interfaces                                    |16.3.0              |Xamarin.Google.MLKit.Vision.Interfaces                                |116.3.0.4           |
 | 210|com.google.mlkit:vision-internal-vkp                                  |18.2.2              |Xamarin.Google.MLKit.Vision.Internal.Vkp                              |118.2.2.12          |
 | 211|com.google.android.odml:image                                         |1.0.0-beta1         |Xamarin.Google.Android.ODML.Image                                     |1.0.0.11-beta1      |
-| 212|com.google.android.libraries.identity.googleid:googleid               |1.1.0               |Xamarin.GoogleAndroid.Libraries.Identity.GoogleId                     |1.1.0               |
+| 212|com.google.android.libraries.identity.googleid:googleid               |1.1.0               |Xamarin.GoogleAndroid.Libraries.Identity.GoogleId                     |1.1.0.5             |
 | 213|com.google.android.libraries.places:places                            |3.5.0               |Xamarin.GoogleAndroid.Libraries.Places                                |3.5.0.1             |
 | 214|com.google.android.libraries.places:places-compat                     |2.6.0               |Xamarin.GoogleAndroid.Libraries.Places.Compat                         |2.6.0.9             |
 | 215|com.android.billingclient:billing                                     |7.0.0               |Xamarin.Android.Google.BillingClient                                  |7.0.0.1             |

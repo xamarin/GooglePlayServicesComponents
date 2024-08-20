@@ -2751,7 +2751,7 @@
           "groupId": "com.google.android.libraries.identity.googleid",
           "version": "1.1.0",
           "nuGetId": "Xamarin.GoogleAndroid.Libraries.Identity.GoogleId",
-          "nuGetVersion": "1.1.0"
+          "nuGetVersion": "1.1.0.5"
         }
       }
     },
