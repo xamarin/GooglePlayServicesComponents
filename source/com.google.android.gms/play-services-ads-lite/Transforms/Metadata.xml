@@ -592,4 +592,13 @@
         protected
     </attr>
 
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.internal.util.client']"
+        name="managedName"
+        >
+        Android.Gms.Ads.Internal.Util.Client
+    </attr>
+
+
 </metadata>

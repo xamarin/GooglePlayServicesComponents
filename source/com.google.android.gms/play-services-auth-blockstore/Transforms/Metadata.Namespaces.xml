@@ -11,4 +11,11 @@
         >
         Android.Gms.Auth.Managed.Blockstore.RestoreCredential
     </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.auth.blockstore.restorecredential.internal']" 
+        name="managedName"
+        >
+        Android.Gms.Auth.Managed.Blockstore.RestoreCredential.Internal
+    </attr>
+    
 </metadata>
