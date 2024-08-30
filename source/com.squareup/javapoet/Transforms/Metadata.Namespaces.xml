@@ -1,9 +1,0 @@
-﻿<metadata>
-    <attr 
-        path="/api/package[@name='com.squareup.javapoet']" 
-        name="managedName"
-        >
-        Square.JavaPoet
-    </attr>
-
-</metadata>

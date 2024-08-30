@@ -1,9 +1,0 @@
-﻿<metadata>
-    <attr
-        path="/api/package[@name='com.google.protobuf']" 
-        name="managedName"
-        >
-        Xamarin.Protobuf.Lite
-    </attr>
-
-</metadata>
