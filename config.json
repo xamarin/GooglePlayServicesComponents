@@ -1831,15 +1831,6 @@
         "templateSet": "glide"
       },
       {
-        "groupId": "com.google.android",
-        "artifactId": "annotations",
-        "version": "4.1.1.4",
-        "nugetVersion": "4.1.1.17",
-        "nugetId": "Xamarin.GoogleAndroid.Annotations",
-        "dependencyOnly": false,
-        "templateSet": "annotations"
-      },
-      {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-api",
         "version": "3.2.0",
@@ -1874,33 +1865,6 @@
         "nugetId": "Xamarin.Google.UserMessagingPlatform",
         "dependencyOnly": false,
         "templateSet": "user-messaging-platform"
-      },
-      {
-        "groupId": "com.google.code.findbugs",
-        "artifactId": "jsr305",
-        "version": "3.0.2",
-        "nugetVersion": "3.0.2.15",
-        "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
-        "dependencyOnly": false,
-        "templateSet": "findbugs"
-      },
-      {
-        "groupId": "com.google.dagger",
-        "artifactId": "dagger",
-        "version": "2.52",
-        "nugetVersion": "2.52.0",
-        "nugetId": "Xamarin.Google.Dagger",
-        "dependencyOnly": false,
-        "templateSet": "dagger"
-      },
-      {
-        "groupId": "com.google.errorprone",
-        "artifactId": "error_prone_annotations",
-        "version": "2.29.2",
-        "nugetVersion": "2.29.2",
-        "nugetId": "Xamarin.Google.ErrorProne.Annotations",
-        "dependencyOnly": false,
-        "templateSet": "errorprone"
       },
       {
         "groupId": "com.google.zxing",
@@ -2178,15 +2142,6 @@
         "templateSet": "perfmark"
       },
       {
-        "groupId": "javax.inject",
-        "artifactId": "javax.inject",
-        "version": "1",
-        "nugetVersion": "1.0.0.15",
-        "nugetId": "Xamarin.JavaX.Inject",
-        "dependencyOnly": false,
-        "templateSet": "javax-inject"
-      },
-      {
         "groupId": "org.chromium.net",
         "artifactId": "cronet-api",
         "version": "119.6045.31",
@@ -2377,33 +2332,6 @@
         "templateSet": "tensorflow-lite"
       },
       {
-        "groupId": "com.google.inject",
-        "artifactId": "guice",
-        "version": "7.0.0",
-        "nugetVersion": "7.0.0.1",
-        "nugetId": "Xamarin.Google.Inject.Guice",
-        "dependencyOnly": false,
-        "templateSet": "inject-guice"
-      },
-      {
-        "groupId": "aopalliance",
-        "artifactId": "aopalliance",
-        "version": "1.0",
-        "nugetVersion": "1.0.0.3",
-        "nugetId": "Xamarin.AopAlliance",
-        "dependencyOnly": false,
-        "templateSet": "aopalliance"
-      },
-      {
-        "groupId": "org.ow2.asm",
-        "artifactId": "asm",
-        "version": "9.7",
-        "nugetVersion": "9.7.0.1",
-        "nugetId": "Xamarin.OW2.ASM",
-        "dependencyOnly": false,
-        "templateSet": "ow2-asm"
-      },
-      {
         "groupId": "org.brotli",
         "artifactId": "dec",
         "version": "0.1.2",
@@ -2419,15 +2347,6 @@
         "nugetVersion": "3.33.0",
         "nugetId": "Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia",
         "dependencyOnly": false
-      },
-      {
-        "groupId": "jakarta.inject",
-        "artifactId": "jakarta.inject-api",
-        "version": "2.0.1",
-        "nugetVersion": "2.0.1.1",
-        "nugetId": "Xamarin.Jakarta.Inject.InjectApi",
-        "dependencyOnly": false,
-        "templateSet": "jakarta"
       },
       //=======================================================================
       // nuget dependencies
@@ -2887,6 +2806,46 @@
         "nugetVersion": "1.0.4.9",
         "nugetId": "Xamarin.Android.ReactiveStreams",
         "dependencyOnly": true
+      },
+      {
+        "groupId": "javax.inject",
+        "artifactId": "javax.inject",
+        "version": "1",
+        "nugetVersion": "1.0.0.15",
+        "nugetId": "Xamarin.JavaX.Inject",
+        "dependencyOnly": true,
+      },
+      {
+        "groupId": "com.google.errorprone",
+        "artifactId": "error_prone_annotations",
+        "version": "2.29.2",
+        "nugetVersion": "2.29.2",
+        "nugetId": "Xamarin.Google.ErrorProne.Annotations",
+        "dependencyOnly": true,
+      },
+      {
+        "groupId": "com.google.dagger",
+        "artifactId": "dagger",
+        "version": "2.52",
+        "nugetVersion": "2.52.0",
+        "nugetId": "Xamarin.Google.Dagger",
+        "dependencyOnly": true,
+      },
+      {
+        "groupId": "com.google.code.findbugs",
+        "artifactId": "jsr305",
+        "version": "3.0.2",
+        "nugetVersion": "3.0.2.15",
+        "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
+        "dependencyOnly": true,
+      },
+      {
+        "groupId": "com.google.android",
+        "artifactId": "annotations",
+        "version": "4.1.1.4",
+        "nugetVersion": "4.1.1.17",
+        "nugetId": "Xamarin.GoogleAndroid.Annotations",
+        "dependencyOnly": true,
       }
     ],
     "templateSets": [
@@ -2896,24 +2855,6 @@
         "templates": [
           {
             "templateFile": "templates/glide/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "findbugs",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/findbugs/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
@@ -2950,42 +2891,6 @@
         "templates": [
           {
             "templateFile": "templates/tensorflow-lite/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "dagger",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/dagger/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "javax-inject",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/javax-inject/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
@@ -3040,42 +2945,6 @@
         "templates": [
           {
             "templateFile": "templates/user-messaging-platform/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "errorprone",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/errorprone/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "annotations",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/annotations/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
@@ -3310,78 +3179,6 @@
         "templates": [
           {
             "templateFile": "templates/flatbuffers/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "inject-guice",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/inject-guice/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "jakarta",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/jakarta/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "aopalliance",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/aopalliance/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "ow2-asm",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/ow2-asm/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {

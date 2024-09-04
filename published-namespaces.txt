@@ -1,4 +1,3 @@
-Android.Annotation
 Android.BillingClient
 Android.BillingClient.Api
 Android.BillingClient.Ktx
@@ -241,10 +240,6 @@ Bumptech.Glide.Request.Transition
 Bumptech.Glide.Signature
 Bumptech.Glide.Util
 Bumptech.Glide.Util.Pool
-Dagger
-Dagger.Assisted
-Dagger.Internal
-Dagger.Multibindings
 Firebase
 Firebase.Abt
 Firebase.Abt.Component
@@ -504,12 +499,7 @@ Google.ZXing.QRCode
 Google.ZXing.QRCode.Decoder
 Google.ZXing.QRCode.Detector
 Google.ZXing.QRCode.Encoder
-Jakarta.Inject
 Java.Interop
-Javax.Annotation
-Javax.Annotation.Concurrent
-Javax.Annotation.Meta
-JavaX.Inject
 JWT
 Retrofit2.Internal
 Square.JavaPoet
@@ -539,8 +529,6 @@ Volley.Toolbox
 Xamarin.Android.Libraries.Intelligence.Acceleration
 Xamarin.Android.Libraries.Intelligence.Acceleration.Process
 Xamarin.Android.Libraries.Vision.VisionKit.Pipeline
-Xamarin.AopAlliance.Aop
-Xamarin.AopAlliance.Intercept
 Xamarin.Brotli.Dec
 Xamarin.Chromium.Base
 Xamarin.Chromium.Base.Annotations
@@ -609,19 +597,8 @@ Xamarin.Google.Android.Play.Core.SplitInstall.Testing
 Xamarin.Google.Android.Play.Core.Tasks
 Xamarin.Google.Android.Play.Feature.Delivery
 Xamarin.Google.Android.Recaptcha
-Xamarin.Google.ErrorProne.Annotations
-Xamarin.Google.ErrorProne.Annotations.Concurrent
 Xamarin.Google.FlatBuffers
 Xamarin.Google.FlatBuffers.Reflection
-Xamarin.Google.Inject
-Xamarin.Google.Inject.Binder
-Xamarin.Google.Inject.Internal.Aop
-Xamarin.Google.Inject.Internal.Util
-Xamarin.Google.Inject.Matcher
-Xamarin.Google.Inject.Multibindings
-Xamarin.Google.Inject.Name
-Xamarin.Google.Inject.Spi
-Xamarin.Google.Inject.Util
 Xamarin.Google.MLKit.Barhopper
 Xamarin.Google.MLKit.Common
 Xamarin.Google.MLKit.Common.Internal
@@ -734,8 +711,6 @@ Xamarin.Io.OpenCensus.Trace.Propagation
 Xamarin.Io.OpenCensus.Trace.Samplers
 Xamarin.Io.OpenCensus.Trace.Unsafe
 Xamarin.Io.Perfmark
-Xamarin.ObjectWeb.Asm
-Xamarin.ObjectWeb.Asm.Signature
 Xamarin.Protobuf.Lite
 Xamarin.TensorFlow
 Xamarin.TensorFlow.Contrib.Android
