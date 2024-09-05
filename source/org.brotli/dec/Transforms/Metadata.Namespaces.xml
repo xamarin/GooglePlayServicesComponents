@@ -1,8 +1,0 @@
-﻿<metadata>
-    <attr 
-        path="/api/package[@name='org.brotli.dec']" 
-        name="managedName"
-        >
-        Xamarin.Brotli.Dec
-    </attr>
-</metadata>

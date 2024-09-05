@@ -1831,516 +1831,6 @@
         "templateSet": "glide"
       },
       {
-        "groupId": "com.google.android.datatransport",
-        "artifactId": "transport-api",
-        "version": "3.2.0",
-        "nugetVersion": "3.2.0.1",
-        "nugetId": "Xamarin.Google.Android.DataTransport.TransportApi",
-        "dependencyOnly": false,
-        "templateSet": "datatransport"
-      },
-      {
-        "groupId": "com.google.android.datatransport",
-        "artifactId": "transport-backend-cct",
-        "version": "3.3.0",
-        "nugetVersion": "3.3.0.1",
-        "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
-        "dependencyOnly": false,
-        "templateSet": "datatransport"
-      },
-      {
-        "groupId": "com.google.android.datatransport",
-        "artifactId": "transport-runtime",
-        "version": "3.3.0",
-        "nugetVersion": "3.3.0.1",
-        "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
-        "dependencyOnly": false,
-        "templateSet": "datatransport"
-      },
-      {
-        "groupId": "com.google.android.ump",
-        "artifactId": "user-messaging-platform",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0",
-        "nugetId": "Xamarin.Google.UserMessagingPlatform",
-        "dependencyOnly": false,
-        "templateSet": "user-messaging-platform"
-      },
-      {
-        "groupId": "com.google.zxing",
-        "artifactId": "core",
-        "version": "3.5.3",
-        "nugetVersion": "3.5.3.3",
-        "nugetId": "Xamarin.Google.ZXing.Core",
-        "dependencyOnly": false,
-        "templateSet": "zxing"
-      },
-      {
-        "groupId": "com.google.flatbuffers",
-        "artifactId": "flatbuffers-java",
-        "version": "24.3.25",
-        "nugetVersion": "24.3.25.1",
-        "nugetId": "Xamarin.Google.FlatBuffers.Java",
-        "dependencyOnly": false,
-        "templateSet": "flatbuffers"
-      },
-      {
-        "groupId": "com.google.protobuf",
-        "artifactId": "protobuf-javalite",
-        "version": "4.27.3",
-        "nugetVersion": "4.27.3",
-        "nugetId": "Xamarin.Protobuf.JavaLite",
-        "dependencyOnly": false,
-        "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth",
-        "templateSet": "protobuf-lite"
-      },
-      {
-        "groupId": "com.google.protobuf",
-        "artifactId": "protobuf-lite",
-        "version": "3.0.1",
-        "nugetVersion": "3.0.1.15",
-        "nugetId": "Xamarin.Protobuf.Lite",
-        "dependencyOnly": false,
-        "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth",
-        "templateSet": "protobuf-lite"
-      },
-      {
-        "groupId": "com.squareup.okhttp",
-        "artifactId": "okhttp",
-        "version": "2.7.5",
-        "nugetVersion": "2.7.5.15",
-        "nugetId": "Square.OkHttp",
-        "dependencyOnly": false,
-        "excludedRuntimeDependencies": "com.squareup.okio.okio,com.google.android.android",
-        "templateSet": "squareup-okhttp"
-      },
-      {
-        "groupId": "com.squareup.okhttp3",
-        "artifactId": "okhttp",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.5",
-        "nugetId": "Square.OkHttp3",
-        "dependencyOnly": false,
-        "templateSet": "squareup-okhttp3"
-      },
-      {
-        "groupId": "com.squareup.okhttp3",
-        "artifactId": "logging-interceptor",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.5",
-        "nugetId": "Square.OkHttp3.LoggingInterceptor",
-        "dependencyOnly": false,
-        "templateSet": "squareup-okhttp3"
-      },
-      {
-        "groupId": "com.squareup.okhttp3",
-        "artifactId": "okhttp-brotli",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.3",
-        "nugetId": "Square.OkHttp3.OkHttp.Brotli",
-        "dependencyOnly": false,
-        "templateSet": "squareup-okhttp3"
-      },
-      {
-        "groupId": "com.squareup.okhttp3",
-        "artifactId": "okhttp-tls",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.3",
-        "nugetId": "Square.OkHttp3.OkHttp.TLS",
-        "dependencyOnly": false,
-        "templateSet": "squareup-okhttp3"
-      },
-      {
-        "groupId": "com.squareup.okhttp3",
-        "artifactId": "okhttp-urlconnection",
-        "version": "4.12.0",
-        "nugetVersion": "4.12.0.5",
-        "nugetId": "Square.OkHttp3.UrlConnection",
-        "dependencyOnly": false,
-        "templateSet": "squareup-okhttp3"
-      },
-      {
-        "groupId": "com.squareup.okio",
-        "artifactId": "okio",
-        "version": "3.9.0",
-        "nugetVersion": "3.9.0.1",
-        "nugetId": "Square.OkIO",
-        "dependencyOnly": false,
-        "templateSet": "squareup-okio"
-      },
-      {
-        "groupId": "com.squareup.okio",
-        "artifactId": "okio-jvm",
-        "version": "3.9.0",
-        "nugetVersion": "3.9.0.1",
-        "nugetId": "Square.OkIO.JVM",
-        "dependencyOnly": false,
-        "templateSet": "squareup-okio"
-      },
-      {
-        "groupId": "com.squareup.picasso",
-        "artifactId": "picasso",
-        "version": "2.8",
-        "nugetVersion": "2.8.0.14",
-        "nugetId": "Square.Picasso",
-        "dependencyOnly": false,
-        "templateSet": "squareup-picasso"
-      },
-      {
-        "groupId": "com.squareup.retrofit",
-        "artifactId": "retrofit",
-        "version": "1.9.0",
-        "nugetVersion": "1.9.0.15",
-        "nugetId": "Square.Retrofit",
-        "dependencyOnly": false,
-        "excludedRuntimeDependencies": "com.squareup.okhttp.okhttp,com.google.code.gson.gson,com.google.android.android,io.reactivex.rxjava,com.google.appengine.appengine-api-1.0-sdk",
-        "templateSet": "squareup-retrofit"
-      },
-      {
-        "groupId": "com.squareup.retrofit2",
-        "artifactId": "adapter-rxjava2",
-        "version": "2.11.0",
-        "nugetVersion": "2.11.0.1",
-        "nugetId": "Square.Retrofit2.AdapterRxJava2",
-        "dependencyOnly": false,
-        "templateSet": "squareup-retrofit2"
-      },
-      {
-        "groupId": "com.squareup.retrofit2",
-        "artifactId": "converter-gson",
-        "version": "2.11.0",
-        "nugetVersion": "2.11.0.1",
-        "nugetId": "Square.Retrofit2.ConverterGson",
-        "dependencyOnly": false,
-        "templateSet": "squareup-retrofit2"
-      },
-      {
-        "groupId": "com.squareup.retrofit2",
-        "artifactId": "converter-scalars",
-        "version": "2.11.0",
-        "nugetVersion": "2.11.0.1",
-        "nugetId": "Square.Retrofit2.ConverterScalars",
-        "dependencyOnly": false,
-        "templateSet": "squareup-retrofit2"
-      },
-      {
-        "groupId": "com.squareup.retrofit2",
-        "artifactId": "retrofit",
-        "version": "2.11.0",
-        "nugetVersion": "2.11.0.1",
-        "nugetId": "Square.Retrofit2",
-        "dependencyOnly": false,
-        "templateSet": "squareup-retrofit2"
-      },
-      {
-        "groupId": "com.squareup",
-        "artifactId": "javapoet",
-        "version": "1.13.0",
-        "nugetVersion": "1.13.0.11",
-        "nugetId": "Square.JavaPoet",
-        "dependencyOnly": false,
-        "templateSet": "squareup-javapoet"
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-android",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2",
-        "nugetId": "Xamarin.Grpc.Android",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-api",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2",
-        "nugetId": "Xamarin.Grpc.Api",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-context",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2",
-        "nugetId": "Xamarin.Grpc.Context",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-core",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2",
-        "nugetId": "Xamarin.Grpc.Core",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-okhttp",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2",
-        "nugetId": "Xamarin.Grpc.OkHttp",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-protobuf-lite",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2",
-        "nugetId": "Xamarin.Grpc.Protobuf.Lite",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-stub",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2",
-        "nugetId": "Xamarin.Grpc.Stub",
-        "dependencyOnly": false,
-        "templateSet": "grpc"
-      },
-      {
-        "groupId": "io.grpc",
-        "artifactId": "grpc-util",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2",
-        "nugetId": "Xamarin.Grpc.Util",
-        "dependencyOnly": false,
-        "excludedRuntimeDependencies": "io.grpc.grpc-core,junit.junit,io.grpc.grpc-testing,org.mockito.mockito-core",
-        "templateSet": "grpc"
-      },
-      {
-        "groupId": "io.opencensus",
-        "artifactId": "opencensus-api",
-        "version": "0.31.1",
-        "nugetVersion": "0.31.1.8",
-        "nugetId": "Xamarin.Io.OpenCensus.OpenCensusApi",
-        "dependencyOnly": false,
-        "templateSet": "opencensus"
-      },
-      {
-        "groupId": "io.opencensus",
-        "artifactId": "opencensus-contrib-grpc-metrics",
-        "version": "0.31.1",
-        "nugetVersion": "0.31.1.8",
-        "nugetId": "Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics",
-        "dependencyOnly": false,
-        "templateSet": "opencensus"
-      },
-      {
-        "groupId": "io.perfmark",
-        "artifactId": "perfmark-api",
-        "version": "0.27.0",
-        "nugetVersion": "0.27.0.3",
-        "nugetId": "Xamarin.Io.PerfMark.PerfMarkApi",
-        "dependencyOnly": false,
-        "templateSet": "perfmark"
-      },
-      {
-        "groupId": "org.chromium.net",
-        "artifactId": "cronet-api",
-        "version": "119.6045.31",
-        "nugetVersion": "119.6045.31.3",
-        "nugetId": "Xamarin.Chromium.CroNet.Api",
-        "dependencyOnly": false,
-        "templateSet": "chromium-cronet"
-      },
-      {
-        "groupId": "org.chromium.net",
-        "artifactId": "cronet-common",
-        "version": "119.6045.31",
-        "nugetVersion": "119.6045.31.3",
-        "nugetId": "Xamarin.Chromium.CroNet.Common",
-        "dependencyOnly": false,
-        "templateSet": "chromium-cronet"
-      },
-      {
-        "groupId": "org.chromium.net",
-        "artifactId": "cronet-embedded",
-        "version": "119.6045.31",
-        "nugetVersion": "119.6045.31.3",
-        "nugetId": "Xamarin.Chromium.CroNet.Embedded",
-        "dependencyOnly": false,
-        "templateSet": "chromium-cronet"
-      },
-      {
-        "groupId": "org.chromium.net",
-        "artifactId": "cronet-fallback",
-        "version": "119.6045.31",
-        "nugetVersion": "119.6045.31.3",
-        "nugetId": "Xamarin.Chromium.CroNet.Fallback",
-        "dependencyOnly": false,
-        "templateSet": "chromium-cronet"
-      },
-      {
-        "groupId": "org.codehaus.mojo",
-        "artifactId": "animal-sniffer-annotations",
-        "version": "1.24",
-        "nugetVersion": "1.24.0.1",
-        "nugetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
-        "dependencyOnly": false,
-        "templateSet": "codehaus-mojo"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite",
-        "version": "2.16.1",
-        "nugetVersion": "2.16.1.1",
-        "nugetId": "Xamarin.TensorFlow.Lite",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-android",
-        "version": "1.13.1",
-        "nugetVersion": "1.13.1.9",
-        "nugetId": "Xamarin.TensorFlow.Android",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-api",
-        "version": "2.16.1",
-        "nugetVersion": "2.16.1.1",
-        "nugetId": "Xamarin.TensorFlow.Lite.Api",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-gpu",
-        "version": "2.16.1",
-        "nugetVersion": "2.16.1.1",
-        "nugetId": "Xamarin.TensorFlow.Lite.Gpu",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-gpu-api",
-        "version": "2.16.1",
-        "nugetVersion": "2.16.1.1",
-        "nugetId": "Xamarin.TensorFlow.Lite.Gpu.Api",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-select-tf-ops",
-        "version": "2.16.1",
-        "nugetVersion": "2.16.1.1",
-        "nugetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
-        "dependencyOnly": false,
-        "frozen": true,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-support",
-        "version": "0.4.4",
-        "nugetVersion": "0.4.4.6",
-        "nugetId": "Xamarin.TensorFlow.Lite.Support.Library",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-support-api",
-        "version": "0.4.4",
-        "nugetVersion": "0.4.4.6",
-        "nugetId": "Xamarin.TensorFlow.Lite.Support.Api",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-metadata",
-        "version": "0.4.4",
-        "nugetVersion": "0.4.4.6",
-        "nugetId": "Xamarin.TensorFlow.Lite.Metadata",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-task-base",
-        "version": "0.4.4",
-        "nugetVersion": "0.4.4.6",
-        "nugetId": "Xamarin.TensorFlow.Lite.Task.Base.Library",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-task-audio",
-        "version": "0.4.4",
-        "nugetVersion": "0.4.4.6",
-        "nugetId": "Xamarin.TensorFlow.Lite.Task.Audio.Library",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-task-vision",
-        "version": "0.4.4",
-        "nugetVersion": "0.4.4.6",
-        "nugetId": "Xamarin.TensorFlow.Lite.Task.Vision.Library",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-task-text",
-        "version": "0.4.4",
-        "nugetVersion": "0.4.4.6",
-        "nugetId": "Xamarin.TensorFlow.Lite.Task.Text.Library",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-task-audio-play-services",
-        "version": "0.4.4",
-        "nugetVersion": "0.4.4.6",
-        "nugetId": "Xamarin.TensorFlow.Lite.Task.Audio.PlayServices.Library",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-task-vision-play-services",
-        "version": "0.4.4",
-        "nugetVersion": "0.4.4.6",
-        "nugetId": "Xamarin.TensorFlow.Lite.Task.Vision.PlayServices.Library",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.tensorflow",
-        "artifactId": "tensorflow-lite-task-text-play-services",
-        "version": "0.4.4",
-        "nugetVersion": "0.4.4.6",
-        "nugetId": "Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library",
-        "dependencyOnly": false,
-        "templateSet": "tensorflow-lite"
-      },
-      {
-        "groupId": "org.brotli",
-        "artifactId": "dec",
-        "version": "0.1.2",
-        "nugetVersion": "0.1.2.3",
-        "nugetId": "Xamarin.Brotli.Dec",
-        "dependencyOnly": false,
-        "templateSet": "brotli"
-      },
-      {
         "groupId": "com.google.ads.interactivemedia.v3",
         "artifactId": "interactivemedia",
         "version": "3.33.0",
@@ -2608,18 +2098,34 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "com.google.android",
+        "artifactId": "annotations",
+        "version": "4.1.1.4",
+        "nugetVersion": "4.1.1.17",
+        "nugetId": "Xamarin.GoogleAndroid.Annotations",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.datatransport",
+        "artifactId": "transport-api",
+        "version": "3.2.0",
+        "nugetVersion": "3.2.0.1",
+        "nugetId": "Xamarin.Google.Android.DataTransport.TransportApi",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-backend-cct",
-        "version": "3.1.9",
-        "nugetVersion": "3.1.9.2",
+        "version": "3.3.0",
+        "nugetVersion": "3.3.0.1",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
-        "version": "3.1.9",
-        "nugetVersion": "3.1.9.2",
+        "version": "3.3.0",
+        "nugetVersion": "3.3.0.1",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
         "dependencyOnly": true
       },
@@ -2664,6 +2170,14 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "com.google.android.ump",
+        "artifactId": "user-messaging-platform",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
+        "nugetId": "Xamarin.Google.UserMessagingPlatform",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "com.google.auto.value",
         "artifactId": "auto-value-annotations",
         "version": "1.11.0",
@@ -2672,11 +2186,35 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "com.google.code.findbugs",
+        "artifactId": "jsr305",
+        "version": "3.0.2",
+        "nugetVersion": "3.0.2.15",
+        "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "com.google.code.gson",
         "artifactId": "gson",
         "version": "2.10.1",
         "nugetVersion": "2.10.1.6",
         "nugetId": "GoogleGson",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.dagger",
+        "artifactId": "dagger",
+        "version": "2.52",
+        "nugetVersion": "2.52.0",
+        "nugetId": "Xamarin.Google.Dagger",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.errorprone",
+        "artifactId": "error_prone_annotations",
+        "version": "2.29.2",
+        "nugetVersion": "2.29.2",
+        "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": true
       },
       {
@@ -2713,10 +2251,74 @@
       },
       {
         "groupId": "com.google.protobuf",
+        "artifactId": "protobuf-javalite",
+        "version": "4.27.3",
+        "nugetVersion": "4.27.3",
+        "nugetId": "Xamarin.Protobuf.JavaLite",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.protobuf",
         "artifactId": "protobuf-lite",
         "version": "3.0.1",
         "nugetVersion": "3.0.1.10",
         "nugetId": "Xamarin.Protobuf.Lite",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.squareup.okhttp",
+        "artifactId": "okhttp",
+        "version": "2.7.5",
+        "nugetVersion": "2.7.5.15",
+        "nugetId": "Square.OkHttp",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.squareup.okhttp3",
+        "artifactId": "okhttp",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.5",
+        "nugetId": "Square.OkHttp3",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.squareup.okio",
+        "artifactId": "okio",
+        "version": "3.9.0",
+        "nugetVersion": "3.9.0.1",
+        "nugetId": "Square.OkIO",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-android",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
+        "nugetId": "Xamarin.Grpc.Android",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-okhttp",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
+        "nugetId": "Xamarin.Grpc.OkHttp",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-protobuf-lite",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
+        "nugetId": "Xamarin.Grpc.Protobuf.Lite",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-stub",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
+        "nugetId": "Xamarin.Grpc.Stub",
         "dependencyOnly": true
       },
       {
@@ -2736,11 +2338,27 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "javax.inject",
+        "artifactId": "javax.inject",
+        "version": "1",
+        "nugetVersion": "1.0.0.15",
+        "nugetId": "Xamarin.JavaX.Inject",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "org.checkerframework",
         "artifactId": "checker-qual",
         "version": "3.40.0",
         "nugetVersion": "3.40.0.1",
         "nugetId": "Xamarin.CheckerFramework.CheckerQual",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.chromium.net",
+        "artifactId": "cronet-api",
+        "version": "119.6045.31",
+        "nugetVersion": "119.6045.31.3",
+        "nugetId": "Xamarin.Chromium.CroNet.Api",
         "dependencyOnly": true
       },
       {
@@ -2808,44 +2426,36 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "javax.inject",
-        "artifactId": "javax.inject",
-        "version": "1",
-        "nugetVersion": "1.0.0.15",
-        "nugetId": "Xamarin.JavaX.Inject",
-        "dependencyOnly": true,
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite",
+        "version": "2.16.1",
+        "nugetVersion": "2.16.1.1",
+        "nugetId": "Xamarin.TensorFlow.Lite",
+        "dependencyOnly": true
       },
       {
-        "groupId": "com.google.errorprone",
-        "artifactId": "error_prone_annotations",
-        "version": "2.29.2",
-        "nugetVersion": "2.29.2",
-        "nugetId": "Xamarin.Google.ErrorProne.Annotations",
-        "dependencyOnly": true,
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-api",
+        "version": "2.16.1",
+        "nugetVersion": "2.16.1.1",
+        "nugetId": "Xamarin.TensorFlow.Lite.Api",
+        "dependencyOnly": true
       },
       {
-        "groupId": "com.google.dagger",
-        "artifactId": "dagger",
-        "version": "2.52",
-        "nugetVersion": "2.52.0",
-        "nugetId": "Xamarin.Google.Dagger",
-        "dependencyOnly": true,
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-gpu-api",
+        "version": "2.16.1",
+        "nugetVersion": "2.16.1.1",
+        "nugetId": "Xamarin.TensorFlow.Lite.Gpu.Api",
+        "dependencyOnly": true
       },
       {
-        "groupId": "com.google.code.findbugs",
-        "artifactId": "jsr305",
-        "version": "3.0.2",
-        "nugetVersion": "3.0.2.15",
-        "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
-        "dependencyOnly": true,
-      },
-      {
-        "groupId": "com.google.android",
-        "artifactId": "annotations",
-        "version": "4.1.1.4",
-        "nugetVersion": "4.1.1.17",
-        "nugetId": "Xamarin.GoogleAndroid.Annotations",
-        "dependencyOnly": true,
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-support-api",
+        "version": "0.4.4",
+        "nugetVersion": "0.4.4.6",
+        "nugetId": "Xamarin.TensorFlow.Lite.Support.Api",
+        "dependencyOnly": true
       }
     ],
     "templateSets": [
@@ -2855,348 +2465,6 @@
         "templates": [
           {
             "templateFile": "templates/glide/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "chromium-cronet",
-        "mavenRepositoryType": "Google",
-        "templates": [
-          {
-            "templateFile": "templates/chromium-cronet/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "tensorflow-lite",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/tensorflow-lite/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "protobuf-lite",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/protobuf-lite/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "datatransport",
-        "mavenRepositoryType": "Google",
-        "templates": [
-          {
-            "templateFile": "templates/datatransport/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "user-messaging-platform",
-        "mavenRepositoryType": "Google",
-        "templates": [
-          {
-            "templateFile": "templates/user-messaging-platform/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "opencensus",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/opencensus/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "perfmark",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/perfmark/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "squareup-okhttp",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/squareup-okhttp/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "squareup-okhttp3",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/squareup-okhttp3/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "squareup-picasso",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/squareup-picasso/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "squareup-retrofit",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/squareup-retrofit/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "squareup-retrofit2",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/squareup-retrofit2/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "squareup-okio",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/squareup-okio/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "squareup-javapoet",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/squareup-javapoet/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "grpc",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/grpc/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "codehaus-mojo",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/codehaus-mojo/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "zxing",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/zxing/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "flatbuffers",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/flatbuffers/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/NuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/GooglePlayServicesSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "brotli",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/brotli/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
