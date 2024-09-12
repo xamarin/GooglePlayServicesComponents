@@ -65,7 +65,7 @@
     </Summary>
     <Description>
         .NET for Android (formerly Xamarin.Android) bindings for Google Play Services library '@(Model.MavenGroupId):@(Model.Name)'.
-        
+
         @(summary)
     </Description>
     <PackageTags> .NET for Android Xamarin.Android Bindings for Google Play Services artifact=@(Model.MavenGroupId):@(Model.Name):@(artifact_version) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(artifact_version)</PackageTags>
@@ -294,17 +294,17 @@
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Firestore")
     {
-      <PackageReference Include="Xamarin.Google.Guava" Version="33.2.1.1" />
+      <PackageReference Include="Xamarin.Google.Guava" Version="33.3.0" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Crashlytics")
     {
-      <PackageReference Include="Xamarin.Google.Dagger" Version="2.50.0" />
+      <PackageReference Include="Xamarin.Google.Dagger" Version="2.52.0" />
     }
     @if (@Model.NuGetPackageId == "Xamarin.Firebase.Measurement.Connector.Impl")
     {
-      <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base" Version="121.3.0.7" />
+      <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base" Version="122.0.2" />
     }
-    @if 
+    @if
       (
         @Model.NuGetPackageId == "Xamarin.Google.MLKit.DigitalInk.Recognition"
         ||
@@ -315,11 +315,13 @@
         @Model.NuGetPackageId == "Xamarin.GooglePlayServices.Ads"
         ||
         @Model.NuGetPackageId == "Xamarin.GooglePlayServices.Ads.Lite"
+        ||
+        @Model.NuGetPackageId == "Xamarin.Google.MLKit.ObjectDetection"
       )
     {
-      <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" Version="2.8.3.1" />
+      <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" Version="2.8.5" />
     }
-    @if 
+    @if
       (
         @Model.NuGetPackageId == "Xamarin.Google.MLKit.DigitalInk.Recognition"
         ||
@@ -330,9 +332,21 @@
         @Model.NuGetPackageId == "Xamarin.GooglePlayServices.Ads.Lite"
       )
     {
-      <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime" Version="2.8.3.1" />
+      <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime" Version="2.8.5" />
     }
-    
+    @if
+      (
+        @Model.NuGetPackageId == "Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia"
+      )
+    {
+      <PackageReference Include="Xamarin.AndroidX.Activity" Version="1.9.2" />
+      <PackageReference Include="Xamarin.AndroidX.Fragment" Version="1.8.3" />
+      <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime" Version="2.8.5" />
+      <PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModel" Version="2.8.5" />
+      <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" Version="2.8.5" />
+      <PackageReference Include="Xamarin.AndroidX.Collection.Jvm" Version="1.4.3" />      
+    }
+
 
     <!-- Reference -->
     <Reference Include="System.Net.Http" Condition=" '$(TargetFramework)' == '@(targetFrameworkMoniker)' " />
