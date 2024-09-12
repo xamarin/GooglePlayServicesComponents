@@ -27,7 +27,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.21" />
+	  <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.82" />
 	  
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -129,10 +129,10 @@
 		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto.Ktx" Version="[1.1.0.2-alpha06]" />
 		
 		<!-- Should match version of the referenced 'Xamarin.AndroidX.Collection' package -->
-		<PackageReference Include="Xamarin.AndroidX.Collection.Jvm" Version="1.4.0.5" />
-		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.4.0.5" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Jvm" Version="1.4.3" />
+		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.4.3" />
 
 		<!-- Should match version of the referenced 'Xamarin.AndroidX.Activity' package -->
-		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.9.0.4" />
+		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.9.2" />
 	</ItemGroup>
 </Project>
