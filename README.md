@@ -1,3 +1,14 @@
+# Deprecated Repository
+
+Note that the GPS/FB/MLKit packages that were previously built and released from this repository 
+have been moved to the https://github.com/xamarin/AndroidX repository (which will eventually be 
+moved to the `dotnet` organization with a more generic name).
+
+This was done to simplify maintenance and to reduce circular dependencies between the two 
+repositories which should lead to fewer NuGet version conflict issues.
+
+All packages have been moved, no packages have been obsoleted or dropped as part of this effort.
+
 # Google Play Services / Firebase / ML Kit for .NET for Android
 
 Microsoft creates and maintains .NET for Android bindings for many of Google's [Google Play Services](https://developers.google.com/android),
