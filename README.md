@@ -1,8 +1,7 @@
 # Deprecated Repository
 
 Note that the GPS/FB/MLKit packages that were previously built and released from this repository 
-have been moved to the https://github.com/xamarin/AndroidX repository (which will eventually be 
-moved to the `dotnet` organization with a more generic name).
+have been moved to the https://github.com/dotnet/android-libraries repository.
 
 This was done to simplify maintenance and to reduce circular dependencies between the two 
 repositories which should lead to fewer NuGet version conflict issues.
